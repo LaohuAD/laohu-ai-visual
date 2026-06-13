@@ -1,0 +1,35 @@
+.DS_Store
+Thumbs.db
+
+# Local agent / editor state
+.evolver/
+.obsidian/
+.idea/
+.vscode/
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Generated heavy media can be archived locally.
+# Keep .gitkeep so the project structure remains visible.
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.flac
+*.aiff
+*.psd
+*.psb
+!**/.gitkeep
