@@ -161,7 +161,7 @@
 2. [00_核心规则手册.md](02_共享资产库/00_核心规则手册.md)
 3. [输入输出索引.md](输入输出索引.md)
 
-当前只保留 5 个核心 skill：
+当前只保留 6 个核心 skill：
 
 | Skill | 用途 |
 |---|---|
@@ -169,6 +169,7 @@
 | [laohu_script_writer](skills/laohu_script_writer/SKILL.md) | 故事、剧本、分场、单场次剧本、台词和剧本医生 |
 | [laohu_visual_assets](skills/laohu_visual_assets/SKILL.md) | 角色、场景、道具、风格、图片资产、图片验收和封面方向 |
 | [laohu_video_prompt](skills/laohu_video_prompt/SKILL.md) | 分镜、人物表演、基础设定、氛围画质、画面内容和完整视频提示词 |
+| [laohu_vibe_creating_prompt](skills/laohu_vibe_creating_prompt/SKILL.md) | 视频提示词生成后的 Vibe Creating 提纯优化 |
 | [laohu_generation_review](skills/laohu_generation_review/SKILL.md) | 生成复盘、剪辑验收、发布复盘、修正提示词和经验回流 |
 
 Skill 编排、交接字段、启动语和验证标准集中在 [laohu_skills核心合约.md](02_共享资产库/05_工具流程/laohu_skills核心合约.md)。

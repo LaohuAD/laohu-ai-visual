@@ -5,10 +5,10 @@
 ## 一、核心原则
 
 - 项目专属 skill 命名必须以 `laohu_` 开头。
-- 当前只保留 5 个核心 skill：`laohu_ai_visual`、`laohu_script_writer`、`laohu_visual_assets`、`laohu_video_prompt`、`laohu_generation_review`。
+- 当前只保留 6 个核心 skill：`laohu_ai_visual`、`laohu_script_writer`、`laohu_visual_assets`、`laohu_video_prompt`、`laohu_vibe_creating_prompt`、`laohu_generation_review`。
 - 一个 skill 可以负责一个大阶段里的多个紧密任务；不要把基础设定、氛围画质、表情、画面内容、组装、图片生成、图片验收、封面、剪辑、发布继续拆成零散入口。
 - Skill 不是资料索引，而是能力文件。研究文档只是地基，skill 必须能独立产出可用结果。
-- 规则优先集中到 `02_共享资产库/00_核心规则手册.md` 和 5 个核心 skill。
+- 规则优先集中到 `02_共享资产库/00_核心规则手册.md` 和 6 个核心 skill。
 
 ## 二、核心链路
 
@@ -17,6 +17,7 @@ laohu_ai_visual
 → laohu_script_writer
 → laohu_visual_assets
 → laohu_video_prompt
+→ laohu_vibe_creating_prompt
 → 人工生成测试
 → laohu_generation_review
 → 经验回流
@@ -30,8 +31,9 @@ laohu_ai_visual
 |---|---|---|
 | `laohu_ai_visual` | 项目入口与路由 | 根本目的判断、作品归属、归档位置、下一步核心 skill、索引更新 |
 | `laohu_script_writer` | 剧本开发 | 故事核心、人物冲突、分场剧本、单场次剧本、台词、剧本医生 |
-| `laohu_visual_assets` | 视觉资产 | 角色、场景、道具、风格、图片提示词、图片生成交接、图片验收、封面方向 |
-| `laohu_video_prompt` | 视频提示词 | 单场次剧本、分镜概览、人物表演、基础设定、氛围与画质、画面内容、完整视频提示词 |
+| `laohu_visual_assets` | 视觉资产 | 角色、场景、道具、风格、图片提示词、图片生成交接、图片验收、封面方向、需要低保真故事板的镜头判断 |
+| `laohu_video_prompt` | 视频提示词 | 单场次剧本、分镜概览、低保真故事板提示词、人物表演、基础设定、氛围与画质、画面内容、完整视频提示词 |
+| `laohu_vibe_creating_prompt` | VC 优化 | 视频提示词初稿后的 Vibe Creating 提纯、体验连续性优化、三段模板回填 |
 | `laohu_generation_review` | 复盘验收 | 生成诊断、剪辑验收、发布复盘、修正提示词、案例入库、经验反哺 |
 
 ## 四、通用交接字段
@@ -97,8 +99,28 @@ laohu_ai_visual
 优先生成资产：
 需要第一帧的镜头：
 需要参考图的镜头：
+需要低保真故事板的镜头：
 不能被参考素材带偏的内容：
 最大资产风险：
+```
+
+### 低保真故事板交接包
+
+来源：`laohu_video_prompt`  
+下游：生图模型 / 人工生成测试 / `laohu_generation_review`
+
+```text
+VID 编号：
+使用微分镜：
+故事板提示词文件：
+故事板图片保存位置：
+故事板图形式：低保真 2.5D 线框表格图
+强锁内容：构图 / 景别 / 机位 / 主体比例 / 站位 / 道具数量 / 空间锚点 / 引导线 / 动线路径 / 留白
+弱锁内容：人物外观 / 真实五官 / 具体服装 / 颜色 / 材质 / 表情 / 最终光影 / 电影质感
+是否使用锚点重叠：
+重叠微分镜：
+不能被故事板带偏的内容：
+对应视频提示词文件：
 ```
 
 ### 视频提示词交接包
@@ -108,14 +130,18 @@ laohu_ai_visual
 
 ```text
 单场次剧本：
+VID 编号：
 分镜编号：
+使用微分镜：
+故事板提示词文件：
+故事板图片位置：
 确定时长：
 表情细化：
 表情占用时长：
 基础设定：
 氛围与画质：
 画面内容：
-负面约束：
+质量边界：
 生成前风险：
 回传字段：
 ```
@@ -212,7 +238,7 @@ bash skills/laohu_ai_visual/scripts/check_laohu_skills.sh
 
 每次更新 skill 或规则后检查：
 
-- 是否还只保留 5 个核心 skill 入口。
+- 是否还只保留 6 个核心 skill 入口。
 - 是否没有旧 skill 名残留在 active 文档里。
 - 是否更新 `AGENTS.md`、README 或核心手册中对应入口。
 - 是否更新 `输入输出索引.md`。
