@@ -165,8 +165,25 @@ require_pattern "skills/laohu_visual_assets/SKILL.md" "A1.*人物素体资产|A2
 require_pattern "skills/laohu_visual_assets/SKILL.md" "人物形象资产和人物设计资产必须分开输出|旧版混合图|人物形象资产：环境内电影级|人物设计资产：白底|不拆成两个资产编号" "visual assets rejects mixed character asset prompts and sub-numbering"
 require_pattern "skills/laohu_visual_assets/SKILL.md" "形象资产.*设计资产|环境内艺术照|白色素衣|组合设计资产|四区制作参考图" "visual assets enforces character image/design/wardrobe chain"
 require_pattern "skills/laohu_visual_assets/SKILL.md" "人物参考图.*服装参考图|主视觉区.*补充信息区.*局部细节区.*比例照|内 / 中 / 外 / 腰 / 下 / 足" "visual assets enforces character reference sheet and clothing layering"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "左手特写.*右手特写|音色文字说明区|【形象参考@.*【音色参考@" "visual assets enforces hand closeups and voice reference handoff"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "主角色人物设计资产默认只固定中性常见表情|不做.*多格情绪表情|情绪表演.*视频提示词" "visual assets avoids default multi-expression character assets"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "衣服如何穿在这个身体上|肩线.*胸口.*腰侧.*高腰线|修身但不紧绷" "visual assets enforces body-fit clothing adaptation"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "服装参考不能只继承单品名称|穿法逻辑.*视觉重心.*比例关系|鞋头形状.*闭口 / 露趾.*踝带.*跟高" "visual assets enforces clothing styling logic and shoe design"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "造型账本|三视图.*手部特写.*局部细节.*比例照|发圈.*手腕|鞋履|标签.*物件" "visual assets enforces character styling ledger consistency"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "高光体态|胸腔舒展.*肩背打开.*站姿自信|左手.*右手.*拇指" "visual assets enforces highlight posture and correct left-right hands"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "信息优先级.*三视图.*脸部.*比例图|手模级|十六进制 RGB|厘米测量线" "visual assets enforces character asset layout information priority"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "人物设计资产本身会反向影响后续视频肤色|冷白偏中性的白皙肤色|白皙通透|柔雾奶油肌|参考图.*偏黄.*偏油" "visual assets enforces asset-level complexion before video reference"
+require_pattern "02_共享资产库/00_核心规则手册.md" "人物设计资产本身会反向影响后续视频肤色|资产图里的肤色.*强锚点|冷白偏中性的白皙肤色|白皙通透|柔雾奶油肌" "core manual enforces asset-level complexion before video reference"
+require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "人物设计资产会作为视频参考图|先锁住肤色妆效|冷白偏中性的白皙肤色|白皙通透|柔雾奶油肌" "image asset template enforces asset-level complexion before video reference"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "人物资产肤色会反向污染视频生成|视频参考图.*强锚点|冷白偏中性|白皙通透|柔雾奶油肌" "failure rules record asset-level complexion contamination"
 require_pattern "skills/laohu_visual_assets/SKILL.md" "场景四视图设定图|正面视角.*左侧视角.*右侧视角.*正面反打图|物体空间逻辑" "visual assets enforces scene four-view spatial consistency"
 require_pattern "skills/laohu_visual_assets/SKILL.md" "可复制图片提示词|代码块里只放模型投喂内容|代码块外写给人看的说明" "visual assets enforces copyable image prompt code blocks"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "图片模型代码块里的引号只保留给画面里真实需要出现的文字|标签文字为：左手、右手|标题文字为：音色说明" "visual assets enforces image-prompt quote discipline"
+require_pattern "AGENTS.md" "所有需要老胡手动上传、替换、绑定、参考或调用的外部内容.*【】|【参考图1：用途】.*【参考图2：用途】|裸写.*参考图 1.*不够清楚" "top-level rules enforce bracketed external reference placeholders"
+require_pattern "02_共享资产库/00_核心规则手册.md" "所有需要老胡手动上传、替换、绑定、参考或调用的外部内容.*【】|【参考图1：用途】.*【参考图2：用途】|不要裸写.*参考图 1" "core manual enforces bracketed external reference placeholders"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "需要老胡手动上传、替换、绑定、参考或调用的外部内容.*【】|【参考图1：用途】.*【参考图2：用途】|不要裸写.*参考图 1" "visual assets enforces bracketed external reference placeholders"
+require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "需要老胡手动上传、替换、绑定、参考或调用的外部内容.*【】|【参考图1：用途】.*【参考图2：用途】|【参考图1：人物肖像】.*【参考图2：服装穿搭】" "image asset template enforces bracketed external reference placeholders"
+require_pattern "02_共享资产库/05_工具流程/剧本到AI视觉资产转换规则.md" "需要老胡手动上传、替换、绑定、参考或调用的外部内容.*【】|【参考图1：用途】.*【参考图2：用途】|不要裸写.*参考图 1" "asset conversion rules enforce bracketed external reference placeholders"
 require_pattern "skills/laohu_visual_assets/SKILL.md" "默认在同一个阶段文件上迭代|不自动新建 v1/v2/v3" "visual assets enforces single-file iteration"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "单场次剧本|基础设定|氛围与画质|画面内容|E1-S1-C1|表情占用时长|完整可复制" "video prompt covers script-first three-part exact-duration workflow"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "正式视频提示词必须严格按照.*模板_视频提示词_基础设定氛围画面内容|正式提示词正文只允许使用以下三块|不得混入正式提示词正文" "video prompt enforces strict three-block template output"
@@ -176,9 +193,25 @@ require_pattern "skills/laohu_video_prompt/SKILL.md" "laohu_vibe_creating_prompt
 require_pattern "skills/laohu_vibe_creating_prompt/SKILL.md" "Vibe Creating|外部优化Skill/vibe-creating-prompt/SKILL.md|不能改变三段模板|不能改变确定总时长|下游" "VC optimization skill preserves hard constraints"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "转场写法用画面行为表达|遮挡转场|明暗转场|运动转场|匹配转场" "video prompt enforces in-frame transitions"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "画面内容.*主体动作.*环境变化.*镜头路径|画面内容.*执行稿详细度" "video prompt enforces detailed画面内容"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "关键发声镜头.*音色例外|短视频开场钩子.*本镜声线|冷感磁性女中音.*近麦干声|不甜.*不夹.*不软" "video prompt skill enforces key-voice shot timbre restatement"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "台词、旁白、画外音和脑内 VO.*声音参数|音高 / 音区.*响度 / 音量.*语速 / 节奏.*停顿 / 气口.*重音位置.*气息状态.*咬字 / 吐字.*距离感.*混响和衰减" "video prompt skill enforces parameterized voice performance"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "情绪曲线型短片.*主要 VO.*阶段性声音表演|初识.*热恋.*平淡期.*猜忌期.*争吵期.*决裂期|普通年轻男声" "video prompt skill enforces staged VO emotional curve"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "人物情绪开场.*肌肉路径|单侧嘴角.*呼吸.*停顿|皮肤.*妆效.*曝光|服装.*首饰.*环境运动" "video prompt skill enforces emotional portrait expression, skin and environment interaction"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "冷白偏中性的白皙肤色|肤色通透匀净|清透裸妆|轻薄服帖底妆|柔雾奶油肌|柔雾哑光带内透光肤感|自然漫反射|柔和次表面透光" "video prompt skill enforces Chinese positive complexion and makeup finish system"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "风格交集.*主风格母体.*辅助风格.*胶片 / 滤镜分级.*明度对比.*光影方式.*肤色妆效.*场景环境色.*情绪阶段边界|日系清新治愈青春电影色彩.*海边低饱和胶片写真" "video prompt skill enforces style-intersection mood and quality system"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "摄影指导层.*光影分离.*动态光源 / 光影运动.*光源色温.*主体细节束.*空间层次.*时间天气空气.*镜头参数 / 景深.*画面类型自动选型.*情绪反差点" "video prompt skill enforces cinematography direction layer"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "主体细节束.*颜色 \\+ 材质 \\+ 纹理 \\+ 状态 \\+ 反光 \\+ 破损 / 湿度 / 瑕疵 \\+ 边缘细节" "video prompt skill enforces subject detail bundle"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "动态光源.*风吹树叶形成移动树影|柔金侧逆光.*动态树影|镜头参数.*85mm.*50mm.*35mm.*135mm" "video prompt skill enforces motivated dynamic light and focal-length selection"
+require_pattern "02_共享资产库/00_核心规则手册.md" "风格交集.*主风格母体.*辅助风格.*胶片 / 滤镜分级.*明度对比.*光影方式.*肤色妆效.*场景环境色.*情绪阶段边界|真人写实海边情绪短片.*日系清新治愈青春电影色彩" "core manual enforces style-intersection mood and quality system"
+require_pattern "02_共享资产库/00_核心规则手册.md" "摄影指导层.*光影分离.*动态光源 / 光影运动.*光源色温.*主体细节束.*空间层次.*时间天气空气.*镜头参数 / 景深.*画面类型自动选型.*情绪反差点" "core manual enforces cinematography direction layer"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "风格交集.*主风格母体.*辅助风格.*胶片 / 滤镜分级.*明度对比.*光影方式.*肤色妆效.*场景环境色.*情绪阶段边界|富士胶片清透蓝绿倾向.*柯达 Portra" "video prompt template enforces style-intersection mood and quality system"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "摄影指导层.*光影分离.*动态光源 / 光影运动.*光源色温.*主体细节束.*空间层次.*时间天气空气.*镜头参数 / 景深.*画面类型自动选型.*情绪反差点" "video prompt template enforces cinematography direction layer"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "情绪短片的氛围画质必须建立风格交集|清新透亮.*日系治愈系风格色彩|富士胶片清透蓝绿倾向.*柯达 Portra" "failure rules record style-intersection mood and quality lesson"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "视频提示词必须有摄影指导层|光影分离.*动态光源.*光源色温.*主体细节束.*镜头参数.*情绪反差点" "failure rules record cinematography direction layer lesson"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "正式视频提示词代码块里禁止写作者意图|让观众懂|表现孩子不冷漠|避免误读|模型不知道上下文|屏幕证据" "video prompt blocks author-intent and process explanations in formal prompts"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "风格核心|视觉基调|色彩与影调|Photirealism|IMAX|Panavision|光影.*嵌入.*自然段" "video prompt enforces benchmark vibe fields and embedded lighting prose"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "基础设定.*世界观.*固定资产行.*声音设定|进入基础设定.*固定资产支撑|没有固定资产.*画面内容" "video prompt enforces fixed assets in basic setting"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "【形象参考@xx】|【音色参考@xx】|双参考占位|不要在每条视频提示词里重复长篇基础声线" "video prompt enforces character image and voice reference placeholders"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "正向收束|目标画面|排除句|抽象质量边界|代码块外" "video prompt enforces positive model-facing prompt convergence"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "提示词资产.*基础设定.*氛围与画质|图片资产 / 固定资产.*画面内容.*交互|未资产化元素.*画面内容.*详细描述" "video prompt enforces asset-aware画面内容 description budget"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "【@资产名】|资产占位|固定实体|资产图片引用" "video prompt supports explicit asset placeholders"
@@ -191,18 +224,35 @@ require_pattern "skills/laohu_video_prompt/SKILL.md" "单点反馈.*全局扫描
 require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "单点反馈必须触发全局同类扫描|台词问题扫所有对白.*VO.*OS.*画外音|POV 问题扫所有主观镜头|VID-27" "video prompt template enforces global scan after single-shot feedback"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "分镜表格输出文件|第一个分镜的视频提示词展示文件|所有分镜视频提示词结果输出文件|对话里不要贴长篇" "video prompt enforces staged file outputs"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "视频提示词交付必须方便老胡直接复制|代码块里只放可直接投喂视频模型|代码块外" "video prompt enforces copyable video prompt code blocks"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "每个最终视频单元.*VID.*【故事板图片提示词】.*【视频生成提示词】|表情驱动.*故事板.*胸部以上|人物.*65%-80%" "video prompt enforces paired close-framed storyboard prompts"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "首帧参考@VID-A尾帧|【画面内容】.*第一句.*第 0 秒使用.*首帧参考|同一景别.*人物比例.*光源方向.*背景锚点.*表情余韵" "video prompt enforces one-shot tail-frame to head-frame continuity"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "对镜头情绪表演|声音方向|镜头前方.*脑海|眼线.*镜头|风景只做留白" "video prompt enforces direct-to-camera emotional performance"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "默认在同一个阶段文件上迭代更新|不自动新建 v1/v2/v3" "video prompt enforces single-file iteration"
 require_pattern "skills/laohu_generation_review/SKILL.md" "生成诊断|剪辑验收|发布复盘|最多 3 个返修动作|下一版修正提示词" "generation review covers merged review work"
 require_pattern "skills/laohu_generation_review/SKILL.md" "归档、复盘、生成结果诊断和发布复盘必须写入文件|生成复盘文件|发布复盘文件" "generation review enforces file output"
 require_pattern "skills/laohu_generation_review/SKILL.md" "默认在同一个当前文件上更新|不自动新建 v1/v2/v3" "generation review enforces single-file iteration"
+require_pattern "skills/laohu_generation_review/SKILL.md" "人物皮肤油|脸部油亮|正向肤色妆效缺失|肤色冷暖与明度|清透裸妆|柔雾奶油肌|自然漫反射" "generation review diagnoses oily skin as missing Chinese positive complexion and makeup system"
 require_pattern "02_共享资产库/00_核心规则手册.md" "正式视频提示词必须严格使用.*模板_视频提示词_基础设定氛围画面内容|不能混进正式视频提示词正文" "core manual enforces strict video prompt template"
+require_pattern "02_共享资产库/00_核心规则手册.md" "每个最终视频单元.*VID.*【故事板图片提示词】.*【视频生成提示词】|表情驱动.*故事板.*胸部以上|人物.*65%-80%" "core manual enforces paired close-framed storyboard prompts"
+require_pattern "02_共享资产库/00_核心规则手册.md" "冷白偏中性的白皙肤色|肤色通透匀净|清透裸妆|轻薄服帖底妆|柔雾奶油肌|提示词资产" "core manual enforces Chinese positive complexion and makeup prompt asset"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "清透裸妆|轻薄服帖底妆|柔雾奶油肌|柔雾哑光带内透光肤感|缎光柔雾肤感|提示词资产" "video prompt template enforces Chinese positive complexion and makeup prompt asset"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "情绪人像必须先写肤色妆效|冷白偏中性的白皙肤色|肤色通透匀净|清透裸妆|P-SKIN 林栀皮肤妆效提示词资产" "failure rules record Chinese positive complexion and makeup system"
+require_pattern "02_共享资产库/00_核心规则手册.md" "首帧参考@VID-A尾帧|【画面内容】.*第一句.*第 0 秒使用.*首帧参考|同一景别.*人物比例.*光源方向.*背景锚点.*表情余韵" "core manual enforces one-shot tail-frame to head-frame continuity"
+require_pattern "02_共享资产库/00_核心规则手册.md" "对镜头情绪表演|镜头.*对话对象|声音方向|视线箭头指向镜头|风景.*不能成为主要表演对象" "core manual enforces direct-to-camera emotional performance"
 require_pattern "02_共享资产库/00_核心规则手册.md" "每条正式视频提示词 = 一次独立投喂|不能写.*沿用全片|图片资产|15 秒内同场合并规则" "core manual enforces independent prompt and merge rules"
 require_pattern "02_共享资产库/00_核心规则手册.md" "laohu_vibe_creating_prompt|视频提示词生成结果在输出呈现前|外部原文 skill|重新落回" "core manual enforces VC optimization pass"
 require_pattern "02_共享资产库/00_核心规则手册.md" "转场不是.*后期备注|遮挡转场|明暗转场|运镜转场|匹配转场" "core manual enforces in-frame transitions"
 require_pattern "02_共享资产库/00_核心规则手册.md" "画面内容.*主体动作.*环境运动.*镜头路径.*构图层次" "core manual enforces detailed画面内容"
+require_pattern "02_共享资产库/00_核心规则手册.md" "关键发声镜头不能只依赖.*【音色参考@xx】|短视频开场钩子.*本镜声线|冷感磁性女中音.*近麦干声" "core manual enforces key-voice shot timbre restatement"
+require_pattern "02_共享资产库/00_核心规则手册.md" "台词、旁白、画外音和脑内 VO.*声音参数|音高 / 音区.*响度 / 音量.*语速 / 节奏.*停顿 / 气口.*重音位置.*气息状态.*咬字 / 吐字.*混响和衰减" "core manual enforces parameterized voice performance"
+require_pattern "02_共享资产库/00_核心规则手册.md" "VO 是推动人物表情变化的主要触发器|按情绪阶段设计声音曲线|初识.*热恋.*平淡.*猜忌.*争吵.*决裂" "core manual enforces staged VO emotional curve"
+require_pattern "02_共享资产库/00_核心规则手册.md" "人物情绪开场.*肌肉路径|单侧嘴角.*呼吸.*停顿|皮肤.*曝光.*雾面底妆.*真实毛孔|服装.*耳坠.*海风" "core manual enforces emotional portrait expression, skin and environment interaction"
 require_pattern "02_共享资产库/00_核心规则手册.md" "正式视频提示词正文不能写作者意图|让观众懂|表现孩子不冷漠|防误读说明|生成流程解释|可见 / 可听证据" "core manual blocks author-intent and process explanations in formal prompts"
 require_pattern "02_共享资产库/00_核心规则手册.md" "风格核心|视觉基调|色彩与影调|Photirealism|IMAX|Panavision|光影.*嵌入.*自然段" "core manual enforces benchmark vibe fields and embedded lighting prose"
 require_pattern "02_共享资产库/00_核心规则手册.md" "基础设定.*世界观.*资产行.*声音设定|进入.*基础设定.*固定资产支撑|没有固定资产.*画面内容" "core manual enforces fixed assets in basic setting"
+require_pattern "02_共享资产库/00_核心规则手册.md" "左手特写.*右手特写|音色文字说明区|【形象参考@.*【音色参考@" "core manual enforces hand closeups and voice placeholders"
+require_pattern "02_共享资产库/00_核心规则手册.md" "服装参考不能只继承单品名称|穿法逻辑.*视觉重心.*比例关系|鞋头形状.*闭口 / 露趾.*踝带.*跟高" "core manual enforces clothing styling logic and shoe design"
+require_pattern "02_共享资产库/00_核心规则手册.md" "信息优先级.*三视图.*脸部特写.*全身比例图|手模级|十六进制 RGB|厘米测量线" "core manual enforces character asset layout information priority"
 require_pattern "02_共享资产库/00_核心规则手册.md" "任何生成模型|正向描述目标结果|不能用排除句替代正向描述|抽象质量问题|代码块外" "core manual enforces positive model-facing prompt convergence"
 require_pattern "02_共享资产库/00_核心规则手册.md" "可复制投喂正文.*text.*代码块|代码块的职责只有一个|视频提示词代码块只能包含" "core manual enforces copyable prompt code blocks"
 require_pattern "02_共享资产库/00_核心规则手册.md" "提示词资产.*基础设定.*氛围与画质|图片资产 / 固定资产.*画面内容.*交互|未资产化画面元素.*画面内容.*详细描述|未资产化元素.*画面内容.*详细描述" "core manual enforces asset-aware画面内容 description budget"
@@ -212,7 +262,16 @@ require_pattern "02_共享资产库/00_核心规则手册.md" "丁达尔效应|�
 require_pattern "skills/laohu_video_prompt/SKILL.md" "场景关系图|出场人物.*出场物品|人物和物品.*物品和物品.*人物和人物|交互方式.*接触点.*作用力大小轻重.*受力方向.*可见结果|光源位置.*光线方向.*照射对象" "video prompt skill enforces scene relationship, interaction force, motion and lighting causality"
 require_pattern "02_共享资产库/00_核心规则手册.md" "场景关系图|出场人物.*出场物品|人物和物品.*物品和物品.*人物和人物|交互方式.*作用力大小轻重.*受力方向|光源位置.*光线方向.*照到谁" "core manual enforces scene relationship, interaction force, motion and lighting causality"
 require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "场景关系图|出场人物.*出场物品|人物和物品.*物品和物品.*人物和人物|交互方式.*接触点.*作用力大小轻重.*方向.*可见结果|光源位置.*光线方向.*照射对象" "video prompt template enforces scene relationship, interaction force, motion and lighting causality"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "关键发声镜头.*音色例外|短视频开场钩子.*【音色参考@xx】|冷感磁性女中音.*近麦干声|情绪人像.*雾面底妆.*真实毛孔" "video prompt template enforces key voice and emotional portrait detail"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "台词、旁白、画外音和脑内 VO.*参数化|音高 / 音区.*响度 / 音量.*语速 / 节奏.*停顿 / 气口.*重音位置.*气息状态.*咬字 / 吐字.*混响和衰减" "video prompt template enforces parameterized voice performance"
+require_pattern "02_共享资产库/02_视觉语言资产/声音与同期声库/声音提示词规范.md" "台词与 VO 表演参数|音高 / 音区.*响度 / 音量.*语速 / 节奏.*停顿 / 气口.*重音 / 强调.*气息 / 发声状态.*咬字 / 吐字.*距离 / 空间.*混响 / 衰减" "sound guide defines voice performance parameters"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "首帧参考@VID-A尾帧|【画面内容】.*第一句.*第 0 秒使用.*首帧参考|同一景别.*人物比例.*光源方向.*背景锚点" "video prompt template enforces one-shot tail-frame to head-frame continuity"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "对镜头情绪表演规则|眼线箭头指向镜头中心|声音方向|看向海面|看向天空" "video prompt template enforces direct-to-camera storyboard and prompt checks"
 require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "画面内容必须先建立场景关系图|人物和物品.*物品和物品.*人物和人物|交互方式 \\+ 接触点 \\+ 作用力大小轻重 \\+ 受力方向 \\+ 可见结果|光源位置 \\+ 光线方向 \\+ 光线类型" "failure rules record scene relationship, interaction force, motion and lighting causality"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "多段视频拼成一镜到底必须写首尾帧复用|【画面内容】.*第一句.*第 0 秒使用.*首帧参考|同一景别.*人物比例.*光源方向.*背景锚点" "failure rules record one-shot tail-frame to head-frame continuity"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "关键发声和情绪开场不能只格式正确|冷感磁性女中音.*近麦干声|表情肌肉路径|雾面底妆.*真实毛孔|服装、首饰和环境必须参与情绪" "failure rules record key voice and emotional portrait detail"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "关键 VO 不能只写抽象情绪词|音高 / 音区.*响度 / 音量.*语速 / 节奏.*停顿 / 气口.*重音位置.*气息状态.*咬字 / 吐字.*距离感.*混响和衰减|男声温柔深情，带压迫感" "failure rules record parameterized VO performance regression"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "对镜头情绪表演不能写成看向风景或声音方向|镜头就是对话对象|从镜头位置进入她脑海|视线箭头指向镜头" "failure rules record direct-to-camera emotional performance regression"
 require_pattern "skills/laohu_video_prompt/SKILL.md" "壁纸帧 / 审美停点|暂停后仍然成立|主体轮廓.*前景 / 中景 / 背景.*视觉中心.*留白.*主次色彩.*方向性光影.*材质细节.*镜头停稳点" "video prompt skill enforces wallpaper-frame aesthetic stopping point"
 require_pattern "02_共享资产库/00_核心规则手册.md" "壁纸帧 / 审美停点|封面候选、壁纸、海报局部或段落记忆点|主体轮廓.*前景 / 中景 / 背景.*视觉中心.*留白.*色彩.*光影" "core manual enforces wallpaper-frame aesthetic stopping point"
 require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "壁纸帧 / 审美停点|暂停后仍然成立|主体轮廓.*前景 / 中景 / 背景.*视觉中心.*留白.*主次色彩.*方向性光影.*材质细节.*镜头停稳点" "video prompt template enforces wallpaper-frame aesthetic stopping point"
@@ -958,6 +1017,16 @@ require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提
 require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "人物资产双提示词规则|人物形象资产.*人物设计资产|同一个人物资产编号|禁止写成.*A1-1.*A1-2" "image asset prompt template enforces two prompts under one asset id"
 require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "可复制图片提示词|代码块里只放模型投喂正文|代码块外" "image asset prompt template enforces copyable prompt blocks"
 require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "参考图 \\+ 服装图拆分写法|人物资产分区版式|主视觉区.*补充信息区.*局部细节区.*比例照" "image asset prompt template covers character reference sheet layout"
+require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "左手特写.*右手特写|音色文字说明|音色说明：|【形象参考@xx】.*【音色参考@xx】" "image asset prompt template covers hand closeups and voice text"
+require_pattern "02_共享资产库/00_核心规则手册.md" "主角色人物设计资产默认只固定中性常见表情|不默认做七宫格、九宫格|情绪表演.*视频提示词" "core manual avoids default multi-expression character assets"
+require_pattern "02_共享资产库/05_工具流程/剧本到AI视觉资产转换规则.md" "主角色人物设计资产不要默认做多格情绪表情|中性常见表情|表情测试参考图" "asset conversion avoids default multi-expression character assets"
+require_pattern "02_共享资产库/00_核心规则手册.md" "衣服如何适配身体|肩颈.*胸腰比例.*腰线|修身但不紧绷" "core manual enforces body-fit clothing adaptation"
+require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "身体适配|肩线.*胸前.*腰侧.*高腰线|修身但不紧绷" "image asset prompt template enforces body-fit clothing adaptation"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "人物定装必须写身体适配和版型机制|肩线、胸口、腰侧、高腰线|松垮无形、直筒麻袋、胸前塌陷、腰线消失" "failure rules record body-fit clothing adaptation"
+require_pattern "02_共享资产库/00_核心规则手册.md" "高光体态|胸腔舒展.*肩背打开.*站姿自信|左手.*右手.*拇指" "core manual enforces highlight posture and correct left-right hands"
+require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "高光体态|胸腔舒展.*肩背打开.*站姿自信|左手.*右手.*拇指" "image asset prompt template enforces highlight posture and correct left-right hands"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "人物设计资产必须锁高光体态和左右手解剖方向|左手拇指.*画面右侧.*右手拇指.*画面左侧|同一只手" "failure rules record highlight posture and correct left-right hands"
+require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "人物设计资产表情规则|中性常见表情|不要把心动、雀跃、怀疑、愤怒、落泪.*七宫格" "image asset template avoids default multi-expression character assets"
 require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "POV 主体人物资产|身高.*头身比.*上下身比例|手部.*鞋.*书包.*低视线" "image asset prompt template covers full character assets for POV subjects"
 require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "场景四视图设定图|正面视角|左侧视角|右侧视角|正面反打图|物体空间逻辑" "image asset prompt template covers scene four-view setting sheets"
 require_pattern "02_共享资产库/00_核心规则手册.md" "资产.*唯一性|一个图片资产只能固定一个确定对象|分镜图|桌面.*案板.*操作台.*先判断.*空间.*物" "core manual enforces asset uniqueness and local operation splitting"
@@ -1061,6 +1130,65 @@ fi
 require_pattern "skills/laohu_ai_visual/SKILL.md" "所有可复制给模型的正文.*图片资产.*视频提示词.*封面.*首帧.*生图.*分镜参考|代码块里不能用排除句" "entry skill enforces positive prompts for all model-facing bodies"
 require_pattern "skills/laohu_visual_assets/SKILL.md" "所有图片资产、封面、首帧和生图提示词.*出现什么描述什么|混用风险.*代码块外" "visual assets enforces positive prompts across image-facing bodies"
 require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "质量边界|具体跑偏对象和混用风险写在代码块外|出现什么描述什么" "image prompt template uses positive bodies and externalized risks"
+require_pattern "02_共享资产库/00_核心规则手册.md" "特写进.*注意力开关|局部证据特写.*空间揭示" "core manual enforces close-up-in attention control"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "特写进.*高张力短视频|局部证据特写.*空间揭示" "video prompt skill enforces close-up-in attention control"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "高张力镜头必须做特写进判断|特写蒙太奇连接器" "video prompt template enforces close-up-in and close-up montage"
+require_pattern "02_共享资产库/02_视觉语言资产/镜头语言库/镜头语言词典.md" "特写进与注意力控制|特写作为蒙太奇连接器" "shot language dictionary defines close-up-in and close-up montage"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "高张力场面不能默认全景开场|特写进是注意力开关" "failure rules record close-up-in attention lesson"
+require_pattern "02_共享资产库/00_核心规则手册.md" "泛化弱词.*小、轻、低|语义适配" "core manual enforces generic weak-word review"
+require_pattern "skills/laohu_script_writer/SKILL.md" "泛化弱词审稿|安全宽词替代人物真实口气" "script writer enforces generic weak-word review"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "泛化弱词审稿|可生成维度" "video prompt skill enforces generic weak-word review"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "泛化弱词必须过审|动作幅度 / 速度 / 力道" "video prompt template enforces generic weak-word review"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "泛化弱词不能代替精准判断|语义相似度" "failure rules record generic weak-word lesson"
+require_pattern "输入输出索引.md" "AI 用词泛化|泛化弱词审稿" "index records generic weak-word lesson"
+require_pattern "02_共享资产库/00_核心规则手册.md" "空间留白和信息留白|局部遮蔽让观众参与想象" "core manual distinguishes spatial and information negative space"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "信息留白强化第一眼吸引力|不能替代完整人物设计资产" "visual assets supports information negative space in character image assets"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "空间留白让画面呼吸，信息留白让观众补完|局部遮蔽制造期待" "video prompt skill enforces information negative space boundary"
+require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "信息留白|遮住哪里、露出哪里" "image prompt template supports information negative space"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "空间留白和信息留白|观众靠哪个局部补完人物" "video prompt template supports information negative space"
+require_pattern "02_共享资产库/02_视觉语言资产/镜头语言库/镜头语言词典.md" "信息留白、局部遮蔽与观众补完|空间留白是画面里空出来" "shot language dictionary defines information negative space"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "留白要区分空间呼吸和信息缺口|完整展示解决的是确认" "failure rules record information negative space lesson"
+require_pattern "输入输出索引.md" "留白、局部遮蔽和观众补完|空间留白负责画面呼吸" "index records information negative space lesson"
+require_pattern "AGENTS.md" "色卡 / 色彩风格资产|导演级调色资产|正式视频提示词里不能只写.*调用色卡" "top-level rules define color palette style assets"
+require_pattern "02_共享资产库/00_核心规则手册.md" "色彩风格资产.*主色.*辅助色.*点缀色|母色卡不变，阶段变体受控变化|色彩与影调" "core manual defines color palette style assets"
+require_pattern "skills/laohu_visual_assets/SKILL.md" "色卡可以升级为色彩风格资产|C1 全片母色卡|C1-A 心动期色卡变体" "visual assets skill supports color palette assets"
+require_pattern "skills/laohu_video_prompt/SKILL.md" "色彩风格资产：【@C1 色卡名】|不能只写.*调用色卡|母色卡不变，阶段变体受控变化" "video prompt skill expands color palette assets"
+require_pattern "02_共享资产库/01_模板库/图片模板/模板_AI图片提示词_资产型通用结构.md" "色彩风格资产 / 色卡资产|十六进制 RGB|阶段变体" "image prompt template supports color palette assets"
+require_pattern "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md" "色彩风格资产：【@C1 色卡名】|母色卡不变，阶段变体受控变化|文字规则是执行" "video prompt template supports color palette assets"
+require_pattern "02_共享资产库/02_视觉语言资产/画面风格库/画面氛围与画质规范.md" "色卡是色彩体系的资产化版本|母色卡 \\+ 阶段变体|同一片美景变得不美了" "style guide defines color palette assets"
+require_pattern "02_共享资产库/05_工具流程/剧本到AI视觉资产转换规则.md" "色彩风格资产.*色卡图片 \\+ 文本规则|C.*系列色彩风格资产|人物设计资产里的紧凑色值卡" "asset conversion supports color palette assets"
+require_pattern "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md" "色卡要升级为色彩风格资产|母色卡不变，阶段变体受控变化|不能只当几个色号" "failure rules record color palette asset lesson"
+require_pattern "输入输出索引.md" "AI 视频色卡|C.*系列色彩风格资产|母色卡不变，阶段变体受控变化" "index records color palette asset lesson"
+
+if python3 - <<'PY'
+from pathlib import Path
+project = Path("01_作品项目/已发布/2026-06-28_30秒钟带你体验谈恋爱")
+paths = [
+    project / "00_阶段确认记录.md",
+    project / "01_世界观故事/文本/00_故事确认.md",
+    project / "01_世界观故事/文本/2026-06-28_情绪节奏设计_30秒钟带你体验谈恋爱.md",
+    project / "02_剧本/文本/2026-06-28_剧本_30秒钟带你体验谈恋爱.md",
+    project / "03_视觉资产/文本/2026-06-28_图片提示词_30秒钟带你体验谈恋爱.md",
+    Path("输入输出索引.md"),
+]
+bad = []
+for path in paths:
+    if not path.exists():
+        continue
+    text = path.read_text()
+    if "A1-E 林栀表情一致性参考图" in text or "A1-E_林栀表情一致性参考" in text:
+        bad.append(str(path))
+if bad:
+    print("current romance project should not keep A1-E as an executable expression asset:")
+    for item in bad:
+        print(item)
+    raise SystemExit(1)
+PY
+then
+  pass "current romance project has no executable A1-E expression asset"
+else
+  fail "current romance project still references executable A1-E expression asset"
+fi
 
 obsolete_project_dir_pattern='01_原始输入(/|`|$)|02_世界观故事(/|`|$)|03_剧本(/|`|$)|04_视觉资产(/|`|$)|05_分镜(/|`|$)|06_视频(/|`|$)|05_提示词(/|`|$)|05_视频提示词(/|`|$)|02_剧本/00_故事总览|02_剧本/02_分场剧本|00_原始输入/口述与需求|06_生成素材|10_经验沉淀|09_发布复盘'
 if rg -n "$obsolete_project_dir_pattern" \
