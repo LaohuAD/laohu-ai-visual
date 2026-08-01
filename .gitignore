@@ -18,6 +18,7 @@ build/
 *.log
 *.tmp
 *.bak
+/tmp/
 
 # Generated heavy media can be archived locally.
 # Keep .gitkeep so the project structure remains visible.
