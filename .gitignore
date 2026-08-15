@@ -19,6 +19,17 @@ build/
 *.tmp
 *.bak
 /tmp/
+/output/
+/docs/superpowers/
+
+# Personal work projects stay local. Git tracks only the three status
+# directory placeholders so the reusable project skeleton remains visible.
+/01_作品项目/进行中/*
+!/01_作品项目/进行中/.gitkeep
+/01_作品项目/已完成/*
+!/01_作品项目/已完成/.gitkeep
+/01_作品项目/已发布/*
+!/01_作品项目/已发布/.gitkeep
 
 # Generated heavy media can be archived locally.
 # Keep .gitkeep so the project structure remains visible.
