@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡视频提示词"
+  short_description: "把剧本、分镜和视觉资产编译成可生成、可剪辑的三段式视频提示词"
+  default_prompt: "Use $laohu-video-prompt to compile the confirmed script, shots, and assets into a copy-ready three-part video prompt."

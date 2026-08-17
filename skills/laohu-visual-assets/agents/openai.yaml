@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡视觉资产"
+  short_description: "从剧本拆解人物、场景、道具、风格、图片提示词和下游资产"
+  default_prompt: "Use $laohu-visual-assets to derive the visual assets, dependencies, prompts, and handoff needed by this confirmed script or shot."

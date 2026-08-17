@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡影视编剧"
+  short_description: "把灵感、口述、梗概和已有初稿推进成可生成、可剪辑的影视剧本"
+  default_prompt: "Use $laohu-script-writer to develop this idea or draft into a production-ready story design or screenplay without skipping the existing stage gates."

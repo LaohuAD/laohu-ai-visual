@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡生成复盘"
+  short_description: "验收图片、视频、剪辑、封面与发布结果，定位最早失败并给出返修"
+  default_prompt: "Use $laohu-generation-review to inspect the real output, locate the earliest failure, protect what works, and return focused repair actions."

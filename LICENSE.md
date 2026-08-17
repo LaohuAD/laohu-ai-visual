@@ -54,7 +54,7 @@ All personal brand assets are not licensed for reuse unless explicit written per
 - 老胡个人头像、人物形象、数字人形象
 - 二维码图片、账号入口图、联系方式图片
 - 微信公众号封面图、课程封面图、宣传图
-- 任何包含“老胡用AI画梦”“老胡”个人品牌识别的图片、封面、海报或账号资产
+- 任何包含“老胡用AI赚钱”“老胡”个人品牌识别的图片、封面、海报或账号资产
 
 Current examples include:
 
@@ -76,12 +76,12 @@ Commercial use of the documentation, creative methods, rules, prompts, rubrics, 
 When using or adapting the non-commercial documentation and creative system content, please credit:
 
 ```text
-老胡用AI画梦
+老胡用AI赚钱
 https://github.com/LaohuAD/laohu-ai-visual
 ```
 
 ## 6. Contact
 
 作者：老胡  
-全网同名：老胡用AI画梦  
+全网同名：老胡用AI赚钱  
 Bilibili: https://space.bilibili.com/13497214

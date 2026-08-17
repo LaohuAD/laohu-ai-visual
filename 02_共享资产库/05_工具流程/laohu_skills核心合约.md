@@ -4,8 +4,8 @@
 
 ## 一、核心原则
 
-- 项目专属 skill 命名必须以 `laohu_` 开头。
-- 当前只保留 7 个核心 skill：`laohu_ai_visual`、`laohu_script_writer`、`laohu_visual_assets`、`laohu_video_prompt`、`laohu_vibe_creating_prompt`、`laohu_cover_design`、`laohu_generation_review`。
+- 项目专属 skill 命名必须以 `laohu-` 开头。
+- 当前只保留 7 个核心 skill：`laohu-ai-visual`、`laohu-script-writer`、`laohu-visual-assets`、`laohu-video-prompt`、`laohu-vibe-creating-prompt`、`laohu-cover-design`、`laohu-generation-review`。
 - 一个 skill 可以负责一个大阶段里的多个紧密任务；不要把基础设定、氛围画质、表情、画面内容、组装、图片生成、图片验收、封面内部子能力、剪辑、发布继续拆成零散入口。
 - Skill 不是资料索引，而是能力文件。研究文档只是地基，skill 必须能独立产出可用结果。
 - 规则优先集中到 `02_共享资产库/00_核心规则手册.md` 和 7 个核心 skill。
@@ -16,14 +16,14 @@
 ## 二、核心链路
 
 ```text
-laohu_ai_visual
-→ laohu_script_writer
-→ laohu_visual_assets
-→ laohu_video_prompt
-→ laohu_vibe_creating_prompt
+laohu-ai-visual
+→ laohu-script-writer
+→ laohu-visual-assets
+→ laohu-video-prompt
+→ laohu-vibe-creating-prompt
 → 人工生成测试
-→ laohu_cover_design
-→ laohu_generation_review
+→ laohu-cover-design
+→ laohu-generation-review
 → 经验回流
 ```
 
@@ -33,13 +33,13 @@ laohu_ai_visual
 
 | Skill | 负责阶段 | 核心产出 |
 |---|---|---|
-| `laohu_ai_visual` | 项目入口与路由 | 根本目的判断、作品归属、归档位置、下一步核心 skill、索引更新 |
-| `laohu_script_writer` | 剧本开发 | 故事核心、人物冲突、分场剧本、单场次剧本、台词、剧本医生 |
-| `laohu_visual_assets` | 视觉资产 | 角色、场景、道具、风格、图片提示词、图片生成交接、图片验收、封面所需干净资产、需要低保真故事板的镜头判断 |
-| `laohu_video_prompt` | 视频提示词 | 单场次剧本、分镜概览、低保真故事板提示词、人物表演、基础设定、氛围与画质、画面内容、完整视频提示词 |
-| `laohu_vibe_creating_prompt` | VC 优化 | 视频提示词初稿后的 Vibe Creating 提纯、体验连续性优化、三段模板回填 |
-| `laohu_cover_design` | 封面与海报 | 作品完成后的发布封面、内容承诺、标题视觉焦点、成片与资产参考职责、单条直接带字提示词、`3:4 / 4:3 / 16:9` 比例自适应 |
-| `laohu_generation_review` | 复盘验收 | 生成诊断、剪辑验收、发布复盘、修正提示词、案例入库、经验反哺 |
+| `laohu-ai-visual` | 项目入口与路由 | 根本目的判断、作品归属、归档位置、下一步核心 skill、索引更新 |
+| `laohu-script-writer` | 剧本开发 | 故事核心、人物冲突、分场剧本、单场次剧本、台词、剧本医生 |
+| `laohu-visual-assets` | 视觉资产 | 角色、场景、道具、风格、图片提示词、图片生成交接、图片验收、封面所需干净资产、需要低保真故事板的镜头判断 |
+| `laohu-video-prompt` | 视频提示词 | 单场次剧本、分镜概览、低保真故事板提示词、人物表演、基础设定、氛围与画质、画面内容、完整视频提示词 |
+| `laohu-vibe-creating-prompt` | VC 优化 | 视频提示词初稿后的 Vibe Creating 提纯、体验连续性优化、三段模板回填 |
+| `laohu-cover-design` | 封面与海报 | 作品完成后的发布封面、内容承诺、标题视觉焦点、成片与资产参考职责、单条直接带字提示词、`3:4 / 4:3 / 16:9` 比例自适应 |
+| `laohu-generation-review` | 复盘验收 | 生成诊断、剪辑验收、发布复盘、修正提示词、案例入库、经验反哺 |
 
 ## 四、通用交接字段
 
@@ -90,12 +90,12 @@ B 第一项新动作或声音：
 所有涉及叙事图片、首帧、故事板、视频、封面或多镜头剪辑的 Skill 共享同一份开放式 `电影镜头判断合同`，但按职责分工，不把它复制成逐镜必填表：
 
 ```text
-laohu_script_writer：交接关系压力、信息差、暂时无法解决的具体状态、未闭合动作和台词后果。
-laohu_visual_assets：交接身份硬锚点、色彩命题、单一主成像基底与主要不完美来源，区分资产本体和一次性画面效果。
-laohu_video_prompt：把可信摄影机位置、视线流量、主 / 辅线索、选择性不完整和特殊手段动机编译进三段正文。
-laohu_cover_design：把同一原则用于传播型视觉资产，让标题或标题与主符号成为清楚第一落点，不套固定画风与坐标。
-laohu_vibe_creating_prompt：只提纯表达，不把普通连接镜头全部升级成海报帧，也不删掉主次、留白和未回应信息。
-laohu_generation_review：检查实体机位、视线流量、信息层级、介质一致性、特殊光学动机和镜头顺序不可交换性。
+laohu-script-writer：交接关系压力、信息差、暂时无法解决的具体状态、未闭合动作和台词后果。
+laohu-visual-assets：交接身份硬锚点、色彩命题、单一主成像基底与主要不完美来源，区分资产本体和一次性画面效果。
+laohu-video-prompt：把可信摄影机位置、视线流量、主 / 辅线索、选择性不完整和特殊手段动机编译进三段正文。
+laohu-cover-design：把同一原则用于传播型视觉资产，让标题或标题与主符号成为清楚第一落点，不套固定画风与坐标。
+laohu-vibe-creating-prompt：只提纯表达，不把普通连接镜头全部升级成海报帧，也不删掉主次、留白和未回应信息。
+laohu-generation-review：检查实体机位、视线流量、信息层级、介质一致性、特殊光学动机和镜头顺序不可交换性。
 ```
 
 固定 `21:9 × 3`、三联画、固定 `3:4` 海报、固定类型配色、固定导演模仿和逐镜完整字段都不是项目合同。外部案例与老胡历史成功提示词只提供可验证的机制和案例证据；除非明确要求系列续作，具体构图、比例、配色、人物姿势、介质和标题版式必须按当次内容重新设计。
@@ -104,8 +104,8 @@ laohu_generation_review：检查实体机位、视线流量、信息层级、介
 
 ### 剧本交接包
 
-来源：`laohu_script_writer`  
-下游：`laohu_visual_assets` / `laohu_video_prompt`
+来源：`laohu-script-writer`
+下游：`laohu-visual-assets` / `laohu-video-prompt`
 
 ```text
 故事类型：
@@ -135,8 +135,8 @@ laohu_generation_review：检查实体机位、视线流量、信息层级、介
 
 ### 视觉资产交接包
 
-来源：`laohu_visual_assets`  
-下游：`laohu_video_prompt` / `laohu_generation_review`
+来源：`laohu-visual-assets`
+下游：`laohu-video-prompt` / `laohu-generation-review`
 
 ```text
 角色资产：
@@ -163,8 +163,8 @@ laohu_generation_review：检查实体机位、视线流量、信息层级、介
 
 ### 镜头预演板交接包
 
-来源：`laohu_video_prompt`  
-下游：生图模型 / 人工生成测试 / `laohu_generation_review`
+来源：`laohu-video-prompt`
+下游：生图模型 / 人工生成测试 / `laohu-generation-review`
 
 ```text
 VID 编号：
@@ -183,8 +183,8 @@ VID 编号：
 
 ### 视频提示词交接包
 
-来源：`laohu_video_prompt`  
-下游：人工生成测试 / `laohu_generation_review`
+来源：`laohu-video-prompt`
+下游：人工生成测试 / `laohu-generation-review`
 
 ```text
 单场次剧本：
@@ -227,7 +227,7 @@ B 第一可见动作 / 声音：
 
 ### 复盘验收交接包
 
-来源：`laohu_generation_review`  
+来源：`laohu-generation-review`
 下游：对应核心 skill / 共享资产更新
 
 ```text
@@ -256,14 +256,14 @@ B 第一可见动作 / 声音：
 ### 项目入口
 
 ```text
-请使用 laohu_ai_visual 判断这份材料属于当前项目哪一环，并告诉我应该归档到哪里、下一步调用哪个核心 skill。
+请使用 laohu-ai-visual 判断这份材料属于当前项目哪一环，并告诉我应该归档到哪里、下一步调用哪个核心 skill。
 材料：
 ```
 
 ### 剧本
 
 ```text
-请使用 laohu_script_writer，把这个灵感开发成可拍、可生成、可剪辑的剧本。
+请使用 laohu-script-writer，把这个灵感开发成可拍、可生成、可剪辑的剧本。
 灵感：
 目标时长：
 目标平台：
@@ -273,7 +273,7 @@ B 第一可见动作 / 声音：
 ### 视觉资产
 
 ```text
-请使用 laohu_visual_assets，把下面剧本拆成角色、场景、道具、风格和图片资产，并整理可供封面调用的主体、构图、风格、Logo 与锁定 / 允许变化职责；不要在本阶段创作最终封面。
+请使用 laohu-visual-assets，把下面剧本拆成角色、场景、道具、风格和图片资产，并整理可供封面调用的主体、构图、风格、Logo 与锁定 / 允许变化职责；不要在本阶段创作最终封面。
 剧本：
 目标视频形式：
 是否多镜头：
@@ -282,7 +282,7 @@ B 第一可见动作 / 声音：
 ### 封面与海报
 
 ```text
-请使用 laohu_cover_design。默认在作品和最终视频提示词完成、准备发布或已发布补封面时执行；先读取最终视频提示词、可用成片截图和已确认视觉资产，再根据真实内容、目标观众和点击承诺，内部完成候选比较，只交付一条可适配 3:4、4:3、16:9 的直接带字 `【封面生图提示词】`。老胡提供的标题和副标题逐字锁定，所有实际引用直接在提示词代码块内用 `【……参考@……】` 标出，不套用固定审美模板，不默认展示设计报告。
+请使用 laohu-cover-design。默认在作品和最终视频提示词完成、准备发布或已发布补封面时执行；先读取最终视频提示词、可用成片截图和已确认视觉资产，再根据真实内容、目标观众和点击承诺，内部完成候选比较，只交付一条可适配 3:4、4:3、16:9 的直接带字 `【封面生图提示词】`。老胡提供的标题和副标题逐字锁定，所有实际引用直接在提示词代码块内用 `【……参考@……】` 标出，不套用固定审美模板，不默认展示设计报告。
 作品与平台：
 逐字锁定的标题与副标题：
 最终视频提示词 / 成片截图：
@@ -293,7 +293,7 @@ B 第一可见动作 / 声音：
 ### 视频提示词
 
 ```text
-请使用 laohu_video_prompt，按确认门推进这个视频创作：先给整个内容剧本，等我确认；再给完整分镜表；再给第一个分镜的视频提示词；最后再给全部分镜提示词。
+请使用 laohu-video-prompt，按确认门推进这个视频创作：先给整个内容剧本，等我确认；再给完整分镜表；再给第一个分镜的视频提示词；最后再给全部分镜提示词。
 剧本 / 需求：
 画幅：
 目标模型：
@@ -303,7 +303,7 @@ B 第一可见动作 / 声音：
 ### 复盘验收
 
 ```text
-请使用 laohu_generation_review，诊断这个结果，判断成功 / 半成功 / 失败，给原因定位、返修方案、下一版修正提示词和是否入库。
+请使用 laohu-generation-review，诊断这个结果，判断成功 / 半成功 / 失败，给原因定位、返修方案、下一版修正提示词和是否入库。
 作品名：
 阶段：图片生成 / 视频生成 / 剪辑成片 / 发布复盘
 原提示词或版本位置：
@@ -327,7 +327,7 @@ B 第一可见动作 / 声音：
 静态检查：
 
 ```bash
-bash skills/laohu_ai_visual/scripts/check_laohu_skills.sh
+bash skills/laohu-ai-visual/scripts/check_laohu_skills.sh
 ```
 
 ## 八、结束前检查

@@ -10,7 +10,7 @@
 
 ## 作者介绍：老胡
 
-我是老胡，全网同名：**老胡用AI画梦**。
+我是老胡，全网同名：**老胡用AI赚钱**。
 
 我主要做 AI 音乐、AI 视觉和 AI 内容创作相关的实战分享。相比单纯推荐工具，我更关注一件事：怎么把 AI 从“会生成”推进到“能做出作品、能发布、能复盘、能形成个人创作系统”。
 
@@ -18,9 +18,9 @@
 
 公开账号：
 
-- Bilibili：[老胡用AI画梦](https://space.bilibili.com/13497214)
-- 小红书：[老胡用AI画梦](https://xhslink.com/m/AZo7UbSx1ef)
-- 抖音：[老胡用AI画梦](https://v.douyin.com/usGF0Kz_Yic/)
+- Bilibili：[老胡用AI赚钱](https://space.bilibili.com/13497214)
+- 小红书：[老胡用AI赚钱](https://xhslink.com/m/AZo7UbSx1ef)
+- 抖音：[老胡用AI赚钱](https://v.douyin.com/usGF0Kz_Yic/)
 - 微信公众号文章：[半年我跑通了一门副业，保姆级教程教你](https://mp.weixin.qq.com/s/9MFowDN04_J59lidkG0HPQ)
 
 账号入口：
@@ -35,12 +35,19 @@
 
 ![老胡微信公众号文章封面示例：半年我跑通了一门副业](assets/laohu-side-business-article-cover.png)
 
-## 配套资源
+## 老胡的三个 AI 创作项目
 
-下面两项都是可选资源，不影响本项目独立运行：
+这三个项目解决的是同一条创作链上的不同问题，可以独立使用，也可以互相配合：
 
-- AI 模型接口：[AI MONEY](https://api.laohuaimoney.com/sign-up?aff=460d)（推广链接）。可以集中调用图片、视频和大语言模型，适合生成本项目需要的视觉资产，也方便做不同模型的效果测试。具体模型、价格和服务范围以平台页面为准。
-- 可视化画布：[老胡无限画布](https://github.com/LaohuAD/laohu-Infinite-Canvas)。这是一个独立的可视化创作工具，不是本项目的必装组件。
+| 项目 | 主要解决什么 | 适合在什么时候使用 |
+|---|---|---|
+| [老胡 AI 视觉](https://github.com/LaohuAD/laohu-ai-visual) | 把灵感推进成故事、剧本、视觉资产、分镜、视频提示词、封面和复盘 | 需要建立一部视觉作品的完整生产方法时 |
+| [老胡音乐 V4](https://github.com/LaohuAD/laohu-music) | 把歌曲灵感推进到选题、写词、谱曲、歌名、封面和发布归档 | 需要完成一首歌，并让创作经验继续沉淀时 |
+| [老胡无限画布](https://github.com/LaohuAD/laohu-Infinite-Canvas) | 在可视化画布里连接素材、模型、参数和生成结果 | 需要调用不同平台模型、组织素材和运行生成任务时 |
+
+一种常见组合是：先在本项目里完成故事、剧本、资产和镜头设计，再到无限画布调用图片或视频模型；作品需要原创歌曲时，使用老胡音乐 V4 完成选题、歌词和声音方案。它们不是彼此的必装依赖，真正共享的是同一套原则：先把作品问题想清楚，再选择模型和工具。
+
+可选的 AI 模型接口：[AI MONEY](https://api.laohuaimoney.com/sign-up?aff=460d)（推广链接）。具体模型、价格和服务范围以平台页面为准。
 
 ## 适合谁
 
@@ -190,15 +197,21 @@
 
 | Skill | 用途 |
 |---|---|
-| [laohu_ai_visual](skills/laohu_ai_visual/SKILL.md) | 项目入口、根本目的判断、路由、归档、结束前检查 |
-| [laohu_script_writer](skills/laohu_script_writer/SKILL.md) | 故事、剧本、分场、单场次剧本、台词和剧本医生 |
-| [laohu_visual_assets](skills/laohu_visual_assets/SKILL.md) | 角色、场景、道具、风格、图片资产、图片验收和封面所需资产交接 |
-| [laohu_video_prompt](skills/laohu_video_prompt/SKILL.md) | 分镜、人物表演、基础设定、氛围画质、画面内容和完整视频提示词 |
-| [laohu_vibe_creating_prompt](skills/laohu_vibe_creating_prompt/SKILL.md) | 视频提示词生成后的 Vibe Creating 提纯优化 |
-| [laohu_cover_design](skills/laohu_cover_design/SKILL.md) | 作品完成后的自媒体封面、影视海报、成片与资产引用、单条直接带字提示词和比例自适应 |
-| [laohu_generation_review](skills/laohu_generation_review/SKILL.md) | 生成复盘、剪辑验收、发布复盘、修正提示词和经验回流 |
+| [laohu-ai-visual](skills/laohu-ai-visual/SKILL.md) | 项目入口、根本目的判断、路由、归档、结束前检查 |
+| [laohu-script-writer](skills/laohu-script-writer/SKILL.md) | 故事、剧本、分场、单场次剧本、台词和剧本医生 |
+| [laohu-visual-assets](skills/laohu-visual-assets/SKILL.md) | 角色、场景、道具、风格、图片资产、图片验收和封面所需资产交接 |
+| [laohu-video-prompt](skills/laohu-video-prompt/SKILL.md) | 分镜、人物表演、基础设定、氛围画质、画面内容和完整视频提示词 |
+| [laohu-vibe-creating-prompt](skills/laohu-vibe-creating-prompt/SKILL.md) | 视频提示词生成后的 Vibe Creating 提纯优化 |
+| [laohu-cover-design](skills/laohu-cover-design/SKILL.md) | 作品完成后的自媒体封面、影视海报、成片与资产引用、单条直接带字提示词和比例自适应 |
+| [laohu-generation-review](skills/laohu-generation-review/SKILL.md) | 生成复盘、剪辑验收、发布复盘、修正提示词和经验回流 |
 
 Skill 编排、交接字段、启动语和验证标准集中在 [laohu_skills核心合约.md](02_共享资产库/05_工具流程/laohu_skills核心合约.md)。
+
+每个 Skill 的 `SKILL.md` 只保留触发条件、任务判断、原有流程、硬质量门、输出合同和下游交接。题材方法、长篇执行细节、案例、反例和失败修复进入该 Skill 的 `references/`，由主体根据当前任务显式选择；不会因为目录里存在 Reference 就一次全部读取。
+
+这里没有固定行数目标。某项专业细节如果每次执行都需要，即使会让主体明显变长，也继续放在主体；只有确实存在独立触发条件的内容才拆成 Reference。判断标准是结果质量、执行完整性和读取准确性，不是文件看起来短不短。
+
+这次结构整理没有改变七个 Skill 的生产顺序、阶段产物、文件位置、三段式视频提示词、人工生成测试、封面后置或复盘回流。外部 Vibe Creating Skill 已逐字放入 [本地 Reference](skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md)，只在提示词确实需要轻度提纯、直接改写或可选 VC 版时读取；直接放行、原样保留和退回上游时不加载。
 
 ## 顶层结构
 
@@ -271,7 +284,7 @@ AI Agent 会按下面的顺序处理这些材料：
 → 提炼它对剧本、视觉资产、分镜、视频提示词、生成复盘哪一环有用
 → 判断是当前作品经验还是跨作品规则
 → 更新作品复盘或共享资产
-→ 必要时更新对应 `laohu_` Skill
+→ 必要时更新对应 `laohu-` Skill
 → 在输入输出索引记录
 ```
 
@@ -304,7 +317,7 @@ npx skills add LaohuAD/laohu-ai-visual
 只想安装某一个 Skill：
 
 ```bash
-npx skills add LaohuAD/laohu-ai-visual --skill laohu_ai_visual
+npx skills add LaohuAD/laohu-ai-visual --skill laohu-ai-visual
 ```
 
 这会把 `skills/*/SKILL.md` 安装到当前 Agent 的 Skills 目录。适合已经有自己项目，只想复用部分视觉创作能力的人。
@@ -330,7 +343,7 @@ cd my-ai-visual-system
 ### 2. 检查项目结构
 
 ```bash
-bash skills/laohu_ai_visual/scripts/check_laohu_skills.sh
+bash skills/laohu-ai-visual/scripts/check_laohu_skills.sh
 ```
 
 如果输出：
@@ -344,13 +357,13 @@ Contract check passed.
 ### 3. 创建一个新作品
 
 ```bash
-bash skills/laohu_ai_visual/scripts/create_work_project.sh "我的视觉作品"
+bash skills/laohu-ai-visual/scripts/create_work_project.sh "我的视觉作品"
 ```
 
 也可以指定日期：
 
 ```bash
-bash skills/laohu_ai_visual/scripts/create_work_project.sh "我的视觉作品" "2026-06-13"
+bash skills/laohu-ai-visual/scripts/create_work_project.sh "我的视觉作品" "2026-06-13"
 ```
 
 脚本会在 `01_作品项目/进行中/` 下创建一套完整作品目录。
