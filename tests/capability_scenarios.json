@@ -1,0 +1,131 @@
+{
+  "skill_contracts": {
+    "laohu-ai-visual": {
+      "headings": ["总控箴言", "生产路由", "执行闭环", "交付验收"],
+      "anchors": ["作品状态", "阶段入口", "下游负责人"]
+    },
+    "laohu-script-writer": {
+      "headings": ["编剧箴言", "故事因果", "剧本开发", "剧本交接与验收"],
+      "anchors": ["观众等待", "人物选择", "下一场压力"]
+    },
+    "laohu-visual-assets": {
+      "headings": ["资产箴言", "资产关系", "美术与提示词", "资产验收与交接"],
+      "anchors": ["失真代价", "依赖顺序", "下游调用"]
+    },
+    "laohu-video-prompt": {
+      "headings": ["镜头箴言", "时空编译", "三段式成稿", "生成前验收"],
+      "anchors": ["起点状态", "屏幕变化", "结束状态"]
+    },
+    "laohu-vibe-creating-prompt": {
+      "headings": ["提纯箴言", "增益边界", "提纯动作", "回填与验收"],
+      "anchors": ["观众可感知", "保留原稿", "字符实测"]
+    },
+    "laohu-cover-design": {
+      "headings": ["封面箴言", "点击承诺与视觉关系", "画面文字执行", "缩略图验收"],
+      "anchors": ["点击后真正能看到", "第一落点", "逐字核对"]
+    },
+    "laohu-generation-review": {
+      "headings": ["复盘箴言", "首断点归因", "返修与回流", "证据验收"],
+      "anchors": ["第一个断点", "最早负责人", "最多三个"]
+    }
+  },
+  "root_forbidden_patterns": [
+    "人物素体形象资产",
+    "FACS",
+    "色卡锚定句",
+    "动作接触点需要清楚时",
+    "人物妆造设计资产"
+  ],
+  "migration_contracts": [
+    {
+      "capability": "观众认知与视角分层",
+      "file": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "anchors": ["观众认知状态", "五层视角"]
+    },
+    {
+      "capability": "反平均化选择",
+      "file": "skills/laohu-script-writer/SKILL.md",
+      "anchors": ["模型第一反应", "平均值候选", "可替换性"]
+    },
+    {
+      "capability": "画面内容的镜头叙事语法",
+      "file": "skills/laohu-video-prompt/references/10_画面内容镜头叙事语法.md",
+      "anchors": ["景别或信息尺度是证据边界", "动作必须闭合因果", "声音必须有来源"]
+    },
+    {
+      "capability": "速度节奏与相对时长",
+      "file": "skills/laohu-video-prompt/references/09_速度节奏与时间动力设计.md",
+      "anchors": ["速度不是一个快慢形容词", "相对时长约束", "信息速度不能超过识别速度"]
+    },
+    {
+      "capability": "音乐与画面合同",
+      "file": "skills/laohu-video-prompt/references/04_MV概念PV与动态图形蒙太奇.md",
+      "anchors": ["音乐-画面节拍合同", "拍前准备", "拍后余波"]
+    },
+    {
+      "capability": "人物表演与空间压力",
+      "file": "skills/laohu-video-prompt/references/01_文戏对白与人物表演.md",
+      "anchors": ["演员节拍控制合同", "表情与 AU", "空间压力"]
+    },
+    {
+      "capability": "资产依赖与全画面闭合",
+      "file": "skills/laohu-visual-assets/SKILL.md",
+      "anchors": ["无环依赖图", "全画面闭合", "引用闭合"]
+    },
+    {
+      "capability": "相邻单元与状态继承",
+      "file": "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+      "anchors": ["相邻单元交接合同", "A 结束状态", "B 起点状态"]
+    },
+    {
+      "capability": "三段式与剪辑接口",
+      "file": "skills/laohu-video-prompt/SKILL.md",
+      "anchors": ["三段式成稿", "素材剪辑接口卡", "字符实测"]
+    },
+    {
+      "capability": "首断点归因与经验回流",
+      "file": "skills/laohu-generation-review/SKILL.md",
+      "anchors": ["第一个断点", "最早负责人", "规则进化"]
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "模糊灵感走到可生成结果",
+      "chain": [
+        {"owner": "laohu-ai-visual", "anchors": ["阶段入口", "阶段完成条件"]},
+        {"owner": "laohu-script-writer", "anchors": ["观众等待", "人物选择"]},
+        {"owner": "laohu-visual-assets", "anchors": ["最低可行资产", "依赖顺序"]},
+        {"owner": "laohu-video-prompt", "anchors": ["屏幕变化", "结束状态"]}
+      ]
+    },
+    {
+      "name": "单张漂亮图片不能冒充资产",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["失真代价", "下游调用", "降级"]},
+        {"owner": "laohu-generation-review", "anchors": ["证据验收", "返回"]}
+      ]
+    },
+    {
+      "name": "跨视频单元不重演上一个动作",
+      "chain": [
+        {"owner": "laohu-script-writer", "anchors": ["下一场压力", "下一相位"]},
+        {"owner": "laohu-video-prompt", "anchors": ["起点状态", "结束状态", "下一相位"]},
+        {"owner": "laohu-generation-review", "anchors": ["真实结束状态", "第一个断点"]}
+      ]
+    },
+    {
+      "name": "封面承诺不得超过正片",
+      "chain": [
+        {"owner": "laohu-cover-design", "anchors": ["点击后真正能看到", "第一落点", "逐字核对"]},
+        {"owner": "laohu-generation-review", "anchors": ["承诺兑现", "发布"]}
+      ]
+    },
+    {
+      "name": "反馈回到最早失效能力",
+      "chain": [
+        {"owner": "laohu-generation-review", "anchors": ["第一个断点", "最早负责人", "最多三个"]},
+        {"owner": "laohu-ai-visual", "anchors": ["规则负责人", "行为验证"]}
+      ]
+    }
+  ]
+}
