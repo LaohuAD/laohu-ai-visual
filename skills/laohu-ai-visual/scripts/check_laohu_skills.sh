@@ -29,6 +29,7 @@ required_files=(
   输入输出索引.md
   02_共享资产库/00_核心规则手册.md
   02_共享资产库/05_工具流程/laohu_skills核心合约.md
+  02_共享资产库/05_工具流程/外部能力依赖清单.md
   scripts/validate_capability_architecture.py
   tests/capability_scenarios.json
   skills/laohu-video-prompt/scripts/count_video_prompt_chars.sh

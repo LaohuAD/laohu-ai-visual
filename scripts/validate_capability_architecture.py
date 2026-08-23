@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -20,6 +21,10 @@ def fail(message: str, failures: list[str]) -> None:
 
 def passed(message: str) -> None:
     print(f"PASS: {message}")
+
+
+def digest(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def main() -> int:
@@ -99,6 +104,84 @@ def main() -> int:
             passed(
                 f"legacy capability retained by unique owner: {migration['capability']}"
             )
+
+    registered_sources: set[str] = set()
+    for dependency in data["external_dependency_contracts"]:
+        source_relative = dependency["canonical_source"]
+        registered_sources.add(source_relative)
+        source = ROOT / source_relative
+        mirror = ROOT / dependency["portable_mirror"]
+        adapter = ROOT / dependency["local_adapter"]
+        return_owner = ROOT / dependency["return_owner"]
+
+        for role, path in [
+            ("canonical source", source),
+            ("portable mirror", mirror),
+            ("local adapter", adapter),
+            ("return owner", return_owner),
+        ]:
+            if path.is_file():
+                passed(f"external dependency has {role}: {dependency['name']}")
+            else:
+                fail(f"external dependency missing {role}: {dependency['name']}", failures)
+
+        if source.is_file() and mirror.is_file():
+            if digest(source) == digest(mirror):
+                passed(f"external source mirror is exact: {dependency['name']}")
+            else:
+                fail(f"external source mirror drifted: {dependency['name']}", failures)
+
+        if adapter.is_file():
+            adapter_text = adapter.read_text(encoding="utf-8")
+            missing = [
+                anchor
+                for anchor in dependency["adapter_anchors"]
+                if anchor not in adapter_text
+            ]
+            if missing:
+                fail(
+                    f"external adapter identity is incomplete: {dependency['name']} -> "
+                    f"{', '.join(missing)}",
+                    failures,
+                )
+            else:
+                passed(f"external adapter identity is explicit: {dependency['name']}")
+
+        for caller_relative, anchors in dependency["caller_contracts"].items():
+            caller = ROOT / caller_relative
+            if not caller.is_file():
+                fail(f"external dependency caller missing: {caller_relative}", failures)
+                continue
+            caller_text = caller.read_text(encoding="utf-8")
+            missing = [anchor for anchor in anchors if anchor not in caller_text]
+            if missing:
+                fail(
+                    f"external dependency caller is ambiguous: {caller_relative} -> "
+                    f"{', '.join(missing)}",
+                    failures,
+                )
+            else:
+                passed(f"external dependency caller is explicit: {caller_relative}")
+
+    discovered_sources = {
+        path.relative_to(ROOT).as_posix()
+        for path in (
+            ROOT / "02_共享资产库/05_工具流程/外部优化Skill"
+        ).glob("*/SKILL.md")
+    }
+    unregistered_sources = sorted(discovered_sources - registered_sources)
+    stale_sources = sorted(registered_sources - discovered_sources)
+    if unregistered_sources:
+        fail(
+            "unregistered external Skill source: " + ", ".join(unregistered_sources),
+            failures,
+        )
+    else:
+        passed("all vendored external Skill sources are registered")
+    if stale_sources:
+        fail("registered external Skill source missing: " + ", ".join(stale_sources), failures)
+    else:
+        passed("external Skill registry has no stale source")
 
     for scenario in data["scenarios"]:
         scenario_ok = True

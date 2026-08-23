@@ -98,9 +98,11 @@
 | [laohu-script-writer](skills/laohu-script-writer/SKILL.md) | 故事、剧本、分场、对白和剧本修改 |
 | [laohu-visual-assets](skills/laohu-visual-assets/SKILL.md) | 角色、场景、道具、风格、图片资产和验收 |
 | [laohu-video-prompt](skills/laohu-video-prompt/SKILL.md) | 分镜、表演、动作、画面内容和视频提示词 |
-| [laohu-vibe-creating-prompt](skills/laohu-vibe-creating-prompt/SKILL.md) | 视频提示词的提纯和失败修复 |
+| [laohu-vibe-creating-prompt](skills/laohu-vibe-creating-prompt/SKILL.md) | 外部 Vibe Creating Skill 的本地适配、提纯边界和回填 |
 | [laohu-cover-design](skills/laohu-cover-design/SKILL.md) | 封面、海报、成片引用和比例适配 |
 | [laohu-generation-review](skills/laohu-generation-review/SKILL.md) | 生成结果、剪辑、发布和经验复盘 |
+
+其中 Vibe Creating 不是本项目原创 Skill。外部 `vibe-creating-prompt` 的原文、本地便携副本、适配入口、调用链和失效处理统一登记在[外部能力依赖清单](02_共享资产库/05_工具流程/外部能力依赖清单.md)，避免只剩 VC 简称而丢失来源关系。
 
 ## 项目结构
 

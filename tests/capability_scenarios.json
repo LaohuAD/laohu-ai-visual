@@ -88,6 +88,31 @@
       "anchors": ["第一个断点", "最早负责人", "规则进化"]
     }
   ],
+  "external_dependency_contracts": [
+    {
+      "name": "vibe-creating-prompt",
+      "kind": "vendored-external-skill",
+      "canonical_source": "02_共享资产库/05_工具流程/外部优化Skill/vibe-creating-prompt/SKILL.md",
+      "portable_mirror": "skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md",
+      "local_adapter": "skills/laohu-vibe-creating-prompt/SKILL.md",
+      "return_owner": "skills/laohu-video-prompt/SKILL.md",
+      "adapter_anchors": [
+        "外部 Skill",
+        "本地适配层",
+        "02_共享资产库/05_工具流程/外部优化Skill/vibe-creating-prompt/SKILL.md",
+        "references/01_外部Vibe_Creating原文.md",
+        "laohu-video-prompt"
+      ],
+      "caller_contracts": {
+        "02_共享资产库/05_工具流程/外部能力依赖清单.md": ["EXT-SKILL-001", "本地适配层", "失效处理"],
+        "AGENTS.md": ["外部能力依赖", "vibe-creating-prompt"],
+        "02_共享资产库/00_核心规则手册.md": ["外部 `vibe-creating-prompt`", "本地适配入口"],
+        "02_共享资产库/05_工具流程/laohu_skills核心合约.md": ["VC 身份与调用链", "laohu-vibe-creating-prompt"],
+        "skills/laohu-video-prompt/SKILL.md": ["VC 指外部", "laohu-vibe-creating-prompt"],
+        "输入输出索引.md": ["外部能力依赖清单", "vibe-creating-prompt"]
+      }
+    }
+  ],
   "scenarios": [
     {
       "name": "模糊灵感走到可生成结果",
