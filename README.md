@@ -88,7 +88,7 @@
 2. [laohu-ai-visual](skills/laohu-ai-visual/SKILL.md)：判断作品状态、最上游缺口和唯一负责人。
 3. 根据路由只读取当前主任务的 Skill，以及它明确触发的 Reference。
 
-[能力地图](02_共享资产库/00_核心规则手册.md)解释七项能力怎样接力，[输入输出索引](输入输出索引.md)索引公开文件；它们不替代具体 Skill 的执行方法。复杂多部门作品发生跨专业取舍时，再按条件读取导演级总控流程。
+[能力地图](02_共享资产库/00_核心规则手册.md)解释八项能力怎样接力，[输入输出索引](输入输出索引.md)索引公开文件；它们不替代具体 Skill 的执行方法。复杂多部门作品发生跨专业取舍时，再按条件读取导演级总控流程。
 
 当前的核心 Skill：
 
@@ -101,8 +101,13 @@
 | [laohu-vibe-creating-prompt](skills/laohu-vibe-creating-prompt/SKILL.md) | 外部 Vibe Creating Skill 的本地适配、提纯边界和回填 |
 | [laohu-cover-design](skills/laohu-cover-design/SKILL.md) | 封面、海报、成片引用和比例适配 |
 | [laohu-generation-review](skills/laohu-generation-review/SKILL.md) | 生成结果、剪辑、发布和经验复盘 |
+| [laohu-capability-evolution](skills/laohu-capability-evolution/SKILL.md) | 把可复用反馈、研究、反思与平台变化编译成可验证的长期能力更新 |
 
 其中 Vibe Creating 不是本项目原创 Skill。外部 `vibe-creating-prompt` 的原文、本地便携副本、适配入口、调用链和失效处理统一登记在[外部能力依赖清单](02_共享资产库/05_工具流程/外部能力依赖清单.md)，避免只剩 VC 简称而丢失来源关系。
+
+普通作品生产不默认加载能力进化 Skill。只有反馈、研究或平台变化可能影响以后同类任务时，才由总控或复盘交接；进化完成后返回总控。阶段范围清楚、验证通过且不混入范围外改动时，可以建立本地 Git 检查点；远程推送和发布仍需当前任务明确授权。
+
+跨任务进化通过[能力进化台账](04_诊断与系统日志/能力进化台账.md)接续：它只保存证据索引、旧行为、新行为和重新唤醒条件，长期执行规则仍由对应业务 Skill 负责。
 
 ## 项目结构
 

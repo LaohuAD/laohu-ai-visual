@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "baseline_ref": "6030e82",
+  "status": "COMPLETE",
+  "evidence_ceiling": "OBSERVE：已检查章节覆盖、目标存在、入口引用和现有场景合同；真实作品质量仍需独立生产验证",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sections": ["定位、意图、资产与图片分流", "目录、文件、隐私、命名与交付", "生产闭环、输入处理、经验反哺与行为边界"]
+    },
+    {
+      "path": "02_共享资产库/00_核心规则手册.md",
+      "sections": ["观众认知、镜头叙事、速度节奏、音乐与审美否决", "传播机制、表演口语、台词节拍、核心词道具空间", "生产流程、阶段确认与相邻单元", "资产依赖、全画面引用闭合与美术指导", "单文件迭代、剧本格式、方言、时间省略与 POV", "视频知识路由、三段提示词与剪辑接口", "人物表情、所属物、风格与证据景别"]
+    },
+    {
+      "path": "skills/laohu-ai-visual/SKILL.md",
+      "sections": ["总控路由、阶段状态与跨 Skill 交接"]
+    },
+    {
+      "path": "skills/laohu-script-writer/SKILL.md",
+      "sections": ["故事人物场次与商业剧本", "口述台词方言视角格式与反向审稿"]
+    },
+    {
+      "path": "skills/laohu-visual-assets/SKILL.md",
+      "sections": ["资产判定依赖状态与全画面闭合", "美术设计图片提示词验收与下游交接"]
+    },
+    {
+      "path": "skills/laohu-video-prompt/SKILL.md",
+      "sections": ["内容路由机制卡与三段编译", "连续性速度声画剪辑接口与模型法度"]
+    },
+    {
+      "path": "skills/laohu-vibe-creating-prompt/SKILL.md",
+      "sections": ["视觉基调与 Vibe 编译"]
+    },
+    {
+      "path": "skills/laohu-cover-design/SKILL.md",
+      "sections": ["封面承诺、视觉入口、平台规格与验收"]
+    },
+    {
+      "path": "skills/laohu-generation-review/SKILL.md",
+      "sections": ["图片视频封面剪辑诊断、复盘与规则回流"]
+    }
+  ],
+  "items": [
+    {
+      "id": "root-purpose-routing",
+      "source_path": "AGENTS.md",
+      "source_sections": ["定位、意图、资产与图片分流"],
+      "original_function": "识别真实目的，区分资产生产、成品图片与视频作品，并路由唯一负责人。",
+      "unique_information": ["生成资产不等于生成图片", "画幅参数与构图判断分离", "品牌归属和参考素材按用途判断"],
+      "action": "MERGE",
+      "target_paths": ["AGENTS.md", "skills/laohu-ai-visual/SKILL.md"],
+      "activation_routes": [
+        {"from": "AGENTS.md", "trigger": "项目收到任何新作品或单项视觉请求", "to": "AGENTS.md"},
+        {"from": "AGENTS.md", "trigger": "需要进入生产总控和阶段路由", "to": "skills/laohu-ai-visual/SKILL.md"}
+      ],
+      "validation": {"task": "资产、单张图片、完整视频和复盘请求进入不同负责人", "status": "PASS"}
+    },
+    {
+      "id": "root-file-production-boundaries",
+      "source_path": "AGENTS.md",
+      "source_sections": ["目录、文件、隐私、命名与交付", "生产闭环、输入处理、经验反哺与行为边界"],
+      "original_function": "保护作品隐私、阶段文件、命名、输入输出和经验回流。",
+      "unique_information": ["作品区不进入 Git", "阶段主文件而非版本副本", "经验反哺必须回到唯一能力负责人"],
+      "action": "MERGE",
+      "target_paths": ["AGENTS.md", "skills/laohu-ai-visual/SKILL.md", "skills/laohu-capability-evolution/SKILL.md"],
+      "activation_routes": [
+        {"from": "AGENTS.md", "trigger": "所有本地文件、隐私与阶段交付", "to": "AGENTS.md"},
+        {"from": "AGENTS.md", "trigger": "作品生产闭环", "to": "skills/laohu-ai-visual/SKILL.md"},
+        {"from": "AGENTS.md", "trigger": "反馈具有跨任务复用价值", "to": "skills/laohu-capability-evolution/SKILL.md"}
+      ],
+      "validation": {"task": "真实作品文件不被纳入 Git，长期反馈进入能力进化而非直接追加顶层规则", "status": "PASS"}
+    },
+    {
+      "id": "core-audience-camera-time",
+      "source_path": "02_共享资产库/00_核心规则手册.md",
+      "source_sections": ["观众认知、镜头叙事、速度节奏、音乐与审美否决"],
+      "original_function": "从观众认知与观看承诺推导镜头、时间、声画和候选否决。",
+      "unique_information": ["观众信息状态必须逐步改变", "速度需要参照和可读性", "音乐事件有拍前准备、同步完成和拍后余波", "高价值位置不接受模型第一反应"],
+      "action": "MOVE",
+      "target_paths": ["skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md", "skills/laohu-video-prompt/references/09_速度节奏与时间动力设计.md", "skills/laohu-video-prompt/references/10_画面内容镜头叙事语法.md", "skills/laohu-video-prompt/references/04_MV概念PV与动态图形蒙太奇.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-script-writer/SKILL.md", "trigger": "观众认知、视角、动机、巧合、命名或故事因果", "to": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md"},
+        {"from": "skills/laohu-video-prompt/SKILL.md", "trigger": "动作快慢、节奏、时长、慢动作或时间动力承重", "to": "skills/laohu-video-prompt/references/09_速度节奏与时间动力设计.md"},
+        {"from": "skills/laohu-video-prompt/SKILL.md", "trigger": "镜头叙事、电影视觉、声画或空间语法承重", "to": "skills/laohu-video-prompt/references/10_画面内容镜头叙事语法.md"},
+        {"from": "skills/laohu-video-prompt/SKILL.md", "trigger": "MV、概念 PV、排版动画或音乐视觉短语", "to": "skills/laohu-video-prompt/references/04_MV概念PV与动态图形蒙太奇.md"}
+      ],
+      "validation": {"task": "观众信息、镜头事件、速度参照和音乐拍点在对应题材中分别被触发", "status": "PASS"}
+    },
+    {
+      "id": "core-dialogue-performance-continuity",
+      "source_path": "02_共享资产库/00_核心规则手册.md",
+      "source_sections": ["传播机制、表演口语、台词节拍、核心词道具空间"],
+      "original_function": "保护台词的传播动力、表演可说性、节拍功能和核心连续性。",
+      "unique_information": ["理解双方不等于平均对白", "原创不能安全化洗掉情绪功能", "高潮压缩后由余波承接", "核心词、道具状态与空间压力共同继承"],
+      "action": "MOVE",
+      "target_paths": ["skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md", "skills/laohu-video-prompt/references/08_提示词压缩质检与失败修复.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-script-writer/SKILL.md", "trigger": "已有初稿需要语言诊断、强台词校准或反向审稿", "to": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"},
+        {"from": "skills/laohu-video-prompt/SKILL.md", "trigger": "提示词压缩、连续性、字符、三段污染或失败修复", "to": "skills/laohu-video-prompt/references/08_提示词压缩质检与失败修复.md"}
+      ],
+      "validation": {"task": "连续质问不会被平均台词稀释，核心词、道具和空间状态在视频编译中连续", "status": "PASS"}
+    },
+    {
+      "id": "core-production-stage-handoffs",
+      "source_path": "02_共享资产库/00_核心规则手册.md",
+      "source_sections": ["生产流程、阶段确认与相邻单元"],
+      "original_function": "建立从输入到剧本、资产、提示词、复盘的阶段状态和相邻单元交接。",
+      "unique_information": ["后一步必须消费前一步的确认结果", "相邻单元从下一相位开始而不重演上一动作"],
+      "action": "MERGE",
+      "target_paths": ["skills/laohu-ai-visual/SKILL.md", "02_共享资产库/05_工具流程/laohu_skills核心合约.md"],
+      "activation_routes": [
+        {"from": "AGENTS.md", "trigger": "完整作品或跨阶段任务", "to": "skills/laohu-ai-visual/SKILL.md"},
+        {"from": "skills/laohu-ai-visual/SKILL.md", "trigger": "相邻场次、节拍、镜头或 VID 共享状态", "to": "02_共享资产库/05_工具流程/laohu_skills核心合约.md"}
+      ],
+      "validation": {"task": "跨 VID 任务生成统一相邻单元交接合同并阻止动作重演", "status": "PASS"}
+    },
+    {
+      "id": "core-asset-dependency-art-direction",
+      "source_path": "02_共享资产库/00_核心规则手册.md",
+      "source_sections": ["资产依赖、全画面引用闭合与美术指导", "人物表情、所属物、风格与证据景别"],
+      "original_function": "按依赖生产资产，闭合全画面引用，先做设计选择再锁一致，并按证据尺寸分配细节。",
+      "unique_information": ["上游只控制明确职责", "尚未生成的图片不能伪装成硬参考", "稳定只能保护设计，不能把普通设计变高级", "远景不写毛孔级证据"],
+      "action": "MOVE",
+      "target_paths": ["skills/laohu-visual-assets/SKILL.md", "skills/laohu-visual-assets/references/02_人物群像角色状态与所属物.md", "skills/laohu-visual-assets/references/03_场景道具空间与镜头任务.md", "skills/laohu-visual-assets/references/04_风格决策与图片提示词.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-visual-assets/SKILL.md", "trigger": "所有稳定资产的判定、依赖、闭合和美术方向", "to": "skills/laohu-visual-assets/SKILL.md"},
+        {"from": "skills/laohu-visual-assets/SKILL.md", "trigger": "人物、群像、服装状态、识别锚点或所属物", "to": "skills/laohu-visual-assets/references/02_人物群像角色状态与所属物.md"},
+        {"from": "skills/laohu-visual-assets/SKILL.md", "trigger": "场景、道具、空间拓扑或镜头任务", "to": "skills/laohu-visual-assets/references/03_场景道具空间与镜头任务.md"},
+        {"from": "skills/laohu-visual-assets/SKILL.md", "trigger": "美术方向、风格系统或图片提示词", "to": "skills/laohu-visual-assets/references/04_风格决策与图片提示词.md"}
+      ],
+      "validation": {"task": "多资产任务按无环依赖执行，所有可识别对象和参考职责闭合后才交下游", "status": "PASS"}
+    },
+    {
+      "id": "core-script-format-and-viewpoint",
+      "source_path": "02_共享资产库/00_核心规则手册.md",
+      "source_sections": ["单文件迭代、剧本格式、方言、时间省略与 POV"],
+      "original_function": "保持阶段主文件、剧本格式、人物口气、时间压缩和视角可行。",
+      "unique_information": ["不制造版本副本", "方言服从人物身份和可懂性", "情绪型省略允许短暂懵感但要给可见时间证据", "POV 只写角色可感知信息"],
+      "action": "MOVE",
+      "target_paths": ["skills/laohu-script-writer/references/03_体量形态编号与连续性.md", "skills/laohu-script-writer/references/04_口述台词与方言.md", "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-script-writer/SKILL.md", "trigger": "体量、剧本形态、编号、阶段主文件或连续链", "to": "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"},
+        {"from": "skills/laohu-script-writer/SKILL.md", "trigger": "口述、台词、人物口气或方言", "to": "skills/laohu-script-writer/references/04_口述台词与方言.md"},
+        {"from": "skills/laohu-script-writer/SKILL.md", "trigger": "POV、时间省略、观众信息或叙事因果", "to": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md"}
+      ],
+      "validation": {"task": "儿童 POV、方言人物和跨时省略能保持视角、口气和时间证据", "status": "PASS"}
+    },
+    {
+      "id": "core-video-routing-format-editing",
+      "source_path": "02_共享资产库/00_核心规则手册.md",
+      "source_sections": ["视频知识路由、三段提示词与剪辑接口"],
+      "original_function": "按内容机制选择 Reference，把知识编译进三段提示词并留下真实剪辑接口。",
+      "unique_information": ["没有适配优于错误适配", "三段正文只装模型需要内容", "剪辑接口有入点、内部节点、出点、匹配属性和干净把手"],
+      "action": "MERGE",
+      "target_paths": ["skills/laohu-video-prompt/SKILL.md", "skills/laohu-video-prompt/references/00_调用路由与机制提炼.md", "skills/laohu-video-prompt/references/08_提示词压缩质检与失败修复.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-video-prompt/SKILL.md", "trigger": "所有正式视频提示词编译与剪辑接口", "to": "skills/laohu-video-prompt/SKILL.md"},
+        {"from": "skills/laohu-video-prompt/SKILL.md", "trigger": "需要判定题材 Reference 是否适配或建立一次性机制卡", "to": "skills/laohu-video-prompt/references/00_调用路由与机制提炼.md"},
+        {"from": "skills/laohu-video-prompt/SKILL.md", "trigger": "首稿压缩、连续性、三段污染、字符或失败修复", "to": "skills/laohu-video-prompt/references/08_提示词压缩质检与失败修复.md"}
+      ],
+      "validation": {"task": "无匹配题材不强套 Reference，正式正文三段完整且代码块外有剪辑接口卡", "status": "PASS"}
+    },
+    {
+      "id": "router-skill-migration",
+      "source_path": "skills/laohu-ai-visual/SKILL.md",
+      "source_sections": ["总控路由、阶段状态与跨 Skill 交接"],
+      "original_function": "总控只做任务分流、状态、依赖和交接，不替专业 Skill 执行。",
+      "unique_information": ["同一任务只有一个主负责人", "进化完成后必须回到生产入口"],
+      "action": "REWRITE",
+      "target_paths": ["skills/laohu-ai-visual/SKILL.md"],
+      "activation_routes": [{"from": "AGENTS.md", "trigger": "所有需要进入生产或跨阶段协作的任务", "to": "skills/laohu-ai-visual/SKILL.md"}],
+      "validation": {"task": "总控能按主问题进入唯一负责人并形成下游可用交接", "status": "PASS"}
+    },
+    {
+      "id": "script-skill-migration",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": ["故事人物场次与商业剧本", "口述台词方言视角格式与反向审稿"],
+      "original_function": "从灵感、口述或商业需求形成可拍剧本，并保留复杂题材方法。",
+      "unique_information": ["人物靠选择与代价成立", "场次必须改变状态", "条件性长知识按断点读取"],
+      "action": "MERGE",
+      "target_paths": ["skills/laohu-script-writer/SKILL.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-script-writer/SKILL.md", "trigger": "所有剧本开发主路径", "to": "skills/laohu-script-writer/SKILL.md"},
+        {"from": "skills/laohu-script-writer/SKILL.md", "trigger": "已有初稿需要语言诊断、平均化检查或终稿反审", "to": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"}
+      ],
+      "validation": {"task": "完整故事与强对白任务既走主路径又按需激活专业校准", "status": "PASS"}
+    },
+    {
+      "id": "visual-assets-skill-migration",
+      "source_path": "skills/laohu-visual-assets/SKILL.md",
+      "source_sections": ["资产判定依赖状态与全画面闭合", "美术设计图片提示词验收与下游交接"],
+      "original_function": "用最低可行资产支撑一致性、美术质量和下游生产。",
+      "unique_information": ["资产、成品图与临时参考分流", "依赖无环", "全画面与引用职责闭合", "先选设计再锁一致"],
+      "action": "REWRITE",
+      "target_paths": ["skills/laohu-visual-assets/SKILL.md"],
+      "activation_routes": [{"from": "AGENTS.md", "trigger": "人物、场景、道具、产品或风格需要跨请求稳定", "to": "skills/laohu-visual-assets/SKILL.md"}],
+      "validation": {"task": "资产请求能削减到最低集合并形成可执行依赖、提示词、验收和调用说明", "status": "PASS"}
+    },
+    {
+      "id": "video-prompt-skill-migration",
+      "source_path": "skills/laohu-video-prompt/SKILL.md",
+      "source_sections": ["内容路由机制卡与三段编译", "连续性速度声画剪辑接口与模型法度"],
+      "original_function": "把确认内容编译成模型可执行、可剪辑、可回归的视频提示词。",
+      "unique_information": ["主机制路由优先", "三段正文和代码块外生产接口分开", "硬规格与题材机制按需进入"],
+      "action": "REWRITE",
+      "target_paths": ["skills/laohu-video-prompt/SKILL.md"],
+      "activation_routes": [{"from": "AGENTS.md", "trigger": "需要正式视频模型提示词", "to": "skills/laohu-video-prompt/SKILL.md"}],
+      "validation": {"task": "同一剧本能生成三段完整、字符合格、连续且有剪辑接口的视频提示词", "status": "PASS"}
+    },
+    {
+      "id": "vibe-cover-review-skills-migration",
+      "source_path": "skills/laohu-vibe-creating-prompt/SKILL.md",
+      "source_sections": ["视觉基调与 Vibe 编译"],
+      "original_function": "建立跨镜稳定但不压死局部变化的视觉基调。",
+      "unique_information": ["基调由作品承诺、形状、材质、色彩、光线和成像关系共同形成"],
+      "action": "REWRITE",
+      "target_paths": ["skills/laohu-vibe-creating-prompt/SKILL.md"],
+      "activation_routes": [{"from": "AGENTS.md", "trigger": "作品需要统一视觉母体或 Vibe 提示词", "to": "skills/laohu-vibe-creating-prompt/SKILL.md"}],
+      "validation": {"task": "视觉基调能锁不变量并给局部镜头保留变化空间", "status": "PASS"}
+    },
+    {
+      "id": "cover-skill-migration",
+      "source_path": "skills/laohu-cover-design/SKILL.md",
+      "source_sections": ["封面承诺、视觉入口、平台规格与验收"],
+      "original_function": "把正片承诺变成真实、可读、可点击的视觉入口。",
+      "unique_information": ["封面承诺不能超过正片", "构图、文字层级和平台规格共同验收"],
+      "action": "REWRITE",
+      "target_paths": ["skills/laohu-cover-design/SKILL.md"],
+      "activation_routes": [{"from": "AGENTS.md", "trigger": "需要封面、海报、封面大字或发布入口", "to": "skills/laohu-cover-design/SKILL.md"}],
+      "validation": {"task": "封面候选能兑现正片且通过平台可读性和视觉层级检查", "status": "PASS"}
+    },
+    {
+      "id": "review-skill-migration",
+      "source_path": "skills/laohu-generation-review/SKILL.md",
+      "source_sections": ["图片视频封面剪辑诊断、复盘与规则回流"],
+      "original_function": "从真实结果定位第一断点，区分当前修复和长期进化。",
+      "unique_information": ["先看真实生成物", "诊断按最早失效能力归因", "长期问题交给进化唯一负责人"],
+      "action": "REWRITE",
+      "target_paths": ["skills/laohu-generation-review/SKILL.md"],
+      "activation_routes": [{"from": "AGENTS.md", "trigger": "已有图片、视频、封面、剪辑或发布结果需要诊断", "to": "skills/laohu-generation-review/SKILL.md"}],
+      "validation": {"task": "复盘能从真实结果追到最早业务负责人并决定当前修复或进化", "status": "PASS"}
+    }
+  ]
+}

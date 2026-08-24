@@ -21,6 +21,7 @@ core_skills=(
   laohu-vibe-creating-prompt
   laohu-cover-design
   laohu-generation-review
+  laohu-capability-evolution
 )
 
 required_files=(
@@ -32,6 +33,8 @@ required_files=(
   02_共享资产库/05_工具流程/外部能力依赖清单.md
   scripts/validate_capability_architecture.py
   tests/capability_scenarios.json
+  tests/evolution_scenarios.json
+  04_诊断与系统日志/能力进化台账.md
   skills/laohu-video-prompt/scripts/count_video_prompt_chars.sh
   skills/laohu-video-prompt/scripts/test_count_video_prompt_chars.sh
 )
@@ -62,7 +65,7 @@ for skill in "${core_skills[@]}"; do
 done
 
 actual_skill_count="$(find skills -mindepth 1 -maxdepth 1 -type d -name 'laohu-*' | wc -l | tr -d ' ')"
-if [[ "$actual_skill_count" == "7" ]]; then pass "exactly seven public skills"; else fail "expected 7 skills, found $actual_skill_count"; fi
+if [[ "$actual_skill_count" == "8" ]]; then pass "exactly eight public skills"; else fail "expected 8 skills, found $actual_skill_count"; fi
 
 if rg -n '^##[[:space:]]*(灵魂|筋骨|血肉|表皮)(层)?[[:space:]]*$' skills/*/SKILL.md >/dev/null; then
   fail "generic four-layer headings leaked into downstream skills"

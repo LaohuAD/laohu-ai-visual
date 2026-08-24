@@ -27,6 +27,10 @@
     "laohu-generation-review": {
       "headings": ["复盘箴言", "首断点归因", "返修与回流", "证据验收"],
       "anchors": ["第一个断点", "最早负责人", "最多三个"]
+    },
+    "laohu-capability-evolution": {
+      "headings": ["进化箴言", "进化入口", "四层重编译", "持续记忆与能力生长", "写回与回归", "权限与交付"],
+      "anchors": ["第一个能力断点", "唯一规则负责人", "必须保护的旧能力", "能力进化台账", "重新唤醒", "新建缺失能力", "KEEP / OBSERVE / REVERT", "本地 Git 提交", "git push"]
     }
   },
   "root_forbidden_patterns": [
@@ -85,7 +89,17 @@
     {
       "capability": "首断点归因与经验回流",
       "file": "skills/laohu-generation-review/SKILL.md",
-      "anchors": ["第一个断点", "最早负责人", "规则进化"]
+      "anchors": ["第一个断点", "最早负责人", "能力进化交接"]
+    },
+    {
+      "capability": "四层能力进化",
+      "file": "skills/laohu-capability-evolution/SKILL.md",
+      "anchors": ["灵魂以箴言定向", "筋骨以章法成局", "血肉以技法生变", "表皮以法度成形"]
+    },
+    {
+      "capability": "跨任务进化记忆",
+      "file": "04_诊断与系统日志/能力进化台账.md",
+      "anchors": ["证据指纹", "重新唤醒条件", "旧行为", "新行为", "KEEP / OBSERVE / REVERT"]
     }
   ],
   "external_dependency_contracts": [
@@ -149,7 +163,36 @@
       "name": "反馈回到最早失效能力",
       "chain": [
         {"owner": "laohu-generation-review", "anchors": ["第一个断点", "最早负责人", "最多三个"]},
-        {"owner": "laohu-ai-visual", "anchors": ["规则负责人", "行为验证"]}
+        {"owner": "laohu-capability-evolution", "anchors": ["第一个能力断点", "唯一规则负责人", "行为验证"]},
+        {"owner": "laohu-ai-visual", "anchors": ["能力进化", "返回总控"]}
+      ]
+    },
+    {
+      "name": "研究资料按四层选择性吸收",
+      "chain": [
+        {"owner": "laohu-ai-visual", "anchors": ["研究资料", "laohu-capability-evolution"]},
+        {"owner": "laohu-capability-evolution", "anchors": ["知识吸收", "影响层级", "不机械四层全写"]}
+      ]
+    },
+    {
+      "name": "进化完成后回到生产入口",
+      "chain": [
+        {"owner": "laohu-capability-evolution", "anchors": ["写回唯一负责人", "KEEP / OBSERVE / REVERT"]},
+        {"owner": "laohu-ai-visual", "anchors": ["返回总控", "输入输出索引"]}
+      ]
+    },
+    {
+      "name": "待验证经验跨任务重新唤醒",
+      "chain": [
+        {"owner": "laohu-capability-evolution", "anchors": ["能力进化台账", "证据指纹", "重新唤醒"]},
+        {"owner": "laohu-generation-review", "anchors": ["证据包", "能力进化"]}
+      ]
+    },
+    {
+      "name": "能力空位可以长出新负责人",
+      "chain": [
+        {"owner": "laohu-capability-evolution", "anchors": ["现有负责人", "新建缺失能力", "独立触发", "独立验收"]},
+        {"owner": "laohu-ai-visual", "anchors": ["能力进化", "主负责人"]}
       ]
     }
   ]
