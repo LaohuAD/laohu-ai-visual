@@ -18,6 +18,8 @@ build/
 *.log
 *.tmp
 *.bak
+__pycache__/
+*.py[cod]
 /tmp/
 /output/
 /docs/superpowers/

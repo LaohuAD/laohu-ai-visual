@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡能力进化"
+  short_description: "让项目从跨任务证据中持续学习、验证并长出真正可用的新能力"
+  default_prompt: "Use $laohu-capability-evolution to consult the persistent evolution ledger, identify the first capability break, deepen or create only the needed capability, preserve proven behavior through a semantic migration ledger, record the old-to-new behavior change, validate the local update, use a clean local Git checkpoint when appropriate, and never push or publish remotely without current explicit authorization."

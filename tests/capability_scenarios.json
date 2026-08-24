@@ -1,0 +1,293 @@
+{
+  "skill_contracts": {
+    "laohu-ai-visual": {
+      "headings": ["总控箴言", "生产路由", "执行闭环", "交付验收"],
+      "anchors": ["作品状态", "阶段入口", "下游负责人"]
+    },
+    "laohu-script-writer": {
+      "headings": ["编剧箴言", "故事因果", "剧本开发", "剧本交接与验收"],
+      "anchors": ["观众等待", "人物选择", "下一场压力"]
+    },
+    "laohu-visual-assets": {
+      "headings": ["资产箴言", "资产关系", "美术与提示词", "资产验收与交接"],
+      "anchors": ["失真代价", "依赖顺序", "下游调用", "故事时间账本", "人物阶段状态", "换装判断", "身份资产不锁最终服装", "唯一清晰人脸", "无五官假人头模", "身体参数标注", "固定三列网格", "左栏约占画面宽度36%", "中栏约占45%", "右栏约占19%", "固定纵坐标", "水平细白引线", "左前方45度", "2行×3列", "三列纵向组合", "无头穿着身体", "唯一对应头部", "头颅完整位于下部画框之外", "覆盖接缝", "所有最终服装先建立W", "复杂度只改变设计密度", "人物化设计卡", "季节阶段", "人物化设计锚点", "连续继承", "阶段替换", "平均答案回避", "妆造记忆锚点", "穿着方式", "阶段素体资产", "阶段脸受控变化", "永久身份锚点", "阶段可变区", "绝对目标", "剪影级差", "空间锚点", "双参考合同"]
+    },
+    "laohu-video-prompt": {
+      "headings": ["镜头箴言", "时空编译", "三段式成稿", "生成前验收"],
+      "anchors": ["起点状态", "屏幕变化", "结束状态", "镜头编号只标顺序", "相对时长约束", "绝对起止区间", "Seedance 2.5", "10000", "控制语言闸门", "本次实际基准 / 起点", "可见 / 可听终态", "正向唯一结果", "稳定资产", "状态帧", "双参考合同"]
+    },
+    "laohu-vibe-creating-prompt": {
+      "headings": ["提纯箴言", "增益边界", "提纯动作", "回填与验收"],
+      "anchors": ["观众可感知", "保留原稿", "字符实测"]
+    },
+    "laohu-cover-design": {
+      "headings": ["封面箴言", "点击承诺与视觉关系", "画面文字执行", "缩略图验收"],
+      "anchors": ["点击后真正能看到", "第一落点", "逐字核对"]
+    },
+    "laohu-generation-review": {
+      "headings": ["复盘箴言", "首断点归因", "返修与回流", "证据验收"],
+      "anchors": ["第一个断点", "最早负责人", "最多三个", "状态帧质量门"]
+    },
+    "laohu-capability-evolution": {
+      "headings": ["进化箴言", "进化入口", "四层重编译", "持续记忆与能力生长", "写回与回归", "权限与交付"],
+      "anchors": ["第一个能力断点", "唯一规则负责人", "必须保护的旧能力", "能力进化台账", "重新唤醒", "新建缺失能力", "KEEP / OBSERVE / REVERT", "本地 Git 提交", "git push"]
+    }
+  },
+  "root_forbidden_patterns": [
+    "人物素体形象资产",
+    "FACS",
+    "色卡锚定句",
+    "动作接触点需要清楚时",
+    "人物妆造设计资产"
+  ],
+  "migration_contracts": [
+    {
+      "capability": "观众认知与视角分层",
+      "file": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "anchors": ["观众认知状态", "五层视角"]
+    },
+    {
+      "capability": "反平均化选择",
+      "file": "skills/laohu-script-writer/SKILL.md",
+      "anchors": ["模型第一反应", "平均值候选", "可替换性"]
+    },
+    {
+      "capability": "画面内容的镜头叙事语法",
+      "file": "skills/laohu-video-prompt/references/10_画面内容镜头叙事语法.md",
+      "anchors": ["景别或信息尺度是证据边界", "动作必须闭合因果", "声音必须有来源"]
+    },
+    {
+      "capability": "速度节奏与相对时长",
+      "file": "skills/laohu-video-prompt/references/09_速度节奏与时间动力设计.md",
+      "anchors": ["速度不是一个快慢形容词", "相对时长约束", "信息速度不能超过识别速度"]
+    },
+    {
+      "capability": "音乐与画面合同",
+      "file": "skills/laohu-video-prompt/references/04_MV概念PV与动态图形蒙太奇.md",
+      "anchors": ["音乐-画面节拍合同", "拍前准备", "拍后余波"]
+    },
+    {
+      "capability": "人物表演与空间压力",
+      "file": "skills/laohu-video-prompt/references/01_文戏对白与人物表演.md",
+      "anchors": ["演员节拍控制合同", "表情与 AU", "空间压力"]
+    },
+    {
+      "capability": "资产依赖与全画面闭合",
+      "file": "skills/laohu-visual-assets/SKILL.md",
+      "anchors": ["无环依赖图", "全画面闭合", "引用闭合"]
+    },
+    {
+      "capability": "相邻单元与状态继承",
+      "file": "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+      "anchors": ["相邻单元交接合同", "A 结束状态", "B 起点状态"]
+    },
+    {
+      "capability": "三段式与剪辑接口",
+      "file": "skills/laohu-video-prompt/SKILL.md",
+      "anchors": ["三段式成稿", "素材剪辑接口卡", "字符实测"]
+    },
+    {
+      "capability": "首断点归因与经验回流",
+      "file": "skills/laohu-generation-review/SKILL.md",
+      "anchors": ["第一个断点", "最早负责人", "能力进化交接"]
+    },
+    {
+      "capability": "四层能力进化",
+      "file": "skills/laohu-capability-evolution/SKILL.md",
+      "anchors": ["灵魂以箴言定向", "筋骨以章法成局", "血肉以技法生变", "表皮以法度成形"]
+    },
+    {
+      "capability": "跨任务进化记忆",
+      "file": "04_诊断与系统日志/能力进化台账.md",
+      "anchors": ["证据指纹", "重新唤醒条件", "旧行为", "新行为", "KEEP / OBSERVE / REVERT"]
+    },
+    {
+      "capability": "画幅参数与构图判断分离",
+      "file": "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md",
+      "anchors": ["画幅作为生成参数和内部导演判断处理", "不能只换数字", "正文只写它造成的实际构图结果"]
+    },
+    {
+      "capability": "测试原创、品牌归属与文本交付边界",
+      "file": "AGENTS.md",
+      "anchors": ["默认交付文本", "用于公开测评、教程和品牌样片的内容默认原创", "老胡 / laohu / 老胡用AI赚钱"]
+    },
+    {
+      "capability": "创作者意图、人物预期差与弧光",
+      "file": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "anchors": ["创作者意图契约", "预期差", "人格稳定与人物弧光"]
+    },
+    {
+      "capability": "商业作品卖点场景化与可见证据",
+      "file": "skills/laohu-script-writer/SKILL.md",
+      "anchors": ["商业剧本", "用户处境", "支撑卖点与证据", "品牌与行动出口"]
+    },
+    {
+      "capability": "外部 VC 身份、镜像、适配与返回",
+      "file": "02_共享资产库/05_工具流程/外部能力依赖清单.md",
+      "anchors": ["vibe-creating-prompt", "仓库内外部原文", "便携副本", "本地适配层", "返回负责人", "失效处理"]
+    },
+    {
+      "capability": "Markdown唯一内容源与HTML交付",
+      "file": "AGENTS.md",
+      "anchors": ["Markdown 是唯一权威内容源", "同名 HTML 交付页", "00_作品交付中心.html", "素体与阶段素体资产", "复制标题", "render_delivery_html.py"]
+    }
+  ],
+  "external_dependency_contracts": [
+    {
+      "name": "vibe-creating-prompt",
+      "kind": "vendored-external-skill",
+      "canonical_source": "02_共享资产库/05_工具流程/外部优化Skill/vibe-creating-prompt/SKILL.md",
+      "portable_mirror": "skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md",
+      "local_adapter": "skills/laohu-vibe-creating-prompt/SKILL.md",
+      "return_owner": "skills/laohu-video-prompt/SKILL.md",
+      "adapter_anchors": [
+        "外部 Skill",
+        "本地适配层",
+        "02_共享资产库/05_工具流程/外部优化Skill/vibe-creating-prompt/SKILL.md",
+        "references/01_外部Vibe_Creating原文.md",
+        "laohu-video-prompt"
+      ],
+      "caller_contracts": {
+        "02_共享资产库/05_工具流程/外部能力依赖清单.md": ["EXT-SKILL-001", "本地适配层", "失效处理"],
+        "AGENTS.md": ["外部能力依赖", "vibe-creating-prompt"],
+        "02_共享资产库/00_核心规则手册.md": ["外部 `vibe-creating-prompt`", "本地适配入口"],
+        "02_共享资产库/05_工具流程/laohu_skills核心合约.md": ["VC 身份与调用链", "laohu-vibe-creating-prompt"],
+        "skills/laohu-video-prompt/SKILL.md": ["VC 指外部", "laohu-vibe-creating-prompt"],
+        "输入输出索引.md": ["外部能力依赖清单", "vibe-creating-prompt"]
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "模糊灵感走到可生成结果",
+      "chain": [
+        {"owner": "laohu-ai-visual", "anchors": ["阶段入口", "阶段完成条件"]},
+        {"owner": "laohu-script-writer", "anchors": ["观众等待", "人物选择"]},
+        {"owner": "laohu-visual-assets", "anchors": ["最低可行资产", "依赖顺序"]},
+        {"owner": "laohu-video-prompt", "anchors": ["屏幕变化", "结束状态"]}
+      ]
+    },
+    {
+      "name": "单张漂亮图片不能冒充资产",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["失真代价", "下游调用", "降级"]},
+        {"owner": "laohu-generation-review", "anchors": ["证据验收", "返回"]}
+      ]
+    },
+    {
+      "name": "跨视频单元不重演上一个动作",
+      "chain": [
+        {"owner": "laohu-script-writer", "anchors": ["下一场压力", "下一相位"]},
+        {"owner": "laohu-video-prompt", "anchors": ["起点状态", "结束状态", "下一相位"]},
+        {"owner": "laohu-generation-review", "anchors": ["真实结束状态", "第一个断点"]}
+      ]
+    },
+    {
+      "name": "封面承诺不得超过正片",
+      "chain": [
+        {"owner": "laohu-cover-design", "anchors": ["点击后真正能看到", "第一落点", "逐字核对"]},
+        {"owner": "laohu-generation-review", "anchors": ["承诺兑现", "发布"]}
+      ]
+    },
+    {
+      "name": "反馈回到最早失效能力",
+      "chain": [
+        {"owner": "laohu-generation-review", "anchors": ["第一个断点", "最早负责人", "最多三个"]},
+        {"owner": "laohu-capability-evolution", "anchors": ["第一个能力断点", "唯一规则负责人", "行为验证"]},
+        {"owner": "laohu-ai-visual", "anchors": ["能力进化", "返回总控"]}
+      ]
+    },
+    {
+      "name": "研究资料按四层选择性吸收",
+      "chain": [
+        {"owner": "laohu-ai-visual", "anchors": ["研究资料", "laohu-capability-evolution"]},
+        {"owner": "laohu-capability-evolution", "anchors": ["知识吸收", "影响层级", "不机械四层全写"]}
+      ]
+    },
+    {
+      "name": "进化完成后回到生产入口",
+      "chain": [
+        {"owner": "laohu-capability-evolution", "anchors": ["写回唯一负责人", "KEEP / OBSERVE / REVERT"]},
+        {"owner": "laohu-ai-visual", "anchors": ["返回总控", "输入输出索引"]}
+      ]
+    },
+    {
+      "name": "待验证经验跨任务重新唤醒",
+      "chain": [
+        {"owner": "laohu-capability-evolution", "anchors": ["能力进化台账", "证据指纹", "重新唤醒"]},
+        {"owner": "laohu-generation-review", "anchors": ["证据包", "能力进化"]}
+      ]
+    },
+    {
+      "name": "能力空位可以长出新负责人",
+      "chain": [
+        {"owner": "laohu-capability-evolution", "anchors": ["现有负责人", "新建缺失能力", "独立触发", "独立验收"]},
+        {"owner": "laohu-ai-visual", "anchors": ["能力进化", "主负责人"]}
+      ]
+    },
+    {
+      "name": "长时间跨度人物先建立时间阶段造型账本",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["故事时间账本", "人物阶段状态", "换装判断", "身份资产不锁最终服装"]},
+        {"owner": "laohu-video-prompt", "anchors": ["起点状态", "结束状态"]}
+      ]
+    },
+    {
+      "name": "正式视频提示词保留逐镜方头并只用相对时长",
+      "chain": [
+        {"owner": "laohu-video-prompt", "anchors": ["镜头编号只标顺序", "相对时长约束", "绝对起止区间", "Seedance 2.5", "10000"]}
+      ]
+    },
+    {
+      "name": "人物素体与妆造资产分开控制脸和身体",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["唯一清晰人脸", "无五官假人头模", "完全无头发", "哑光人台表面", "身体参数标注", "固定三列网格", "固定纵坐标", "水平细白引线", "左前方45度", "2行×3列", "三列纵向组合", "无头穿着身体", "唯一对应头部", "头颅完整位于下部画框之外", "覆盖接缝"]}
+      ]
+    },
+    {
+      "name": "普通服装也必须先形成服装资产",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["所有最终服装先建立W", "身份场景活动推导", "服装主件结构判断", "复杂度只改变设计密度", "固定服装视觉规格板", "图片信息为主", "可拆套装分件拆解板", "固定2行×2列四象限", "上半身服装承托架", "下半身服装承托架", "叠穿关系", "连续主件完整展示板", "左侧约三分之一", "右侧约三分之二", "4列×3行", "名词性标题", "人物身体参数不得进入W"]}
+      ]
+    },
+    {
+      "name": "服装和妆造必须把人物与跨季节变化变成可见锚点",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["人物化设计卡", "季节阶段", "人物化设计锚点", "连续继承", "阶段替换", "平均答案回避", "妆造记忆锚点", "穿着方式", "references/07_服装与妆造人物化设计.md"]}
+      ]
+    },
+    {
+      "name": "人物阶段状态继承完整阶段素体板",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["阶段素体资产", "阶段脸受控变化", "完整参数与阶段增量"]}
+      ]
+    },
+    {
+      "name": "人物阶段脸不能被永久身份锁吞掉",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["永久身份锚点", "阶段可变区", "绝对目标", "剪影级差"]}
+      ]
+    },
+    {
+      "name": "高成本视频生成前清除悬空比较和直接负向命令",
+      "chain": [
+        {"owner": "laohu-video-prompt", "anchors": ["控制语言闸门", "本次实际基准 / 起点", "可见 / 可听终态", "正向唯一结果"]}
+      ]
+    },
+    {
+      "name": "视频状态帧不能替代稳定资产",
+      "chain": [
+        {"owner": "laohu-visual-assets", "anchors": ["双参考合同", "空间锚点"]},
+        {"owner": "laohu-video-prompt", "anchors": ["稳定资产", "状态帧", "双参考合同"]},
+        {"owner": "laohu-generation-review", "anchors": ["状态帧质量门", "真实结束状态"]}
+      ]
+    },
+    {
+      "name": "成熟长文件不能先摘要再贴四层",
+      "chain": [
+        {"owner": "laohu-capability-evolution", "anchors": ["Git 基线", "直接提取能力单元", "不能靠常识或主题摘要补回", "可执行判断密度"]},
+        {"owner": "laohu-capability-evolution", "anchors": ["行文锚点", "触发条件", "成立原因", "例外", "可观察效果"]}
+      ]
+    }
+  ]
+}
