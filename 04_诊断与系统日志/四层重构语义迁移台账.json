@@ -2,7 +2,14 @@
   "schema_version": 1,
   "baseline_ref": "6030e82",
   "status": "COMPLETE",
-  "evidence_ceiling": "OBSERVE：已检查章节覆盖、目标存在、入口引用和现有场景合同；真实作品质量仍需独立生产验证",
+  "evidence_ceiling": "OBSERVE：2026-08-24 已重新读取 6030e82 原始规则，修复 VC 能力身份误记，并补充原文能力单元迁移门与高保护能力回归；真实作品质量仍需独立生产验证",
+  "recovery_audit": {
+    "date": "2026-08-24",
+    "method": "直接读取 6030e82 的 AGENTS、核心规则手册和七个旧业务 Skill，按原文能力身份检查当前 Skill、Reference、模板、工具流程、外部依赖和调用返回；不以旧迁移台账主题作为唯一证据。",
+    "confirmed_error_repaired": "旧台账把外部 VC 视频提示词增益能力误记为统一视觉基调，现已恢复为外部原文、便携镜像、本地适配层、video-prompt 调用与返回、失效降级的完整身份和链路。",
+    "protected_capabilities_rechecked": ["观众认知与视角", "镜头叙事、速度和音乐合同", "表演、台词、道具和空间连续性", "资产依赖与全画面引用闭合", "画幅参数与构图分离", "测试原创与品牌归属", "创作者意图、人物预期差和弧光", "商业卖点场景化与可见证据"],
+    "evidence_limit": "机械路由和高保护能力锚点已通过；真实图片与视频质量仍需独立生产回归，因此保持 OBSERVE。"
+  },
   "sources": [
     {
       "path": "AGENTS.md",
@@ -30,7 +37,7 @@
     },
     {
       "path": "skills/laohu-vibe-creating-prompt/SKILL.md",
-      "sections": ["视觉基调与 Vibe 编译"]
+      "sections": ["VC 适配与输入基线", "直接放行、轻度提纯、改写、补齐与原样保留", "硬约束、输出合同、下游返回与增益验收"]
     },
     {
       "path": "skills/laohu-cover-design/SKILL.md",
@@ -209,15 +216,21 @@
       "validation": {"task": "同一剧本能生成三段完整、字符合格、连续且有剪辑接口的视频提示词", "status": "PASS"}
     },
     {
-      "id": "vibe-cover-review-skills-migration",
+      "id": "vibe-external-skill-migration",
       "source_path": "skills/laohu-vibe-creating-prompt/SKILL.md",
-      "source_sections": ["视觉基调与 Vibe 编译"],
-      "original_function": "建立跨镜稳定但不压死局部变化的视觉基调。",
-      "unique_information": ["基调由作品承诺、形状、材质、色彩、光线和成像关系共同形成"],
+      "source_sections": ["VC 适配与输入基线", "直接放行、轻度提纯、改写、补齐与原样保留", "硬约束、输出合同、下游返回与增益验收"],
+      "original_function": "在视频提示词首稿已经可直接生成后，判断是否调用外部 vibe-creating-prompt，并在不破坏项目硬接口的前提下增加观众可感知的声画效果。",
+      "unique_information": ["VC 是外部运行时 Skill，不是本项目原创视觉基调能力", "本地适配层决定调用、拒收、权限与回填，外部原文提供方法，video-prompt 对最终可用性负责", "首稿不合格必须退回，不能让 VC 替上游清理格式、连续性和字符问题", "外部原文、便携镜像、调用者、返回负责人和失效处理必须同时保真", "用户硬约束、台词、声音、资产身份、三段式和剪辑接口不得被增益改写破坏"],
       "action": "REWRITE",
-      "target_paths": ["skills/laohu-vibe-creating-prompt/SKILL.md"],
-      "activation_routes": [{"from": "AGENTS.md", "trigger": "作品需要统一视觉母体或 Vibe 提示词", "to": "skills/laohu-vibe-creating-prompt/SKILL.md"}],
-      "validation": {"task": "视觉基调能锁不变量并给局部镜头保留变化空间", "status": "PASS"}
+      "target_paths": ["skills/laohu-vibe-creating-prompt", "skills/laohu-vibe-creating-prompt/SKILL.md", "skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md", "02_共享资产库/05_工具流程/外部优化Skill/vibe-creating-prompt/SKILL.md", "02_共享资产库/05_工具流程/外部能力依赖清单.md", "skills/laohu-video-prompt/SKILL.md"],
+      "activation_routes": [
+        {"from": "AGENTS.md", "trigger": "视频提示词首稿已通过且需要额外观众效果增益", "to": "skills/laohu-vibe-creating-prompt/SKILL.md"},
+        {"from": "skills/laohu-video-prompt/SKILL.md", "trigger": "首稿门、三段式、连续性和字符实测通过后进入 VC", "to": "skills/laohu-vibe-creating-prompt"},
+        {"from": "skills/laohu-vibe-creating-prompt/SKILL.md", "trigger": "适配层决定执行轻度提纯、直接改写或可选 VC 版", "to": "skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md"},
+        {"from": "02_共享资产库/05_工具流程/外部能力依赖清单.md", "trigger": "核验仓库内外部原文与更新来源", "to": "02_共享资产库/05_工具流程/外部优化Skill/vibe-creating-prompt/SKILL.md"},
+        {"from": "skills/laohu-vibe-creating-prompt/SKILL.md", "trigger": "VC 完成后回填三段式、连续性、接口和字符复验", "to": "skills/laohu-video-prompt/SKILL.md"}
+      ],
+      "validation": {"task": "外部原文与便携镜像逐字一致；调用只经本地适配层；首稿不合格时拒收；VC 结果返回 video-prompt 复验；依赖失效时保留合格原稿", "status": "PASS"}
     },
     {
       "id": "cover-skill-migration",
