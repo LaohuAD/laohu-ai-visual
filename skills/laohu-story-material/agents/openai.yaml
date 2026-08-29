@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡故事素材库"
+  short_description: "保存生活灵感，拆成故事原子，并为正式剧本渐进检索"
+  default_prompt: "Use $laohu-story-material to preserve this material exactly, extract reusable story atoms, or retrieve fitting atoms for a screenplay without forcing adoption."
