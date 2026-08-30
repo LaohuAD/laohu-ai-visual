@@ -118,6 +118,60 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
         self.assertIn("构件库为空", text)
         self.assertIn("不得自动网络搜索", text)
 
+    def test_character_voice_starts_with_perception_and_interpretation(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+        )
+        for anchor in (
+            "人物声音合同",
+            "他优先注意什么",
+            "他会怎样解释证据",
+            "他最不愿直接说出什么",
+            "未说出的普通愿望",
+        ):
+            self.assertIn(anchor, text)
+        self.assertIn("口头禅、方言词和金句都不能单独证明人物", text)
+
+    def test_professional_perception_requires_grounded_expertise(self) -> None:
+        reference = self.read(
+            "skills/laohu-script-writer/references/04_口述台词与方言.md"
+        )
+        for anchor in (
+            "职业化感知",
+            "前史、训练或当场证据",
+            "普通人不会优先注意",
+            "不可信的超能力",
+        ):
+            self.assertIn(anchor, reference)
+
+    def test_related_words_change_meaning_without_random_metaphor_stacking(self) -> None:
+        reference = self.read(
+            "skills/laohu-script-writer/references/04_口述台词与方言.md"
+        )
+        for anchor in (
+            "同组词语换义",
+            "同一条人物矛盾",
+            "新指向",
+            "随机更换漂亮意象",
+        ):
+            self.assertIn(anchor, reference)
+
+    def test_voiceover_adds_information_and_stylish_prose_must_change_scene_state(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "补充 / 对位 / 反差",
+            "不同义复述画面",
+            "感知证据 → 人物解释 → 当场行动 → 可见后果",
+            "删掉漂亮独白",
+            "人物选择和场次状态不变",
+        ):
+            self.assertIn(anchor, text)
+
 
 if __name__ == "__main__":
     unittest.main()
