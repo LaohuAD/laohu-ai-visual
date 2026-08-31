@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/Users/a1/Documents/老胡/老胡自媒体/老胡AI视觉"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 
 usage() {
   printf 'Usage: %s <作品名> [yyyy-mm-dd] [进行中|已完成|已发布]\n' "$(basename "$0")" >&2
