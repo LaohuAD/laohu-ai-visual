@@ -41,6 +41,11 @@ GROUPED_ASSET_SOURCE = """# 分组资产总表
 G01群像。
 ```
 
+### F01｜路子宽·人物写真参考资产
+```text
+F01人物写真参考资产。
+```
+
 ### S01｜学校食堂场景
 ```text
 S01场景。
@@ -76,6 +81,28 @@ B01基础素体。
 W01服装。
 ```
 """
+
+PORTRAIT_WITH_ACCEPTED_BODY_SOURCE = """# 人物写真母图与已验收素体
+
+### F01｜路子宽·人物写真母图
+
+```text
+F01人物写真母图，供B01、W01和M01反向拆解，不直接进入视频。
+```
+
+### B01｜路子宽·基础素体资产
+
+状态：实图已验收
+
+```text
+B01基础素体。
+```
+"""
+
+LEGACY_RETIRED_PORTRAIT_SOURCE = PORTRAIT_WITH_ACCEPTED_BODY_SOURCE.replace(
+    "### F01｜路子宽·人物写真母图\n",
+    "### F01｜路子宽·人物写真母图\n\n状态：已退役（B01实图已验收）\n",
+)
 
 
 class RenderDeliveryHtmlTests(unittest.TestCase):
@@ -205,6 +232,7 @@ class RenderDeliveryHtmlTests(unittest.TestCase):
             rendered = render_markdown(source)
 
             expected_groups = [
+                "人物主视觉图",
                 "素体与阶段素体资产",
                 "服装资产",
                 "妆造设计资产",
@@ -214,9 +242,41 @@ class RenderDeliveryHtmlTests(unittest.TestCase):
             ]
             positions = [rendered.index(f">{label}<") for label in expected_groups]
             self.assertEqual(positions, sorted(positions))
-            self.assertEqual(rendered.count('class="asset-group"'), 6)
+            self.assertEqual(rendered.count('class="asset-group"'), 7)
+            self.assertLess(rendered.index('data-asset-id="F01"'), rendered.index('data-asset-id="B01"'))
             self.assertLess(rendered.index('data-asset-id="B01"'), rendered.index('data-asset-id="LZ70"'))
             self.assertLess(rendered.index('data-asset-id="W01"'), rendered.index('data-asset-id="W02"'))
+
+    def test_portrait_mother_card_remains_active_after_body_acceptance(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = self.write(Path(tmp), "assets.md", PORTRAIT_WITH_ACCEPTED_BODY_SOURCE)
+            rendered = render_markdown(source)
+            card = re.search(
+                r'<section class="result-card"[^>]*data-asset-id="F01".*?</section>',
+                rendered,
+                re.S,
+            )
+
+            self.assertIsNotNone(card)
+            self.assertNotIn('data-asset-status="retired"', card.group(0))
+            self.assertNotIn('class="asset-status">已退役</span>', card.group(0))
+            self.assertIn('class="copy-button"', card.group(0))
+            self.assertIn('class="title-copy-button"', card.group(0))
+            self.assertIn('class="detail-button"', card.group(0))
+
+    def test_legacy_retired_portrait_status_no_longer_disables_mother_image(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = self.write(Path(tmp), "assets.md", LEGACY_RETIRED_PORTRAIT_SOURCE)
+            rendered = render_markdown(source)
+            card = re.search(
+                r'<section class="result-card"[^>]*data-asset-id="F01".*?</section>',
+                rendered,
+                re.S,
+            )
+
+            self.assertIsNotNone(card)
+            self.assertNotIn('data-asset-status="retired"', card.group(0))
+            self.assertIn('class="copy-button"', card.group(0))
 
     def test_asset_card_has_copy_title_button_and_uses_visible_card_title(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

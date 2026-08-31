@@ -24,6 +24,10 @@ __pycache__/
 /output/
 /docs/superpowers/
 
+# Private story observations and source transcripts stay local.
+/00_输入原料/故事素材原子库.jsonl
+/00_输入原料/故事素材库/
+
 # Personal work projects stay local. Git tracks only the three status
 # directory placeholders so the reusable project skeleton remains visible.
 /01_作品项目/进行中/*

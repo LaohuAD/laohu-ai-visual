@@ -13,19 +13,21 @@ from pathlib import Path
 from typing import Sequence
 
 
-DOMAIN_HEADING = re.compile(r"^(?P<id>(?:VID|LZ|[BGPWMSA])\d+)(?:\s*[｜|]\s*(?P<title>.*))?$")
+DOMAIN_HEADING = re.compile(r"^(?P<id>(?:VID|LZ|[BCFGPWMSA])\d+)(?:\s*[｜|]\s*(?P<title>.*))?$")
 HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 FENCE = re.compile(r"^```([^`]*)$")
 TABLE_DIVIDER = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$")
 RESULT_CARD = re.compile(r'<section class="result-card"[^>]*>.*?</section>', re.S)
 
 DOMAIN_GROUPS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
+    ("PORTRAIT_REFERENCE", "人物主视觉图", ("F",)),
     ("BODY", "素体与阶段素体资产", ("B", "LZ", "P")),
     ("CLOTHING", "服装资产", ("W",)),
     ("STYLING", "妆造设计资产", ("M",)),
     ("PROP", "道具资产", ("A",)),
     ("SCENE", "场景资产", ("S",)),
     ("ENSEMBLE", "群像资产", ("G",)),
+    ("BLOCKING", "镜头调度参考", ("C",)),
     ("VIDEO", "视频提示词", ("VID",)),
 )
 
@@ -97,19 +99,27 @@ def domain_sort_key(domain_id: str) -> tuple[int, int, str]:
     return subtype_order.get(prefix, 0), number, domain_id
 
 
+def card_plain_text(card: str) -> str:
+    return re.sub(r"<[^>]+>", "", html.unescape(card))
+
+
 def group_domain_cards(rendered_body: str) -> str:
     """Move domain cards into stable workflow groups without changing Markdown."""
     cards = RESULT_CARD.findall(rendered_body)
     if not cards:
         return rendered_body
 
-    grouped: dict[str, list[tuple[str, str]]] = {}
+    parsed_cards: list[tuple[str, str, str]] = []
     for card in cards:
         id_match = re.search(r'data-asset-id="([^"]+)"', card)
         type_match = re.search(r'data-asset-type="([^"]+)"', card)
         if not id_match or not type_match:
             continue
-        grouped.setdefault(type_match.group(1), []).append((id_match.group(1), card))
+        parsed_cards.append((id_match.group(1), type_match.group(1), card))
+
+    grouped: dict[str, list[tuple[str, str]]] = {}
+    for asset_id, asset_type, card in parsed_cards:
+        grouped.setdefault(asset_type, []).append((asset_id, card))
 
     remaining = RESULT_CARD.sub("", rendered_body).rstrip()
     group_sections: list[str] = []
@@ -312,7 +322,7 @@ def page_css() -> str:
 .brand{font-size:10px;letter-spacing:.16em;color:var(--accent);font-weight:800}.sidebar h1{font-size:15px;line-height:1.35;margin:6px 0 10px}.source-note{font-size:10px;color:var(--muted);word-break:break-all}.search{width:100%;margin:12px 0 8px;border:1px solid var(--line);background:var(--panel);padding:7px 9px;border-radius:4px;font:inherit}.filters{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}.filter{border:1px solid var(--line);background:transparent;padding:3px 8px;border-radius:3px;color:var(--muted);cursor:pointer;font-size:11px}.filter.active,.filter:hover{background:var(--ink);border-color:var(--ink);color:white}.toc{list-style:none;padding:0;margin:10px 0}.toc li{border-top:1px solid rgba(86,80,71,.12);padding:4px 0}.toc a{color:var(--muted);text-decoration:none;font-size:11px}.toc a:hover{color:var(--accent)}
 .content{width:100%;min-width:0;padding:22px 20px 72px}.document{max-width:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;align-items:start}.document>:not(.result-card){grid-column:1/-1}.document>h1:first-child{font-size:20px;line-height:1.2;letter-spacing:-.015em;margin:0 0 2px}.document h2{font-size:14px;margin:12px 0 2px;border-bottom:1px solid var(--line);padding-bottom:5px}.document h3{font-size:13px}.document p{max-width:90ch;margin:6px 0}.document a{color:var(--accent)}blockquote{border-left:2px solid var(--accent);margin:8px 0;padding:6px 9px;background:rgba(255,255,255,.45)}
 .asset-group{grid-column:1/-1;margin-top:8px}.asset-group-header{display:flex;align-items:baseline;gap:8px;margin-bottom:7px;border-bottom:1px solid var(--line)}.asset-group-header h2{margin:0;padding:0 0 5px;border:0;font-size:14px}.asset-group-header span{color:var(--muted);font-size:10px}.asset-group-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;align-items:start}
-.result-card{position:relative;display:flex;flex-direction:column;min-height:128px;margin:0;padding:0 10px 10px;background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:5px;overflow:hidden}.result-card:hover{border-color:#a8a198}.result-card>.card-rail{display:flex;gap:6px;align-items:center;margin:0 -10px;padding:6px 10px;background:#343230;color:white;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.asset-id{font-size:12px;font-weight:800;letter-spacing:.05em}.asset-kind{font-size:9px;letter-spacing:.12em;color:#d8d2c9}.result-card>.card-title{border:0;margin:9px 0 8px;padding:0;font-size:13px;line-height:1.38;font-weight:700}.result-card>:not(.card-rail):not(.card-title):not(.copy-block){display:none}
+.result-card{position:relative;display:flex;flex-direction:column;min-height:128px;margin:0;padding:0 10px 10px;background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:5px;overflow:hidden}.result-card:hover{border-color:#a8a198}.result-card>.card-rail{display:flex;gap:6px;align-items:center;margin:0 -10px;padding:6px 10px;background:#343230;color:white;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.asset-id{font-size:12px;font-weight:800;letter-spacing:.05em}.asset-kind{font-size:9px;letter-spacing:.12em;color:#d8d2c9}.asset-status{margin-left:auto;padding:2px 5px;border:1px solid #c8bfae;border-radius:2px;color:#eee7da;font-size:9px}.retired-card{opacity:.62;background:#e7e3dc}.retired-card:hover{border-color:var(--line)}.result-card>.card-title{border:0;margin:9px 0 8px;padding:0;font-size:13px;line-height:1.38;font-weight:700}.result-card>:not(.card-rail):not(.card-title):not(.copy-block){display:none}
 .copy-block{display:flex;align-items:center;gap:7px;margin-top:auto;padding-top:5px}.prompt-format{margin-right:auto;color:var(--muted);font:700 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em}.prompt-actions{display:flex;gap:5px}.result-card .copy-block{display:block}.result-card .prompt-format{display:none}.result-card .prompt-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;width:100%}.copy-button,.title-copy-button,.detail-button,.dialog-button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:6px 5px;border-radius:3px;cursor:pointer;white-space:nowrap;font:700 11px/1.1 inherit}.copy-button{background:var(--accent);border-color:var(--accent);color:white}.copy-button:hover{background:var(--accent-dark)}.title-copy-button:hover,.detail-button:hover,.dialog-button:hover{border-color:#918b82}.copy-button.copied,.title-copy-button.copied{background:var(--ok);border-color:var(--ok);color:white}.prompt-source{display:none}.inline-code{background:rgba(156,61,50,.10);color:#7f2e26;padding:1px 3px;border-radius:3px}.table-scroll{overflow:auto;margin:8px 0;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.38);font-size:12px}th,td{text-align:left;vertical-align:top;padding:6px 7px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}th{background:#ddd9d1;font-weight:700}hr{border:0;border-top:1px solid var(--line);margin:14px 0}.hidden-card,.hidden-group{display:none}.toast{position:fixed;right:18px;bottom:18px;z-index:30;background:#272522;color:#fff;padding:8px 11px;border-left:3px solid #84af89;box-shadow:var(--shadow);transform:translateY(150%);transition:.2s}.toast.show{transform:translateY(0)}
 .prompt-dialog{width:min(1080px,94vw);height:min(88vh,920px);padding:0;border:1px solid #4a4641;border-radius:6px;background:#272522;color:#f7f2e9;box-shadow:0 28px 80px rgba(0,0,0,.35)}.prompt-dialog::backdrop{background:rgba(24,22,20,.72);backdrop-filter:blur(3px)}.dialog-shell{display:grid;grid-template-rows:auto minmax(0,1fr);height:100%}.dialog-toolbar{display:flex;align-items:center;gap:8px;padding:9px 11px;background:#37332f;border-bottom:1px solid #4d4842}.dialog-title{min-width:0;margin-right:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700}.dialog-button{background:#f1eee8}.dialog-button.primary{background:var(--accent);border-color:var(--accent);color:white}.detail-code{margin:0;padding:18px 20px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:14px/1.75 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .portal-title{font-size:20px;line-height:1.25;margin:6px 0}.portal-intro{margin:0 0 14px;color:var(--muted)}.portal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.portal-card{display:block;padding:12px;background:var(--panel);border:1px solid var(--line);color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}.portal-card:hover{border-color:var(--accent)}.portal-card small{display:block;color:var(--muted);margin-top:5px;word-break:break-all}
@@ -337,9 +347,9 @@ function getPromptTitle(block){const card=block.closest('.result-card');return c
 document.querySelectorAll('.title-copy-button').forEach(button=>button.addEventListener('click',async()=>{const block=button.closest('.copy-block');await copyText(getPromptTitle(block));button.classList.add('copied');button.textContent='已复制';showToast('标题已复制');window.setTimeout(()=>{button.classList.remove('copied');button.textContent='复制标题'},1300)}));
 document.querySelectorAll('.copy-button').forEach(button=>button.addEventListener('click',async()=>{const block=button.closest('.copy-block');await copyText(getPromptText(block));button.classList.add('copied');button.textContent='复制成功';showToast('提示词已复制');window.setTimeout(()=>{button.classList.remove('copied');button.textContent=button.dataset.original||'复制提示词'},1300)}));
 document.querySelectorAll('.copy-button').forEach(button=>button.dataset.original=button.textContent);
-document.querySelectorAll('.detail-button').forEach(button=>button.addEventListener('click',()=>{const block=button.closest('.copy-block');detailTitle.textContent=getPromptTitle(block);detailCode.textContent=getPromptText(block);dialog.showModal()}));
+document.querySelectorAll('.detail-button').forEach(button=>button.addEventListener('click',()=>{const block=button.closest('.copy-block');const card=button.closest('.result-card');const retired=card?.dataset.assetStatus==='retired';detailTitle.textContent=getPromptTitle(block);detailCode.textContent=getPromptText(block);detailCopy.hidden=retired;detailCopy.disabled=retired;dialog.showModal()}));
 document.getElementById('detail-close')?.addEventListener('click',()=>dialog.close());
-detailCopy?.addEventListener('click',async()=>{await copyText(detailCode.textContent);showToast('提示词已复制')});
+detailCopy?.addEventListener('click',async()=>{if(detailCopy.hidden||detailCopy.disabled)return;await copyText(detailCode.textContent);showToast('提示词已复制')});
 dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
 let activeFilter='ALL';const search=document.getElementById('search');
 function applyFilters(){const query=(search?.value||'').trim().toLowerCase();document.querySelectorAll('.result-card').forEach(card=>{const type=card.dataset.assetType;const prompts=[...card.querySelectorAll('.copy-block')].map(getPromptText).join(' ');const searchable=(card.textContent+' '+prompts).toLowerCase();const matchesType=activeFilter==='ALL'||type===activeFilter;const matchesQuery=!query||searchable.includes(query);card.classList.toggle('hidden-card',!(matchesType&&matchesQuery))});document.querySelectorAll('.asset-group').forEach(group=>{const cards=[...group.querySelectorAll('.result-card')];group.classList.toggle('hidden-group',cards.length>0&&cards.every(card=>card.classList.contains('hidden-card')))})}

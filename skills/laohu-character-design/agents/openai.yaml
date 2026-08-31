@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡人物设计"
+  short_description: "从剧本建立可识别、可表演、可生产的人物母版"
+  default_prompt: "Use $laohu-character-design to create, compare, select, and hand off an embodied character system from this script."

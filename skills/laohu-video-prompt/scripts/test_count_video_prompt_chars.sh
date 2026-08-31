@@ -31,6 +31,9 @@ printf '%s\n' \
 output="$($COUNTER "$fixture" --limit 33)"
 printf '%s\n' "$output" | rg -q '^block=1 chars=33 limit=33 status=PASS$'
 
+info_output="$($COUNTER "$fixture" --block 1)"
+printf '%s\n' "$info_output" | rg -q '^block=1 chars=33 limit=none status=INFO$'
+
 second_output="$($COUNTER "$fixture" --limit 33 --block 2)"
 printf '%s\n' "$second_output" | rg -q '^block=2 chars=33 limit=33 status=PASS$'
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡服装设计"
+  short_description: "从剧本、人物与世界观生成原创服装和群像衣橱"
+  default_prompt: "Use $laohu-costume-design to create and select an original costume system for these characters, then hand the winning design to visual assets."

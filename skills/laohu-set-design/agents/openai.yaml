@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡场景与布景设计"
+  short_description: "从剧本建立可叙事、可调度、可资产化的原创空间"
+  default_prompt: "Use $laohu-set-design to create, compare, select, and hand off an original story-driven set and location system."

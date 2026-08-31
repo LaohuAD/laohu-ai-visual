@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡美术风格设计"
+  short_description: "把题材与世界观转成跨人物服装场景的统一视觉方向"
+  default_prompt: "Use $laohu-art-direction to define, compare, and hand off a genre-readable art direction system for this project."

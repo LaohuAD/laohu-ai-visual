@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "baseline_ref": "working-tree before EVO-20260825-001; RED behavior report /root/costume_red_test",
+  "status": "COMPLETE",
+  "sources": [
+    {
+      "path": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md",
+      "sections": [
+        "一、证据与适用边界",
+        "二、从剧本到人物化设计",
+        "三、角色记忆系统",
+        "四、春到夏的90天造型链",
+        "五、W与M的职责分界",
+        "六、普通、复杂与华丽服装",
+        "七、生成前拒绝门"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "CD-MIG-001",
+      "source_path": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md",
+      "source_sections": ["一、证据与适用边界"],
+      "original_function": "为影视服装、材料、热舒适和妆发人物化提供外部证据与借用边界。",
+      "unique_information": "影视服装服务人物、材料具有物理行为、季节与环境共同决定覆盖、外部资料不能直接决定具体造型。",
+      "action": "MOVE",
+      "target_paths": ["skills/laohu-costume-design/references/04_资料来源与机制边界.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-costume-design/SKILL.md", "trigger": "需要外部证据、文化来源或案例机制", "to": "skills/laohu-costume-design/references/04_资料来源与机制边界.md"}
+      ],
+      "validation": {"task": "来源事实、可迁移机制与禁止照搬边界均已进入新负责人", "status": "PASS"}
+    },
+    {
+      "id": "CD-MIG-002",
+      "source_path": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md",
+      "source_sections": ["二、从剧本到人物化设计"],
+      "original_function": "从人物选择、社会位置、身体动作和时间环境推导服装锚点。",
+      "unique_information": "人物化设计卡、轮廓动词、比例、材料行为、平均答案和阶段保留替换。",
+      "action": "MOVE",
+      "target_paths": ["skills/laohu-costume-design/SKILL.md", "skills/laohu-costume-design/references/01_原创服装设计与候选竞争.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-costume-design/SKILL.md", "trigger": "完整原创人物服装设计", "to": "skills/laohu-costume-design/references/01_原创服装设计与候选竞争.md"},
+        {"from": "skills/laohu-ai-visual/SKILL.md", "trigger": "服装原创设计缺口", "to": "skills/laohu-costume-design/SKILL.md"}
+      ],
+      "validation": {"task": "人物服装命题与承重设计变量完整承接旧人物化卡", "status": "PASS"}
+    },
+    {
+      "id": "CD-MIG-003",
+      "source_path": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md",
+      "source_sections": ["三、角色记忆系统"],
+      "original_function": "用主锚点、辅锚点和跨造型连续关系建立人物记忆。",
+      "unique_information": "远景主锚点、近景辅助锚点、连续锚点随制度和场景迁移、阶段变化至少改变两个维度。",
+      "action": "MERGE",
+      "target_paths": ["skills/laohu-costume-design/references/01_原创服装设计与候选竞争.md", "skills/laohu-costume-design/references/02_世界服饰系统与群像衣橱.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-costume-design/SKILL.md", "trigger": "人物记忆与候选竞争", "to": "skills/laohu-costume-design/references/01_原创服装设计与候选竞争.md"},
+        {"from": "skills/laohu-costume-design/SKILL.md", "trigger": "群像与跨阶段衣橱", "to": "skills/laohu-costume-design/references/02_世界服饰系统与群像衣橱.md"}
+      ],
+      "validation": {"task": "记忆锚点已编译为剪影、删饰、群像与阶段测试", "status": "PASS"}
+    },
+    {
+      "id": "CD-MIG-004",
+      "source_path": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md",
+      "source_sections": ["四、春到夏的90天造型链"],
+      "original_function": "把季节、身体、环境、身份和场景动作拆成不同造型变量。",
+      "unique_information": "季节变化需共同改变层数、覆盖、克重、袖裤长度、鞋袜与穿法，恒温和制服需功能解释。",
+      "action": "MOVE",
+      "target_paths": ["skills/laohu-costume-design/references/02_世界服饰系统与群像衣橱.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-costume-design/SKILL.md", "trigger": "跨季节或跨阶段衣橱", "to": "skills/laohu-costume-design/references/02_世界服饰系统与群像衣橱.md"}
+      ],
+      "validation": {"task": "季节变量分权、三项共同变化和功能例外已保留", "status": "PASS"}
+    },
+    {
+      "id": "CD-MIG-005",
+      "source_path": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md",
+      "source_sections": ["五、W与M的职责分界"],
+      "original_function": "规定服装本体W与最终穿着妆造M的不同职责。",
+      "unique_information": "W负责服装工程与阶段适用，M负责发型妆面配饰和真实穿法，不互相重新设计。",
+      "action": "REWRITE",
+      "target_paths": ["skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-visual-assets/SKILL.md", "trigger": "已有服装设计交接包，需要编译W或M", "to": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md"}
+      ],
+      "validation": {"task": "W/M固定制作板和零设计改动编译继续由视觉资产负责", "status": "PASS"}
+    },
+    {
+      "id": "CD-MIG-006",
+      "source_path": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md",
+      "source_sections": ["六、普通、复杂与华丽服装"],
+      "original_function": "防止普通服装使用默认值，也防止华丽服装靠形容词和装饰密度。",
+      "unique_information": "普通服装也要比较方向，复杂度只改变证据密度，轮廓与比例先于装饰。",
+      "action": "MOVE",
+      "target_paths": ["skills/laohu-costume-design/SKILL.md", "skills/laohu-costume-design/references/01_原创服装设计与候选竞争.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-costume-design/SKILL.md", "trigger": "普通人物、华丽人物或服装平庸", "to": "skills/laohu-costume-design/references/01_原创服装设计与候选竞争.md"},
+        {"from": "skills/laohu-ai-visual/SKILL.md", "trigger": "服装合理但平庸", "to": "skills/laohu-costume-design/SKILL.md"}
+      ],
+      "validation": {"task": "有意识朴素、承重候选与删饰测试承接旧规则", "status": "PASS"}
+    },
+    {
+      "id": "CD-MIG-007",
+      "source_path": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md",
+      "source_sections": ["七、生成前拒绝门"],
+      "original_function": "拒绝可替换、缺少可见证据、季节矛盾、W/M越权和抽象妆发变化。",
+      "unique_information": "换名、剪影、季节、职责边界和可见终态检查。",
+      "action": "MERGE",
+      "target_paths": ["skills/laohu-costume-design/SKILL.md", "skills/laohu-costume-design/references/01_原创服装设计与候选竞争.md", "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md"],
+      "activation_routes": [
+        {"from": "skills/laohu-ai-visual/SKILL.md", "trigger": "原创服装设计与拒绝平庸", "to": "skills/laohu-costume-design/SKILL.md"},
+        {"from": "skills/laohu-costume-design/SKILL.md", "trigger": "候选与朴素设计验收", "to": "skills/laohu-costume-design/references/01_原创服装设计与候选竞争.md"},
+        {"from": "skills/laohu-visual-assets/SKILL.md", "trigger": "W/M编译与生成前验收", "to": "skills/laohu-visual-assets/references/07_服装与妆造人物化设计.md"}
+      ],
+      "validation": {"task": "设计拒绝门和资产编译拒绝门分别进入各自负责人", "status": "PASS"}
+    }
+  ]
+}

@@ -1,4 +1,4 @@
 interface:
   display_name: "老胡 VC 提纯"
-  short_description: "判断合格视频提示词是否需要 VC，并提升画面、声音和体验连续性"
-  default_prompt: "Use $laohu-vibe-creating-prompt to decide whether this valid three-part video prompt benefits from Vibe Creating and preserve every locked production constraint."
+  short_description: "对每条基线提示词必做 VC，比较更强方案并保护生产硬约束"
+  default_prompt: "Use $laohu-vibe-creating-prompt after every baseline three-part video prompt. Always read and execute the external VC method, compare at least two meaningful enhancement directions, then return the strongest valid prompt or a reasoned zero-change decision while preserving every locked production constraint."

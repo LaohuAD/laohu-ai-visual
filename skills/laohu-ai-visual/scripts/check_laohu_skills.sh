@@ -15,7 +15,13 @@ require_file() {
 
 core_skills=(
   laohu-ai-visual
+  laohu-story-material
   laohu-script-writer
+  laohu-mv-director
+  laohu-art-direction
+  laohu-character-design
+  laohu-costume-design
+  laohu-set-design
   laohu-visual-assets
   laohu-video-prompt
   laohu-vibe-creating-prompt
@@ -35,6 +41,7 @@ required_files=(
   tests/capability_scenarios.json
   tests/evolution_scenarios.json
   04_诊断与系统日志/能力进化台账.md
+  04_诊断与系统日志/服装设计能力语义迁移台账.json
   skills/laohu-video-prompt/scripts/count_video_prompt_chars.sh
   skills/laohu-video-prompt/scripts/test_count_video_prompt_chars.sh
 )
@@ -65,7 +72,7 @@ for skill in "${core_skills[@]}"; do
 done
 
 actual_skill_count="$(find skills -mindepth 1 -maxdepth 1 -type d -name 'laohu-*' | wc -l | tr -d ' ')"
-if [[ "$actual_skill_count" == "8" ]]; then pass "exactly eight public skills"; else fail "expected 8 skills, found $actual_skill_count"; fi
+if [[ "$actual_skill_count" == "14" ]]; then pass "exactly fourteen public skills"; else fail "expected 14 skills, found $actual_skill_count"; fi
 
 if rg -n '^##[[:space:]]*(灵魂|筋骨|血肉|表皮)(层)?[[:space:]]*$' skills/*/SKILL.md >/dev/null; then
   fail "generic four-layer headings leaked into downstream skills"
@@ -105,6 +112,19 @@ if bash -n skills/laohu-video-prompt/scripts/count_video_prompt_chars.sh && \
   pass "video prompt character counter"
 else
   fail "video prompt character counter"
+fi
+
+if bash -n skills/laohu-video-prompt/scripts/validate_video_prompt_structure.sh && \
+   bash skills/laohu-video-prompt/scripts/test_validate_video_prompt_structure.sh; then
+  pass "video prompt structure and failure fixtures"
+else
+  fail "video prompt structure or failure fixtures"
+fi
+
+if bash skills/laohu-visual-assets/scripts/test_validate_character_asset_structure.sh; then
+  pass "character asset structure and failure fixtures"
+else
+  fail "character asset structure or failure fixtures"
 fi
 
 if find . -path './01_作品项目' -prune -o -name '.DS_Store' -print -quit | grep -q .; then

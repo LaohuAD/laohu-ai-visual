@@ -27,6 +27,45 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
         ):
             self.assertIn(anchor, skill)
 
+    def test_story_material_uses_layered_authority_and_dynamic_retrieval_sessions(self) -> None:
+        skill = self.read("skills/laohu-story-material/SKILL.md")
+        reference = self.read(
+            "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+        )
+        for anchor in (
+            "分层权威",
+            "SQLite",
+            "可重建索引",
+            "检索会话",
+            "story / sequence / scene / beat / texture",
+            "单页只是上下文边界",
+            "不设固定的总候选数",
+            "get-atom",
+            "get-source",
+            "不得默认返回 source 原话",
+        ):
+            self.assertIn(anchor, skill + reference)
+
+    def test_script_writer_splits_long_form_retrieval_by_narrative_scope(self) -> None:
+        writer = self.read("skills/laohu-script-writer/SKILL.md")
+        for anchor in (
+            "story / sequence / scene / beat / texture",
+            "长篇",
+            "有效状态变化",
+            "承重 / 支撑 / 纹理",
+            "边际增益",
+        ):
+            self.assertIn(anchor, writer)
+
+    def test_core_contract_routes_layered_material_handoff(self) -> None:
+        contract = self.read("02_共享资产库/05_工具流程/laohu_skills核心合约.md")
+        for anchor in (
+            "动态分页",
+            "按 ID 读取原子详情",
+            "原始 source 只在语气、证据、权利或归因需要时显式读取",
+        ):
+            self.assertIn(anchor, contract)
+
     def test_router_saves_only_when_the_user_expresses_save_intent(self) -> None:
         router = self.read("skills/laohu-ai-visual/SKILL.md")
         self.assertIn("记录灵感", router)
@@ -60,6 +99,7 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
     def test_private_database_is_ignored_and_untracked(self) -> None:
         ignore = self.read(".gitignore")
         self.assertIn("/00_输入原料/故事素材原子库.jsonl", ignore)
+        self.assertIn("/00_输入原料/故事素材库/", ignore)
         tracked = subprocess.run(
             ["git", "ls-files", "--error-unmatch", "00_输入原料/故事素材原子库.jsonl"],
             cwd=ROOT,

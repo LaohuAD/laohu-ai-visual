@@ -8,27 +8,30 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "skills/laohu-story-material/scripts/story_material_db.py"
+MODULE_PATH = ROOT / "skills/laohu-story-material/scripts/story_material_store.py"
 
 
-def load_store():
-    spec = importlib.util.spec_from_file_location("story_material_db", SCRIPT)
+def load_store_module():
+    spec = importlib.util.spec_from_file_location("story_material_store_regression", MODULE_PATH)
     if spec is None or spec.loader is None:
-        raise RuntimeError("cannot load story material database module")
+        raise RuntimeError("cannot load story material store module")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
 
 
-class StoryMaterialDatabaseTests(unittest.TestCase):
+class StoryMaterialDatabaseRegressionTests(unittest.TestCase):
     def setUp(self) -> None:
         self.tempdir = tempfile.TemporaryDirectory()
-        self.db = Path(self.tempdir.name) / "materials.jsonl"
+        module = load_store_module()
+        self.ValidationError = module.ValidationError
+        self.store = module.StoryMaterialStore(Path(self.tempdir.name) / "materials")
 
     def tearDown(self) -> None:
         self.tempdir.cleanup()
 
-    def source_payload(self, original: str = "父亲没说关心，只把坏掉的插座换了。") -> dict:
+    @staticmethod
+    def source_payload(original: str = "父亲没说关心，只把坏掉的插座换了。") -> dict:
         return {
             "original": original,
             "source_type": "life_observation",
@@ -41,10 +44,11 @@ class StoryMaterialDatabaseTests(unittest.TestCase):
             "status": "active",
         }
 
-    def atom_payload(self, source_id: str, mechanism: str = "用解决实际问题代替直接表达关心") -> dict:
+    @staticmethod
+    def atom_payload(source_id: str, mechanism: str = "用解决实际问题代替直接表达关心") -> dict:
         return {
             "source_id": source_id,
-            "atom": "人物用修理物件代替说出关心",
+            "atom": f"人物通过行动表达：{mechanism}",
             "human_truth": ["嘴硬心软"],
             "mechanisms": [mechanism],
             "material_types": ["relationship_detail", "character_action"],
@@ -63,111 +67,115 @@ class StoryMaterialDatabaseTests(unittest.TestCase):
             "status": "callable",
         }
 
-    def test_source_is_saved_once_and_long_original_is_not_truncated(self) -> None:
-        store = load_store()
-        original = "原话" * 5000
-        source = store.add_source(self.db, self.source_payload(original))
-        atoms = store.add_atoms(
-            self.db,
-            [self.atom_payload(source["id"]), self.atom_payload(source["id"], "用劳动掩饰歉意")],
-        )
-        records = store.load_records(self.db)
-        sources = [record for record in records if record["record_type"] == "source"]
-        self.assertEqual(1, len(sources))
-        self.assertEqual(original, sources[0]["original"])
-        self.assertEqual({source["id"]}, {atom["source_id"] for atom in atoms})
+    @staticmethod
+    def query(**overrides) -> dict:
+        query = {
+            "scope": {"work": "测试作品", "level": "scene", "id": "SC-01"},
+            "gap": "人物怎样用行动表达关心",
+            "responsibilities": ["人物行为"],
+            "must": {},
+            "prefer": {},
+            "exclude_ids": [],
+            "page_budget_chars": 20000,
+            "diversity": "open",
+            "expand_source_ids": [],
+        }
+        query.update(overrides)
+        return query
 
-    def test_search_returns_compact_index_without_original(self) -> None:
-        store = load_store()
-        source = store.add_source(self.db, self.source_payload("不能出现在索引里的完整原话"))
-        atom = store.add_atoms(self.db, [self.atom_payload(source["id"])])[0]
-        result = store.search_records(
-            self.db,
-            {"prefer": {"mechanisms": ["用解决实际问题代替直接表达关心"]}, "limit": 10},
-        )
-        encoded = json.dumps(result, ensure_ascii=False)
-        self.assertIn(atom["id"], encoded)
-        self.assertNotIn("original", encoded)
-        self.assertNotIn("不能出现在索引里的完整原话", encoded)
-        self.assertNotIn("visible_evidence", encoded)
-        overview = json.dumps(store.stats(self.db), ensure_ascii=False)
-        self.assertNotIn("不能出现在索引里的完整原话", overview)
-        self.assertIn(atom["id"], overview)
-
-    def test_get_loads_only_requested_atom_source_and_usage(self) -> None:
-        store = load_store()
-        first = store.add_source(self.db, self.source_payload("第一条原话"))
-        second = store.add_source(self.db, self.source_payload("第二条原话"))
-        first_atom = store.add_atoms(self.db, [self.atom_payload(first["id"])])[0]
-        second_atom = store.add_atoms(self.db, [self.atom_payload(second["id"], "用玩笑化解羞耻")])[0]
-        store.log_usage(
-            self.db,
-            {
-                "atom_ids": [first_atom["id"]],
-                "event_type": "shortlisted",
-                "scope": "project",
-                "project": "测试作品",
-                "script_position": "第一场",
-                "usage_role": "texture",
-                "transformation": "保留行动替代表达",
-                "result": "pending",
-                "evidence_path": "",
-            },
-        )
-        detail = store.get_records(self.db, [first_atom["id"]])
-        encoded = json.dumps(detail, ensure_ascii=False)
-        self.assertIn("第一条原话", encoded)
-        self.assertIn("shortlisted", encoded)
-        self.assertNotIn(second_atom["id"], encoded)
-        self.assertNotIn("第二条原话", encoded)
-
-    def test_project_rejection_does_not_pause_library_but_library_event_does(self) -> None:
-        store = load_store()
-        source = store.add_source(self.db, self.source_payload())
-        atom = store.add_atoms(self.db, [self.atom_payload(source["id"])])[0]
-        common = {
-            "atom_ids": [atom["id"]],
+    def usage_payload(self, atom_id: str, scope: str, event_type: str) -> dict:
+        return {
+            "atom_ids": [atom_id],
             "project": "测试作品",
             "script_position": "第二场",
             "usage_role": "texture",
             "transformation": "未采用",
             "result": "not_fit",
             "evidence_path": "",
+            "scope": scope,
+            "event_type": event_type,
         }
-        store.log_usage(self.db, {**common, "scope": "project", "event_type": "rejected"})
-        self.assertEqual("callable", store.search_records(self.db, {"limit": 10})[0]["effective_status"])
-        store.log_usage(self.db, {**common, "scope": "library", "event_type": "paused"})
-        self.assertEqual([], store.search_records(self.db, {"limit": 10}))
-        store.log_usage(self.db, {**common, "scope": "library", "event_type": "reopened"})
-        self.assertEqual("callable", store.search_records(self.db, {"limit": 10})[0]["effective_status"])
 
-    def test_invalid_foreign_key_and_unapproved_external_leave_database_unchanged(self) -> None:
-        store = load_store()
-        source = store.add_source(self.db, self.source_payload())
-        before = self.db.read_bytes()
-        invalid_atom = self.atom_payload("SRC-20990101-999")
-        with self.assertRaises(store.ValidationError):
-            store.add_atoms(self.db, [invalid_atom])
-        self.assertEqual(before, self.db.read_bytes())
+    def test_source_is_saved_once_and_long_original_is_not_truncated(self) -> None:
+        original = "原话" * 5000
+        source = self.store.add_source(self.source_payload(original))
+        atoms = self.store.add_atoms([
+            self.atom_payload(source["id"]),
+            self.atom_payload(source["id"], "用劳动掩饰歉意"),
+        ])
+
+        self.assertEqual(original, self.store.get_sources([source["id"]])[0]["original"])
+        self.assertEqual({source["id"]}, {atom["source_id"] for atom in atoms})
+        self.assertEqual(1, len(self.store.load_sources()))
+
+    def test_search_returns_compact_index_without_original_or_detail(self) -> None:
+        source = self.store.add_source(self.source_payload("不能出现在索引里的完整原话"))
+        atom = self.store.add_atoms([self.atom_payload(source["id"])])[0]
+        result = self.store.start_search(self.query(
+            prefer={"mechanisms": ["用解决实际问题代替直接表达关心"]}
+        ))
+        encoded = json.dumps(result, ensure_ascii=False)
+
+        self.assertIn(atom["id"], encoded)
+        self.assertNotIn("original", encoded)
+        self.assertNotIn("不能出现在索引里的完整原话", encoded)
+        self.assertNotIn("visible_evidence", encoded)
+        self.assertNotIn("不能出现在索引里的完整原话".encode(), self.store.index_path.read_bytes())
+
+    def test_atom_source_and_usage_require_separate_calls(self) -> None:
+        first = self.store.add_source(self.source_payload("第一条原话"))
+        second = self.store.add_source(self.source_payload("第二条原话"))
+        first_atom = self.store.add_atoms([self.atom_payload(first["id"])])[0]
+        second_atom = self.store.add_atoms([self.atom_payload(second["id"], "用玩笑化解羞耻")])[0]
+        self.store.log_usage(self.usage_payload(first_atom["id"], "project", "shortlisted"))
+
+        atom_text = json.dumps(self.store.get_atoms([first_atom["id"]]), ensure_ascii=False)
+        source_text = json.dumps(self.store.get_sources([first["id"]]), ensure_ascii=False)
+        usage_text = json.dumps(self.store.get_usage([first_atom["id"]]), ensure_ascii=False)
+        self.assertNotIn("第一条原话", atom_text)
+        self.assertIn("第一条原话", source_text)
+        self.assertIn("shortlisted", usage_text)
+        self.assertNotIn(second_atom["id"], atom_text + source_text + usage_text)
+
+    def test_project_rejection_does_not_pause_library_but_library_event_does(self) -> None:
+        source = self.store.add_source(self.source_payload())
+        atom = self.store.add_atoms([self.atom_payload(source["id"])])[0]
+        self.store.log_usage(self.usage_payload(atom["id"], "project", "rejected"))
+        self.assertTrue(self.store.start_search(self.query())["cards"])
+
+        self.store.log_usage(self.usage_payload(atom["id"], "library", "paused"))
+        self.assertEqual([], self.store.start_search(self.query())["cards"])
+
+        self.store.log_usage(self.usage_payload(atom["id"], "library", "reopened"))
+        self.assertTrue(self.store.start_search(self.query())["cards"])
+
+    def test_invalid_foreign_key_and_unapproved_external_leave_authority_unchanged(self) -> None:
+        source = self.store.add_source(self.source_payload())
+        before = {path: path.read_bytes() for path in self.store.root.rglob("*") if path.is_file()}
+        with self.assertRaises(self.ValidationError):
+            self.store.add_atoms([self.atom_payload("SRC-20990101-999")])
         invalid_source = self.source_payload("网络候选")
         invalid_source["curation_priority"] = "ai_external_candidate"
-        with self.assertRaises(store.ValidationError):
-            store.add_source(self.db, invalid_source)
-        self.assertEqual(before, self.db.read_bytes())
-        self.assertEqual(source["id"], store.load_records(self.db)[0]["id"])
+        with self.assertRaises(self.ValidationError):
+            self.store.add_source(invalid_source)
+        after = {path: path.read_bytes() for path in self.store.root.rglob("*") if path.is_file()}
 
-    def test_same_source_cannot_fill_the_whole_candidate_set(self) -> None:
-        store = load_store()
-        first = store.add_source(self.db, self.source_payload("同源案例"))
-        second = store.add_source(self.db, self.source_payload("另一案例"))
-        store.add_atoms(
-            self.db,
-            [self.atom_payload(first["id"], f"同源机制{i}") for i in range(4)],
-        )
-        store.add_atoms(self.db, [self.atom_payload(second["id"], "另一机制")])
-        result = store.search_records(self.db, {"limit": 5, "per_source_limit": 2})
-        self.assertLessEqual(2, sum(item["source_id"] == first["id"] for item in result))
-        self.assertTrue(any(item["source_id"] == second["id"] for item in result))
+        self.assertEqual(before, after)
+        self.assertEqual(source["id"], self.store.load_sources()[0]["id"])
+
+    def test_balanced_first_view_can_expand_to_all_atoms_from_one_source(self) -> None:
+        first = self.store.add_source(self.source_payload("同源案例"))
+        second = self.store.add_source(self.source_payload("另一案例"))
+        self.store.add_atoms([self.atom_payload(first["id"], f"同源机制{i}") for i in range(4)])
+        self.store.add_atoms([self.atom_payload(second["id"], "另一机制")])
+
+        balanced = self.store.start_search(self.query(diversity="balanced"))["cards"]
+        expanded = self.store.start_search(self.query(
+            diversity="open", expand_source_ids=[first["id"]]
+        ))["cards"]
+
+        self.assertNotEqual(balanced[0]["source_id"], balanced[1]["source_id"])
+        self.assertEqual(4, sum(card["source_id"] == first["id"] for card in expanded))
 
 
 if __name__ == "__main__":

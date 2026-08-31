@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡 MV 导演"
+  short_description: "把歌曲、歌词与创作背景变成整首MV的声画结构和分镜任务"
+  default_prompt: "Use $laohu-mv-director to turn this song package into a model-neutral MV direction, audiovisual timeline, storyboard tasks, and downstream text handoff."

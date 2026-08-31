@@ -12,7 +12,7 @@ fi
 
 file="$1"
 shift
-limit="10000"
+limit=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -81,6 +81,7 @@ for my $index (0 .. $#blocks) {
   }
 
   my @shots = $block =~ /【镜头(\d{2})｜/g;
+  my @full_shots = $block =~ /【镜头(\d{2})｜[^｜】\n]+｜[^｜】\n]+｜[^】\n]+】/g;
   if (!@shots) {
     push @errors, 'missing numbered shot header';
   } else {
@@ -89,6 +90,18 @@ for my $index (0 .. $#blocks) {
       push @errors, "shot sequence expected=$expected actual=$shots[$shot_index]"
         unless $shots[$shot_index] eq $expected;
     }
+    push @errors, 'shot header must include shot size, camera/viewpoint, and movement/transition'
+      unless @full_shots == @shots;
+  }
+
+  while ($block =~ /(【镜头\d{2}｜[^】\n]+】)(.*?)(?=【镜头\d{2}｜|\z)/sg) {
+    my ($header, $shot_body) = ($1, $2);
+    my $visible = $shot_body =~ /(?:先看见|画面|镜头|前景|中景|后景|焦平面|构图|主体|人物|孩子|男人|女人|女生|男生|师兄|师妹)/;
+    my $change = $shot_body =~ /(?:听到|说完|随后|然后|同时|当[^，。；\n]{0,30}时|开始|触发|才|转为|移向|抬起|落下|停住|变化)/;
+    my $endpoint = $shot_body =~ /(?:最后|最终|停在|停住|锁住|保持|结束|交给|定格|余响|余韵|落回|退入|出画|切入)/;
+    push @errors, "$header missing visible starting evidence" unless $visible;
+    push @errors, "$header missing triggered screen/sound change" unless $change;
+    push @errors, "$header missing visible/audible endpoint" unless $endpoint;
   }
 
   if ($block =~ /(?:片内\s*)?\d+(?:\.\d+)?\s*[—–-]\s*\d+(?:\.\d+)?\s*秒/) {
@@ -99,15 +112,33 @@ for my $index (0 .. $#blocks) {
     push @errors, 'direct negative generation instruction found';
   }
 
-  if ($block =~ /(?:让观众|为了表现|为了说明|形成[^。；\n]{0,40}受控变化)/) {
+  if ($block =~ /(?:让观众|观众(?:看见|看到|感到|理解|知道|得到)|为了表现|为了说明|戏剧任务|表演任务|人物调度目标|这一镜(?:证明|表达|说明)|形成[^。；\n]{0,40}受控变化)/) {
     push @errors, 'author explanation found';
   }
 
+  if ($block =~ /不是[^。；\n]{0,48}而是/) {
+    push @errors, 'contrastive author explanation found';
+  }
+
+  if ($block =~ /(?:焦点[^。；\n]{0,24}抬到|抬焦|跟焦到(?:情绪|眼神)|焦点扫向)/) {
+    push @errors, 'ambiguous focus/camera movement phrase found';
+  }
+
+  if ($block =~ /【(?:台词|对白)(?:-[^】]+)?】/) {
+    push @errors, 'detached dialogue rail found; dialogue must be embedded in shot prose';
+  }
+
+  if ($block =~ /(?<![A-Za-z0-9])F\d+(?!\d)/) {
+    push @errors, 'F portrait reference is a B-only production intermediate and cannot enter video prompts';
+  }
+
   my $chars = length $block;
-  push @errors, "chars=$chars exceeds limit=$limit" if $chars > $limit;
+  my $shown_limit = defined $limit && length $limit ? $limit : 'none';
+  push @errors, "chars=$chars exceeds limit=$limit"
+    if defined $limit && length $limit && $chars > $limit;
 
   my $status = @errors ? 'FAIL' : 'PASS';
-  printf "block=%d chars=%d limit=%d shots=%d status=%s", $index + 1, $chars, $limit, scalar @shots, $status;
+  printf "block=%d chars=%d limit=%s shots=%d status=%s", $index + 1, $chars, $shown_limit, scalar @shots, $status;
   printf " errors=%s", join('; ', @errors) if @errors;
   printf "\n";
   $failed = 1 if @errors;

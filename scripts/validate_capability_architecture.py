@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -186,6 +187,54 @@ def main() -> int:
         fail("registered external Skill source missing: " + ", ".join(stale_sources), failures)
     else:
         passed("external Skill registry has no stale source")
+
+    seen_runtime_names: set[str] = set()
+    for scenario in data.get("runtime_reachability_scenarios", []):
+        name = scenario.get("name", "<unnamed>")
+        if name in seen_runtime_names:
+            fail(f"duplicate runtime reachability scenario: {name}", failures)
+        else:
+            seen_runtime_names.add(name)
+
+        owner = scenario.get("owner")
+        owner_text = skill_text.get(owner, "")
+        if not owner_text:
+            fail(f"runtime scenario has no executable owner: {name} -> {owner}", failures)
+
+        for field in ("request", "observable_change", "forbidden_shortcut"):
+            value = scenario.get(field)
+            if not isinstance(value, str) or not value.strip():
+                fail(f"runtime scenario lacks observable {field}: {name}", failures)
+
+        references = scenario.get("required_references", [])
+        if not references:
+            fail(f"runtime scenario requires no Reference: {name}", failures)
+        for relative in references:
+            reference = ROOT / relative
+            if not reference.is_file():
+                fail(f"runtime scenario Reference is missing: {name} -> {relative}", failures)
+                continue
+            if reference.name in all_skill_text:
+                passed(f"runtime scenario routes real Reference: {name} -> {reference.name}")
+            else:
+                fail(
+                    f"runtime scenario Reference has no Skill route: {name} -> {reference.name}",
+                    failures,
+                )
+
+        intermediates = scenario.get("required_intermediate", [])
+        if not intermediates:
+            fail(f"runtime scenario has no inspectable intermediate result: {name}", failures)
+        else:
+            missing = [anchor for anchor in intermediates if anchor not in owner_text]
+            if missing:
+                fail(
+                    f"runtime scenario cannot prove owner behavior: {name} -> "
+                    f"{', '.join(missing)}",
+                    failures,
+                )
+            else:
+                passed(f"runtime scenario has inspectable owner behavior: {name}")
 
     for scenario in data["scenarios"]:
         scenario_ok = True
@@ -409,6 +458,25 @@ def main() -> int:
         passed("public index enters through the router and one owner skill")
     else:
         fail("public index still lacks single-owner routing", failures)
+
+    private_material = "00_输入原料/故事素材原子库.jsonl"
+    gitignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
+    if f"/{private_material}" in gitignore:
+        passed("private story material database is ignored")
+    else:
+        fail("private story material database is not ignored", failures)
+
+    tracked = subprocess.run(
+        ["git", "ls-files", "--error-unmatch", private_material],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if tracked.returncode != 0:
+        passed("private story material database is not tracked")
+    else:
+        fail("private story material database is tracked", failures)
 
     if failures:
         print(f"Capability architecture validation failed with {len(failures)} issue(s).")
