@@ -303,6 +303,21 @@
       "decision": "KEEP",
       "local_commit_policy": "CHECKPOINT",
       "remote_push_allowed": false
+    },
+    {
+      "name": "公开观众不能覆盖戏内亲密关系强度",
+      "mode": "FEEDBACK",
+      "input": "用户明确指出，角色是在对镜头所代表的亲密搭档开玩笑，不是在对公众说话；现有提示词却因为公开发布而把直接质问、霸气眼神和威胁台词改得客气含蓄。",
+      "evidence": "confirmed-character-relationship-and-real-draft-failure",
+      "expected_owner": "laohu-capability-evolution",
+      "expected_layers": ["SOUL", "STRUCTURE", "CRAFT", "FORM"],
+      "expected_action": "在视频提示词负责人中建立镜头关系对象合同，分开最终观众和戏内关系对象；让称呼、措辞、眼线、距离与动作强度服从戏内对象，并用软质道具、非接触、停手和无伤害终态承载分寸。",
+      "forbidden_action": "只把当前一句台词改凶；因公开视频而自动礼貌化私下关系；用害羞撒娇替代人物既定攻击性；或用真实伤害换取霸气。",
+      "memory_action": "MERGE",
+      "protected": ["冻结台词", "人物关系分层", "公开场合的得体模式", "无真实伤害边界"],
+      "decision": "KEEP",
+      "local_commit_policy": "CHECKPOINT",
+      "remote_push_allowed": false
     }
   ]
 }
