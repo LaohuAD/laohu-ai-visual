@@ -1,0 +1,7 @@
+interface:
+  display_name: "老胡音频与音色设计"
+  short_description: "设计角色声线、语音表演、音效声场与可生成音频任务"
+  default_prompt: "Use $laohu-audio-design to turn this script, character voice identity, and scene timing into a production-ready audio design package."
+
+policy:
+  allow_implicit_invocation: true

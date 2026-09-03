@@ -20,6 +20,7 @@ core_skills=(
   laohu-mv-director
   laohu-art-direction
   laohu-character-design
+  laohu-audio-design
   laohu-costume-design
   laohu-set-design
   laohu-visual-assets
@@ -72,7 +73,7 @@ for skill in "${core_skills[@]}"; do
 done
 
 actual_skill_count="$(find skills -mindepth 1 -maxdepth 1 -type d -name 'laohu-*' | wc -l | tr -d ' ')"
-if [[ "$actual_skill_count" == "14" ]]; then pass "exactly fourteen public skills"; else fail "expected 14 skills, found $actual_skill_count"; fi
+if [[ "$actual_skill_count" == "15" ]]; then pass "exactly fifteen public skills"; else fail "expected 15 skills, found $actual_skill_count"; fi
 
 if rg -n '^##[[:space:]]*(灵魂|筋骨|血肉|表皮)(层)?[[:space:]]*$' skills/*/SKILL.md >/dev/null; then
   fail "generic four-layer headings leaked into downstream skills"
