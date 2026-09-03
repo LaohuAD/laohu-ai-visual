@@ -90,7 +90,7 @@ for my $index (0 .. $#blocks) {
       push @errors, "shot sequence expected=$expected actual=$shots[$shot_index]"
         unless $shots[$shot_index] eq $expected;
     }
-    push @errors, 'shot header must include shot size, camera/viewpoint, and movement/transition'
+    push @errors, 'shot header must include shot size, camera/viewpoint, and camera path/transition; complex headers may append composition and rhythm summaries'
       unless @full_shots == @shots;
   }
 
