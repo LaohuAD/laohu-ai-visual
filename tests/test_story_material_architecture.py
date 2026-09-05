@@ -109,7 +109,7 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
         )
         self.assertNotEqual(0, tracked.returncode)
 
-    def test_project_documents_register_fourteen_owners(self) -> None:
+    def test_project_documents_register_fifteen_owners(self) -> None:
         for relative in (
             "AGENTS.md",
             "README.md",
@@ -119,7 +119,7 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
         ):
             text = self.read(relative)
             self.assertIn("laohu-story-material", text, relative)
-            self.assertIn("十四", text, relative)
+            self.assertIn("十五", text, relative)
 
 
 if __name__ == "__main__":

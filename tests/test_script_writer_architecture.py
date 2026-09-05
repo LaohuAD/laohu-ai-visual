@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import unittest
 from pathlib import Path
 
@@ -92,12 +93,91 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
         ):
             self.assertIn(anchor, text)
 
-    def test_screenplay_does_not_require_camera_lens_or_shot_size(self) -> None:
+    def test_formal_screenplay_contains_readable_brief_and_numbered_shots(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+        )
+        for anchor in (
+            "【剧本说明】",
+            "【作品信息】",
+            "【故事说明】",
+            "【镜1｜E01-S01-C01｜全景｜固定镜头｜约4秒】",
+            "所有观众会看到或听到的正文必须归入一个镜号",
+            "景别是镜头属性，不是编号",
+        ):
+            self.assertIn(anchor, text)
+        self.assertNotIn("普通正式剧本不强制焦段、景别和机位", text)
+
+    def test_screen_relationship_constrains_view_without_device_coordinates(self) -> None:
         reference = self.read(
             "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
         )
-        self.assertIn("普通正式剧本不强制焦段、景别和机位", reference)
-        self.assertIn("分镜与视频提示词", reference)
+        for anchor in (
+            "画面位置",
+            "身体朝向",
+            "视线对象",
+            "遮挡",
+            "关系距离",
+            "设备坐标",
+            "POV",
+            "过肩",
+        ):
+            self.assertIn(anchor, reference)
+        self.assertIn("读者自然能反推出摄影机的位置", reference)
+
+    def test_performable_psychology_supports_but_never_replaces_screen_evidence(self) -> None:
+        reference = self.read(
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        )
+        self.assertNotIn("不写心理描写，只写能被看见或听见的内容", reference)
+        for anchor in (
+            "可表演的心理解释",
+            "不能代替画面",
+            "可见或可听证据",
+            "行动后果",
+            "普通自然说话可以不标",
+        ):
+            self.assertIn(anchor, reference)
+
+    def test_storyboard_is_integrated_and_video_prompt_preserves_source_mapping(self) -> None:
+        text = self.combined(
+            "AGENTS.md",
+            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+            "02_共享资产库/05_工具流程/短剧剧本到视频提示词编号与时长规则.md",
+            "skills/laohu-video-prompt/SKILL.md",
+        )
+        for anchor in (
+            "文字分镜并入正式剧本",
+            "取消独立分镜宏观表",
+            "剧本镜号来源映射",
+            "拆镜、并镜",
+            "返回编剧",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_complete_lighting_sample_uses_shots_as_the_only_body_container(self) -> None:
+        sample = self.read(
+            "04_诊断与系统日志/2026-09-05_镜头化剧本完整验证样例.md"
+        )
+        first_shot = sample.index("【镜1｜E01-S01-C01")
+        first_action = sample.index("△")
+        self.assertLess(first_shot, first_action)
+        ids = re.findall(r"E01-S01-C(\d{2})", sample)
+        self.assertGreaterEqual(len(ids), 8)
+        self.assertEqual(ids, [f"{number:02d}" for number in range(1, len(ids) + 1)])
+        for anchor in (
+            "遥控器一直在露娜右手里",
+            "老胡空手",
+            "测试摄影机",
+            "节目镜头",
+            "监视器",
+            "三角油光",
+            "【场次结果】",
+        ):
+            self.assertIn(anchor, sample)
+        self.assertNotIn("镜头作用：", sample)
+        self.assertNotRegex(sample, r"摄影机.{0,12}(45度|\d+(?:\.\d+)?米)")
 
     def test_low_intensity_story_may_reject_component_stacking(self) -> None:
         text = self.combined(
