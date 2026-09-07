@@ -1,0 +1,159 @@
+{
+  "allowed_modes": [
+    "USER_COMMUNICATION",
+    "PRODUCTION_NOTE",
+    "SCRIPT_HEADER",
+    "SCRIPT_ACTION",
+    "PERFORMANCE_CUE",
+    "CHARACTER_DIALOGUE",
+    "SCRIPT_NOTE",
+    "ASSET_SPEC",
+    "IMAGE_PROMPT",
+    "VIDEO_PROMPT",
+    "AUDIO_PROMPT"
+  ],
+  "scenarios": [
+    {
+      "name": "同一镜头按文本块连续换挡",
+      "input": "一个镜号内依次出现镜头方头、动作、人物括号和台词。",
+      "expected_modes": [
+        "SCRIPT_HEADER",
+        "SCRIPT_ACTION",
+        "PERFORMANCE_CUE",
+        "CHARACTER_DIALOGUE"
+      ],
+      "protected": ["镜号", "事件顺序", "人物关系"],
+      "forbidden": "把四类文字压成同一种说明口吻"
+    },
+    {
+      "name": "编剧向老胡解释不冒充正式剧本",
+      "input": "编剧解释为什么保留某句台词。",
+      "expected_modes": ["USER_COMMUNICATION"],
+      "protected": ["已确认台词", "专业判断"],
+      "forbidden": "把沟通解释写进剧本正文"
+    },
+    {
+      "name": "同一事实进入资产图片视频三种语言",
+      "input": "Luna 的金色眼睛、站位和抬手动作需要分别进入资产卡、图片提示词和视频提示词。",
+      "expected_modes": ["ASSET_SPEC", "IMAGE_PROMPT", "VIDEO_PROMPT"],
+      "protected": ["人物身份", "视觉锚点", "动作事实"],
+      "forbidden": "三份文本只换标题不换执行语言"
+    },
+    {
+      "name": "声音设计保护锁定台词",
+      "input": "把已确认的 Luna 台词交给配音与声音模型。",
+      "expected_modes": ["AUDIO_PROMPT"],
+      "protected": ["台词原文", "人物声音身份"],
+      "forbidden": "为方便表演擅自续写或改词"
+    },
+    {
+      "name": "Luna教学喜剧不把知识卡塞进逃跑台词",
+      "input": "老胡一边逃跑一边认出正侧光。",
+      "expected_modes": ["PERFORMANCE_CUE", "CHARACTER_DIALOGUE"],
+      "protected": ["正侧光的可见规律", "老胡正在逃跑", "正侧着踹的关系笑点"],
+      "forbidden": "让人物喘着气念完整百科定义"
+    },
+    {
+      "name": "温暖爱情故事不继承打斗和曲解",
+      "input": "两个人在深夜厨房里默默替对方留了一碗面。",
+      "expected_modes": ["SCRIPT_ACTION", "CHARACTER_DIALOGUE"],
+      "protected": ["低冲突关系", "生活动作"],
+      "forbidden": "因为来源案例是喜剧就强加误听、追打和反转"
+    },
+    {
+      "name": "安静治愈故事允许克制与留白",
+      "input": "老人把修好的收音机放回空椅子旁，没有解释。",
+      "expected_modes": ["SCRIPT_ACTION", "PERFORMANCE_CUE", "CHARACTER_DIALOGUE"],
+      "protected": ["克制", "可见动作", "低信息密度"],
+      "forbidden": "用密集口语和作者总结证明自然"
+    },
+    {
+      "name": "动作缺因果时返回编剧而非语言润色",
+      "input": "正文只写 Luna 突然追上并踢飞老胡，没有速度来源和接触过程。",
+      "expected_modes": ["SCRIPT_ACTION"],
+      "expected_return_owner": "laohu-script-writer",
+      "protected": ["世界能力基线", "动作结果"],
+      "forbidden": "自行发明瞬移技能后把句子润色得更顺"
+    },
+    {
+      "name": "整份剧本返工覆盖所有已出现文本块",
+      "input": "用户指出正式剧本整体有说明腔，文件同时包含镜头方头、动作、表演括注、人物台词和生产说明。",
+      "expected_modes": ["SCRIPT_HEADER", "SCRIPT_ACTION", "PERFORMANCE_CUE", "CHARACTER_DIALOGUE", "SCRIPT_NOTE", "PRODUCTION_NOTE"],
+      "protected": ["镜号", "锁定台词", "动作因果", "下游交接"],
+      "forbidden": "只压缩几句台词就宣布整份剧本已应用语言模式"
+    }
+  ],
+  "effectiveness_scenarios": [
+    {
+      "name": "追逐台词把重复用途迁移到屏幕文字",
+      "mode": "CHARACTER_DIALOGUE",
+      "input": "老胡边逃边喊出正侧光的名称、可见特征、核心效果和已经显示在屏幕上的全部应用场景。",
+      "expected_decisions": ["KEEP", "MOVE"],
+      "reason": "保留完成识别与引出误听笑点的口头信息，把不改变当下攻防且已有承载位置的用途迁移到屏幕文字。"
+    },
+    {
+      "name": "正侧光重复因澄清与笑点继续有效",
+      "mode": "CHARACTER_DIALOGUE",
+      "input": "老胡再次强调‘我说正侧光’，Luna故意曲解成‘正侧着踹’。",
+      "expected_decisions": ["KEEP"],
+      "reason": "字面信息重复，但第二次是在辩解并触发关系笑点与下一动作。"
+    },
+    {
+      "name": "短台词没有语言动作仍然无效",
+      "mode": "CHARACTER_DIALOGUE",
+      "input": "人物在没有回应对象、没有信息缺口、没有节奏作用时说‘我知道了’。",
+      "expected_decisions": ["DELETE"],
+      "reason": "字数很短，却没有改变关系、行动、压力、理解或节奏。"
+    },
+    {
+      "name": "爱情故事重复问句因关系变化而保留",
+      "mode": "CHARACTER_DIALOGUE",
+      "input": "同一句‘你吃了吗’第一次是客套，第二次是在分别前终于承认关心。",
+      "expected_decisions": ["KEEP"],
+      "reason": "字面重复，关系距离和潜台词已经改变。"
+    },
+    {
+      "name": "复杂动作因果不得为简短而删除",
+      "mode": "SCRIPT_ACTION",
+      "input": "踩墙发力、墙体反作用、人物位移、接触方向、环境破坏和落点共同解释一次追击。",
+      "expected_decisions": ["KEEP"],
+      "reason": "删除任一承重环节都会让空间、物理或下游执行断裂。"
+    },
+    {
+      "name": "资产形容词不能排错则删除或合并",
+      "mode": "ASSET_SPEC",
+      "input": "连续使用高级、惊艳、绝美、顶级，却没有锁定任何身份、形态、材质或变体边界。",
+      "expected_decisions": ["MERGE", "DELETE"],
+      "reason": "这些词没有排除一个具体错误生成结果。"
+    },
+    {
+      "name": "图片中的时间过程迁移到视频",
+      "mode": "IMAGE_PROMPT",
+      "input": "提示词要求人物起跑、跃起、踢中、撞墙再落地。",
+      "expected_decisions": ["MOVE"],
+      "reason": "完整时间过程不能在单个静态时刻同时成立，应选一帧或迁移到视频。"
+    },
+    {
+      "name": "视频保留空间锚点并删除同义审美词",
+      "mode": "VIDEO_PROMPT",
+      "input": "提示词既写人物相对位置与运动路径，又堆叠高级、电影感、震撼、大片感。",
+      "expected_decisions": ["KEEP", "MERGE", "DELETE"],
+      "reason": "空间锚点决定时空连续；不能改变声画结果的同义审美词应合并或删除。"
+    },
+    {
+      "name": "声音删除不能改变可听结果的视觉说明",
+      "mode": "AUDIO_PROMPT",
+      "input": "音频提示词写人物裙摆颜色，但该信息不改变呼吸、距离、力度、发音或声场。",
+      "expected_decisions": ["DELETE"],
+      "reason": "接收者无法把纯视觉信息转成可听结果。"
+    },
+    {
+      "name": "缺少专业内容时返回原负责人",
+      "mode": "VIDEO_PROMPT",
+      "input": "剧本没有给出追击的能力来源和接触过程，却要求语言模式压缩成可执行视频提示词。",
+      "expected_decisions": ["RETURN"],
+      "expected_return_owner": "laohu-script-writer",
+      "reason": "缺口属于动作内容，不属于表达润色。"
+    }
+  ]
+}

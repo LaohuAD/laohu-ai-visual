@@ -1,0 +1,55 @@
+{
+  "capability": "laohu-language-mode",
+  "source_project": "老胡音乐V4",
+  "source_role": "研究来源，不是运行时依赖",
+  "records": [
+    {
+      "source": "老胡音乐V4/.agents/skills/laohu-natural-dialogue/SKILL.md",
+      "source_concept": "领域能力先形成专业结论，沟通层只负责让用户理解、判断和继续",
+      "decision": "KEEP",
+      "target": "skills/laohu-language-mode/SKILL.md",
+      "reason": "内容权与表达权分离可跨项目直接成立",
+      "runtime_dependency": false
+    },
+    {
+      "source": "老胡音乐V4/.agents/references/laohu-natural-dialogue/活人感表达.md",
+      "source_concept": "活人感先由材料和说话位置产生，再落到中文句法与语气",
+      "decision": "REWRITE",
+      "target": "skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
+      "reason": "保留跨项目机制，改写音乐身份、示例和用途",
+      "runtime_dependency": false
+    },
+    {
+      "source": "老胡音乐V4/.agents/references/laohu-natural-dialogue/沟通形式适配.md",
+      "source_concept": "直答、讨论、教程、方案、口播和报告各有接收任务",
+      "decision": "REWRITE",
+      "target": "skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
+      "reason": "压缩为 USER_COMMUNICATION 与 PRODUCTION_NOTE 两个共享模式",
+      "runtime_dependency": false
+    },
+    {
+      "source": "老胡音乐V4/.agents/references/laohu-natural-dialogue/虚构人物与对白.md",
+      "source_concept": "分析者、叙述者、角色原话与观众读法不能互相冒名",
+      "decision": "MOVE",
+      "target": "skills/laohu-language-mode/references/03_剧本文本块语言.md",
+      "reason": "人物对白的内容判断仍归编剧，语言模式只持有文本块分权与污染防治",
+      "runtime_dependency": false
+    },
+    {
+      "source": "老胡音乐V4/.agents/skills/laohu-natural-dialogue/SKILL.md",
+      "source_concept": "歌词曲式、预副歌、歌手条件与完整歌词准入",
+      "decision": "EXCLUDE",
+      "target": "none",
+      "reason": "属于音乐项目专业内容，不适用于视觉语言共享层",
+      "runtime_dependency": false
+    },
+    {
+      "source": "老胡音乐V4/.agents/skills/laohu-natural-dialogue/SKILL.md",
+      "source_concept": "所有用户沟通必须直接读取音乐项目完整沟通规则",
+      "decision": "EXCLUDE",
+      "target": "none",
+      "reason": "禁止建立跨项目绝对路径和运行时依赖；已在本项目重编必要语义",
+      "runtime_dependency": false
+    }
+  ]
+}

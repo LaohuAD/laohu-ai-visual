@@ -318,6 +318,51 @@
       "decision": "KEEP",
       "local_commit_policy": "CHECKPOINT",
       "remote_push_allowed": false
+    },
+    {
+      "name": "人物风险检查反复把艺术形象磨成安全平均值",
+      "mode": "FEEDBACK",
+      "input": "用户连续指出人物设计像不想得罪任何人：真人短喜剧中的司机从肥壮暴发户被削成普通微胖司机，老摊贩也被处理成正常耐看的老人；用户要求根据题材做艺术化设计，并明确拒绝千篇一律平均。",
+      "evidence": "confirmed-project-preference-plus-current-draft-failure-plus-stylization-and-perception-research",
+      "expected_owner": "laohu-capability-evolution",
+      "expected_layers": ["SOUL", "CRAFT", "FORM"],
+      "expected_action": "加厚美术、人物和服装三个既有负责人：分开现实可信度与艺术夸张度，按时长、字幕、景别和类型选择R0—R3强度；用选择性夸张卡和最强推进案把2—4组承重关系推离平均；允许熟悉类型代码参与第一印象，同时让行为独立完成善恶判断；将风险拆成伤害、陈词滥调、观众摩擦与生成风险，并补当前、相邻、保真和失败场景。",
+      "forbidden_action": "只给当前人物加一条金链；把胖老板写成所有反派默认；把艺术化升级成全题材统一夸张；因可能俗套就删掉所有体量、姿态和服装锐边；或让单一身体属性替剧情判善恶。",
+      "memory_action": "REOPEN",
+      "protected": ["第一印象与真实人格分权", "有意识的平凡", "真人与文化权利边界", "主要人物首次服装人工定案", "人物服装资产分权"],
+      "decision": "KEEP",
+      "local_commit_policy": "CHECKPOINT",
+      "remote_push_allowed": false
+    },
+    {
+      "name": "镜头化剧本后的生成单元改为场内批次",
+      "mode": "FEEDBACK",
+      "input": "用户要求根据目标模型的实际时长与能力，把同场连续 E-S-C 镜头组成一次生成批次；一批不跨场，跨场由前场末批与后场 B01 分别承担转场两端。",
+      "evidence": "confirmed-production-architecture-feedback-plus-current-rule-conflict",
+      "expected_owner": "laohu-capability-evolution",
+      "expected_layers": ["STRUCTURE", "CRAFT", "FORM"],
+      "expected_action": "将一次实际模型请求编译为 E-S-B 批次；先过场次、时长、字符、入口和参考限制的硬边界门，再过因果、动作相位、人物空间稳定与后半段遗忘的融合质量门；批内镜头从镜头01起算，源 E-S-C 可追溯；跨场使用双端转场，历史 VID 只作兼容。",
+      "forbidden_action": "为填满模型最长时长而强行合并；一批跨两个场次；在未核验真实入口前硬编批数；或把上一场 GEO 当成下一场开场空间。",
+      "memory_action": "REOPEN",
+      "protected": ["剧本 E-S-C 事实", "三段式模型正文", "普通叙事不重复分镜", "真实尾部片段质量门", "目标入口能力证据"],
+      "decision": "OBSERVE",
+      "local_commit_policy": "CHECKPOINT",
+      "remote_push_allowed": false
+    },
+    {
+      "name": "伪箴言不能进入执行接口",
+      "mode": "REFLECTION",
+      "input": "项目为了统一四层风格，准备把角色权限、协作边、路径和字段都改写成诗性短句。",
+      "evidence": "language-and-interface-audit",
+      "expected_owner": "laohu-capability-evolution",
+      "expected_layers": ["SOUL", "FORM"],
+      "expected_action": "只让能裁决真实取舍的句子进入灵魂层；把角色权限、协作类型、输入输出、路径和验收恢复为准确可执行的现代汉语。",
+      "forbidden_action": "把抽象名词排成有气势的句子，或让执行者从诗性语言猜接口和权限。",
+      "memory_action": "CREATE",
+      "protected": ["既有强箴言", "公共语感", "精确接口", "四层分工"],
+      "decision": "KEEP",
+      "local_commit_policy": "CHECKPOINT",
+      "remote_push_allowed": false
     }
   ]
 }

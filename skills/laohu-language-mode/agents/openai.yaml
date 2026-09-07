@@ -1,0 +1,7 @@
+interface:
+  display_name: "老胡语言模式与身份切换"
+  short_description: "按角色、文本块和接收者切换沟通、剧本与模型提示词语言"
+  default_prompt: "Use $laohu-language-mode to identify each text block's receiver and switch to the correct language mode without changing the domain content."
+
+policy:
+  allow_implicit_invocation: true

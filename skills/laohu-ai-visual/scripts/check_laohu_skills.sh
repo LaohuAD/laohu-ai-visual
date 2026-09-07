@@ -15,6 +15,8 @@ require_file() {
 
 core_skills=(
   laohu-ai-visual
+  laohu-language-mode
+  laohu-director
   laohu-story-material
   laohu-script-writer
   laohu-mv-director
@@ -37,11 +39,14 @@ required_files=(
   输入输出索引.md
   02_共享资产库/00_核心规则手册.md
   02_共享资产库/05_工具流程/laohu_skills核心合约.md
+  02_共享资产库/05_工具流程/能力协作图谱.md
   02_共享资产库/05_工具流程/外部能力依赖清单.md
   scripts/validate_capability_architecture.py
   tests/capability_scenarios.json
   tests/evolution_scenarios.json
+  tests/language_mode_scenarios.json
   04_诊断与系统日志/能力进化台账.md
+  04_诊断与系统日志/语言模式语义迁移台账.json
   04_诊断与系统日志/服装设计能力语义迁移台账.json
   skills/laohu-video-prompt/scripts/count_video_prompt_chars.sh
   skills/laohu-video-prompt/scripts/test_count_video_prompt_chars.sh
@@ -73,7 +78,7 @@ for skill in "${core_skills[@]}"; do
 done
 
 actual_skill_count="$(find skills -mindepth 1 -maxdepth 1 -type d -name 'laohu-*' | wc -l | tr -d ' ')"
-if [[ "$actual_skill_count" == "15" ]]; then pass "exactly fifteen public skills"; else fail "expected 15 skills, found $actual_skill_count"; fi
+if [[ "$actual_skill_count" == "17" ]]; then pass "exactly seventeen public skills"; else fail "expected 17 skills, found $actual_skill_count"; fi
 
 if rg -n '^##[[:space:]]*(灵魂|筋骨|血肉|表皮)(层)?[[:space:]]*$' skills/*/SKILL.md >/dev/null; then
   fail "generic four-layer headings leaked into downstream skills"

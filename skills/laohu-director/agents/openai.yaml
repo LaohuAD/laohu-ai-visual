@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡总导演"
+  short_description: "把用户目的转成观众经历、全片取舍和跨部门导演阐述"
+  default_prompt: "Use $laohu-director to separate evidence from assumptions, compare genuinely different directing approaches, and deliver one winning director statement covering audience experience, the main engine, department priorities, protection items, rejection reasons, and review gates without writing a second screenplay."

@@ -13,7 +13,10 @@ from pathlib import Path
 from typing import Sequence
 
 
-DOMAIN_HEADING = re.compile(r"^(?P<id>(?:VID|LZ|[BCFGPWMSA])\d+)(?:\s*[｜|]\s*(?P<title>.*))?$")
+DOMAIN_HEADING = re.compile(
+    r"^(?P<id>E\d{2}-S\d{2}-B\d{2}|(?:VID|LZ|[BCFGPWMSA])\d+)(?:\s*[｜|]\s*(?P<title>.*))?$"
+)
+BATCH_ID = re.compile(r"^E(?P<episode>\d{2})-S(?P<scene>\d{2})-B(?P<batch>\d{2})$")
 HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 FENCE = re.compile(r"^```([^`]*)$")
 TABLE_DIVIDER = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$")
@@ -28,7 +31,7 @@ DOMAIN_GROUPS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
     ("SCENE", "场景资产", ("S",)),
     ("ENSEMBLE", "群像资产", ("G",)),
     ("BLOCKING", "镜头调度参考", ("C",)),
-    ("VIDEO", "视频提示词", ("VID",)),
+    ("VIDEO", "视频生成批次", ("BATCH", "VID")),
 )
 
 
@@ -53,6 +56,8 @@ def slugify(text: str, used: set[str]) -> str:
 
 
 def domain_type(domain_id: str) -> str:
+    if BATCH_ID.fullmatch(domain_id):
+        return "BATCH"
     return re.match(r"[A-Z]+", domain_id).group(0)  # type: ignore[union-attr]
 
 
@@ -90,13 +95,21 @@ def collect_headings(source: str) -> list[HeadingInfo]:
     return headings
 
 
-def domain_sort_key(domain_id: str) -> tuple[int, int, str]:
+def domain_sort_key(domain_id: str) -> tuple[int, int, int, str]:
+    batch_match = BATCH_ID.fullmatch(domain_id)
+    if batch_match:
+        return (
+            int(batch_match.group("episode")),
+            int(batch_match.group("scene")),
+            int(batch_match.group("batch")),
+            domain_id,
+        )
     prefix_match = re.match(r"[A-Z]+", domain_id)
     number_match = re.search(r"\d+", domain_id)
     prefix = prefix_match.group(0) if prefix_match else domain_id
     number = int(number_match.group(0)) if number_match else 0
     subtype_order = {"B": 0, "LZ": 1, "P": 2}
-    return subtype_order.get(prefix, 0), number, domain_id
+    return 0, subtype_order.get(prefix, 0), number, domain_id
 
 
 def card_plain_text(card: str) -> str:

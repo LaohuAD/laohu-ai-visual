@@ -19,7 +19,9 @@ fixture_weak_shot_body="$(mktemp)"
 fixture_portrait_reference="$(mktemp)"
 fixture_portrait_reference_alias="$(mktemp)"
 fixture_portrait_reference_plain="$(mktemp)"
-trap 'rm -f "$fixture_valid" "$fixture_valid_complex" "$fixture_timeline" "$fixture_no_shot" "$fixture_missing_section" "$fixture_direct_negative" "$fixture_author_explanation" "$fixture_director_intent" "$fixture_contrastive_explanation" "$fixture_ambiguous_focus" "$fixture_detached_dialogue" "$fixture_weak_shot_header" "$fixture_weak_shot_body" "$fixture_portrait_reference" "$fixture_portrait_reference_alias" "$fixture_portrait_reference_plain"' EXIT
+fixture_intrashot_cut="$(mktemp)"
+fixture_compound_camera_setup="$(mktemp)"
+trap 'rm -f "$fixture_valid" "$fixture_valid_complex" "$fixture_timeline" "$fixture_no_shot" "$fixture_missing_section" "$fixture_direct_negative" "$fixture_author_explanation" "$fixture_director_intent" "$fixture_contrastive_explanation" "$fixture_ambiguous_focus" "$fixture_detached_dialogue" "$fixture_weak_shot_header" "$fixture_weak_shot_body" "$fixture_portrait_reference" "$fixture_portrait_reference_alias" "$fixture_portrait_reference_plain" "$fixture_intrashot_cut" "$fixture_compound_camera_setup"' EXIT
 
 write_prompt() {
   local target="$1"
@@ -98,6 +100,14 @@ write_prompt "$fixture_portrait_reference_plain" \
   '【镜头01｜近景｜平视｜固定机位】' \
   '引用F01人物写真，孩子抬头看向妈妈。'
 
+write_prompt "$fixture_intrashot_cut" \
+  '【镜头01｜驾驶员近景｜副驾驶侧平视｜固定机位】' \
+  '画面先看见司机盯着后视镜，随后他按响喇叭，最后停在得意笑脸。画面硬切到车外大全景，车辆滑进泥沟并停住。'
+
+write_prompt "$fixture_compound_camera_setup" \
+  '【镜头01｜前挡风主观视角切车外大全景｜先车内正前方再切弯道外侧｜急进后硬切并横向跟摇】' \
+  '画面先看见警示架逼近，司机随后急刹，车辆最后斜停在泥沟里。'
+
 printf '%s\n' \
   '```text' \
   '【基础设定】' \
@@ -113,7 +123,7 @@ printf '%s\n' \
 default_output="$("$VALIDATOR" "$fixture_valid")"
 printf '%s\n' "$default_output" | rg -q '^block=1 chars=[0-9]+ limit=none shots=1 status=PASS$'
 
-for invalid in "$fixture_timeline" "$fixture_no_shot" "$fixture_missing_section" "$fixture_direct_negative" "$fixture_author_explanation" "$fixture_director_intent" "$fixture_contrastive_explanation" "$fixture_ambiguous_focus" "$fixture_detached_dialogue" "$fixture_weak_shot_header" "$fixture_weak_shot_body" "$fixture_portrait_reference" "$fixture_portrait_reference_alias" "$fixture_portrait_reference_plain"; do
+for invalid in "$fixture_timeline" "$fixture_no_shot" "$fixture_missing_section" "$fixture_direct_negative" "$fixture_author_explanation" "$fixture_director_intent" "$fixture_contrastive_explanation" "$fixture_ambiguous_focus" "$fixture_detached_dialogue" "$fixture_weak_shot_header" "$fixture_weak_shot_body" "$fixture_portrait_reference" "$fixture_portrait_reference_alias" "$fixture_portrait_reference_plain" "$fixture_intrashot_cut" "$fixture_compound_camera_setup"; do
   if "$VALIDATOR" "$invalid" --limit 10000 >/dev/null 2>&1; then
     printf 'expected invalid prompt structure to fail: %s\n' "$invalid" >&2
     exit 1

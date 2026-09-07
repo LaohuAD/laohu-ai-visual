@@ -102,6 +102,19 @@ for my $index (0 .. $#blocks) {
     push @errors, "$header missing visible starting evidence" unless $visible;
     push @errors, "$header missing triggered screen/sound change" unless $change;
     push @errors, "$header missing visible/audible endpoint" unless $endpoint;
+
+    my $header_inner = $header;
+    $header_inner =~ s/^【//;
+    $header_inner =~ s/】$//;
+    my @header_fields = split /｜/, $header_inner;
+    if ((defined $header_fields[1] && $header_fields[1] =~ /(?:硬切|软切|切(?:到|至|回|换|车内|车外|主观|客观))/) ||
+        (defined $header_fields[2] && $header_fields[2] =~ /(?:硬切|软切|切(?:到|至|回|换|车内|车外|主观|客观))/)) {
+      push @errors, "$header embeds multiple camera setups in shot-size or viewpoint field; start a new numbered shot";
+    }
+
+    if ($shot_body =~ /(?:画面|镜头|摄影机)?(?:随即|随后|立即|然后|再|又)?\s*(?:硬切|软切|切到|切至|切回|切换到)/) {
+      push @errors, "$header contains an intrashot cut; end the shot and start a new numbered shot";
+    }
   }
 
   if ($block =~ /(?:片内\s*)?\d+(?:\.\d+)?\s*[—–-]\s*\d+(?:\.\d+)?\s*秒/) {

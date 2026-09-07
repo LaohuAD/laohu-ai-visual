@@ -102,18 +102,102 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             "【剧本说明】",
             "【作品信息】",
             "【故事说明】",
-            "【镜1｜E01-S01-C01｜全景｜固定镜头｜约4秒】",
+            "【E01-S01-C01｜中景｜运镜：固定镜头｜机位：圆台南侧，朝北看向双人关系轴｜构图：Luna左侧、老胡右侧｜约4秒】",
             "所有观众会看到或听到的正文必须归入一个镜号",
             "景别是镜头属性，不是编号",
         ):
             self.assertIn(anchor, text)
+        self.assertNotIn("【镜1｜E01-S01-C01", text)
         self.assertNotIn("普通正式剧本不强制焦段、景别和机位", text)
 
-    def test_screen_relationship_constrains_view_without_device_coordinates(self) -> None:
+    def test_scene_local_shot_ids_replace_redundant_global_shot_labels(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+        )
+        for anchor in (
+            "Episode",
+            "Scene",
+            "Camera Shot",
+            "进入新场后从 `C01` 重新编号",
+            "不再额外添加全片连续",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_screenplay_body_keeps_visible_prose_and_video_owns_camera_execution(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "偏小说性的可见结果语言",
+            "不重复编译摄影机路径",
+            "详细摄影机执行",
+            "laohu-video-prompt",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_multi_character_action_paragraphs_anchor_names_before_pronouns(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "人物指代锚点",
+            "第一次出现人物时先写具体名称",
+            "叙述主体切换",
+            "重新写具体名称",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_comedy_mishearing_selects_phonetic_and_non_phonetic_methods(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "自然同音或近音",
+            "现场发音与句法",
+            "双重语义",
+            "断句换义",
+            "对象偷换",
+            "字面执行",
+            "改变下一动作",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_teaching_comedy_protects_learning_and_human_reaction(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "知识线是不可补偿的主任务",
+            "教学喜剧的对白场景合同",
+            "本段唯一主喜剧引擎",
+            "已确认的 3–8 句原话",
+            "纯对白盲听",
+            "悬空机灵",
+            "作者腹语",
+            "不是配额",
+            "不得把结构测试通过",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_screen_relationship_maps_world_camera_and_screen_without_numeric_rigging(self) -> None:
         reference = self.read(
             "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
         )
         for anchor in (
+            "世界层",
+            "摄影机层",
+            "画面层",
+            "世界位置 → 摄影机观看侧 / 视轴 → 画面左中右与前中后景",
             "画面位置",
             "身体朝向",
             "视线对象",
@@ -124,7 +208,186 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             "过肩",
         ):
             self.assertIn(anchor, reference)
-        self.assertIn("读者自然能反推出摄影机的位置", reference)
+        self.assertIn("不自动等于", reference)
+        self.assertIn("不能只靠“左前景 / 右后景”假定机位已经成立", reference)
+
+    def test_script_shot_header_exposes_viewpoint_and_composition_before_body(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "编号｜景别｜运镜｜机位 / 视轴｜构图｜参考时长",
+            "机位是原因，构图是画面结果",
+            "摄影机从哪里朝哪里看",
+            "不重复方头已经锁定的静态机位",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_comedy_can_recur_as_varied_relationship_engine_without_becoming_a_quota(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "明知原义、故意换义",
+            "先让观众听懂知识原义",
+            "变奏式回声",
+            "禁止机械排班",
+            "不能因一次过量失败就被一刀切删除",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_emotion_handoff_carries_state_trigger_and_playable_evidence(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "skills/laohu-video-prompt/references/01_文戏对白与人物表演.md",
+        )
+        for anchor in (
+            "情绪交接合同",
+            "情绪阶段",
+            "关系目的",
+            "精确触发",
+            "可见泄露",
+            "禁止提前反应",
+            "声音放低、句子很短",
+            "笑意开始发虚",
+            "返回编剧",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_every_spoken_line_carries_a_performance_cue_not_only_a_source_tag(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "每句有声台词",
+            "声源位置不等于表演状态",
+            "声源 / 情绪阶段 / 关系目的 / 可听语气",
+            "普通信息句也必须标注",
+            "不得只写 `O.S. / V.O. / 远处`",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_bearing_action_hands_off_cause_process_environment_and_result(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "skills/laohu-video-prompt/references/02_动作打斗追逐与力量奇观.md",
+        )
+        for anchor in (
+            "动作因果交接合同",
+            "世界能力基线",
+            "起始条件",
+            "发力来源",
+            "能力触发",
+            "运动路径",
+            "环境交互",
+            "接触点",
+            "受力结果",
+            "镜尾把手",
+            "剧本锁因果，提示词扩颗粒",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_public_performance_example_has_no_bare_dialogue_or_source_only_cue(self) -> None:
+        reference = self.read(
+            "skills/laohu-script-writer/references/04_口述台词与方言.md"
+        )
+        # Public regression tests must remain runnable without local work files.
+        section = reference.split("括号保持短", 1)[1]
+        script = section.split("```text\n", 1)[1].split("```", 1)[0]
+        dialogue = re.findall(r"(?m)^(?:Luna|老胡)（[^\n]+）：.+$", script)
+        self.assertEqual(2, len(dialogue), "performance example must contain both speakers")
+        bare_dialogue = re.findall(r"(?m)^(?:Luna|老胡)：.+$", script)
+        source_only = re.findall(
+            r"(?m)^(?:Luna|老胡)（(?:O\.S\.|V\.O\.|远处)）：.+$",
+            script,
+        )
+        self.assertEqual([], bare_dialogue)
+        self.assertEqual([], source_only)
+
+    def test_confirmed_wordplay_survives_into_the_action_it_promises(self) -> None:
+        text = self.combined(
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        )
+        for anchor in (
+            "语言机关兑现合同",
+            "已确认原词",
+            "人物故意换义",
+            "下一动作",
+            "动作结果",
+            "跨镜头保留项",
+            "下一镜不得退回普通招式名",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_fixed_closeup_cannot_gain_an_unintroduced_background_actor(self) -> None:
+        reference = self.read(
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
+        )
+        for anchor in (
+            "固定镜头、人物入画与景别证据边界",
+            "人物从开镜起已经可见",
+            "人物由画外进入",
+            "人物始终不入画",
+            "固定近景先说",
+            "保持助手 O.S.",
+            "新双人镜头",
+        ):
+            self.assertIn(anchor, reference)
+
+    def test_script_owns_shot_facts_assets_stabilize_and_video_compiles(self) -> None:
+        text = self.combined(
+            "AGENTS.md",
+            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+            "skills/laohu-script-writer/SKILL.md",
+            "skills/laohu-set-design/SKILL.md",
+            "skills/laohu-visual-assets/SKILL.md",
+            "skills/laohu-video-prompt/SKILL.md",
+        )
+        for anchor in (
+            "镜头化内容母版",
+            "稳定视觉形态",
+            "镜头继承合同",
+            "组成 E-S-B 批次",
+            "三段式执行语言",
+            "不第一次发明",
+        ):
+            self.assertIn(anchor, text)
+
+    def test_video_capabilities_are_recompiled_upstream_without_turning_script_into_prompt(self) -> None:
+        reference = self.read(
+            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
+        )
+        for anchor in (
+            "镜头原子与观看任务",
+            "世界—摄影机—画面空间",
+            "信息拓扑 → 视窗 / 版式观看范围 → 屏幕层级与焦点",
+            "动作与道具因果",
+            "人物表演",
+            "声音与必要特效",
+            "光线变化",
+            "相邻镜头交接",
+            "以下内容不迁入剧本正文",
+            "E-S-B 批次组合",
+            "正式三段式",
+            "VC 提纯",
+        ):
+            self.assertIn(anchor, reference)
+        self.assertIn("不能为了统一术语，给二维内容强造摄影机", reference)
 
     def test_performable_psychology_supports_but_never_replaces_screen_evidence(self) -> None:
         reference = self.read(
@@ -136,7 +399,8 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             "不能代替画面",
             "可见或可听证据",
             "行动后果",
-            "普通自然说话可以不标",
+            "每句有声台词",
+            "普通信息句也必须标注",
         ):
             self.assertIn(anchor, reference)
 
@@ -160,9 +424,10 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
         sample = self.read(
             "04_诊断与系统日志/2026-09-05_镜头化剧本完整验证样例.md"
         )
-        first_shot = sample.index("【镜1｜E01-S01-C01")
+        first_shot = sample.index("【E01-S01-C01")
         first_action = sample.index("△")
         self.assertLess(first_shot, first_action)
+        self.assertNotRegex(sample, r"【镜\d+｜E\d+-S\d+-C\d+")
         ids = re.findall(r"E01-S01-C(\d{2})", sample)
         self.assertGreaterEqual(len(ids), 8)
         self.assertEqual(ids, [f"{number:02d}" for number in range(1, len(ids) + 1)])

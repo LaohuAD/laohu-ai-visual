@@ -182,6 +182,33 @@ class RenderDeliveryHtmlTests(unittest.TestCase):
             self.assertIn('data-asset-type="VID"', rendered)
             self.assertIn("复制提示词", rendered)
 
+    def test_video_batch_heading_becomes_batch_card(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = self.write(
+                root,
+                "video.md",
+                """# 视频生成批次
+
+## E01-S02-B01｜正侧光追击
+
+源剧本镜头：E01-S02-C01—C03
+
+```text
+【基础设定】总时长15秒。
+【场景状态与氛围画质】走廊状态已成立。
+【画面内容】【镜头01｜中景｜平视｜跟拍】Luna向前。
+```
+""",
+            )
+
+            rendered = render_markdown(source)
+
+            self.assertIn('data-asset-id="E01-S02-B01"', rendered)
+            self.assertIn('data-asset-type="BATCH"', rendered)
+            self.assertIn("视频生成批次", rendered)
+            self.assertIn("复制提示词", rendered)
+
     def test_generic_markdown_keeps_readable_headings_lists_and_tables(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
