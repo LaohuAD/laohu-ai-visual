@@ -87,9 +87,9 @@ else
 fi
 
 if python3 scripts/validate_capability_architecture.py; then
-  pass "behavior scenarios and capability ownership"
+  pass "static scenario declarations and ownership anchors (not model execution)"
 else
-  fail "behavior scenarios or capability ownership"
+  fail "static scenario declarations or ownership anchors"
 fi
 
 for status in 进行中 已完成 已发布; do require_file "01_作品项目/$status/.gitkeep"; done

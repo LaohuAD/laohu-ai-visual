@@ -5,6 +5,7 @@ import re
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from scripts.render_delivery_html import render_markdown, render_project
 
@@ -401,6 +402,171 @@ class RenderDeliveryHtmlTests(unittest.TestCase):
             self.assertIn("资产.html", portal_text)
             self.assertIn('class="portal-title"', portal_text)
             self.assertNotIn("font-size:clamp(2.4rem,6vw,5rem)", portal_text)
+
+    def test_domain_prompt_requires_a_descriptive_title(self) -> None:
+        for heading in ("B01", "B01｜", "KF04-A |   ", "STY-03", "VMB01"):
+            with self.subTest(heading=heading), tempfile.TemporaryDirectory() as tmp:
+                source = self.write(Path(tmp), "assets.md", f"## {heading}\n```text\n正文。\n```\n")
+                with self.assertRaisesRegex(ValueError, "missing domain title"):
+                    render_markdown(source)
+
+    def test_domain_card_requires_nonempty_prompt_body(self) -> None:
+        for body in ("状态：待生成。", "```text\n  \n```", "```python\nprint('说明代码')\n```"):
+            with self.subTest(body=body), tempfile.TemporaryDirectory() as tmp:
+                source = self.write(Path(tmp), "assets.md", f"## B01｜素体\n{body}\n")
+                with self.assertRaisesRegex(ValueError, "missing prompt body: B01"):
+                    render_markdown(source)
+
+    def test_unclosed_prompt_fence_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = self.write(Path(tmp), "assets.md", "## B01｜素体\n```text\n未闭合正文。\n")
+            with self.assertRaisesRegex(ValueError, "unclosed code fence"):
+                render_markdown(source)
+
+    def test_missing_body_cannot_borrow_the_next_cards_prompt(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = self.write(Path(tmp), "assets.md", "## B01｜素体\n### W01｜服装\n```text\n服装。\n```\n")
+            with self.assertRaisesRegex(ValueError, "missing prompt body: B01"):
+                render_markdown(source)
+
+    def test_style_master_and_keyframe_cards_preserve_titles_and_prompt_text(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            ids = ("KF04-A", "KF01", "STY-03", "VMB01")
+            prompt = "第一行 <关系> & 材质。  \n\n  第二行保留缩进。"
+            source = self.write(root, "assets.md", GROUPED_ASSET_SOURCE + "\n".join(
+                f"\n## {asset_id}｜明确名称\n```prompt\n{prompt}\n```\n" for asset_id in ids
+            ))
+            rendered = render_markdown(source)
+            for asset_id in ids:
+                card = re.search(rf'<section class="result-card"[^>]*data-asset-id="{asset_id}".*?</section>', rendered, re.S)
+                self.assertIsNotNone(card, asset_id)
+                self.assertIn(f"{asset_id}｜明确名称", card.group(0))
+                self.assertIn('class="title-copy-button"', card.group(0))
+                code = re.search(r'<code class="language-prompt">(.*?)</code>', card.group(0), re.S)
+                self.assertEqual(html_lib.unescape(code.group(1)), prompt)
+            self.assertLess(rendered.index('data-asset-id="KF01"'), rendered.index('data-asset-id="KF04-A"'))
+            for label in ("关键帧", "风格定调图", "视觉母板"):
+                self.assertIn(f">{label}<", rendered)
+            self.assertNotIn("<img", rendered)
+            self.assertNotIn('data-asset-group="OTHER"', rendered)
+
+    def test_duplicate_extended_domain_ids_are_rejected(self) -> None:
+        for asset_id in ("KF04-A", "STY-03", "VMB01"):
+            with self.subTest(asset_id=asset_id), tempfile.TemporaryDirectory() as tmp:
+                card = f"## {asset_id}｜明确名称\n```text\n正文。\n```\n"
+                source = self.write(Path(tmp), "assets.md", card + card)
+                with self.assertRaisesRegex(ValueError, f"duplicate domain id: {asset_id}"):
+                    render_markdown(source)
+
+    def test_project_validation_failure_preserves_every_existing_page(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "01_good.md", "# 新的正文\n")
+            self.write(root, "02_new.md", "# 新页面\n")
+            duplicate = "## B01｜素体\n```text\n正文。\n```\n"
+            self.write(root, "03_bad.md", duplicate + duplicate)
+            originals = {
+                self.write(root, "01_good.html", "旧的正文"): "旧的正文".encode(),
+                self.write(root, "03_bad.html", "旧资产页"): "旧资产页".encode(),
+                self.write(root, "00_作品交付中心.html", "旧中心"): "旧中心".encode(),
+            }
+            before = set(root.rglob("*"))
+            with self.assertRaisesRegex(ValueError, "duplicate domain id"):
+                render_project(root)
+            self.assertEqual(set(root.rglob("*")), before)
+            for path, content in originals.items():
+                self.assertEqual(path.read_bytes(), content)
+
+    def test_project_io_failure_rolls_back_replaced_pages_and_removes_new_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "01_existing.md", "# 新内容\n")
+            self.write(root, "02_new.md", "# 新页面\n")
+            old_page = self.write(root, "01_existing.html", "旧正文")
+            portal = self.write(root, "00_作品交付中心.html", "旧中心")
+            before = set(root.rglob("*"))
+            real_replace = Path.replace
+            failed = False
+
+            def fail_portal_once(path: Path, target: Path) -> Path:
+                nonlocal failed
+                if Path(target) == portal and not failed:
+                    failed = True
+                    raise OSError("injected portal replace failure")
+                return real_replace(path, target)
+
+            with patch.object(Path, "replace", fail_portal_once):
+                with self.assertRaisesRegex(OSError, "injected portal replace failure"):
+                    render_project(root)
+            self.assertEqual(set(root.rglob("*")), before)
+            self.assertEqual(old_page.read_text(), "旧正文")
+            self.assertEqual(portal.read_text(), "旧中心")
+
+    def test_historical_combined_keyframes_and_asset_indexes_remain_readable(self) -> None:
+        # Observed historical shape, with private creative content removed.
+        source_text = """# 阶段记录
+## 三、STY-03 与 VMB01 真实验收
+| 资产 | 状态 |
+|---|---|
+| STY-03 | 已验收 |
+| VMB01 | 已验收 |
+### KF04-A／B｜同场的两个状态
+```text
+起始状态。
+```
+```text
+结果状态。
+```
+"""
+        with tempfile.TemporaryDirectory() as tmp:
+            source = self.write(Path(tmp), "history.md", source_text)
+            rendered = render_markdown(source)
+            self.assertIn("KF04-A／B｜同场的两个状态", rendered)
+            self.assertIn("<table>", rendered)
+            self.assertEqual(rendered.count('class="copy-button"'), 2)
+            self.assertNotIn('class="result-card"', rendered)
+            self.assertNotIn('class="title-copy-button"', rendered)
+
+    def test_project_staging_failure_leaves_all_pages_unchanged(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "01_source.md", "# 新正文\n")
+            old_page = self.write(root, "01_source.html", "旧正文")
+            portal = self.write(root, "00_作品交付中心.html", "旧中心")
+            before = set(root.rglob("*"))
+            with patch("scripts.render_delivery_html.shutil.copy2", side_effect=OSError("backup unavailable")):
+                with self.assertRaisesRegex(OSError, "backup unavailable"):
+                    render_project(root)
+            self.assertEqual(set(root.rglob("*")), before)
+            self.assertEqual(old_page.read_text(), "旧正文")
+            self.assertEqual(portal.read_text(), "旧中心")
+
+    def test_project_incomplete_rollback_reports_and_retains_backup(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, "01_source.md", "# 新正文\n")
+            old_page = self.write(root, "01_source.html", "旧正文")
+            portal = self.write(root, "00_作品交付中心.html", "旧中心")
+            real_replace = Path.replace
+            replacement_count = 0
+
+            def fail_after_first_replace(path: Path, target: Path) -> Path:
+                nonlocal replacement_count
+                replacement_count += 1
+                if replacement_count > 1:
+                    raise OSError("disk disconnected")
+                return real_replace(path, target)
+
+            with patch.object(Path, "replace", fail_after_first_replace):
+                with self.assertRaisesRegex(OSError, "rollback incomplete") as raised:
+                    render_project(root)
+            backups = list(root.glob(".delivery-*"))
+            self.assertEqual(len(backups), 1)
+            self.assertEqual(backups[0].read_text(), "旧正文")
+            self.assertIn(str(backups[0]), str(raised.exception))
+            self.assertIn(str(old_page), str(raised.exception))
+            self.assertEqual(portal.read_text(), "旧中心")
 
 
 if __name__ == "__main__":

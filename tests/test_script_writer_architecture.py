@@ -46,7 +46,8 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
         for anchor in (
             "前置条件 → 人物行动 → 状态变化 → 观众更新 → 下一压力",
             "人物行动理由",
-            "至少三个因果真正不同",
+            "三个因果真正不同",
+            "已锁定人物、高潮和结尾只比较剩余因果实现",
             "替换职业、地点和道具不算因果不同",
             "并排堆叠",
         ):
@@ -262,7 +263,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
         ):
             self.assertIn(anchor, text)
 
-    def test_every_spoken_line_carries_a_performance_cue_not_only_a_source_tag(self) -> None:
+    def test_spoken_performance_contract_allows_explicit_scene_baseline(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
             "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
@@ -273,7 +274,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             "每句有声台词",
             "声源位置不等于表演状态",
             "声源 / 情绪阶段 / 关系目的 / 可听语气",
-            "普通信息句也必须标注",
+            "本场基线",
             "不得只写 `O.S. / V.O. / 远处`",
         ):
             self.assertIn(anchor, text)
@@ -400,7 +401,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             "可见或可听证据",
             "行动后果",
             "每句有声台词",
-            "普通信息句也必须标注",
+            "本场基线",
         ):
             self.assertIn(anchor, reference)
 

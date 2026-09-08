@@ -40,7 +40,7 @@ description: 在老胡 AI 视觉中按当前专业角色、工作阶段、文本
 → 只读取该模式所需 Reference 与专业桥接
 → 领域负责人完成该文本块
 → 先过必要信息保护门，再过边际作用门
-→ 逐分句执行 KEEP / MERGE / MOVE / DELETE / RETURN
+→ 先判段落或句群的整体作用，再逐分句执行 KEEP / MERGE / MOVE / DELETE / RETURN
 → 文本块改变时重新判定
 → 内容缺失或冲突时返回内容负责人
 ```

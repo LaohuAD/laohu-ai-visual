@@ -145,7 +145,7 @@ class DirectorArchitectureTests(unittest.TestCase):
             "差异轴",
             "受众等价测试",
             "机制差异测试",
-            "无硬伤但平庸",
+            "同约束下成立",
             "淘汰理由",
             "反转条件",
         ):
@@ -185,7 +185,7 @@ class DirectorArchitectureTests(unittest.TestCase):
         ):
             self.assertIn(anchor, evidence)
 
-    def test_runtime_registry_exercises_director_intermediate_results(self) -> None:
+    def test_static_registry_declares_director_intermediate_results(self) -> None:
         capability = json.loads(self.read("tests/capability_scenarios.json"))
         cases = [
             scenario
@@ -196,7 +196,7 @@ class DirectorArchitectureTests(unittest.TestCase):
         required = {
             "同材料异目的的候选竞争",
             "低冲突治愈不强塞高烈度",
-            "普通但正确的方案必须参与淘汰",
+            "普通但正确的有效对手允许胜出",
         }
         self.assertTrue(required.issubset({case["name"] for case in cases}))
 

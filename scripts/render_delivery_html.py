@@ -7,14 +7,16 @@ import argparse
 import hashlib
 import html
 import re
+import shutil
 import sys
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Sequence
 
 
 DOMAIN_HEADING = re.compile(
-    r"^(?P<id>E\d{2}-S\d{2}-B\d{2}|(?:VID|LZ|[BCFGPWMSA])\d+)(?:\s*[｜|]\s*(?P<title>.*))?$"
+    r"^(?P<id>E\d{2}-S\d{2}-B\d{2}|KF\d+(?:-[A-Z])?|STY-?\d+|(?:VMB|VID|LZ|[BCFGPWMSA])\d+)(?:\s*[｜|]\s*(?P<title>.*))?$"
 )
 BATCH_ID = re.compile(r"^E(?P<episode>\d{2})-S(?P<scene>\d{2})-B(?P<batch>\d{2})$")
 HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
@@ -32,6 +34,9 @@ DOMAIN_GROUPS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
     ("ENSEMBLE", "群像资产", ("G",)),
     ("BLOCKING", "镜头调度参考", ("C",)),
     ("VIDEO", "视频生成批次", ("BATCH", "VID")),
+    ("STYLE", "风格定调图", ("STY",)),
+    ("VISUAL_MASTER", "视觉母板", ("VMB",)),
+    ("KEYFRAME", "关键帧", ("KF",)),
 )
 
 
@@ -80,6 +85,8 @@ def collect_headings(source: str) -> list[HeadingInfo]:
         domain_match = DOMAIN_HEADING.match(text)
         current_id = domain_match.group("id") if domain_match else None
         if current_id:
+            if not (domain_match.group("title") or "").strip():
+                raise ValueError(f"missing domain title: {current_id}")
             if current_id in used_domain_ids:
                 raise ValueError(f"duplicate domain id: {current_id}")
             used_domain_ids.add(current_id)
@@ -191,6 +198,8 @@ def render_body(source: str, headings: Sequence[HeadingInfo]) -> str:
     output: list[str] = []
     heading_index = 0
     card_level: int | None = None
+    card_id: str | None = None
+    card_has_prompt = False
     list_kind: str | None = None
     index = 0
 
@@ -201,11 +210,15 @@ def render_body(source: str, headings: Sequence[HeadingInfo]) -> str:
             list_kind = None
 
     def close_card() -> None:
-        nonlocal card_level
+        nonlocal card_level, card_id, card_has_prompt
         close_list()
         if card_level is not None:
+            if not card_has_prompt:
+                raise ValueError(f"missing prompt body: {card_id}")
             output.append("</section>")
             card_level = None
+            card_id = None
+            card_has_prompt = False
 
     while index < len(lines):
         line = lines[index]
@@ -214,10 +227,11 @@ def render_body(source: str, headings: Sequence[HeadingInfo]) -> str:
             close_list()
             info = headings[heading_index]
             heading_index += 1
-            if card_level is not None and info.level <= card_level:
+            if card_level is not None and (info.level <= card_level or info.domain_id):
                 close_card()
             if info.domain_id:
                 card_level = info.level
+                card_id = info.domain_id
                 output.append(
                     f'<section class="result-card" id="{info.anchor}" '
                     f'data-asset-id="{info.domain_id}" data-asset-type="{info.domain_type}">'
@@ -243,7 +257,13 @@ def render_body(source: str, headings: Sequence[HeadingInfo]) -> str:
             while index < len(lines) and not FENCE.match(lines[index]):
                 code_lines.append(lines[index])
                 index += 1
+            if index == len(lines):
+                raise ValueError(f"unclosed code fence: {card_id or 'document'}")
             code_text = "\n".join(code_lines)
+            if card_level is not None and language in {"text", "prompt"}:
+                if not code_text.strip():
+                    raise ValueError(f"missing prompt body: {card_id}")
+                card_has_prompt = True
             label = "复制提示词" if language in {"text", "prompt"} else "复制代码"
             title_button = (
                 '<button class="title-copy-button" type="button">复制标题</button>'
@@ -421,15 +441,67 @@ def render_project(project_root: Path) -> list[Path]:
     markdown_files = sorted(
         path for path in project_root.rglob("*.md") if not any(part.startswith(".") or part == "__pycache__" for part in path.relative_to(project_root).parts)
     )
-    pages: list[Path] = []
-    for source_path in markdown_files:
-        output_path = source_path.with_suffix(".html")
-        render_markdown(source_path, output_path=output_path)
-        pages.append(output_path)
+    # Compile the entire project before touching any delivery file.
+    compiled = {source.with_suffix(".html"): render_markdown(source) for source in markdown_files}
+    pages = list(compiled)
     portal_path = project_root / "00_作品交付中心.html"
-    portal_path.write_text(render_portal(project_root, pages), encoding="utf-8")
+    compiled[portal_path] = render_portal(project_root, pages)
+    write_project_pages(compiled)
     pages.append(portal_path)
     return pages
+
+
+def write_project_pages(compiled: dict[Path, str]) -> None:
+    """Stage pages and restore replacements on caught I/O failures, best effort.
+
+    Each replacement is atomic on its filesystem; the whole project is not a
+    crash-safe transaction. Failed rollback backups are retained for recovery.
+    """
+    staged: dict[Path, Path] = {}
+    backups: dict[Path, Path | None] = {}
+    temporary_paths: set[Path] = set()
+    retained_backups: set[Path] = set()
+    replaced: list[Path] = []
+
+    def temporary_file(target: Path) -> Path:
+        with tempfile.NamedTemporaryFile(prefix=".delivery-", dir=target.parent, delete=False) as handle:
+            path = Path(handle.name)
+            temporary_paths.add(path)
+        return path
+
+    try:
+        for target, content in compiled.items():
+            staged[target] = temporary_file(target)
+            staged[target].write_text(content, encoding="utf-8")
+            backups[target] = None
+            if target.exists():
+                backups[target] = temporary_file(target)
+                shutil.copy2(target, backups[target])
+        for target, stage in staged.items():
+            stage.replace(target)
+            replaced.append(target)
+    except OSError as error:
+        rollback_errors: list[str] = []
+        for target in reversed(replaced):
+            backup = backups[target]
+            try:
+                if backup is None:
+                    target.unlink()
+                else:
+                    backup.replace(target)
+            except OSError as rollback_error:
+                if backup is not None:
+                    retained_backups.add(backup)
+                rollback_errors.append(f"{target}: {rollback_error}; backup={backup}")
+        if rollback_errors:
+            raise OSError(f"{error}; rollback incomplete: {'; '.join(rollback_errors)}") from error
+        raise
+    finally:
+        for path in temporary_paths - retained_backups:
+            try:
+                path.unlink(missing_ok=True)
+            except OSError as cleanup_error:
+                print(f"WARNING: cannot remove temporary file {path}: {cleanup_error}", file=sys.stderr)
 
 
 def parse_args(argv: Sequence[str]) -> argparse.Namespace:

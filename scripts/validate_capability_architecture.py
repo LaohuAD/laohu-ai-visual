@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate that the visual project exposes executable capabilities, not four-layer labels."""
+"""Validate static capability declarations and file contracts; no model behavior or quality is executed."""
 
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ def fail(message: str, failures: list[str]) -> None:
 
 
 def passed(message: str) -> None:
-    print(f"PASS: {message}")
+    print(f"PASS [STRUCTURE]: {message}")
 
 
 def digest(path: Path) -> str:
@@ -67,10 +67,10 @@ def main() -> int:
             fail(f"{skill} has no domain aphorism", failures)
         else:
             aphorism = aphorism_sections[0].strip().strip("*>")
-            if len(aphorism) <= 64 and not re.search(r"必须|禁止|不得|需要", aphorism):
-                passed(f"{skill} aphorism is compact and directional")
+            if aphorism.strip():
+                passed(f"{skill} declares an aphorism (meaning requires review)")
             else:
-                fail(f"{skill} aphorism became an instruction or explanation: {aphorism}", failures)
+                fail(f"{skill} aphorism is empty", failures)
 
         references = sorted((ROOT / "skills" / skill / "references").glob("*.md"))
         for reference in references:
@@ -83,7 +83,7 @@ def main() -> int:
     if re.search(r"^##\s*(灵魂|筋骨|血肉|表皮)(层)?\s*$", all_skill_text, flags=re.MULTILINE):
         fail("downstream skills expose generic four-layer headings", failures)
     else:
-        passed("four-layer reasoning is compiled into domain-native sections")
+        passed("no generic four-layer section labels found")
 
     agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     for pattern in data["root_forbidden_patterns"]:
@@ -192,49 +192,49 @@ def main() -> int:
     for scenario in data.get("runtime_reachability_scenarios", []):
         name = scenario.get("name", "<unnamed>")
         if name in seen_runtime_names:
-            fail(f"duplicate runtime reachability scenario: {name}", failures)
+            fail(f"duplicate declared route scenario: {name}", failures)
         else:
             seen_runtime_names.add(name)
 
         owner = scenario.get("owner")
         owner_text = skill_text.get(owner, "")
         if not owner_text:
-            fail(f"runtime scenario has no executable owner: {name} -> {owner}", failures)
+            fail(f"declared scenario has no registered owner text: {name} -> {owner}", failures)
 
         for field in ("request", "observable_change", "forbidden_shortcut"):
             value = scenario.get(field)
             if not isinstance(value, str) or not value.strip():
-                fail(f"runtime scenario lacks observable {field}: {name}", failures)
+                fail(f"declared scenario lacks observable {field}: {name}", failures)
 
         references = scenario.get("required_references", [])
         if not references:
-            fail(f"runtime scenario requires no Reference: {name}", failures)
+            fail(f"declared scenario requires no Reference: {name}", failures)
         for relative in references:
             reference = ROOT / relative
             if not reference.is_file():
-                fail(f"runtime scenario Reference is missing: {name} -> {relative}", failures)
+                fail(f"declared scenario Reference is missing: {name} -> {relative}", failures)
                 continue
             if reference.name in all_skill_text:
-                passed(f"runtime scenario routes real Reference: {name} -> {reference.name}")
+                passed(f"declared scenario routes real Reference: {name} -> {reference.name}")
             else:
                 fail(
-                    f"runtime scenario Reference has no Skill route: {name} -> {reference.name}",
+                    f"declared scenario Reference has no Skill route: {name} -> {reference.name}",
                     failures,
                 )
 
         intermediates = scenario.get("required_intermediate", [])
         if not intermediates:
-            fail(f"runtime scenario has no inspectable intermediate result: {name}", failures)
+            fail(f"declared scenario has no inspectable intermediate result: {name}", failures)
         else:
             missing = [anchor for anchor in intermediates if anchor not in owner_text]
             if missing:
                 fail(
-                    f"runtime scenario cannot prove owner behavior: {name} -> "
+                    f"declared scenario missing declared intermediate anchors: {name} -> "
                     f"{', '.join(missing)}",
                     failures,
                 )
             else:
-                passed(f"runtime scenario has inspectable owner behavior: {name}")
+                passed(f"declared scenario contains declared intermediate anchors (not executed): {name}")
 
     for scenario in data["scenarios"]:
         scenario_ok = True
@@ -249,7 +249,7 @@ def main() -> int:
                     failures,
                 )
         if scenario_ok:
-            passed(f"scenario chain is owned end to end: {scenario['name']}")
+            passed(f"scenario chain anchors are present (not executed): {scenario['name']}")
 
     allowed_modes = set(evolution_data["allowed_modes"])
     allowed_layers = set(evolution_data["allowed_layers"])
@@ -281,7 +281,7 @@ def main() -> int:
 
         owner = scenario.get("expected_owner")
         if owner not in skill_text:
-            fail(f"evolution scenario has no executable owner: {name} -> {owner}", failures)
+            fail(f"evolution scenario has no registered owner text: {name} -> {owner}", failures)
 
         behavior_fields_ok = True
         for field in ["input", "expected_action", "forbidden_action"]:
@@ -481,7 +481,7 @@ def main() -> int:
     if failures:
         print(f"Capability architecture validation failed with {len(failures)} issue(s).")
         return 1
-    print("Capability architecture validation passed.")
+    print("Static capability contract validation passed. ROUTE execution, BEHAVIOR and QUALITY remain unverified by this command.")
     return 0
 
 

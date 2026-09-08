@@ -171,7 +171,7 @@ git clone https://github.com/LaohuAD/laohu-ai-visual.git
 cd laohu-ai-visual
 ```
 
-也可以只安装 Skill：
+以下命令可用于发现或安装 Skill 入口；本仓库尚未验证第三方安装器会携带全部运行依赖：
 
 ```bash
 npx skills add LaohuAD/laohu-ai-visual
@@ -183,13 +183,15 @@ npx skills add LaohuAD/laohu-ai-visual
 npx skills add LaohuAD/laohu-ai-visual --skill laohu-ai-visual
 ```
 
-完整项目适合想使用目录、共享资产和检查脚本的人；只装 Skill 适合已经有自己工作区，只想借用某项能力的人。
+完整生产请使用完整仓库。单入口仍可能读取相邻 Skill、根目录共享库和脚本，安装成功不代表依赖齐全；只有在工作区已具备这些依赖并完成对应任务验证后，才适合单独调用。
 
 ### 检查项目
 
 ```bash
 bash skills/laohu-ai-visual/scripts/check_laohu_skills.sh
 ```
+
+检查脚本验证的是静态契约和确定性工具，不会运行模型生产或证明成片质量。
 
 ### 创建作品目录
 

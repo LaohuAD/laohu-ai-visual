@@ -4,211 +4,85 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 
-usage() {
-  printf 'Usage: %s <作品名> [yyyy-mm-dd] [进行中|已完成|已发布]\n' "$(basename "$0")" >&2
-}
+# Python validates all arguments before writing and reads the same startup template
+# that people use. The project remains IDEA regardless of its directory category.
+exec python3 - "$ROOT" "$@" <<'PY'
+import argparse
+from datetime import date
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
 
-if [[ $# -lt 1 || $# -gt 3 ]]; then
-  usage
-  exit 2
-fi
+root = Path(sys.argv[1])
+parser = argparse.ArgumentParser(
+    prog="create_work_project.sh",
+    description="按作品类型建立最小入口；目录分类不代表生产进度。",
+)
+parser.add_argument("name", help="作品名，不得含路径分隔符或控制字符")
+parser.add_argument("date", nargs="?", default=date.today().isoformat(), help="yyyy-mm-dd")
+parser.add_argument("status", nargs="?", default="进行中", choices=("进行中", "已完成", "已发布"))
+parser.add_argument("--kind", choices=("story", "image", "mv"), default="story")
+args = parser.parse_intermixed_args(sys.argv[2:])
+if (not args.name.strip() or args.name != args.name.strip() or args.name in (".", "..")
+        or any(c in "/\\" or ord(c) < 32 or ord(c) == 127 for c in args.name)):
+    parser.error("作品名不能为空，不能含路径分隔符、控制字符、首尾空白或仅为 . / ..")
+if len(args.name.encode("utf-8")) > 244:
+    parser.error("作品名 UTF-8 编码不得超过 244 字节，须为日期前缀预留文件名空间")
+try:
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args.date):
+        raise ValueError
+    date.fromisoformat(args.date)
+except ValueError:
+    parser.error("日期必须是有效的 yyyy-mm-dd 日历日期")
 
-name="$1"
-date="${2:-$(date +%F)}"
-status="${3:-进行中}"
+project = root / "01_作品项目" / args.status / f"{args.date}_{args.name}"
+if project.exists() or project.is_symlink():
+    parser.exit(1, f"Project already exists: {project}\n")
 
-case "$status" in
-  进行中|已完成|已发布) ;;
-  *)
-    printf 'Invalid status: %s\n' "$status" >&2
-    usage
-    exit 2
-    ;;
-esac
+template = root / "02_共享资产库/01_模板库/项目启动模板/模板_作品项目启动包.md"
+renderer = root / "scripts/render_delivery_html.py"
+try:
+    source = template.read_text(encoding="utf-8")
+    def section(name):
+        match = re.search(rf"<!-- {name} -->\n(.*?)\n<!-- /{name} -->", source, re.S)
+        if not match:
+            raise ValueError(f"启动模板缺少区块：{name}")
+        return match.group(1)
 
-safe_name="${name//\//-}"
-project_dir="$ROOT/01_作品项目/$status/${date}_${safe_name}"
+    values = {"作品名": args.name, "创建日期": args.date, "目录状态": args.status,
+              "作品类型": args.kind, "分支路线": section(args.kind)}
+    def fill(text):
+        # One pass preserves literal placeholder-like text in user-provided names.
+        return re.sub(r"\{\{([^{}]+)\}\}", lambda m: values[m[1]], text) + "\n"
 
-if [[ -e "$project_dir" ]]; then
-  printf 'Project already exists: %s\n' "$project_dir" >&2
-  exit 1
-fi
+    overview = fill(section("overview"))
+    record = fill(section("record"))
+    if not renderer.is_file():
+        raise ValueError(f"缺少 HTML 交付渲染器：{renderer}")
+except (OSError, ValueError, KeyError) as exc:
+    parser.exit(1, f"无法准备作品入口：{exc}\n")
 
-mkdir -p \
-  "$project_dir/00_原始输入/文本" \
-  "$project_dir/00_原始输入/图片" \
-  "$project_dir/00_原始输入/视频" \
-  "$project_dir/00_原始输入/音频" \
-  "$project_dir/01_世界观故事/文本" \
-  "$project_dir/01_世界观故事/图片" \
-  "$project_dir/01_世界观故事/视频" \
-  "$project_dir/01_世界观故事/音频" \
-  "$project_dir/02_剧本/文本" \
-  "$project_dir/02_剧本/图片" \
-  "$project_dir/02_剧本/视频" \
-  "$project_dir/02_剧本/音频" \
-  "$project_dir/03_视觉资产/文本" \
-  "$project_dir/03_视觉资产/图片" \
-  "$project_dir/03_视觉资产/视频" \
-  "$project_dir/03_视觉资产/音频" \
-  "$project_dir/04_分镜/文本" \
-  "$project_dir/04_分镜/图片" \
-  "$project_dir/04_分镜/视频" \
-  "$project_dir/04_分镜/音频" \
-  "$project_dir/05_视频/文本" \
-  "$project_dir/05_视频/图片" \
-  "$project_dir/05_视频/视频" \
-  "$project_dir/05_视频/音频" \
-  "$project_dir/07_封面发布/文本" \
-  "$project_dir/07_封面发布/图片" \
-  "$project_dir/07_封面发布/视频" \
-  "$project_dir/07_封面发布/音频"
-
-cat > "$project_dir/00_项目总览.md" <<EOF
-# ${safe_name}
-
-- 创建日期：${date}
-- 当前状态：${status}
-- 作品形式：
-- 目标平台：
-- 目标观众：
-- 核心看点：
-- 当前阶段：
-- 下一步动作：
-
-## 一句话作品
-
-
-## 生产链路
-
-- [ ] 00_原始输入
-- [ ] 01_世界观故事
-- [ ] 02_剧本
-- [ ] 03_视觉资产
-- [ ] 04_分镜
-- [ ] 05_视频
-- [ ] 07_封面发布
-- [ ] 09_归档复盘
-EOF
-
-cat > "$project_dir/01_世界观故事/文本/00_故事确认.md" <<EOF
-# 故事确认
-
-- 一句话故事：
-- 观众真正等待的问题：
-- 不可删核心：
-- 待确认问题：
-EOF
-
-cat > "$project_dir/00_阶段确认记录.md" <<EOF
-# 阶段确认记录
-
-> 规则：每个阶段都必须先产出文件并通过内部质量门，普通创意默认继续推进。只有互斥核心事实、高成本生成、真实发布、法律安全风险或老胡明确要求共创时才等待人工确认。对话里只给具体文件链接、阶段摘要和真实执行事项。
-
-| 阶段 | 产物文件 | 内部质量门 | 人工确认（如需） | 下一阶段 | 备注 |
-|---|---|---|---|---|---|
-| 灵感沟通 |  | 待检查 | 不需要 | 确定故事内容 |  |
-| 故事内容确认 | \`01_世界观故事/文本/00_故事确认.md\` | 待检查 | 按触发条件 | 剧本结果输出文件 | 故事设计稿放世界观故事目录，不放剧本目录 |
-| 剧本结果输出文件 |  | 待检查 | 按触发条件 | 资产图片提示词输出文件 |  |
-| 资产图片提示词输出文件 |  | 待检查 | 按触发条件 | 分镜表格输出文件 |  |
-| 分镜表格输出文件 |  | 待检查 | 按触发条件 | 第一个分镜视频提示词展示文件 |  |
-| 第一个分镜视频提示词展示文件 |  | 待检查 | 按触发条件 | 所有分镜视频提示词结果输出文件 |  |
-| 所有分镜视频提示词结果输出文件 |  | 待检查 | 高成本生成前按需 | 老胡制作完成后设计封面 |  |
-| 封面设计与生成 |  | 待检查 | 发布前按需 | 归档 | 封面提示词放 \`07_封面发布/文本/\`，成图放 \`07_封面发布/图片/\` |
-| 归档与复盘 | \`09_归档复盘.md\` | 待检查 | 不需要 | 反哺共享资产 |  |
-EOF
-
-cat > "$project_dir/09_归档复盘.md" <<EOF
-# 归档复盘
-
-| 日期 | 作品内经验 | 是否可跨作品复用 | 已反哺位置 | 备注 |
-|---|---|---|---|---|
-EOF
-
-cat > "$project_dir/00_首轮验证看板.md" <<EOF
-# ${safe_name} 首轮验证看板
-
-> 用途：跑第一轮确定时长真实小样验证。对应共享模板：\`02_共享资产库/01_模板库/项目启动模板/模板_真实作品首轮验证看板.md\`。
-
-## 一、作品信息
-
-\`\`\`text
-作品名：${safe_name}
-创建日期：${date}
-目标形态：
-首轮小样目标：角色图 / 场景图 / 第一帧 / 确定时长视频 / 生成复盘
-目标模型：
-目标平台：
-当前阶段：待灵感沟通
-\`\`\`
-
-## 二、核心小样
-
-\`\`\`text
-核心镜头编号：E1-S1-C1
-核心镜头时长：12 秒
-核心镜头任务：
-一个主要动作：
-一个信息变化：
-是否有台词 / 旁白 / 同期声：
-\`\`\`
-
-通过标准：
-
-- [ ] 镜头只做一个主要任务。
-- [ ] 观众能看见信息变化。
-- [ ] 不靠长解释理解剧情。
-- [ ] 能继续拆图片资产和视频提示词。
-
-## 三、阶段看板
-
-| 阶段 | 调用 skill | 产物位置 | 人工评审状态 | 下一步 |
-|---|---|---|---|---|
-| 灵感沟通 | \`laohu-ai-visual\` | \`00_原始输入/文本/\`、\`00_项目总览.md\` | 待确认 | 确定故事内容 |
-| 故事内容确认 | \`laohu-script-writer\` | \`01_世界观故事/文本/00_故事确认.md\` | 待确认 | 剧本结果输出文件 |
-| 剧本结果输出文件 | \`laohu-script-writer\` | \`02_剧本/文本/\` | 待确认 | 资产图片提示词输出文件 |
-| 资产图片提示词输出文件 | \`laohu-visual-assets\` | \`03_视觉资产/文本/\`、\`03_视觉资产/图片/\` | 待确认 | 分镜表格输出文件 |
-| 分镜表格输出文件 | \`laohu-video-prompt\` | \`04_分镜/文本/\` | 待确认 | 第一个分镜视频提示词展示文件 |
-| 第一个分镜视频提示词展示文件 | \`laohu-video-prompt\` | \`05_视频/文本/\` | 待确认 | 所有分镜视频提示词结果输出文件 |
-| 所有分镜视频提示词结果输出文件 | \`laohu-video-prompt\` | \`05_视频/文本/\` | 待确认 | 老胡制作视频 |
-| 制作完成后封面 | \`laohu-cover-design\` | \`07_封面发布/文本/\`、\`07_封面发布/图片/\` | 待确认 | 归档 |
-| 归档与复盘 | \`laohu-generation-review\` | \`09_归档复盘.md\` | 待确认 | 反哺共享资产 |
-
-## 四、图片首测清单
-
-| 图片类型 | 建议数量 | 提示词位置 | 生成结果位置 | 通过图 | 失败图 | 结论 |
-|---|---:|---|---|---|---|---|
-| 角色定妆 | 2-4 |  |  |  |  | 待生成 |
-| 场景氛围 | 2-3 |  |  |  |  | 待生成 |
-| 第一帧 | 2-3 |  |  |  |  | 待生成 |
-
-## 五、视频首测回传
-
-\`\`\`text
-镜头编号：
-模型：
-生成时间：
-视频时长：
-原视频提示词位置：
-参考图位置：
-视频文件位置或结果描述：
-用户初判：成功 / 半成功 / 失败
-最大问题：
-下一步意图：进入剪辑 / 重生成 / 重写提示词 / 做失败复盘
-\`\`\`
-
-## 六、首轮复盘
-
-\`\`\`text
-图片资产是否足够稳定：
-视频参考图是否真的帮到了视频：
-视频提示词哪一层最有效：
-失败主要来自图片、视频提示词、模型限制还是剪辑设想：
-哪些规则应该写回 skill：
-哪些模板应该更新：
-哪些失败应该入库：
-输入输出索引是否已更新：
-\`\`\`
-EOF
-
-printf '%s\n' "$project_dir"
+# Claim the destination once. On later failure, remove only the tree owned by
+# this invocation; an existing work is never overwritten or cleaned up.
+project.parent.mkdir(parents=True, exist_ok=True)
+try:
+    project.mkdir()
+except FileExistsError:
+    parser.exit(1, f"Project already exists: {project}\n")
+try:
+    (project / "00_原始输入/文本").mkdir(parents=True)
+    if args.kind == "mv":
+        (project / "00_原始输入/音频").mkdir()
+    (project / "00_项目总览.md").write_text(overview, encoding="utf-8")
+    (project / "00_阶段确认记录.md").write_text(record, encoding="utf-8")
+    result = subprocess.run([sys.executable, str(renderer), "--project", str(project)],
+                            text=True, capture_output=True)
+    if result.returncode:
+        raise RuntimeError(result.stderr or result.stdout or "HTML 渲染失败")
+except (OSError, RuntimeError) as exc:
+    shutil.rmtree(project)
+    parser.exit(1, f"创建失败，已撤回本次作品入口：{exc}\n")
+print(project)
+PY
