@@ -85,10 +85,10 @@ class DirectorArchitectureTests(unittest.TestCase):
     def test_script_writer_is_director_literate_but_keeps_script_authority(self) -> None:
         writer = self.read("skills/laohu-script-writer/SKILL.md")
         for anchor in (
-            "编导型编剧",
+            "调度专业",
             "导演阐述",
-            "正式剧本仍是唯一内容权威",
-            "能听懂导演",
+            "正式剧本仍是唯一镜头化内容母版",
+            "继承有效导演阐述",
             "不得私自更换全片胜负手",
             "CONSULT",
         ):

@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡格式、流程与改编"
+  short_description: "动作段落、开发修订、跨媒介改编及传统剧本格式"
+  default_prompt: "Use $laohu-format-adaptation within laohu-script-writer to develop the requested work while preserving established screenplay facts and production continuity."

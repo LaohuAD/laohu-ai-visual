@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡美国电影剧作案例"
+  short_description: "类型、视点、人物、改编与母题的完整电影案例分析"
+  default_prompt: "Use $laohu-american-case-studies within laohu-script-writer to develop the requested work while preserving established screenplay facts and production continuity."

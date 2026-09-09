@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡小津剧本写法"
+  short_description: "以家常反应、物件回响和省略描写家庭变化"
+  default_prompt: "Use $laohu-ozu-screenplay-style within laohu-script-writer to develop the current screenplay while preserving established facts and the screenplay output contract."

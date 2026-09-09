@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡前提与主题"
+  short_description: "前提、立意、戏核与一句话故事的完整创作方法"
+  default_prompt: "Use $laohu-premise-theme within laohu-script-writer to develop the requested screenplay decisions while preserving established facts and the screenplay output contract."

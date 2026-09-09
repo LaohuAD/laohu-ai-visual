@@ -31,6 +31,25 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def reachable_documents(entry: Path) -> set[Path]:
+    """Follow real local Markdown links inside this owner's capability tree."""
+    boundary = entry.parent.resolve()
+    pending = [entry.resolve()]
+    seen: set[Path] = set()
+    while pending:
+        current = pending.pop()
+        if current in seen or not current.is_file():
+            continue
+        seen.add(current)
+        for link in re.findall(r'\]\(([^)]+)\)', current.read_text(encoding='utf-8')):
+            if link.startswith(('https:', 'http:', '#', 'mailto:')):
+                continue
+            target = (current.parent / link.split('#', 1)[0]).resolve()
+            if target.suffix == '.md' and target.is_relative_to(boundary):
+                pending.append(target)
+    return seen
+
+
 def main() -> int:
     data = json.loads(SCENARIOS.read_text(encoding="utf-8"))
     evolution_data = json.loads(EVOLUTION_SCENARIOS.read_text(encoding="utf-8"))
@@ -44,6 +63,13 @@ def main() -> int:
             continue
         text = path.read_text(encoding="utf-8")
         skill_text[skill] = text
+        reachable = reachable_documents(path)
+        routed_text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable))
+        for anchor in contract.get('method_anchors', []):
+            if anchor in routed_text:
+                passed(f"{skill} routes professional method anchor: {anchor}")
+            else:
+                fail(f"{skill} has no reachable professional method: {anchor}", failures)
 
         for heading in contract["headings"]:
             pattern = rf"^##\s+[^\n]*{re.escape(heading)}[^\n]*$"
@@ -73,13 +99,15 @@ def main() -> int:
                 fail(f"{skill} aphorism is empty", failures)
 
         references = sorted((ROOT / "skills" / skill / "references").glob("*.md"))
+        reachable = reachable_documents(path)
         for reference in references:
-            if reference.name in text:
+            if reference.name in text or reference.resolve() in reachable:
                 passed(f"{skill} routes reference: {reference.name}")
             else:
                 fail(f"{skill} leaves reference unreachable: {reference.name}", failures)
 
     all_skill_text = "\n".join(skill_text.values())
+    all_reachable = set().union(*(reachable_documents(ROOT / 'skills' / owner / 'SKILL.md') for owner in skill_text))
     if re.search(r"^##\s*(灵魂|筋骨|血肉|表皮)(层)?\s*$", all_skill_text, flags=re.MULTILINE):
         fail("downstream skills expose generic four-layer headings", failures)
     else:
@@ -98,6 +126,8 @@ def main() -> int:
             fail(f"migrated capability has no owner file: {migration['capability']}", failures)
             continue
         text = path.read_text(encoding="utf-8")
+        if path == ROOT / 'skills/laohu-script-writer/SKILL.md':
+            text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable_documents(path)))
         missing = [anchor for anchor in migration["anchors"] if anchor not in text]
         if missing:
             fail(
@@ -198,6 +228,8 @@ def main() -> int:
 
         owner = scenario.get("owner")
         owner_text = skill_text.get(owner, "")
+        if owner == 'laohu-script-writer':
+            owner_text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable_documents(ROOT / 'skills' / owner / 'SKILL.md')))
         if not owner_text:
             fail(f"declared scenario has no registered owner text: {name} -> {owner}", failures)
 
@@ -214,7 +246,7 @@ def main() -> int:
             if not reference.is_file():
                 fail(f"declared scenario Reference is missing: {name} -> {relative}", failures)
                 continue
-            if reference.name in all_skill_text:
+            if reference.name in all_skill_text or reference.resolve() in all_reachable:
                 passed(f"declared scenario routes real Reference: {name} -> {reference.name}")
             else:
                 fail(
@@ -241,6 +273,8 @@ def main() -> int:
         for stage in scenario["chain"]:
             owner = stage["owner"]
             owner_text = skill_text.get(owner, "")
+            if owner == 'laohu-script-writer':
+                owner_text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable_documents(ROOT / 'skills' / owner / 'SKILL.md')))
             missing = [anchor for anchor in stage["anchors"] if anchor not in owner_text]
             if missing:
                 scenario_ok = False

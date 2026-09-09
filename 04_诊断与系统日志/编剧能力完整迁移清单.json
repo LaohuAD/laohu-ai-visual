@@ -1,0 +1,2215 @@
+{
+  "source_commit": "0657714b59c82d3d6656ada50c5168d4ea431de0",
+  "module_count": 12,
+  "workflow_owner": "skills/laohu-script-writer/SKILL.md",
+  "before_parent_sha256": "291ac925733520edcf8746be5b55441c176418419aa6c2b4d0eeed71f7b95c7e",
+  "local_sources": {
+    "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md": "a72707d1d1c2d2ad9482894b8473c57348caa668c529248d2cecf06f0b385db0",
+    "skills/laohu-script-writer/references/06_故事构件拆解与组合语法.md": "b56b4efe940430289f447dff00034c7071d2fd7814c1a6ca12d8cd7843f7edc9",
+    "skills/laohu-script-writer/references/00_资料来源与专业校准.md": "5771c7be8935fa4c8c839f36c3d85631a4104051a294668d410b3c62faefa9da",
+    "skills/laohu-script-writer/references/03_体量形态编号与连续性.md": "69ae2883f2ec3e8d6204d9fc7c1b7c81f3536a458b2788de312e9d12fbf611d3",
+    "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md": "972b9846f490b188afc14f53bf703f2d135726a989fec6481c4bc43846c6f7e9",
+    "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md": "474360b121cda27d4cdc800ba65cc1e8efc7dec49ede795f4cfeef74f82f3324",
+    "skills/laohu-script-writer/references/04_口述台词与方言.md": "5d7c16e09f4b8bfa650c6e1952ae0cb2a4924dde6dbb39fef7f900b6151b77b4",
+    "skills/laohu-script-writer/references/01_创意故事人物与高潮.md": "010b67908dcae81d07f0828874a0d1d19299725ac67d04f955765e36dc9c18c6"
+  },
+  "local_units": [
+    {
+      "source": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "start": "## 开发协议",
+      "end": "### 3. 冲突构建",
+      "target": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+      "sha256": "59f9786c99f1dc55d5c9b6e601e3a68c45557fbda0eecc6de3e943511ee96c34",
+      "source_start_offset": 79,
+      "source_end_offset": 2750,
+      "target_start": "## 开发协议",
+      "character_count": 2671
+    },
+    {
+      "source": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "start": "### 3. 冲突构建",
+      "end": "#### 结构在不同尺度怎样承重",
+      "target": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+      "sha256": "9caf39955ce8f6f5d37c0c5b98856ecbbc05c91d17fcb25472318bd113e73ea3",
+      "source_start_offset": 2750,
+      "source_end_offset": 5718,
+      "target_start": "### 3. 冲突构建",
+      "character_count": 2968
+    },
+    {
+      "source": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "start": "#### 结构在不同尺度怎样承重",
+      "end": "### 4. 人物医生",
+      "target": "skills/laohu-script-writer/skills/laohu-story-structure/references/结构尺度与高潮设计.md",
+      "sha256": "ff5ea03039bcc23684a2665418407434c0844347cdc0b8fa99c50494f8c0c4c5",
+      "source_start_offset": 5718,
+      "source_end_offset": 6635,
+      "target_start": "#### 结构在不同尺度怎样承重",
+      "character_count": 917
+    },
+    {
+      "source": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "start": "### 4. 人物医生",
+      "end": "### 5. 高潮场设计",
+      "target": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+      "sha256": "a24724858cb4d207cc04da1d1f703dcba64953853c2e2e943c7ff8a2f1640ca6",
+      "source_start_offset": 6635,
+      "source_end_offset": 9285,
+      "target_start": "### 4. 人物医生",
+      "character_count": 2650
+    },
+    {
+      "source": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "start": "### 5. 高潮场设计",
+      "end": "### 9. 故事杠杆",
+      "target": "skills/laohu-script-writer/skills/laohu-story-structure/references/结构尺度与高潮设计.md",
+      "sha256": "7096962d3303d8272c2edbcc8ba592809a2e9cd3d54903404ba4c818ca030d45",
+      "source_start_offset": 9285,
+      "source_end_offset": 9459,
+      "target_start": "### 5. 高潮场设计",
+      "character_count": 174
+    },
+    {
+      "source": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "start": "### 9. 故事杠杆",
+      "end": null,
+      "target": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+      "sha256": "6f2245071ba405666c5dfff4e2ff09fe6e1546878ffff85a462e16450f45faaf",
+      "source_start_offset": 9459,
+      "source_end_offset": 11209,
+      "target_start": "### 9. 故事杠杆",
+      "character_count": 1750
+    },
+    {
+      "source": "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
+      "start": "### 6. 场景写作",
+      "end": "### 7. 短视频喜剧表达",
+      "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+      "sha256": "e82af598f4d82ab28fac5bc2bba5e2f7f627469db1211f5b8dd72473953d11f5",
+      "source_start_offset": 70,
+      "source_end_offset": 1773,
+      "target_start": "### 6. 场景写作",
+      "character_count": 1703
+    },
+    {
+      "source": "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
+      "start": "### 7. 短视频喜剧表达",
+      "end": "### 8. 苦难叙事边界",
+      "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+      "sha256": "296431b43ca11125a97722c8eeccb4dfc4d9be66dbb1871e871f84f8b10b1e57",
+      "source_start_offset": 1773,
+      "source_end_offset": 3371,
+      "target_start": "### 7. 短视频喜剧表达",
+      "character_count": 1598
+    },
+    {
+      "source": "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
+      "start": "### 8. 苦难叙事边界",
+      "end": null,
+      "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+      "sha256": "0ee38d8d990e6644355ce4585c309233333397edc04b91b01d80058e00f7ca94",
+      "source_start_offset": 3371,
+      "source_end_offset": 3811,
+      "target_start": "### 8. 苦难叙事边界",
+      "character_count": 440
+    },
+    {
+      "source": "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+      "start": "# 体量、形态、编号与连续性",
+      "end": null,
+      "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+      "sha256": "69ae2883f2ec3e8d6204d9fc7c1b7c81f3536a458b2788de312e9d12fbf611d3",
+      "source_start_offset": 0,
+      "source_end_offset": 12389,
+      "target_start": "# 体量、形态、编号与连续性",
+      "character_count": 12389
+    },
+    {
+      "source": "skills/laohu-script-writer/references/04_口述台词与方言.md",
+      "start": "## 台词口气与方言",
+      "end": null,
+      "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+      "sha256": "1a9ffeeb27ee390f6d341c8215c8b18a57bfdd919848661c59177e8c887c9a7c",
+      "source_start_offset": 1218,
+      "source_end_offset": 7239,
+      "target_start": "## 台词口气与方言",
+      "character_count": 6021
+    }
+  ],
+  "modules": [
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-american-case-studies/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-american-case-studies/SKILL.md",
+      "sourcehash": "47c1532d7318eeb41bc6cf36510675ee506b06969eef92607d5a83a216a5f534",
+      "originalpreface": "---\nname: sw-american-case-studies\ndescription: Case studies of American screenwriting (美国电影剧作案例) — Mei Feng's readings of the Hollywood Western (value pairs, standard flow, four oppositions), screwball comedy (social identity, strong heroine, father figure, motive shifts, buddy vs adversary two-hander, dialogue), Billy Wilder (disguise, Lubitsch touch, meet-cute, realism), Hitchcock and his writers (adaptation authorship, credits), Adaptation (Kaufman/McKee), Mildred Pierce (eight drafts, woman's film + noir), Thelma & Louise (\"but\" method, mirror pair), Fargo (character first, Coen method), Good Will Hunting (five-part structure, director's cuts), American Beauty (POV strategy, quasi-multi-protagonist, genre mix, red discipline), Eternal Sunshine (1:5:1, image motifs, single sealed protagonist); Walter's American Graffiti and Creature Comforts; the Hollywood masterclass films (Bourne, Guardians, Zootopia, Thor, Big Daddy); Hoxter's Winter's Bone and Jojo Rabbit; Snyder's Miss Congeniality; Field's Chinatown. Use when you want a worked example of how a specific American film's script is built, when analysing a film for structure/character/theme, or when looking for a model to imitate for a Western, screwball, noir, buddy, coming-of-age, black comedy or non-linear romance.\n---\n\n# 美国电影剧作案例（American Case Studies）\n\n这是一个**范例库**：每个案例给出一句话故事、结构要点、可迁移的手法。主要来源梅峰《编剧的自修课》（西部片/神经喜剧/怀尔德/希区柯克/《改编剧本》/《米尔德丽德·皮尔斯》/五部奥斯卡原创剧本）、沃尔特《剧本》（《美国风情画》亲历、《物质享受》练习）、《故事创作大师班·好莱坞卷》（伯恩/银河护卫队/疯狂动物城/雷神/冒牌老爸/41 天）、霍克斯特（《冬天的骨头》《乔乔》）、斯奈德（《特工佳丽》）、菲尔德（《唐人街》《网络》）、麦基（《卡萨布兰卡》《唐人街》）。原理性内容见各 skill；这里只留\"这部片是怎么做的\"。 补充范例与分析表见 [reference.md](reference.md)。\n\n---\n\n",
+      "preservedcraft": true,
+      "methods_start_heading": "## 一、类型研究：好莱坞西部片（梅峰）",
+      "source_methods_sha256": "bed5d6f62d7ce8170e037f14f05f250c9df44aee2bf3f0c34bf5e795d15e1d5f",
+      "reference_sha256": "bc9b750c25886c108673e3aca099c6aef3fc8b4b33b9b85b7261b45c597ead48",
+      "mechanical_replacements": {
+        "`sw-<name>`": "[laohu-<name>](../laohu-<name>/SKILL.md)",
+        "`sw-workflow`": "[laohu-script-writer](../../SKILL.md)"
+      },
+      "note": "Source chapter order and wording preserved except listed callable name/link replacements; source-only provenance preface replaced by functional introduction; full original preface recorded here.",
+      "module": "laohu-american-case-studies",
+      "body_sha256": "a55cc29787c3845415e5da0cd97641f71dba33ea71159ff6b856e2f7313b7403",
+      "source_body_sha256": "bed5d6f62d7ce8170e037f14f05f250c9df44aee2bf3f0c34bf5e795d15e1d5f",
+      "allowed_edits": [
+        {
+          "from": "`sw-scene-craft`",
+          "to": "[laohu-scene-craft](../laohu-scene-craft/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        },
+        {
+          "from": "`sw-story-structure`",
+          "to": "[laohu-story-structure](../laohu-story-structure/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        }
+      ]
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-character-conflict/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-character-conflict/SKILL.md",
+      "sourcehash": "a135f49c843644c986178655b8dea8e84b9bf63198cfb6237d836b7ec8d9f88a",
+      "originalpreface": "---\nname: sw-character-conflict\ndescription: Character creation, protagonist/antagonist design and dramatic conflict for scripts (人物/对手/冲突) — merged from Lajos Egri (three-dimensional character, orchestration, unity of opposites, pivotal character, rising vs static vs jumping conflict, transition), William Indick's Psychology for Screenwriters (Freud id/ego/superego and defense mechanisms, Erikson identity crises, Jung archetypes and quaternity, Campbell/Murdock hero journeys, Adler inferiority and lifestyles, Rollo May existential stages), Robert McKee (characterization vs true character, dimensions, gap, antagonism principle), Neill Hicks (character invocation, self-concept, cognitive dissonance, five conflict focuses, Maslow), Lisa Cron (desire vs misbelief), and Lu Jun (人物要活八要, 对手要强, 给对手一把刀, 最强的对手是自己, 不许请祥云). Use when building a protagonist, an antagonist or a cast, when a character feels flat or acts out of character, when conflict stalls or jumps, when a villain is too weak, when designing an arc or motive, or when diagnosing melodrama.\n---\n\n# 人物与冲突（Character & Conflict）\n\n四个来源体系互相校验：**埃格里**给结构性人物学（三维、编排、对立统一、四类冲突、过渡）；**尹迪克**给动机的心理学（弗洛伊德→埃里克森→荣格→坎贝尔/默多克→阿德勒→罗洛·梅）；**麦基/希克斯/克龙/斯奈德**给美式实操检验（压力下的选择、自我观念、错误信念、救猫咪）；**陆军**给中国戏剧的人物八要与对手配置法。原型表、心理学检查清单与埃格里分析模板见 [reference.md](reference.md)。\n\n---\n\n",
+      "preface_disposition": [
+        {
+          "source_scope": "YAML name",
+          "action": "laohu前缀本地身份",
+          "target": "YAML name"
+        },
+        {
+          "source_scope": "YAML description",
+          "action": "保留全部专业范围及应用场景，移除merged-from来源叙述；原作者理论细目仍在完整章节与reference",
+          "target": "YAML description + 四层血肉方法表 + 原章节"
+        },
+        {
+          "source_scope": "H1",
+          "action": "中文专业标题加老胡，英文副标题不携带独有方法",
+          "target": "H1"
+        },
+        {
+          "source_scope": "首段专业职责与体系互补",
+          "action": "职责及工具区别以新导言保留；具体出处清单不写执行前言，原章节作者与方法关联不动",
+          "target": "H1后导言"
+        },
+        {
+          "source_scope": "reference链接",
+          "action": "保留可用相对链接并在血肉层指向完整案例",
+          "target": "导言/血肉层 reference.md"
+        },
+        {
+          "source_scope": "分隔线",
+          "action": "由四层与方法标题分隔，不承载专业信息",
+          "target": "四层之后方法标题"
+        }
+      ],
+      "preservedcraft": "人物通过自己选择的行动创造情节。三维条件与人物编排解释处境，欲望、自我观念和心理机制帮助理解动机，压力下的选择检验人物真相，独特行动与强对手使性格在场面中显现。原型表、心理学检查清单与分析模板见[人物研究与案例](reference.md)。",
+      "methods_start_heading": "## 一、人物是什么",
+      "replacements": [],
+      "reference_sha256": "610b37466a4168249a3688478dcbfba07d65977377777cb385fc2b6c0e8ad2d3",
+      "body_preserved_after_replacements": true,
+      "source_read_complete": true,
+      "author_self_test": "04_诊断与系统日志/编剧能力完整迁移与验证.md",
+      "module": "laohu-character-conflict",
+      "body_sha256": "79b090bdac4445b220c623efba75ad8ef7230a1fbe77b867406024f1551abffa",
+      "source_body_sha256": "79b090bdac4445b220c623efba75ad8ef7230a1fbe77b867406024f1551abffa",
+      "allowed_edits": []
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/chekhov-dramaturgy/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/SKILL.md",
+      "sourcehash": "b3bb1193cf3dcf07c6e0e13b9417258b5536a538ef99be2396772dda9c57d136",
+      "originalpreface": "---\nname: chekhov-dramaturgy\ndescription: Writing plays and screenplays in the Chekhovian mode (契诃夫戏剧法) — distilled from the complete plays (没有父亲的人/普拉东诺夫, 伊凡诺夫, 林妖→万尼亚舅舅, 海鸥, 三姊妹, 樱桃园, nine one-acts) plus Chekhov's own letters, Stanislavsky's and Nemirovich-Danchenko's rehearsal notes and 焦菊隐/童道明 criticism. Covers the four-act mood-based structure without central climax, off-stage events, \"correct answer stated in Act 1 and refused\", the announced event that never happens, three-layer endings (hope monologue + nihilist line + household action), no-villain conflict with environment, every character's object and catchphrase, one-way love chains, half-step-off dialogue, philosophy cut by thirst, the shortest words for the deepest pain, stage-direction and sound discipline, and how Chekhov revised The Wood Demon into Uncle Vanya. Use when the user wants an ensemble drama, a \"nothing happens\" play, subtext-heavy dialogue, a family estate / provincial story, an anti-climactic structure, or asks how to \"Chekhov-ize\" a script.\n---\n\n# 契诃夫戏剧法（Chekhov Dramaturgy）\n\n本 skill 从《契诃夫戏剧全集》四卷（上海译文，焦菊隐/李健吾/童道明译）逐幕拆解中提炼：《没有父亲的人》（普拉东诺夫）、《伊凡诺夫》、《林妖》及其改写本《万尼亚舅舅》、《海鸥》、《三姊妹》、《樱桃园》、九部独幕剧，以及契诃夫书信、斯坦尼斯拉夫斯基与丹钦科的排练记录、焦菊隐与童道明的评论。\n\n核心信条（契诃夫自述）：**\"强劲地开头，柔弱地结尾。违背所有戏剧法规。写得像部小说。\"\"既没有一个天使，也没有一个魔鬼。\"** 冲突不是人与人之间，而是一群人与包围着他们的环境之间。\n\n每部剧的逐幕结构表和原文范例见同目录 [reference.md](reference.md)。\n\n---\n\n",
+      "preservedcraft": "契诃夫式戏剧把一群人的愿望放进共同生活：有人谈理想，有人要喝茶；每个人有自己的解释，回应却常常错开。事件之外的等待、否决和恢复日常，可以比事件本身更沉重。“既没有一个天使，也没有一个魔鬼”要求作者看见每个人的处境；“强劲地开头，柔弱地结尾”要求结束仍留下生活继续的力量。",
+      "methods_start_heading": "## 一、七部多幕剧对照与演进线",
+      "name_replacements": {},
+      "reference": "skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/reference.md",
+      "referencehash": "62e0ca7f7ff3923de05c8aa7765e0fb77bf708c3ae2ff27253f72bbb60b33ebb",
+      "module": "laohu-chekhov-dramaturgy",
+      "reference_sha256": "62e0ca7f7ff3923de05c8aa7765e0fb77bf708c3ae2ff27253f72bbb60b33ebb",
+      "body_sha256": "2545a14d56b622e8da2645741d926db6357a5806efc8d3e4948b72e0e3bb8594",
+      "source_body_sha256": "2545a14d56b622e8da2645741d926db6357a5806efc8d3e4948b72e0e3bb8594",
+      "allowed_edits": []
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-dialogue/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-dialogue/SKILL.md",
+      "module": "laohu-dialogue",
+      "sourcehash": "030634f794946b4ca10fc693b8a10127509b9f5441dbf3248a60accd8d3397f5",
+      "methods_start_heading": "## 一、对白是什么",
+      "body_sha256": "5f62864a147f4760deaf064483069fdd8d41859e82f30df7ef1c8b30d129d2c9",
+      "source_body_sha256": "eff0fb8b4435f44c4b009713a12f2b96f496a2de11b2d3000965b81563f6a1d2",
+      "allowed_edits": [
+        {
+          "from": "## 九、诊断清单\n",
+          "to": "## 九、诊断清单\n\n逐项先判断当前对白的作用：合作确认、知识教学、关系承认和必要表演均可成立。第3、4、8、10项只在该写法损害当场行动或观众理解时触发修改；不能因双方一致、直接说清或带表演括号而判错。删改前比较原句与候选实际改变了什么。\n",
+          "reason": "原句不删改，就地增加实际创作适用条件"
+        }
+      ],
+      "reference_sha256": "28b573264ae1801d0f32f93c9130f51ff88cd080acc7489b2c26fb4c695ec243",
+      "originalpreface": "---\nname: sw-dialogue\ndescription: Dialogue writing and revision for screen and stage (对白/台词/潜台词/唱词) — merged from Robert McKee's Dialogue (dialogue as action, said/unsaid/unsayable, exposition as ammunition, beat = action/reaction gerunds, flaws of credibility/language/content/design, character-specific vocabulary and grammar, seven scene analyses), Richard Walter (economy, subtext, argument, no small talk, no parentheticals, silence), Neill Hicks (listening, on-the-nose exceptions, energy, five-step exercise), Lu Jun (语言要美: 典雅美/通俗美, 对话三要求 动作性/性格化/潜台词, 戏曲唱词三好 选韵/结构/布局), Lajos Egri (dialogue born of three-dimensional character, escalation), Blake Snyder (cover-the-names test), and screwball-comedy dialogue conventions. Use when writing or polishing dialogue, fixing on-the-nose or expository lines, giving each character a distinct voice, converting a two-hander into a trialogue, writing comedy exchanges, cutting speeches, or composing Chinese opera lyrics.\n---\n\n# 对白（Dialogue）\n\n核心命题只有一条：**对白是一种行动**（麦基：dia＋legein＝经过言辞的行动）。每句话之下有欲望、意图与策略；\"对白的毛病是故事的毛病\"，改不好的对白先回头查事件与人物设计。本 skill 合并麦基《对白》的完整体系、沃尔特/希克斯的美式实操禁忌、陆军的中国戏剧语言论（含戏曲唱词）、埃格里的人物—对话关系、神经喜剧的台词模式。七个场景逐节拍分析范例与唱词范例见 [reference.md](reference.md)。\n\n---\n\n",
+      "scope_insertions": [
+        "\n\n逐项先判断当前对白的作用：合作确认、知识教学、关系承认和必要表演均可成立。第3、4、8、10项只在该写法损害当场行动或观众理解时触发修改；不能因双方一致、直接说清或带表演括号而判错。删改前比较原句与候选实际改变了什么。"
+      ]
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-format-adaptation/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-format-adaptation/SKILL.md",
+      "sourcehash": "e44584d75dcf405a47097b1b32d08bf00b2e6821442fb23661a30215e4e4f4c3",
+      "originalpreface": "---\nname: sw-format-adaptation\ndescription: Screenplay format, page craft, the writing process and adaptation (剧本格式/写作流程/改编) — merged from Wendy Henson's Screenwriting Step by Step (spec format rules, action paragraphs, transitions, story-doing, dramatic premise, subplots), Richard Walter (format, page count, cover, master scenes, flashback, montage, feedback symbols, work habits, revision), Neill Hicks (selling script vs shooting script, harem template, draft chain), Syd Field (form, master shot, card method, adaptation as original work), Robert McKee (description in present tense, image systems, adaptation principles, step outline → treatment → screenplay), Julian Hoxter (format elements, outline vs treatment, adaptation four questions), Diamond & Weissman (one-page nine-step, character chart, meld, connective tissue, set pieces, submission draft) and Eric Bork (idea test before writing) — plus an exact typographic grid (margins, indents, column widths), element conventions (V.O./O.S., MORE/CONT'D, dual dialogue, montage, intercut, super), a machine-writable output contract (Fountain, with forced markers for Chinese, and PDF/.fdx render paths), and modern Asian industry formats (Chinese 场号制 影视剧本格式, Japanese 柱・ト書き・セリフ / 決定稿). Use when formatting a spec script, choosing the output file format for a script, deciding what goes in action lines, planning drafts and outlines, cutting pages, adapting a novel/play/true story, writing a Chinese TV/film or Japanese-style script page, or preparing a submission-ready draft.\n---\n\n# 格式·流程·改编（Format, Process & Adaptation）\n\n三件事：**页面上怎么写**（格式与动作段落）、**从想法到成稿怎么走**（大纲/处理台本/草稿链/修改）、**改编别人的素材怎么办**。来源：汉森《编剧：步步为营》、沃尔特《剧本》、希克斯《编剧的核心技巧》、菲尔德《电影剧本写作基础》、麦基《故事》、霍克斯特《编剧的十二条法则》、戴蒙德&韦斯曼《好莱坞编剧的生意经》、博克《如何写出好故事》。范例与符号表见 [reference.md](reference.md)。行业与买卖见 `sw-industry-business`。\n\n---\n\n",
+      "preservedcraft": true,
+      "methods_start_heading": "## 一、你写的是推销剧本，不是拍摄剧本",
+      "source_methods_sha256": "6c2618f7fed02c101d5d928f5477a9bcf99656678ddee51e3d72adb25f54366f",
+      "reference_sha256": "5b5329c585374a7267ee3b0ee1576a7b98035ea8af65c484513ab29c63ec13eb",
+      "mechanical_replacements": {
+        "`sw-<name>`": "[laohu-<name>](../laohu-<name>/SKILL.md)",
+        "`sw-workflow`": "[laohu-script-writer](../../SKILL.md)"
+      },
+      "note": "Source chapter order and wording preserved except listed callable name/link replacements; source-only provenance preface replaced by functional introduction; full original preface recorded here.",
+      "module": "laohu-format-adaptation",
+      "body_sha256": "afe8518a3a26d418e6175f48173e44dcd32ae60f0e729023e6856ab638f9c7e4",
+      "source_body_sha256": "6c2618f7fed02c101d5d928f5477a9bcf99656678ddee51e3d72adb25f54366f",
+      "allowed_edits": [
+        {
+          "from": "`sw-character-conflict`",
+          "to": "[laohu-character-conflict](../laohu-character-conflict/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        },
+        {
+          "from": "`sw-premise-theme`",
+          "to": "[laohu-premise-theme](../laohu-premise-theme/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        },
+        {
+          "from": "`sw-story-structure`",
+          "to": "[laohu-story-structure](../laohu-story-structure/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        },
+        {
+          "from": "`sw-workflow`",
+          "to": "[laohu-script-writer](../../SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        },
+        {
+          "from": "> 本节数字来自对多部专业排版剧本（US Letter、Courier 12）的实测与 Final Draft 默认模板，元素级约定与中日行业格式为行业通行做法，**不出自本 skill 的 19 本来源书**（由 issue #2 提议补入）。范例见 [reference.md](reference.md) 第十节。",
+          "to": "US Letter、Courier 12 的版面与元素示例见 [reference.md](reference.md) 第十节；实际提交以接收方明确规范为准。",
+          "reason": "书目与issue归属移入追溯记录，版面用途与Reference导航保留。"
+        },
+        {
+          "from": "**与 [laohu-script-writer](../../SKILL.md) 的衔接**：阶段 5 的交付物就是 `.fountain` 文件；story-bible 只记文件名与页数。",
+          "to": "**与 [laohu-script-writer](../../SKILL.md) 的衔接**：正式镜头化剧本继续以 Markdown 为内容源并生成 HTML；明确需要 Fountain 提交时，从已确认内容生成派生稿，在现有阶段记录登记文件与用途。",
+          "reason": "外部调度交接改为当前正式剧本合同；Fountain格式方法完整保留，按实际用途生成。"
+        },
+        {
+          "from": "### 输出格式契约：Fountain\n",
+          "to": "### 输出格式契约：Fountain\n\n本节只在已确定交付Fountain或相应传统提交任务时启用；此范围内的“默认”不扩展为本项目默认。镜头化制作稿继续执行前述Markdown、E-S-C、表演与HTML合同，用途已经明确时直接沿用。\n",
+          "reason": "原句不删改，就地增加实际创作适用条件"
+        },
+        {
+          "from": "## 六、诊断清单\n",
+          "to": "## 六、诊断清单\n\n先按实际交付用途选择检查项：传统推销稿检查对应格式，镜头化制作稿检查现有编号、动作、表演和连续性。制作稿出现镜头术语、Markdown或必要括注不构成错误，任何精简均需保住既定内容事实。\n",
+          "reason": "原句不删改，就地增加实际创作适用条件"
+        }
+      ],
+      "scope_insertions": [
+        "\n\n本节只在已确定交付Fountain或相应传统提交任务时启用；此范围内的“默认”不扩展为本项目默认。镜头化制作稿继续执行前述Markdown、E-S-C、表演与HTML合同，用途已经明确时直接沿用。",
+        "\n\n先按实际交付用途选择检查项：传统推销稿检查对应格式，镜头化制作稿检查现有编号、动作、表演和连续性。制作稿出现镜头术语、Markdown或必要括注不构成错误，任何精简均需保住既定内容事实。"
+      ]
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-industry-business/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-industry-business/SKILL.md",
+      "sourcehash": "d6727463461fc0e805dcd5a75a70a494ddee400c51c47c0405435f3b068a4035",
+      "originalpreface": "---\nname: sw-industry-business\ndescription: The screenwriting business and career (编剧行业与生意经) — merged from Diamond & Weissman's Bulletproof (buyer's-eye workflow, three Cs, one-page nine-step, set pieces, submission, notes, resilience), Eric Bork's The Idea (PROBLEM seven-element idea test, 60/30/10, television differences), Neill Hicks (market four entities, six criteria, WGA, agents, option, credit arbitration, gross vs net, step deals), Richard Walter (query letter, agents, package, option, spec, release, copyright, guild, gatekeepers, professionalism, 66 principles), Wendy Henson (breaking in), Blake Snyder (logline pitch, genre, agents), Julian Hoxter (industry terms), Mei Feng's Oscar analyses, and the Hollywood masterclass (pitching, notes, credits, TV vs film). Use when evaluating whether an idea is sellable, writing a logline/query/pitch, preparing a submission, handling notes and rewrites, understanding options/credits/WGA/agents/net profit, choosing between film and TV, or building a career strategy.\n---\n\n# 行业与生意经（Industry & Business）\n\n美国编剧行业的运作逻辑与生存策略。核心共识：**\"这是生意不是童话\"**（戴蒙德&韦斯曼）；\"电影剧本的创作不是关于电影业，而电影业却和电影剧本的创作相关\"（沃尔特原理 56）；\"最聪明的营销策略是拿出好剧本\"（原理 62）。本 skill 覆盖：想法体检、一句话与推销、提交与经纪、合同与署名、审读意见与修改、电影 vs 电视、职业心态。写作流程与格式见 `sw-format-adaptation`。 完整自检清单、询问信样本与合同术语见 [reference.md](reference.md)。\n\n---\n\n",
+      "preservedcraft": true,
+      "methods_start_heading": "## 一、从买家角度看写作（戴蒙德&韦斯曼）",
+      "source_methods_sha256": "124c9d9f89acc2824ccf59f6d7dbc5d5ec491c62cc85fb7242e96bd22b49181b",
+      "reference_sha256": "485083abf2b571b7d6a94db972cfa95b1cc09e3174d59ca2cec014a0438d13d9",
+      "mechanical_replacements": {
+        "`sw-<name>`": "[laohu-<name>](../laohu-<name>/SKILL.md)",
+        "`sw-workflow`": "[laohu-script-writer](../../SKILL.md)"
+      },
+      "note": "Source chapter order and wording preserved except listed callable name/link replacements; source-only provenance preface replaced by functional introduction; full original preface recorded here.",
+      "module": "laohu-industry-business",
+      "body_sha256": "124c9d9f89acc2824ccf59f6d7dbc5d5ec491c62cc85fb7242e96bd22b49181b",
+      "source_body_sha256": "124c9d9f89acc2824ccf59f6d7dbc5d5ec491c62cc85fb7242e96bd22b49181b",
+      "allowed_edits": []
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-japanese-screenwriting/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-japanese-screenwriting/SKILL.md",
+      "sourcehash": "4cbe1bf9d10e205039bf4287cf45194177f6bbe3a07388b103bcef990c22d270",
+      "originalpreface": "---\nname: sw-japanese-screenwriting\ndescription: Japanese (and East-Asian/European non-Hollywood) screenwriting methods (日本编剧方法/原创剧本实战) — distilled from ten Japanese directors and writers in ゼロからの脚本術 (Kosawa Ryota's three-act = 起承转合 and speed by jumping, Uchida Kenji's beautiful structure and time-axis tricks, Miki Satoshi's small-material notebook and theme-emerges-later, Sono Sion's \"make the unmakeable\" and find-the-people-who-say-boring, Omiya Ellie's dialogue from inner monologue, Kakei Masaya's \"if + moreover\" setting-first, Fukuda Yuichi's character = actor + flaw and audience-as-tsukkomi, Yokohama Satoko's anti-theory fragments, Takahashi Izumi's real/fiction balance and \"pain\", Yukisada Isao's situation-born originals and \"screenplay as coordinate axis\"), plus Arai Haruhiko (IP adaptation, \"write what you're ashamed of\") from the masterclass. Korean and French writers live in sw-korean-french-screenwriting. Use when writing an original Japanese-style script or TV drama, working with small material and fragments, choosing between structure-first and character-first methods, building a Japanese TV plan (企画書), designing comedy tsukkomi systems, or when Hollywood models feel wrong for a quiet, daily-life, non-goal-driven story. Cross-reference ozu-screenplay-style for Ozu's own scripts.\n---\n\n# 日本编剧方法（Japanese Screenwriting Methods）\n\n日本原创剧本的实战路径，来源《从零开始做编剧：10 位日本金牌导演、编剧谈剧本》（泊贵洋编）、《故事创作大师班·国际卷》（荒井晴彦）。同一大师班中的韩国（吴胜郁、崔石焕）与法国（奥比坦）编剧见 `sw-korean-french-screenwriting`。与好莱坞体系的关系：**古泽良太、内田贤治、筧昌也承认三幕/起承转合是最有效结构但\"探究好作品为何是三幕\"；三木聪、园子温、横浜聪子、高桥泉、福田雄一走另一条路——主题后置、不写情节构想、片段联结、人物先于事件；行定勋把剧本当\"坐标轴\"和\"议论的材料\"。** 小津安二郎的剧本范例见 `ozu-screenplay-style`；编者结语：\"不要依赖改编剧本，凭原创决胜负。\"工作单与情节构想范例见 [reference.md](reference.md)。\n\n---\n\n",
+      "preservedcraft": "日本原创剧本可以从设定与结尾出发，也可以从人物、小素材和一段听见的声音出发。古泽良太、内田贤治、筧昌也重视结构及其成立原因；三木聪、园子温、横浜聪子、高桥泉、福田雄一、大宫艾丽允许人物、片段和台词先走；行定勋把剧本作为全体创作者共同工作的坐标轴。先选择适合当前材料的写作路径，再用具体场面证明它。",
+      "methods_start_heading": "## 一、两派方法：结构优先 vs 人物/片段优先",
+      "name_replacements": {
+        "sw-american-case-studies": "laohu-american-case-studies",
+        "sw-korean-french-screenwriting": "laohu-korean-french-screenwriting"
+      },
+      "reference": "skills/laohu-script-writer/skills/laohu-japanese-screenwriting/reference.md",
+      "referencehash": "41928f3f82c17a2216f6b3aa3e5a108aa0e6418cebd9b485732f56e7bb8fc8e3",
+      "module": "laohu-japanese-screenwriting",
+      "reference_sha256": "41928f3f82c17a2216f6b3aa3e5a108aa0e6418cebd9b485732f56e7bb8fc8e3",
+      "body_sha256": "ca77b6fe50a2b338ec60fe4df89835155b890ada333f3c12ac451fb41a5608f6",
+      "source_body_sha256": "64652d25c7fa658d019869805041b9d38f88d7392dc4e15a7971076fe32afd3d",
+      "allowed_edits": [
+        {
+          "from": "`sw-american-case-studies`",
+          "to": "[laohu-american-case-studies](../laohu-american-case-studies/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        },
+        {
+          "from": "`sw-korean-french-screenwriting`",
+          "to": "[laohu-korean-french-screenwriting](../laohu-korean-french-screenwriting/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        }
+      ]
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-korean-french-screenwriting/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-korean-french-screenwriting/SKILL.md",
+      "sourcehash": "081173be32fd58db224cecc4e9b01565030bfb3539e2e691ad1af1b1b3991f52",
+      "originalpreface": "---\nname: sw-korean-french-screenwriting\ndescription: Korean and French screenwriting practice (韩国/法国编剧方法) — from the international masterclass: Oh Seung-uk (Christmas in August, Green Fish, The Shameless: field research in disguise, \"write the emotion\", first act and last act first, spaces as skeleton, reading to hostile listeners, surviving producers), Choi Seok-hwan (King and the Clown, Lost in Hong Kong: genre as promise to the audience, \"story = deepening crisis + intensifying desire\", two reversals and bittersweet endings, the producer/director/writer trio), and Frédéric Auburtin (Paris je t'aime, Le Grand Soir: dialogue last, Italian-style table reads, \"12 lines not 13\", dignity for characters, originals born from commissions, editing by emotion). Use when working in a Korean-style commercial drama or genre film, a French auteur/commission context, when planning field research, when a producer relationship is the problem, or when you need the Korean \"three live together\" development model or the French \"emotion first, structure second\" editing approach.\n---\n\n# 韩国与法国编剧方法（Korean & French Screenwriting Practice）\n\n来源《故事创作大师班·国际卷》前四讲中的三位：吴胜郁（韩，《八月照相馆》《绿鱼》《无赖汉》）、崔石焕（韩，《王的男人》《港囧》）、弗雷德里克·奥比坦（法，《巴黎，我爱你》《特使》《偷情桥》）。日本的荒井晴彦与十位日本导演见 `sw-japanese-screenwriting`；好莱坞四讲见 `sw-american-case-studies` 与 `sw-industry-business`。\n\n三人的共同底色：**先探访后写作、把剧本念给苛刻的人听、对制片方\"能说服就说服，无法说服就认栽硬着头皮做\"**。差异：吴胜郁重情绪与空间，崔石焕重类型契约与欲望/危机双螺旋，奥比坦重台词最后写与后期全程参与。\n\n---\n\n",
+      "preservedcraft": "韩国与法国编剧实践提供不同的创作抓手：吴胜郁以具体情绪、实地观察和空间变化组织故事；崔石焕以类型承诺、欲望与危机推进观众期待；奥比坦先解决场面与结构，再写对白，并通过围读和情绪排列检验整部作品。三者都重视剧本怎样在实际合作中成为可观看的作品。",
+      "methods_start_heading": "## 一、吴胜郁：编剧是一个需要忍耐的职业",
+      "name_replacements": {},
+      "reference": null,
+      "referencehash": null,
+      "module": "laohu-korean-french-screenwriting",
+      "reference_sha256": null,
+      "body_sha256": "2ed271c91a9b7c04206da6a7915214272b9316c28da58bf4932d027dd9132555",
+      "source_body_sha256": "2ed271c91a9b7c04206da6a7915214272b9316c28da58bf4932d027dd9132555",
+      "allowed_edits": []
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/ozu-screenplay-style/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/SKILL.md",
+      "sourcehash": "1d49400b879a26724638bb8318f3faf74e966a0955a45155c338b35c5a3600d9",
+      "originalpreface": "---\nname: ozu-screenplay-style\ndescription: Writing screenplays in the style of Ozu Yasujiro and Noda Kogo (小津安二郎・野田高梧) — distilled from six complete screenplays (晚春 Late Spring, 麦秋 Early Summer, 东京物语 Tokyo Story, 浮草 Floating Weeds, 秋日和 Late Autumn, 秋刀鱼之味 An Autumn Afternoon). Covers the \"family member leaves\" master plot, off-screen events / on-screen reactions, lie-driven plots, minimal-syllable confessions, go-between characters, faceless suitors, pillow-shot scene breaks, echoing objects, mirror characters, children's subplots as metaphor, displaced quarrels, the single-monologue rule, diminishing endings, Ozu's script format and stage-direction vocabulary. Use when the user wants to write a quiet family drama, a 小津风 / 侘寂 / 日常系 script, a story about marrying off a daughter, aging parents, or wants dialogue that says less and means more.\n---\n\n# 小津安二郎剧本写法（Ozu Screenplay Style）\n\n本 skill 从《小津安二郎剧本集》（野田高梧＋小津安二郎编剧，吴菲译）六部剧本逐场拆解中提炼：《晚春》（1949，103 场）、《麦秋》（1951，145 场）、《东京物语》（1953，176 场）、《浮草》（1959，121 场）、《秋日和》（1960，110 场）、《秋刀鱼之味》（1962，98 场）。\n\n核心信条：**大事件全部发生在画外，剧本只写事件之前和之后的家常。** 观众看到的不是事件，而是事件在人际关系上激起的涟漪。\n\n每部剧本的逐场结构表和原文范例见同目录 [reference.md](reference.md)。\n\n---\n\n",
+      "preservedcraft": "小津式剧本把重要变化放进日常前后：一次相亲、远行或家庭成员离开，改变的不只是一个事件，而是谁还会在同一张桌边吃饭、谁替谁传话、谁在收拾留下的东西。写作重心是事件在人际关系上激起的涟漪，让很少的话承受观众已经看见的生活。",
+      "methods_start_heading": "## 一、六部的共同骨架：家庭的一个成员离开",
+      "name_replacements": {},
+      "reference": "skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/reference.md",
+      "referencehash": "22bc545fc6f7e2c2c07895f44c02bec884bd24544449cf2d1708e1b9cbc1fcd8",
+      "module": "laohu-ozu-screenplay-style",
+      "reference_sha256": "22bc545fc6f7e2c2c07895f44c02bec884bd24544449cf2d1708e1b9cbc1fcd8",
+      "body_sha256": "c82183640a049f0453c39d04c7f59d279abd211d5de8a4ce0a5ebef626ac4a66",
+      "source_body_sha256": "870a5a7399ed89e9b05a060cf1789c90339736f8af3d1db77fc11b56817d94f3",
+      "allowed_edits": [
+        {
+          "from": "## 十一、自查清单\n",
+          "to": "## 十一、自查清单\n\n本清单用于选择具体的小津式练习，不是所有家庭片的统一验收。逐项先确认本片是否选择了该手法；没有选择的标为不适用。一个音节、画外对象、空镜数量、无人结尾与死者物件不得迫使已定人物、迁居原因或结局改变，最后以关系变化是否可感、人物行为是否成立裁决。\n",
+          "reason": "原句不删改，就地增加实际创作适用条件"
+        }
+      ],
+      "scope_insertions": [
+        "\n\n本清单用于选择具体的小津式练习，不是所有家庭片的统一验收。逐项先确认本片是否选择了该手法；没有选择的标为不适用。一个音节、画外对象、空镜数量、无人结尾与死者物件不得迫使已定人物、迁居原因或结局改变，最后以关系变化是否可感、人物行为是否成立裁决。"
+      ]
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-premise-theme/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-premise-theme/SKILL.md",
+      "sourcehash": "aff25f7f4b30c6651334a07ca4172e3c40d52f1ac0b87f3a1a807b27c31a05d3",
+      "originalpreface": "---\nname: sw-premise-theme\ndescription: Premise, theme, controlling idea, subject selection and logline for scripts (前提/主题/立意/选材/戏核) — merged from Lajos Egri's premise-as-tyrant and dialectic, Robert McKee's controlling idea (value + cause) and idea/counter-idea, Neill Hicks' five premise questions, Lisa Cron's \"third rail\" (desire vs misbelief, origin scene, what-if), Julian Hoxter's logline and theme-attitude rule, Blake Snyder's logline/genre/title tests, and Lu Jun's Chinese craft chapters on 选材要严/开掘要深/视角要新/戏核要好/情节要奇. Use when turning a vague idea into a premise, finding what a story is really about, choosing a subject and angle, testing a logline, deciding the ending from the theme, or diagnosing a script that \"has events but no story\".\n---\n\n# 前提·主题·立意·戏核（Premise & Theme）\n\n本 skill 回答四个问题：**写什么**（选材）、**为什么写**（前提/主控思想/第三条轨道）、**从哪里切**（视角/戏核）、**怎么一句话说出来**（logline/一句话故事）。来源：埃格里《编剧的艺术》、麦基《故事》、希克斯《编剧的核心技巧》、克龙《怎样写故事》、霍克斯特《编剧的十二条法则》、斯奈德《救猫咪》、陆军《编剧理论与技法》第 1–6 章。相互补充关系：埃格里给\"前提\"的辩证法与暴君性；麦基给\"主控思想＝价值＋原因\"和从高潮反推；克龙给主人公内心矛盾（渴望 vs 错误信念）的具体建构步骤；陆军给中国戏剧的选材、立意开掘、视角与戏核工具；希克斯/霍克斯特/斯奈德给一句话的商业检验。\n\n范例库与工作单见 [reference.md](reference.md)。\n\n---\n\n",
+      "preface_disposition": [
+        {
+          "source_scope": "YAML name",
+          "action": "laohu前缀本地身份",
+          "target": "YAML name"
+        },
+        {
+          "source_scope": "YAML description",
+          "action": "保留全部专业范围及应用场景，移除merged-from来源叙述；原作者理论细目仍在完整章节与reference",
+          "target": "YAML description + 四层血肉方法表 + 原章节"
+        },
+        {
+          "source_scope": "H1",
+          "action": "中文专业标题加老胡，英文副标题不携带独有方法",
+          "target": "H1"
+        },
+        {
+          "source_scope": "首段专业职责与体系互补",
+          "action": "职责及工具区别以新导言保留；具体出处清单不写执行前言，原章节作者与方法关联不动",
+          "target": "H1后导言"
+        },
+        {
+          "source_scope": "reference链接",
+          "action": "保留可用相对链接并在血肉层指向完整案例",
+          "target": "导言/血肉层 reference.md"
+        },
+        {
+          "source_scope": "分隔线",
+          "action": "由四层与方法标题分隔，不承载专业信息",
+          "target": "四层之后方法标题"
+        }
+      ],
+      "preservedcraft": "本能力回答四个问题：**写什么**（选材）、**为什么写**（前提、主控思想、内心斗争）、**从哪里切**（视角、戏核）、**怎么一句话说出来**（logline、一句话故事）。前提的辩证论证、从高潮反推价值与原因、渴望与错误信念的建构、中国戏剧的选材与开掘，以及一句话故事的传播检验，分别解决不同层面的决定。",
+      "methods_start_heading": "## 一、前提是暴君（埃格里）",
+      "replacements": [],
+      "reference_sha256": "47fdede6501fabef3ff5837e282cd24094af01e1e748ebe94b96eb6bf3255c92",
+      "body_preserved_after_replacements": true,
+      "source_read_complete": true,
+      "author_self_test": "04_诊断与系统日志/编剧能力完整迁移与验证.md",
+      "module": "laohu-premise-theme",
+      "body_sha256": "fd202ba16c601eb341063eb174b5c57eaeb37fb601d50469981bbdd00ffa84ed",
+      "source_body_sha256": "fd202ba16c601eb341063eb174b5c57eaeb37fb601d50469981bbdd00ffa84ed",
+      "allowed_edits": []
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-scene-craft/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+      "sourcehash": "a7e0c0820d068e5f99ca7ed80f4e6baa05e7ff8731739ae4bb7aec429e369f54",
+      "originalpreface": "---\nname: sw-scene-craft\ndescription: Scene and sequence craft (场景/段落/细节/道具/悬念/情趣) — merged from Robert McKee's scene design and five-step scene analysis (value turn, beats, text/subtext, turning points, pacing, image systems), McKee's Dialogue scene types (balanced, comic, asymmetric, indirect, reflexive, minimal), Syd Field's sequence and scene elements, Neill Hicks (less is more, enter late leave early, energy), Richard Walter (action over talk, small gestures, avoid phones/cars/restaurants, list twelve alternative locations), Wendy Henson (action paragraphs, transitions, story-doing), Julian Hoxter (scene beats, objectives and tactics), Mei Feng's value test, and Lu Jun's chapters 意趣要足 (suspense, delay, wit), 细节要妙, 道具要精, 场景要当. Use when writing or fixing a single scene, choosing a location, building a sequence, planting a prop or detail, designing suspense and delay, cutting a scene that \"nothing happens\" in, or turning talk into action.\n---\n\n# 场景与段落（Scene Craft）\n\n场景是\"戏剧最小表意单位\"（陆军），也是\"缩微故事\"（麦基）。本 skill 处理一场戏从选址到落笔的全部决定：**为什么在此时此地、押上什么价值、谁要什么用什么策略、节拍如何叠加到转折、道具和细节如何做功、悬念如何设置与延宕、如何进出场景**。分析范例与工具表见 [reference.md](reference.md)；对白层面见 `sw-dialogue`；全片结构见 `sw-story-structure`。\n\n---\n\n",
+      "preface_disposition": [
+        {
+          "source_scope": "YAML name",
+          "action": "laohu前缀本地身份",
+          "target": "YAML name"
+        },
+        {
+          "source_scope": "YAML description",
+          "action": "保留全部专业范围及应用场景，移除merged-from来源叙述；原作者理论细目仍在完整章节与reference",
+          "target": "YAML description + 四层血肉方法表 + 原章节"
+        },
+        {
+          "source_scope": "H1",
+          "action": "中文专业标题加老胡，英文副标题不携带独有方法",
+          "target": "H1"
+        },
+        {
+          "source_scope": "首段专业职责与体系互补",
+          "action": "职责及工具区别以新导言保留；具体出处清单不写执行前言，原章节作者与方法关联不动",
+          "target": "H1后导言"
+        },
+        {
+          "source_scope": "reference链接",
+          "action": "保留可用相对链接并在血肉层指向完整案例",
+          "target": "导言/血肉层 reference.md"
+        },
+        {
+          "source_scope": "分隔线",
+          "action": "由四层与方法标题分隔，不承载专业信息",
+          "target": "四层之后方法标题"
+        }
+      ],
+      "preservedcraft": "场景是“戏剧最小表意单位”，也是“缩微故事”。本能力处理一场戏从选址到落笔的全部决定：**为什么在此时此地、押上什么价值、谁要什么用什么策略、节拍如何叠加到转折、道具和细节如何做功、悬念如何设置与延宕、如何进出场景**。分析范例与工具表见[场景案例](reference.md)；对白层面见[对白创作](../laohu-dialogue/SKILL.md)，全片结构见[故事结构](../laohu-story-structure/SKILL.md)。",
+      "methods_start_heading": "## 一、场景是什么",
+      "replacements": [
+        {
+          "from": "`sw-dialogue`",
+          "to": "[laohu-dialogue](../laohu-dialogue/SKILL.md)",
+          "count": 2
+        },
+        {
+          "from": "`chekhov-dramaturgy`",
+          "to": "[laohu-chekhov-dramaturgy](../laohu-chekhov-dramaturgy/SKILL.md)",
+          "count": 1
+        }
+      ],
+      "reference_sha256": "2f2e998eadca198c76cca1ba56a7fc89fa398cef015b8b9262611320b36077be",
+      "body_preserved_after_replacements": true,
+      "source_read_complete": true,
+      "author_self_test": "04_诊断与系统日志/编剧能力完整迁移与验证.md",
+      "module": "laohu-scene-craft",
+      "body_sha256": "d03dc95a9addf25e55d9e145ed84ae04d0c89a4ca55ca2b3f3ddd9e4056cc20e",
+      "source_body_sha256": "057b007fd602e267b9bfa881aab45d637a9972823bd13ad637a6f016aaf67d66",
+      "allowed_edits": [
+        {
+          "from": "`chekhov-dramaturgy`",
+          "to": "[laohu-chekhov-dramaturgy](../laohu-chekhov-dramaturgy/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        },
+        {
+          "from": "`sw-dialogue`",
+          "to": "[laohu-dialogue](../laohu-dialogue/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        }
+      ]
+    },
+    {
+      "src": "00_输入原料/研究文档/screenwriting-skills/plugins/screenwriting/skills/sw-story-structure/SKILL.md",
+      "dst": "skills/laohu-script-writer/skills/laohu-story-structure/SKILL.md",
+      "sourcehash": "89bcdb47f4266efd2f49ff2a38ad5c5a1725f81b005d4d7154415487ae3bace8",
+      "originalpreface": "---\nname: sw-story-structure\ndescription: Story structure for screenplays and stage plays (故事结构) — merged from Syd Field's paradigm and plot points, Blake Snyder's Save the Cat beat sheet and board, Robert McKee's Story (event/scene/sequence/act, inciting incident, progressive complications, crisis-climax-resolution, subplots, story triangle), Julian Hoxter's nine-beat model, Neill Hicks' three acts as attraction/anticipation/satisfaction, and Lu Jun's Chinese short-play structure (凤头猪肚豹尾, 起承转合, eight openings, eight endings, 入戏要快/脉络要清/高潮要高/转变要顺/变化要多). Use when outlining a script, placing plot points and midpoint, fixing a saggy second act, designing an opening or ending, diagnosing \"nothing happens\", choosing between linear and non-linear designs, or converting a premise into beats and cards.\n---\n\n# 故事结构（Story Structure）\n\n本 skill 合并六种结构体系：悉德·菲尔德《电影剧本写作基础》（范式/情节点）、布莱克·斯奈德《救猫咪》（BS2 十五节拍、演示板）、罗伯特·麦基《故事》（结构层级、故事三角、激励事件、进展纠葛、危机高潮结局）、霍克斯特《编剧的十二条法则》（九节拍、A/B 故事）、尼尔·希克斯《编剧的核心技巧》（三幕＝吸引力/预期/满意、十要素）、陆军《编剧理论与技法》（起承转合、开头八法、结尾八法、高潮病、转变八忌、变化六种）。它们互相兼容：**菲尔德给骨架，斯奈德给页码，麦基给原理，霍克斯特给节拍名，希克斯给观众心理，陆军给中国戏剧的实操手法。**\n\n对照表、范例与逐片情节点见同目录 [reference.md](reference.md)。\n\n---\n\n",
+      "preface_disposition": [
+        {
+          "source_scope": "YAML name",
+          "action": "laohu前缀本地身份",
+          "target": "YAML name"
+        },
+        {
+          "source_scope": "YAML description",
+          "action": "保留全部专业范围及应用场景，移除merged-from来源叙述；原作者理论细目仍在完整章节与reference",
+          "target": "YAML description + 四层血肉方法表 + 原章节"
+        },
+        {
+          "source_scope": "H1",
+          "action": "中文专业标题加老胡，英文副标题不携带独有方法",
+          "target": "H1"
+        },
+        {
+          "source_scope": "首段专业职责与体系互补",
+          "action": "职责及工具区别以新导言保留；具体出处清单不写执行前言，原章节作者与方法关联不动",
+          "target": "H1后导言"
+        },
+        {
+          "source_scope": "reference链接",
+          "action": "保留可用相对链接并在血肉层指向完整案例",
+          "target": "导言/血肉层 reference.md"
+        },
+        {
+          "source_scope": "分隔线",
+          "action": "由四层与方法标题分隔，不承载专业信息",
+          "target": "四层之后方法标题"
+        }
+      ],
+      "preservedcraft": "结构负责选择事件、安排次序，让观众愿意进入、持续期待并获得有分量的兑现。范式提供整体骨架，节拍表提供展开位置，价值变化解释推进原理，观众的吸引力、预期与满意检验观看过程，起承转合及开头结尾技法解决具体落笔。",
+      "methods_start_heading": "## 一、结构的层级（麦基）",
+      "replacements": [
+        {
+          "from": "`chekhov-dramaturgy`",
+          "to": "[laohu-chekhov-dramaturgy](../laohu-chekhov-dramaturgy/SKILL.md)",
+          "count": 1
+        },
+        {
+          "from": "`ozu-screenplay-style`",
+          "to": "[laohu-ozu-screenplay-style](../laohu-ozu-screenplay-style/SKILL.md)",
+          "count": 1
+        }
+      ],
+      "reference_sha256": "7ff1cc985e98478a21c7cd125f97c812b1e0f93f38c2406c9baaf455a68f1883",
+      "body_preserved_after_replacements": true,
+      "source_read_complete": true,
+      "author_self_test": "04_诊断与系统日志/编剧能力完整迁移与验证.md",
+      "module": "laohu-story-structure",
+      "body_sha256": "4028cb169f64e6b54d2939338a841afd52d774682cf954a9be7dfe6a65b8cfbc",
+      "source_body_sha256": "40aaf6f105a449d6dca8bed3e3c75a896a2055ad9ddfa8cadb29d5ff65eb35d2",
+      "allowed_edits": [
+        {
+          "from": "`chekhov-dramaturgy`",
+          "to": "[laohu-chekhov-dramaturgy](../laohu-chekhov-dramaturgy/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        },
+        {
+          "from": "`ozu-screenplay-style`",
+          "to": "[laohu-ozu-screenplay-style](../laohu-ozu-screenplay-style/SKILL.md)",
+          "reason": "实际本地能力名称与路径"
+        }
+      ]
+    }
+  ],
+  "formal_output_sha256": "0323f969c45effb5dcb60c4e3326f0fffc546db2929b46d6247ac20b6adddaa7",
+  "source_url": "https://github.com/jtydhr88/screenwriting-skills",
+  "shared_sources": {
+    "04_叙事视角命名与故事因果.md": "编剧共享专业判断或工具，子能力按具体问题引用，单一权威保持原位",
+    "05_剧本语言诊断与反向审稿.md": "编剧共享专业判断或工具，子能力按具体问题引用，单一权威保持原位",
+    "06_故事构件拆解与组合语法.md": "编剧共享专业判断或工具，子能力按具体问题引用，单一权威保持原位",
+    "01_口述故事补全.md": "只负责口述碎片的事实保护、补全和必要追问；对白专业正文由laohu-dialogue维护。"
+  },
+  "workflow": {
+    "source_skill_sha256": "135be843c725a9f53e9d74c4aeade2ae5b7e297b5b0200690f605928926b1429",
+    "source_reference_sha256": "a23b0d29df67c98f4cddb0d1cece6571f9f6ff595c8cc7d8912dd37fc4948796",
+    "mode": "integration, not verbatim runtime copy",
+    "mapping": [
+      [
+        "一、会话协议",
+        "主Skill/创作推进与专业判断：复用总览、状态、决策和阶段记录"
+      ],
+      [
+        "二、阶段图",
+        "主Skill/创作推进与专业判断、开发推进；正式生产状态保持原合同"
+      ],
+      [
+        "三、入口路径",
+        "主Skill/开发推进：按实际输入与缺口选择入口"
+      ],
+      [
+        "四、每阶段最小动作",
+        "主Skill/开发推进管理阶段结果；具体写法由对应专业执行"
+      ],
+      [
+        "五、通过标准怎么用",
+        "主Skill/阶段实质完成与适用条件，不以卡数页数代替判断"
+      ],
+      [
+        "六、Subagent与并行",
+        "主Skill/同版独立反审与统一定稿，主责不并行漂移"
+      ],
+      [
+        "七、反模式",
+        "主Skill/保已定事实、按最早缺口、不空填理论、不多份故事"
+      ],
+      [
+        "八、自检",
+        "主Skill/阶段下一步与原验收流程"
+      ],
+      [
+        "Reference一：story-bible模板",
+        "项目总览承接项目信息；故事设计承接主题结构；人物资料承接人物；场次/正式剧本承接场景与初稿；阶段记录承接修改提交与日志，不另造文件"
+      ],
+      [
+        "Reference二：BS2页码",
+        "结构Skill完整BS2与原Reference，按体量选用而非硬秒数"
+      ],
+      [
+        "Reference三：步骤大纲",
+        "场景Skill写一场戏与主Skill阶段结果，必要项目继承步骤大纲行"
+      ],
+      [
+        "Reference四：修改目标表",
+        "主Skill分层诊断、对白/结构/人物/场景/格式各自清单；每条对应实际场次与修法"
+      ],
+      [
+        "Reference五：虚构填写示例",
+        "源快照研究留存；不引入固定虚构故事为本地默认模板"
+      ],
+      [
+        "Reference六：续写会话话术",
+        "主Skill状态复接和现有沟通模式；不强制照搬三句话"
+      ]
+    ]
+  },
+  "retired_sources": [
+    "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+    "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
+    "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+    "skills/laohu-script-writer/references/04_口述台词与方言.md"
+  ],
+  "source_coverage": {
+    "skills/laohu-script-writer/references/01_创意故事人物与高潮.md": {
+      "character_count": 11209,
+      "professional_start": 79,
+      "source_sha256": "010b67908dcae81d07f0828874a0d1d19299725ac67d04f955765e36dc9c18c6"
+    },
+    "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md": {
+      "character_count": 3811,
+      "professional_start": 70,
+      "source_sha256": "474360b121cda27d4cdc800ba65cc1e8efc7dec49ede795f4cfeef74f82f3324"
+    },
+    "skills/laohu-script-writer/references/03_体量形态编号与连续性.md": {
+      "character_count": 12389,
+      "professional_start": 0,
+      "source_sha256": "69ae2883f2ec3e8d6204d9fc7c1b7c81f3536a458b2788de312e9d12fbf611d3"
+    },
+    "skills/laohu-script-writer/references/04_口述台词与方言.md": {
+      "character_count": 7239,
+      "professional_start": 1218,
+      "source_sha256": "5d7c16e09f4b8bfa650c6e1952ae0cb2a4924dde6dbb39fef7f900b6151b77b4"
+    }
+  },
+  "oral_retained": {
+    "old_source": "skills/laohu-script-writer/references/04_口述台词与方言.md",
+    "target": "skills/laohu-script-writer/references/01_口述故事补全.md",
+    "start": "## 口述故事主动补全与必要追问",
+    "character_count": 1055,
+    "sha256": "17b201b21e011474cbd3e0d7ddb90467a8835801640c8d7bc096738fcb28ca06"
+  },
+  "retirement_policy": "旧混合正文已退出运行目录。逐段哈希、原始区间与当前目标定位用于保真；后续创作只维护当前负责人。",
+  "workflow_refactor": {
+    "source": "skills/laohu-script-writer/SKILL.md",
+    "source_sha256": "61948ef7ed491d7106278ffb352a8c7c8011eb9702241fc2df7b016b2e0f8f7c",
+    "before_characters": 19417,
+    "after_characters": 6363,
+    "sections": [
+      {
+        "source_heading": "## 编剧箴言",
+        "source_sha256": "1611e8a34a27b4b6d3c3c8d3bfc22c8e1fc6de68013dbc5accfed839ed9dd79f",
+        "source_character_count": 177,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "## 输入与责任",
+        "source_sha256": "5f11cc5c5d9826f2fc9ff3af19449543fbd61619fb30892b80e221acf48ad600",
+        "source_character_count": 1005,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 导演协作接口",
+        "source_sha256": "195d31498171d7420ec20de1c14d9f3e24f1d345bab1f16c74d0ec6db207b5f8",
+        "source_character_count": 397,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 创作推进与专业判断",
+        "source_sha256": "f5dd6e5eed5ca4a3728b4914653cee9e93c77e959096c54b1d898729ee0be8ef",
+        "source_character_count": 1853,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 从已有材料进入开发",
+        "source_sha256": "5aa3ad055efcb702292daa9b862cf8ff515b4e7aaa00c23809915fd73a6dd57c",
+        "source_character_count": 693,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 阶段工作如何闭合",
+        "source_sha256": "da9b44f52311267868360785a4c89045ee69063fc80f80a6be2babc1a979156a",
+        "source_character_count": 700,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 语言模式接口",
+        "source_sha256": "af718fe4fae6134a1a6072f0a71dbcf60779ef666d2c664b1e82d6df9edbe06d",
+        "source_character_count": 845,
+        "units": [
+          {
+            "original_sha256": "01f3ed63231fa4e2e2b164738c2c3a3bd0ed15c4eb4005a671e4b56b5a5ec529",
+            "original_anchor": "编剧拥有剧本内容，`laohu-language-mode`只帮助编剧把不同文本块写成它们本来该有的样子。调用不转移主责。正式剧本按块切换：镜头方头用`SCRIPT_HEADER`定位观看条件，`△`",
+            "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "text_sha256": "01f3ed63231fa4e2e2b164738c2c3a3bd0ed15c4eb4005a671e4b56b5a5ec529",
+            "text": "编剧拥有剧本内容，`laohu-language-mode`只帮助编剧把不同文本块写成它们本来该有的样子。调用不转移主责。正式剧本按块切换：镜头方头用`SCRIPT_HEADER`定位观看条件，`△`正文用`SCRIPT_ACTION`写可见可听的连续事件，台词前括号用`PERFORMANCE_CUE`锁定情绪阶段、压制或释放、可听语气和关系动作，人物原话用`CHARACTER_DIALOGUE`完成当场行动，非镜头事件才进入`SCRIPT_NOTE`。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "5cb2b56b10ed4c976a1b8b70c18d6a2aadcfd93787282a6395d2c13339e65aaa",
+            "original_anchor": "每句有声台词必须能追溯到可执行表演信息：可逐句括注，也可在本场开头显式声明角色表演基线、适用镜号或台词范围，以及“未另标者继承本场基线”。情绪、关系目的、可听语气或声源变化处单独标注；跨场不自动继承。",
+            "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "text_sha256": "5cb2b56b10ed4c976a1b8b70c18d6a2aadcfd93787282a6395d2c13339e65aaa",
+            "text": "每句有声台词必须能追溯到可执行表演信息：可逐句括注，也可在本场开头显式声明角色表演基线、适用镜号或台词范围，以及“未另标者继承本场基线”。情绪、关系目的、可听语气或声源变化处单独标注；跨场不自动继承。声源位置不等于表演状态，O.S. / V.O. 只说明声源，不能代替表演。括号不能冒充人物台词，作者解释不能混入动作正文，知识说明不能把人物说话写成知识卡。返工某一块时保护已确认镜号、因果、空间、动作结果和冻结台词；内容不足或块间事实冲突时停止改写并返回原负责人，而不是为了自然顺口擅自补戏。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "610ba14f0d84c650b4d5d18624ff48bda94eea4b59741d80ef5ac1b972ec162c",
+            "original_anchor": "正式剧本初稿完成后调用语言模式的[有效信息与冗余裁决](../laohu-language-mode/references/05_有效信息与冗余裁决.md)。先过必要信息保护门：教学知识、人物关系、动",
+            "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "text_sha256": "bdb9e3970168feffb9e8f6686a17a871f4f1d7e46f5d03ce8af795213fee1cfb",
+            "text": "正式剧本初稿完成后调用语言模式的[有效信息与冗余裁决](../../laohu-language-mode/references/05_有效信息与冗余裁决.md)。先过必要信息保护门：教学知识、人物关系、动作因果、空间连续、镜尾把手和冻结台词不能因追求短而丢失；再过边际作用门：每轮台词至少改变关系、行动、压力、误会、笑点、必要理解或节奏之一，动作分句则必须推进触发、路径、交互、结果或承接。零边际内容由编剧决定合并、迁移或删除；缺的是人物动机、知识、动作资格或场面因果时返回原负责人，语言模式不得代写。",
+            "action": "MOVE",
+            "allowed_link_change": true
+          },
+          {
+            "original_sha256": "72ae25edb56b08741762979625f3132796ce6517ee03cebad3a617f6a50d44e0",
+            "original_anchor": "若要求修整份剧本，编剧还必须过语言模式的整稿覆盖门：对实际出现的方头、动作、表演括注、人物台词、剧本注释和生产说明分别作出块级处理回执。不能只改台词就宣布整稿完成，也不能把“保留原样”当成“没有审过”",
+            "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "text_sha256": "72ae25edb56b08741762979625f3132796ce6517ee03cebad3a617f6a50d44e0",
+            "text": "若要求修整份剧本，编剧还必须过语言模式的整稿覆盖门：对实际出现的方头、动作、表演括注、人物台词、剧本注释和生产说明分别作出块级处理回执。不能只改台词就宣布整稿完成，也不能把“保留原样”当成“没有审过”。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "## 故事因果",
+        "source_sha256": "2c5a837c7c7a86cf76143a61fd4a6ec4ab1128be12b8d00e64746767fcd0ce96",
+        "source_character_count": 9,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 观众等待",
+        "source_sha256": "406b2ddd4e1f4a5986a36c46c0b0a4d1593e846a55f27236eb140857fa1d2b71",
+        "source_character_count": 934,
+        "units": [
+          {
+            "original_sha256": "5edc762e7ff52366f38cb58acba29c159260de5bc4436762b542c43548d8f65c",
+            "original_anchor": "先用一句普通话回答：观众为什么愿意继续看？",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "5edc762e7ff52366f38cb58acba29c159260de5bc4436762b542c43548d8f65c",
+            "text": "先用一句普通话回答：观众为什么愿意继续看？",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "07c85f53e1c806babcc79236fcdc82262902af8c150fd21d22e02585f5b5d0b9",
+            "original_anchor": "好的等待不是“接下来会发生什么”的空悬念，而是一个尚未解决的具体状态：拿不到的东西、说不出口的话、过不去的门、不能撤回的结果、尚未回应的请求、正在逼近的危险或仍未兑现的承诺。",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "07c85f53e1c806babcc79236fcdc82262902af8c150fd21d22e02585f5b5d0b9",
+            "text": "好的等待不是“接下来会发生什么”的空悬念，而是一个尚未解决的具体状态：拿不到的东西、说不出口的话、过不去的门、不能撤回的结果、尚未回应的请求、正在逼近的危险或仍未兑现的承诺。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "7c34ff67e54fab0df137a0b7921c6b5e53a566ce1899e016b8944bc43d437b8c",
+            "original_anchor": "每个关键节拍记录：",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "7c34ff67e54fab0df137a0b7921c6b5e53a566ce1899e016b8944bc43d437b8c",
+            "text": "每个关键节拍记录：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "3dce1f5f6b029ea1c9834de4834034ad26c74a9c9f4166e11c2a463758a0c2f8",
+            "original_anchor": "```text\n观众已经知道什么：\n观众暂时相信什么：\n观众正在等什么：\n人物此刻想让谁做什么：\n这一节拍改变了什么状态：\n下一场压力从哪里来：\n```",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "3dce1f5f6b029ea1c9834de4834034ad26c74a9c9f4166e11c2a463758a0c2f8",
+            "text": "```text\n观众已经知道什么：\n观众暂时相信什么：\n观众正在等什么：\n人物此刻想让谁做什么：\n这一节拍改变了什么状态：\n下一场压力从哪里来：\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "e9415f69f3270a59c898dde5ed4e7a4385440a9bc301fc860fc74badd5dc0495",
+            "original_anchor": "作者知道答案，不等于观众已经知道。剧本按观众的发现顺序安排信息，角色只能根据自己掌握的事实行动和说话。",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "e9415f69f3270a59c898dde5ed4e7a4385440a9bc301fc860fc74badd5dc0495",
+            "text": "作者知道答案，不等于观众已经知道。剧本按观众的发现顺序安排信息，角色只能根据自己掌握的事实行动和说话。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "d594368d8c0157ada06a655e7937a4a2ef8bf091c6ee7b0ab7ef306b2ba793e7",
+            "original_anchor": "钩子不是故意少讲，而是让观众凭足够证据开始预测一个尚未完成的结果。重要开场和关键节拍执行观众预期契约（期待契约）：",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "d594368d8c0157ada06a655e7937a4a2ef8bf091c6ee7b0ab7ef306b2ba793e7",
+            "text": "钩子不是故意少讲，而是让观众凭足够证据开始预测一个尚未完成的结果。重要开场和关键节拍执行观众预期契约（期待契约）：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "65ea7c5695b63a4b58bdfea2e49f8a655ae6ac6830b1d59b1cf4ac4dcec4cebd",
+            "original_anchor": "```text\n可见证据 → 暂时判断 → 可预见压力 → 未揭变量 → 部分兑现\n人物正在采取的行动：\n后续处理：完成 / 扩大 / 推翻 / 重新解释。\n```",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "65ea7c5695b63a4b58bdfea2e49f8a655ae6ac6830b1d59b1cf4ac4dcec4cebd",
+            "text": "```text\n可见证据 → 暂时判断 → 可预见压力 → 未揭变量 → 部分兑现\n人物正在采取的行动：\n后续处理：完成 / 扩大 / 推翻 / 重新解释。\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "d6eeb7be52371533db51dbbceda3b050f75137df8bd28e908017ae75e9e287de",
+            "original_anchor": "开场先确定一个主要注意入口：人物、规则概念或眼前危机。其他信息只能从属，不同时争夺观众第一判断。使用强钩子、伏笔或反转时建立承诺—兑现账本，记录开场由哪个动作、物件、台词、声音或空间提出问题，中段怎样",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "d6eeb7be52371533db51dbbceda3b050f75137df8bd28e908017ae75e9e287de",
+            "text": "开场先确定一个主要注意入口：人物、规则概念或眼前危机。其他信息只能从属，不同时争夺观众第一判断。使用强钩子、伏笔或反转时建立承诺—兑现账本，记录开场由哪个动作、物件、台词、声音或空间提出问题，中段怎样改变意义，结尾怎样兑现或重新解释。开放式和低烈度作品不机械闭环，但必须留下真实的关系或情绪余波。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "ae1edf229cd97226c1034ecb1f20130ea1b922aa7433e35258be8454136a1da8",
+            "original_anchor": "悬念、调查、误解、关系秘密、倒计时、产品问题或知识解答承担观看牵引时，编剧还要形成`观众问题—答案交接`，供分镜和视频负责人分配声画节奏。按节拍记录当前问题怎样被`建立 / 加压 / 延迟 / 部分回",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "ae1edf229cd97226c1034ecb1f20130ea1b922aa7433e35258be8454136a1da8",
+            "text": "悬念、调查、误解、关系秘密、倒计时、产品问题或知识解答承担观看牵引时，编剧还要形成`观众问题—答案交接`，供分镜和视频负责人分配声画节奏。按节拍记录当前问题怎样被`建立 / 加压 / 延迟 / 部分回答 / 回答 / 改写`，以及哪项可见或可听证据允许观众更新判断。延迟只能隐藏尚未到期的原因、身份、选择或结果，不能删掉理解当下行动所需的事实；新问题必须由旧问题的答案或后果长出来，不能靠无关异常续命。开放式作品可以不回答事实，但要交代主要关系或情绪运动在哪里完成。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "0893c9ab040f8042c09fb3e4f0c0f43d74480cbd613de239d515fa0a64951946",
+            "original_anchor": "教学、知识解释或演示是观众公开承诺时，知识线是不可补偿的主任务：观众必须知道这期在学什么、正在看哪项证据、本拍新记住什么。喜剧和人物关系负责让它好看、好记，不能反复把知识本身改写成人物需要争输赢的论点",
+            "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+            "text_sha256": "0893c9ab040f8042c09fb3e4f0c0f43d74480cbd613de239d515fa0a64951946",
+            "text": "教学、知识解释或演示是观众公开承诺时，知识线是不可补偿的主任务：观众必须知道这期在学什么、正在看哪项证据、本拍新记住什么。喜剧和人物关系负责让它好看、好记，不能反复把知识本身改写成人物需要争输赢的论点。开场可以直接建立学习任务；冲突发生后，再让人物在追逃、示范或后果中继续交答案。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 人物选择",
+        "source_sha256": "99780634462fa1d386c03b75877af1d13f39554da7bd1db5692e61b2ae8cec98",
+        "source_character_count": 214,
+        "units": [
+          {
+            "original_sha256": "262198d5d3891bc21cadb4554b6a0be64f24845b9fd023b4a6b6cd4f2f85f6f1",
+            "original_anchor": "重要人物至少建立：",
+            "target": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+            "text_sha256": "262198d5d3891bc21cadb4554b6a0be64f24845b9fd023b4a6b6cd4f2f85f6f1",
+            "text": "重要人物至少建立：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "c642bc366d9629a92f3b069f65a6dd796ac0275c287b0473c0e9db3f6af99ae8",
+            "original_anchor": "```text\n表层目标：眼前想得到什么。\n深层需要：真正缺的是什么。\n错误信念：他为什么一直用错误办法。\n恐惧与代价：什么让他不愿改变。\n可见策略：他通常怎样试探、逃避、压制、保护或争取。\n阈值选择",
+            "target": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+            "text_sha256": "c642bc366d9629a92f3b069f65a6dd796ac0275c287b0473c0e9db3f6af99ae8",
+            "text": "```text\n表层目标：眼前想得到什么。\n深层需要：真正缺的是什么。\n错误信念：他为什么一直用错误办法。\n恐惧与代价：什么让他不愿改变。\n可见策略：他通常怎样试探、逃避、压制、保护或争取。\n阈值选择：什么事件逼他不能再照旧。\n选择结果：他做了什么，失去或承担了什么。\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "5e32d643a2cebc3d2810125d6b129b2afffb9f6cc96be42de669687890f030a8",
+            "original_anchor": "人物性格要由不同处境下反复出现、但会随压力变化的选择证明。一个口头禅、一个表情或一次换装不能代替人物。",
+            "target": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+            "text_sha256": "5e32d643a2cebc3d2810125d6b129b2afffb9f6cc96be42de669687890f030a8",
+            "text": "人物性格要由不同处境下反复出现、但会随压力变化的选择证明。一个口头禅、一个表情或一次换装不能代替人物。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 动机、行动与物件",
+        "source_sha256": "1b9f3f2c574e66ef1e742c8ab6b1fa91921a8da18c101e481093bdaba5bf647d",
+        "source_character_count": 284,
+        "units": [
+          {
+            "original_sha256": "233e9821cf983cb301aa55f2eb869a4cda18bd2992a5b4142a3ac1b0da4b3f9f",
+            "original_anchor": "人物每个承重动作都要回答：他当下想改变谁或什么，为什么选择这个动作和这件物品，动作带来什么即时结果。台词与动作可以同向，也可以因为两难、伪装、犹豫或失控而表面相反；但相反必须由前后目的、精确触发和关系",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "233e9821cf983cb301aa55f2eb869a4cda18bd2992a5b4142a3ac1b0da4b3f9f",
+            "text": "人物每个承重动作都要回答：他当下想改变谁或什么，为什么选择这个动作和这件物品，动作带来什么即时结果。台词与动作可以同向，也可以因为两难、伪装、犹豫或失控而表面相反；但相反必须由前后目的、精确触发和关系后果共同证明。没有这条因果却让人物说一套做一套，不是潜台词，是剧本错误。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "1d3e1abf0d0811c131e125157dccaddc69443cddb9fb6451f367a608427ef161",
+            "original_anchor": "关键物件按控制权写进场次：它起初在谁手里、谁把它放到谁面前、谁能拿走、谁越过阻拦重新取得、最后停在哪里。物件一旦改变人物选择、身体代价或关系权力，就不能只写成场景名词；下游必须能从剧本知道它的叙事职责",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "1d3e1abf0d0811c131e125157dccaddc69443cddb9fb6451f367a608427ef161",
+            "text": "关键物件按控制权写进场次：它起初在谁手里、谁把它放到谁面前、谁能拿走、谁越过阻拦重新取得、最后停在哪里。物件一旦改变人物选择、身体代价或关系权力，就不能只写成场景名词；下游必须能从剧本知道它的叙事职责和动作结果。普通陈设仍留给资产与分镜，不把剧本写成物品清单。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 局部样例也必须闭合微场次",
+        "source_sha256": "400deba3e295727b6142a7d5a2fbb84b9a57eeb6e784ecad1587c1546b9a96b3",
+        "source_character_count": 302,
+        "units": [
+          {
+            "original_sha256": "0ba2b1bf5cdf970c8b902fc687346ed75572af3af2da4854552e22b1de4ec1ae",
+            "original_anchor": "语气样例、开场试写、局部对白和单个节拍可以省略与当前关系无关的背景和制作细节，不能省略使当前关系成立的因果。交付前至少能从正文看出：谁拥有或操控关键物件；谁先做什么；哪项可见或可听证据触发另一人开口或",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "0ba2b1bf5cdf970c8b902fc687346ed75572af3af2da4854552e22b1de4ec1ae",
+            "text": "语气样例、开场试写、局部对白和单个节拍可以省略与当前关系无关的背景和制作细节，不能省略使当前关系成立的因果。交付前至少能从正文看出：谁拥有或操控关键物件；谁先做什么；哪项可见或可听证据触发另一人开口或打断；被打断的话具体尚未完成什么信息或行动；说完后控制权、距离、信息或下一步发生什么变化。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "8e79c3988c3399602620487aad8d64cfe0a30b234c98e07d3d5d1e6110bbf95e",
+            "original_anchor": "“我还没说完”“你又来”“等一下”等依赖前文的句子，只有观众能准确追回它所指的未完成内容时才能保留；追回不了就补足前一动作或话头，或改成在现场能独立成立的具体反应。样例不是提纲：若删去动作主体、道具位",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "8e79c3988c3399602620487aad8d64cfe0a30b234c98e07d3d5d1e6110bbf95e",
+            "text": "“我还没说完”“你又来”“等一下”等依赖前文的句子，只有观众能准确追回它所指的未完成内容时才能保留；追回不了就补足前一动作或话头，或改成在现场能独立成立的具体反应。样例不是提纲：若删去动作主体、道具位置或开口触发后会出现两个合理但冲突的解释，就继续写到只剩一个主要因果。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 教学喜剧的对白场景合同",
+        "source_sha256": "3a7b0f2972bb9ffeef3297f84fa9611f1f932e60520b9deed300916982a3d17c",
+        "source_character_count": 675,
+        "units": [
+          {
+            "original_sha256": "b85ba205dc4b5e12b680ea349a251102fdc1802608bd9ab923f2d34d18b70083",
+            "original_anchor": "两个或多个人物要一边教、一边斗嘴或动作时，写正文前先形成以下中间结果：",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+            "text_sha256": "b85ba205dc4b5e12b680ea349a251102fdc1802608bd9ab923f2d34d18b70083",
+            "text": "两个或多个人物要一边教、一边斗嘴或动作时，写正文前先形成以下中间结果：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "c1ad7f00d22148671e15cb4e0559d3f671312cc30ddfe3d507e61943e984d3b3",
+            "original_anchor": "```text\n本拍观众新记住的知识：\n开口前观众已看见或听见的事实：\n人物 A 当下想让对方怎样：\n人物 B 当下想保住或破坏什么：\n本拍谁负责按普通人逻辑承接现实：\n喜剧偏离由哪个可见事实、关系特",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+            "text_sha256": "c1ad7f00d22148671e15cb4e0559d3f671312cc30ddfe3d507e61943e984d3b3",
+            "text": "```text\n本拍观众新记住的知识：\n开口前观众已看见或听见的事实：\n人物 A 当下想让对方怎样：\n人物 B 当下想保住或破坏什么：\n本拍谁负责按普通人逻辑承接现实：\n喜剧偏离由哪个可见事实、关系特权或残留后果触发：\n这一拍让下一拍不得不发生什么：\n本段唯一主喜剧引擎：\n本段禁止补写的作者结论或机关句：\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "85ddaa3e29cb505a39dcfcadef5a8d33551dbb7fa5b2cf431d4547b2183ad56b",
+            "original_anchor": "知识句负责让观众听懂，关系句负责试探、嘲讽、拆台或护短，桥接句负责让下一动作只能从当前后果长出来。一句可以兼任，但不要每句都同时交知识、抖机灵、触发打斗和总结主题。",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+            "text_sha256": "85ddaa3e29cb505a39dcfcadef5a8d33551dbb7fa5b2cf431d4547b2183ad56b",
+            "text": "知识句负责让观众听懂，关系句负责试探、嘲讽、拆台或护短，桥接句负责让下一动作只能从当前后果长出来。一句可以兼任，但不要每句都同时交知识、抖机灵、触发打斗和总结主题。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "8b879ad28d7c5a99bfdde964916a73efac33f25d70b6ae159a68e97abca79a02",
+            "original_anchor": "同一拨冲突已经发动后，后续节拍可以由追逃、脱身、报答案、被听不见、故意抓字眼或前一次后果继续推进。这里禁止的是“为了展示手法而给每个知识点机械排一个机关”，不是禁止已经成立的人物反复用语言占便宜。若熟",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+            "text_sha256": "8b879ad28d7c5a99bfdde964916a73efac33f25d70b6ae159a68e97abca79a02",
+            "text": "同一拨冲突已经发动后，后续节拍可以由追逃、脱身、报答案、被听不见、故意抓字眼或前一次后果继续推进。这里禁止的是“为了展示手法而给每个知识点机械排一个机关”，不是禁止已经成立的人物反复用语言占便宜。若熟人关系的核心乐趣就是一方明明听懂、仍故意曲解对方给自己找动手理由，可以在几个关键升级点形成变奏式回声；每次必须先让观众听懂知识原义，再由不同现场事实触发，并兑现为不同动作和后果。同一拍默认一人负责普通现实，另一人负责偏离；除非一个可见事件完成翻转，不让双方连续说同样工整的俏皮话。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "3b4038d24ee86e9f5abd25dd3df0bd53178850c99b25380947f34762e0f0af33",
+            "original_anchor": "已确认的语言机关不能只在一句台词里露面。凡人物故意换义并借此发动动作，先形成`语言机关兑现合同`，锁定已确认原词、人物故意换义、当场台词、下一动作、动作结果和跨镜头保留项；镜头若在台词后切开，下一镜仍",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+            "text_sha256": "3b4038d24ee86e9f5abd25dd3df0bd53178850c99b25380947f34762e0f0af33",
+            "text": "已确认的语言机关不能只在一句台词里露面。凡人物故意换义并借此发动动作，先形成`语言机关兑现合同`，锁定已确认原词、人物故意换义、当场台词、下一动作、动作结果和跨镜头保留项；镜头若在台词后切开，下一镜仍要兑现同一个词语机关，下一镜不得退回普通招式名、泛化动作或同义改写。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 场次压力",
+        "source_sha256": "675f2b124e6004f8a99a16ac4532315aef1ced4a5d22ce5a7cdfdb9b978f2b24",
+        "source_character_count": 208,
+        "units": [
+          {
+            "original_sha256": "a82fdc92ffd1b08561d3b617a100c51e7fa4ad0ae4609281e50fc2f286a32549",
+            "original_anchor": "每场戏都要完成一次状态变化：",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "a82fdc92ffd1b08561d3b617a100c51e7fa4ad0ae4609281e50fc2f286a32549",
+            "text": "每场戏都要完成一次状态变化：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "fd1e5340026c8189b3548124f8d48c0e2d48603ebc3a0788cf4b63f257ad4f87",
+            "original_anchor": "```text\n进入：人物带着什么目标和前一场余势进入。\n施压：谁或什么阻止他，压力怎样升级。\n选择：人物采取什么行动，不采取什么行动。\n结果：关系、信息、道具、空间或身体发生什么变化。\n牵引：哪个未",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "fd1e5340026c8189b3548124f8d48c0e2d48603ebc3a0788cf4b63f257ad4f87",
+            "text": "```text\n进入：人物带着什么目标和前一场余势进入。\n施压：谁或什么阻止他，压力怎样升级。\n选择：人物采取什么行动，不采取什么行动。\n结果：关系、信息、道具、空间或身体发生什么变化。\n牵引：哪个未解决状态形成下一场压力。\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "1bfe45a7f813f761e4e6fe274c58adb38b01320e0a37c3615e31c3c2d39ccd02",
+            "original_anchor": "场次可以外部安静，但内部不能停止变化。文艺、观察和氛围作品可以靠等待、距离、误解和表演推进，不为套公式强造争吵、反转或爆炸。",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "1bfe45a7f813f761e4e6fe274c58adb38b01320e0a37c3615e31c3c2d39ccd02",
+            "text": "场次可以外部安静，但内部不能停止变化。文艺、观察和氛围作品可以靠等待、距离、误解和表演推进，不为套公式强造争吵、反转或爆炸。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 文戏与武戏",
+        "source_sha256": "22e4738a806fdf68bffb0c7870a21e9cc68f3e057f3bb223073e5e69e6bddc18",
+        "source_character_count": 579,
+        "units": [
+          {
+            "original_sha256": "cc1222b918377b80f1103e3fd9cabdf2a13a836bc996ec44ae57ec882ad77afd",
+            "original_anchor": "文戏的动作单位是关系变化。台词要有目的并造成后果：试探、求救、保护、拒绝、压制、邀请、切断、告别或挽留。高潮台词不替作者总结主题；没有说完的话由表情、动作、物件、空间和另一个人的反应承接。",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "cc1222b918377b80f1103e3fd9cabdf2a13a836bc996ec44ae57ec882ad77afd",
+            "text": "文戏的动作单位是关系变化。台词要有目的并造成后果：试探、求救、保护、拒绝、压制、邀请、切断、告别或挽留。高潮台词不替作者总结主题；没有说完的话由表情、动作、物件、空间和另一个人的反应承接。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "98a2788c6780d030a889416ce0a1481ea98b7f97e8a51aac8fed4ea05f08c084",
+            "original_anchor": "武戏的动作单位是力量关系变化。剧本至少交代力量从哪里来、向哪里去、谁被迫选择、接触造成什么结果、余势怎样进入下一动作。凡追逐、打斗、变身、破坏、救援、机甲或超常位移承重，先完成`动作因果交接合同`：世",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "714bab1da94940363e674f804d3cbe085596f5c0df461803ab2a8dc2e27a9115",
+            "text": "武戏的动作单位是力量关系变化。剧本至少交代力量从哪里来、向哪里去、谁被迫选择、接触造成什么结果、余势怎样进入下一动作。凡追逐、打斗、变身、破坏、救援、机甲或超常位移承重，先完成`动作因果交接合同`：世界能力基线、起始条件、战术目的、发力来源、能力触发、运动路径、环境交互、接触点、受力结果和镜尾把手。人物若能追上、闪现、击飞或撞穿，必须先用速度差、支点、蓄力、装备、术法、材料弱点或前一招余势取得这个结果；不能只写目标忽然出现在攻击范围内。剧本须确认基本观看侧、机位与视轴；焦段、器材和摄影机精确执行参数由后续专业深化，但不能把“激烈打斗、翻身下马、大楼爆炸”当作完整因果。",
+            "action": "MOVE",
+            "allowed_link_change": false,
+            "pre_adaptation_text": "武戏的动作单位是力量关系变化。剧本至少交代力量从哪里来、向哪里去、谁被迫选择、接触造成什么结果、余势怎样进入下一动作。凡追逐、打斗、变身、破坏、救援、机甲或超常位移承重，先完成`动作因果交接合同`：世界能力基线、起始条件、战术目的、发力来源、能力触发、运动路径、环境交互、接触点、受力结果和镜尾把手。人物若能追上、闪现、击飞或撞穿，必须先用速度差、支点、蓄力、装备、术法、材料弱点或前一招余势取得这个结果；不能只写目标忽然出现在攻击范围内。剧本不替分镜写焦段和机位，但不能把“激烈打斗、翻身下马、大楼爆炸”当作完整因果。",
+            "adaptation_reason": "消除旧分镜边界与现行镜头化制作合同冲突；保留动作因果方法"
+          },
+          {
+            "original_sha256": "baf03ff550beb98a1671c3145ffacc5dd64272bd2e96a8a0f7bed00fd7fc7f8a",
+            "original_anchor": "动作合同按完整动作单元闭合，不要求每个简单动作句机械填十个字段。一个眼神、坐下或普通走路可以一句完成；一项超常攻击可以跨相邻镜号分别展示蓄势、位移、接触和结果，但每一镜都要继承上一镜状态，并只承担一个",
+            "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+            "text_sha256": "baf03ff550beb98a1671c3145ffacc5dd64272bd2e96a8a0f7bed00fd7fc7f8a",
+            "text": "动作合同按完整动作单元闭合，不要求每个简单动作句机械填十个字段。一个眼神、坐下或普通走路可以一句完成；一项超常攻击可以跨相邻镜号分别展示蓄势、位移、接触和结果，但每一镜都要继承上一镜状态，并只承担一个主要画面内容。分工原则是：`剧本锁因果，提示词扩颗粒`。剧本锁定为什么发生、怎样发生和发生后改变什么；视频提示词只能深化速度、相位、碎片尺度、烟尘层次、材质响应、光影传播和模型控制，不能第一次补造人物获得结果的资格。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 语言与材料",
+        "source_sha256": "78f18d07d3142a973683f9855149111b3300f99d9bc067faf215a7c392926f13",
+        "source_character_count": 1514,
+        "units": [
+          {
+            "original_sha256": "7ff9f64289dcd7fb510bdaff5c24d6cbd5b6e656b4f7a444b3ce050fc3482af4",
+            "original_anchor": "先找关系，再炼句子。关键台词、片名、钩子、主物象和结尾不能直接采用模型第一反应。",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+            "text_sha256": "7ff9f64289dcd7fb510bdaff5c24d6cbd5b6e656b4f7a444b3ce050fc3482af4",
+            "text": "先找关系，再炼句子。关键台词、片名、钩子、主物象和结尾不能直接采用模型第一反应。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "c7bcbd14e83810e7021bf74f30fec678e9aaafb1b1c640a0fc5287f28730593e",
+            "original_anchor": "人物声音不先由口头禅、方言或句式决定，而由他怎样看见、解释和应对世界决定。编剧负责的是`写作声音`：人物优先感知什么、怎样解释、想用语言改变谁、回避什么，以及说完会怎样行动；它决定台词 / OS / ",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+            "text_sha256": "c7bcbd14e83810e7021bf74f30fec678e9aaafb1b1c640a0fc5287f28730593e",
+            "text": "人物声音不先由口头禅、方言或句式决定，而由他怎样看见、解释和应对世界决定。编剧负责的是`写作声音`：人物优先感知什么、怎样解释、想用语言改变谁、回避什么，以及说完会怎样行动；它决定台词 / OS / VO 的内容与语言策略，不决定演员的生理音区、音色，也不逐镜导演最终呼吸、口型、FACS强度和模型参数。但这条边界不允许编剧把情绪缩成一个形容词交给下游补猜：承重节拍必须先锁定情绪阶段、关系目的、精确触发、可见泄露、台词策略、句后行动与终点和禁止提前反应。重要人物写台词、OS或VO前建立人物声音合同：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "9359c52ac0ae56ab8a995604e57303982470fefccff0c63cbbdd09b137401b41",
+            "original_anchor": "```text\n他优先注意什么：\n哪些职业、生活或身体经验支持这种注意：\n他会怎样解释证据：\n他想让谁做什么：\n他最不愿直接说出什么：\n压力下会泄露的价值判断：\n未说出的普通愿望：\n这段话之后的当场行",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+            "text_sha256": "2e24f140775bbde5d2d5caabed3b449ed29dce36efb00841b6306873eca15f5f",
+            "text": "沿用本文件“人物先怎样看，再怎样说”的人物声音合同，不另建第二份。把“哪些职业、生活或身体经验支持这种注意”纳入已有前史证据，把压力下泄露的判断纳入欲望与恐惧，把可见后果接在既有话后行动之后；同一合同再补以下校准信息：\n\n```text\n权威人物资产或语言样本来源：\n本关系状态中已确认的 3–8 句原话：\n原话共同显示的句长、直接程度、攻防方式与留白：\n```",
+            "action": "MOVE",
+            "allowed_link_change": false,
+            "pre_adaptation_text": "```text\n他优先注意什么：\n哪些职业、生活或身体经验支持这种注意：\n他会怎样解释证据：\n他想让谁做什么：\n他最不愿直接说出什么：\n压力下会泄露的价值判断：\n未说出的普通愿望：\n这段话之后的当场行动和可见后果：\n权威人物资产或语言样本来源：\n本关系状态中已确认的 3–8 句原话：\n原话共同显示的句长、直接程度、攻防方式与留白：\n```",
+            "adaptation_reason": "合并重复人物声音合同；保留既有证据、解释、愿望、行动字段，补充唯一的关系样本校准字段"
+          },
+          {
+            "original_sha256": "87057dd23f364bd408b94be7b1c7cf3e2e757b55504eb119a418ae347c402d60",
+            "original_anchor": "人物声音合同回答“这个人为什么这样说”，`情绪交接合同`回答“他在这一拍怎样从一个状态走到另一个状态”。每句有声台词必须能追溯到可执行表演信息：可逐句括注，也可在本场开头显式声明角色表演基线、适用镜号",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+            "text_sha256": "5adb98b119520a04035a8056cd6c8777ab194d74d604583072809b006b566cf4",
+            "text": "人物声音合同回答“这个人为什么这样说”，`情绪交接合同`回答“他在这一拍怎样从一个状态走到另一个状态”。每句有声台词必须能追溯到可执行表演信息：可逐句括注，也可在本场开头显式声明角色表演基线、适用镜号或台词范围，以及“未另标者继承本场基线”。情绪、关系目的、可听语气或声源变化处单独标注；跨场不自动继承。声源位置不等于表演状态，O.S. / V.O. 只说明声源，不能代替表演。承重转折再展开完整情绪合同。详细格式见[对白与表演方法](#人物声音与当场演法)。剧本负责锁定因果和可表演证据，`laohu-audio-design`与`laohu-video-prompt`只能深化声音、面部、身体和时间相位，不能第一次发明人物为什么变、何时变。",
+            "action": "MOVE",
+            "allowed_link_change": true
+          },
+          {
+            "original_sha256": "c6022e3ce29cbf4862539180cf4b9980524f33bcde8fc58594875e67dd7f7f72",
+            "original_anchor": "已有长期人物资产时，必须读取权威来源，不能只携带“温柔、调皮、小恶魔”等抽象性格标签就开始写。标签只能约束方向，已确认的真实原话才能校准这个人的句子长度、直接程度、调侃对象和什么地方不解释。人物切换关",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+            "text_sha256": "c6022e3ce29cbf4862539180cf4b9980524f33bcde8fc58594875e67dd7f7f72",
+            "text": "已有长期人物资产时，必须读取权威来源，不能只携带“温柔、调皮、小恶魔”等抽象性格标签就开始写。标签只能约束方向，已确认的真实原话才能校准这个人的句子长度、直接程度、调侃对象和什么地方不解释。人物切换关系状态时，只调用对应关系的样本，不把对外礼貌腔移植到私下斗嘴，也不把私下攻击性扩展给陌生人。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "e84be03bfb27a8e74a26088593372455cf70797d004d1b01e523c4d8fbb8d849",
+            "original_anchor": "正式交接时把已经定稿、下游不得改写的台词 / OS / VO 明确标为`冻结台词`，并交给`laohu-audio-design`编译自然语言音色描述、当场演法和可生成音频任务。音频设计可以为稳定发音",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+            "text_sha256": "e84be03bfb27a8e74a26088593372455cf70797d004d1b01e523c4d8fbb8d849",
+            "text": "正式交接时把已经定稿、下游不得改写的台词 / OS / VO 明确标为`冻结台词`，并交给`laohu-audio-design`编译自然语言音色描述、当场演法和可生成音频任务。音频设计可以为稳定发音而建立可读规整文本，但不能改变原句语义、人物策略和关系后果。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "33b3aa717c4ac68389890c49d9a89f74433d89437b50386b64d5748bc1304d56",
+            "original_anchor": "口头禅、方言词和金句都不能单独证明人物。强表达至少要暴露一项只属于此人的感知、判断、回避、愿望或行动策略，并回到`感知证据 → 人物解释 → 当场行动 → 可见后果`。详细方法只在人物声音、台词、OS",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+            "text_sha256": "99118e76647ddbeac3745f75a5758045d2e14087f70b094ff503d2161766a70c",
+            "text": "口头禅、方言词和金句都不能单独证明人物。强表达至少要暴露一项只属于此人的感知、判断、回避、愿望或行动策略，并回到`感知证据 → 人物解释 → 当场行动 → 可见后果`。详细方法只在人物声音、台词、OS、VO、方言或文学样章承重时读取[对白与表演方法](#人物声音与当场演法)。",
+            "action": "MOVE",
+            "allowed_link_change": true
+          },
+          {
+            "original_sha256": "e0b700395b60595774fb468f6b290dd7e2b5929eb8983fa9d7fa8b4a2c853609",
+            "original_anchor": "```text\n写出第一反应\n→ 把它当作平均值候选\n→ 从人物立场、关系命名、动作证据、声音节奏和留白生成不同方向\n→ 淘汰换到同题材另一篇仍成立的句子\n→ 真人朗读\n→ 只保留这个人物在这个处境里",
+            "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+            "text_sha256": "e0b700395b60595774fb468f6b290dd7e2b5929eb8983fa9d7fa8b4a2c853609",
+            "text": "```text\n写出第一反应\n→ 把它当作平均值候选\n→ 从人物立场、关系命名、动作证据、声音节奏和留白生成不同方向\n→ 淘汰换到同题材另一篇仍成立的句子\n→ 真人朗读\n→ 只保留这个人物在这个处境里会说、也说得出口的话\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "8310ea610f87aa52693a490880fa3a126559ba58440456c58f97530c6136a7d2",
+            "original_anchor": "材料不以“私人小物件”自动取胜，也不以“宏大意象”自动高级。选择能承担当前关系和主题、又能进入公共经验的材料：它可以是一把钥匙，也可以是一座城；关键不是大小，而是它与人物、处境和结果之间有没有不可替代",
+            "target": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+            "text_sha256": "8310ea610f87aa52693a490880fa3a126559ba58440456c58f97530c6136a7d2",
+            "text": "材料不以“私人小物件”自动取胜，也不以“宏大意象”自动高级。选择能承担当前关系和主题、又能进入公共经验的材料：它可以是一把钥匙，也可以是一座城；关键不是大小，而是它与人物、处境和结果之间有没有不可替代的关系。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "## 剧本开发",
+        "source_sha256": "6e0ab15af0d786fbe0f574f2c6623345898bf585078a48926b095788c7d349b8",
+        "source_character_count": 9,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 任务分型",
+        "source_sha256": "020a402b053a79c72cde65340b154f6a92ecc8b502ed04abb2bc851e44102cd0",
+        "source_character_count": 345,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 素材查询合同",
+        "source_sha256": "59ce55ee1a7c352169ffe978951226d3547f770c9219f19b6e9fc69a88f32340",
+        "source_character_count": 929,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 故事构件查询合同",
+        "source_sha256": "46553186b20eccc1deb6bcc06a8bffde6b99fcec21727cb47f8b33953d0127ce",
+        "source_character_count": 699,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 开发顺序",
+        "source_sha256": "8d8bae19d7a24f8ec20a948666663cff5299d7d5de8f5d0ec5c065a6bd9cd830",
+        "source_character_count": 421,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 剧本巅峰门",
+        "source_sha256": "0609676520aa3e5f64f701b6e867ef8d4d1ecff0d05646af1964a55aa47fa7f0",
+        "source_character_count": 424,
+        "units": [
+          {
+            "original_sha256": "2de7965349b5eb4a759c2fcae5e897257fe96ba1c03d8bf98c21fe9b1c565378",
+            "original_anchor": "可拍、可生成、因果无误只是底线。正式剧本还要证明它不是同题材的平均答案：",
+            "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "text_sha256": "2de7965349b5eb4a759c2fcae5e897257fe96ba1c03d8bf98c21fe9b1c565378",
+            "text": "可拍、可生成、因果无误只是底线。正式剧本还要证明它不是同题材的平均答案：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "7aac890857c07dc0a6b58c32a54fed9e6776caaa7fbccaf5892a4c5faa194a86",
+            "original_anchor": "```text\n主胜负手：观众最终会因哪一个人物选择、关系变化、认知翻转或情绪余波记住它。\n候选竞争：尚未锁定的关键冲突、阈值选择、高潮或结尾是否比较过有效对手（开放方向通常三案）；已经锁定的只比较剩",
+            "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "text_sha256": "7aac890857c07dc0a6b58c32a54fed9e6776caaa7fbccaf5892a4c5faa194a86",
+            "text": "```text\n主胜负手：观众最终会因哪一个人物选择、关系变化、认知翻转或情绪余波记住它。\n候选竞争：尚未锁定的关键冲突、阈值选择、高潮或结尾是否比较过有效对手（开放方向通常三案）；已经锁定的只比较剩余实现，不能改事实凑数。\n不可替代：把人物名、行业名和表面设定换掉后，核心场面是否仍像公共模板。\n兑现强度：开头许下的等待，是否由后续更强的选择、代价和结果偿还。\n顶尖校准：同类成熟作品最强处靠什么成立，本稿学到的是机制还是只借了表面。\n下游潜力：资产、镜头、表演和声音是否得到足以继续升级的关系，而不是只得到完整情节。\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "7bc4e2b7bfde66fd481186af4a142ac43a6e0fa4ab738ed839ac7d8557999ff1",
+            "original_anchor": "人物选择没有更痛也更准确的替代、高潮没有比铺垫更高一层、结尾只把事情讲完却没有留下关系余波时，剧本不得因为格式完整而交接。极致不是强行反转、放大苦难或句句金句；真正的强度来自所有场次把压力推向同一个无",
+            "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "text_sha256": "7bc4e2b7bfde66fd481186af4a142ac43a6e0fa4ab738ed839ac7d8557999ff1",
+            "text": "人物选择没有更痛也更准确的替代、高潮没有比铺垫更高一层、结尾只把事情讲完却没有留下关系余波时，剧本不得因为格式完整而交接。极致不是强行反转、放大苦难或句句金句；真正的强度来自所有场次把压力推向同一个无法逃避的选择。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 相邻单元",
+        "source_sha256": "8cd3114a697f1d77d64701328db547ba4d93865a0f999541530d7ece9fbbad6a",
+        "source_character_count": 257,
+        "units": [
+          {
+            "original_sha256": "0d683b0d2f288434fca2f2d2b4349fe769a471c941eda954b58894de470359ec",
+            "original_anchor": "两个节拍、场次或 批次 共享人物、动作、道具、空间、时间、声音或情绪余势时，逐对写清：",
+            "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+            "text_sha256": "0d683b0d2f288434fca2f2d2b4349fe769a471c941eda954b58894de470359ec",
+            "text": "两个节拍、场次或 批次 共享人物、动作、道具、空间、时间、声音或情绪余势时，逐对写清：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "24c3dcbca512ee2a2ab0e3dea4e3bd6c43ee9b7f0d39f15ddf319e42c4a7ce9e",
+            "original_anchor": "```text\nA 已完成结果：\nA 结束状态：\nB 开始状态：\n必须不变 / 允许变化：\nB 第一项新动作或声音：\n下一相位：B 从哪里继续，而不是重演 A。\n下一场压力：哪个未解决问题把 B 推出",
+            "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+            "text_sha256": "24c3dcbca512ee2a2ab0e3dea4e3bd6c43ee9b7f0d39f15ddf319e42c4a7ce9e",
+            "text": "```text\nA 已完成结果：\nA 结束状态：\nB 开始状态：\n必须不变 / 允许变化：\nB 第一项新动作或声音：\n下一相位：B 从哪里继续，而不是重演 A。\n下一场压力：哪个未解决问题把 B 推出来。\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "06d8fad280ec246620505c1a963f3e75e9ecf1cdf25d5c4876ee1cbcc1e56b62",
+            "original_anchor": "直接连续时 `A 结束状态 = B 开始状态`。剧本同时锁定世界事实、人物状态和观众在每个镜号中看见的基础关系；下游可以在不改写这些事实的前提下深化焦点、组合运镜、剪辑方式和生成实现。",
+            "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+            "text_sha256": "06d8fad280ec246620505c1a963f3e75e9ecf1cdf25d5c4876ee1cbcc1e56b62",
+            "text": "直接连续时 `A 结束状态 = B 开始状态`。剧本同时锁定世界事实、人物状态和观众在每个镜号中看见的基础关系；下游可以在不改写这些事实的前提下深化焦点、组合运镜、剪辑方式和生成实现。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 商业剧本",
+        "source_sha256": "21a5cf12cb835b6f615ba96df697075e27830b86beddfabc4317a67ad5634a1a",
+        "source_character_count": 188,
+        "units": [
+          {
+            "original_sha256": "aa2fb5410b273819dfaa2736a14a49f1ac5e0bc419840ae2fea7e1015c822bed",
+            "original_anchor": "商业内容先建立：",
+            "target": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+            "text_sha256": "aa2fb5410b273819dfaa2736a14a49f1ac5e0bc419840ae2fea7e1015c822bed",
+            "text": "商业内容先建立：",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "978aaf9f228e5282e5b822fe8e31cefa1c0a108d4c6beaf00efc0827d26f5a18",
+            "original_anchor": "```text\n转化目标：\n目标人群与使用时刻：\n原有方案的不满或购买阻力：\n一句核心承诺：\n支撑卖点与证据：\n品牌与行动出口：\n事实和声称边界：\n```",
+            "target": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+            "text_sha256": "978aaf9f228e5282e5b822fe8e31cefa1c0a108d4c6beaf00efc0827d26f5a18",
+            "text": "```text\n转化目标：\n目标人群与使用时刻：\n原有方案的不满或购买阻力：\n一句核心承诺：\n支撑卖点与证据：\n品牌与行动出口：\n事实和声称边界：\n```",
+            "action": "MOVE",
+            "allowed_link_change": false
+          },
+          {
+            "original_sha256": "ae72af4f8a0080184eb917a549b35e75cfd11662aeac3a842e15e5cf20b3adf1",
+            "original_anchor": "每个卖点写成 `用户处境 → 问题触发 → 产品介入 → 身体 / 物体 / 环境结果 → 用户利益`。真实参数与疗效没有证据时不编造；画面不能证明的卖点不靠一句广告词硬说。",
+            "target": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+            "text_sha256": "ae72af4f8a0080184eb917a549b35e75cfd11662aeac3a842e15e5cf20b3adf1",
+            "text": "每个卖点写成 `用户处境 → 问题触发 → 产品介入 → 身体 / 物体 / 环境结果 → 用户利益`。真实参数与疗效没有证据时不编造；画面不能证明的卖点不靠一句广告词硬说。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "## Reference 路由",
+        "source_sha256": "e5d705f1b497cd2c544a764f0c5c3d0c80a7af1eff732ccf25b17e1e5ad5f32d",
+        "source_character_count": 683,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "## 剧本交接与验收",
+        "source_sha256": "ff024551b1613db0d3a07b0e001936ea6354f97f56d2faa9fd2d89ff707f336f",
+        "source_character_count": 12,
+        "units": [],
+        "action": "REWRITE",
+        "target": "skills/laohu-script-writer/SKILL.md",
+        "reason": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。"
+      },
+      {
+        "source_heading": "### 输出合同",
+        "source_sha256": "0323f969c45effb5dcb60c4e3326f0fffc546db2929b46d6247ac20b6adddaa7",
+        "source_character_count": 3297,
+        "units": [
+          {
+            "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+            "text": "### 输出合同\n\n根据任务按需交付，不把所有字段机械填满：\n\n```text\n【素材调用回执】\n检索条件与放宽记录：\n候选 atom IDs：\n采用 / 不采用理由：\n保留机制 / 改变人物处境 / 不可复制：\n进入剧本的位置和职责：\n对观众理解、期待、关系感受或情绪的可观察变化：\n\n【记忆点账本】\n位置 / atom ID / 主职责 / 观众状态变化 / 与主线因果 / 相邻竞争 / 是否需要呼吸。\n\n【当前故事缺口】\n缺少的人物理由 / 约束 / 加压 / 信息 / 代价 / 选择 / 回收 / 场景融合：\n\n【构件调用回执】\n检索条件 / 入围 component IDs / 采用或不采用 / 状态变化职责 / 适用边界：\n\n【组合候选】\n候选因果链 / 人物必要性 / 观众等待 / 主要代价 / 淘汰理由：\n\n【胜出因果链】\n前置条件 / 人物行动 / 状态变化 / 观众更新 / 下一压力：\n\n【故事核心】\n受众与观看承诺：\n一句话故事：\n观众等待：\n主题如何落到行动：\n\n【观众问题—答案交接】（悬念、揭示、误解或知识解答承重时填写）\n节拍 / 当前问题 / 已给证据 / 暂时判断 / 本拍处理：建立、加压、延迟、部分回答、回答或改写 / 本拍答案边界 / 下一问题怎样由当前结果产生：\n\n【人物与因果】\n人物目标 / 阻力 / 代价 / 阈值选择：\n观众信息顺序：\n关键场次链：进入压力 → 选择 → 结果 → 下一场压力\n\n【人物声音合同】\n优先注意 / 经验依据 / 证据解释 / 说话目的 / 回避内容 / 价值泄露 / 普通愿望 / 话后行动与后果：\n冻结台词 / OS / VO：\n\n【交给人物设计】\n已确认的年龄、健康、劳动 / 训练、生活条件与文化身份：\n反复出现的行为策略、身体代价与他人反应：\n观众第一印象需要正确、误导或部分成立：\n视觉不得提前泄露的真实人格与反转：\n人物设计可提出的选角与身体化空间：\n\n【交给场景与布景设计】\n谁拥有、借用、控制或被排除在这个空间之外：\n人物怎样进入、离开、接近、回避、取物或隐藏：\n必须发生的动作与关系距离变化：\n人物分别知道、看见和误解什么：\n观众第一次看见什么、后来重新理解什么、不得提前泄露什么：\n场次结束留下的空间、陈设和关键道具状态：\n\n【正式剧本】\n剧本先写 `【剧本说明】 / 【作品信息】 / 【故事说明】`，说清用途、观众、体量、一句话故事、观众等待、人物关系、主情绪运动和必须继承的制作事实。\n剧本正文按集数、场号和场内镜号组织：场次写内外、具体地点、时间、人物和开场状态；每个镜号方头按`编号｜景别｜运镜｜机位 / 视轴｜构图｜参考时长`给出可快速预读的摄影初稿，再归属本镜的可见可听行动、台词 / O.S. / V.O.、承重声音、屏幕文字和必要特效。示例镜头：`【E01-S01-C01｜中景｜运镜：固定镜头｜机位：圆台南侧，朝北看向双人关系轴｜构图：Luna左侧、老胡右侧｜约4秒】`。\n`E` 是 Episode，表示集数；`S` 是 Scene，表示当前集内的场次；`C` 是 Camera Shot，表示当前场次内的镜头。进入新场后从 `C01` 重新编号；标题不再额外添加全片连续的“镜1、镜2”，避免两套定位信息重复。\n所有观众会看到或听到的正文必须归入一个镜号；镜号之前不得漂浮 `△` 动作。景别是镜头属性，不是编号；集数、场号和镜号各自承担不同层级，不得混用。\n\n镜头方头中的景别、基础运镜、机位 / 视轴和构图只是剧本阶段的摄影初稿，但必须让读者在进入正文前知道“摄影机从哪里朝哪里看、开镜能看见谁”。`机位 / 视轴`写摄影机相对人物或固定锚点的位置与朝向；`构图`写该机位造成的画面投影、前后景和必要的起止变化，两者不得合并成一个含糊的“侧面拍摄”。正文继续使用偏小说性的可见结果语言，写人物、光线、空间、动作、表演和状态变化，不重复方头已经锁定的静态机位与开镜构图，也不重复编译摄影机路径，不编译焦段、精确速度和完整摄影机执行；详细执行由 `laohu-video-prompt` 结合资产、模型与生成边界深化。这个分权不允许正文省略世界位置、身体朝向、视线、距离、入画退出、动作来源和镜尾状态。复杂多人镜头先在内部完成`镜头继承合同`，再把摄影起点压进方头、把连续可见事件留在正文。\n\n双人或多人动作段落必须建立人物指代锚点：每个新动作段第一次出现人物时先写具体名称；同一人物连续行动时才可使用“她／他”；叙述主体切换、段落重开、遮挡关系变化或第三人加入时，重新写具体名称。镜号、标题、正文和生产账本各自承担定位、初稿镜头属性、可见事件和连续性证据，不靠同义重复制造虚假信息密度。\n\n误听、曲解和语言错位只在人物当下有关系动机这样接话时使用。人物不必真的相信第二种解释；熟人间为了逗弄、报复、调情、嘴硬或给动作找借口而“明知原义、故意换义”，本身就是可成立的人物策略。先找目标不对称、可见窘境、关系特权和前拍残留后果，再从其中长出语言机关。使用谐音时仍必须通过现场发音与句法门；不成立时可改用双重语义、对象偷换、字面执行、关系反应或普通话，也可以不写笑点。它们不是逐项配额，但也不能因一次过量失败就被一刀切删除；在关系型喜剧中允许少量、递进、不同后果的变奏复现。\n\n普通叙事作品的文字分镜并入正式剧本；不再让下游先重写一份普通分镜表。每镜通过实际出画 / 画外、世界位置、摄影机观看侧 / 视轴、画面左中右与前中后景、身体朝向、视线对象、遮挡、关系距离、入画退出和结束变化让读者理解画面；世界位置、摄影机和画面投影不能互相矛盾。每句有声台词必须能追溯到可执行表演信息：可逐句括注，也可在本场开头显式声明角色表演基线、适用镜号或台词范围，以及“未另标者继承本场基线”。情绪、关系目的、可听语气或声源变化处单独标注；跨场不自动继承。声源位置不等于表演状态，O.S. / V.O. 只说明声源，不能代替表演。情绪会改变台词含义或行动时，再由同镜或紧邻镜补齐触发、身体 / 声音表现、对手反应和句后状态。\n\n【生产证据账本】\n证据编号 / 首次出现 / 承重对象 / 叙事职责 / 出现前状态 / 触发动作 / 出现后状态 / 后续必须保持 / 允许下游发挥 / 连续性风险 / 下游负责人。\n\n【相邻单元】\nA 结果 / A 结束 / B 开始 / B 第一项变化 / 下一相位 / 下一场压力。\n\n【下游交接】\n已确认事实：\n不可丢失的关系和情绪：\n需要稳定的身份、空间或关键道具：\n允许资产与视频镜头编译发挥的部分：\n剧本镜号来源映射：E-S-C 原始顺序、允许拆镜 / 并镜的范围、必须回到编剧的改动边界。\n镜头继承合同：主观看任务 / 开镜状态 / 世界位置 / 摄影机观看侧与视轴 / 画面投影 / 入画退出 / 允许的连续变化 / 镜尾状态 / 下镜第一项新变化。\n资产职责：只固化哪些人物、服装、场景、道具、材质与稳定结构；不得接管哪些动作、站位和关系结果。\n视频编译职责：如何组成同场 E-S-B 批次并深化摄影、时间、声音和模型语言；不得第一次发明哪些剧本事实。\n生成风险：\n下游负责人：laohu-character-design / laohu-costume-design / laohu-set-design / laohu-visual-assets / laohu-video-prompt\n```\n\n记忆点不设置“每几秒一个”的固定规则。短内容可以提高有效变化密度，长内容可以延长铺垫和回收；验收看每个记忆点是否改变观众理解、期待、关系感受或情绪，主记忆点是否高于支撑细节，相邻亮点是否互相竞争，以及留白是否在为后续兑现蓄力。素材多不等于信息量高，只有进入主线因果并改变观看状态的细节才保留。\n\n正式结果写入当前作品的 `01_世界观故事/文本/` 或 `02_剧本/文本/`，默认覆盖当前阶段主文件，不自动制造版本文件。\n\n",
+            "text_sha256": "0323f969c45effb5dcb60c4e3326f0fffc546db2929b46d6247ac20b6adddaa7",
+            "action": "MOVE"
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      },
+      {
+        "source_heading": "### 验收",
+        "source_sha256": "98e688f184e050c82a79ba9981dd9ef5bb570e6d364867a45279b4aad7b1c0cb",
+        "source_character_count": 1622,
+        "units": [
+          {
+            "original_sha256": "a0745734fd4ab4249ee1bbc8e35bd0539330fa5ce85595a3a5f24630dd3ac91c",
+            "original_anchor": "- 能否一句话说清观众在等什么。\n- 每个关键节点是否由人物选择或行动推动，而不是作者解释、巧合或主题要求。\n- 人物的即时目的、台词、动作和关键物件是否共享一条因果；表面矛盾是否由两难、伪装、犹豫或",
+            "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+            "text_sha256": "a0745734fd4ab4249ee1bbc8e35bd0539330fa5ce85595a3a5f24630dd3ac91c",
+            "text": "- 能否一句话说清观众在等什么。\n- 每个关键节点是否由人物选择或行动推动，而不是作者解释、巧合或主题要求。\n- 人物的即时目的、台词、动作和关键物件是否共享一条因果；表面矛盾是否由两难、伪装、犹豫或失控证明，而非无意打架。\n- 每场是否改变关系、信息、道具、空间、身体或下一步可能性。\n- 人物是否只说他知道、想说、能说出口的话。\n- 台词是否有对象和后果，关键句是否通过可替换性与朗读检验。\n- 人物声音是否先改变他注意和解释证据的方式；口头禅、方言、比喻和金句是否只在替作者炫技。\n- OS / VO是否与画面形成补充 / 对位 / 反差，而不同义复述画面；删掉漂亮独白后，人物选择和场次状态是否仍不变。\n- 抽象主题是否已有可拍证据，材料是否真的承担关系，而不是为了具体而具体。\n- 文戏是否有关系压力，武戏是否有力量来源、路径、接触和结果。\n- 相邻单元是否状态相等，B 是否从下一相位开始。\n- 已确认事实是否完整保留，新增创意是否标明。\n- 下游能否直接识别该稳定什么、该自由设计什么，不需要重新猜故事。\n- 构件是否真正改变状态与观众等待，而不是只留下一个结构名称；构件库无合适候选时是否允许零采用并继续原创。\n- 场景融合是否依靠同一承重行动和一个主要结果，低烈度作品是否没有被连续反转强行堆叠。\n- 强钩子是否有可见证据、暂时判断、可预见压力、未揭变量与后续兑现，而不是隐藏当下危险。\n- 正式剧本正文与生产证据账本是否分权；声音是否有声源、触发和作用；文字分镜是否已进入正式剧本，下游是否只深化执行而未重猜镜头。\n- 每个镜号是否通过镜头原子检查：一次不中断的摄影机观看、一个主要画面内容、一项主变化和一条连续可达的观看路径；实际切镜和时空断点是否新建镜号；原位拉焦、连续揭示和按序反应是否保留连续镜头身份，而没有因注意对象变化强拆。\n- 方头是否完整给出`编号｜景别｜运镜｜机位 / 视轴｜构图｜参考时长`；读者能否在读正文前判断摄影机从哪里朝哪里看、谁在前后左右，机位与构图是否各自承担原因和结果而非同义重复。\n- 景别是否守住证据边界；近景有没有突然承担远处空间或完整身体结果，固定镜头有没有在未声明入画路径、既有后景人物或构图变化时凭空多出人物与信息。\n- 每镜是否让`世界位置 → 摄影机观看侧 / 视轴 → 画面左中右与前中后景`同时成立，并写清实际出画 / 画外、身体朝向、视线、遮挡、距离、入画退出和镜尾变化；换机位是否只改变画面投影而没有改写世界位置。\n- 是否把人物运动和摄影机运动分开：摄影机固定时人物从哪个画框边缘沿什么世界路径进入；摄影机运动时起点、连续方向和停点是否足以证明观看位置可达，详细速度、焦点和光学实现仍留给视频提示词。\n- 每场是否只用 `E-S-C` 唯一定位，`C` 是否从新场的 `C01` 重新开始，并删除重复的全片连续“镜X”。\n- 正文是否保持偏小说性的可见结果语言，把详细摄影机执行、模型参数和三段式留给视频提示词，同时没有漏掉下游不可补猜的人物、空间、动作、声画来源和镜尾状态。\n- 多人动作段是否先以具体名称建立人物指代锚点，主体切换后是否重新点名；谐音是否真的满足现场发音与句法，不成立时是否改用更准确的语言或关系手法。\n- 教学喜剧、熟人斗嘴或人物声音承重时，是否先做`纯对白盲听`检查开口理由和语言真实性，再做`现场回放`检查台词是否从可见事实触发并改变下一动作。\n- 是否通过剧本巅峰门：主胜负手明确，关键候选经过比较，开头承诺被更高强度地兑现，且没有已知但未处理的明显更优方案。\n- 本轮采用的方法是否确实改变了一个可定位的选择、行动、信息顺序或否决；已有能力已经解决的问题允许零新增。是否把流派经验误用成每场反转、每人变好、每句潜台词、亲情必死亡或固定页码，并在审稿时破坏导演命题。方法使用记录归入既有反审，不写进角色台词与动作正文。",
+            "action": "MOVE",
+            "allowed_link_change": false
+          }
+        ],
+        "action": "MOVE_OR_MERGE",
+        "target": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        "reason": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。"
+      }
+    ],
+    "output_contract_owner": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+    "output_contract_start": "### 输出合同",
+    "output_contract_characters": 3297,
+    "output_contract_sha256": "0323f969c45effb5dcb60c4e3326f0fffc546db2929b46d6247ac20b6adddaa7",
+    "construction_moved": {
+      "target": "skills/laohu-script-writer/references/06_故事构件拆解与组合语法.md",
+      "text": "构件进入候选后，按 `前置条件 → 人物行动 → 状态变化 → 观众更新 → 下一压力` 连接并执行因果验收。尚未定案的重要故事通常比较三个因果真正不同的组合；已锁定事实、高潮与结尾不重开，改为比较剩余因果实现；只替换职业、地点和道具不算不同。每个胜出构件都必须说明人物为什么会采用它、它怎样改变下一状态和观众等待；多个概念并排却互不产生后果时退回重组。\n\n场景融合优先让同一承重行动、物件、空间或声音同时改变关系、信息和下一压力，但每场只保留一个主要状态结果。多个构件争夺主结果时拆场或淘汰，不靠解释把拥挤伪装成丰富。\n\n",
+      "sha256": "0ee1ddce0754a0056fbe732ec1f822a989d37c0386097b834e6001c366c2bb99"
+    },
+    "additional_units": [
+      {
+        "target": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        "text": "情绪也受这条箴言裁决。`愤怒、委屈、声音放低、笑意发虚`都只是标签或表面结果；只有压力改变了人物想保住什么、怎样对待关系对象、在哪个触发后露出破绽并作出下一选择，情绪才真正进入戏。",
+        "text_sha256": "64b37d4692c6d1a05789f19935c75321b103008b1f4c12437a7663c1b618dbbe"
+      },
+      {
+        "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        "text": "空间闭合按`世界层 → 摄影机层 → 画面层`进行：先定世界位置，再定观看侧与视轴，最后得到画面位置、遮挡和运动方向；景别证据边界决定本镜能证明多少信息。复杂多人镜头必须把`入画 / 退出`写出连续来路，不能让固定构图凭空增加人物。",
+        "text_sha256": "5dac73091dd2d8aeca4b27d4c15d2b0d3b015798ed0216b12590ef89371f085b"
+      },
+      {
+        "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        "text": "本项目的正式剧本不是只供演员阅读的传统对白稿，也不是等待下游补完的故事提纲。它是AI时代的`镜头化内容母版`：先把每个镜号的主要观看内容、世界与画面空间、人物和道具状态、入画退出、动作因果和镜尾交接确定到下游无需补猜；资产把其中需要稳定复现的对象固化为视觉形态，视频提示词再按模型能力组成场内批次并编译成三段式执行语言。剧本不写模型参数和完整摄影机执行，但不能把内容事实留给提示词第一次创作。",
+        "text_sha256": "5b96de4e225f971f48fec49e6d2b0a33e38136fb00946d3c086289fe994164b4"
+      },
+      {
+        "target": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+        "text": "长篇不能靠一次检索塞入更多候选。先建立 `story` 级承重会话，再按段落、场景和局部动作分别建立 sequence、scene、beat 会话，需要生活质感时才补 texture；电影可以沿着场景链逐段检索和编写，但每段仍须继承全片的人物目标、已发生后果与未来回收。检索页只是本轮可读窗口，不是全片素材配额；一页不足就续页，一个场景结束也不等于丢掉全片状态。\n\n入围原子按 `承重 / 支撑 / 纹理` 标职责：承重原子改变人物选择或主要因果，支撑原子让压力、证据或回收成立，纹理原子增加真实感但不能抢走主动作。短片的信息密度看单位时长内发生了多少次有效状态变化——观众理解、人物关系、行动条件或风险真正改变——而不是看写进多少原子。若新增候选只重复已覆盖机制、不能带来新的因果方向或可见证据，就说明边际增益已经消失，应停止续页或改写查询合同。",
+        "text_sha256": "e9441ac4d91e56d477aec8b3abe6eb9377590d791a5157d4dc83d28c58f3c9f1",
+        "original_sha256": "e9441ac4d91e56d477aec8b3abe6eb9377590d791a5157d4dc83d28c58f3c9f1",
+        "action": "MOVE"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "baseline_ref": "working-tree-sha256:61948ef7ed491d7106278ffb352a8c7c8011eb9702241fc2df7b016b2e0f8f7c",
+  "status": "COMPLETE",
+  "sources": [
+    {
+      "path": "skills/laohu-script-writer/SKILL.md",
+      "sections": [
+        "## 编剧箴言",
+        "## 输入与责任",
+        "### 导演协作接口",
+        "### 创作推进与专业判断",
+        "### 从已有材料进入开发",
+        "### 阶段工作如何闭合",
+        "### 语言模式接口",
+        "## 故事因果",
+        "### 观众等待",
+        "### 人物选择",
+        "### 动机、行动与物件",
+        "### 局部样例也必须闭合微场次",
+        "### 教学喜剧的对白场景合同",
+        "### 场次压力",
+        "### 文戏与武戏",
+        "### 语言与材料",
+        "## 剧本开发",
+        "### 任务分型",
+        "### 素材查询合同",
+        "### 故事构件查询合同",
+        "### 开发顺序",
+        "### 剧本巅峰门",
+        "### 相邻单元",
+        "### 商业剧本",
+        "## Reference 路由",
+        "## 剧本交接与验收",
+        "### 输出合同",
+        "### 验收"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "WR-01",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "## 编剧箴言"
+      ],
+      "original_function": "编剧箴言",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "编剧箴言",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-02",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "## 输入与责任"
+      ],
+      "original_function": "输入与责任",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "输入与责任",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-03",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 导演协作接口"
+      ],
+      "original_function": "导演协作接口",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "导演协作接口",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-04",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 创作推进与专业判断"
+      ],
+      "original_function": "创作推进与专业判断",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "创作推进与专业判断",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-05",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 从已有材料进入开发"
+      ],
+      "original_function": "从已有材料进入开发",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "从已有材料进入开发",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-06",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 阶段工作如何闭合"
+      ],
+      "original_function": "阶段工作如何闭合",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "阶段工作如何闭合",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-07",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 语言模式接口"
+      ],
+      "original_function": "语言模式接口",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "语言模式接口",
+          "to": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-08",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "## 故事因果"
+      ],
+      "original_function": "故事因果",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "故事因果",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-09",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 观众等待"
+      ],
+      "original_function": "观众等待",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "观众等待",
+          "to": "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-10",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 人物选择"
+      ],
+      "original_function": "人物选择",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-character-conflict/SKILL.md",
+          "trigger": "人物选择",
+          "to": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-11",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 动机、行动与物件"
+      ],
+      "original_function": "动机、行动与物件",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+          "trigger": "动机、行动与物件",
+          "to": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-12",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 局部样例也必须闭合微场次"
+      ],
+      "original_function": "局部样例也必须闭合微场次",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+          "trigger": "局部样例也必须闭合微场次",
+          "to": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-13",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 教学喜剧的对白场景合同"
+      ],
+      "original_function": "教学喜剧的对白场景合同",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-dialogue/SKILL.md",
+          "trigger": "教学喜剧的对白场景合同",
+          "to": "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-14",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 场次压力"
+      ],
+      "original_function": "场次压力",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+          "trigger": "场次压力",
+          "to": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-15",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 文戏与武戏"
+      ],
+      "original_function": "文戏与武戏",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+          "trigger": "文戏与武戏",
+          "to": "skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-16",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 语言与材料"
+      ],
+      "original_function": "语言与材料",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-dialogue/SKILL.md",
+          "trigger": "语言与材料",
+          "to": "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md"
+        },
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-premise-theme/SKILL.md",
+          "trigger": "语言与材料",
+          "to": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-17",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "## 剧本开发"
+      ],
+      "original_function": "剧本开发",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "剧本开发",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-18",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 任务分型"
+      ],
+      "original_function": "任务分型",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "任务分型",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-19",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 素材查询合同"
+      ],
+      "original_function": "素材查询合同",
+      "unique_information": "父入口保留查询输入、触发、复用与采用边界；严格/放宽/类比已有素材负责人，不重复搬写。长篇分层、原子职责与边际增益完整迁至前提专业。",
+      "action": "MERGE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md",
+        "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+        "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "素材查询合同",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        },
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "素材需要检索或进入故事组织",
+          "to": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md"
+        },
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "素材需要检索或进入故事组织",
+          "to": "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-20",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 故事构件查询合同"
+      ],
+      "original_function": "故事构件查询合同",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "故事构件查询合同",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-21",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 开发顺序"
+      ],
+      "original_function": "开发顺序",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "开发顺序",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-22",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 剧本巅峰门"
+      ],
+      "original_function": "剧本巅峰门",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "剧本巅峰门",
+          "to": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-23",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 相邻单元"
+      ],
+      "original_function": "相邻单元",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-format-adaptation/SKILL.md",
+          "trigger": "相邻单元",
+          "to": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-24",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 商业剧本"
+      ],
+      "original_function": "商业剧本",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-premise-theme/SKILL.md",
+          "trigger": "商业剧本",
+          "to": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-25",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "## Reference 路由"
+      ],
+      "original_function": "Reference 路由",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "Reference 路由",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-26",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "## 剧本交接与验收"
+      ],
+      "original_function": "剧本交接与验收",
+      "unique_information": "入口职责、阶段与重复路由重编；仅保留调度所需输入、边界、完成条件，不重复专业教程。",
+      "action": "REWRITE",
+      "target_paths": [
+        "skills/laohu-script-writer/SKILL.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "剧本交接与验收",
+          "to": "skills/laohu-script-writer/SKILL.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-27",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 输出合同"
+      ],
+      "original_function": "输出合同",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/skills/laohu-format-adaptation/SKILL.md",
+          "trigger": "输出合同",
+          "to": "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    },
+    {
+      "id": "WR-28",
+      "source_path": "skills/laohu-script-writer/SKILL.md",
+      "source_sections": [
+        "### 验收"
+      ],
+      "original_function": "验收",
+      "unique_information": "逐段保留独有方法、例外、合同与示例；已完整存在的段落仅保留目标正文。",
+      "action": "MOVE",
+      "target_paths": [
+        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+      ],
+      "activation_routes": [
+        {
+          "from": "skills/laohu-script-writer/SKILL.md",
+          "trigger": "验收",
+          "to": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        }
+      ],
+      "validation": {
+        "task": "逐单元保真与实际文件路由检查；另对局部演法、格式整理、动作因果和纯对白交接作有限行为验证，见编剧能力完整迁移与验证。",
+        "status": "PASS"
+      }
+    }
+  ]
+}

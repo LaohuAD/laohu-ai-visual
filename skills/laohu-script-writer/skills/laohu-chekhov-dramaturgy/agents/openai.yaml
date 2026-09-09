@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡契诃夫戏剧法"
+  short_description: "以群体生活、错位回应和日常余波写出悲喜"
+  default_prompt: "Use $laohu-chekhov-dramaturgy within laohu-script-writer to develop the current screenplay while preserving established facts and the screenplay output contract."

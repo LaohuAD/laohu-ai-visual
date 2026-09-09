@@ -48,6 +48,12 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
 
     def test_script_writer_splits_long_form_retrieval_by_narrative_scope(self) -> None:
         writer = self.read("skills/laohu-script-writer/SKILL.md")
+        from scripts.validate_capability_architecture import reachable_documents
+        entry = ROOT / "skills/laohu-script-writer/SKILL.md"
+        writer += "\n" + "\n".join(p.read_text() for p in reachable_documents(entry))
+        material_ref = "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+        self.assertIn("../laohu-story-material/references/01_原子记录与渐进检索合同.md", entry.read_text())
+        writer += self.read(material_ref)
         for anchor in (
             "story / sequence / scene / beat / texture",
             "长篇",
@@ -74,10 +80,16 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
 
     def test_script_writer_must_query_but_may_adopt_nothing(self) -> None:
         writer = self.read("skills/laohu-script-writer/SKILL.md")
+        from scripts.validate_capability_architecture import reachable_documents
+        entry = ROOT / "skills/laohu-script-writer/SKILL.md"
+        writer += "\n" + "\n".join(p.read_text() for p in reachable_documents(entry))
+        material_ref = "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+        self.assertIn("../laohu-story-material/references/01_原子记录与渐进检索合同.md", entry.read_text())
+        writer += self.read(material_ref)
         for anchor in (
             "素材查询合同",
             "严格匹配",
-            "放宽表面条件",
+            "每次只放宽一个表面条件",
             "跨领域类比",
             "允许零采用",
             "素材调用回执",

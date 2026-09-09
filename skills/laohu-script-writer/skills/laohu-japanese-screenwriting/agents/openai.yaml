@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡日本编剧方法"
+  short_description: "从设定、人物与小素材发展完整原创剧本"
+  default_prompt: "Use $laohu-japanese-screenwriting within laohu-script-writer to develop the current screenplay while preserving established facts and the screenplay output contract."

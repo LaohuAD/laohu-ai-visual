@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡场景与段落"
+  short_description: "场内行动、回应、悬念、细节与道具的场景创作"
+  default_prompt: "Use $laohu-scene-craft within laohu-script-writer to develop the requested screenplay decisions while preserving established facts and the screenplay output contract."

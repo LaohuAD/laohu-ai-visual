@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡人物与冲突"
+  short_description: "人物动机、独立对手、群像编排与冲突过渡创作"
+  default_prompt: "Use $laohu-character-conflict within laohu-script-writer to develop the requested screenplay decisions while preserving established facts and the screenplay output contract."

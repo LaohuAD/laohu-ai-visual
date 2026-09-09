@@ -25,7 +25,7 @@
 
 面向公开观众或跨多个专业节点的作品，先由总导演分清请求者、导演、演员与最终观众，确定全片只争什么、靠什么推进、观看过程为什么有趣，以及各部门谁承重、谁托住、谁退让。总导演只形成一份导演阐述，不另写一份导演版剧本。
 
-编剧仍是编导型编剧：它听得懂导演对观众、表演、镜头和节奏的要求，再把这些要求变成人物选择、场面、台词、空间和镜头化正式剧本。其他节点也能按需咨询相邻专业，但调用不会转移主责。
+编剧入口负责开发调度与统一定稿：继承导演要求，按缺口调用人物、结构、场景、对白等专业能力，将结果整合成同一份镜头化正式剧本。其他节点也能按需咨询相邻专业，但调用不会转移主责。
 
 ### 从灵感找到可拍、可生成的故事
 
@@ -90,7 +90,7 @@
 ```text
 灵感、故事或歌曲材料
 → 公开作品由总导演确认观众经历、主胜负手与部门取舍
-→ 叙事作品由编导型编剧确认故事与剧本；歌曲型作品确认 MV 导演命题与歌曲—视觉结构
+→ 叙事作品由编剧统筹专业创作并确认故事与剧本；歌曲型作品确认 MV 导演命题与歌曲—视觉结构
 → 需要时先完成作品级美术风格设计
 → 再完成人物、服装、场景与布景设计
 → 视觉资产、音频与音色设计
@@ -123,7 +123,7 @@
 | [laohu-language-mode](skills/laohu-language-mode/SKILL.md) | 按角色、文本块与接收者切换用户沟通、剧本、资产规格和模型提示词语言；不改专业内容 |
 | [laohu-director](skills/laohu-director/SKILL.md) | 最终观众、观众经历、全片主胜负手、跨部门取舍、导演阐述与三次复验 |
 | [laohu-story-material](skills/laohu-story-material/SKILL.md) | 明确触发下保存生活灵感、拆解故事原子、渐进检索和使用回流 |
-| [laohu-script-writer](skills/laohu-script-writer/SKILL.md) | 以编导型编剧身份完成故事、场面、镜头化正式剧本、对白和剧本修改 |
+| [laohu-script-writer](skills/laohu-script-writer/SKILL.md) | 启动与续接剧本、调度专业能力、整合镜头化正式剧本及定稿交接 |
 | [laohu-mv-director](skills/laohu-mv-director/SKILL.md) | 歌曲事实、MV 导演命题、声画结构、表演策略、制作时间线和动态分镜文本交接 |
 | [laohu-art-direction](skills/laohu-art-direction/SKILL.md) | 题材视觉合同、主辅类型、跨部门形态色彩材料光影系统和相邻类型边界 |
 | [laohu-character-design](skills/laohu-character-design/SKILL.md) | 选角、脸身姿动、第一印象、群像与跨媒介人物母版 |
@@ -284,3 +284,10 @@ bash skills/laohu-ai-visual/scripts/create_work_project.sh "我的视觉作品"
 **代码：MIT License。规则、Skill、提示词、文档和案例：CC BY-SA 4.0。**
 
 内容可商用，但须署名、标注修改，并遵守相同方式共享要求。第三方材料保留原许可，历史版本已授予的许可不被追溯撤销。适用范围见 [分层授权](LICENSE.md)，内容许可全文见 [LICENSE-CONTENT](LICENSE-CONTENT)。
+
+
+## 参考来源与致谢
+
+编剧内部十二项专业能力保留了[jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills)的专业章节与配套Reference，感谢仓库维护者（项目元数据为terry）的编剧资料整理。使用提交为 `0657714b59c82d3d6656ada50c5168d4ea431de0`。本项目增加领域具体的灵魂、筋骨、血肉、表皮能力，整合本地创作方法与生产接口，并将外部工作流并入现有编剧总控。改用laohu-名称不改变原内容的来源归属。
+
+原仓库标注个人学习用途，原书、译文及剧本引文仍归各自作者，第三方材料不因本地整理而转为本项目原创或适用本项目通用许可。具体保留范围、逐项改动与验证见[编剧能力完整迁移与验证](04_诊断与系统日志/编剧能力完整迁移与验证.md)和[外部能力依赖清单](02_共享资产库/05_工具流程/外部能力依赖清单.md)。

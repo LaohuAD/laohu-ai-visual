@@ -15,10 +15,16 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
         return path.read_text(encoding="utf-8")
 
     def combined(self, *relatives: str) -> str:
-        return "\n".join(self.read(relative) for relative in relatives)
+        return "\n".join(self.writer_with_routed_methods() if relative == 'skills/laohu-script-writer/SKILL.md' else self.read(relative) for relative in relatives)
+
+    def writer_with_routed_methods(self) -> str:
+        """Behavior anchors belong to the actual routed owners, not all to the router body."""
+        from scripts.validate_capability_architecture import reachable_documents
+        entry = ROOT / 'skills/laohu-script-writer/SKILL.md'
+        return '\n'.join(p.read_text() for p in sorted(reachable_documents(entry)))
 
     def test_script_writer_routes_story_gaps_to_component_search(self) -> None:
-        writer = self.read("skills/laohu-script-writer/SKILL.md")
+        writer = self.writer_with_routed_methods()
         for anchor in (
             "故事构件查询合同",
             "story_component_library.py",
@@ -81,7 +87,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_formal_screenplay_separates_body_from_production_evidence(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
         )
         for anchor in (
             "剧本正文",
@@ -97,7 +103,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_formal_screenplay_contains_readable_brief_and_numbered_shots(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
         )
         for anchor in (
             "【剧本说明】",
@@ -114,7 +120,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_scene_local_shot_ids_replace_redundant_global_shot_labels(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
         )
         for anchor in (
             "Episode",
@@ -128,7 +134,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_screenplay_body_keeps_visible_prose_and_video_owns_camera_execution(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (
@@ -142,7 +148,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_multi_character_action_paragraphs_anchor_names_before_pronouns(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (
@@ -155,8 +161,8 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_comedy_mishearing_selects_phonetic_and_non_phonetic_methods(self) -> None:
         text = self.combined(
-            "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (
@@ -173,8 +179,8 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_teaching_comedy_protects_learning_and_human_reaction(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (
@@ -192,7 +198,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_screen_relationship_maps_world_camera_and_screen_without_numeric_rigging(self) -> None:
         reference = self.read(
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
         )
         for anchor in (
             "世界层",
@@ -215,7 +221,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_script_shot_header_exposes_viewpoint_and_composition_before_body(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (
@@ -229,8 +235,8 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_comedy_can_recur_as_varied_relationship_engine_without_becoming_a_quota(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (
@@ -245,8 +251,8 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_emotion_handoff_carries_state_trigger_and_playable_evidence(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
             "skills/laohu-video-prompt/references/01_文戏对白与人物表演.md",
         )
@@ -266,8 +272,8 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_spoken_performance_contract_allows_explicit_scene_baseline(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (
@@ -282,7 +288,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_bearing_action_hands_off_cause_process_environment_and_result(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
             "skills/laohu-video-prompt/references/02_动作打斗追逐与力量奇观.md",
         )
@@ -303,7 +309,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_public_performance_example_has_no_bare_dialogue_or_source_only_cue(self) -> None:
         reference = self.read(
-            "skills/laohu-script-writer/references/04_口述台词与方言.md"
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md"
         )
         # Public regression tests must remain runnable without local work files.
         section = reference.split("括号保持短", 1)[1]
@@ -321,7 +327,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_confirmed_wordplay_survives_into_the_action_it_promises(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (
@@ -337,7 +343,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_fixed_closeup_cannot_gain_an_unintroduced_background_actor(self) -> None:
         reference = self.read(
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
         )
         for anchor in (
             "固定镜头、人物入画与景别证据边界",
@@ -371,7 +377,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_video_capabilities_are_recompiled_upstream_without_turning_script_into_prompt(self) -> None:
         reference = self.read(
-            "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
+            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
         )
         for anchor in (
             "镜头原子与观看任务",
@@ -467,7 +473,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_character_voice_starts_with_perception_and_interpretation(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
         )
         for anchor in (
             "人物声音合同",
@@ -481,7 +487,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_professional_perception_requires_grounded_expertise(self) -> None:
         reference = self.read(
-            "skills/laohu-script-writer/references/04_口述台词与方言.md"
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md"
         )
         for anchor in (
             "职业化感知",
@@ -493,7 +499,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_related_words_change_meaning_without_random_metaphor_stacking(self) -> None:
         reference = self.read(
-            "skills/laohu-script-writer/references/04_口述台词与方言.md"
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md"
         )
         for anchor in (
             "同组词语换义",
@@ -506,7 +512,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
     def test_voiceover_adds_information_and_stylish_prose_must_change_scene_state(self) -> None:
         text = self.combined(
             "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/references/04_口述台词与方言.md",
+            "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         )
         for anchor in (

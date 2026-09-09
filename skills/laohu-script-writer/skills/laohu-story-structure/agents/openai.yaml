@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡故事结构"
+  short_description: "从事件因果到幕、序列、高潮与结尾的结构创作"
+  default_prompt: "Use $laohu-story-structure within laohu-script-writer to develop the requested screenplay decisions while preserving established facts and the screenplay output contract."

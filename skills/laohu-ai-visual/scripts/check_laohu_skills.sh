@@ -70,6 +70,17 @@ for skill in "${core_skills[@]}"; do
       reference_name="$(basename "$reference")"
       if rg -Fq "$reference_name" "$file"; then
         pass "$skill routes reference: $reference_name"
+      elif python3 - "$file" "$reference" <<'PY'
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path.cwd() / 'scripts'))
+from validate_capability_architecture import reachable_documents
+entry, reference = (Path(p).resolve() for p in sys.argv[1:])
+reachable = reachable_documents(entry)
+sys.exit(0 if reference in reachable else 1)
+PY
+      then
+        pass "$skill routes reference through verified professional owners: $reference_name"
       else
         fail "$skill leaves reference unreachable: $reference_name"
       fi

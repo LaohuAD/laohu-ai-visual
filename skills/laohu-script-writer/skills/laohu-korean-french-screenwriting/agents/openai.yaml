@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡韩国与法国编剧方法"
+  short_description: "以情绪、类型承诺和场面节奏发展剧本"
+  default_prompt: "Use $laohu-korean-french-screenwriting within laohu-script-writer to develop the current screenplay while preserving established facts and the screenplay output contract."

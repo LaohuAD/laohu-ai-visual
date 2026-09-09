@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡编剧行业与生意经"
+  short_description: "创意体检、推介、审读意见、合作术语与职业策略"
+  default_prompt: "Use $laohu-industry-business within laohu-script-writer to develop the requested work while preserving established screenplay facts and production continuity."

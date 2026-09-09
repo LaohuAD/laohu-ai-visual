@@ -1,4 +1,37 @@
 {
+  "editorial_information_behavior_cases": {
+    "evidence": "同一执行者的四例桌面取舍与回归记录；不是自动运行模型或观众实测。",
+    "cases": [
+      {
+        "name": "信息呈现_当前_能力代价对照",
+        "input": "同一角色独立使用能力后衰弱，换条件出招后自查无损；需要观众发现代价变化。",
+        "expected": "选动作与前后对照，保留真实惊讶；原因可延迟。",
+        "forbidden": "主角再问并复述刚被画面证明的结论。",
+        "observed": "桌面比较问答解释、动作对照、只藏原因三案；采用动作对照，留原因待后揭。"
+      },
+      {
+        "name": "信息呈现_相邻_关系变化",
+        "input": "此前另一人一直保留空座，重逢时默默把椅子拉近；关系已有足够行动证据。",
+        "expected": "通过同一物件前后变化交付接纳，不强加关系总结。",
+        "forbidden": "用旁人提问强迫当事人解释感情。",
+        "observed": "采用动作回收；不增加解释性对白。"
+      },
+      {
+        "name": "信息呈现_保真_必要风险",
+        "input": "人物准备启动装置，观众此前不知道它会不可逆地封闭出口。",
+        "expected": "在决定前用有动机的询问和明确回答交付风险；保留必要说明。",
+        "forbidden": "为留白隐藏决定所需事实，或扩讲整套装置历史。",
+        "observed": "保留启动前短问答，删去无关背景而不删风险。"
+      },
+      {
+        "name": "信息呈现_失败_无证据反转",
+        "input": "要求观众从一个含义不明的眼神推断身份替换，前文没有其他线索。",
+        "expected": "判证据不足，返回场景或结构补具体线索，不能宣称观众能自行推断。",
+        "forbidden": "把作者知道答案当成镜头已经表达答案。",
+        "observed": "否决只留眼神的候选；要求补行为差异后才延迟答案。"
+      }
+    ]
+  },
   "evidence_scope": "STRUCTURE_ONLY：runtime_reachability_scenarios 为兼容保留的字段名，内容是路由声明与锚点预期；本文件没有运行模型或证明质量。",
   "skill_contracts": {
     "laohu-ai-visual": {
@@ -14,8 +47,43 @@
       "anchors": ["明确保存意图", "原话只保存一次", "source / atom / usage", "严格匹配", "放宽表面条件", "跨领域类比", "允许零采用", "external_candidate / not_approved", "未经老胡确认不得进入剧本或长期素材库", "素材调用回执", "项目级", "素材库级", "story_material_db.py"]
     },
     "laohu-script-writer": {
-      "headings": ["编剧箴言", "故事因果", "剧本开发", "剧本交接与验收"],
-      "anchors": ["观众等待", "人物选择", "动机、行动与物件", "下一场压力", "观众预期契约", "故事构件查询合同", "胜出因果链", "同一承重行动", "生产证据账本", "人物声音合同", "写作声音", "感知证据 → 人物解释 → 当场行动 → 可见后果", "口头禅、方言词和金句都不能单独证明人物", "观众问题—答案交接", "建立 / 加压 / 延迟 / 部分回答 / 回答 / 改写"]
+      "headings": [
+        "编剧箴言",
+        "输入与责任",
+        "创作推进与专业判断",
+        "开发推进",
+        "语言协作与结果整合",
+        "剧本交接与验收"
+      ],
+      "anchors": [
+        "唯一镜头化内容母版",
+        "只调用实际需要的能力",
+        "同一版本",
+        "锁定事实",
+        "自由范围",
+        "完成条件",
+        "只列术语或复述资料不算完成",
+        "整稿交接复验",
+        "输出合同",
+        "laohu-audio-design"
+      ],
+      "method_anchors": [
+        "观众等待",
+        "人物选择",
+        "动机、行动与物件",
+        "下一场压力",
+        "观众预期契约",
+        "故事构件查询合同",
+        "胜出因果链",
+        "同一承重行动",
+        "生产证据账本",
+        "人物声音合同",
+        "写作声音",
+        "感知证据 → 人物解释 → 当场行动 → 可见后果",
+        "口头禅、方言词和金句都不能单独证明人物",
+        "观众问题—答案交接",
+        "建立 / 加压 / 延迟 / 部分回答 / 回答 / 改写"
+      ]
     },
     "laohu-mv-director": {
       "headings": ["歌曲箴言", "职责与调用边界", "三层导演结构", "MV导演工作流", "MV导演交接包", "双门验收"],
@@ -76,7 +144,7 @@
   "migration_contracts": [
     {
       "capability": "观众认知与视角分层",
-      "file": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
+      "file": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
       "anchors": ["观众认知状态", "五层视角"]
     },
     {
@@ -171,8 +239,8 @@
     },
     {
       "capability": "创作者意图、人物预期差与弧光",
-      "file": "skills/laohu-script-writer/references/01_创意故事人物与高潮.md",
-      "anchors": ["创作者意图契约", "预期差", "人格稳定与人物弧光"]
+      "file": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+      "anchors": ["预期差", "人格稳定与人物弧光"]
     },
     {
       "capability": "商业作品卖点场景化与可见证据",
@@ -248,6 +316,11 @@
       "capability": "日本版面研究到封面文字空间机制",
       "file": "skills/laohu-cover-design/references/02_日本版面与文字空间机制.md",
       "anchors": ["日本设计不是一种版式", "版面骨架", "网格从承重边界长出来", "间距不是空值，是分组语言", "密度决定速度，留白决定停顿", "纵排、横排与混排", "秩序与破格", "焦点压缩", "分散张力", "日本风格开关"]
+    },
+    {
+      "capability": "创作者意图保护",
+      "file": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+      "anchors": ["创作者意图契约", "不可改变的事实"]
     }
   ],
   "external_dependency_contracts": [
@@ -766,7 +839,7 @@
       "name": "空悬念与格式完整不得冒充剧本成立",
       "owner": "laohu-script-writer",
       "request": "一份短片剧本已有标准场标、声音和特效字段，开场却只说‘一个惊人秘密即将揭开’，后续没有可见证据或局部兑现。",
-      "required_references": ["skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md", "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"],
+      "required_references": ["skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md", "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"],
       "required_intermediate": ["可见证据", "暂时判断", "可预见压力", "未揭变量", "部分兑现", "生产证据账本"],
       "observable_change": "先把空泛的秘密改成观众能看见的异常证据，让观众产生可修正的判断并得到局部回报；再以正式剧本与生产证据账本分权记录可见可听事实。",
       "forbidden_shortcut": "把提问、黑屏文字、延迟解释或惊悚音效本身当作钩子；因为场标、声音和VFX字段齐全就判定剧本可交付；在普通剧本里强制焦段和机位。"
@@ -775,7 +848,7 @@
       "name": "灰色职业人物先以有来源的感知建立声音",
       "owner": "laohu-script-writer",
       "request": "一名长期替地下组织收尾的人接到普通外卖，想用这件小事显出他的职业、疲惫和对正常生活的向往，但不能只写一段漂亮独白。",
-      "required_references": ["skills/laohu-script-writer/references/04_口述台词与方言.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"],
+      "required_references": ["skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"],
       "required_intermediate": ["人物声音合同", "他优先注意什么", "未说出的普通愿望", "感知证据 → 人物解释 → 当场行动 → 可见后果"],
       "observable_change": "让人物先注意到职业经验能够支持的声音、位置或物件证据，再以自己的生存逻辑解释；普通愿望必须改变他接单、开门、藏枪或回应来客的选择，并留下可见后果。",
       "forbidden_shortcut": "把黑色电影腔、金句、职业术语或反差比喻本身当成人物；写完独白后让场次状态完全不变。"
@@ -784,7 +857,7 @@
       "name": "相邻题材人物不能共享同一种作者腔",
       "owner": "laohu-script-writer",
       "request": "同一声异响分别被护士、农民和儿童听见，要让三个人物明显不同，但不要靠方言、口头禅或统一的俏皮比喻区分。",
-      "required_references": ["skills/laohu-script-writer/references/04_口述台词与方言.md"],
+      "required_references": ["skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md"],
       "required_intermediate": ["人物声音合同", "他优先注意什么", "哪些职业、生活或身体经验支持这种注意", "他会怎样解释证据"],
       "observable_change": "三人因经验不同而筛选不同证据、形成不同判断并采取不同动作；即使删掉人物姓名和方言，仍能从注意点、误判方式和行动策略辨认身份。",
       "forbidden_shortcut": "只替换职业名、口癖和词尾；让所有人物都说同一种机智作者语言；给没有训练和证据的人安排专家级判断。"
@@ -793,7 +866,7 @@
       "name": "克制人物允许以沉默和动作形成声音",
       "owner": "laohu-script-writer",
       "request": "一场低烈度亲情戏里人物不善言辞，希望写出鲜明人物，但不想强塞金句、比喻或长篇内心旁白。",
-      "required_references": ["skills/laohu-script-writer/references/04_口述台词与方言.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"],
+      "required_references": ["skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"],
       "required_intermediate": ["口头禅、方言词和金句都不能单独证明人物", "人物声音合同", "未说出的普通愿望", "低烈度"],
       "observable_change": "用人物不看什么、把什么物件推近或收回、回答到什么程度和沉默后做什么建立声音；克制仍产生关系距离或行动条件的变化。",
       "forbidden_shortcut": "规定每句台词必须多功能；为了证明人物鲜明而强塞金句、随机比喻、职业术语或连续反转。"
@@ -802,7 +875,7 @@
       "name": "漂亮旁白不得替代人物选择和场次变化",
       "owner": "laohu-script-writer",
       "request": "一段文字氛围浓、比喻漂亮、VO很有风格，但删掉整段之后人物仍做相同的事，场次状态也完全没变。",
-      "required_references": ["skills/laohu-script-writer/references/04_口述台词与方言.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"],
+      "required_references": ["skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md", "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"],
       "required_intermediate": ["补充 / 对位 / 反差", "不同义复述画面", "删掉漂亮独白后", "人物选择和场次状态"],
       "observable_change": "先判断VO到底补充未知事实、与画面形成对位还是制造反差；若都没有，就删去或压缩，并把承重信息改造成证据、选择和可见后果。",
       "forbidden_shortcut": "因为文字好听就判定剧本成立；用VO解释画面已经呈现的内容；把散文段落直接当作已经完成的场次。"
@@ -1028,7 +1101,7 @@
       "owner": "laohu-script-writer",
       "request": "只需要一小段双人语气样例：Luna主持灯光教学，老胡中途插话。初稿写Luna说‘我还没说完’，但没有交代她没说完什么，也没写灯和遥控器原本由谁控制。",
       "required_references": [
-        "skills/laohu-script-writer/references/04_口述台词与方言.md",
+        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
         "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
@@ -1046,7 +1119,7 @@
       "owner": "laohu-script-writer",
       "request": "写一支Luna与老胡讲电影感灯光的完整短视频剧本。正式剧本需要在每个镜头方头直接包含镜号、景别、基本运镜、机位与视轴、构图和参考时长；读者进入正文前就要知道摄影机从哪里朝哪里看、开镜看见谁。每个镜号下面再写实际画面、人物动作、情绪表演和台词。后续不再单独拆一次文字分镜。",
       "required_references": [
-        "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
         "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
@@ -1074,8 +1147,8 @@
       "owner": "laohu-script-writer",
       "request": "把一段包含教学说明、画外问答、求饶和情绪爆发的对白写进正式剧本。每句都要让演员与后续声音、视频节点知道怎么说，不能只给承重句加情绪，也不能把O.S.当成语气。",
       "required_references": [
-        "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
-        "skills/laohu-script-writer/references/04_口述台词与方言.md",
+        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
         "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
@@ -1092,7 +1165,7 @@
       "owner": "laohu-script-writer",
       "request": "Luna穿着光能战斗甲追击正在奔跑的老胡，并借墙反蹬闪到侧面把他踢进测试墙。剧本需要让读者看懂她凭什么追上、怎么越距、怎样命中以及墙为何留下结果，又不能提前写成逐帧视频提示词。",
       "required_references": [
-        "skills/laohu-script-writer/references/03_体量形态编号与连续性.md",
+        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
         "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         "skills/laohu-video-prompt/references/02_动作打斗追逐与力量奇观.md"
       ],
@@ -1116,7 +1189,7 @@
       "owner": "laohu-script-writer",
       "request": "镜头写成Luna正面固定近景，开镜时她的脸占据画面中心。几句台词后，剧本直接写老胡出现在画面右后方并向前半步，但此前没有说明他已经入画、从哪里进入，也没有改变景别或机位。检查并建立可供资产与视频提示词直接继承的镜头。",
       "required_references": [
-        "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
+        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
       ],
       "required_intermediate": [
         "镜头原子",
@@ -1135,7 +1208,7 @@
       "owner": "laohu-script-writer",
       "request": "为一支多场短片建立AI时代生产剧本。后续要制作人物、服装、场景和道具资产，并按目标模型把同场镜头组成批次、写成三段式视频提示词。要求各阶段不重复创作，也不让提示词补猜剧本。",
       "required_references": [
-        "skills/laohu-script-writer/references/03_体量形态编号与连续性.md"
+        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
       ],
       "required_intermediate": [
         "镜头化内容母版",
@@ -1152,8 +1225,8 @@
       "owner": "laohu-script-writer",
       "request": "Luna演示多种人物灯光，老胡在旁边插话逗她。作品要先让观众听懂灯位、面部效果和用途；追打发动后，Luna可以在几个关键升级点明明听懂老胡的原义，却故意抓字眼、换对象或按字面执行，给继续追打找理由。不要把每一种语言手法机械排班，也不要为了避免机械而把人物的调皮策略全部删掉。",
       "required_references": [
-        "skills/laohu-script-writer/references/02_场景喜剧与敏感题材.md",
-        "skills/laohu-script-writer/references/04_口述台词与方言.md",
+        "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
         "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
@@ -1173,7 +1246,7 @@
       "owner": "laohu-script-writer",
       "request": "一场对手戏已有台词，但括号只写‘声音放低、句子很短’和‘笑意开始发虚’。需要让演员、音频和视频都知道人物处在什么情绪阶段、因什么触发、想让对方怎样、从哪里露出破绽，并保证终点情绪不提前出现。",
       "required_references": [
-        "skills/laohu-script-writer/references/04_口述台词与方言.md",
+        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
         "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
         "skills/laohu-video-prompt/references/01_文戏对白与人物表演.md"
       ],
@@ -1194,7 +1267,7 @@
       "owner": "laohu-script-writer",
       "request": "人物把‘正侧光’故意曲解成‘正侧着踹’，台词镜后切到动作镜。要求下一镜仍让观众直接听见并看见同一个换义，而不是把招式重写成普通的‘漂亮横踢’。",
       "required_references": [
-        "skills/laohu-script-writer/references/04_口述台词与方言.md",
+        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
         "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [

@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡对白创作"
+  short_description: "完整专业方法与案例驱动的对白、潜台词和角色语言创作"
+  default_prompt: "Use $laohu-dialogue within laohu-script-writer to develop or revise dialogue while preserving established facts and the screenplay output contract."

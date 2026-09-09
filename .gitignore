@@ -28,6 +28,9 @@ __pycache__/
 /00_输入原料/故事素材原子库.jsonl
 /00_输入原料/故事素材库/
 
+# External screenwriting source is retained locally for study and provenance.
+/00_输入原料/研究文档/screenwriting-skills/
+
 # Personal work projects stay local. Git tracks only the three status
 # directory placeholders so the reusable project skeleton remains visible.
 /01_作品项目/进行中/*
