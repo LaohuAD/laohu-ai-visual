@@ -32,8 +32,8 @@ def digest(path: Path) -> str:
 
 
 def reachable_documents(entry: Path) -> set[Path]:
-    """Follow real local Markdown links inside this owner's capability tree."""
-    boundary = entry.parent.resolve()
+    """Follow explicit local method links; permit registered cross-professional consultation."""
+    boundary = (ROOT / "skills").resolve()
     pending = [entry.resolve()]
     seen: set[Path] = set()
     while pending:
@@ -62,9 +62,9 @@ def main() -> int:
             fail(f"missing owner skill: {skill}", failures)
             continue
         text = path.read_text(encoding="utf-8")
-        skill_text[skill] = text
         reachable = reachable_documents(path)
         routed_text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable))
+        skill_text[skill] = routed_text
         for anchor in contract.get('method_anchors', []):
             if anchor in routed_text:
                 passed(f"{skill} routes professional method anchor: {anchor}")
@@ -73,14 +73,14 @@ def main() -> int:
 
         for heading in contract["headings"]:
             pattern = rf"^##\s+[^\n]*{re.escape(heading)}[^\n]*$"
-            if re.search(pattern, text, flags=re.MULTILINE):
+            if re.search(pattern, routed_text, flags=re.MULTILINE):
                 passed(f"{skill} owns domain section: {heading}")
             else:
                 fail(f"{skill} missing domain section: {heading}", failures)
 
         for anchor in contract["anchors"]:
-            if anchor in text:
-                passed(f"{skill} contains capability anchor: {anchor}")
+            if anchor in routed_text:
+                passed(f"{skill} contains reachable capability anchor: {anchor}")
             else:
                 fail(f"{skill} missing capability anchor: {anchor}", failures)
 
@@ -126,7 +126,7 @@ def main() -> int:
             fail(f"migrated capability has no owner file: {migration['capability']}", failures)
             continue
         text = path.read_text(encoding="utf-8")
-        if path == ROOT / 'skills/laohu-script-writer/SKILL.md':
+        if path.name == 'SKILL.md':
             text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable_documents(path)))
         missing = [anchor for anchor in migration["anchors"] if anchor not in text]
         if missing:
@@ -187,7 +187,7 @@ def main() -> int:
             if not caller.is_file():
                 fail(f"external dependency caller missing: {caller_relative}", failures)
                 continue
-            caller_text = caller.read_text(encoding="utf-8")
+            caller_text = "\n".join(p.read_text(encoding="utf-8") for p in reachable_documents(caller)) if caller.name == "SKILL.md" else caller.read_text(encoding="utf-8")
             missing = [anchor for anchor in anchors if anchor not in caller_text]
             if missing:
                 fail(

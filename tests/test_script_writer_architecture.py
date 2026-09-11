@@ -101,35 +101,15 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, text)
 
     def test_formal_screenplay_contains_readable_brief_and_numbered_shots(self) -> None:
-        text = self.combined(
-            "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
-        )
-        for anchor in (
-            "【剧本说明】",
-            "【作品信息】",
-            "【故事说明】",
-            "【E01-S01-C01｜中景｜运镜：固定镜头｜机位：圆台南侧，朝北看向双人关系轴｜构图：Luna左侧、老胡右侧｜约4秒】",
-            "所有观众会看到或听到的正文必须归入一个镜号",
-            "景别是镜头属性，不是编号",
-        ):
+        text = self.read("skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md")
+        for anchor in ("【剧本说明】", "【作品信息】", "【故事说明】", "### E01-S01｜", "△ 人物行动", "不承担4—30秒P分段或C摄影"):
             self.assertIn(anchor, text)
-        self.assertNotIn("【镜1｜E01-S01-C01", text)
-        self.assertNotIn("普通正式剧本不强制焦段、景别和机位", text)
+        self.assertNotIn("所有观众会看到或听到的正文必须归入一个镜号", text)
 
     def test_scene_local_shot_ids_replace_redundant_global_shot_labels(self) -> None:
-        text = self.combined(
-            "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
-        )
-        for anchor in (
-            "Episode",
-            "Scene",
-            "Camera Shot",
-            "进入新场后从 `C01` 重新编号",
-            "不再额外添加全片连续",
-        ):
-            self.assertIn(anchor, text)
+        text = self.read("skills/laohu-video-segmentation/SKILL.md")
+        for anchor in ("Episode", "Scene", "Part", "Camera Shot", "每场从P01开始", "E01-S02-P03-C02"):
+            self.assertIn(anchor,text)
 
     def test_screenplay_body_keeps_visible_prose_and_video_owns_camera_execution(self) -> None:
         text = self.combined(
@@ -198,7 +178,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_screen_relationship_maps_world_camera_and_screen_without_numeric_rigging(self) -> None:
         reference = self.read(
-            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
+            "skills/laohu-video-prompt/references/镜头空间与连续性.md"
         )
         for anchor in (
             "世界层",
@@ -219,18 +199,11 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
         self.assertIn("不能只靠“左前景 / 右后景”假定机位已经成立", reference)
 
     def test_script_shot_header_exposes_viewpoint_and_composition_before_body(self) -> None:
-        text = self.combined(
-            "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
-            "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
-        )
-        for anchor in (
-            "编号｜景别｜运镜｜机位 / 视轴｜构图｜参考时长",
-            "机位是原因，构图是画面结果",
-            "摄影机从哪里朝哪里看",
-            "不重复方头已经锁定的静态机位",
-        ):
-            self.assertIn(anchor, text)
+        writer = self.read("skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md")
+        video = self.read("skills/laohu-video-prompt/references/镜头空间与连续性.md")
+        self.assertIn("不先指定景别/运镜/构图/秒数", writer)
+        self.assertIn("世界位置 → 摄影机观看侧 / 视轴", video)
+        self.assertIn("方头至少写清摄影机", video)
 
     def test_comedy_can_recur_as_varied_relationship_engine_without_becoming_a_quota(self) -> None:
         text = self.combined(
@@ -254,7 +227,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
             "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
-            "skills/laohu-video-prompt/references/01_文戏对白与人物表演.md",
+            "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
         )
         for anchor in (
             "情绪交接合同",
@@ -290,7 +263,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             "skills/laohu-script-writer/SKILL.md",
             "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
             "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
-            "skills/laohu-video-prompt/references/02_动作打斗追逐与力量奇观.md",
+            "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
         )
         for anchor in (
             "动作因果交接合同",
@@ -343,7 +316,7 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
 
     def test_fixed_closeup_cannot_gain_an_unintroduced_background_actor(self) -> None:
         reference = self.read(
-            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
+            "skills/laohu-video-prompt/references/镜头空间与连续性.md"
         )
         for anchor in (
             "固定镜头、人物入画与景别证据边界",
@@ -357,44 +330,17 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, reference)
 
     def test_script_owns_shot_facts_assets_stabilize_and_video_compiles(self) -> None:
-        text = self.combined(
-            "AGENTS.md",
-            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
-            "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-set-design/SKILL.md",
-            "skills/laohu-visual-assets/SKILL.md",
-            "skills/laohu-video-prompt/SKILL.md",
-        )
-        for anchor in (
-            "镜头化内容母版",
-            "稳定视觉形态",
-            "镜头继承合同",
-            "组成 E-S-B 批次",
-            "三段式执行语言",
-            "不第一次发明",
-        ):
-            self.assertIn(anchor, text)
+        text = self.combined("AGENTS.md", "skills/laohu-video-segmentation/SKILL.md", "skills/laohu-video-prompt/SKILL.md")
+        for anchor in ("完整剧本", "基础资产", "E-S-P", "C01", "三段式", "不改戏", "VC"):
+            self.assertIn(anchor,text)
 
     def test_video_capabilities_are_recompiled_upstream_without_turning_script_into_prompt(self) -> None:
-        reference = self.read(
-            "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
-        )
-        for anchor in (
-            "镜头原子与观看任务",
-            "世界—摄影机—画面空间",
-            "信息拓扑 → 视窗 / 版式观看范围 → 屏幕层级与焦点",
-            "动作与道具因果",
-            "人物表演",
-            "声音与必要特效",
-            "光线变化",
-            "相邻镜头交接",
-            "以下内容不迁入剧本正文",
-            "E-S-B 批次组合",
-            "正式三段式",
-            "VC 提纯",
-        ):
-            self.assertIn(anchor, reference)
-        self.assertIn("不能为了统一术语，给二维内容强造摄影机", reference)
+        writer = self.read("skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md")
+        video = self.read("skills/laohu-video-prompt/references/镜头空间与连续性.md")
+        for anchor in ("人物行动", "受力结果", "场次结果", "信息顺序", "生产证据账本"):
+            self.assertIn(anchor,writer)
+        self.assertIn("不能为了统一术语，给二维内容强造摄影机",video)
+        self.assertIn("信息拓扑 → 视窗 / 版式观看范围",video)
 
     def test_performable_psychology_supports_but_never_replaces_screen_evidence(self) -> None:
         reference = self.read(
@@ -412,20 +358,9 @@ class ScriptWriterArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, reference)
 
     def test_storyboard_is_integrated_and_video_prompt_preserves_source_mapping(self) -> None:
-        text = self.combined(
-            "AGENTS.md",
-            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
-            "02_共享资产库/05_工具流程/短剧剧本到视频提示词编号与时长规则.md",
-            "skills/laohu-video-prompt/SKILL.md",
-        )
-        for anchor in (
-            "文字分镜并入正式剧本",
-            "取消独立分镜宏观表",
-            "剧本镜号来源映射",
-            "拆镜、并镜",
-            "返回编剧",
-        ):
-            self.assertIn(anchor, text)
+        text = self.combined("AGENTS.md", "02_共享资产库/05_工具流程/短剧剧本到视频提示词编号与时长规则.md", "skills/laohu-video-prompt/SKILL.md")
+        for anchor in ("完整剧本", "分段执行卡", "原文来源映射", "一P一条", "C01", "RETURN"):
+            self.assertIn(anchor,text)
 
     def test_complete_lighting_sample_uses_shots_as_the_only_body_container(self) -> None:
         sample = self.read(

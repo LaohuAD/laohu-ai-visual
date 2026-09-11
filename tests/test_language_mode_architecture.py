@@ -108,7 +108,7 @@ class LanguageModeArchitectureTests(unittest.TestCase):
             "02_共享资产库/05_工具流程/能力协作图谱.md",
             "输入输出索引.md",
         )
-        self.assertIn("十七个", text)
+        self.assertIn("二十二个", text)
         self.assertIn("laohu-language-mode", text)
         for anchor in (
             "调用不转移主责",

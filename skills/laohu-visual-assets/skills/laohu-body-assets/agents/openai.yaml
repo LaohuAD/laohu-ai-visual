@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡素体与阶段资产"
+  short_description: "角色需要B素体、阶段身体或局部身份校准"
+  default_prompt: "使用 $laohu-body-assets 完成素体与阶段资产并返回专业结果。"

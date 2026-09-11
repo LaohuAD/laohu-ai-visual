@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡纹样与装饰"
+  short_description: "按明确输入完成纹样与装饰并返回专业结果"
+  default_prompt: "使用 $laohu-costume-ornament 处理当前专业问题。"

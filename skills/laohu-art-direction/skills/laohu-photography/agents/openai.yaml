@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡摄影"
+  short_description: "透视、景深、曝光、镜头质感或成像逻辑不成立"
+  default_prompt: "使用 $laohu-photography 完成摄影并返回专业结果。"

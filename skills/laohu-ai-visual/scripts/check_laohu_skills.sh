@@ -20,6 +20,10 @@ core_skills=(
   laohu-story-material
   laohu-script-writer
   laohu-mv-director
+  laohu-creative-development
+  laohu-makeup-design
+  laohu-prop-design
+  laohu-image-creation
   laohu-art-direction
   laohu-character-design
   laohu-audio-design
@@ -42,6 +46,9 @@ required_files=(
   02_共享资产库/05_工具流程/能力协作图谱.md
   02_共享资产库/05_工具流程/外部能力依赖清单.md
   scripts/validate_capability_architecture.py
+  scripts/validate_visual_restructure.py
+  02_共享资产库/05_工具流程/能力注册表.json
+  04_诊断与系统日志/视觉能力重构迁移清单.json
   tests/capability_scenarios.json
   tests/evolution_scenarios.json
   tests/language_mode_scenarios.json
@@ -89,7 +96,7 @@ PY
 done
 
 actual_skill_count="$(find skills -mindepth 1 -maxdepth 1 -type d -name 'laohu-*' | wc -l | tr -d ' ')"
-if [[ "$actual_skill_count" == "17" ]]; then pass "exactly seventeen public skills"; else fail "expected 17 skills, found $actual_skill_count"; fi
+if [[ "$actual_skill_count" == "22" ]]; then pass "exactly twenty-two public skills"; else fail "expected 22 skills, found $actual_skill_count"; fi
 
 if rg -n '^##[[:space:]]*(灵魂|筋骨|血肉|表皮)(层)?[[:space:]]*$' skills/*/SKILL.md >/dev/null; then
   fail "generic four-layer headings leaked into downstream skills"
@@ -101,6 +108,12 @@ if python3 scripts/validate_capability_architecture.py; then
   pass "static scenario declarations and ownership anchors (not model execution)"
 else
   fail "static scenario declarations or ownership anchors"
+fi
+
+if python3 scripts/validate_visual_restructure.py; then
+  pass "full specialist registry, routes and preserved baseline units"
+else
+  fail "specialist registry or preserved baseline drift"
 fi
 
 for status in 进行中 已完成 已发布; do require_file "01_作品项目/$status/.gitkeep"; done
@@ -156,3 +169,5 @@ if (( failures > 0 )); then
 fi
 
 printf 'Contract check passed.\n'
+
+python3 "$ROOT/scripts/validate_segmentation_migration.py"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡缩略图适配"
+  short_description: "主视觉需要手机缩略图、裁切或多画幅适配"
+  default_prompt: "使用 $laohu-thumbnail 完成缩略图适配并返回专业结果。"

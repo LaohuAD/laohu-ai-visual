@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import re
 import unittest
+from scripts.validate_segmentation_migration import read_before
 
 ROOT = Path(__file__).resolve().parents[1]
 PILOT = ROOT / 'skills/laohu-script-writer/skills/laohu-dialogue'
@@ -54,7 +55,7 @@ class DialoguePilotTests(unittest.TestCase):
 
     def test_formal_output_contract_unchanged(self):
         migration = json.loads((ROOT / '04_诊断与系统日志/编剧能力完整迁移清单.json').read_text())['workflow_refactor']
-        text = (ROOT / migration['output_contract_owner']).read_text()
+        text = read_before(migration['output_contract_owner'])
         start = text.index(migration['output_contract_start'])
         block = text[start:start + migration['output_contract_characters']]
         self.assertEqual(hashlib.sha256(block.encode()).hexdigest(), '0323f969c45effb5dcb60c4e3326f0fffc546db2929b46d6247ac20b6adddaa7')

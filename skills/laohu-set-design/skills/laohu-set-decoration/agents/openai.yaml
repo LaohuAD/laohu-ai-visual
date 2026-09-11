@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡布景陈设"
+  short_description: "按明确输入完成布景陈设并返回专业结果"
+  default_prompt: "使用 $laohu-set-decoration 处理当前专业问题。"

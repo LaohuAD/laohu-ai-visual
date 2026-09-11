@@ -80,8 +80,8 @@ for my $index (0 .. $#blocks) {
     push @errors, "$heading count=$count" unless $count == 1;
   }
 
-  my @shots = $block =~ /【镜头(\d{2})｜/g;
-  my @full_shots = $block =~ /【镜头(\d{2})｜[^｜】\n]+｜[^｜】\n]+｜[^】\n]+】/g;
+  my @shots = $block =~ /【(?:C|镜头)(\d{2})｜/g;
+  my @full_shots = $block =~ /【(?:C|镜头)(\d{2})｜[^｜】\n]+｜[^｜】\n]+｜[^】\n]+】/g;
   if (!@shots) {
     push @errors, 'missing numbered shot header';
   } else {
@@ -94,7 +94,7 @@ for my $index (0 .. $#blocks) {
       unless @full_shots == @shots;
   }
 
-  while ($block =~ /(【镜头\d{2}｜[^】\n]+】)(.*?)(?=【镜头\d{2}｜|\z)/sg) {
+  while ($block =~ /(【(?:C|镜头)\d{2}｜[^】\n]+】)(.*?)(?=【(?:C|镜头)\d{2}｜|\z)/sg) {
     my ($header, $shot_body) = ($1, $2);
     my $visible = $shot_body =~ /(?:先看见|画面|镜头|前景|中景|后景|焦平面|构图|主体|人物|孩子|男人|女人|女生|男生|师兄|师妹)/;
     my $change = $shot_body =~ /(?:听到|说完|随后|然后|同时|当[^，。；\n]{0,30}时|开始|触发|才|转为|移向|抬起|落下|停住|变化)/;

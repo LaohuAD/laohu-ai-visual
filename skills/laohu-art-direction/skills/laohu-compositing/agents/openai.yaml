@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡合成"
+  short_description: "多来源图层出现透视、光色、边缘或遮挡不一致"
+  default_prompt: "使用 $laohu-compositing 完成合成并返回专业结果。"

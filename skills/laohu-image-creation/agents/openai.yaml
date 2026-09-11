@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡图片创作"
+  short_description: "按实际缺口整合图片创作专业判断"
+  default_prompt: "使用 $laohu-image-creation 完成当前任务。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡选角"
+  short_description: "按明确输入完成选角并返回专业结果"
+  default_prompt: "使用 $laohu-casting 处理当前专业问题。"

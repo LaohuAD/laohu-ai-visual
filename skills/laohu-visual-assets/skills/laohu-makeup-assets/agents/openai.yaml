@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡妆造资产"
+  short_description: "F/B/W与妆发正文齐备，需要M穿着结果"
+  default_prompt: "使用 $laohu-makeup-assets 完成妆造资产并返回专业结果。"

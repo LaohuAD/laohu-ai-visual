@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡静物摄影"
+  short_description: "产品、食物、器物或非人物主体需要静物画面"
+  default_prompt: "使用 $laohu-still-life-photography 完成静物摄影并返回专业结果。"

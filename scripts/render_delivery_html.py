@@ -16,9 +16,9 @@ from typing import Sequence
 
 
 DOMAIN_HEADING = re.compile(
-    r"^(?P<id>E\d{2}-S\d{2}-B\d{2}|KF\d+(?:-[A-Z])?|STY-?\d+|(?:VMB|VID|LZ|[BCFGPWMSA])\d+)(?:\s*[｜|]\s*(?P<title>.*))?$"
+    r"^(?P<id>E\d{2}-S\d{2}-[BP]\d{2,}|KF\d+(?:-[A-Z])?|STY-?\d+|(?:VMB|VID|LZ|[BCFGPWMSA])\d+)(?:\s*[｜|]\s*(?P<title>.*))?$"
 )
-BATCH_ID = re.compile(r"^E(?P<episode>\d{2})-S(?P<scene>\d{2})-B(?P<batch>\d{2})$")
+BATCH_ID = re.compile(r"^E(?P<episode>\d{2})-S(?P<scene>\d{2})-[BP](?P<batch>\d{2,})$")
 HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 FENCE = re.compile(r"^```([^`]*)$")
 TABLE_DIVIDER = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$")
@@ -33,7 +33,7 @@ DOMAIN_GROUPS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
     ("SCENE", "场景资产", ("S",)),
     ("ENSEMBLE", "群像资产", ("G",)),
     ("BLOCKING", "镜头调度参考", ("C",)),
-    ("VIDEO", "视频生成批次", ("BATCH", "VID")),
+    ("VIDEO", "视频分段与提示词", ("BATCH", "VID")),
     ("STYLE", "风格定调图", ("STY",)),
     ("VISUAL_MASTER", "视觉母板", ("VMB",)),
     ("KEYFRAME", "关键帧", ("KF",)),

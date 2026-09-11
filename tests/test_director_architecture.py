@@ -72,7 +72,7 @@ class DirectorArchitectureTests(unittest.TestCase):
             "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
             "输入输出索引.md",
         )
-        self.assertIn("十七个", text)
+        self.assertIn("二十二个", text)
         self.assertIn("laohu-director", text)
         for anchor in (
             "公开作品",
@@ -87,7 +87,7 @@ class DirectorArchitectureTests(unittest.TestCase):
         for anchor in (
             "调度专业",
             "导演阐述",
-            "正式剧本仍是唯一镜头化内容母版",
+            "正式剧本仍是唯一完整内容母版",
             "继承有效导演阐述",
             "不得私自更换全片胜负手",
             "CONSULT",
@@ -103,6 +103,7 @@ class DirectorArchitectureTests(unittest.TestCase):
             "skills/laohu-audio-design/SKILL.md",
             "skills/laohu-visual-assets/SKILL.md",
             "skills/laohu-video-prompt/SKILL.md",
+            "skills/laohu-video-prompt/references/交接与验收.md",
             "skills/laohu-generation-review/SKILL.md",
             "skills/laohu-mv-director/SKILL.md",
         )

@@ -56,9 +56,9 @@ class CreateWorkProjectTests(unittest.TestCase):
         self.assertEqual({p.name for p in project.rglob("*.md")}, {"00_项目总览.md", "00_阶段确认记录.md"})
         overview = (project / "00_项目总览.md").read_text()
         self.assertIn("laohu-director", overview)
-        self.assertIn("镜头化正式剧本", overview)
-        self.assertIn("E-S-C", overview)
-        self.assertIn("E-S-B", overview)
+        self.assertIn("完整E-S正式剧本", overview)
+        self.assertIn("E-S", overview)
+        self.assertIn("E-S-P", overview)
         self.assertIn("SHOT", overview)
         self.assertNotIn("E1-S1-C1", overview)
         self.assertNotIn("12 秒", overview)
@@ -70,7 +70,7 @@ class CreateWorkProjectTests(unittest.TestCase):
         self.assertIn("单张成品图", overview)
         self.assertIn("laohu-visual-assets", overview)
         self.assertNotIn("laohu-script-writer", overview)
-        self.assertNotIn("E-S-B", overview)
+        self.assertNotIn("E-S-P", overview)
         self.assertFalse((project / "02_剧本").exists())
 
     def test_mv_requires_final_audio_evidence_without_invented_timing(self):

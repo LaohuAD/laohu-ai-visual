@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡插画"
+  short_description: "需要手绘、版画、拼贴、图形化或跨媒介转译"
+  default_prompt: "使用 $laohu-illustration 完成插画并返回专业结果。"

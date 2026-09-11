@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡服装结构"
+  short_description: "按明确输入完成服装结构并返回专业结果"
+  default_prompt: "使用 $laohu-garment-structure 处理当前专业问题。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡字体与文字排印"
+  short_description: "字体、字重、字距、行距、中西文混排或文字可读性不足"
+  default_prompt: "使用 $laohu-typography 完成字体与文字排印并返回专业结果。"

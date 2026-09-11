@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡色彩设计"
+  short_description: "颜色承担分组、身份识别、情绪转折或肤色产品色保护"
+  default_prompt: "使用 $laohu-color-design 完成色彩设计并返回专业结果。"

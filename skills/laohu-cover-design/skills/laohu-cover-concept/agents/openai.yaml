@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡封面概念"
+  short_description: "作品事实成立，需要点击主张与主视觉候选"
+  default_prompt: "使用 $laohu-cover-concept 完成封面概念并返回专业结果。"

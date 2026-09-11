@@ -1,0 +1,778 @@
+{
+  "schema_version": 1,
+  "entry_count": 22,
+  "specialist_count": 88,
+  "skills": [
+    {
+      "name": "laohu-ai-visual",
+      "path": "skills/laohu-ai-visual/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "总控"
+    },
+    {
+      "name": "laohu-director",
+      "path": "skills/laohu-director/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "总导演"
+    },
+    {
+      "name": "laohu-mv-director",
+      "path": "skills/laohu-mv-director/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "MV导演"
+    },
+    {
+      "name": "laohu-story-material",
+      "path": "skills/laohu-story-material/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "故事素材"
+    },
+    {
+      "name": "laohu-script-writer",
+      "path": "skills/laohu-script-writer/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "编剧"
+    },
+    {
+      "name": "laohu-american-case-studies",
+      "path": "skills/laohu-script-writer/skills/laohu-american-case-studies/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-american-case-studies"
+    },
+    {
+      "name": "laohu-character-conflict",
+      "path": "skills/laohu-script-writer/skills/laohu-character-conflict/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-character-conflict"
+    },
+    {
+      "name": "laohu-chekhov-dramaturgy",
+      "path": "skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-chekhov-dramaturgy"
+    },
+    {
+      "name": "laohu-dialogue",
+      "path": "skills/laohu-script-writer/skills/laohu-dialogue/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-dialogue"
+    },
+    {
+      "name": "laohu-format-adaptation",
+      "path": "skills/laohu-script-writer/skills/laohu-format-adaptation/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-format-adaptation"
+    },
+    {
+      "name": "laohu-industry-business",
+      "path": "skills/laohu-script-writer/skills/laohu-industry-business/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-industry-business"
+    },
+    {
+      "name": "laohu-japanese-screenwriting",
+      "path": "skills/laohu-script-writer/skills/laohu-japanese-screenwriting/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-japanese-screenwriting"
+    },
+    {
+      "name": "laohu-korean-french-screenwriting",
+      "path": "skills/laohu-script-writer/skills/laohu-korean-french-screenwriting/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-korean-french-screenwriting"
+    },
+    {
+      "name": "laohu-ozu-screenplay-style",
+      "path": "skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-ozu-screenplay-style"
+    },
+    {
+      "name": "laohu-premise-theme",
+      "path": "skills/laohu-script-writer/skills/laohu-premise-theme/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-premise-theme"
+    },
+    {
+      "name": "laohu-scene-craft",
+      "path": "skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-scene-craft"
+    },
+    {
+      "name": "laohu-story-structure",
+      "path": "skills/laohu-script-writer/skills/laohu-story-structure/SKILL.md",
+      "parent": "laohu-script-writer",
+      "kind": "specialist",
+      "label": "laohu-story-structure"
+    },
+    {
+      "name": "laohu-creative-development",
+      "path": "skills/laohu-creative-development/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "创意开发"
+    },
+    {
+      "name": "laohu-art-direction",
+      "path": "skills/laohu-art-direction/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "美术指导"
+    },
+    {
+      "name": "laohu-color-design",
+      "path": "skills/laohu-art-direction/skills/laohu-color-design/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "色彩设计"
+    },
+    {
+      "name": "laohu-composition",
+      "path": "skills/laohu-art-direction/skills/laohu-composition/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "构图"
+    },
+    {
+      "name": "laohu-photography",
+      "path": "skills/laohu-art-direction/skills/laohu-photography/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "摄影"
+    },
+    {
+      "name": "laohu-light-shadow",
+      "path": "skills/laohu-art-direction/skills/laohu-light-shadow/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "光影设计"
+    },
+    {
+      "name": "laohu-material-design",
+      "path": "skills/laohu-art-direction/skills/laohu-material-design/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "材质设计"
+    },
+    {
+      "name": "laohu-illustration",
+      "path": "skills/laohu-art-direction/skills/laohu-illustration/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "插画设计"
+    },
+    {
+      "name": "laohu-layout-design",
+      "path": "skills/laohu-art-direction/skills/laohu-layout-design/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "版式设计"
+    },
+    {
+      "name": "laohu-typography",
+      "path": "skills/laohu-art-direction/skills/laohu-typography/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "字体与文字设计"
+    },
+    {
+      "name": "laohu-information-design",
+      "path": "skills/laohu-art-direction/skills/laohu-information-design/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "信息设计"
+    },
+    {
+      "name": "laohu-compositing",
+      "path": "skills/laohu-art-direction/skills/laohu-compositing/SKILL.md",
+      "parent": "laohu-art-direction",
+      "kind": "specialist",
+      "label": "合成"
+    },
+    {
+      "name": "laohu-character-design",
+      "path": "skills/laohu-character-design/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "角色设计"
+    },
+    {
+      "name": "laohu-casting",
+      "path": "skills/laohu-character-design/skills/laohu-casting/SKILL.md",
+      "parent": "laohu-character-design",
+      "kind": "specialist",
+      "label": "选角"
+    },
+    {
+      "name": "laohu-face-design",
+      "path": "skills/laohu-character-design/skills/laohu-face-design/SKILL.md",
+      "parent": "laohu-character-design",
+      "kind": "specialist",
+      "label": "面部设计"
+    },
+    {
+      "name": "laohu-body-design",
+      "path": "skills/laohu-character-design/skills/laohu-body-design/SKILL.md",
+      "parent": "laohu-character-design",
+      "kind": "specialist",
+      "label": "人体与体态设计"
+    },
+    {
+      "name": "laohu-creature-design",
+      "path": "skills/laohu-character-design/skills/laohu-creature-design/SKILL.md",
+      "parent": "laohu-character-design",
+      "kind": "specialist",
+      "label": "生物设计"
+    },
+    {
+      "name": "laohu-ensemble-design",
+      "path": "skills/laohu-character-design/skills/laohu-ensemble-design/SKILL.md",
+      "parent": "laohu-character-design",
+      "kind": "specialist",
+      "label": "群像设计"
+    },
+    {
+      "name": "laohu-costume-design",
+      "path": "skills/laohu-costume-design/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "服装设计"
+    },
+    {
+      "name": "laohu-costume-research",
+      "path": "skills/laohu-costume-design/skills/laohu-costume-research/SKILL.md",
+      "parent": "laohu-costume-design",
+      "kind": "specialist",
+      "label": "服饰考据"
+    },
+    {
+      "name": "laohu-costume-silhouette",
+      "path": "skills/laohu-costume-design/skills/laohu-costume-silhouette/SKILL.md",
+      "parent": "laohu-costume-design",
+      "kind": "specialist",
+      "label": "服装造型"
+    },
+    {
+      "name": "laohu-garment-structure",
+      "path": "skills/laohu-costume-design/skills/laohu-garment-structure/SKILL.md",
+      "parent": "laohu-costume-design",
+      "kind": "specialist",
+      "label": "服装结构"
+    },
+    {
+      "name": "laohu-textile-design",
+      "path": "skills/laohu-costume-design/skills/laohu-textile-design/SKILL.md",
+      "parent": "laohu-costume-design",
+      "kind": "specialist",
+      "label": "面料设计"
+    },
+    {
+      "name": "laohu-costume-ornament",
+      "path": "skills/laohu-costume-design/skills/laohu-costume-ornament/SKILL.md",
+      "parent": "laohu-costume-design",
+      "kind": "specialist",
+      "label": "纹样与装饰"
+    },
+    {
+      "name": "laohu-accessory-design",
+      "path": "skills/laohu-costume-design/skills/laohu-accessory-design/SKILL.md",
+      "parent": "laohu-costume-design",
+      "kind": "specialist",
+      "label": "配饰设计"
+    },
+    {
+      "name": "laohu-costume-continuity",
+      "path": "skills/laohu-costume-design/skills/laohu-costume-continuity/SKILL.md",
+      "parent": "laohu-costume-design",
+      "kind": "specialist",
+      "label": "戏服连续性"
+    },
+    {
+      "name": "laohu-makeup-design",
+      "path": "skills/laohu-makeup-design/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "妆发设计"
+    },
+    {
+      "name": "laohu-makeup",
+      "path": "skills/laohu-makeup-design/skills/laohu-makeup/SKILL.md",
+      "parent": "laohu-makeup-design",
+      "kind": "specialist",
+      "label": "妆容设计"
+    },
+    {
+      "name": "laohu-hair-design",
+      "path": "skills/laohu-makeup-design/skills/laohu-hair-design/SKILL.md",
+      "parent": "laohu-makeup-design",
+      "kind": "specialist",
+      "label": "发型设计"
+    },
+    {
+      "name": "laohu-groom-design",
+      "path": "skills/laohu-makeup-design/skills/laohu-groom-design/SKILL.md",
+      "parent": "laohu-makeup-design",
+      "kind": "specialist",
+      "label": "毛发设计"
+    },
+    {
+      "name": "laohu-prosthetic-makeup",
+      "path": "skills/laohu-makeup-design/skills/laohu-prosthetic-makeup/SKILL.md",
+      "parent": "laohu-makeup-design",
+      "kind": "specialist",
+      "label": "特效化妆"
+    },
+    {
+      "name": "laohu-set-design",
+      "path": "skills/laohu-set-design/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "场景设计"
+    },
+    {
+      "name": "laohu-environment-research",
+      "path": "skills/laohu-set-design/skills/laohu-environment-research/SKILL.md",
+      "parent": "laohu-set-design",
+      "kind": "specialist",
+      "label": "场景考据"
+    },
+    {
+      "name": "laohu-architecture-design",
+      "path": "skills/laohu-set-design/skills/laohu-architecture-design/SKILL.md",
+      "parent": "laohu-set-design",
+      "kind": "specialist",
+      "label": "建筑设计"
+    },
+    {
+      "name": "laohu-interior-design",
+      "path": "skills/laohu-set-design/skills/laohu-interior-design/SKILL.md",
+      "parent": "laohu-set-design",
+      "kind": "specialist",
+      "label": "室内设计"
+    },
+    {
+      "name": "laohu-landscape-design",
+      "path": "skills/laohu-set-design/skills/laohu-landscape-design/SKILL.md",
+      "parent": "laohu-set-design",
+      "kind": "specialist",
+      "label": "景观设计"
+    },
+    {
+      "name": "laohu-spatial-layout",
+      "path": "skills/laohu-set-design/skills/laohu-spatial-layout/SKILL.md",
+      "parent": "laohu-set-design",
+      "kind": "specialist",
+      "label": "空间布局"
+    },
+    {
+      "name": "laohu-set-decoration",
+      "path": "skills/laohu-set-design/skills/laohu-set-decoration/SKILL.md",
+      "parent": "laohu-set-design",
+      "kind": "specialist",
+      "label": "布景陈设"
+    },
+    {
+      "name": "laohu-prop-design",
+      "path": "skills/laohu-prop-design/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "道具设计"
+    },
+    {
+      "name": "laohu-hand-props",
+      "path": "skills/laohu-prop-design/skills/laohu-hand-props/SKILL.md",
+      "parent": "laohu-prop-design",
+      "kind": "specialist",
+      "label": "手持道具设计"
+    },
+    {
+      "name": "laohu-product-design",
+      "path": "skills/laohu-prop-design/skills/laohu-product-design/SKILL.md",
+      "parent": "laohu-prop-design",
+      "kind": "specialist",
+      "label": "产品设计"
+    },
+    {
+      "name": "laohu-vehicle-design",
+      "path": "skills/laohu-prop-design/skills/laohu-vehicle-design/SKILL.md",
+      "parent": "laohu-prop-design",
+      "kind": "specialist",
+      "label": "载具设计"
+    },
+    {
+      "name": "laohu-mechanical-design",
+      "path": "skills/laohu-prop-design/skills/laohu-mechanical-design/SKILL.md",
+      "parent": "laohu-prop-design",
+      "kind": "specialist",
+      "label": "机械设计"
+    },
+    {
+      "name": "laohu-image-creation",
+      "path": "skills/laohu-image-creation/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "图片创作"
+    },
+    {
+      "name": "laohu-portrait",
+      "path": "skills/laohu-image-creation/skills/laohu-portrait/SKILL.md",
+      "parent": "laohu-image-creation",
+      "kind": "specialist",
+      "label": "人像摄影"
+    },
+    {
+      "name": "laohu-still-life-photography",
+      "path": "skills/laohu-image-creation/skills/laohu-still-life-photography/SKILL.md",
+      "parent": "laohu-image-creation",
+      "kind": "specialist",
+      "label": "静物摄影"
+    },
+    {
+      "name": "laohu-storyboard",
+      "path": "skills/laohu-image-creation/skills/laohu-storyboard/SKILL.md",
+      "parent": "laohu-image-creation",
+      "kind": "specialist",
+      "label": "分镜设计"
+    },
+    {
+      "name": "laohu-image-editing",
+      "path": "skills/laohu-image-creation/skills/laohu-image-editing/SKILL.md",
+      "parent": "laohu-image-creation",
+      "kind": "specialist",
+      "label": "图像编辑"
+    },
+    {
+      "name": "laohu-image-prompt",
+      "path": "skills/laohu-image-creation/skills/laohu-image-prompt/SKILL.md",
+      "parent": "laohu-image-creation",
+      "kind": "specialist",
+      "label": "图片提示词编译"
+    },
+    {
+      "name": "laohu-visual-assets",
+      "path": "skills/laohu-visual-assets/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "视觉资产"
+    },
+    {
+      "name": "laohu-body-assets",
+      "path": "skills/laohu-visual-assets/skills/laohu-body-assets/SKILL.md",
+      "parent": "laohu-visual-assets",
+      "kind": "specialist",
+      "label": "素体资产"
+    },
+    {
+      "name": "laohu-costume-assets",
+      "path": "skills/laohu-visual-assets/skills/laohu-costume-assets/SKILL.md",
+      "parent": "laohu-visual-assets",
+      "kind": "specialist",
+      "label": "服装资产"
+    },
+    {
+      "name": "laohu-makeup-assets",
+      "path": "skills/laohu-visual-assets/skills/laohu-makeup-assets/SKILL.md",
+      "parent": "laohu-visual-assets",
+      "kind": "specialist",
+      "label": "妆造资产"
+    },
+    {
+      "name": "laohu-environment-assets",
+      "path": "skills/laohu-visual-assets/skills/laohu-environment-assets/SKILL.md",
+      "parent": "laohu-visual-assets",
+      "kind": "specialist",
+      "label": "场景资产"
+    },
+    {
+      "name": "laohu-prop-assets",
+      "path": "skills/laohu-visual-assets/skills/laohu-prop-assets/SKILL.md",
+      "parent": "laohu-visual-assets",
+      "kind": "specialist",
+      "label": "道具资产"
+    },
+    {
+      "name": "laohu-group-assets",
+      "path": "skills/laohu-visual-assets/skills/laohu-group-assets/SKILL.md",
+      "parent": "laohu-visual-assets",
+      "kind": "specialist",
+      "label": "群像资产"
+    },
+    {
+      "name": "laohu-style-reference",
+      "path": "skills/laohu-visual-assets/skills/laohu-style-reference/SKILL.md",
+      "parent": "laohu-visual-assets",
+      "kind": "specialist",
+      "label": "风格参考"
+    },
+    {
+      "name": "laohu-cover-design",
+      "path": "skills/laohu-cover-design/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "封面设计"
+    },
+    {
+      "name": "laohu-cover-concept",
+      "path": "skills/laohu-cover-design/skills/laohu-cover-concept/SKILL.md",
+      "parent": "laohu-cover-design",
+      "kind": "specialist",
+      "label": "封面策划"
+    },
+    {
+      "name": "laohu-cover-copy",
+      "path": "skills/laohu-cover-design/skills/laohu-cover-copy/SKILL.md",
+      "parent": "laohu-cover-design",
+      "kind": "specialist",
+      "label": "封面标题"
+    },
+    {
+      "name": "laohu-cover-layout",
+      "path": "skills/laohu-cover-design/skills/laohu-cover-layout/SKILL.md",
+      "parent": "laohu-cover-design",
+      "kind": "specialist",
+      "label": "封面版式"
+    },
+    {
+      "name": "laohu-thumbnail",
+      "path": "skills/laohu-cover-design/skills/laohu-thumbnail/SKILL.md",
+      "parent": "laohu-cover-design",
+      "kind": "specialist",
+      "label": "缩略图适配"
+    },
+    {
+      "name": "laohu-video-prompt",
+      "path": "skills/laohu-video-prompt/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "视频创作与提示词"
+    },
+    {
+      "name": "laohu-camera-movement",
+      "path": "skills/laohu-video-prompt/skills/laohu-camera-movement/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "运镜"
+    },
+    {
+      "name": "laohu-performance",
+      "path": "skills/laohu-video-prompt/skills/laohu-performance/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "表演"
+    },
+    {
+      "name": "laohu-action-design",
+      "path": "skills/laohu-video-prompt/skills/laohu-action-design/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "动作设计"
+    },
+    {
+      "name": "laohu-animation",
+      "path": "skills/laohu-video-prompt/skills/laohu-animation/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "动画"
+    },
+    {
+      "name": "laohu-choreography",
+      "path": "skills/laohu-video-prompt/skills/laohu-choreography/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "舞蹈编排"
+    },
+    {
+      "name": "laohu-motion-design",
+      "path": "skills/laohu-video-prompt/skills/laohu-motion-design/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "动态图形设计"
+    },
+    {
+      "name": "laohu-vfx",
+      "path": "skills/laohu-video-prompt/skills/laohu-vfx/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "视觉特效 VFX"
+    },
+    {
+      "name": "laohu-editing",
+      "path": "skills/laohu-video-prompt/skills/laohu-editing/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "剪辑"
+    },
+    {
+      "name": "laohu-audiovisual",
+      "path": "skills/laohu-video-prompt/skills/laohu-audiovisual/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "声画关系"
+    },
+    {
+      "name": "laohu-video-references",
+      "path": "skills/laohu-video-prompt/skills/laohu-video-references/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "视频参考与资产绑定"
+    },
+    {
+      "name": "laohu-video-compilation",
+      "path": "skills/laohu-video-prompt/skills/laohu-video-compilation/SKILL.md",
+      "parent": "laohu-video-prompt",
+      "kind": "specialist",
+      "label": "视频提示词编译"
+    },
+    {
+      "name": "laohu-vibe-creating-prompt",
+      "path": "skills/laohu-vibe-creating-prompt/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "VC提纯"
+    },
+    {
+      "name": "laohu-audio-design",
+      "path": "skills/laohu-audio-design/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "音频设计"
+    },
+    {
+      "name": "laohu-voice-design",
+      "path": "skills/laohu-audio-design/skills/laohu-voice-design/SKILL.md",
+      "parent": "laohu-audio-design",
+      "kind": "specialist",
+      "label": "音色设计"
+    },
+    {
+      "name": "laohu-voice-performance",
+      "path": "skills/laohu-audio-design/skills/laohu-voice-performance/SKILL.md",
+      "parent": "laohu-audio-design",
+      "kind": "specialist",
+      "label": "配音"
+    },
+    {
+      "name": "laohu-sound-effects",
+      "path": "skills/laohu-audio-design/skills/laohu-sound-effects/SKILL.md",
+      "parent": "laohu-audio-design",
+      "kind": "specialist",
+      "label": "音效设计"
+    },
+    {
+      "name": "laohu-ambience",
+      "path": "skills/laohu-audio-design/skills/laohu-ambience/SKILL.md",
+      "parent": "laohu-audio-design",
+      "kind": "specialist",
+      "label": "环境声设计"
+    },
+    {
+      "name": "laohu-music-design",
+      "path": "skills/laohu-audio-design/skills/laohu-music-design/SKILL.md",
+      "parent": "laohu-audio-design",
+      "kind": "specialist",
+      "label": "配乐设计"
+    },
+    {
+      "name": "laohu-audio-editing",
+      "path": "skills/laohu-audio-design/skills/laohu-audio-editing/SKILL.md",
+      "parent": "laohu-audio-design",
+      "kind": "specialist",
+      "label": "音频剪辑"
+    },
+    {
+      "name": "laohu-audio-mixing",
+      "path": "skills/laohu-audio-design/skills/laohu-audio-mixing/SKILL.md",
+      "parent": "laohu-audio-design",
+      "kind": "specialist",
+      "label": "混音"
+    },
+    {
+      "name": "laohu-audio-prompt",
+      "path": "skills/laohu-audio-design/skills/laohu-audio-prompt/SKILL.md",
+      "parent": "laohu-audio-design",
+      "kind": "specialist",
+      "label": "音频提示词编译"
+    },
+    {
+      "name": "laohu-language-mode",
+      "path": "skills/laohu-language-mode/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "语言模式"
+    },
+    {
+      "name": "laohu-generation-review",
+      "path": "skills/laohu-generation-review/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "生成复盘"
+    },
+    {
+      "name": "laohu-image-review",
+      "path": "skills/laohu-generation-review/skills/laohu-image-review/SKILL.md",
+      "parent": "laohu-generation-review",
+      "kind": "specialist",
+      "label": "图片评审"
+    },
+    {
+      "name": "laohu-video-review",
+      "path": "skills/laohu-generation-review/skills/laohu-video-review/SKILL.md",
+      "parent": "laohu-generation-review",
+      "kind": "specialist",
+      "label": "视频评审"
+    },
+    {
+      "name": "laohu-audio-review",
+      "path": "skills/laohu-generation-review/skills/laohu-audio-review/SKILL.md",
+      "parent": "laohu-generation-review",
+      "kind": "specialist",
+      "label": "音频评审"
+    },
+    {
+      "name": "laohu-edit-review",
+      "path": "skills/laohu-generation-review/skills/laohu-edit-review/SKILL.md",
+      "parent": "laohu-generation-review",
+      "kind": "specialist",
+      "label": "成片评审"
+    },
+    {
+      "name": "laohu-release-review",
+      "path": "skills/laohu-generation-review/skills/laohu-release-review/SKILL.md",
+      "parent": "laohu-generation-review",
+      "kind": "specialist",
+      "label": "发布复盘"
+    },
+    {
+      "name": "laohu-capability-evolution",
+      "path": "skills/laohu-capability-evolution/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "能力进化"
+    },
+    {
+      "name": "laohu-video-segmentation",
+      "path": "skills/laohu-video-segmentation/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "视频分段规划"
+    }
+  ],
+  "loading_policy": "Read the selected SKILL.md first; follow only references needed for the active gap. Parent ownership does not imply native runtime discovery."
+}

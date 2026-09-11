@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡人像摄影"
+  short_description: "写真、F人物主视觉、人物结果图或已有照片需要可信现场"
+  default_prompt: "使用 $laohu-portrait 完成人像摄影并返回专业结果。"

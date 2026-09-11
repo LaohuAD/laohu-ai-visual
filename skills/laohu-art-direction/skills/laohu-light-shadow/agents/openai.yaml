@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡光影设计"
+  short_description: "光源、阴影、体积光、反射、轮廓或动态受光需要专业判断"
+  default_prompt: "使用 $laohu-light-shadow 完成光影设计并返回专业结果。"

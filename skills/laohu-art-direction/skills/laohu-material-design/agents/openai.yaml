@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡材质设计"
+  short_description: "表面看似同一种塑料，或材料与使用、光照不相容"
+  default_prompt: "使用 $laohu-material-design 完成材质设计并返回专业结果。"

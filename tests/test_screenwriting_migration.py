@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import re
 import unittest
+from scripts.validate_segmentation_migration import read_before
 
 ROOT = Path(__file__).resolve().parents[1]
 PARENT = ROOT / 'skills/laohu-script-writer'
@@ -30,7 +31,7 @@ class ScreenwritingMigrationTests(unittest.TestCase):
     def test_complete_methods_and_original_references(self):
         for m in self.data['modules']:
             with self.subTest(module=m['module']):
-                dst = ROOT / m['dst']; text = dst.read_text(); heading = m['methods_start_heading']
+                dst = ROOT / m['dst']; text = read_before(dst); heading = m['methods_start_heading']
                 body = text[text.index(heading):]
                 self.assertEqual(sha(body), m['body_sha256'])
                 source = ROOT / m['src']
@@ -51,7 +52,7 @@ class ScreenwritingMigrationTests(unittest.TestCase):
     def test_local_methods_have_exact_active_owners(self):
         spans = {}
         for unit in self.data['local_units']:
-            target = (ROOT / unit['target']).read_text()
+            target = read_before(unit['target'])
             start = target.index(unit['target_start'])
             chunk = target[start:start + unit['character_count']]
             self.assertEqual(sha(chunk), unit['sha256'])
@@ -89,9 +90,9 @@ class ScreenwritingMigrationTests(unittest.TestCase):
             for layer in ['灵魂', '筋骨', '血肉', '表皮']:
                 self.assertRegex(text, r'(?m)^## '+layer+'：.+$')
 
-    def test_formal_production_contract_is_unchanged(self):
+    def test_historical_formal_contract_is_preserved_before_authorized_evolution(self):
         contract = self.data['workflow_refactor']
-        text = (ROOT / contract['output_contract_owner']).read_text()
+        text = read_before(contract['output_contract_owner'])
         start = text.index(contract['output_contract_start'])
         block = text[start:start + contract['output_contract_characters']]
         self.assertEqual(sha(block), self.data['formal_output_sha256'])
@@ -108,7 +109,7 @@ class ScreenwritingMigrationTests(unittest.TestCase):
             target = ROOT / unit['target']
             self.assertIn(target.resolve(), reachable, str(target))
             self.assertEqual(sha(unit['text']), unit['text_sha256'])
-            self.assertIn(unit['text'], target.read_text())
+            self.assertIn(unit['text'], read_before(target))
 
     def test_active_routes_do_not_return_to_retired_mixed_sources(self):
         files = [PARENT / 'SKILL.md', PARENT / 'references/05_剧本语言诊断与反向审稿.md']

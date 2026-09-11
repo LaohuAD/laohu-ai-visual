@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡风格定调资产"
+  short_description: "已定案风格需要STY、系列风格参考或跨主体校准"
+  default_prompt: "使用 $laohu-style-reference 完成风格定调资产并返回专业结果。"

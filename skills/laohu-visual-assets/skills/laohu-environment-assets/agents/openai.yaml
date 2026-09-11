@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡场景资产"
+  short_description: "已确认场景需要S空间资产、巨构或多视图"
+  default_prompt: "使用 $laohu-environment-assets 完成场景资产并返回专业结果。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡故事板"
+  short_description: "已确认剧本需要关键帧、故事板或预视化"
+  default_prompt: "使用 $laohu-storyboard 完成故事板并返回专业结果。"

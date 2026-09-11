@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡服装资产"
+  short_description: "已确认服装需要W制作板与可复用引用"
+  default_prompt: "使用 $laohu-costume-assets 完成服装资产并返回专业结果。"

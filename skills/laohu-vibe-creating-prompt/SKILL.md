@@ -88,7 +88,7 @@ VFX 更服从动作来源、传播和环境结果。
 
 零改动放行不是跳过 Reference，而是读取、比较以后确认没有稳定增益。退回上游也必须说明是在 VC 基线检查或执行判断的哪一步发现断点。
 
-增益涉及追逐、力量、快慢变化、反应窗口或运动转场时，再按需读取 `../laohu-video-prompt/references/09_速度节奏与时间动力设计.md`。先区分人物、摄影机、切镜、信息和声音速度，只增强主速度承载者、对比、可读性、惯性与完成点。
+增益涉及追逐、力量、快慢变化、反应窗口或运动转场时，再按需读取 [laohu-video-compilation / SKILL](../laohu-video-prompt/skills/laohu-video-compilation/SKILL.md) / [laohu-editing / SKILL](../laohu-video-prompt/skills/laohu-editing/SKILL.md) / [laohu-action-design / SKILL](../laohu-video-prompt/skills/laohu-action-design/SKILL.md) / [laohu-animation / SKILL](../laohu-video-prompt/skills/laohu-animation/SKILL.md) / [laohu-camera-movement / SKILL](../laohu-video-prompt/skills/laohu-camera-movement/SKILL.md) / [laohu-audiovisual / SKILL](../laohu-video-prompt/skills/laohu-audiovisual/SKILL.md) / [laohu-performance / SKILL](../laohu-video-prompt/skills/laohu-performance/SKILL.md) / [laohu-choreography / SKILL](../laohu-video-prompt/skills/laohu-choreography/SKILL.md) / [laohu-motion-design / SKILL](../laohu-video-prompt/skills/laohu-motion-design/SKILL.md)。先区分人物、摄影机、切镜、信息和声音速度，只增强主速度承载者、对比、可读性、惯性与完成点。
 
 ## 提纯动作
 

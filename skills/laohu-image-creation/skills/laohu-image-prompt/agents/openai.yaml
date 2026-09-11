@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡图片提示词编译"
+  short_description: "专业判断已完成，需要可复制的图片生成正文"
+  default_prompt: "使用 $laohu-image-prompt 完成图片提示词编译并返回专业结果。"

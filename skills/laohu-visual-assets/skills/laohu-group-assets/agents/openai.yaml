@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡群像资产"
+  short_description: "背景群体或多角色需要复用身份分布"
+  default_prompt: "使用 $laohu-group-assets 完成群像资产并返回专业结果。"

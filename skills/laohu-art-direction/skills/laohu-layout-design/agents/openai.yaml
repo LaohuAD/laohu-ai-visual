@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡版式设计"
+  short_description: "图文分组、网格、对齐、留白或多比例重排需要设计"
+  default_prompt: "使用 $laohu-layout-design 完成版式设计并返回专业结果。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "老胡信息设计"
+  short_description: "比较、数据、流程、层级或知识可视化需要编码"
+  default_prompt: "使用 $laohu-information-design 完成信息设计并返回专业结果。"
