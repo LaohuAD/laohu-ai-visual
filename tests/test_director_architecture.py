@@ -18,7 +18,7 @@ class DirectorArchitectureTests(unittest.TestCase):
         return "\n".join(self.read(relative) for relative in relatives)
 
     def test_general_director_is_an_independent_owner(self) -> None:
-        director = self.read("skills/laohu-director/SKILL.md")
+        director = self.read(".agents/skills/laohu-ai-visual/skills/laohu-director/SKILL.md")
         for anchor in (
             "导演阐述",
             "观众经历",
@@ -32,15 +32,15 @@ class DirectorArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, director)
 
     def test_director_aphorism_is_a_choice_not_a_compressed_job_description(self) -> None:
-        director = self.read("skills/laohu-director/SKILL.md")
+        director = self.read(".agents/skills/laohu-ai-visual/skills/laohu-director/SKILL.md")
         self.assertIn("手段可以万千，戏只能往一处去。", director)
         self.assertNotIn("作品不是把部门排成一队", director)
         self.assertNotIn("编剧把戏写出来，导演让观众经历它", director)
 
     def test_role_contract_separates_decision_direction_performance_and_reception(self) -> None:
         text = self.combined(
-            "skills/laohu-director/SKILL.md",
-            "skills/laohu-director/references/01_导演判断与协作网络.md",
+            ".agents/skills/laohu-ai-visual/skills/laohu-director/SKILL.md",
+            ".agents/skills/laohu-ai-visual/skills/laohu-director/references/01_导演判断与协作网络.md",
         )
         for anchor in (
             "请求者 / 出品与决定者",
@@ -53,7 +53,7 @@ class DirectorArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, text)
 
     def test_network_uses_typed_edges_without_transferring_ownership(self) -> None:
-        graph = self.read("02_共享资产库/05_工具流程/能力协作图谱.md")
+        graph = self.read(".agents/skills/laohu-ai-visual/references/能力协作图谱.md")
         for edge in ("HANDOFF", "CONSULT", "REVIEW", "RETURN", "SHARED_SOURCE"):
             self.assertIn(edge, graph)
         for anchor in (
@@ -68,8 +68,8 @@ class DirectorArchitectureTests(unittest.TestCase):
     def test_router_calls_director_only_for_directorial_gaps(self) -> None:
         text = self.combined(
             "AGENTS.md",
-            "skills/laohu-ai-visual/SKILL.md",
-            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+            ".agents/skills/laohu-ai-visual/SKILL.md",
+            ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
             "输入输出索引.md",
         )
         self.assertIn("二十二个", text)
@@ -83,7 +83,7 @@ class DirectorArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, text)
 
     def test_script_writer_is_director_literate_but_keeps_script_authority(self) -> None:
-        writer = self.read("skills/laohu-script-writer/SKILL.md")
+        writer = self.read(".agents/skills/laohu-script-writer/SKILL.md")
         for anchor in (
             "调度专业",
             "导演阐述",
@@ -96,16 +96,16 @@ class DirectorArchitectureTests(unittest.TestCase):
 
     def test_downstream_nodes_inherit_intent_and_return_upstream_gaps(self) -> None:
         text = self.combined(
-            "skills/laohu-art-direction/SKILL.md",
-            "skills/laohu-character-design/SKILL.md",
-            "skills/laohu-costume-design/SKILL.md",
-            "skills/laohu-set-design/SKILL.md",
-            "skills/laohu-audio-design/SKILL.md",
-            "skills/laohu-visual-assets/SKILL.md",
-            "skills/laohu-video-prompt/SKILL.md",
-            "skills/laohu-video-prompt/references/交接与验收.md",
-            "skills/laohu-generation-review/SKILL.md",
-            "skills/laohu-mv-director/SKILL.md",
+            ".agents/skills/laohu-image-creation/skills/laohu-art-direction/SKILL.md",
+            ".agents/skills/laohu-image-creation/skills/laohu-character-design/SKILL.md",
+            ".agents/skills/laohu-image-creation/skills/laohu-costume-design/SKILL.md",
+            ".agents/skills/laohu-image-creation/skills/laohu-set-design/SKILL.md",
+            ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/SKILL.md",
+            ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/SKILL.md",
+            ".agents/skills/laohu-video-prompt/SKILL.md",
+            ".agents/skills/laohu-video-prompt/references/交接与验收.md",
+            ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md",
+            ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/SKILL.md",
         )
         for anchor in (
             "导演协作接口",
@@ -136,8 +136,8 @@ class DirectorArchitectureTests(unittest.TestCase):
 
     def test_director_craft_compares_real_alternatives_before_selecting(self) -> None:
         text = self.combined(
-            "skills/laohu-director/SKILL.md",
-            "skills/laohu-director/references/01_导演判断与协作网络.md",
+            ".agents/skills/laohu-ai-visual/skills/laohu-director/SKILL.md",
+            ".agents/skills/laohu-ai-visual/skills/laohu-director/references/01_导演判断与协作网络.md",
         )
         for anchor in (
             "导演问题单",
@@ -153,7 +153,7 @@ class DirectorArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, text)
 
     def test_director_statement_exposes_choice_evidence_without_becoming_script(self) -> None:
-        director = self.read("skills/laohu-director/SKILL.md")
+        director = self.read(".agents/skills/laohu-ai-visual/skills/laohu-director/SKILL.md")
         current = self.read(
             "04_诊断与系统日志/2026-09-06_总导演跨题材行为验证.md"
         )

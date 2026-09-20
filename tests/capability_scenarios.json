@@ -785,7 +785,7 @@
       ],
       "anchors": [
         "制作可以分段，戏不能断气",
-        "ASSET之后",
+        "STORY之后、ASSET之前",
         "SEGMENT",
         "4—30秒",
         "只读原剧本",
@@ -807,7 +807,7 @@
   "migration_contracts": [
     {
       "capability": "观众认知与视角分层",
-      "file": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+      "file": ".agents/skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
       "anchors": [
         "观众认知状态",
         "五层视角"
@@ -815,7 +815,7 @@
     },
     {
       "capability": "反平均化选择",
-      "file": "skills/laohu-script-writer/SKILL.md",
+      "file": ".agents/skills/laohu-script-writer/SKILL.md",
       "anchors": [
         "模型第一反应",
         "平均值候选",
@@ -824,7 +824,7 @@
     },
     {
       "capability": "画面内容的镜头叙事语法",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "景别或信息尺度是证据边界",
         "动作必须闭合因果",
@@ -833,7 +833,7 @@
     },
     {
       "capability": "人物动机道具状态与剪辑省略",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "先校准人物为什么动手",
         "道具不是布景名词，而是状态机",
@@ -843,7 +843,7 @@
     },
     {
       "capability": "速度节奏与相对时长",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "速度不是一个快慢形容词",
         "相对时长约束",
@@ -852,7 +852,7 @@
     },
     {
       "capability": "音乐与画面合同",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "音乐-画面节拍合同",
         "拍前准备",
@@ -861,7 +861,7 @@
     },
     {
       "capability": "歌曲到MV导演结构与模型中立生产时间线",
-      "file": "skills/laohu-mv-director/SKILL.md",
+      "file": ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/SKILL.md",
       "anchors": [
         "歌曲事实层",
         "MV导演层",
@@ -874,7 +874,7 @@
     },
     {
       "capability": "人物表演与空间压力",
-      "file": "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+      "file": ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
       "anchors": [
         "演员节拍控制合同",
         "表情与 AU",
@@ -883,7 +883,7 @@
     },
     {
       "capability": "台词与表演镜头正文一体化",
-      "file": "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+      "file": ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
       "anchors": [
         "台词不是独立声轨清单",
         "禁止在镜头正文后另列",
@@ -892,7 +892,7 @@
     },
     {
       "capability": "资产依赖与全画面闭合",
-      "file": "skills/laohu-visual-assets/SKILL.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/SKILL.md",
       "anchors": [
         "无环依赖图",
         "全画面闭合",
@@ -901,7 +901,7 @@
     },
     {
       "capability": "相邻单元与状态继承",
-      "file": "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+      "file": ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
       "anchors": [
         "相邻单元交接合同",
         "A 结束状态",
@@ -910,7 +910,7 @@
     },
     {
       "capability": "三段式与剪辑接口",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "三段式成稿",
         "素材剪辑接口卡",
@@ -919,7 +919,7 @@
     },
     {
       "capability": "视频共享知识唯一负责人和无损归并",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "共享知识的唯一负责人",
         "语义单元归并门",
@@ -929,7 +929,7 @@
     },
     {
       "capability": "首断点归因与经验回流",
-      "file": "skills/laohu-generation-review/SKILL.md",
+      "file": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md",
       "anchors": [
         "第一个断点",
         "最早负责人",
@@ -938,7 +938,7 @@
     },
     {
       "capability": "四层能力进化",
-      "file": "skills/laohu-capability-evolution/SKILL.md",
+      "file": ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/SKILL.md",
       "anchors": [
         "灵魂以箴言定向",
         "筋骨以章法成局",
@@ -959,7 +959,7 @@
     },
     {
       "capability": "画幅参数与构图判断分离",
-      "file": "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md",
+      "file": ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/模板_视频提示词_基础设定氛围画面内容.md",
       "anchors": [
         "画幅作为生成参数和内部导演判断处理",
         "不能只换数字",
@@ -968,7 +968,7 @@
     },
     {
       "capability": "视频模板只承接版式不争夺规则权威",
-      "file": "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md",
+      "file": ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/模板_视频提示词_基础设定氛围画面内容.md",
       "anchors": [
         "只提供正式视频提示词的版式",
         "不是视频创作规则的第二份副本",
@@ -986,7 +986,7 @@
     },
     {
       "capability": "创作者意图、人物预期差与弧光",
-      "file": "skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+      "file": ".agents/skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
       "anchors": [
         "预期差",
         "人格稳定与人物弧光"
@@ -994,7 +994,7 @@
     },
     {
       "capability": "商业作品卖点场景化与可见证据",
-      "file": "skills/laohu-script-writer/SKILL.md",
+      "file": ".agents/skills/laohu-script-writer/SKILL.md",
       "anchors": [
         "商业剧本",
         "用户处境",
@@ -1003,12 +1003,12 @@
       ]
     },
     {
-      "capability": "外部 VC 身份、镜像、适配与返回",
-      "file": "02_共享资产库/05_工具流程/外部能力依赖清单.md",
+      "capability": "外部 VC 身份、包内原文、适配与返回",
+      "file": ".agents/skills/laohu-ai-visual/references/外部能力依赖清单.md",
       "anchors": [
         "vibe-creating-prompt",
-        "仓库内外部原文",
-        "便携副本",
+        "外部完整原文",
+        "包内外部原文",
         "本地适配层",
         "返回负责人",
         "失效处理"
@@ -1028,7 +1028,7 @@
     },
     {
       "capability": "人物选角身体化与跨媒介母版",
-      "file": "skills/laohu-character-design/SKILL.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-character-design/SKILL.md",
       "anchors": [
         "人物核心事实",
         "人物身体化命题",
@@ -1041,7 +1041,7 @@
     },
     {
       "capability": "场景空间叙事布景陈设与跨媒介母版",
-      "file": "skills/laohu-set-design/SKILL.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-set-design/SKILL.md",
       "anchors": [
         "空间叙事命题",
         "世界与地点语法",
@@ -1053,7 +1053,7 @@
     },
     {
       "capability": "参考图证据到视觉形式转译",
-      "file": "skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md",
       "anchors": [
         "输入图像角色与保真级别",
         "固定系统 / 可变系统 / 样本残留",
@@ -1066,7 +1066,7 @@
     },
     {
       "capability": "视觉形式转译真实结果首断点诊断",
-      "file": "skills/laohu-generation-review/SKILL.md",
+      "file": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md",
       "anchors": [
         "来源保真失败",
         "关系丢失",
@@ -1079,7 +1079,7 @@
     },
     {
       "capability": "视觉生成方向性控制与选择性编译",
-      "file": "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md",
       "anchors": [
         "必须锁定 / 方向引导 / 模型补全",
         "选择性编译门",
@@ -1096,7 +1096,7 @@
     },
     {
       "capability": "作品级美术风格解压与结果图成像合同",
-      "file": "skills/laohu-art-direction/references/02_风格先验与结果图美术锚点.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/02_风格先验与结果图美术锚点.md",
       "anchors": [
         "风格标签解压",
         "结果图成像合同",
@@ -1108,7 +1108,7 @@
     },
     {
       "capability": "人物结果图生命感与单帧因果",
-      "file": "skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md",
       "anchors": [
         "所有含人物的结果图",
         "单帧因果",
@@ -1119,7 +1119,7 @@
     },
     {
       "capability": "叙事灯光从观众解释到可观察受光证据",
-      "file": "skills/laohu-art-direction/skills/laohu-light-shadow/references/04_叙事灯光与光源因果.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-light-shadow/references/04_叙事灯光与光源因果.md",
       "anchors": [
         "叙事灯光合同",
         "观众解释任务",
@@ -1136,7 +1136,7 @@
     },
     {
       "capability": "镜头宏观合同到动态构图与正文执行主轨",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "镜头宏观合同",
         "正文唯一执行主轨",
@@ -1151,7 +1151,7 @@
     },
     {
       "capability": "观众问题从剧本信息账本到视频声画节奏",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "期待驱动节奏",
         "观众问题—声画兑现表",
@@ -1164,7 +1164,7 @@
     },
     {
       "capability": "关系秘密从人物事实到可验证观察视点",
-      "file": "skills/laohu-video-prompt/SKILL.md",
+      "file": ".agents/skills/laohu-video-prompt/SKILL.md",
       "anchors": [
         "关系视点合同",
         "观察者位置",
@@ -1177,7 +1177,7 @@
     },
     {
       "capability": "日本版面研究到封面文字空间机制",
-      "file": "skills/laohu-art-direction/skills/laohu-layout-design/references/02_日本版面与文字空间机制.md",
+      "file": ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-layout-design/references/02_日本版面与文字空间机制.md",
       "anchors": [
         "日本设计不是一种版式",
         "版面骨架",
@@ -1193,7 +1193,7 @@
     },
     {
       "capability": "创作者意图保护",
-      "file": "skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+      "file": ".agents/skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
       "anchors": [
         "创作者意图契约",
         "不可改变的事实"
@@ -1204,19 +1204,17 @@
     {
       "name": "vibe-creating-prompt",
       "kind": "vendored-external-skill",
-      "canonical_source": "02_共享资产库/05_工具流程/外部优化Skill/vibe-creating-prompt/SKILL.md",
-      "portable_mirror": "skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md",
-      "local_adapter": "skills/laohu-vibe-creating-prompt/SKILL.md",
-      "return_owner": "skills/laohu-video-prompt/SKILL.md",
+      "canonical_source": ".agents/skills/laohu-video-prompt/skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md",
+      "local_adapter": ".agents/skills/laohu-video-prompt/skills/laohu-vibe-creating-prompt/SKILL.md",
+      "return_owner": ".agents/skills/laohu-video-prompt/SKILL.md",
       "adapter_anchors": [
         "外部 Skill",
         "本地适配层",
-        "02_共享资产库/05_工具流程/外部优化Skill/vibe-creating-prompt/SKILL.md",
         "references/01_外部Vibe_Creating原文.md",
         "laohu-video-prompt"
       ],
       "caller_contracts": {
-        "02_共享资产库/05_工具流程/外部能力依赖清单.md": [
+        ".agents/skills/laohu-ai-visual/references/外部能力依赖清单.md": [
           "EXT-SKILL-001",
           "本地适配层",
           "失效处理"
@@ -1225,15 +1223,15 @@
           "外部能力依赖",
           "vibe-creating-prompt"
         ],
-        "02_共享资产库/00_核心规则手册.md": [
+        ".agents/skills/laohu-ai-visual/references/00_核心规则手册.md": [
           "外部 `vibe-creating-prompt`",
           "本地适配入口"
         ],
-        "02_共享资产库/05_工具流程/laohu_skills核心合约.md": [
+        ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md": [
           "VC 身份与调用链",
           "laohu-vibe-creating-prompt"
         ],
-        "skills/laohu-video-prompt/SKILL.md": [
+        ".agents/skills/laohu-video-prompt/SKILL.md": [
           "VC 指外部",
           "laohu-vibe-creating-prompt"
         ],
@@ -1241,7 +1239,8 @@
           "外部能力依赖清单",
           "vibe-creating-prompt"
         ]
-      }
+      },
+      "canonical_sha256": "42c24224e68844f47b3fd33100d7541fcee75a4d522995f1fe29acef753e9db2"
     }
   ],
   "runtime_reachability_scenarios": [
@@ -1250,7 +1249,7 @@
       "owner": "laohu-director",
       "request": "同样是雨夜公交站里陌生人把伞移过来半步，分别把它做成爱情短片、治愈短片和防风伞产品片；人物、场景和核心动作不变。",
       "required_references": [
-        "skills/laohu-director/references/01_导演判断与协作网络.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-director/references/01_导演判断与协作网络.md"
       ],
       "required_intermediate": [
         "导演问题单",
@@ -1269,7 +1268,7 @@
       "owner": "laohu-director",
       "request": "父亲深夜给回家的成年女儿热一碗剩饭，两人关系稳定，希望做一个克制的治愈短片。",
       "required_references": [
-        "skills/laohu-director/references/01_导演判断与协作网络.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-director/references/01_导演判断与协作网络.md"
       ],
       "required_intermediate": [
         "低冲突治愈",
@@ -1286,7 +1285,7 @@
       "owner": "laohu-director",
       "request": "一个公开短片已经有一份逻辑正确、格式齐全但可以被任何同类作品替换的导演方案，需要判断能否直接交给编剧。",
       "required_references": [
-        "skills/laohu-director/references/01_导演判断与协作网络.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-director/references/01_导演判断与协作网络.md"
       ],
       "required_intermediate": [
         "硬门",
@@ -1303,9 +1302,9 @@
       "owner": "laohu-mv-director",
       "request": "给出最终歌曲音频、锁定歌词、人工LRC和创作背景，希望得到整首MV方案、按时间戳拆分的动态分镜任务，并继续交给图片和视频提示词。",
       "required_references": [
-        "skills/laohu-mv-director/references/01_歌曲事实歌词与时间证据.md",
-        "skills/laohu-mv-director/references/02_MV引擎声画表演与分段.md",
-        "skills/laohu-mv-director/references/03_MV导演交接与文本验收.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/01_歌曲事实歌词与时间证据.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/02_MV引擎声画表演与分段.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/03_MV导演交接与文本验收.md"
       ],
       "required_intermediate": [
         "歌曲事实层",
@@ -1323,8 +1322,8 @@
       "owner": "laohu-mv-director",
       "request": "目前只有歌词、歌曲背景和音乐创作风格，还没有最终音频，希望先看MV导演方案。",
       "required_references": [
-        "skills/laohu-mv-director/references/01_歌曲事实歌词与时间证据.md",
-        "skills/laohu-mv-director/references/02_MV引擎声画表演与分段.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/01_歌曲事实歌词与时间证据.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/02_MV引擎声画表演与分段.md"
       ],
       "required_intermediate": [
         "待音频校准",
@@ -1340,8 +1339,8 @@
       "owner": "laohu-mv-director",
       "request": "一首纯器乐曲需要概念型MV，没有歌词也没有真人演唱画面。",
       "required_references": [
-        "skills/laohu-mv-director/references/01_歌曲事实歌词与时间证据.md",
-        "skills/laohu-mv-director/references/02_MV引擎声画表演与分段.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/01_歌曲事实歌词与时间证据.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/02_MV引擎声画表演与分段.md"
       ],
       "required_intermediate": [
         "非叙事 MV",
@@ -1357,7 +1356,7 @@
       "owner": "laohu-mv-director",
       "request": "MV方向和时间线已经确认，需要继续得到每个分镜图的图片提示词，以及对应的视频提示词。",
       "required_references": [
-        "skills/laohu-mv-director/references/03_MV导演交接与文本验收.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/03_MV导演交接与文本验收.md"
       ],
       "required_intermediate": [
         "MV导演交接包",
@@ -1373,7 +1372,7 @@
       "owner": "laohu-visual-assets",
       "request": "为当前发布制作一张有生命感的人物写真，不要求跨请求锁定身份资产。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md"
       ],
       "required_intermediate": [
         "单张成品图",
@@ -1388,16 +1387,16 @@
       "owner": "laohu-visual-assets",
       "request": "把人物、服装、妆造、仙侠环境和多个风格参考组合成一张人物主视觉图，同时避免长提示词平均化和站桩展示。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md",
-        "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md"
       ],
       "required_intermediate": [
         "注意力合同",
@@ -1416,8 +1415,8 @@
       "owner": "laohu-visual-assets",
       "request": "为任意题材角色创作第一版正式人物结果图，要求一眼抓住承重结果并保留足够生命感。",
       "required_references": [
-        "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md",
-        "skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md"
       ],
       "required_intermediate": [
         "完整母稿",
@@ -1435,13 +1434,13 @@
       "owner": "laohu-video-prompt",
       "request": "第一次为20至30秒文戏或动作短片编译正式视频提示词，平台仍有可用字符容量。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md"
       ],
       "required_intermediate": [
         "高密度导演母稿",
@@ -1459,12 +1458,12 @@
       "owner": "laohu-video-prompt",
       "request": "VID-A和VID-B直接连续，场景内有三个人、固定入口、桌子和受损窗户；希望B继承A真实站位而不是重新排列。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "接续类型",
@@ -1481,7 +1480,7 @@
       "owner": "laohu-video-prompt",
       "request": "一个外表粗犷但声线偏高的父亲，在公开场合一贯压低音量维持控制；本场听见女儿说要离开后，必须完成一句台词和一次失控反应。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "写作声音",
@@ -1497,12 +1496,12 @@
       "owner": "laohu-video-prompt",
       "request": "一段母女近景对白拆成两个VID，A结束在母亲压住哭腔的停顿，B从孩子的迟疑反应继续。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "表演连续",
@@ -1518,14 +1517,14 @@
       "owner": "laohu-video-prompt",
       "request": "两个空间不连续的MV段落需要通过相似动作和光线完成转场，不要求物理空间连续。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "艺术转场",
@@ -1541,7 +1540,7 @@
       "owner": "laohu-video-prompt",
       "request": "复杂多人视频提示词已经闭合空间、表演、物理和声音，但目标平台入口尚未确认字符限制。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "目标入口能力合同",
@@ -1557,13 +1556,13 @@
       "owner": "laohu-video-prompt",
       "request": "用已经锁定人物、服装、构图和光线的首帧生成一个多人对话短镜头。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md"
       ],
       "required_intermediate": [
         "模型注意力合同",
@@ -1580,9 +1579,9 @@
       "owner": "laohu-video-prompt",
       "request": "已有一张人物关系、风格和构图都成立的首帧，要生成一段人物朝关系对象行动并发生情绪变化的短视频。",
       "required_references": [
-        "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md",
-        "02_共享资产库/02_视觉语言资产/人物表演库/人物表演提示词规范.md",
-        "02_共享资产库/02_视觉语言资产/声音与同期声库/声音提示词规范.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/人物表演提示词规范.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/references/声音提示词规范.md"
       ],
       "required_intermediate": [
         "静态成立门",
@@ -1599,8 +1598,8 @@
       "owner": "laohu-video-prompt",
       "request": "把一段人物冲突编译成正式视频提示词。",
       "required_references": [
-        "skills/laohu-video-prompt/references/交接与验收.md",
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/references/交接与验收.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "导演工作卡",
@@ -1615,12 +1614,12 @@
       "owner": "laohu-set-design",
       "request": "为会被多集反复使用的大师兄后山小院做原创场景设计；人物表面散漫普通、实际深不可测，小师妹会反复闯入问事。",
       "required_references": [
-        "skills/laohu-set-design/skills/laohu-spatial-layout/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-set-decoration/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-environment-research/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-architecture-design/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-landscape-design/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-interior-design/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-spatial-layout/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-set-decoration/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-environment-research/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-architecture-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-landscape-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-interior-design/references/专业方法.md"
       ],
       "required_intermediate": [
         "场景任务合同",
@@ -1636,12 +1635,12 @@
       "owner": "laohu-set-design",
       "request": "为被罢官后仍秘密查案的前御史设计可用于2D动画和AI视频的固定书房，覆盖白天来客与夜间搜查，并已有一张漂亮豪宅参考图。",
       "required_references": [
-        "skills/laohu-set-design/skills/laohu-set-decoration/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-environment-research/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-architecture-design/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-spatial-layout/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-landscape-design/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-interior-design/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-set-decoration/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-environment-research/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-architecture-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-spatial-layout/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-landscape-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-interior-design/references/专业方法.md"
       ],
       "required_intermediate": [
         "历史证据状态",
@@ -1657,12 +1656,12 @@
       "owner": "laohu-video-prompt",
       "request": "把人物端起桌上物品、离开原位并在另一空间放下的连续事件编译成多镜头视频提示词；人物台词与动作表面矛盾。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "人物动机—行动校准",
@@ -1679,7 +1678,7 @@
       "owner": "laohu-video-prompt",
       "request": "首稿已经可生成且看起来成熟，准备进入付费生成。",
       "required_references": [
-        "skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md"
       ],
       "required_intermediate": [
         "VC 交接",
@@ -1694,7 +1693,7 @@
       "owner": "laohu-capability-evolution",
       "request": "一个能力可以稳定输出格式正确、可生成但普通的结果。",
       "required_references": [
-        "skills/laohu-capability-evolution/references/03_保真迁移回归与回退.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/references/03_保真迁移回归与回退.md"
       ],
       "required_intermediate": [
         "底线门",
@@ -1709,10 +1708,10 @@
       "owner": "laohu-costume-design",
       "request": "仙侠短剧的六名主要人物已有服装都收敛成同类交领袍、低饱和颜色和腰间饰物；需要保留人物与世界观，重新建立有身份、有群像差异的服装系统。",
       "required_references": [
-        "skills/laohu-costume-design/skills/laohu-costume-silhouette/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-costume-research/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-costume-continuity/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-garment-structure/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-silhouette/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-research/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-continuity/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-garment-structure/references/专业方法.md"
       ],
       "required_intermediate": [
         "服装任务合同",
@@ -1729,10 +1728,10 @@
       "owner": "laohu-costume-design",
       "request": "古老仙门最年轻的核心弟子第一次建立主造型；宗门富有、法衣兼具护体净尘与身份凭证功能，作品希望精美高端但仍适合日常奔跑和喜剧表演。",
       "required_references": [
-        "skills/laohu-costume-design/skills/laohu-costume-silhouette/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-costume-research/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-costume-continuity/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-garment-structure/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-silhouette/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-research/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-continuity/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-garment-structure/references/专业方法.md"
       ],
       "required_intermediate": [
         "服装情境判断合同",
@@ -1749,9 +1748,9 @@
       "owner": "laohu-costume-design",
       "request": "同一套能力先设计公开出席董事会的豪门继承人，再设计他遭追捕时主动伪装成普通通勤者的造型。",
       "required_references": [
-        "skills/laohu-costume-design/skills/laohu-costume-silhouette/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-costume-research/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-costume-continuity/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-silhouette/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-research/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-continuity/references/专业方法.md"
       ],
       "required_intermediate": [
         "服装情境判断合同",
@@ -1768,8 +1767,8 @@
       "owner": "laohu-visual-assets",
       "request": "主要人物已有三套服装候选，但老胡尚未确认整体方向；下游要求立即编译F人物主视觉图以及B/W/M。",
       "required_references": [
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/服装设计包与资产编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/妆造资产编译.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/服装设计包与资产编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/妆造资产编译.md"
       ],
       "required_intermediate": [
         "服装方向已确认",
@@ -1785,10 +1784,10 @@
       "owner": "laohu-character-design",
       "request": "六名18—25岁仙侠主要人物只有年龄、身份和性格词，生成结果同脸、同体型、同站姿；其中一名刀修需要让观众先觉得危险，后续行为证明其善良，并适配写实、2D与3D。",
       "required_references": [
-        "skills/laohu-character-design/skills/laohu-body-design/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-casting/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-ensemble-design/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-face-design/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-body-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-casting/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-ensemble-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-face-design/references/专业方法.md"
       ],
       "required_intermediate": [
         "人物任务合同",
@@ -1809,7 +1808,7 @@
       "owner": "laohu-art-direction",
       "request": "仙侠短剧写真已经生成：人物穿交领袍、带剑、站在山雾或古村中，但遮住题名和身份后更像武侠、古装或乡野隐士。需要定位偏差并让人物、服装、场景共同恢复仙侠归属。",
       "required_references": [
-        "skills/laohu-art-direction/references/01_题材视觉证据与相邻类型边界.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/01_题材视觉证据与相邻类型边界.md"
       ],
       "required_intermediate": [
         "题材视觉合同",
@@ -1829,7 +1828,7 @@
       "owner": "laohu-art-direction",
       "request": "把一张包含建筑、人物尺度、道路方向和明显色彩关系的旅行照片，转成原创编辑主视觉；可以抽象和重组，但不能把内容换成通用旅行符号。",
       "required_references": [
-        "skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md"
       ],
       "required_intermediate": [
         "输入图像角色与保真级别",
@@ -1845,7 +1844,7 @@
       "owner": "laohu-art-direction",
       "request": "把文章主题‘一个人反复准备，却始终没有出发’转成编辑主视觉；没有提供任何参考照片。",
       "required_references": [
-        "skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md"
       ],
       "required_intermediate": [
         "观察事实 / 推论 / 设计选择",
@@ -1861,15 +1860,15 @@
       "owner": "laohu-visual-assets",
       "request": "F人物写真、B素体、W服装、M妆造和S场景资产都已确认，现在只需按既有固定版式编译下一批资产提示词。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
       ],
       "required_intermediate": [
         "制作资产保留自己的专业框架",
@@ -1885,10 +1884,10 @@
       "owner": "laohu-generation-review",
       "request": "一张编辑主视觉已经生成：纸感、双色和版式都漂亮，但源照片里建筑压住人物、道路把视线带向出口的关系完全消失，同时复制了参考图中的英文和品牌。",
       "required_references": [
-        "skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "第一个断点",
@@ -1903,18 +1902,18 @@
       "owner": "laohu-visual-assets",
       "request": "人物、美术、服装和妆造设计都已完成；为一个年轻仙侠女主生成有关系感的F人物主视觉，同时让模型保留成熟古偶审美发挥空间。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md",
-        "skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md",
-        "02_共享资产库/02_视觉语言资产/人物表演库/人物表演提示词规范.md",
-        "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/人物表演提示词规范.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md"
       ],
       "required_intermediate": [
         "必须锁定 / 方向引导 / 模型补全",
@@ -1930,15 +1929,15 @@
       "owner": "laohu-visual-assets",
       "request": "同一人物F已经确认，现在制作B素体、W服装和M妆造规格板。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
       ],
       "required_intermediate": [
         "制作资产保留自己的专业框架",
@@ -1953,10 +1952,10 @@
       "owner": "laohu-generation-review",
       "request": "真实人物图准确执行了脚步、五指、眼睑、牙齿、发丝和刺绣位置，但人物像动作演示，眼神没有关系，整体不如更短提示词自然。",
       "required_references": [
-        "skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "第一个断点",
@@ -1972,8 +1971,8 @@
       "owner": "laohu-art-direction",
       "request": "连续古装幻想短片希望使用平台里的‘古偶唯美’风格标签，同时需要把同一美术风格稳定迁移到不同人物、场景、封面和视频。",
       "required_references": [
-        "skills/laohu-art-direction/references/02_风格先验与结果图美术锚点.md",
-        "02_共享资产库/02_视觉语言资产/画面风格库/画面氛围与画质规范.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/02_风格先验与结果图美术锚点.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/画面氛围与画质规范.md"
       ],
       "required_intermediate": [
         "风格标签解压",
@@ -1991,17 +1990,17 @@
       "owner": "laohu-visual-assets",
       "request": "生成一张人物主视觉或人物写真，人物要有活人感；最终提示词希望是自然连续的画面描述，不显示基础设定等标题。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md",
-        "skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md",
-        "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-portrait/references/06_人物生命感与现场摄影关系.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md"
       ],
       "required_intermediate": [
         "三段职责必须成立，标题可以显式或融合",
@@ -2018,15 +2017,15 @@
       "owner": "laohu-visual-assets",
       "request": "风格、人物和资产已经确认，只需要生成下一张正式结果图；用户没有要求对比、诊断或复盘。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
       ],
       "required_intermediate": [
         "稳定生产直接继承",
@@ -2041,15 +2040,15 @@
       "owner": "laohu-visual-assets",
       "request": "同一作品要依次制作角色身份母版、废弃车站空间参考、关键怀表道具、改掉现有服装上的徽章，以及一张母女争执的叙事首帧。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
       ],
       "required_intermediate": [
         "请求类型路由",
@@ -2067,8 +2066,8 @@
       "owner": "laohu-art-direction",
       "request": "为一条概念直译型知识讲解视频设计风格：如果用户没有视觉方向就给出适合解释关系的推荐；如果用户明确要求水墨手绘、像素动画或自己的参考，则跟随用户方向，但后续仍要经过母板、分镜和动画编排。",
       "required_references": [
-        "skills/laohu-art-direction/references/02_风格先验与结果图美术锚点.md",
-        "skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/02_风格先验与结果图美术锚点.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md"
       ],
       "required_intermediate": [
         "默认推荐先验",
@@ -2084,18 +2083,18 @@
       "owner": "laohu-visual-assets",
       "request": "一条六段式AIGC知识讲解短视频要求纸质拼贴与复古知识动画质感；用户给了一张带立体感的纸艺参考，但说明平面、浅浮雕或微缩都可，要求先看可视化风格选项，由用户定案后建立视觉母板，再按脚本做六张分镜参考图，最后设计图片如何运动。",
       "required_references": [
-        "skills/laohu-art-direction/references/02_风格先验与结果图美术锚点.md",
-        "skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md",
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md",
-        "02_共享资产库/05_工具流程/视觉生成模型注意力与提示词编译参考.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/02_风格先验与结果图美术锚点.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/references/03_参考图证据与视觉形式转译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md"
       ],
       "required_intermediate": [
         "同一内容基准",
@@ -2119,15 +2118,15 @@
       "owner": "laohu-visual-assets",
       "request": "保留已确认人物的脸、发型、姿态、服装结构、场景和光线，只把胸前徽章换成新的圆形金属徽章。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
       ],
       "required_intermediate": [
         "局部受控编辑",
@@ -2143,9 +2142,9 @@
       "owner": "laohu-set-design",
       "request": "一个废弃车站会在十二个镜头反复使用，但每镜只涉及站台、检票口或地下通道中的一小部分。",
       "required_references": [
-        "skills/laohu-set-design/skills/laohu-spatial-layout/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-interior-design/references/专业方法.md",
-        "skills/laohu-set-design/skills/laohu-architecture-design/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-spatial-layout/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-interior-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-architecture-design/references/专业方法.md"
       ],
       "required_intermediate": [
         "GEO 母版",
@@ -2161,15 +2160,15 @@
       "owner": "laohu-visual-assets",
       "request": "当前VID只拍母亲、她的旧外套、饭桌和厨房门洞，资产库里还存在父亲、医院、学校、六套衣服和多个道具。",
       "required_references": [
-        "skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
-        "skills/laohu-image-creation/references/F人物主视觉编译.md",
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/references/状态帧与下游运动.md",
-        "skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
-        "skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+        ".agents/skills/laohu-image-creation/references/F人物主视觉编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/references/状态帧与下游运动.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/资产规格与编译.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-image-editing/references/局部编辑三权分离.md"
       ],
       "required_intermediate": [
         "激活参考候选",
@@ -2184,10 +2183,10 @@
       "owner": "laohu-generation-review",
       "request": "提示词已经清楚写了三人站位和B第一项新动作，但连续生成仍会重排人物；之前已经把保持站位、位置不变、空间一致换过多种说法。",
       "required_references": [
-        "skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
-        "skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "提示词不是唯一变量",
@@ -2203,7 +2202,7 @@
       "owner": "laohu-cover-design",
       "request": "同一轮分别处理16:9知识视频封面‘为什么越努力，越穷？’和3:4文化展览海报‘看不见的日常’；前者要求手机一秒点击，后者还要读完日期地点主办方。用户说可以参考日本版面设计。",
       "required_references": [
-        "skills/laohu-art-direction/skills/laohu-layout-design/references/02_日本版面与文字空间机制.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-layout-design/references/02_日本版面与文字空间机制.md"
       ],
       "required_intermediate": [
         "版面骨架",
@@ -2223,7 +2222,7 @@
       "owner": "laohu-story-material",
       "request": "这段是我生活里观察到的长口述，记录灵感；以后写父子关系时可以用，但不要把真实人物和原话照搬。",
       "required_references": [
-        "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
       ],
       "required_intermediate": [
         "逐字保存",
@@ -2240,7 +2239,7 @@
       "owner": "laohu-story-material",
       "request": "为一部长片寻找可用素材；先完成全片人物矛盾，再逐段处理多个场景，不要把整个素材库和所有历史候选一起交给AI。",
       "required_references": [
-        "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
       ],
       "required_intermediate": [
         "story / sequence / scene / beat / texture",
@@ -2257,8 +2256,8 @@
       "owner": "laohu-script-writer",
       "request": "一个新剧本已从私有素材库找到两条生活证据，但压力如何增长、信息如何重解和结尾怎样回收仍不清楚。",
       "required_references": [
-        "skills/laohu-script-writer/references/06_故事构件拆解与组合语法.md",
-        "skills/laohu-script-writer/references/07_故事构件库.jsonl"
+        ".agents/skills/laohu-script-writer/references/06_故事构件拆解与组合语法.md",
+        ".agents/skills/laohu-script-writer/references/07_故事构件库.jsonl"
       ],
       "required_intermediate": [
         "素材原子提供生活证据，故事构件提供状态变化方式",
@@ -2274,8 +2273,8 @@
       "owner": "laohu-script-writer",
       "request": "一场老人默默归还旧物的亲情戏已经有清楚关系变化，需要判断是否还要叠加反转和更大冲突。",
       "required_references": [
-        "skills/laohu-script-writer/references/06_故事构件拆解与组合语法.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/references/06_故事构件拆解与组合语法.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "允许零采用",
@@ -2294,7 +2293,7 @@
       "owner": "laohu-script-writer",
       "request": "一场戏希望同时完成道具换手、信息重解、关系倒置和下一场追捕压力。",
       "required_references": [
-        "skills/laohu-script-writer/references/06_故事构件拆解与组合语法.md"
+        ".agents/skills/laohu-script-writer/references/06_故事构件拆解与组合语法.md"
       ],
       "required_intermediate": [
         "同一承重行动",
@@ -2310,9 +2309,9 @@
       "owner": "laohu-script-writer",
       "request": "一份短片剧本已有标准场标、声音和特效字段，开场却只说‘一个惊人秘密即将揭开’，后续没有可见证据或局部兑现。",
       "required_references": [
-        "skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
-        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
+        ".agents/skills/laohu-script-writer/references/04_叙事视角命名与故事因果.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
       ],
       "required_intermediate": [
         "可见证据",
@@ -2330,8 +2329,8 @@
       "owner": "laohu-script-writer",
       "request": "一名长期替地下组织收尾的人接到普通外卖，想用这件小事显出他的职业、疲惫和对正常生活的向往，但不能只写一段漂亮独白。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "人物声音合同",
@@ -2347,7 +2346,7 @@
       "owner": "laohu-script-writer",
       "request": "同一声异响分别被护士、农民和儿童听见，要让三个人物明显不同，但不要靠方言、口头禅或统一的俏皮比喻区分。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md"
       ],
       "required_intermediate": [
         "人物声音合同",
@@ -2363,8 +2362,8 @@
       "owner": "laohu-script-writer",
       "request": "一场低烈度亲情戏里人物不善言辞，希望写出鲜明人物，但不想强塞金句、比喻或长篇内心旁白。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "口头禅、方言词和金句都不能单独证明人物",
@@ -2380,8 +2379,8 @@
       "owner": "laohu-script-writer",
       "request": "一段文字氛围浓、比喻漂亮、VO很有风格，但删掉整段之后人物仍做相同的事，场次状态也完全没变。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "补充 / 对位 / 反差",
@@ -2397,7 +2396,7 @@
       "owner": "laohu-video-prompt",
       "request": "一条公开短视频里，镜头明确代表创作者本人；虚拟女友角色私下找他算账，冻结台词含直接的玩具锤威胁。希望保持她在亲密关系里的小恶魔本性，同时让结果无害。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "镜头关系对象合同",
@@ -2414,10 +2413,10 @@
       "owner": "laohu-visual-assets",
       "request": "口播正在解释一个输入经过处理、改变状态并形成结果的知识关系，需要为手工生成的全屏 AI 知识视频制作关键帧与视频提示词。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "KnowledgeVisualContract",
@@ -2437,14 +2436,14 @@
       "owner": "laohu-video-prompt",
       "request": "一段AI_VIDEO_FULL纸艺知识动画已有四个语义节点和中央结果，初稿让摄影机固定正对全部卡片，四张卡依次翻面但始终同权可见。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "摄影机注意力合同",
@@ -2462,14 +2461,14 @@
       "owner": "laohu-video-prompt",
       "request": "纸艺知识场景有很强纵深，初稿写高速FPV穿越、环绕和俯冲，但没有说明每次移动对应哪句口播、为何此时揭示该节点。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "movementPurpose",
@@ -2486,15 +2485,15 @@
       "owner": "laohu-video-prompt",
       "request": "全屏纸艺知识动画要表达样本进入装置、提炼规律、接受要求、生成新结果；场景已有连续轨道、纸门、前景遮挡和大标签。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "cameraRoute",
@@ -2512,12 +2511,12 @@
       "owner": "laohu-video-prompt",
       "request": "一段普通人物对话或平面结果解释没有可追踪空间通道，固定机位更能读清表演和关系。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "适用范围",
@@ -2533,10 +2532,10 @@
       "owner": "laohu-video-prompt",
       "request": "用户要求整理纸艺知识动画的图片链接与完整视频提示词，准备自己去生成视频。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "用户手动生成",
@@ -2551,7 +2550,7 @@
       "owner": "laohu-art-direction",
       "request": "人物和场景不变：一版是深夜加班者承受审视压力，另一版是舞者独自完成仪式。两版都考虑顶光，但不能只替换情绪词。",
       "required_references": [
-        "skills/laohu-art-direction/skills/laohu-light-shadow/references/04_叙事灯光与光源因果.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-light-shadow/references/04_叙事灯光与光源因果.md"
       ],
       "required_intermediate": [
         "叙事灯光合同",
@@ -2569,7 +2568,7 @@
       "owner": "laohu-art-direction",
       "request": "给出一张电影画面或逐帧拉片结果，希望提取灯光提示词并迁移到另一人物、材质和空间。",
       "required_references": [
-        "skills/laohu-art-direction/skills/laohu-light-shadow/references/04_叙事灯光与光源因果.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-light-shadow/references/04_叙事灯光与光源因果.md"
       ],
       "required_intermediate": [
         "可观察事实 / 布光推论 / 迁移选择",
@@ -2585,12 +2584,12 @@
       "owner": "laohu-video-prompt",
       "request": "同一连续镜头从人物左下方低机位开始，向右横移并旋转上摇，经过肩线后继续后撤拉远，最后露出人物与整座大厅的关系；前景、中景、背景和人物站位随路径重组。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "镜头宏观合同",
@@ -2609,15 +2608,15 @@
       "owner": "laohu-video-prompt",
       "request": "人物先辨认异常、随后恐惧后退并最终失声痛哭；需要给出宏观节奏和环境声音变化，但不能把抽象情绪箭头直接当音效设计。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "节奏概览",
@@ -2634,12 +2633,12 @@
       "owner": "laohu-video-prompt",
       "request": "一个固定中近景只需要看清人物听完一句话后延迟移开目光，构图、摄影机和背景都不移动。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "简单镜头",
@@ -2655,15 +2654,15 @@
       "owner": "laohu-video-prompt",
       "request": "人物翻抽屉、掀书本、摸口袋寻找一把钥匙，随后在电视黑屏反光中看见身后有人；需要安排快慢与镜头，但不能把同一搜索动作拍成角度拼盘。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "期待驱动节奏",
@@ -2680,12 +2679,12 @@
       "owner": "laohu-video-prompt",
       "request": "后文确认有人早已藏在室内观察主角，希望前半段提前有被窥视感，但不能为了悬疑随便加黑色前景遮挡。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "关系视点合同",
@@ -2703,15 +2702,15 @@
       "owner": "laohu-video-prompt",
       "request": "一场克制道歉戏里，递出的杯子和对方没有接的手是关系转折；导演想把所有重点都慢放并延长停顿。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "可读等待窗口",
@@ -2727,11 +2726,11 @@
       "owner": "laohu-audio-design",
       "request": "已有锁定旁白、人物的可听声音身份和当场情绪节拍，需要得到可交给语音合成模型的高质量任务。",
       "required_references": [
-        "skills/laohu-audio-design/references/交接与验收.md",
-        "skills/laohu-audio-design/skills/laohu-voice-design/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-voice-performance/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-audio-prompt/references/专业方法与案例.md",
-        "skills/laohu-audio-design/references/交接与验收.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/references/交接与验收.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-voice-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-voice-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-audio-prompt/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/references/交接与验收.md"
       ],
       "required_intermediate": [
         "声音任务合同",
@@ -2750,14 +2749,14 @@
       "owner": "laohu-audio-design",
       "request": "一段夜间停电的地铁戏需要环境底声、手电开关、脚步、远处金属回响和人声，希望得到可生成、可剪辑的音频资产。",
       "required_references": [
-        "skills/laohu-audio-design/references/交接与验收.md",
-        "skills/laohu-audio-design/skills/laohu-ambience/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-sound-effects/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-audio-editing/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-music-design/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-audio-prompt/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-audio-mixing/references/专业方法与案例.md",
-        "skills/laohu-audio-design/references/交接与验收.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/references/交接与验收.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-ambience/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-sound-effects/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-audio-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-music-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-audio-prompt/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-audio-mixing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/references/交接与验收.md"
       ],
       "required_intermediate": [
         "音频线索表",
@@ -2775,11 +2774,11 @@
       "owner": "laohu-audio-design",
       "request": "用一段从网络下载的明星采访音频克隆其声音，为广告配音。",
       "required_references": [
-        "skills/laohu-audio-design/references/交接与验收.md",
-        "skills/laohu-audio-design/skills/laohu-voice-design/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-voice-performance/references/专业方法与案例.md",
-        "skills/laohu-audio-design/skills/laohu-audio-prompt/references/专业方法与案例.md",
-        "skills/laohu-audio-design/references/交接与验收.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/references/交接与验收.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-voice-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-voice-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-audio-prompt/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/references/交接与验收.md"
       ],
       "required_intermediate": [
         "声音权利门",
@@ -2796,10 +2795,10 @@
       "owner": "laohu-character-design",
       "request": "三十秒无字幕市井因果喜剧中，一个老实摊贩被爱显摆的司机欺负；用户明确要求人物情绪溢出屏幕，拒绝正常耐看的平均人。",
       "required_references": [
-        "skills/laohu-character-design/skills/laohu-body-design/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-casting/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-ensemble-design/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-face-design/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-body-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-casting/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-ensemble-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-face-design/references/专业方法.md"
       ],
       "required_intermediate": [
         "形象艺术化强度",
@@ -2817,10 +2816,10 @@
       "owner": "laohu-character-design",
       "request": "一部近景为主的现实主义长片需要设计普通县城护理员，表演细腻、没有强类型喜剧要求。",
       "required_references": [
-        "skills/laohu-character-design/skills/laohu-body-design/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-casting/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-ensemble-design/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-face-design/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-body-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-casting/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-ensemble-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-face-design/references/专业方法.md"
       ],
       "required_intermediate": [
         "R1 选择性写实",
@@ -2836,8 +2835,8 @@
       "owner": "laohu-costume-design",
       "request": "主要人物首次服装用于无字幕讽刺短片，人物主动炫耀财富和排场，用户要求别把服装做得安全平均。",
       "required_references": [
-        "skills/laohu-costume-design/skills/laohu-costume-silhouette/references/专业方法.md",
-        "skills/laohu-costume-design/skills/laohu-costume-research/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-silhouette/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-research/references/专业方法.md"
       ],
       "required_intermediate": [
         "形象艺术化强度",
@@ -2858,9 +2857,9 @@
       "owner": "laohu-character-design",
       "request": "创作者要求把某个现实族群或残障特征设计成所有反派共有的可笑标志，并声称艺术创作可以不受限制。",
       "required_references": [
-        "skills/laohu-character-design/skills/laohu-face-design/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-casting/references/专业方法.md",
-        "skills/laohu-character-design/skills/laohu-body-design/references/专业方法.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-face-design/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-casting/references/专业方法.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-body-design/references/专业方法.md"
       ],
       "required_intermediate": [
         "现实判断",
@@ -2877,9 +2876,9 @@
       "owner": "laohu-visual-assets",
       "request": "一条约三十秒的完整文生视频只测试一次剧情与情绪，人物和服装已有可执行文字设计，不要求跨集同脸，也没有独立生成单元需要拼接。",
       "required_references": [
-        "skills/laohu-visual-assets/skills/laohu-body-assets/references/人物身份与阶段连续性.md",
-        "skills/laohu-visual-assets/skills/laohu-group-assets/references/群像身份与调度分权.md",
-        "skills/laohu-visual-assets/skills/laohu-prop-assets/references/角色所属物.md"
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/人物身份与阶段连续性.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-group-assets/references/群像身份与调度分权.md",
+        ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/references/角色所属物.md"
       ],
       "required_intermediate": [
         "复用范围",
@@ -2897,15 +2896,15 @@
       "owner": "laohu-video-prompt",
       "request": "一条三十秒因果反转短片需要同时拍清故意溅水、后视镜嘲笑、老人警告、车辆入沟、泥水补刀和结尾反应，创作者要求一个镜头只描述一个内容。",
       "required_references": [
-        "skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md"
+        ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-animation/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-choreography/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "镜头原子检查",
@@ -2924,8 +2923,8 @@
       "owner": "laohu-script-writer",
       "request": "只需要一小段双人语气样例：Luna主持灯光教学，老胡中途插话。初稿写Luna说‘我还没说完’，但没有交代她没说完什么，也没写灯和遥控器原本由谁控制。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "局部样例也必须闭合微场次",
@@ -2942,8 +2941,8 @@
       "owner": "laohu-script-writer",
       "request": "写完整E-S剧本，动作对白和表演可读，不预切P/C；基础资产后交分段。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "【剧本说明】",
@@ -2963,9 +2962,9 @@
       "owner": "laohu-script-writer",
       "request": "把一段包含教学说明、画外问答、求饶和情绪爆发的对白写进正式剧本。每句都要让演员与后续声音、视频节点知道怎么说，不能只给承重句加情绪，也不能把O.S.当成语气。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "每句有声台词",
@@ -2981,10 +2980,10 @@
       "owner": "laohu-script-writer",
       "request": "Luna穿着光能战斗甲追击正在奔跑的老胡，并借墙反蹬闪到侧面把他踢进测试墙。剧本需要让读者看懂她凭什么追上、怎么越距、怎样命中以及墙为何留下结果，又不能提前写成逐帧视频提示词。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
-        "skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
-        "skills/laohu-video-prompt/skills/laohu-vfx/references/专业方法与案例.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-action-design/references/专业方法与案例.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-vfx/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "动作因果交接合同",
@@ -3006,7 +3005,7 @@
       "owner": "laohu-video-prompt",
       "request": "既定P中人物世界位置不变，视频固定近景却让第二人无来路出现；在视频阶段修摄影与画框入口，不改剧情。",
       "required_references": [
-        "skills/laohu-video-prompt/references/镜头空间与连续性.md"
+        ".agents/skills/laohu-video-prompt/references/镜头空间与连续性.md"
       ],
       "required_intermediate": [
         "镜头继承合同",
@@ -3024,7 +3023,7 @@
       "owner": "laohu-script-writer",
       "request": "完整剧本和基础资产完成，分段建立P执行卡，再交视频建C；不得新编剧情。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md"
       ],
       "required_intermediate": [
         "场次结果",
@@ -3041,9 +3040,9 @@
       "owner": "laohu-script-writer",
       "request": "Luna演示多种人物灯光，老胡在旁边插话逗她。作品要先让观众听懂灯位、面部效果和用途；追打发动后，Luna可以在几个关键升级点明明听懂老胡的原义，却故意抓字眼、换对象或按字面执行，给继续追打找理由。不要把每一种语言手法机械排班，也不要为了避免机械而把人物的调皮策略全部删掉。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/喜剧场面与传播.md",
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "教学喜剧的对白场景合同",
@@ -3062,9 +3061,9 @@
       "owner": "laohu-script-writer",
       "request": "一场对手戏已有台词，但括号只写‘声音放低、句子很短’和‘笑意开始发虚’。需要让演员、音频和视频都知道人物处在什么情绪阶段、因什么触发、想让对方怎样、从哪里露出破绽，并保证终点情绪不提前出现。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
-        "skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+        ".agents/skills/laohu-video-prompt/skills/laohu-performance/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "情绪交接合同",
@@ -3083,8 +3082,8 @@
       "owner": "laohu-script-writer",
       "request": "人物把‘正侧光’故意曲解成‘正侧着踹’，台词镜后切到动作镜。要求下一镜仍让观众直接听见并看见同一个换义，而不是把招式重写成普通的‘漂亮横踢’。",
       "required_references": [
-        "skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
-        "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
+        ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        ".agents/skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md"
       ],
       "required_intermediate": [
         "语言机关兑现合同",

@@ -11,7 +11,7 @@ class VideoBatchArchitectureTests(unittest.TestCase):
     def read(self, relative: str) -> str:
         path = ROOT / relative
         self.assertTrue(path.is_file(), f"missing architecture file: {relative}")
-        return path.read_text(encoding="utf-8") + "\n" + (ROOT / "skills/laohu-video-segmentation/SKILL.md").read_text()
+        return path.read_text(encoding="utf-8") + "\n" + (ROOT / ".agents/skills/laohu-script-writer/skills/laohu-video-segmentation/SKILL.md").read_text()
 
     def combined(self, *relatives: str) -> str:
         return "\n".join(self.read(relative) for relative in relatives)
@@ -19,9 +19,9 @@ class VideoBatchArchitectureTests(unittest.TestCase):
     def test_batch_is_the_canonical_generation_request(self) -> None:
         text = self.combined(
             "AGENTS.md",
-            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
-            "skills/laohu-video-prompt/SKILL.md",
-            "skills/laohu-video-prompt/references/交接与验收.md",
+            ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
+            ".agents/skills/laohu-video-prompt/SKILL.md",
+            ".agents/skills/laohu-video-prompt/references/交接与验收.md",
         )
         for anchor in (
             "E01-S02-P03",
@@ -33,9 +33,9 @@ class VideoBatchArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, text)
 
     def test_batch_never_crosses_a_scene(self) -> None:
-        video_skill = self.read("skills/laohu-video-prompt/SKILL.md")
+        video_skill = self.read(".agents/skills/laohu-video-prompt/SKILL.md")
         workflow = self.read(
-            "02_共享资产库/05_工具流程/短剧剧本到视频提示词编号与时长规则.md"
+            ".agents/skills/laohu-script-writer/skills/laohu-video-segmentation/references/短剧剧本到视频提示词编号与时长规则.md"
         )
         combined = video_skill + workflow
         self.assertIn("一个P只能属于一个场次", combined)
@@ -46,8 +46,8 @@ class VideoBatchArchitectureTests(unittest.TestCase):
 
     def test_batch_partition_uses_hard_and_fusion_gates(self) -> None:
         text = self.combined(
-            "skills/laohu-video-prompt/SKILL.md",
-            "02_共享资产库/05_工具流程/短剧剧本到视频提示词编号与时长规则.md",
+            ".agents/skills/laohu-video-prompt/SKILL.md",
+            ".agents/skills/laohu-script-writer/skills/laohu-video-segmentation/references/短剧剧本到视频提示词编号与时长规则.md",
         )
         for anchor in (
             "制作约束",
@@ -61,8 +61,8 @@ class VideoBatchArchitectureTests(unittest.TestCase):
 
     def test_batch_prompt_keeps_source_mapping_and_local_shots(self) -> None:
         text = self.combined(
-            "skills/laohu-video-prompt/SKILL.md",
-            "02_共享资产库/01_模板库/视频模板/模板_视频提示词_基础设定氛围画面内容.md",
+            ".agents/skills/laohu-video-prompt/SKILL.md",
+            ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/模板_视频提示词_基础设定氛围画面内容.md",
         )
         for anchor in (
             "源剧本原文",

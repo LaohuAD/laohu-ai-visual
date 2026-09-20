@@ -8,8 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "skills/laohu-script-writer/scripts/story_component_library.py"
-DEFAULT_LIBRARY = ROOT / "skills/laohu-script-writer/references/07_故事构件库.jsonl"
+SCRIPT = ROOT / ".agents/skills/laohu-script-writer/scripts/story_component_library.py"
+DEFAULT_LIBRARY = ROOT / ".agents/skills/laohu-script-writer/references/07_故事构件库.jsonl"
 
 
 def load_component_module():

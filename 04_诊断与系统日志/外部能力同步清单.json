@@ -1,0 +1,2477 @@
+{
+  "date": "2026-09-12",
+  "screenwriting_commit": "3d2879742919de4f90214dfd703d9b16475331aa",
+  "aliases": {
+    "sw-series-engine-bible": "laohu-series-engine-bible",
+    "succession-series-writing": "laohu-succession-series-writing",
+    "sw-story-structure": "laohu-story-structure",
+    "sw-sitcom-comedy": "laohu-sitcom-comedy",
+    "ozu-screenplay-style": "laohu-ozu-screenplay-style",
+    "sw-industry-business": "laohu-industry-business",
+    "sw-series-structure": "laohu-series-structure",
+    "sw-scene-craft": "laohu-scene-craft",
+    "chekhov-dramaturgy": "laohu-chekhov-dramaturgy",
+    "sw-american-case-studies": "laohu-american-case-studies",
+    "sw-character-conflict": "laohu-character-conflict",
+    "sw-chinese-series-practice": "laohu-chinese-series-practice",
+    "sw-premise-theme": "laohu-premise-theme",
+    "sw-writers-room": "laohu-writers-room",
+    "sw-japanese-screenwriting": "laohu-japanese-screenwriting",
+    "sw-workflow": "laohu-script-writer",
+    "sw-format-adaptation": "laohu-format-adaptation",
+    "sw-series-case-studies": "laohu-series-case-studies",
+    "sw-korean-french-screenwriting": "laohu-korean-french-screenwriting",
+    "sw-dialogue": "laohu-dialogue"
+  },
+  "screenwriting": [
+    {
+      "module": "laohu-chekhov-dramaturgy",
+      "source_name": "chekhov-dramaturgy",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/chekhov-dramaturgy/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/SKILL.md",
+      "source_sha256": "1627d45b8f2a052e6b4efd2bf452609ef4d0abbf4e5eaac4ae6971c27e9e6664",
+      "source_body_sha256": "f326c60e3b5dd72514242c17ed7583214e6834f935f14162ccb7120442bafd64",
+      "mapped_body_sha256": "163a3de7329655fb3ffbc06e38c8c2ac795c215b2a06bb2290f40bce01f2e290",
+      "prefix_sha256": "e27fb120746958e38a14a105fea5086837c0890e866103a55ed71b696c762813",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/chekhov-dramaturgy/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/reference.md",
+          "source_sha256": "62e0ca7f7ff3923de05c8aa7765e0fb77bf708c3ae2ff27253f72bbb60b33ebb",
+          "mapped_sha256": "62e0ca7f7ff3923de05c8aa7765e0fb77bf708c3ae2ff27253f72bbb60b33ebb"
+        }
+      ]
+    },
+    {
+      "module": "laohu-ozu-screenplay-style",
+      "source_name": "ozu-screenplay-style",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/ozu-screenplay-style/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/SKILL.md",
+      "source_sha256": "cdb0b3df984444778969c74dd9df04e4ff01fa88eceb7a0ad4a5d31094637d89",
+      "source_body_sha256": "5ce633b866b0991bfb508a4c483b41dacb7c1c6e15b338df5b695471d2260390",
+      "mapped_body_sha256": "2f9e44f21f07ea7f4ea983d8b03e07da8a2855838ba97da9d8e10b0f14d74477",
+      "prefix_sha256": "4d2d37cdb16ef6d6c33dd29f75d6b72023424ebfb175b14602b840f9f479d99f",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/ozu-screenplay-style/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/reference.md",
+          "source_sha256": "22bc545fc6f7e2c2c07895f44c02bec884bd24544449cf2d1708e1b9cbc1fcd8",
+          "mapped_sha256": "22bc545fc6f7e2c2c07895f44c02bec884bd24544449cf2d1708e1b9cbc1fcd8"
+        }
+      ]
+    },
+    {
+      "module": "laohu-succession-series-writing",
+      "source_name": "succession-series-writing",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/succession-series-writing/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-succession-series-writing/SKILL.md",
+      "source_sha256": "fd521945530bb6e2ace5f3000e95a41fa104100b04c61187d95c88c7402b52ea",
+      "source_body_sha256": "e14459ec399fd310edd65c6bf6894b076d492dbbf7197be065aa99afd69950a7",
+      "mapped_body_sha256": "1e7858f656fdb32ec49e0a6475cc30374279f0683bebd41129fd3566abc14cfb",
+      "prefix_sha256": "3cd94bc3fe615a51038b958c8888633a5e70a6243deff70265b3f7189691383f",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/succession-series-writing/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-succession-series-writing/reference.md",
+          "source_sha256": "3a40aff0163fe6f7bb2fab686cb55a00e14d6781b7e72b543e95747d2e601df5",
+          "mapped_sha256": "3a40aff0163fe6f7bb2fab686cb55a00e14d6781b7e72b543e95747d2e601df5"
+        }
+      ]
+    },
+    {
+      "module": "laohu-american-case-studies",
+      "source_name": "sw-american-case-studies",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-american-case-studies/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-american-case-studies/SKILL.md",
+      "source_sha256": "47c1532d7318eeb41bc6cf36510675ee506b06969eef92607d5a83a216a5f534",
+      "source_body_sha256": "982d76bf84b9b19a83592c8a6c1232e0c256f0a3eefaa8503f115019defbf29e",
+      "mapped_body_sha256": "fa733c1b5e8cc2de992ce422e81ebd548f0fbb701beeaa8abfadb57138e440db",
+      "prefix_sha256": "485c3ba91b1646b29d1163447b52fa56a9299ac136e46e850ca1d6e8aa592ae5",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-american-case-studies/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-american-case-studies/reference.md",
+          "source_sha256": "bc9b750c25886c108673e3aca099c6aef3fc8b4b33b9b85b7261b45c597ead48",
+          "mapped_sha256": "bc9b750c25886c108673e3aca099c6aef3fc8b4b33b9b85b7261b45c597ead48"
+        }
+      ]
+    },
+    {
+      "module": "laohu-character-conflict",
+      "source_name": "sw-character-conflict",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-character-conflict/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-character-conflict/SKILL.md",
+      "source_sha256": "8466702e80e1a49c2688d90b6b29ff707d2482cd325cda28bcac4d2b6830841b",
+      "source_body_sha256": "b74e19c13d0da0fe63d72685754c864a316f907735c28d41270c83173b9c9a78",
+      "mapped_body_sha256": "b74e19c13d0da0fe63d72685754c864a316f907735c28d41270c83173b9c9a78",
+      "prefix_sha256": "2b742c0a9eeb1f897ad7464a07bb20160223cc63a79da1eb8c5b1b383c3c87d3",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-character-conflict/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-character-conflict/reference.md",
+          "source_sha256": "610b37466a4168249a3688478dcbfba07d65977377777cb385fc2b6c0e8ad2d3",
+          "mapped_sha256": "610b37466a4168249a3688478dcbfba07d65977377777cb385fc2b6c0e8ad2d3"
+        }
+      ]
+    },
+    {
+      "module": "laohu-chinese-series-practice",
+      "source_name": "sw-chinese-series-practice",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-chinese-series-practice/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-chinese-series-practice/SKILL.md",
+      "source_sha256": "611ce51e99eb609f258fbe8fe9d749b52ef693608d73ac5a51b1e3c9a587146a",
+      "source_body_sha256": "b8b8d6d391a3a4dbf631b002a8abe9ff851a496c78ca17fd050b18f6e9785e9d",
+      "mapped_body_sha256": "9498f6e90d0c5be7b2337fe85171bc5f2f30b1633715b8af5660b25764997ac4",
+      "prefix_sha256": "802c4865d190bf995ae41368a6f88e2161a8b71385e461edcf14c16a6c320344",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-chinese-series-practice/reference-cases.md",
+          "target": "skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-cases.md",
+          "source_sha256": "f754deb084bd5d43979265760daac0af552f0426f1bfe5328985df372119732b",
+          "mapped_sha256": "f754deb084bd5d43979265760daac0af552f0426f1bfe5328985df372119732b"
+        },
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-chinese-series-practice/reference-rules.md",
+          "target": "skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-rules.md",
+          "source_sha256": "bc48d8d2143ea5138eac50a455f6ac353572b67e2d9891bedc685dacc1bffd61",
+          "mapped_sha256": "7d3191deb3ad51ecaa09989999d9dae1720aa005afbddaa2a4a442ec333a610e"
+        },
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-chinese-series-practice/reference-samples.md",
+          "target": "skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-samples.md",
+          "source_sha256": "4659b0b2e03331dbc68abccab72479c9e77578b3345bdc5f75b5ddf071586123",
+          "mapped_sha256": "4659b0b2e03331dbc68abccab72479c9e77578b3345bdc5f75b5ddf071586123"
+        },
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-chinese-series-practice/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference.md",
+          "source_sha256": "21ad118cbf4fc6ed92d6c2bdaa9ebe9813011e98ac96a990a4ed03ae7d33c7a5",
+          "mapped_sha256": "db679dc1768f7f6928a6a72e1c1cb25e92c466fcacbfee1034ffc50928edce9f"
+        }
+      ]
+    },
+    {
+      "module": "laohu-dialogue",
+      "source_name": "sw-dialogue",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-dialogue/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-dialogue/SKILL.md",
+      "source_sha256": "030634f794946b4ca10fc693b8a10127509b9f5441dbf3248a60accd8d3397f5",
+      "source_body_sha256": "525fe6c2b6ffd23f64b4a616e5628f3ca0cef6dca5030e5078213f63925c9dff",
+      "mapped_body_sha256": "525fe6c2b6ffd23f64b4a616e5628f3ca0cef6dca5030e5078213f63925c9dff",
+      "prefix_sha256": "9a088146b43d389e63a38d8d05f19652cdc4a26e181ddf645eacfff38e67b128",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-dialogue/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-dialogue/reference.md",
+          "source_sha256": "28b573264ae1801d0f32f93c9130f51ff88cd080acc7489b2c26fb4c695ec243",
+          "mapped_sha256": "28b573264ae1801d0f32f93c9130f51ff88cd080acc7489b2c26fb4c695ec243"
+        }
+      ]
+    },
+    {
+      "module": "laohu-format-adaptation",
+      "source_name": "sw-format-adaptation",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-format-adaptation/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/SKILL.md",
+      "source_sha256": "2172b86cf3262d3509b26397754fe70a732920b76a3b428d4eda7be18865be19",
+      "source_body_sha256": "6dd6ae2826337523a91554315bc5dee5164c2da069dbf51e89b1661f40257127",
+      "mapped_body_sha256": "8f1023303c8e5d624fbdbc602aa450a7a796b3b3f69950b74de09b16de80f679",
+      "prefix_sha256": "b15e253064d8e3b3754eee7b46c830cf4d55a9f9b53c1073f145eb708b57dac1",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-format-adaptation/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-format-adaptation/reference.md",
+          "source_sha256": "5b5329c585374a7267ee3b0ee1576a7b98035ea8af65c484513ab29c63ec13eb",
+          "mapped_sha256": "5b5329c585374a7267ee3b0ee1576a7b98035ea8af65c484513ab29c63ec13eb"
+        }
+      ]
+    },
+    {
+      "module": "laohu-industry-business",
+      "source_name": "sw-industry-business",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-industry-business/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-industry-business/SKILL.md",
+      "source_sha256": "e0f275fea2de0969c5b4167005d746c489eaf0b496c5e9f2dc8d189c37bb6249",
+      "source_body_sha256": "0e38b4f51ba0c936629313df5bf9469280e9d85266b3a773587cf757cf5490c5",
+      "mapped_body_sha256": "9135af936e5ff6c953b266c0897eb5c41e75f1a174201d39d382a26eb07447af",
+      "prefix_sha256": "4a5549c225c774deba895024b7111c5644d87753f723587271dd859d0cb40be2",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-industry-business/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-industry-business/reference.md",
+          "source_sha256": "485083abf2b571b7d6a94db972cfa95b1cc09e3174d59ca2cec014a0438d13d9",
+          "mapped_sha256": "485083abf2b571b7d6a94db972cfa95b1cc09e3174d59ca2cec014a0438d13d9"
+        }
+      ]
+    },
+    {
+      "module": "laohu-japanese-screenwriting",
+      "source_name": "sw-japanese-screenwriting",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-japanese-screenwriting/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-japanese-screenwriting/SKILL.md",
+      "source_sha256": "4cbe1bf9d10e205039bf4287cf45194177f6bbe3a07388b103bcef990c22d270",
+      "source_body_sha256": "949212723b4912c8747e24662ea957b4f5ff5c2f07bc53536d854c662b560bcf",
+      "mapped_body_sha256": "69ae80a79f65c19b32457d1a58c14daa705042dcf40b8a93f725f67178364fba",
+      "prefix_sha256": "34d17c32ff6e4e5d8814e5180ff10a225038c922fece677e3f396fb5b5ebe80b",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-japanese-screenwriting/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-japanese-screenwriting/reference.md",
+          "source_sha256": "41928f3f82c17a2216f6b3aa3e5a108aa0e6418cebd9b485732f56e7bb8fc8e3",
+          "mapped_sha256": "41928f3f82c17a2216f6b3aa3e5a108aa0e6418cebd9b485732f56e7bb8fc8e3"
+        }
+      ]
+    },
+    {
+      "module": "laohu-korean-french-screenwriting",
+      "source_name": "sw-korean-french-screenwriting",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-korean-french-screenwriting/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-korean-french-screenwriting/SKILL.md",
+      "source_sha256": "081173be32fd58db224cecc4e9b01565030bfb3539e2e691ad1af1b1b3991f52",
+      "source_body_sha256": "166f54100cf24236fd38cc450c6910b0cfbbe9bcd5fbc0ca79e3da0bcf5064e8",
+      "mapped_body_sha256": "9b56c311e640846de56795f55baeeca6598263be39eaa1741f0cf487cb0148fe",
+      "prefix_sha256": "5bdedd1be77b2acfb6687ab9fc8a637dc25fb3a2ecf186dc32f1895a32535805",
+      "references": []
+    },
+    {
+      "module": "laohu-premise-theme",
+      "source_name": "sw-premise-theme",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-premise-theme/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-premise-theme/SKILL.md",
+      "source_sha256": "aff25f7f4b30c6651334a07ca4172e3c40d52f1ac0b87f3a1a807b27c31a05d3",
+      "source_body_sha256": "c6a9d570cde670b32bbc1a29590cc7e28effa1b601aff34674f0670ae64e704f",
+      "mapped_body_sha256": "c6a9d570cde670b32bbc1a29590cc7e28effa1b601aff34674f0670ae64e704f",
+      "prefix_sha256": "05bbede48955c8dc2b2524c26440a6eaadd936b0228390a7a78a606734e55426",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-premise-theme/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-premise-theme/reference.md",
+          "source_sha256": "47fdede6501fabef3ff5837e282cd24094af01e1e748ebe94b96eb6bf3255c92",
+          "mapped_sha256": "47fdede6501fabef3ff5837e282cd24094af01e1e748ebe94b96eb6bf3255c92"
+        }
+      ]
+    },
+    {
+      "module": "laohu-scene-craft",
+      "source_name": "sw-scene-craft",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-scene-craft/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+      "source_sha256": "a7e0c0820d068e5f99ca7ed80f4e6baa05e7ff8731739ae4bb7aec429e369f54",
+      "source_body_sha256": "c90335121625cbc50a7d1c30315e026a0406301b51f4e5c4c626d9f98e90abfb",
+      "mapped_body_sha256": "c2dd0c960c7608d2803e8ce6b66bf018baa67678a79ea4b1c4fc4763303ae72d",
+      "prefix_sha256": "6a7239c4e31a9884e283989eef53ccfc4d5053b8525a15d87c1f64681508b2a4",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-scene-craft/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-scene-craft/reference.md",
+          "source_sha256": "2f2e998eadca198c76cca1ba56a7fc89fa398cef015b8b9262611320b36077be",
+          "mapped_sha256": "2f2e998eadca198c76cca1ba56a7fc89fa398cef015b8b9262611320b36077be"
+        }
+      ]
+    },
+    {
+      "module": "laohu-series-case-studies",
+      "source_name": "sw-series-case-studies",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-case-studies/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-series-case-studies/SKILL.md",
+      "source_sha256": "5c5bbbbf0620bc73f2b70516db35186bb0d15158a65a279ad80d3ea21502c359",
+      "source_body_sha256": "43a3e82f340960965dcee855b745c51991729d64775a25c91a58d739646819b0",
+      "mapped_body_sha256": "52513e0ce33e6ec8f45aca06d7bdefbc4db8b4da4d229aed155cd9d428157404",
+      "prefix_sha256": "f1b8dd8796fee101674bf2d43679c9d2e6b477a166b22a002232d202cf0e7612",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-case-studies/reference-asia.md",
+          "target": "skills/laohu-script-writer/skills/laohu-series-case-studies/reference-asia.md",
+          "source_sha256": "6412c24b7c05a8fea9952daf4e3aca5e79914d9c8c037d2f903c9777bb423293",
+          "mapped_sha256": "6412c24b7c05a8fea9952daf4e3aca5e79914d9c8c037d2f903c9777bb423293"
+        },
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-case-studies/reference-pilots.md",
+          "target": "skills/laohu-script-writer/skills/laohu-series-case-studies/reference-pilots.md",
+          "source_sha256": "7e6524f2528d28167b1f7082631afb5c18af31b147706fe686bfdc7d4dbe4ff2",
+          "mapped_sha256": "7e6524f2528d28167b1f7082631afb5c18af31b147706fe686bfdc7d4dbe4ff2"
+        },
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-case-studies/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-series-case-studies/reference.md",
+          "source_sha256": "c52bd63f7e5b5e8fa8ccdf64ce7f538daa6c95acb388240a7c24e6665e10f6e4",
+          "mapped_sha256": "c52bd63f7e5b5e8fa8ccdf64ce7f538daa6c95acb388240a7c24e6665e10f6e4"
+        }
+      ]
+    },
+    {
+      "module": "laohu-series-engine-bible",
+      "source_name": "sw-series-engine-bible",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-engine-bible/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-series-engine-bible/SKILL.md",
+      "source_sha256": "a9495c9879f396e5362d0f36130734ec281bee6597b76be919d6f210106fd96b",
+      "source_body_sha256": "5ae1da562236d2761c6b91cc36d8f03fdcd06e472da0e625e90f8fee2842cf08",
+      "mapped_body_sha256": "4d13a130a06889bfdb656a7eaddef1331cd5876dc70832820779faddd2ef6425",
+      "prefix_sha256": "7b844779b380d22549ff77d0aa0bbf7e5d332504a8b50d31b58d79f9f2ca4707",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-engine-bible/reference-documents.md",
+          "target": "skills/laohu-script-writer/skills/laohu-series-engine-bible/reference-documents.md",
+          "source_sha256": "0ddca79ce8093d14d31879520bb2378116fe12c1babeacce9acce8480969281f",
+          "mapped_sha256": "a30c4eb028c037ae04debb3a887c93671ec3cf2a1534c80dcf6e9c07709ff6ae"
+        },
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-engine-bible/reference-samples.md",
+          "target": "skills/laohu-script-writer/skills/laohu-series-engine-bible/reference-samples.md",
+          "source_sha256": "a05fd29731829ba686bdca284a8d64a1d6e08272f667d73a7d554e211307dff3",
+          "mapped_sha256": "a05fd29731829ba686bdca284a8d64a1d6e08272f667d73a7d554e211307dff3"
+        },
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-engine-bible/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-series-engine-bible/reference.md",
+          "source_sha256": "1d8ef77438a36d3c58d93938fa99b26e66400feb543ef7f3239376f58e1ce64a",
+          "mapped_sha256": "1d8ef77438a36d3c58d93938fa99b26e66400feb543ef7f3239376f58e1ce64a"
+        }
+      ]
+    },
+    {
+      "module": "laohu-series-structure",
+      "source_name": "sw-series-structure",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-structure/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-series-structure/SKILL.md",
+      "source_sha256": "dae6828accd7a49c4422274ae9c2b2ac43df480624c0b32b1c932904a84bd80c",
+      "source_body_sha256": "659e190107bfa09e8f279dccc00bdc2fd743e8c73cf50b7434803a9461338422",
+      "mapped_body_sha256": "945542a4d6295e21bb37e2ff31b3917274e2bddf3232c2b773c65ecd3538c58d",
+      "prefix_sha256": "e6d5a6cb5680173fc7960f32a544f9e4d59afbadf81de4f038ffb74b966727c4",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-series-structure/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-series-structure/reference.md",
+          "source_sha256": "839c66e5f348c204d78e99d3c57c0b128db23740f9856c4c6d24eef7aff2ccd9",
+          "mapped_sha256": "5d57a4412dc489bc318061976e209f3f5f5471969ee597512570001620542179"
+        }
+      ]
+    },
+    {
+      "module": "laohu-sitcom-comedy",
+      "source_name": "sw-sitcom-comedy",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-sitcom-comedy/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-sitcom-comedy/SKILL.md",
+      "source_sha256": "fbf24ee15b2df38ea5b9e899309c0cba5f6961674aa402aa31653ad9a8b7a3c5",
+      "source_body_sha256": "511c7bc07909ce21547be55675e84b7de60db4e5f9f2cfca98c1047f9f83287c",
+      "mapped_body_sha256": "78356a8875481a23e259b668181f6a2f574d2abecd9bfb533d3c036afa4971bb",
+      "prefix_sha256": "bd552f53a6d02b857ab3af56ebce3f8fd5e3ea60b0bf57ecfb3aa87540c51303",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-sitcom-comedy/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-sitcom-comedy/reference.md",
+          "source_sha256": "8e3a8f50a38ebc35f30a1036dccbdf64ed47a6dfe12b2a96fdeea18b23c4dd19",
+          "mapped_sha256": "8e3a8f50a38ebc35f30a1036dccbdf64ed47a6dfe12b2a96fdeea18b23c4dd19"
+        }
+      ]
+    },
+    {
+      "module": "laohu-story-structure",
+      "source_name": "sw-story-structure",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-story-structure/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-story-structure/SKILL.md",
+      "source_sha256": "703e83305de05611a5c0510c9ee4eebc4dec505132ac316b8b23d919c8d80c9d",
+      "source_body_sha256": "4cb0eee0b5b6fcf23ef003e948d5ee0be513ffd62690600a3ff36f7f0a01c3b1",
+      "mapped_body_sha256": "8dd1dd451c011ed8558657d7658fa7082330fcf5daedba20d352380d5a15d3b0",
+      "prefix_sha256": "29f36ae2b281bafbf205584dfaf15feeb8646b63db1f7ca60a9144c33fabce0e",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-story-structure/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-story-structure/reference.md",
+          "source_sha256": "7ff1cc985e98478a21c7cd125f97c812b1e0f93f38c2406c9baaf455a68f1883",
+          "mapped_sha256": "7ff1cc985e98478a21c7cd125f97c812b1e0f93f38c2406c9baaf455a68f1883"
+        }
+      ]
+    },
+    {
+      "module": "laohu-script-writer",
+      "source_name": "sw-workflow",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-workflow/SKILL.md",
+      "target": "skills/laohu-script-writer/references/外部编剧工作流.md",
+      "source_sha256": "f9bea8ec550c0c6181f300af9bbc78b96a9d2135b8de08a09672d25a26285f1d",
+      "source_body_sha256": "5eef4467f8bd37e63409504ed41dd5a72471997171e4b3d2f1699887333e4e90",
+      "mapped_body_sha256": "99e8b453081ac2b6423019af0198f1a3036cc874d429db7170d3be974551b74d",
+      "prefix_sha256": "cef8d3384664a43c5d58f8e3c6f57100dd4fc8ed2edee69624e9bc072038465c",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-workflow/reference.md",
+          "target": "skills/laohu-script-writer/references/外部编剧工作流案例.md",
+          "source_sha256": "e86a13f6efedb310425692138b431f7864d9fdc84615169bc0b7e0d21597fe30",
+          "mapped_sha256": "bcc129954dfaba428bcd414ffb29445c7c023c61235d27609660f461405e0fe1"
+        }
+      ]
+    },
+    {
+      "module": "laohu-writers-room",
+      "source_name": "sw-writers-room",
+      "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-writers-room/SKILL.md",
+      "target": "skills/laohu-script-writer/skills/laohu-writers-room/SKILL.md",
+      "source_sha256": "8062378fe558604f4e9a9e1f28cc3aad19e52decfb503a77dfcbbdd7daa05d0d",
+      "source_body_sha256": "4cefd1abd7458cbb7d814bf2345da6ee4fe0856de5f5b5ce8bf0c8d3d07d7c79",
+      "mapped_body_sha256": "3d70a65cffa2b45465ef7a2f8903df6c3a2cca14413519f59b55f4497971f140",
+      "prefix_sha256": "3968b32ab4d35239290d9d1c2306442ad1b70bc5a8659a95b9813a5b354f92d2",
+      "references": [
+        {
+          "source": "00_输入原料/研究文档/screenwriting-skills-current/skills/sw-writers-room/reference.md",
+          "target": "skills/laohu-script-writer/skills/laohu-writers-room/reference.md",
+          "source_sha256": "78980e21df6268cf6522a25595e7056406771c36508a0b27d94bf4fe89df9e30",
+          "mapped_sha256": "c121792e43db07c4ea74e0bfefc72cd729f44eeda3fc8fab44067a6f7da9ccdc"
+        }
+      ]
+    }
+  ],
+  "historical_baseline": "7f595bdaa2e54f5e4763fed0133fda9b271544f4",
+  "new_modules": [
+    "laohu-series-engine-bible",
+    "laohu-series-structure",
+    "laohu-series-case-studies",
+    "laohu-sitcom-comedy",
+    "laohu-writers-room",
+    "laohu-chinese-series-practice",
+    "laohu-succession-series-writing"
+  ],
+  "permission": "local integration only",
+  "sources": [
+    {
+      "name": "stickman-video-director",
+      "url": "https://github.com/kaomei/stickman-video-director",
+      "commit": "6d7f8c83a16c594c23bb73da832c8864ccd2aeb5",
+      "license": "MIT",
+      "mode": "完整方法与案例镜像＋本地运行适配"
+    },
+    {
+      "name": "nuyoah-portrait-character-designer",
+      "url": "https://github.com/nuyoah-ai-works/nuyoah-portrait-character-designer",
+      "commit": "99b9a2c90e5b09507c6a61b5c27b9e2740ddb63d",
+      "license": "MIT",
+      "mode": "知识方法吸收，分配给面部/群像/妆容，不独立运行上游工作流"
+    },
+    {
+      "name": "screenwriting-skills",
+      "url": "https://github.com/jtydhr88/screenwriting-skills",
+      "commit": "3d2879742919de4f90214dfd703d9b16475331aa",
+      "license": "仓库未见独立LICENSE；原库标个人学习用途，保留来源，不在本轮远程分发",
+      "mode": "十九项专业完整正文＋工作流由父级承接"
+    }
+  ],
+  "source_copies": [
+    {
+      "source_project": "stickman",
+      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/原始方法.md",
+      "sha256": "80b1be93b54ab60ed714d449798739c61b4d368d4037c568f18d30d9f135b8e7",
+      "preservation": "byte-identical"
+    },
+    {
+      "source_project": "stickman",
+      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/LICENSE",
+      "sha256": "39db520f9483ddb84418c21d59547f39da00083bf2dae1039166299d64f715c3",
+      "preservation": "byte-identical"
+    },
+    {
+      "source_project": "stickman",
+      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/examples.md",
+      "sha256": "58b56ee7590fb5a148a3a616dcf80ef69921fefe4ea558f6f451d60e31f78228",
+      "preservation": "byte-identical"
+    },
+    {
+      "source_project": "stickman",
+      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/omni-flash-prompt-contract.md",
+      "sha256": "3017855492a952a35818b91bb8726e28784a137a9b56940438cb042dadd5c014",
+      "preservation": "byte-identical"
+    },
+    {
+      "source_project": "stickman",
+      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/storyboard-template.md",
+      "sha256": "24352a987823166df4a255f22d6767573a0f4e706c3c5a82c5773696f509aa4a",
+      "preservation": "byte-identical"
+    },
+    {
+      "source_project": "portrait",
+      "target": "skills/laohu-character-design/skills/laohu-face-design/references/结构兼容与阵容方法.md",
+      "sha256": "f9a7f4782d8d6ef308876868635cae8d0faa22459f08fa0efd9a290cca83c682",
+      "preservation": "original-after-attribution"
+    },
+    {
+      "source_project": "portrait",
+      "target": "skills/laohu-character-design/skills/laohu-face-design/references/结构与妆容候选词表.md",
+      "sha256": "7714260ac2c5b3af635c82a1becd9afd2b3a2812f73432281e044e6b5c9c7a7e",
+      "preservation": "original-after-attribution"
+    },
+    {
+      "source_project": "portrait",
+      "target": "skills/laohu-makeup-design/skills/laohu-makeup/references/妆容条件适配.md",
+      "sha256": "8bc45d1733fa0f2eca2ddbcc4c80af9948187478964185a14ff685b2a10ad151",
+      "preservation": "original-after-attribution"
+    }
+  ],
+  "evolution_files": [
+    {
+      "path": "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+      "before_sha256": "ab8542aab159e13e89f624ed721bf6ef550c3701c601abe89f765657827268ef",
+      "after_sha256": "44ebb485d4b8e511ab287b7772520805023f5d103092da114c54764ab77d28f0",
+      "edits": [
+        {
+          "after_start": 1485,
+          "after_end": 1489,
+          "before_text": "基础资产准备"
+        },
+        {
+          "after_start": 1499,
+          "after_end": 1503,
+          "before_text": "基础资产与音色设计"
+        },
+        {
+          "after_start": 2584,
+          "after_end": 2588,
+          "before_text": ""
+        },
+        {
+          "after_start": 2589,
+          "after_end": 2589,
+          "before_text": "基础"
+        },
+        {
+          "after_start": 2591,
+          "after_end": 2595,
+          "before_text": "后的制作准备"
+        },
+        {
+          "after_start": 2620,
+          "after_end": 2623,
+          "before_text": ""
+        },
+        {
+          "after_start": 2628,
+          "after_end": 2630,
+          "before_text": "需求"
+        },
+        {
+          "after_start": 2633,
+          "after_end": 2647,
+          "before_text": ""
+        },
+        {
+          "after_start": 2652,
+          "after_end": 2652,
+          "before_text": "；必要时预视化"
+        },
+        {
+          "after_start": 5076,
+          "after_end": 5080,
+          "before_text": "基础资产"
+        },
+        {
+          "after_start": 5100,
+          "after_end": 5104,
+          "before_text": "引用"
+        },
+        {
+          "after_start": 5111,
+          "after_end": 5117,
+          "before_text": ""
+        },
+        {
+          "after_start": 8133,
+          "after_end": 8139,
+          "before_text": "基础资产准备"
+        },
+        {
+          "after_start": 8186,
+          "after_end": 8188,
+          "before_text": "状态"
+        },
+        {
+          "after_start": 8191,
+          "after_end": 8193,
+          "before_text": "需求"
+        },
+        {
+          "after_start": 8194,
+          "after_end": 8209,
+          "before_text": ""
+        },
+        {
+          "after_start": 16958,
+          "after_end": 16960,
+          "before_text": "88"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "02_共享资产库/05_工具流程/外部能力依赖清单.md",
+      "before_sha256": "e82703688e2bdcfded4bc5c3233f62b9b3a0049eb94fd3c965c4810234a197c7",
+      "after_sha256": "3319ffff4881d1163bb8d5e1b8b7d6e906e380a0613a2878bd3038888608a3be",
+      "edits": [
+        {
+          "after_start": 2306,
+          "after_end": 2428,
+          "before_text": ""
+        },
+        {
+          "after_start": 2429,
+          "after_end": 2432,
+          "before_text": ""
+        },
+        {
+          "after_start": 2474,
+          "after_end": 2565,
+          "before_text": ""
+        },
+        {
+          "after_start": 2566,
+          "after_end": 2614,
+          "before_text": "作者元数据为terry；"
+        },
+        {
+          "after_start": 2615,
+          "after_end": 2619,
+          "before_text": "库标个人学习用途，未发现独立LICENSE。"
+        },
+        {
+          "after_start": 2621,
+          "after_end": 2623,
+          "before_text": "适配不改变作者、原书"
+        },
+        {
+          "after_start": 2624,
+          "after_end": 2628,
+          "before_text": "译文引文归属，未进行远程分发"
+        },
+        {
+          "after_start": 2632,
+          "after_end": 2637,
+          "before_text": "原始"
+        },
+        {
+          "after_start": 2674,
+          "after_end": 2682,
+          "before_text": ""
+        },
+        {
+          "after_start": 2684,
+          "after_end": 2688,
+          "before_text": "，只作研究和核验，"
+        },
+        {
+          "after_start": 2689,
+          "after_end": 2694,
+          "before_text": "持不改；本地"
+        },
+        {
+          "after_start": 2696,
+          "after_end": 2708,
+          "before_text": "方法"
+        },
+        {
+          "after_start": 2712,
+          "after_end": 2716,
+          "before_text": ""
+        },
+        {
+          "after_start": 2718,
+          "after_end": 2723,
+          "before_text": ""
+        },
+        {
+          "after_start": 2724,
+          "after_end": 2729,
+          "before_text": "失"
+        },
+        {
+          "after_start": 2730,
+          "after_end": 2731,
+          "before_text": "影响已验证副本运行，但不能据此"
+        },
+        {
+          "after_start": 2733,
+          "after_end": 2736,
+          "before_text": "已检查"
+        },
+        {
+          "after_start": 2738,
+          "after_end": 2738,
+          "before_text": "更新"
+        },
+        {
+          "after_start": 2742,
+          "after_end": 2993,
+          "before_text": ""
+        },
+        {
+          "after_start": 2995,
+          "after_end": 2995,
+          "before_text": "通过`"
+        },
+        {
+          "after_start": 3002,
+          "after_end": 3007,
+          "before_text": "`"
+        },
+        {
+          "after_start": 3011,
+          "after_end": 3015,
+          "before_text": "所选子Skill"
+        },
+        {
+          "after_start": 3016,
+          "after_end": 3018,
+          "before_text": "完整"
+        },
+        {
+          "after_start": 3020,
+          "after_end": 3021,
+          "before_text": "与"
+        },
+        {
+          "after_start": 3025,
+          "after_end": 3026,
+          "before_text": "；子Skill"
+        },
+        {
+          "after_start": 3028,
+          "after_end": 3080,
+          "before_text": ""
+        },
+        {
+          "after_start": 3082,
+          "after_end": 3097,
+          "before_text": "结果和依"
+        },
+        {
+          "after_start": 3098,
+          "after_end": 3138,
+          "before_text": ""
+        },
+        {
+          "after_start": 3139,
+          "after_end": 3156,
+          "before_text": "编剧统一复验并写入唯一内容母版"
+        },
+        {
+          "after_start": 3184,
+          "after_end": 3598,
+          "before_text": ""
+        },
+        {
+          "after_start": 3876,
+          "after_end": 3879,
+          "before_text": ""
+        },
+        {
+          "after_start": 3881,
+          "after_end": 3883,
+          "before_text": ""
+        },
+        {
+          "after_start": 3884,
+          "after_end": 3886,
+          "before_text": "khov"
+        },
+        {
+          "after_start": 3887,
+          "after_end": 3895,
+          "before_text": "d"
+        },
+        {
+          "after_start": 3897,
+          "after_end": 3898,
+          "before_text": "ma"
+        },
+        {
+          "after_start": 3899,
+          "after_end": 3902,
+          "before_text": "urgy"
+        },
+        {
+          "after_start": 3915,
+          "after_end": 3917,
+          "before_text": ""
+        },
+        {
+          "after_start": 3918,
+          "after_end": 3920,
+          "before_text": "khov"
+        },
+        {
+          "after_start": 3921,
+          "after_end": 3929,
+          "before_text": "d"
+        },
+        {
+          "after_start": 3931,
+          "after_end": 3932,
+          "before_text": "ma"
+        },
+        {
+          "after_start": 3933,
+          "after_end": 3936,
+          "before_text": "urgy"
+        },
+        {
+          "after_start": 3986,
+          "after_end": 3988,
+          "before_text": ""
+        },
+        {
+          "after_start": 3989,
+          "after_end": 3991,
+          "before_text": "khov"
+        },
+        {
+          "after_start": 3992,
+          "after_end": 4000,
+          "before_text": "d"
+        },
+        {
+          "after_start": 4002,
+          "after_end": 4003,
+          "before_text": "ma"
+        },
+        {
+          "after_start": 4004,
+          "after_end": 4007,
+          "before_text": "urgy"
+        },
+        {
+          "after_start": 4686,
+          "after_end": 4686,
+          "before_text": "ozu-screenplay-style` | [laohu-ozu-screenplay-style](../../skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/SKILL.md) |\n| `"
+        },
+        {
+          "after_start": 4918,
+          "after_end": 5431,
+          "before_text": ""
+        },
+        {
+          "after_start": 5565,
+          "after_end": 5565,
+          "before_text": "由"
+        },
+        {
+          "after_start": 5566,
+          "after_end": 5585,
+          "before_text": "编剧总控"
+        },
+        {
+          "after_start": 5620,
+          "after_end": 5747,
+          "before_text": ""
+        },
+        {
+          "after_start": 5756,
+          "after_end": 5756,
+          "before_text": "承接状态续接、开发阶段、入口选择、修订与返回；不新增工作流子Skill或story-bible"
+        },
+        {
+          "after_start": 5760,
+          "after_end": 5760,
+          "before_text": "- 保留方式：十二项前置领域具体四层，随后保持原专业章节及顺序；跨能力名称与链接按本地实际入口替换。十一份原有Reference逐字节保留；韩法原来没有Reference，专业材料完整在正文，不伪造配套文件。\n- 明确改动：来源性前言转入项目追溯，专业职责以创作语言保留；格式能力正文的一处书目/issue说明移到迁移清单，外部Fountain工作流交接改成现有Markdown→HTML母版与按需派生。对白、小津与格式的清单入口补了就地适用条件，原专业句子保留；其他专业方法未摘要删减。\n- 本地方法：原创意/人物/高潮与场景/喜剧内容按完整语义段落归入专业补充，体量编号与连续性完整归入格式能力。已完整迁出的原混合Reference现已删除；原口述文件拆清职责，仅保留为`01_口述故事补全.md`，对白正文只在子能力维护。叙事视角、整稿反审与构件工具继续由编剧共享；追溯使用系统日志中的段落映射和哈希，不在运行目录保留证据副本。\n- 验证真源：[完整迁移清单](../../04_诊断与系统日志/编剧能力完整迁移清单.json)保存原文哈希、允许替换、完整原导言和本地段落映射；[验证记录](../../04_诊断与系统日志/编剧能力完整迁移与验证.md)区分机械保真、作者自测与独立行为检验。\n- "
+        },
+        {
+          "after_start": 5762,
+          "after_end": 5769,
+          "before_text": "处理：运行文件"
+        },
+        {
+          "after_start": 5780,
+          "after_end": 5795,
+          "before_text": ""
+        },
+        {
+          "after_start": 5797,
+          "after_end": 6523,
+          "before_text": "路径"
+        },
+        {
+          "after_start": 6530,
+          "after_end": 6541,
+          "before_text": "并修"
+        },
+        {
+          "after_start": 6542,
+          "after_end": 6752,
+          "before_text": ""
+        },
+        {
+          "after_start": 6753,
+          "after_end": 6810,
+          "before_text": "不可用模块不得以记忆代替实际调用"
+        },
+        {
+          "after_start": 6811,
+          "after_end": 6857,
+          "before_text": "上游变化先作"
+        },
+        {
+          "after_start": 6859,
+          "after_end": 6878,
+          "before_text": "核"
+        },
+        {
+          "after_start": 6879,
+          "after_end": 7177,
+          "before_text": ""
+        },
+        {
+          "after_start": 7179,
+          "after_end": 7187,
+          "before_text": "能自动覆盖"
+        },
+        {
+          "after_start": 7188,
+          "after_end": 7189,
+          "before_text": "地"
+        },
+        {
+          "after_start": 7190,
+          "after_end": 7235,
+          "before_text": "层与生产合同"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "02_共享资产库/05_工具流程/短剧剧本到视频提示词编号与时长规则.md",
+      "before_sha256": "52175fcc4ba0b8f1a82babb151cd93a4eb9e88bf54963e7158ee09d825d1787a",
+      "after_sha256": "f550ba49ac1612ae27041f65ac84844af5839d14e94fc0a36fc3be5aca1e619b",
+      "edits": [
+        {
+          "after_start": 148,
+          "after_end": 152,
+          "before_text": "基础资产"
+        },
+        {
+          "after_start": 399,
+          "after_end": 406,
+          "before_text": "基础"
+        },
+        {
+          "after_start": 408,
+          "after_end": 410,
+          "before_text": "准备"
+        },
+        {
+          "after_start": 411,
+          "after_end": 434,
+          "before_text": "后"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "02_共享资产库/05_工具流程/能力协作图谱.md",
+      "before_sha256": "9af093a214267e4484176e154a95476717768d683b6e149687431415ef39b51c",
+      "after_sha256": "4a528f5aa125f1fd8c84562b42619d9a037fa679bc0070fecc53bc2e0d67bc76",
+      "edits": [
+        {
+          "after_start": 1752,
+          "after_end": 1756,
+          "before_text": "基础资产准备"
+        },
+        {
+          "after_start": 2449,
+          "after_end": 2453,
+          "before_text": ""
+        },
+        {
+          "after_start": 2454,
+          "after_end": 2454,
+          "before_text": "基础"
+        },
+        {
+          "after_start": 2456,
+          "after_end": 2460,
+          "before_text": "后的制作准备"
+        },
+        {
+          "after_start": 3900,
+          "after_end": 3901,
+          "before_text": "二"
+        },
+        {
+          "after_start": 3941,
+          "after_end": 3950,
+          "before_text": ""
+        },
+        {
+          "after_start": 3955,
+          "after_end": 3961,
+          "before_text": "包括前提、结构、人物、场景、对白、格式改编、案例、日式、韩法、契诃夫、小津"
+        },
+        {
+          "after_start": 3962,
+          "after_end": 3969,
+          "before_text": "行"
+        },
+        {
+          "after_start": 3970,
+          "after_end": 3977,
+          "before_text": "能力"
+        },
+        {
+          "after_start": 4175,
+          "after_end": 4177,
+          "before_text": "88"
+        },
+        {
+          "after_start": 5255,
+          "after_end": 5555,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "5b8df184c17e1a987381d08a97aeda1db861b828882a637fad395dcb05acd1a7",
+      "after_sha256": "6f3b09a2da002f75b6519655431498783ff03dc55964a65cac6ab411f668be32",
+      "edits": [
+        {
+          "after_start": 297,
+          "after_end": 315,
+          "before_text": ""
+        },
+        {
+          "after_start": 361,
+          "after_end": 362,
+          "before_text": "\n→ "
+        },
+        {
+          "after_start": 364,
+          "after_end": 368,
+          "before_text": "执行卡"
+        },
+        {
+          "after_start": 1091,
+          "after_end": 1097,
+          "before_text": "基础资产准备"
+        },
+        {
+          "after_start": 1144,
+          "after_end": 1146,
+          "before_text": "状态"
+        },
+        {
+          "after_start": 1149,
+          "after_end": 1151,
+          "before_text": "需求"
+        },
+        {
+          "after_start": 1152,
+          "after_end": 1167,
+          "before_text": ""
+        },
+        {
+          "after_start": 3828,
+          "after_end": 3832,
+          "before_text": "基础资产准备"
+        },
+        {
+          "after_start": 4601,
+          "after_end": 4692,
+          "before_text": ""
+        },
+        {
+          "after_start": 5852,
+          "after_end": 5853,
+          "before_text": "二"
+        },
+        {
+          "after_start": 6289,
+          "after_end": 6343,
+          "before_text": ""
+        },
+        {
+          "after_start": 6373,
+          "after_end": 6373,
+          "before_text": "。\nSEGMENT：基础资产后完成E-S-P分段执行卡，原文、讲戏、估时、引用与状态接续可供视频继承"
+        },
+        {
+          "after_start": 7446,
+          "after_end": 7450,
+          "before_text": "基础资产"
+        },
+        {
+          "after_start": 7462,
+          "after_end": 7469,
+          "before_text": ""
+        },
+        {
+          "after_start": 10836,
+          "after_end": 10837,
+          "before_text": "八"
+        },
+        {
+          "after_start": 10838,
+          "after_end": 10839,
+          "before_text": "八"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-ai-visual/SKILL.md",
+      "before_sha256": "a7fdb8e5ab53197d0f1ffb59961944445b7d302ac6e11ecdff391e79f2bce597",
+      "after_sha256": "c92f06b36885b21767c9201ccd396b7bb2b3461270126a804e7330f1639e58d2",
+      "edits": [
+        {
+          "after_start": 4585,
+          "after_end": 4589,
+          "before_text": ""
+        },
+        {
+          "after_start": 4590,
+          "after_end": 4590,
+          "before_text": "有故事，必要稳定资产已经"
+        },
+        {
+          "after_start": 4593,
+          "after_end": 4597,
+          "before_text": "或一次性整段文生"
+        },
+        {
+          "after_start": 4599,
+          "after_end": 4610,
+          "before_text": "的正文替代合同足够，"
+        },
+        {
+          "after_start": 4611,
+          "after_end": 4612,
+          "before_text": "要既有镜头的时间变化与正式视频提示词编译"
+        },
+        {
+          "after_start": 4648,
+          "after_end": 4652,
+          "before_text": ""
+        },
+        {
+          "after_start": 4653,
+          "after_end": 4653,
+          "before_text": "基础"
+        },
+        {
+          "after_start": 4655,
+          "after_end": 4659,
+          "before_text": "后的制作准备"
+        },
+        {
+          "after_start": 11369,
+          "after_end": 11905,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-art-direction/SKILL.md",
+      "before_sha256": "389048f8702a3965e16554850c4ce7c685dcc7daf4cc1dc4d558806ae4007388",
+      "after_sha256": "0e936e414d55d7f463b20b5678e6fc268e169a023a4dd8d92759fbbdbd577381",
+      "edits": [
+        {
+          "after_start": 11275,
+          "after_end": 11572,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-character-design/skills/laohu-ensemble-design/SKILL.md",
+      "before_sha256": "8eef377c1e406efd5bd093a0125ce6f9aac2d9d47e65d8a32c437d7f4099e0ab",
+      "after_sha256": "b6ab00be9843383c61cf1b45fd5f70a7f3370ad40981793ead8c1a79e5f2acdb",
+      "edits": [
+        {
+          "after_start": 1064,
+          "after_end": 1411,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-character-design/skills/laohu-face-design/SKILL.md",
+      "before_sha256": "8744e85472b28105c3779f30cabc97ab65ae9380074a159fdd93df8d7f225910",
+      "after_sha256": "2527963c2c1d1d6bd5fac23580852d78ec8fec38636a11feb32921b705c81c2d",
+      "edits": [
+        {
+          "after_start": 718,
+          "after_end": 726,
+          "before_text": "，按其"
+        },
+        {
+          "after_start": 728,
+          "after_end": 841,
+          "before_text": "关系展开"
+        },
+        {
+          "after_start": 843,
+          "after_end": 847,
+          "before_text": "全量调用无关部门"
+        },
+        {
+          "after_start": 1145,
+          "after_end": 1628,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-image-creation/skills/laohu-portrait/SKILL.md",
+      "before_sha256": "99a2381f55806e767611b0f65e9ccf47ccb23f7c5cc49117985bb555ab05dc62",
+      "after_sha256": "d45d48decff44c05aa6fa12d61ad7aa15b8e27b91d70de3d71d211a626072b65",
+      "edits": [
+        {
+          "after_start": 1257,
+          "after_end": 1413,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-makeup-design/skills/laohu-makeup/SKILL.md",
+      "before_sha256": "dac363842cbd58a96ee89304e73f50194e655e2e415d27d0daf8a83b2316796f",
+      "after_sha256": "8a40bf87e27251f47a133bb804b113c8a16a5e3c6ae0fbdbc689dd43d63be897",
+      "edits": [
+        {
+          "after_start": 1042,
+          "after_end": 1407,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/SKILL.md",
+      "before_sha256": "229c48d059e6a1dcbb3fb6be3869f6a4bbb3b480b7ae6bdc9706f47eef449b55",
+      "after_sha256": "b4ac70f5aea32a85c65f437c113ae63c5d1a0385e97533f6d52eaab911e8abc6",
+      "edits": [
+        {
+          "after_start": 2850,
+          "after_end": 3859,
+          "before_text": ""
+        },
+        {
+          "after_start": 4315,
+          "after_end": 4322,
+          "before_text": ""
+        },
+        {
+          "after_start": 4324,
+          "after_end": 4325,
+          "before_text": "与"
+        },
+        {
+          "after_start": 4327,
+          "after_end": 4340,
+          "before_text": ""
+        },
+        {
+          "after_start": 4341,
+          "after_end": 4341,
+          "before_text": "单集/全季"
+        },
+        {
+          "after_start": 4343,
+          "after_end": 4345,
+          "before_text": "协作"
+        },
+        {
+          "after_start": 4614,
+          "after_end": 4615,
+          "before_text": "二"
+        },
+        {
+          "after_start": 4616,
+          "after_end": 4618,
+          "before_text": ""
+        },
+        {
+          "after_start": 7090,
+          "after_end": 7090,
+          "before_text": "资产继承"
+        },
+        {
+          "after_start": 7097,
+          "after_end": 7098,
+          "before_text": "；基础资产完成后"
+        },
+        {
+          "after_start": 7123,
+          "after_end": 7123,
+          "before_text": "提取原文并"
+        },
+        {
+          "after_start": 7129,
+          "after_end": 7146,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/references/05_剧本语言诊断与反向审稿.md",
+      "before_sha256": "73287be94ed1b0d7d0e21b00e3c7cb37e03040f2e33a407e577d3eda3bbe7ead",
+      "after_sha256": "bc30da7bc97adcf07a09047040eef55db7fa2dca5bcb8c3060110b3b5c81bea6",
+      "edits": [
+        {
+          "after_start": 5128,
+          "after_end": 5132,
+          "before_text": "基础资产"
+        },
+        {
+          "after_start": 5680,
+          "after_end": 5684,
+          "before_text": "基础资产"
+        },
+        {
+          "after_start": 12675,
+          "after_end": 12679,
+          "before_text": "基础资产"
+        },
+        {
+          "after_start": 13013,
+          "after_end": 13017,
+          "before_text": "基础资产"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-american-case-studies/SKILL.md",
+      "before_sha256": "a7b87fb477b7e059fe2205123b9ea4ca5337776b8828e0f302da201f5eee9e1b",
+      "after_sha256": "8786851823dc96a354a994d079fd7894fdabbbfb9c177b06ae1a75cb8290b04c",
+      "edits": [
+        {
+          "after_start": 2063,
+          "after_end": 2547,
+          "before_text": ""
+        },
+        {
+          "after_start": 10064,
+          "after_end": 10065,
+          "before_text": "["
+        },
+        {
+          "after_start": 10086,
+          "after_end": 10087,
+          "before_text": "](../laohu-story-structure/SKILL.md)"
+        },
+        {
+          "after_start": 10168,
+          "after_end": 10169,
+          "before_text": "["
+        },
+        {
+          "after_start": 10190,
+          "after_end": 10191,
+          "before_text": "](../laohu-story-structure/SKILL.md)"
+        },
+        {
+          "after_start": 10194,
+          "after_end": 10195,
+          "before_text": "["
+        },
+        {
+          "after_start": 10212,
+          "after_end": 10213,
+          "before_text": "](../laohu-scene-craft/SKILL.md)"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-character-conflict/SKILL.md",
+      "before_sha256": "43d35c08b47854ba6bbe84d7da8e701ef983477fa96cd7c3df4c21d5aef97bc2",
+      "after_sha256": "afacd4c2263a189c89291aa6edae88ab0b60147ed667509a3b8200e450b8e6f9",
+      "edits": [
+        {
+          "after_start": 1959,
+          "after_end": 2349,
+          "before_text": ""
+        },
+        {
+          "after_start": 7684,
+          "after_end": 7690,
+          "before_text": ""
+        },
+        {
+          "after_start": 7692,
+          "after_end": 7737,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/SKILL.md",
+      "before_sha256": "7732f25b314571c75b6aa72eb70f54825711974106ff3c835f862f06b6a09695",
+      "after_sha256": "45bbfee79e728ccda99048bbb4705582a8121c12f88da335f20c7e47e0cd2c41",
+      "edits": [
+        {
+          "after_start": 1769,
+          "after_end": 2753,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-dialogue/SKILL.md",
+      "before_sha256": "803f43b86a1d98adf565f09cb9f8dcb40a0780c504654f2ac38340c56a87253a",
+      "after_sha256": "d1384ba5b9a5a6ea678d714a02809ee7185bc9b0df188991d92b3affd9989341",
+      "edits": [
+        {
+          "after_start": 3062,
+          "after_end": 3576,
+          "before_text": ""
+        },
+        {
+          "after_start": 11074,
+          "after_end": 11074,
+          "before_text": "逐项先判断当前对白的作用：合作确认、知识教学、关系承认和必要表演均可成立。第3、4、8、10项只在该写法损害当场行动或观众理解时触发修改；不能因双方一致、直接说清或带表演括号而判错。删改前比较原句与候选实际改变了什么。\n\n"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-format-adaptation/SKILL.md",
+      "before_sha256": "71abd9f29fc56dbb2045f63d860b01d3ae62ace8c867a8b6aa013d7474325349",
+      "after_sha256": "c2d1b204a412c832f7eb319a418372ace95f1112d4ae83042ef48a7dbf24e97c",
+      "edits": [
+        {
+          "after_start": 2442,
+          "after_end": 3312,
+          "before_text": ""
+        },
+        {
+          "after_start": 5199,
+          "after_end": 5217,
+          "before_text": ""
+        },
+        {
+          "after_start": 5237,
+          "after_end": 5292,
+          "before_text": ""
+        },
+        {
+          "after_start": 5294,
+          "after_end": 5323,
+          "before_text": "版面与元素示"
+        },
+        {
+          "after_start": 5358,
+          "after_end": 5358,
+          "before_text": "；实际提交以接收方明确规范为准"
+        },
+        {
+          "after_start": 5904,
+          "after_end": 6459,
+          "before_text": ""
+        },
+        {
+          "after_start": 7167,
+          "after_end": 7167,
+          "before_text": "\n\n本节只在已确定交付Fountain或相应传统提交任务时启用；此范围内的“默认”不扩展为本项目默认。完整场次稿继续执行前述Markdown、E-S、表演与HTML合同，用途已经明确时直接沿用。"
+        },
+        {
+          "after_start": 8039,
+          "after_end": 8040,
+          "before_text": "["
+        },
+        {
+          "after_start": 8059,
+          "after_end": 8060,
+          "before_text": "](../../SKILL.md)"
+        },
+        {
+          "after_start": 8067,
+          "after_end": 8069,
+          "before_text": "正式镜头化剧本继续以"
+        },
+        {
+          "after_start": 8070,
+          "after_end": 8071,
+          "before_text": "Markdown"
+        },
+        {
+          "after_start": 8072,
+          "after_end": 8078,
+          "before_text": "为内容源并生成"
+        },
+        {
+          "after_start": 8079,
+          "after_end": 8082,
+          "before_text": "HTML；明确需要 F"
+        },
+        {
+          "after_start": 8089,
+          "after_end": 8090,
+          "before_text": ""
+        },
+        {
+          "after_start": 8091,
+          "after_end": 8107,
+          "before_text": "提交时，从已确认内容生成派生稿，在现有阶段记录登"
+        },
+        {
+          "after_start": 8110,
+          "after_end": 8111,
+          "before_text": ""
+        },
+        {
+          "after_start": 8112,
+          "after_end": 8114,
+          "before_text": "用途"
+        },
+        {
+          "after_start": 8510,
+          "after_end": 8511,
+          "before_text": "["
+        },
+        {
+          "after_start": 8532,
+          "after_end": 8533,
+          "before_text": "](../laohu-story-structure/SKILL.md)"
+        },
+        {
+          "after_start": 8595,
+          "after_end": 8669,
+          "before_text": ""
+        },
+        {
+          "after_start": 10107,
+          "after_end": 10108,
+          "before_text": "["
+        },
+        {
+          "after_start": 10127,
+          "after_end": 10128,
+          "before_text": "](../laohu-premise-theme/SKILL.md)"
+        },
+        {
+          "after_start": 12725,
+          "after_end": 12726,
+          "before_text": "["
+        },
+        {
+          "after_start": 12745,
+          "after_end": 12762,
+          "before_text": "](.."
+        },
+        {
+          "after_start": 12763,
+          "after_end": 12829,
+          "before_text": ""
+        },
+        {
+          "after_start": 12835,
+          "after_end": 12839,
+          "before_text": "pr"
+        },
+        {
+          "after_start": 12840,
+          "after_end": 12840,
+          "before_text": "mi"
+        },
+        {
+          "after_start": 12843,
+          "after_end": 12854,
+          "before_text": ""
+        },
+        {
+          "after_start": 12855,
+          "after_end": 12910,
+          "before_text": ""
+        },
+        {
+          "after_start": 12911,
+          "after_end": 12914,
+          "before_text": ""
+        },
+        {
+          "after_start": 12915,
+          "after_end": 12917,
+          "before_text": "m"
+        },
+        {
+          "after_start": 12918,
+          "after_end": 12933,
+          "before_text": "/SKILL.md)"
+        },
+        {
+          "after_start": 12950,
+          "after_end": 12958,
+          "before_text": ""
+        },
+        {
+          "after_start": 12960,
+          "after_end": 12962,
+          "before_text": ""
+        },
+        {
+          "after_start": 12963,
+          "after_end": 12983,
+          "before_text": ""
+        },
+        {
+          "after_start": 12984,
+          "after_end": 13056,
+          "before_text": ""
+        },
+        {
+          "after_start": 13058,
+          "after_end": 13059,
+          "before_text": "交付"
+        },
+        {
+          "after_start": 13060,
+          "after_end": 13089,
+          "before_text": "途选择检查项：传统推销稿检查对应格式"
+        },
+        {
+          "after_start": 13090,
+          "after_end": 13095,
+          "before_text": "镜头化制作稿检查现有编号、动作、表演和连续性。制作稿出现镜头术语、Markdown或必要括注不构成错误，任何精简均需保住既定内容事实。"
+        },
+        {
+          "after_start": 13100,
+          "after_end": 13102,
+          "before_text": "封面只有片名作者？无场号日期稿次注册号？Courier 12？页数 90–120？\n2. 场景标题三要素且从概括到具体？细节在"
+        },
+        {
+          "after_start": 13106,
+          "after_end": 13108,
+          "before_text": "？\n3. 动作段落"
+        },
+        {
+          "after_start": 13115,
+          "after_end": 13117,
+          "before_text": ""
+        },
+        {
+          "after_start": 13131,
+          "after_end": 13132,
+          "before_text": ""
+        },
+        {
+          "after_start": 13154,
+          "after_end": 13155,
+          "before_text": "/"
+        },
+        {
+          "after_start": 13157,
+          "after_end": 13158,
+          "before_text": "/"
+        },
+        {
+          "after_start": 13162,
+          "after_end": 13171,
+          "before_text": ""
+        },
+        {
+          "after_start": 13179,
+          "after_end": 13184,
+          "before_text": ""
+        },
+        {
+          "after_start": 13187,
+          "after_end": 13190,
+          "before_text": ""
+        },
+        {
+          "after_start": 13197,
+          "after_end": 13198,
+          "before_text": "4"
+        },
+        {
+          "after_start": 13200,
+          "after_end": 13202,
+          "before_text": ""
+        },
+        {
+          "after_start": 13215,
+          "after_end": 13218,
+          "before_text": ""
+        },
+        {
+          "after_start": 13225,
+          "after_end": 13225,
+          "before_text": "（$?）"
+        },
+        {
+          "after_start": 13234,
+          "after_end": 13240,
+          "before_text": ""
+        },
+        {
+          "after_start": 13244,
+          "after_end": 13245,
+          "before_text": ""
+        },
+        {
+          "after_start": 13258,
+          "after_end": 13394,
+          "before_text": ""
+        },
+        {
+          "after_start": 13397,
+          "after_end": 13399,
+          "before_text": ""
+        },
+        {
+          "after_start": 13401,
+          "after_end": 13406,
+          "before_text": "首次出现大写附年龄，"
+        },
+        {
+          "after_start": 13410,
+          "after_end": 13411,
+          "before_text": ""
+        },
+        {
+          "after_start": 13420,
+          "after_end": 13423,
+          "before_text": "？无"
+        },
+        {
+          "after_start": 13426,
+          "after_end": 13429,
+          "before_text": ""
+        },
+        {
+          "after_start": 13431,
+          "after_end": 13432,
+          "before_text": ""
+        },
+        {
+          "after_start": 13441,
+          "after_end": 13443,
+          "before_text": "对白不断页、无括号指示、无下划线惊叹号、无方言音译、无哼哈？\n7. "
+        },
+        {
+          "after_start": 13448,
+          "after_end": 13450,
+          "before_text": ""
+        },
+        {
+          "after_start": 13458,
+          "after_end": 13459,
+          "before_text": ""
+        },
+        {
+          "after_start": 13462,
+          "after_end": 13463,
+          "before_text": "为"
+        },
+        {
+          "after_start": 13464,
+          "after_end": 13468,
+          "before_text": "追逐"
+        },
+        {
+          "after_start": 13469,
+          "after_end": 13473,
+          "before_text": ""
+        },
+        {
+          "after_start": 13481,
+          "after_end": 13481,
+          "before_text": "用了\"作弊\"标记且"
+        },
+        {
+          "after_start": 13483,
+          "after_end": 13493,
+          "before_text": ""
+        },
+        {
+          "after_start": 13495,
+          "after_end": 13496,
+          "before_text": "8"
+        },
+        {
+          "after_start": 13498,
+          "after_end": 13500,
+          "before_text": ""
+        },
+        {
+          "after_start": 13503,
+          "after_end": 13507,
+          "before_text": ""
+        },
+        {
+          "after_start": 13512,
+          "after_end": 13513,
+          "before_text": "/"
+        },
+        {
+          "after_start": 13517,
+          "after_end": 13518,
+          "before_text": "/"
+        },
+        {
+          "after_start": 13523,
+          "after_end": 13524,
+          "before_text": "/"
+        },
+        {
+          "after_start": 13529,
+          "after_end": 13530,
+          "before_text": "/"
+        },
+        {
+          "after_start": 13534,
+          "after_end": 13534,
+          "before_text": "吗"
+        },
+        {
+          "after_start": 13535,
+          "after_end": 13537,
+          "before_text": ""
+        },
+        {
+          "after_start": 13545,
+          "after_end": 13546,
+          "before_text": "9"
+        },
+        {
+          "after_start": 13548,
+          "after_end": 13550,
+          "before_text": ""
+        },
+        {
+          "after_start": 13557,
+          "after_end": 13559,
+          "before_text": ""
+        },
+        {
+          "after_start": 13571,
+          "after_end": 13574,
+          "before_text": ""
+        },
+        {
+          "after_start": 13580,
+          "after_end": 13584,
+          "before_text": ""
+        },
+        {
+          "after_start": 13586,
+          "after_end": 13587,
+          "before_text": "10"
+        },
+        {
+          "after_start": 13589,
+          "after_end": 13591,
+          "before_text": ""
+        },
+        {
+          "after_start": 13593,
+          "after_end": 13595,
+          "before_text": ""
+        },
+        {
+          "after_start": 13618,
+          "after_end": 13621,
+          "before_text": ""
+        },
+        {
+          "after_start": 13634,
+          "after_end": 13635,
+          "before_text": "1"
+        },
+        {
+          "after_start": 13637,
+          "after_end": 13639,
+          "before_text": ""
+        },
+        {
+          "after_start": 13641,
+          "after_end": 13643,
+          "before_text": ""
+        },
+        {
+          "after_start": 13668,
+          "after_end": 13669,
+          "before_text": "/"
+        },
+        {
+          "after_start": 13681,
+          "after_end": 13686,
+          "before_text": "大问题"
+        },
+        {
+          "after_start": 13704,
+          "after_end": 13766,
+          "before_text": ""
+        },
+        {
+          "after_start": 13769,
+          "after_end": 13969,
+          "before_text": "输"
+        },
+        {
+          "after_start": 13970,
+          "after_end": 14120,
+          "before_text": "："
+        },
+        {
+          "after_start": 14125,
+          "after_end": 14127,
+          "before_text": ""
+        },
+        {
+          "after_start": 14138,
+          "after_end": 14139,
+          "before_text": "（好莱坞式）或场号制"
+        },
+        {
+          "after_start": 14142,
+          "after_end": 14144,
+          "before_text": ""
+        },
+        {
+          "after_start": 14156,
+          "after_end": 14164,
+          "before_text": ""
+        },
+        {
+          "after_start": 14165,
+          "after_end": 14174,
+          "before_text": ""
+        },
+        {
+          "after_start": 14176,
+          "after_end": 14496,
+          "before_text": ""
+        },
+        {
+          "after_start": 14505,
+          "after_end": 14508,
+          "before_text": ""
+        },
+        {
+          "after_start": 14509,
+          "after_end": 14554,
+          "before_text": "每个场景标题"
+        },
+        {
+          "after_start": 14555,
+          "after_end": 14567,
+          "before_text": ""
+        },
+        {
+          "after_start": 14570,
+          "after_end": 14587,
+          "before_text": "、转场都加了强制记号"
+        },
+        {
+          "after_start": 14588,
+          "after_end": 14595,
+          "before_text": "V.O./O.S"
+        },
+        {
+          "after_start": 14597,
+          "after_end": 14718,
+          "before_text": ""
+        },
+        {
+          "after_start": 14719,
+          "after_end": 14724,
+          "before_text": "对了"
+        },
+        {
+          "after_start": 14725,
+          "after_end": 14863,
+          "before_text": "跨页"
+        },
+        {
+          "after_start": 14865,
+          "after_end": 14868,
+          "before_text": "有 (MORE)/(CONT'D)？"
+        },
+        {
+          "after_start": 14869,
+          "after_end": 14878,
+          "before_text": "户要的是"
+        },
+        {
+          "after_start": 14882,
+          "after_end": 14892,
+          "before_text": "、场号制还是"
+        },
+        {
+          "after_start": 14894,
+          "after_end": 14933,
+          "before_text": "，"
+        },
+        {
+          "after_start": 14934,
+          "after_end": 14941,
+          "before_text": "过了吗？"
+        },
+        {
+          "after_start": 15083,
+          "after_end": 15084,
+          "before_text": "["
+        },
+        {
+          "after_start": 15108,
+          "after_end": 15109,
+          "before_text": "](../laohu-character-conflict/SKILL.md)"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-industry-business/SKILL.md",
+      "before_sha256": "924c056fc65c584eb6bbbb280fd25d8ca489c4264df42633d4abb5ebe43f2108",
+      "after_sha256": "d99516373c3da8b22630fccf158f0eeba706eda19a13412461036ee9e000c9da",
+      "edits": [
+        {
+          "after_start": 2114,
+          "after_end": 2546,
+          "before_text": ""
+        },
+        {
+          "after_start": 9144,
+          "after_end": 9383,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-japanese-screenwriting/SKILL.md",
+      "before_sha256": "09d0b8ef426a577b6d6d3c91bf88067884b53438cb45b3cb1e005989e1d87905",
+      "after_sha256": "2ad8e63c51a9bf27e1a68902b70c588e408ead01935e605dad631839241962c6",
+      "edits": [
+        {
+          "after_start": 1882,
+          "after_end": 2439,
+          "before_text": ""
+        },
+        {
+          "after_start": 6132,
+          "after_end": 6133,
+          "before_text": "["
+        },
+        {
+          "after_start": 6166,
+          "after_end": 6167,
+          "before_text": "](../laohu-korean-french-screenwriting/SKILL.md)"
+        },
+        {
+          "after_start": 6718,
+          "after_end": 6719,
+          "before_text": "["
+        },
+        {
+          "after_start": 6746,
+          "after_end": 6747,
+          "before_text": "](../laohu-american-case-studies/SKILL.md)"
+        },
+        {
+          "after_start": 6782,
+          "after_end": 6783,
+          "before_text": "["
+        },
+        {
+          "after_start": 6816,
+          "after_end": 6817,
+          "before_text": "](../laohu-korean-french-screenwriting/SKILL.md)"
+        },
+        {
+          "after_start": 8201,
+          "after_end": 8202,
+          "before_text": "["
+        },
+        {
+          "after_start": 8235,
+          "after_end": 8236,
+          "before_text": "](../laohu-korean-french-screenwriting/SKILL.md)"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-korean-french-screenwriting/SKILL.md",
+      "before_sha256": "e449d1a55b9da3f175b42cd59dc52e4d9e43a36ae1930e50ea25d2ae3c44496a",
+      "after_sha256": "2c8b52367bbf18a3ab02fcb237fdf724da9716bc9e7030adc72edfc3745ea20a",
+      "edits": [
+        {
+          "after_start": 1734,
+          "after_end": 2248,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/SKILL.md",
+      "before_sha256": "14bdcd5dc959d05e80c7458fddc38a9abbc89b060a9f413d6c3afb30541ca85e",
+      "after_sha256": "5ddc938e19bb668503b43e1dd08bb36e9d540fe7fd808300fa48b558b38f725c",
+      "edits": [
+        {
+          "after_start": 1748,
+          "after_end": 2836,
+          "before_text": ""
+        },
+        {
+          "after_start": 12169,
+          "after_end": 12169,
+          "before_text": "本清单用于选择具体的小津式练习，不是所有家庭片的统一验收。逐项先确认本片是否选择了该手法；没有选择的标为不适用。一个音节、画外对象、空镜数量、无人结尾与死者物件不得迫使已定人物、迁居原因或结局改变，最后以关系变化是否可感、人物行为是否成立裁决。\n\n"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-premise-theme/SKILL.md",
+      "before_sha256": "8666eae5484a327b40107e4ed0b634f37e490bde288e56b3a11825dd7981d5a1",
+      "after_sha256": "b9dc9e25a7514c1fcb2d3ed00d44adf888cbf6bbad9090dc5cc7d35cf58ef4a6",
+      "edits": [
+        {
+          "after_start": 2037,
+          "after_end": 2560,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+      "before_sha256": "1e8399ab0531c0a35d2ef37ad46d08b35b2cdb1adb0917855935a3d0be15223f",
+      "after_sha256": "2c518391f23b9c45ebabbcc7860f4add220fceb603c2e8d250b4158383db90b7",
+      "edits": [
+        {
+          "after_start": 2080,
+          "after_end": 2464,
+          "before_text": ""
+        },
+        {
+          "after_start": 3739,
+          "after_end": 3740,
+          "before_text": "["
+        },
+        {
+          "after_start": 3754,
+          "after_end": 3755,
+          "before_text": "](../laohu-dialogue/SKILL.md)"
+        },
+        {
+          "after_start": 8206,
+          "after_end": 8207,
+          "before_text": "["
+        },
+        {
+          "after_start": 8231,
+          "after_end": 8232,
+          "before_text": "](../laohu-chekhov-dramaturgy/SKILL.md)"
+        },
+        {
+          "after_start": 9624,
+          "after_end": 9625,
+          "before_text": "["
+        },
+        {
+          "after_start": 9639,
+          "after_end": 9640,
+          "before_text": "](../laohu-dialogue/SKILL.md)"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-script-writer/skills/laohu-story-structure/SKILL.md",
+      "before_sha256": "49e9e4221387252e43e2119c5f79acfc4f4c260e430746eb775ebd9256bcb2da",
+      "after_sha256": "fa3be8c28f773d03baad6115f08ae83c2e59f2c44601b88db654e74e17819e62",
+      "edits": [
+        {
+          "after_start": 1837,
+          "after_end": 2330,
+          "before_text": ""
+        },
+        {
+          "after_start": 9143,
+          "after_end": 9283,
+          "before_text": ""
+        },
+        {
+          "after_start": 10904,
+          "after_end": 10905,
+          "before_text": "["
+        },
+        {
+          "after_start": 10929,
+          "after_end": 10930,
+          "before_text": "](../laohu-chekhov-dramaturgy/SKILL.md)"
+        },
+        {
+          "after_start": 10946,
+          "after_end": 10947,
+          "before_text": "["
+        },
+        {
+          "after_start": 10973,
+          "after_end": 10974,
+          "before_text": "](../laohu-ozu-screenplay-style/SKILL.md)"
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-video-prompt/SKILL.md",
+      "before_sha256": "cc5fca853a3c75a02d4d0bf5d7755d59a72e7f28def83846f82926c11e803c32",
+      "after_sha256": "0e055ef2a38457aa4df1f31cc5998af6878c417106a616ee1e79e9ebe154252d",
+      "edits": [
+        {
+          "after_start": 743,
+          "after_end": 963,
+          "before_text": ""
+        },
+        {
+          "after_start": 1095,
+          "after_end": 1105,
+          "before_text": ""
+        },
+        {
+          "after_start": 1106,
+          "after_end": 1119,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-video-prompt/skills/laohu-motion-design/SKILL.md",
+      "before_sha256": "ef12668bb8833e162696f537a51c2772ebc3bfce879f5c4df751008f2e2a8544",
+      "after_sha256": "f7ff54f02527a65e6b80faeb33f274c1cf7d5fa9eded7ec75a6f4576076e02a6",
+      "edits": [
+        {
+          "after_start": 1116,
+          "after_end": 1445,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-video-segmentation/SKILL.md",
+      "before_sha256": "594178b51c17f97a763233322f63c90b688785098e162de9552a08637deae344",
+      "after_sha256": "c8f8ba1522af8f96b3540a795b209b2781b0971b7b683b4d9add8e20fc99dc23",
+      "edits": [
+        {
+          "after_start": 53,
+          "after_end": 55,
+          "before_text": "与基础资产准备"
+        },
+        {
+          "after_start": 223,
+          "after_end": 223,
+          "before_text": "基础资产及音色目录、已有状态参考、"
+        },
+        {
+          "after_start": 231,
+          "after_end": 258,
+          "before_text": ""
+        },
+        {
+          "after_start": 358,
+          "after_end": 366,
+          "before_text": ""
+        },
+        {
+          "after_start": 370,
+          "after_end": 370,
+          "before_text": "T之后、PROMP"
+        },
+        {
+          "after_start": 387,
+          "after_end": 405,
+          "before_text": "基础"
+        },
+        {
+          "after_start": 407,
+          "after_end": 455,
+          "before_text": "和"
+        },
+        {
+          "after_start": 457,
+          "after_end": 457,
+          "before_text": "须明确"
+        },
+        {
+          "after_start": 465,
+          "after_end": 465,
+          "before_text": "可标待生成，"
+        },
+        {
+          "after_start": 598,
+          "after_end": 602,
+          "before_text": "引用基础"
+        },
+        {
+          "after_start": 604,
+          "after_end": 606,
+          "before_text": ""
+        },
+        {
+          "after_start": 1167,
+          "after_end": 1363,
+          "before_text": ""
+        },
+        {
+          "after_start": 2154,
+          "after_end": 2154,
+          "before_text": "只"
+        },
+        {
+          "after_start": 2155,
+          "after_end": 2158,
+          "before_text": "基础资产编号/"
+        },
+        {
+          "after_start": 2161,
+          "after_end": 2220,
+          "before_text": "当前"
+        },
+        {
+          "after_start": 2224,
+          "after_end": 2239,
+          "before_text": ""
+        },
+        {
+          "after_start": 2240,
+          "after_end": 2271,
+          "before_text": "本"
+        },
+        {
+          "after_start": 2272,
+          "after_end": 2284,
+          "before_text": "用途；"
+        },
+        {
+          "after_start": 3094,
+          "after_end": 3094,
+          "before_text": "基础"
+        },
+        {
+          "after_start": 3096,
+          "after_end": 3098,
+          "before_text": ""
+        },
+        {
+          "after_start": 3102,
+          "after_end": 3109,
+          "before_text": ""
+        },
+        {
+          "after_start": 3111,
+          "after_end": 3111,
+          "before_text": "/条目"
+        },
+        {
+          "after_start": 3112,
+          "after_end": 3115,
+          "before_text": ""
+        },
+        {
+          "after_start": 3117,
+          "after_end": 3122,
+          "before_text": ""
+        },
+        {
+          "after_start": 3136,
+          "after_end": 3144,
+          "before_text": ""
+        },
+        {
+          "after_start": 3485,
+          "after_end": 3485,
+          "before_text": "及基础ASSET"
+        },
+        {
+          "after_start": 3505,
+          "after_end": 3510,
+          "before_text": ""
+        },
+        {
+          "after_start": 3511,
+          "after_end": 3533,
+          "before_text": ""
+        },
+        {
+          "after_start": 3535,
+          "after_end": 3578,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-video-segmentation/references/执行卡与行为校验.md",
+      "before_sha256": "99c14cf6d7eda610a224f157d16159d955fb2f6915cef46ff01dc0d806ae6664",
+      "after_sha256": "1286e075f72b22cb90fb180781f382769bb87fc89ec3ecf350189961882b8b49",
+      "edits": [
+        {
+          "after_start": 533,
+          "after_end": 533,
+          "before_text": "基础"
+        },
+        {
+          "after_start": 535,
+          "after_end": 537,
+          "before_text": ""
+        },
+        {
+          "after_start": 2129,
+          "after_end": 2523,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "skills/laohu-visual-assets/references/状态帧与下游运动.md",
+      "before_sha256": "139ca87eeede8b7b41c1801731a0ce7f89a9efb57b0d2f3c54c0d8204c11dab4",
+      "after_sha256": "0b4aa191c24657ed5035dbedd9ce97c6893b228283c22314049145ca773855c1",
+      "edits": [
+        {
+          "after_start": 17,
+          "after_end": 18,
+          "before_text": "准备后交"
+        },
+        {
+          "after_start": 67,
+          "after_end": 88,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": "输入输出索引.md",
+      "before_sha256": "5f9b60b5b174553bcc0695400819a317c884f9a69eb927a66babc09f83176065",
+      "after_sha256": "399cf2c574ecb4de455b72730283a8cd270029b4b75284a43d5c99e3c8ae42be",
+      "edits": [
+        {
+          "after_start": 14746,
+          "after_end": 14747,
+          "before_text": "二"
+        },
+        {
+          "after_start": 14869,
+          "after_end": 14871,
+          "before_text": "88"
+        },
+        {
+          "after_start": 15058,
+          "after_end": 15668,
+          "before_text": ""
+        }
+      ],
+      "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    }
+  ]
+}

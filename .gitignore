@@ -30,6 +30,8 @@ __pycache__/
 
 # External screenwriting source is retained locally for study and provenance.
 /00_输入原料/研究文档/screenwriting-skills/
+/00_输入原料/研究文档/screenwriting-skills-current/
+/00_输入原料/研究文档/nuyoah-portrait-character-designer/
 
 # Personal work projects stay local. Git tracks only the three status
 # directory placeholders so the reusable project skeleton remains visible.
@@ -54,3 +56,10 @@ __pycache__/
 *.psd
 *.psb
 !**/.gitkeep
+
+# Full provenance and user-authorized portable story atoms stay private to local/selected upload.
+/02_共享资产库/故事素材库/
+/.agents/skills/laohu-script-writer/references/故事原子/
+
+# Nested copies of private story atoms inside packaged skills stay local too.
+**/内置方法/laohu-script-writer/references/故事原子/

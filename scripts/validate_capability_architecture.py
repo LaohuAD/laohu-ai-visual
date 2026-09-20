@@ -18,6 +18,11 @@ EVOLUTION_LEDGER = ROOT / "04_诊断与系统日志" / "能力进化台账.md"
 SEMANTIC_MIGRATION_VALIDATOR = ROOT / "scripts" / "validate_semantic_migration.py"
 
 
+def skill_directory(name):
+    data = json.loads((ROOT / ".agents/skills/laohu-ai-visual/references/能力注册表.json").read_text())
+    return (ROOT / next(n['path'] for n in data['skills'] if n['name'] == name)).parent
+
+
 def fail(message: str, failures: list[str]) -> None:
     failures.append(message)
     print(f"FAIL: {message}")
@@ -33,7 +38,7 @@ def digest(path: Path) -> str:
 
 def reachable_documents(entry: Path) -> set[Path]:
     """Follow explicit local method links; permit registered cross-professional consultation."""
-    boundary = (ROOT / "skills").resolve()
+    boundary = (ROOT / ".agents/skills").resolve()
     pending = [entry.resolve()]
     seen: set[Path] = set()
     while pending:
@@ -57,7 +62,7 @@ def main() -> int:
     skill_text: dict[str, str] = {}
 
     for skill, contract in data["skill_contracts"].items():
-        path = ROOT / "skills" / skill / "SKILL.md"
+        path = skill_directory(skill) / "SKILL.md"
         if not path.is_file():
             fail(f"missing owner skill: {skill}", failures)
             continue
@@ -98,7 +103,7 @@ def main() -> int:
             else:
                 fail(f"{skill} aphorism is empty", failures)
 
-        references = sorted((ROOT / "skills" / skill / "references").glob("*.md"))
+        references = sorted((skill_directory(skill) / "references").glob("*.md"))
         reachable = reachable_documents(path)
         for reference in references:
             if reference.name in text or reference.resolve() in reachable:
@@ -107,7 +112,7 @@ def main() -> int:
                 fail(f"{skill} leaves reference unreachable: {reference.name}", failures)
 
     all_skill_text = "\n".join(skill_text.values())
-    all_reachable = set().union(*(reachable_documents(ROOT / 'skills' / owner / 'SKILL.md') for owner in skill_text))
+    all_reachable = set().union(*(reachable_documents(skill_directory(owner) / 'SKILL.md') for owner in skill_text))
     if re.search(r"^##\s*(灵魂|筋骨|血肉|表皮)(层)?\s*$", all_skill_text, flags=re.MULTILINE):
         fail("downstream skills expose generic four-layer headings", failures)
     else:
@@ -145,13 +150,11 @@ def main() -> int:
         source_relative = dependency["canonical_source"]
         registered_sources.add(source_relative)
         source = ROOT / source_relative
-        mirror = ROOT / dependency["portable_mirror"]
         adapter = ROOT / dependency["local_adapter"]
         return_owner = ROOT / dependency["return_owner"]
 
         for role, path in [
             ("canonical source", source),
-            ("portable mirror", mirror),
             ("local adapter", adapter),
             ("return owner", return_owner),
         ]:
@@ -160,11 +163,11 @@ def main() -> int:
             else:
                 fail(f"external dependency missing {role}: {dependency['name']}", failures)
 
-        if source.is_file() and mirror.is_file():
-            if digest(source) == digest(mirror):
-                passed(f"external source mirror is exact: {dependency['name']}")
+        if source.is_file():
+            if digest(source) == dependency["canonical_sha256"]:
+                passed(f"bundled external original is unchanged: {dependency['name']}")
             else:
-                fail(f"external source mirror drifted: {dependency['name']}", failures)
+                fail(f"bundled external original drifted: {dependency['name']}", failures)
 
         if adapter.is_file():
             adapter_text = adapter.read_text(encoding="utf-8")
@@ -200,9 +203,7 @@ def main() -> int:
 
     discovered_sources = {
         path.relative_to(ROOT).as_posix()
-        for path in (
-            ROOT / "02_共享资产库/05_工具流程/外部优化Skill"
-        ).glob("*/SKILL.md")
+        for path in (ROOT / ".agents/skills").glob("*/skills/*/references/*外部*原文.md")
     }
     unregistered_sources = sorted(discovered_sources - registered_sources)
     stale_sources = sorted(registered_sources - discovered_sources)
@@ -229,7 +230,7 @@ def main() -> int:
         owner = scenario.get("owner")
         owner_text = skill_text.get(owner, "")
         if owner == 'laohu-script-writer':
-            owner_text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable_documents(ROOT / 'skills' / owner / 'SKILL.md')))
+            owner_text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable_documents(skill_directory(owner) / 'SKILL.md')))
         if not owner_text:
             fail(f"declared scenario has no registered owner text: {name} -> {owner}", failures)
 
@@ -274,7 +275,7 @@ def main() -> int:
             owner = stage["owner"]
             owner_text = skill_text.get(owner, "")
             if owner == 'laohu-script-writer':
-                owner_text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable_documents(ROOT / 'skills' / owner / 'SKILL.md')))
+                owner_text = '\n'.join(p.read_text(encoding='utf-8') for p in sorted(reachable_documents(skill_directory(owner) / 'SKILL.md')))
             missing = [anchor for anchor in stage["anchors"] if anchor not in owner_text]
             if missing:
                 scenario_ok = False
@@ -386,7 +387,7 @@ def main() -> int:
     evolution_skill = skill_text.get("laohu-capability-evolution", "")
     migration_reference = (
         ROOT
-        / "skills/laohu-capability-evolution/references/03_保真迁移回归与回退.md"
+        / ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/references/03_保真迁移回归与回退.md"
     ).read_text(encoding="utf-8")
     for anchor in ("语义迁移台账", "运行时可达", "先承接，再撤旧"):
         if anchor in evolution_skill and anchor in migration_reference:
@@ -440,20 +441,20 @@ def main() -> int:
                 passed(f"capability evolution record preserves behavior and reopen evidence: {record_id}")
 
     document_contracts = {
-        "02_共享资产库/00_核心规则手册.md": {
+        ".agents/skills/laohu-ai-visual/references/00_核心规则手册.md": {
             "required": ["能力地图", "不承担专业执行规则", "唯一负责人"],
             "forbidden": ["后续创作默认以顶级影视导演"],
             "max_lines": 260,
         },
-        "02_共享资产库/05_工具流程/助手执行失败经验与防复发规则.md": {
+        ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/references/助手执行失败经验与防复发规则.md": {
             "required": ["历史证据库", "不作为当前执行规则"],
             "forbidden": ["是所有后续作品、skill 调用、提示词生成和复盘都必须遵守的执行规则"],
         },
-        "02_共享资产库/05_工具流程/laohu_skills能力加厚规范.md": {
+        ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/references/laohu_skills能力加厚规范.md": {
             "required": ["兼容入口", "laohu-capability-evolution", "唯一负责人"],
             "max_lines": 80,
         },
-        "02_共享资产库/05_工具流程/经验材料吸收与本地资产更新闭环.md": {
+        ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/references/经验材料吸收与本地资产更新闭环.md": {
             "required": ["材料入口", "laohu-capability-evolution", "不直接固化规则"],
             "forbidden": ["提取一个判断\n→ 固化一条规则"],
             "max_lines": 140,
@@ -488,7 +489,7 @@ def main() -> int:
                 )
 
     index = (ROOT / "输入输出索引.md").read_text(encoding="utf-8")
-    if "2. [laohu-ai-visual]" in index and "按主任务读取唯一负责 Skill" in index:
+    if all(f".agents/skills/{name}/SKILL.md" in index for name in ("laohu-ai-visual", "laohu-script-writer", "laohu-image-creation", "laohu-video-prompt", "laohu-language-mode")) and "按主任务读取唯一负责 Skill" in index:
         passed("public index enters through the router and one owner skill")
     else:
         fail("public index still lacks single-owner routing", failures)

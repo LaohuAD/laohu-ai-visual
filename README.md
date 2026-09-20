@@ -17,7 +17,7 @@
 - 需要把故事、剧本、视觉资产、分镜、视频提示词和成片放在一条链上检查的人。
 - 愿意根据生成结果复盘，而不是把所有问题都归咎于模型的人。
 
-如果你只想临时生成一张图片，这个项目可能显得太重。它的价值在于一部作品要反复修改、跨镜头保持一致，或者以后还要继续做同类作品。
+只需要单张图片时，可以直接使用图片包处理；完整项目更适合要反复修改、跨镜头保持一致或持续创作的作品。
 
 ## 它能帮你做什么
 
@@ -91,7 +91,8 @@
 灵感、故事或歌曲材料
 → 公开作品由总导演确认观众经历、主胜负手与部门取舍
 → 叙事作品由编剧统筹专业创作并确认故事与剧本；歌曲型作品确认 MV 导演命题与歌曲—视觉结构
-→ 需要时先完成作品级美术风格设计
+→ 叙事剧本定稿后分段讲戏、估时、提取逐段资产需求
+→ 需要时完成作品级美术风格设计
 → 再完成人物、服装、场景与布景设计
 → 视觉资产、音频与音色设计
 → 图片提示词与可生成音频任务
@@ -107,41 +108,25 @@
 
 ## 顶层入口
 
-新任务建议按这个顺序读取：
+本地项目先按[AGENTS.md](AGENTS.md)判断当前任务，按主任务读取唯一负责 Skill；目的和阶段已经清楚的局部请求可以直接进入对应包，不必每次重跑整个项目。
 
-1. [AGENTS.md](AGENTS.md)：项目边界和总规则。
-2. [laohu-ai-visual](skills/laohu-ai-visual/SKILL.md)：判断作品状态、最上游缺口和唯一负责人。
-3. 根据路由只读取当前主任务的 Skill，以及它明确触发的 Reference。
+现在只有五个小顶层技能包，真实内容都在`.agents/skills/`。需要单独上传时，选择下表中的一个完整文件夹；包内包含方法、Reference、语言规则和必要工具，不依赖另一个包或共享目录才能执行。
 
-[能力地图](02_共享资产库/00_核心规则手册.md)解释二十二个入口与八十八项内部专业怎样协作，[能力协作图谱](02_共享资产库/05_工具流程/能力协作图谱.md)规定跨节点权限，[输入输出索引](输入输出索引.md)索引公开文件；它们不替代具体 Skill 的执行方法。
-
-当前的核心 Skill：
-
-| Skill | 负责什么 |
+| 技能包 | 负责什么 |
 |---|---|
-| [laohu-ai-visual](skills/laohu-ai-visual/SKILL.md) | 项目入口、任务路由、归档和结束检查 |
-| [laohu-language-mode](skills/laohu-language-mode/SKILL.md) | 按角色、文本块与接收者切换用户沟通、剧本、资产规格和模型提示词语言；不改专业内容 |
-| [laohu-director](skills/laohu-director/SKILL.md) | 最终观众、观众经历、全片主胜负手、跨部门取舍、导演阐述与三次复验 |
-| [laohu-story-material](skills/laohu-story-material/SKILL.md) | 明确触发下保存生活灵感、拆解故事原子、渐进检索和使用回流 |
-| [laohu-script-writer](skills/laohu-script-writer/SKILL.md) | 启动与续接剧本、调度专业能力、整合完整E-S正式剧本及定稿交接 |
-| [laohu-mv-director](skills/laohu-mv-director/SKILL.md) | 歌曲事实、MV 导演命题、声画结构、表演策略、制作时间线和动态分镜文本交接 |
-| [laohu-art-direction](skills/laohu-art-direction/SKILL.md) | 题材视觉合同、主辅类型、跨部门形态色彩材料光影系统和相邻类型边界 |
-| [laohu-character-design](skills/laohu-character-design/SKILL.md) | 选角、脸身姿动、第一印象、群像与跨媒介人物母版 |
-| [laohu-audio-design](skills/laohu-audio-design/SKILL.md) | 自然语言音色描述、旁白对白、音效声场、音乐任务与音频生成交接 |
-| [laohu-costume-design](skills/laohu-costume-design/SKILL.md) | 原创服装、世界衣橱、群像差异与服装设计交接 |
-| [laohu-set-design](skills/laohu-set-design/SKILL.md) | 原创场景、空间叙事、布景陈设、制作策略与场景设计交接 |
-| [laohu-visual-assets](skills/laohu-visual-assets/SKILL.md) | 角色、场景、道具、风格、图片资产和验收 |
-| [laohu-video-prompt](skills/laohu-video-prompt/SKILL.md) | 分镜、表演、动作、画面内容和视频提示词 |
-| [laohu-vibe-creating-prompt](skills/laohu-vibe-creating-prompt/SKILL.md) | 外部 Vibe Creating Skill 的本地适配、提纯边界和回填 |
-| [laohu-cover-design](skills/laohu-cover-design/SKILL.md) | 封面、海报、成片引用和比例适配 |
-| [laohu-generation-review](skills/laohu-generation-review/SKILL.md) | 生成结果、剪辑、发布和经验复盘 |
-| [laohu-capability-evolution](skills/laohu-capability-evolution/SKILL.md) | 把可复用反馈、研究、反思与平台变化编译成可验证的长期能力更新 |
+| [laohu-ai-visual](.agents/skills/laohu-ai-visual/SKILL.md) | 项目总控、总导演、MV导演、创意开发、真实结果复盘与能力更新 |
+| [laohu-script-writer](.agents/skills/laohu-script-writer/SKILL.md) | 灵感记录、故事原子、故事开发、完整剧本、分段讲戏与逐段资产需求 |
+| [laohu-image-creation](.agents/skills/laohu-image-creation/SKILL.md) | 单张图片、人物服装妆造场景道具设计、稳定视觉资产和封面 |
+| [laohu-video-prompt](.agents/skills/laohu-video-prompt/SKILL.md) | P内C镜头、表演动作、声音、剪辑、视频提示词与VC提纯 |
+| [laohu-language-mode](.agents/skills/laohu-language-mode/SKILL.md) | 语言模式统筹；四个业务包已经携带本领域所需的完整表达方法 |
 
-其中 Vibe Creating 不是本项目原创 Skill。外部 `vibe-creating-prompt` 的原文、本地便携副本、适配入口、调用链和失效处理统一登记在[外部能力依赖清单](02_共享资产库/05_工具流程/外部能力依赖清单.md)，避免只剩 VC 简称而丢失来源关系。
+`laohu-director`与`laohu-mv-director`归总控；`laohu-story-material`与`laohu-video-segmentation`归故事；音频归视频，封面归图片。内部专业的独占判断继续保留，不因为合并小顶层而被压成几句说明。完整文件树、用途与上传说明见[Skills目录说明](.agents/skills/README.md)。
 
-普通作品生产不默认加载能力进化 Skill。只有反馈、研究或平台变化可能影响以后同类任务时，才由总控或复盘交接；进化完成后返回总控。阶段范围清楚、验证通过且不混入范围外改动时，可以建立本地 Git 检查点；远程推送和发布仍需当前任务明确授权。
+生活灵感收录后，完整source原话、atom与usage保存在`02_共享资产库/故事素材库/`，应用原子同步进入故事包`references/故事原子/`。两处使用同一原子编号，新增、修订、暂停和恢复均需同步；两处成功才报告收录完成。共享库便于本地溯源，故事包可独立使用已携带的应用原子，原话不重复放入应用文件。
 
-跨任务进化通过[能力进化台账](04_诊断与系统日志/能力进化台账.md)接续：它只保存证据索引、旧行为、新行为和重新唤醒条件，长期执行规则仍由对应业务 Skill 负责。
+外部`vibe-creating-prompt`的完整原文随视频包保存，经本地适配后执行，再回到视频主入口复验。它不冒充本项目原创，来源与失效处理见[外部能力依赖清单](.agents/skills/laohu-ai-visual/references/外部能力依赖清单.md)。现有外部知识已落在专业Reference，出处信息不替代本地方法。
+
+普通作品生产不默认加载能力进化。反馈或研究可能影响以后同类任务时才交能力进化，完成后返回总控；证据、旧行为、新行为和重新唤醒条件见[能力进化台账](04_诊断与系统日志/能力进化台账.md)。远程推送和发布仍需当前任务明确授权。
 
 ## 项目结构
 
@@ -149,12 +134,12 @@
 老胡AI视觉/
 ├── 00_输入原料/       原始灵感、参考资料和用户输入
 ├── 01_作品项目/       进行中、已完成、已发布的作品骨架
-├── 02_共享资产库/     通用规则、模板、案例和工具流程
+├── 02_共享资产库/     完整素材来源与可选本地积累
 ├── 03_发布与课程化/   发布相关材料
 ├── 04_诊断与系统日志/ 诊断、检查和系统记录
 ├── assets/            公开项目素材
 ├── docs/              项目文档
-├── skills/            核心 Skill
+├── .agents/skills/    五个真实技能包与内部专业
 ├── AGENTS.md
 ├── README.md
 └── 输入输出索引.md
@@ -171,24 +156,13 @@ git clone https://github.com/LaohuAD/laohu-ai-visual.git
 cd laohu-ai-visual
 ```
 
-以下命令可用于发现或安装 Skill 入口；本仓库尚未验证第三方安装器会携带全部运行依赖：
-
-```bash
-npx skills add LaohuAD/laohu-ai-visual
-```
-
-只想安装项目入口：
-
-```bash
-npx skills add LaohuAD/laohu-ai-visual --skill laohu-ai-visual
-```
-
-完整生产请使用完整仓库。单入口仍可能读取相邻 Skill、根目录共享库和脚本，安装成功不代表依赖齐全；只有在工作区已具备这些依赖并完成对应任务验证后，才适合单独调用。
+本地直接使用当前目录里的五个真实技能包。云平台只接收一个文件夹时，从`.agents/skills/`选择所需包完整上传；具体选择见[Skills目录说明](.agents/skills/README.md)。无需先导出、拼包或寻找共享目录的方法。尚未在云平台实际验证脚本支持或宿主展示行为，文件独立性不等于平台运行结果已经验收。
 
 ### 检查项目
 
 ```bash
-bash skills/laohu-ai-visual/scripts/check_laohu_skills.sh
+python3 scripts/validate_skill_packages.py
+python3 scripts/sync_skill_packages.py --check
 ```
 
 检查脚本验证的是静态契约和确定性工具，不会运行模型生产或证明成片质量。
@@ -196,7 +170,7 @@ bash skills/laohu-ai-visual/scripts/check_laohu_skills.sh
 ### 创建作品目录
 
 ```bash
-bash skills/laohu-ai-visual/scripts/create_work_project.sh "我的视觉作品"
+bash .agents/skills/laohu-ai-visual/scripts/create_work_project.sh "我的视觉作品"
 ```
 
 然后在能读取项目文件的 AI Agent 中打开仓库，直接输入灵感即可：
@@ -209,7 +183,7 @@ bash skills/laohu-ai-visual/scripts/create_work_project.sh "我的视觉作品"
 已有剧本或生成结果，也可以直接交给系统：
 
 ```text
-这是我的剧本。请先判断哪些人物、场景和道具需要做成资产，再拆分镜。
+这是我的完整剧本。请先分段讲戏、估时并提取逐段资产需求，再进入资产制作和段内分镜。
 ```
 
 ```text
@@ -288,11 +262,11 @@ bash skills/laohu-ai-visual/scripts/create_work_project.sh "我的视觉作品"
 
 ## 参考来源与致谢
 
-编剧内部十二项专业能力保留了[jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills)的专业章节与配套Reference，感谢仓库维护者（项目元数据为terry）的编剧资料整理。使用提交为 `0657714b59c82d3d6656ada50c5168d4ea431de0`。本项目增加领域具体的灵魂、筋骨、血肉、表皮能力，整合本地创作方法与生产接口，并将外部工作流并入现有编剧总控。改用laohu-名称不改变原内容的来源归属。
+编剧内部十九项专业能力保留了[jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills)的专业章节与配套Reference，感谢仓库维护者（项目元数据为terry）的编剧资料整理。当前吸收提交为 `3d2879742919de4f90214dfd703d9b16475331aa`，旧迁移证据继续保留。本项目增加领域具体的灵魂、筋骨、血肉、表皮能力，整合本地创作方法与生产接口，并将外部工作流并入现有编剧总控。改用laohu-名称不改变原内容的来源归属。
 
-原仓库标注个人学习用途，原书、译文及剧本引文仍归各自作者，第三方材料不因本地整理而转为本项目原创或适用本项目通用许可。具体保留范围、逐项改动与验证见[编剧能力完整迁移与验证](04_诊断与系统日志/编剧能力完整迁移与验证.md)和[外部能力依赖清单](02_共享资产库/05_工具流程/外部能力依赖清单.md)。
+原仓库标注个人学习用途，原书、译文及剧本引文仍归各自作者，第三方材料不因本地整理而转为本项目原创或适用本项目通用许可。具体保留范围、逐项改动与验证见[编剧能力完整迁移与验证](04_诊断与系统日志/编剧能力完整迁移与验证.md)和[外部能力依赖清单](.agents/skills/laohu-ai-visual/references/外部能力依赖清单.md)。
 
 
-当前架构包含22个项目入口、88个内部专业，完整名称、路径和归属见[能力注册表](02_共享资产库/05_工具流程/能力注册表.json)。图片创作、稳定资产、对象设计与视频时间编译各有主责；内部专业按缺口调用，不增加作品状态或改变阶段交付格式。
+当前架构包含5个包入口、114个内部专业，完整名称、路径和归属见[能力注册表](.agents/skills/laohu-ai-visual/references/能力注册表.json)。图片创作、稳定资产、对象设计与视频时间编译各有主责；内部专业按缺口调用，不增加作品状态或改变阶段交付格式。
 
-完整剧本 → 基础资产 → [视频分段规划](skills/laohu-video-segmentation/SKILL.md) → 段内C与视频提示词。
+完整剧本 → [视频分段规划](.agents/skills/laohu-script-writer/skills/laohu-video-segmentation/SKILL.md) → 按段需求制作资产并回填引用 → 段内C与视频提示词。

@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = ROOT / "skills/laohu-story-material/scripts/story_material_store.py"
+MODULE_PATH = ROOT / ".agents/skills/laohu-script-writer/skills/laohu-story-material/scripts/story_material_store.py"
 
 
 def load_store_module():

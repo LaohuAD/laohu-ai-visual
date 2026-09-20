@@ -9,8 +9,8 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = Path("skills/laohu-ai-visual/scripts/create_work_project.sh")
-TEMPLATES = Path("02_共享资产库/01_模板库/项目启动模板")
+SCRIPT = Path(".agents/skills/laohu-ai-visual/scripts/create_work_project.sh")
+TEMPLATES = Path(".agents/skills/laohu-ai-visual/references")
 
 
 class CreateWorkProjectTests(unittest.TestCase):
@@ -25,7 +25,7 @@ class CreateWorkProjectTests(unittest.TestCase):
         shutil.copy2(ROOT / SCRIPT, self.root / SCRIPT)
         shutil.copytree(ROOT / TEMPLATES, self.root / TEMPLATES)
         (self.root / "scripts").mkdir()
-        shutil.copy2(ROOT / "scripts/render_delivery_html.py", self.root / "scripts")
+        shutil.copy2(ROOT / "scripts/render_delivery_html.py", (self.root / SCRIPT).parent)
 
     def run_creator(self, *args):
         return subprocess.run(
@@ -137,7 +137,7 @@ class CreateWorkProjectTests(unittest.TestCase):
 
     def test_render_failure_removes_only_the_new_work(self):
         existing = self.create("已有作品", "2026-09-08")
-        (self.root / "scripts/render_delivery_html.py").write_text("raise SystemExit('render failed')")
+        (self.root / SCRIPT.parent / "render_delivery_html.py").write_text("raise SystemExit('render failed')")
         result = self.run_creator("渲染失败", "2026-09-08")
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(list(existing.parent.iterdir()), [existing])

@@ -14,7 +14,7 @@ class MvArchitectureTests(unittest.TestCase):
         return path.read_text(encoding="utf-8")
 
     def test_mv_direction_is_an_independent_owner(self) -> None:
-        skill = self.read("skills/laohu-mv-director/SKILL.md")
+        skill = self.read(".agents/skills/laohu-ai-visual/skills/laohu-mv-director/SKILL.md")
 
         for anchor in (
             "歌曲箴言",
@@ -28,7 +28,7 @@ class MvArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, skill)
 
     def test_final_audio_is_authoritative_but_missing_audio_does_not_create_fake_timing(self) -> None:
-        skill = self.read("skills/laohu-mv-director/SKILL.md")
+        skill = self.read(".agents/skills/laohu-ai-visual/skills/laohu-mv-director/SKILL.md")
 
         self.assertIn("最终音频是时间权威", skill)
         self.assertIn("待音频校准", skill)
@@ -36,7 +36,7 @@ class MvArchitectureTests(unittest.TestCase):
         self.assertIn("ASR 只做对齐候选", skill)
 
     def test_creative_song_structure_is_separate_from_model_production_units(self) -> None:
-        skill = self.read("skills/laohu-mv-director/SKILL.md")
+        skill = self.read(".agents/skills/laohu-ai-visual/skills/laohu-mv-director/SKILL.md")
 
         self.assertIn("创作段落不服从模型时长", skill)
         self.assertIn("生成单元不冒充剪辑镜头", skill)
@@ -45,7 +45,7 @@ class MvArchitectureTests(unittest.TestCase):
         self.assertNotIn("10—15 秒整数", skill)
 
     def test_mv_architecture_is_text_only_and_model_neutral(self) -> None:
-        skill = self.read("skills/laohu-mv-director/SKILL.md")
+        skill = self.read(".agents/skills/laohu-ai-visual/skills/laohu-mv-director/SKILL.md")
 
         self.assertIn("只交付文本", skill)
         self.assertIn("不调用外部 API", skill)
@@ -55,10 +55,10 @@ class MvArchitectureTests(unittest.TestCase):
 
     def test_mv_owner_is_reachable_and_hands_off_to_existing_image_and_video_skills(self) -> None:
         agents = self.read("AGENTS.md")
-        router = self.read("skills/laohu-ai-visual/SKILL.md")
-        contract = self.read("02_共享资产库/05_工具流程/laohu_skills核心合约.md")
-        assets = self.read("skills/laohu-visual-assets/SKILL.md")
-        video = self.read("skills/laohu-video-prompt/SKILL.md")
+        router = self.read(".agents/skills/laohu-ai-visual/SKILL.md")
+        contract = self.read(".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md")
+        assets = self.read(".agents/skills/laohu-image-creation/skills/laohu-visual-assets/SKILL.md")
+        video = self.read(".agents/skills/laohu-video-prompt/SKILL.md")
 
         for text in (agents, router, contract):
             self.assertIn("laohu-mv-director", text)

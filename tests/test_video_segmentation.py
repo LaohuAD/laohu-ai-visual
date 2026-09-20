@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location('segmentation', ROOT/'skills/laohu-video-segmentation/scripts/validate_plan.py')
+spec = importlib.util.spec_from_file_location('segmentation', ROOT/'.agents/skills/laohu-script-writer/skills/laohu-video-segmentation/scripts/validate_plan.py')
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
@@ -78,11 +78,11 @@ class SegmentationTests(unittest.TestCase):
             collect_headings('## E01-S01-P01｜甲\n## E01-S01-P01｜乙\n')
 
     def test_current_contract_has_source_then_part_then_camera(self):
-        writer=(ROOT/'skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md').read_text()
-        skill=(ROOT/'skills/laohu-video-segmentation/SKILL.md').read_text()
+        writer=(ROOT/'.agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md').read_text()
+        skill=(ROOT/'.agents/skills/laohu-script-writer/skills/laohu-video-segmentation/SKILL.md').read_text()
         self.assertIn('先把戏写成立，不承担4—30秒P分段或C摄影',writer)
         self.assertNotIn('所有观众会看到或听到的正文必须归入一个镜号',writer)
-        for term in ['ASSET之后','SEGMENT','素材余量','完整音频归属','成片取帧','预制状态图','只读原剧本']:
+        for term in ['STORY之后、ASSET之前','SEGMENT','素材余量','完整音频归属','成片取帧','预制状态图','只读原剧本']:
             self.assertIn(term,skill)
 
 

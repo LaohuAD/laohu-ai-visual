@@ -9,7 +9,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-REGISTRY = ROOT / '02_共享资产库/05_工具流程/能力注册表.json'
+from scripts.package_history import physical_path
+REGISTRY = ROOT / '.agents/skills/laohu-ai-visual/references/能力注册表.json'
 MANIFEST = ROOT / '04_诊断与系统日志/视觉能力重构迁移清单.json'
 
 def sha(text):
@@ -19,7 +20,7 @@ def check(root=ROOT, require_manifest=True):
     failures=[]
     registry=json.loads((root/REGISTRY.relative_to(ROOT)).read_text())
     nodes=registry['skills']; names={n['name'] for n in nodes}
-    actual={str(p.relative_to(root)) for p in (root/'skills').rglob('SKILL.md')}
+    actual={str(p.relative_to(root)) for p in (root/'.agents/skills').rglob('SKILL.md')}
     declared={n['path'] for n in nodes}
     if len(names)!=len(nodes): failures.append('duplicate professional names')
     if actual!=declared: failures.append(f'registry drift: extra={actual-declared}; missing={declared-actual}')
@@ -51,7 +52,7 @@ def check(root=ROOT, require_manifest=True):
         if manifest['status']!='COMPLETE': failures.append('migration not complete')
         base=manifest['baseline_ref']; cache={}; coverage={}
         for unit in manifest.get('units',[]):
-            src=unit['source_path']; target=root/unit['target_path'] if unit.get('target_path') else None
+            src=unit['source_path']; target=physical_path(unit['target_path'],root) if unit.get('target_path') else None
             if src not in cache: cache[src]=subprocess.check_output(['git','show',base+':'+src],cwd=root,text=True)
             original=cache[src][unit['source_start']:unit['source_end']]
             if sha(original)!=unit['source_sha256']: failures.append(f"source unit changed: {unit['id']}")

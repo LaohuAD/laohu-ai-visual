@@ -7,7 +7,7 @@ import unittest
 from scripts.validate_segmentation_migration import read_before
 
 ROOT = Path(__file__).resolve().parents[1]
-PILOT = ROOT / 'skills/laohu-script-writer/skills/laohu-dialogue'
+PILOT = ROOT / '.agents/skills/laohu-script-writer/skills/laohu-dialogue'
 
 class DialoguePilotTests(unittest.TestCase):
     @classmethod
@@ -16,7 +16,8 @@ class DialoguePilotTests(unittest.TestCase):
         cls.manifest = json.loads(re.search(r'```json\n(.*?)\n```', (ROOT / '04_诊断与系统日志/对白能力迁移与验证.md').read_text(), re.S)[1])
 
     def test_complete_original_blocks_are_unique_and_exact(self):
-        body = self.skill[self.skill.index('## 一、对白是什么'):]
+        historical = read_before(PILOT / 'SKILL.md')
+        body = historical[historical.index('## 一、对白是什么'):]
         migration = json.loads((ROOT / '04_诊断与系统日志/编剧能力完整迁移清单.json').read_text())
         module = next(m for m in migration['modules'] if m['module'] == 'laohu-dialogue')
         for insertion in module.get('scope_insertions', []):
@@ -46,12 +47,12 @@ class DialoguePilotTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(local.encode()).hexdigest(), self.manifest['local_sha256'])
 
     def test_caller_and_local_links_resolve(self):
-        caller = (ROOT / 'skills/laohu-script-writer/SKILL.md').read_text()
+        caller = (ROOT / '.agents/skills/laohu-script-writer/SKILL.md').read_text()
         self.assertIn('[laohu-dialogue](skills/laohu-dialogue/SKILL.md)', caller)
         for target in re.findall(r'\]\(([^)]+)\)', self.skill):
             if not target.startswith(('https:', 'http:', '#')):
                 self.assertTrue((PILOT / target.split("#", 1)[0]).is_file(), target)
-        self.assertIn('EXT-SKILL-002', (ROOT / '02_共享资产库/05_工具流程/外部能力依赖清单.md').read_text())
+        self.assertIn('EXT-SKILL-002', (ROOT / '.agents/skills/laohu-ai-visual/references/外部能力依赖清单.md').read_text())
 
     def test_formal_output_contract_unchanged(self):
         migration = json.loads((ROOT / '04_诊断与系统日志/编剧能力完整迁移清单.json').read_text())['workflow_refactor']

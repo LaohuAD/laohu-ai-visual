@@ -1,26 +1,9 @@
-# 项目 Skill 自动发现
+# 项目技能实体与发现
 
-Codex 的项目级入口为 `.agents/skills/`，不是 `.agent/`。本目录的22个相对符号链接指向 `../../skills/laohu-*`；`skills/` 仍是唯一正文来源，修改任一入口读取的是同一文件，不复制、不另建版本。
+真实技能位于 `.agents/skills/`，包含项目总控、故事与剧本、图片与视觉资产、视频制作与提示词、语言模式五个实体文件夹。内部专业保留名称和方法，没有指向根目录skills的符号链接，也不保留反向兼容链接。
 
-```text
-.agents/skills/laohu-video-prompt → ../../skills/laohu-video-prompt
-skills/laohu-video-prompt/SKILL.md
-skills/laohu-video-prompt/skills/laohu-action-design/SKILL.md
-```
+目录与使用说明见[Skills README](skills/README.md)。上传时直接选择对应完整文件夹。包内Reference、语言规则和必要方法已经是实际文件；不需要先导出或运行维护工具。
 
-## 使用与维护
+维护者修改公共方法后执行项目 `scripts/sync_skill_packages.py` 并复验；它用于更新包内实际内容，不是运行时索引。入口数量是五个，不保证宿主只显示五项：本地宿主若递归发现，会同时显示内部专业。磁盘可用与当前会话刷新是两件事。
 
-- 在本仓库或其子目录启动 Codex，主入口及嵌套专业能力可进入技能列表；描述匹配决定隐式调用，明确指定技能可用于核查入口。
-- 子 Skill 保持原嵌套及父级调度。Codex 会递归发现它们，列表可见不改变主责、交接和内容权限。
-- 新增或删除主入口时，同步本目录链接、能力注册表及发现测试；内部专业不另建顶层链接。
-- 符号链接必须为仓库内相对路径，随 Git 保存；不使用指向本机绝对目录的链接，不创建第二份 Skill 正文。
-- 已打开会话的技能列表若未刷新，重新打开项目或新建会话核对。磁盘检索成功不代表当前窗口已经刷新。
-- 本轮仅验证 Codex；其他 Agent 是否使用同一目录、递归扫描及支持符号链接，应按其实际运行时核验。
-
-## 验证证据
-
-2026-09-11，本机 Codex `app-server` 的 `skills/list` 在项目目录执行 `forceReload=true`，返回110个项目技能（22主入口＋88内部专业）、零解析错误。此操作仅检索技能，不启动模型任务或生成媒体。
-
-维护检查：`python3 -m unittest discover -s tests -p 'test_skill_discovery.py'`。
-
-目录依据：[OpenAI Skill 文档](https://learn.chatgpt.com/docs/build-skills)。
+运行 `python3 scripts/validate_skill_packages.py` 检查五包实体、元数据、文件链接与跨包依赖；旧历史迁移证据由五包迁移清单记录可逆变化，不为保持老路径制造链接。

@@ -4,10 +4,11 @@ import json
 from pathlib import Path
 import re
 import unittest
+from scripts.package_history import read_pre_package, physical_path
 from scripts.validate_segmentation_migration import read_before
 
 ROOT = Path(__file__).resolve().parents[1]
-PARENT = ROOT / 'skills/laohu-script-writer'
+PARENT = ROOT / '.agents/skills/laohu-script-writer'
 MANIFEST = ROOT / '04_诊断与系统日志/编剧能力完整迁移清单.json'
 
 def sha(value):
@@ -21,12 +22,13 @@ class ScreenwritingMigrationTests(unittest.TestCase):
     def test_twelve_unique_professionals_are_reachable_from_parent(self):
         actual = {p.parent.name for p in (PARENT / 'skills').glob('*/SKILL.md')}
         expected = {m['module'] for m in self.data['modules']}
-        self.assertEqual(len(actual), 12)
-        self.assertEqual(actual, expected)
+        update=json.loads((ROOT/'04_诊断与系统日志/外部能力同步清单.json').read_text())
+        self.assertEqual(len(actual), 21)
+        self.assertEqual(actual, expected | set(update['new_modules']) | {'laohu-story-material','laohu-video-segmentation'})
         self.assertNotIn('laohu-workflow', actual)
         parent = (PARENT / 'SKILL.md').read_text()
         for name in actual:
-            self.assertIn(f'[{name}](skills/{name}/SKILL.md)', parent)
+            self.assertIn(f'](skills/{name}/SKILL.md)', parent)
 
     def test_complete_methods_and_original_references(self):
         for m in self.data['modules']:
@@ -45,7 +47,7 @@ class ScreenwritingMigrationTests(unittest.TestCase):
                     self.assertEqual(body, original)
                 ref = dst.parent / 'reference.md'
                 if m['reference_sha256']:
-                    self.assertEqual(sha(ref.read_bytes()), m['reference_sha256'])
+                    self.assertEqual(sha(read_before(ref)), m['reference_sha256'])
                 else:
                     self.assertFalse(ref.exists(), 'Do not invent an upstream Reference')
 
@@ -66,7 +68,7 @@ class ScreenwritingMigrationTests(unittest.TestCase):
 
     def test_oral_input_keeps_its_own_methods_without_duplicate_dialogue(self):
         oral = self.data['oral_retained']
-        text = (ROOT / oral['target']).read_text()
+        text = read_pre_package(oral['target'], ROOT)[1]
         body = text[text.index(oral['start']):]
         self.assertEqual(len(body), oral['character_count'])
         self.assertEqual(sha(body), oral['sha256'])
@@ -79,13 +81,13 @@ class ScreenwritingMigrationTests(unittest.TestCase):
                 if target.startswith(('http:', 'https:', '#', 'mailto:')):
                     continue
                 self.assertTrue((f.parent / target.split('#', 1)[0]).is_file(), f'{f}: {target}')
-            if f.name != 'SKILL.md':
+            if f.name != 'SKILL.md' or f.parent.name in {'laohu-story-material','laohu-video-segmentation'}:
                 continue
             description = text.split('description:', 1)[1].split('\n---', 1)[0]
             self.assertLessEqual(len(description.strip()), 1024)
             for token in ['SOURCE-BEGIN', 'SOURCE-END', '旧入口', '本样板', 'jtydhr88', '迁移与验证']:
                 self.assertNotIn(token, text)
-            self.assertNotIn('来源', description)
+            self.assertNotRegex(description, r'jtydhr88|同步日期|锁定提交|sha256|upstream-body')
             self.assertNotRegex(text, r'`sw-[a-z-]+`')
             for layer in ['灵魂', '筋骨', '血肉', '表皮']:
                 self.assertRegex(text, r'(?m)^## '+layer+'：.+$')
@@ -106,7 +108,7 @@ class ScreenwritingMigrationTests(unittest.TestCase):
         data = self.data['workflow_refactor']
         units = [u for section in data['sections'] for u in section['units']] + data['additional_units']
         for unit in units:
-            target = ROOT / unit['target']
+            target = physical_path(unit['target'], ROOT)
             self.assertIn(target.resolve(), reachable, str(target))
             self.assertEqual(sha(unit['text']), unit['text_sha256'])
             self.assertIn(unit['text'], read_before(target))

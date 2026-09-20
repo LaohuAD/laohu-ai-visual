@@ -19,12 +19,12 @@ class LanguageModeArchitectureTests(unittest.TestCase):
 
     def test_language_mode_skill_has_all_primary_modes(self) -> None:
         text = self.combined(
-            "skills/laohu-language-mode/SKILL.md",
-            "skills/laohu-language-mode/references/01_模式判定与块级切换.md",
-            "skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
-            "skills/laohu-language-mode/references/03_剧本文本块语言.md",
-            "skills/laohu-language-mode/references/04_资产图片视频与声音提示词桥接.md",
-            "skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
+            ".agents/skills/laohu-language-mode/SKILL.md",
+            ".agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md",
+            ".agents/skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
+            ".agents/skills/laohu-language-mode/references/03_剧本文本块语言.md",
+            ".agents/skills/laohu-language-mode/references/04_资产图片视频与声音提示词桥接.md",
+            ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
         )
         payload = json.loads(self.read("tests/language_mode_scenarios.json"))
         self.assertEqual(11, len(payload["allowed_modes"]))
@@ -32,7 +32,7 @@ class LanguageModeArchitectureTests(unittest.TestCase):
             self.assertIn(mode, text)
 
     def test_language_mode_is_shared_router_not_content_owner(self) -> None:
-        text = self.read("skills/laohu-language-mode/SKILL.md")
+        text = self.read(".agents/skills/laohu-language-mode/SKILL.md")
         for anchor in (
             "不拥有内容权",
             "不新增生产阶段",
@@ -44,7 +44,7 @@ class LanguageModeArchitectureTests(unittest.TestCase):
 
     def test_resolver_uses_receiver_purpose_and_block_before_voice(self) -> None:
         text = self.read(
-            "skills/laohu-language-mode/references/01_模式判定与块级切换.md"
+            ".agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md"
         )
         for anchor in (
             "current_role",
@@ -64,7 +64,7 @@ class LanguageModeArchitectureTests(unittest.TestCase):
 
     def test_screenplay_modes_separate_action_cue_dialogue_and_note(self) -> None:
         text = self.read(
-            "skills/laohu-language-mode/references/03_剧本文本块语言.md"
+            ".agents/skills/laohu-language-mode/references/03_剧本文本块语言.md"
         )
         for anchor in (
             "镜头方头只负责定位",
@@ -83,7 +83,7 @@ class LanguageModeArchitectureTests(unittest.TestCase):
 
     def test_prompt_modes_return_to_domain_authorities(self) -> None:
         text = self.read(
-            "skills/laohu-language-mode/references/04_资产图片视频与声音提示词桥接.md"
+            ".agents/skills/laohu-language-mode/references/04_资产图片视频与声音提示词桥接.md"
         )
         for anchor in (
             "ASSET_SPEC / IMAGE_PROMPT → laohu-visual-assets",
@@ -99,13 +99,13 @@ class LanguageModeArchitectureTests(unittest.TestCase):
     def test_existing_owners_call_language_mode_without_losing_authority(self) -> None:
         text = self.combined(
             "AGENTS.md",
-            "skills/laohu-ai-visual/SKILL.md",
-            "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-visual-assets/SKILL.md",
-            "skills/laohu-video-prompt/SKILL.md",
-            "skills/laohu-audio-design/SKILL.md",
-            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
-            "02_共享资产库/05_工具流程/能力协作图谱.md",
+            ".agents/skills/laohu-ai-visual/SKILL.md",
+            ".agents/skills/laohu-script-writer/SKILL.md",
+            ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/SKILL.md",
+            ".agents/skills/laohu-video-prompt/SKILL.md",
+            ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/SKILL.md",
+            ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
+            ".agents/skills/laohu-ai-visual/references/能力协作图谱.md",
             "输入输出索引.md",
         )
         self.assertIn("二十二个", text)
@@ -120,8 +120,8 @@ class LanguageModeArchitectureTests(unittest.TestCase):
 
     def test_music_v4_is_research_source_not_runtime_dependency(self) -> None:
         text = self.combined(
-            "skills/laohu-language-mode/SKILL.md",
-            "skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
+            ".agents/skills/laohu-language-mode/SKILL.md",
+            ".agents/skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
             "04_诊断与系统日志/语言模式语义迁移台账.json",
         )
         self.assertIn("研究来源", text)
@@ -157,7 +157,7 @@ class LanguageModeArchitectureTests(unittest.TestCase):
         self.assertEqual("laohu-script-writer", failure["expected_return_owner"])
 
     def test_agent_metadata_is_discoverable_and_implicitly_callable(self) -> None:
-        text = self.read("skills/laohu-language-mode/agents/openai.yaml")
+        text = self.read(".agents/skills/laohu-language-mode/agents/openai.yaml")
         for anchor in (
             'display_name: "老胡语言模式与身份切换"',
             "$laohu-language-mode",
@@ -166,10 +166,10 @@ class LanguageModeArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, text)
 
     def test_effective_information_contract_is_reachable_and_has_two_gates(self) -> None:
-        skill = self.read("skills/laohu-language-mode/SKILL.md")
+        skill = self.read(".agents/skills/laohu-language-mode/SKILL.md")
         self.assertIn("references/05_有效信息与冗余裁决.md", skill)
         text = self.read(
-            "skills/laohu-language-mode/references/05_有效信息与冗余裁决.md"
+            ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md"
         )
         for anchor in (
             "receiver_before",
@@ -192,7 +192,7 @@ class LanguageModeArchitectureTests(unittest.TestCase):
     def test_each_language_mode_defines_its_own_effective_change(self) -> None:
         payload = json.loads(self.read("tests/language_mode_scenarios.json"))
         text = self.read(
-            "skills/laohu-language-mode/references/05_有效信息与冗余裁决.md"
+            ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md"
         )
         for mode in payload["allowed_modes"]:
             self.assertIn(f"`{mode}`", text)
@@ -201,8 +201,8 @@ class LanguageModeArchitectureTests(unittest.TestCase):
 
     def test_dialogue_effectiveness_is_action_and_consequence_not_length(self) -> None:
         text = self.combined(
-            "skills/laohu-language-mode/references/03_剧本文本块语言.md",
-            "skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
+            ".agents/skills/laohu-language-mode/references/03_剧本文本块语言.md",
+            ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
         )
         for anchor in (
             "开口资格",
@@ -218,9 +218,9 @@ class LanguageModeArchitectureTests(unittest.TestCase):
 
     def test_full_document_revision_covers_every_active_block_type(self) -> None:
         text = self.combined(
-            "skills/laohu-language-mode/SKILL.md",
-            "skills/laohu-language-mode/references/03_剧本文本块语言.md",
-            "skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
+            ".agents/skills/laohu-language-mode/SKILL.md",
+            ".agents/skills/laohu-language-mode/references/03_剧本文本块语言.md",
+            ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
         )
         for anchor in (
             "整稿覆盖门",
@@ -232,11 +232,11 @@ class LanguageModeArchitectureTests(unittest.TestCase):
 
     def test_effectiveness_contract_is_wired_to_domain_owners(self) -> None:
         text = self.combined(
-            "skills/laohu-script-writer/SKILL.md",
-            "skills/laohu-visual-assets/SKILL.md",
-            "skills/laohu-video-prompt/SKILL.md",
-            "skills/laohu-audio-design/SKILL.md",
-            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+            ".agents/skills/laohu-script-writer/SKILL.md",
+            ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/SKILL.md",
+            ".agents/skills/laohu-video-prompt/SKILL.md",
+            ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/SKILL.md",
+            ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
             "输入输出索引.md",
         )
         for anchor in (

@@ -22,12 +22,12 @@ class VisualRestructureTests(unittest.TestCase):
     def test_prior_screenwriting_baseline_is_preserved_before_authorized_segmentation(self):
         m=json.loads((ROOT/'04_诊断与系统日志/视觉能力重构迁移清单.json').read_text())
         for entry in m['baseline_files']:
-            if entry['path'].startswith('skills/laohu-script-writer/'):
+            if entry['path'].startswith('.agents/skills/laohu-script-writer/'):
                 original=subprocess.check_output(['git','show',m['baseline_ref']+':'+entry['path']],cwd=ROOT)
                 self.assertEqual(read_before(entry['path']).encode(),original,entry['path'])
 
     def test_each_specialist_has_a_real_parent_route(self):
-        nodes=json.loads((ROOT/'02_共享资产库/05_工具流程/能力注册表.json').read_text())['skills']
+        nodes=json.loads((ROOT/'.agents/skills/laohu-ai-visual/references/能力注册表.json').read_text())['skills']
         by={n['name']:n for n in nodes}
         for node in nodes:
             if node['parent']:
@@ -35,9 +35,9 @@ class VisualRestructureTests(unittest.TestCase):
                 self.assertIn('skills/'+node['name']+'/SKILL.md',parent,node['name'])
 
     def test_asset_parent_does_not_own_fixed_body_board_tutorial(self):
-        parent=(ROOT/'skills/laohu-visual-assets/SKILL.md').read_text()
+        parent=(ROOT/'.agents/skills/laohu-image-creation/skills/laohu-visual-assets/SKILL.md').read_text()
         self.assertNotIn('左栏约占画面宽度36%',parent)
-        specialist=(ROOT/'skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md').read_text()
+        specialist=(ROOT/'.agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/references/资产规格与编译.md').read_text()
         self.assertIn('左栏约占画面宽度36%',specialist)
         self.assertIn('中栏约占45%',specialist)
         self.assertIn('右栏约占19%',specialist)
@@ -48,7 +48,7 @@ class VisualRestructureTests(unittest.TestCase):
             self.assertFalse((ROOT/source).exists(),source)
 
     def test_native_discovery_is_not_assumed_by_registry(self):
-        text=(ROOT/'02_共享资产库/05_工具流程/laohu_skills核心合约.md').read_text()
+        text=(ROOT/'.agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md').read_text()
         self.assertIn('原生发现范围取决于具体运行时安装与扫描',text)
         self.assertIn('不声称所有子Skill已被宿主原生发现',text)
 

@@ -15,7 +15,7 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
         return path.read_text(encoding="utf-8")
 
     def test_story_material_is_an_independent_owner(self) -> None:
-        skill = self.read("skills/laohu-story-material/SKILL.md")
+        skill = self.read(".agents/skills/laohu-script-writer/skills/laohu-story-material/SKILL.md")
         for anchor in (
             "素材箴言",
             "明确保存意图",
@@ -28,9 +28,9 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, skill)
 
     def test_story_material_uses_layered_authority_and_dynamic_retrieval_sessions(self) -> None:
-        skill = self.read("skills/laohu-story-material/SKILL.md")
+        skill = self.read(".agents/skills/laohu-script-writer/skills/laohu-story-material/SKILL.md")
         reference = self.read(
-            "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+            ".agents/skills/laohu-script-writer/skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
         )
         for anchor in (
             "分层权威",
@@ -47,12 +47,12 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, skill + reference)
 
     def test_script_writer_splits_long_form_retrieval_by_narrative_scope(self) -> None:
-        writer = self.read("skills/laohu-script-writer/SKILL.md")
+        writer = self.read(".agents/skills/laohu-script-writer/SKILL.md")
         from scripts.validate_capability_architecture import reachable_documents
-        entry = ROOT / "skills/laohu-script-writer/SKILL.md"
+        entry = ROOT / ".agents/skills/laohu-script-writer/SKILL.md"
         writer += "\n" + "\n".join(p.read_text() for p in reachable_documents(entry))
-        material_ref = "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
-        self.assertIn("../laohu-story-material/references/01_原子记录与渐进检索合同.md", entry.read_text())
+        material_ref = ".agents/skills/laohu-script-writer/skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+        self.assertIn("skills/laohu-story-material/references/01_原子记录与渐进检索合同.md", entry.read_text())
         writer += self.read(material_ref)
         for anchor in (
             "story / sequence / scene / beat / texture",
@@ -64,7 +64,7 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, writer)
 
     def test_core_contract_routes_layered_material_handoff(self) -> None:
-        contract = self.read("02_共享资产库/05_工具流程/laohu_skills核心合约.md")
+        contract = self.read(".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md")
         for anchor in (
             "动态分页",
             "按 ID 读取原子详情",
@@ -73,18 +73,18 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, contract)
 
     def test_router_saves_only_when_the_user_expresses_save_intent(self) -> None:
-        router = self.read("skills/laohu-ai-visual/SKILL.md")
+        router = self.read(".agents/skills/laohu-ai-visual/SKILL.md")
         self.assertIn("记录灵感", router)
         self.assertIn("laohu-story-material", router)
         self.assertIn("不擅自长期保存", router)
 
     def test_script_writer_must_query_but_may_adopt_nothing(self) -> None:
-        writer = self.read("skills/laohu-script-writer/SKILL.md")
+        writer = self.read(".agents/skills/laohu-script-writer/SKILL.md")
         from scripts.validate_capability_architecture import reachable_documents
-        entry = ROOT / "skills/laohu-script-writer/SKILL.md"
+        entry = ROOT / ".agents/skills/laohu-script-writer/SKILL.md"
         writer += "\n" + "\n".join(p.read_text() for p in reachable_documents(entry))
-        material_ref = "skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
-        self.assertIn("../laohu-story-material/references/01_原子记录与渐进检索合同.md", entry.read_text())
+        material_ref = ".agents/skills/laohu-script-writer/skills/laohu-story-material/references/01_原子记录与渐进检索合同.md"
+        self.assertIn("skills/laohu-story-material/references/01_原子记录与渐进检索合同.md", entry.read_text())
         writer += self.read(material_ref)
         for anchor in (
             "素材查询合同",
@@ -98,12 +98,12 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
             self.assertIn(anchor, writer)
 
     def test_external_candidates_cannot_cross_the_confirmation_gate(self) -> None:
-        material = self.read("skills/laohu-story-material/SKILL.md")
+        material = self.read(".agents/skills/laohu-script-writer/skills/laohu-story-material/SKILL.md")
         self.assertIn("external_candidate / not_approved", material)
         self.assertIn("未经老胡确认不得进入剧本或长期素材库", material)
 
     def test_review_returns_material_evidence_to_the_material_owner(self) -> None:
-        review = self.read("skills/laohu-generation-review/references/交接与验收.md")
+        review = self.read(".agents/skills/laohu-ai-visual/skills/laohu-generation-review/references/交接与验收.md")
         self.assertIn("素材选择", review)
         self.assertIn("laohu-story-material", review)
         self.assertIn("usage", review)
@@ -126,14 +126,14 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
             "AGENTS.md",
             "README.md",
             "输入输出索引.md",
-            "02_共享资产库/00_核心规则手册.md",
-            "02_共享资产库/05_工具流程/laohu_skills核心合约.md",
+            ".agents/skills/laohu-ai-visual/references/00_核心规则手册.md",
+            ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
         ):
             text = self.read(relative)
             self.assertIn("laohu-story-material", text, relative)
             self.assertIn("laohu-director", text, relative)
             self.assertIn("laohu-language-mode", text, relative)
-            self.assertIn("二十二", text, relative)
+            self.assertTrue("五个" in text or "二十二" in text, relative)
 
 
 if __name__ == "__main__":
