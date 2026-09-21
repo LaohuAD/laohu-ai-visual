@@ -66,7 +66,7 @@ laohu-video-prompt 完成可直接生成的首稿
 → 视频 Skill 完成最终复验与写入
 ```
 
-VC完整原文随视频包保存，本地和独立上传后均读取该文件。总控需要局部复验时使用[包内外部原文](内置方法/laohu-video-prompt/skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md)；这份受控副本由视频负责人同步，不能单独改写。身份、来源状态、更新和失效处理以[外部能力依赖清单](外部能力依赖清单.md)为准。
+VC完整原文随视频包保存，本地和独立上传后均读取该文件。总控需要局部复验时使用[包内外部原文](../内置方法/laohu-video-prompt/skills/laohu-vibe-creating-prompt/references/01_外部Vibe_Creating原文.md)；这份受控副本由视频负责人同步，不能单独改写。身份、来源状态、更新和失效处理以[外部能力依赖清单](外部能力依赖清单.md)为准。
 
 包内原文缺失、受控方法漂移或适配关系不完整时，保留已经通过视频首稿门的基线作为排障与恢复材料，返回 `laohu-video-prompt` 并标记“VC 链路失败”。不得凭简称猜测能力；没有实际完成 VC 的稿件不得标记为正式提示词或进入付费生成。
 
@@ -171,7 +171,7 @@ B 第一项新动作或声音：
 故事构件（laohu-script-writer）：保可独立调用的输入状态、人物行动、状态变化、观众更新与下一压力。
 ```
 
-编剧只在真实剧情缺口存在时，使用 `内置方法/laohu-script-writer/scripts/story_component_library.py` 对 [包内故事构件数据](内置方法/laohu-script-writer/references/07_故事构件库.jsonl) 执行 `stats → search → get`。构件只提供变化方式，不可以编号或类别代替人物因果；候选不适配、库为空或原创方案更准确时允许零采用。
+编剧只在真实剧情缺口存在时，使用 `../内置方法/laohu-script-writer/scripts/story_component_library.py` 对 [包内故事构件数据](../内置方法/laohu-script-writer/references/07_故事构件库.jsonl) 执行 `stats → search → get`。构件只提供变化方式，不可以编号或类别代替人物因果；候选不适配、库为空或原创方案更准确时允许零采用。
 
 ### 歌曲 / 歌词 / 背景 → MV 导演
 
@@ -521,7 +521,7 @@ HTML固定为纯文本交付，不嵌入图片、不扫描图片、不预留图�
 
 结构检查（STRUCTURE）只证明文件、编号、声明和锚点存在；路由执行（ROUTE）需要真实请求、实际读取与中间决定；行为（BEHAVIOR）需要可检查的实际产出及事实保护；质量（QUALITY）需要同条件作品比较或真实观看证据。前一层通过不能替后一层签字。同一执行者换角色反审仍是同一执行者，不能标记独立评审。
 
-沿用作品既有阶段记录，用 `内置方法/scripts/validate_delivery_dependencies.py` 保存已经完成的源—消费者复验快照；不新建平行资产表。`record --project <作品目录> --record <阶段记录相对路径> --consumer <提示词相对路径> --source first_frame=<图片相对路径> --reason <具体相容结论> --reviewer <实际审核身份>` 仅在真正复验后使用；来源职责另可用 last_frame / style / identity / content / audio，多个来源重复 --source。交付前运行 `check --project <作品目录> --record <阶段记录相对路径>`。
+沿用作品既有阶段记录，用 `../内置方法/scripts/validate_delivery_dependencies.py` 保存已经完成的源—消费者复验快照；不新建平行资产表。`record --project <作品目录> --record <阶段记录相对路径> --consumer <提示词相对路径> --source first_frame=<图片相对路径> --reason <具体相容结论> --reviewer <实际审核身份>` 仅在真正复验后使用；来源职责另可用 last_frame / style / identity / content / audio，多个来源重复 --source。交付前运行 `check --project <作品目录> --record <阶段记录相对路径>`。
 
 任一源或消费者变化、缺失，返回 PENDING_REVIEW，并沿登记依赖传播；UNCHANGED 仅说明字节仍匹配那次审核，绝不证明像素、机位或语义正确。负责人判断实际影响后修改消费者，或写清变化不影响它的理由再记录新快照；不能用重新计算哈希代替复验。未登记的依赖不在脚本覆盖范围，交接仍需枚举真实消费者。
 
@@ -535,7 +535,7 @@ HTML固定为纯文本交付，不嵌入图片、不扫描图片、不预留图�
 
 ### 编剧内部统筹与专业方法边界
 
-`laohu-script-writer`负责开发入口、专业调度、同稿整合与定稿交接；人物、场景、对白等方法由内部对应专业维护。正式剧本输出合同的唯一正文位于`内置方法/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md`，编剧入口必须读取并验收，格式能力不因此取得改写已定剧情或独立放行下游的权力。专业方法去重前须核验独有方法已到负责人，禁止将教程留在父入口或泛化工作流中形成第二来源。
+`laohu-script-writer`负责开发入口、专业调度、同稿整合与定稿交接；人物、场景、对白等方法由内部对应专业维护。正式剧本输出合同的唯一正文位于`../内置方法/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md`，编剧入口必须读取并验收，格式能力不因此取得改写已定剧情或独立放行下游的权力。专业方法去重前须核验独有方法已到负责人，禁止将教程留在父入口或泛化工作流中形成第二来源。
 
 
 ## 专业树、媒介应用与加载合同

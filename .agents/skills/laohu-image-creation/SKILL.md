@@ -74,7 +74,7 @@ description: 用于图片描述补全、单张图片与编辑、人物服装妆�
 
 ## 跨专业会商
 
-- 创意开发尚有未决问题时，CONSULT [laohu-creative-development](references/内置方法/laohu-ai-visual/skills/laohu-creative-development/专业方法.md)；已有有效结论直接继承，不重跑父流程。
+- 创意开发尚有未决问题时，CONSULT [laohu-creative-development](内置方法/laohu-ai-visual/skills/laohu-creative-development/专业方法.md)；已有有效结论直接继承，不重跑父流程。
 - 美术指导尚有未决问题时，CONSULT [laohu-art-direction](skills/laohu-art-direction/SKILL.md)；已有有效结论直接继承，不重跑父流程。
 - 视觉资产尚有未决问题时，CONSULT [laohu-visual-assets](skills/laohu-visual-assets/SKILL.md)；已有有效结论直接继承，不重跑父流程。
 - 构图尚有未决问题时，CONSULT [laohu-composition](skills/laohu-art-direction/skills/laohu-composition/SKILL.md)；已有有效结论直接继承，不重跑父流程。
@@ -83,4 +83,3 @@ description: 用于图片描述补全、单张图片与编辑、人物服装妆�
 
 ## 按当前缺口读取的补充方法
 
-- [高质量AI图片开发计划](references/高质量AI图片开发计划.md)：当前任务涉及0. 特征资产的描述粒度、1. 不变骨架资产、2. 主体突出审美特征资产时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。

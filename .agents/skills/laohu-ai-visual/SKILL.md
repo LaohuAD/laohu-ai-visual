@@ -123,7 +123,7 @@ description: 用于澄清AI视觉作品目的、观众与阶段，设计全片�
 
 服装设计与服装资产是两站：`laohu-costume-design`先根据世界服装现实、人物位置与选择、当前场景和叙事策略判断应该穿到什么资源与展示等级，再负责世界共同语法和候选设计。主要人物、关键配角、首次阵营衣橱与重要换装先交付画面化方向提案与AI推荐，状态进入`待服装方向确认`；老胡确认后才形成`服装方向确认记录`、模型可用服装正文、色卡与不可见结构。`laohu-visual-assets`只消费`服装方向已确认`的结果，把服装正文、F写真和W固定拆解框架组合，不重新推导服装，也不能用F或随机生图替代服装定案。已有确认服装且用户明确不得修改时，不进入完整原创设计，只由资产 Skill按确认写真与现成正文编译；已确认世界衣橱下的普通配角和一次性不可识别背景群众可以自动定案、轻量处理或直接进入群像 / 镜头正文。
 
-场景设计与场景资产也是两站：`laohu-set-design`（入口 `references/内置方法/laohu-image-creation/skills/laohu-set-design/专业方法.md`）负责空间为什么这样存在、人物怎样进入和行动、哪套拓扑与布景胜出、位置 / 改景 / 搭建 / 数字延展怎样分工；`laohu-visual-assets`接收`场景与布景设计交接包`，负责编译 S / 必要A、图片提示词、依赖与生成验收。已有完整确认场景且用户明确不得修改时执行零设计改动；一次性环境只承担气氛且无稳定拓扑需求时，可降级为场景画面元素或单镜头参考图。
+场景设计与场景资产也是两站：`laohu-set-design`（入口 `内置方法/laohu-image-creation/skills/laohu-set-design/专业方法.md`）负责空间为什么这样存在、人物怎样进入和行动、哪套拓扑与布景胜出、位置 / 改景 / 搭建 / 数字延展怎样分工；`laohu-visual-assets`接收`场景与布景设计交接包`，负责编译 S / 必要A、图片提示词、依赖与生成验收。已有完整确认场景且用户明确不得修改时执行零设计改动；一次性环境只承担气氛且无稳定拓扑需求时，可降级为场景画面元素或单镜头参考图。
 
 ### 混合输入拆成多条责任链
 
@@ -290,17 +290,17 @@ bash scripts/create_work_project.sh "作品名"
 | 缺口 | 负责人 |
 |---|---|
 | 目标明确但候选只有表面变化 | 当前负责人CONSULT [创意开发](skills/laohu-creative-development/SKILL.md) |
-| 妆面、发型、毛发、特效妆或连续性需要定案 | [妆发设计](references/内置方法/laohu-image-creation/skills/laohu-makeup-design/专业方法.md) |
-| 道具本体、操作结构或图文界面需要设计 | [道具设计](references/内置方法/laohu-image-creation/skills/laohu-prop-design/专业方法.md) |
+| 妆面、发型、毛发、特效妆或连续性需要定案 | [妆发设计](内置方法/laohu-image-creation/skills/laohu-makeup-design/专业方法.md) |
+| 道具本体、操作结构或图文界面需要设计 | [道具设计](内置方法/laohu-image-creation/skills/laohu-prop-design/专业方法.md) |
 | 写真、静物、F定调、图像编辑或故事板图像 | 图片创作（阶段交接或可选本地资料；缺失时说明所需输入，不声称已调用） |
 
 原有作品状态、阶段主文件、编号、Markdown/HTML交付、人工定案和视频必经VC保持各自合同。新增专业不产生额外生产状态，也不要求每个作品经过全部节点。
 
 ## 知识动画与新增剧集的入口
 
-知识讲解先确定内容、受众及载体：明确火柴人时CONSULT[火柴人知识动画](references/内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/专业方法.md)；Vox、档案/地图/数据解释时CONSULT[编辑型知识动画](references/内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/专业方法.md)。未定风格时比较行动比喻与证据编排的理解收益，再交美术；此前VOX/纸艺推荐只作候选，不覆盖用户选择。内容未成稿仍由编剧负责，分段→资产→视频顺序不变，已委派的真实录屏/证据职责不转移。
+知识讲解先确定内容、受众及载体：明确火柴人时CONSULT[火柴人知识动画](内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/专业方法.md)；Vox、档案/地图/数据解释时CONSULT[编辑型知识动画](内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/专业方法.md)。未定风格时比较行动比喻与证据编排的理解收益，再交美术；此前VOX/纸艺推荐只作候选，不覆盖用户选择。内容未成稿仍由编剧负责，分段→资产→视频顺序不变，已委派的真实录屏/证据职责不转移。
 
-电视剧、流媒体剧集、季弧、试播集与情景喜剧交编剧总控的剧集路由（阶段交接或可选本地资料；缺失时说明所需输入，不声称已调用），不再仅用长片结构拉长。普通人像气质、同脸换妆或同妆不同脸由[人物设计](references/内置方法/laohu-image-creation/skills/laohu-character-design/专业方法.md)按面部/群像/妆容分权深化，不新增并列人像入口。
+电视剧、流媒体剧集、季弧、试播集与情景喜剧交编剧总控的剧集路由（阶段交接或可选本地资料；缺失时说明所需输入，不声称已调用），不再仅用长片结构拉长。普通人像气质、同脸换妆或同妆不同脸由[人物设计](内置方法/laohu-image-creation/skills/laohu-character-design/专业方法.md)按面部/群像/妆容分权深化，不新增并列人像入口。
 
 ## 按当前缺口读取的补充方法
 

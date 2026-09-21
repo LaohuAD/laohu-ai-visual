@@ -21,7 +21,7 @@ description: Use when 老胡 AI 视觉项目需要稳定资产、临时参考或
 
 资产负责人可`CONSULT laohu-language-mode`区分`ASSET_SPEC`与`IMAGE_PROMPT`。前者写跨请求需要稳定的身份、结构、材质、依赖、可变边界和禁止项；后者把已经确认的对象编译成模型能生成的一张静态时刻。调用不转移主责，语言模式不替资产 Skill 判断是否资产化、怎样设计或使用哪种图片模型；内容不足、设计未定案或图片任务与真实资产冲突时返回原负责人。
 
-资产规格和图片正文完成后读取[有效信息与冗余裁决](../../references/内置方法/laohu-language-mode/references/05_有效信息与冗余裁决.md)。必要信息保护门先保住身份锚点、依赖、变体边界、主体绑定、空间和决定性静态时刻；边际作用门再检查每个属性是否能排除一个具体错误结果、稳定跨请求身份或改变当前单帧像素。不能排错的抽象赞美合并或删除；需要时间才成立的完整过程迁移给剧本或视频；设计本身未定时返回原负责人。
+资产规格和图片正文完成后读取[有效信息与冗余裁决](../../内置方法/laohu-language-mode/references/05_有效信息与冗余裁决.md)。必要信息保护门先保住身份锚点、依赖、变体边界、主体绑定、空间和决定性静态时刻；边际作用门再检查每个属性是否能排除一个具体错误结果、稳定跨请求身份或改变当前单帧像素。不能排错的抽象赞美合并或删除；需要时间才成立的完整过程迁移给剧本或视频；设计本身未定时返回原负责人。
 
 本 Skill 读取已确认剧本、场次、镜头任务、`MV导演交接包`中的`MV分镜资产任务`、美术风格设计交接包、人物连续性、人物设计交接包、服装设计交接包、场景与布景设计交接包、当前资产与真实生成结果，回答五个问题：
 
@@ -288,7 +288,7 @@ W / M资产编译不再兼任完整原创服装设计。出现主要人物首套
 | 美术方向、风格系统或图片提示词 | [laohu-image-prompt / SKILL](../laohu-image-prompt/SKILL.md) / [laohu-image-creation / SKILL](../../SKILL.md) / [laohu-body-assets / SKILL](skills/laohu-body-assets/SKILL.md) / [laohu-costume-assets / SKILL](skills/laohu-costume-assets/SKILL.md) / [laohu-makeup-assets / SKILL](skills/laohu-makeup-assets/SKILL.md) / [laohu-visual-assets / SKILL](SKILL.md) / [laohu-environment-assets / SKILL](skills/laohu-environment-assets/SKILL.md) / [laohu-prop-assets / SKILL](skills/laohu-prop-assets/SKILL.md) / [laohu-image-editing / SKILL](../laohu-image-editing/SKILL.md) | 选定一套服务作品承诺的方案并形成提示词 |
 | 上游叙事灯光合同需要进入静态成品图，或电影 / 逐帧参考只承担灯光关系 | 先消费`laohu-art-direction`的叙事灯光合同，再读取[laohu-image-prompt / SKILL](../laohu-image-prompt/SKILL.md) / [laohu-image-creation / SKILL](../../SKILL.md) / [laohu-body-assets / SKILL](skills/laohu-body-assets/SKILL.md) / [laohu-costume-assets / SKILL](skills/laohu-costume-assets/SKILL.md) / [laohu-makeup-assets / SKILL](skills/laohu-makeup-assets/SKILL.md) / [laohu-visual-assets / SKILL](SKILL.md) / [laohu-environment-assets / SKILL](skills/laohu-environment-assets/SKILL.md) / [laohu-prop-assets / SKILL](skills/laohu-prop-assets/SKILL.md) / [laohu-image-editing / SKILL](../laohu-image-editing/SKILL.md) | 静态受光证据可见；参考职责、推论边界与中性制作资产保护成立 |
 | 任何正式图片、封面、单张成品图或制作资产提示词 | `../laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md` | 已完整执行唯一任务、主注意力、主证据、支撑证据、主动退让与不可丢锚点；区分先验召回、镜头控制与作者解释，并把模型母型、属性绑定和摄影证据编译进正确画框 |
-| 所有含人物的结果图需要把性格、关系与情绪变成可观察的人物状态 | `../../references/内置方法/laohu-video-prompt/skills/laohu-performance/references/人物表演提示词规范.md`；按需查`人物表情与肢体动作词典.md` | 已从人物目的、关系对象、保护或开放状态中选择足以辨认本次变化的承重通道（单一通道可以成立）；词典只提供观察候选，没有按情绪整行套用或把AU当作情绪公式 |
+| 所有含人物的结果图需要把性格、关系与情绪变成可观察的人物状态 | `../../内置方法/laohu-video-prompt/skills/laohu-performance/references/人物表演提示词规范.md`；按需查`人物表情与肢体动作词典.md` | 已从人物目的、关系对象、保护或开放状态中选择足以辨认本次变化的承重通道（单一通道可以成立）；词典只提供观察候选，没有按情绪整行套用或把AU当作情绪公式 |
 | 真实图片候选、资产验收或封面资产交接 | [laohu-image-creation / SKILL](../../SKILL.md) / [laohu-visual-assets / SKILL](SKILL.md) | 有明确选择、降级或返修结论 |
 | 所有含人物的结果图：F人物主视觉、写真、人像、封面主体、叙事首帧、生活方式英雄帧或已有照片升级 | [references / 06_人物生命感与现场摄影关系](../laohu-portrait/references/06_人物生命感与现场摄影关系.md) | 单帧因果、人物生命感与人物—摄影机—环境关系闭合；B / W / M等纯制作规格板不强加现场叙事外壳 |
 
@@ -402,3 +402,4 @@ W / M资产编译不再兼任完整原创服装设计。出现主要人物首套
 - [模板_角色一致性网格图](references/模板_角色一致性网格图.md)：当前任务涉及一、核心判断、二、适用场景、三、提示词结构时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。
 - [模板_AI图片提示词_资产型通用结构](references/模板_AI图片提示词_资产型通用结构.md)：当前任务涉及先判断请求类型、资产包输出合同、重要人物资产链时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。
 - [剧本到AI视觉资产转换规则](references/剧本到AI视觉资产转换规则.md)：当前任务涉及一、转换原则、二、资产判定表、三、人物图片资产表时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。
+- [多图资产组](references/多图资产组.md)：本主题的完整特征资产；只在本次缺口命中该主题时读取，不整份加载其他主题模块。

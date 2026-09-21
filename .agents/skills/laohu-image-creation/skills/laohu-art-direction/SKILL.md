@@ -264,8 +264,12 @@ description: Use when 老胡 AI 视觉项目需要在人物、服装、妆造、
 
 共享专业按缺口会商，不按目录顺序全部读取。图片负责静态关系，视频负责时间变化；专业判断不能覆盖已确认故事和对象事实。
 
-知识讲解的风格候选需先分清主要解释载体：角色行动与比喻CONSULT[火柴人知识动画](../../references/内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/专业方法.md)，资料证据与比较CONSULT[编辑型知识动画](../../references/内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/专业方法.md)。返回机制与资产需求后由本美术入口定视觉系统；已有风格方法保留，专项不接管内容或真实证据。
+知识讲解的风格候选需先分清主要解释载体：角色行动与比喻CONSULT[火柴人知识动画](../../内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/专业方法.md)，资料证据与比较CONSULT[编辑型知识动画](../../内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/专业方法.md)。返回机制与资产需求后由本美术入口定视觉系统；已有风格方法保留，专项不接管内容或真实证据。
 
 ## 当前文本的语言执行
 
 直接接受局部请求时，也按本包[语言表达](../../references/语言表达.md)先判当前文本块的发声者、接收者与任务。保护原话和专业事实；只补不足的请求不得改变已确认内容。遇到混写或冗余时按该文件选择具体方法，完成后回到本专业验收。
+
+## 按当前缺口读取的补充方法
+
+- [参考图职责资产](references/参考图职责资产.md)：本主题的完整特征资产；只在本次缺口命中该主题时读取，不整份加载其他主题模块。

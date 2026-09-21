@@ -38,7 +38,7 @@ description: 当作品事实成立，需要点击主张与主视觉候选时使�
 
 ## 跨专业会商
 
-- 创意开发尚有未决问题时，CONSULT [laohu-creative-development](../../../../references/内置方法/laohu-ai-visual/skills/laohu-creative-development/专业方法.md)；已有有效结论直接继承，不重跑父流程。
+- 创意开发尚有未决问题时，CONSULT [laohu-creative-development](../../../../内置方法/laohu-ai-visual/skills/laohu-creative-development/专业方法.md)；已有有效结论直接继承，不重跑父流程。
 
 ## 当前文本的语言执行
 

@@ -47,7 +47,7 @@ def synchronize(manifest, check=False):
         if not target.startswith((".agents/skills/", "scripts/")):
             return None
         if (owner, target) not in by_pair:
-            destination = owner + "/references/内置方法/" + target.removeprefix(".agents/skills/")
+            destination = owner + "/内置方法/" + target.removeprefix(".agents/skills/")
             by_pair[owner, target] = destination
             by_target[destination] = target
             records.append({"source": target, "target": destination})

@@ -179,7 +179,7 @@ description: Use when 老胡 AI 视觉项目收到可复用反馈、真实结果
 确定性缺项使用：
 
 ```bash
-python3 ../../references/内置方法/scripts/validate_semantic_migration.py <ledger.json> <project-root>
+python3 ../../内置方法/scripts/validate_semantic_migration.py <ledger.json> <project-root>
 ```
 
 脚本不评价审美，也不能证明迁移后的能力更强。
