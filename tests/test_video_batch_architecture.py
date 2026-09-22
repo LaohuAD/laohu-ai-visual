@@ -21,7 +21,7 @@ class VideoBatchArchitectureTests(unittest.TestCase):
             "AGENTS.md",
             ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
             ".agents/skills/laohu-video-prompt/SKILL.md",
-            ".agents/skills/laohu-video-prompt/references/交接与验收.md",
+            ".agents/skills/laohu-video-prompt/references/交接与路由.md",
         )
         for anchor in (
             "E01-S02-P03",

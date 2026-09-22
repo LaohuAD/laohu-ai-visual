@@ -929,7 +929,7 @@
     },
     {
       "capability": "首断点归因与经验回流",
-      "file": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md",
+      "file": ".agents/skills/laohu-inspection/skills/laohu-generation-review/SKILL.md",
       "anchors": [
         "第一个断点",
         "最早负责人",
@@ -1066,7 +1066,7 @@
     },
     {
       "capability": "视觉形式转译真实结果首断点诊断",
-      "file": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md",
+      "file": ".agents/skills/laohu-inspection/skills/laohu-generation-review/SKILL.md",
       "anchors": [
         "来源保真失败",
         "关系丢失",
@@ -1304,7 +1304,7 @@
       "required_references": [
         ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/01_歌曲事实歌词与时间证据.md",
         ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/02_MV引擎声画表演与分段.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/03_MV导演交接与文本验收.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/03_MV导演交接.md"
       ],
       "required_intermediate": [
         "歌曲事实层",
@@ -1356,7 +1356,7 @@
       "owner": "laohu-mv-director",
       "request": "MV方向和时间线已经确认，需要继续得到每个分镜图的图片提示词，以及对应的视频提示词。",
       "required_references": [
-        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/03_MV导演交接与文本验收.md"
+        ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/references/03_MV导演交接.md"
       ],
       "required_intermediate": [
         "MV导演交接包",
@@ -1598,7 +1598,7 @@
       "owner": "laohu-video-prompt",
       "request": "把一段人物冲突编译成正式视频提示词。",
       "required_references": [
-        ".agents/skills/laohu-video-prompt/references/交接与验收.md",
+        ".agents/skills/laohu-video-prompt/references/交接与路由.md",
         ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/专业方法与案例.md"
       ],
       "required_intermediate": [
@@ -1884,10 +1884,10 @@
       "owner": "laohu-generation-review",
       "request": "一张编辑主视觉已经生成：纸感、双色和版式都漂亮，但源照片里建筑压住人物、道路把视线带向出口的关系完全消失，同时复制了参考图中的英文和品牌。",
       "required_references": [
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "第一个断点",
@@ -1952,10 +1952,10 @@
       "owner": "laohu-generation-review",
       "request": "真实人物图准确执行了脚步、五指、眼睑、牙齿、发丝和刺绣位置，但人物像动作演示，眼神没有关系，整体不如更短提示词自然。",
       "required_references": [
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "第一个断点",
@@ -2183,10 +2183,10 @@
       "owner": "laohu-generation-review",
       "request": "提示词已经清楚写了三人站位和B第一项新动作，但连续生成仍会重排人物；之前已经把保持站位、位置不变、空间一致换过多种说法。",
       "required_references": [
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
-        ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-video-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-image-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-edit-review/references/专业方法与案例.md",
+        ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-audio-review/references/专业方法与案例.md"
       ],
       "required_intermediate": [
         "提示词不是唯一变量",

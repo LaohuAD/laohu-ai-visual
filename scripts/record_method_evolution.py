@@ -25,6 +25,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.skill_package_layout import current_location
+
 MANIFEST = ROOT / "04_诊断与系统日志/五包迁移清单.json"
 
 
@@ -38,16 +43,18 @@ def baseline_text(record: dict, current: str) -> str:
     A record we have already advanced carries its own snapshot, so a second authorized
     edit can still be recorded region by region without rewriting the earlier ones.
     """
-    path = record["new_path"]
+    path = current_location(record["new_path"], ROOT)
     snapshot = record.get("after_snapshot")
     if snapshot is not None and digest(snapshot) == record["after_sha256"]:
         return snapshot
-    try:
-        committed = subprocess.run(["git", "show", f"HEAD:{path}"], cwd=ROOT,
-                                   capture_output=True, text=True, check=True).stdout
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        committed = None
-    for candidate in (committed, current):
+    committed = []
+    for address in (path, record["new_path"]):
+        try:
+            committed.append(subprocess.run(["git", "show", f"HEAD:{address}"], cwd=ROOT,
+                                            capture_output=True, text=True, check=True).stdout)
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            continue
+    for candidate in (*committed, current):
         if candidate is not None and digest(candidate) == record["after_sha256"]:
             return candidate
     raise ValueError(
@@ -83,7 +90,9 @@ def main() -> int:
     data = json.loads(args.manifest.read_text())
     stale, recorded, unresolved = [], [], []
     for record in data["files"]:
-        path = ROOT / record["new_path"]
+        # A capability extracted into another package still has one record, addressed by
+        # its historical location; the content to audit lives at the current location.
+        path = ROOT / current_location(record["new_path"], ROOT)
         if not path.is_file():
             continue
         current = path.read_text()

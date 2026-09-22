@@ -11,7 +11,7 @@ import re
 import tempfile
 
 PACKAGE = Path(__file__).resolve().parents[1]
-DEFAULT_ATOMS = PACKAGE / "references/故事原子"
+DEFAULT_ATOMS = PACKAGE / "assets/故事原子"
 
 
 def local_library():

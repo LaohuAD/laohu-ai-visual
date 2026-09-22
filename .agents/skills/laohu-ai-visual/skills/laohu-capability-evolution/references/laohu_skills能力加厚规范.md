@@ -10,7 +10,7 @@
 
 ## 当前入口
 
-遇到以下任务，读取 [`skills/laohu-capability-evolution/SKILL.md`](../SKILL.md)：
+遇到以下任务，读取 [能力进化入口](../SKILL.md)：
 
 - 重复反馈或跨作品经验需要进入长期能力。
 - 外部 Skill、论文、案例、专家方法或平台资料需要被选择性吸收。

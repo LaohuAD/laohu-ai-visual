@@ -264,7 +264,11 @@ description: Use when 老胡 AI 视觉项目需要在人物、服装、妆造、
 
 共享专业按缺口会商，不按目录顺序全部读取。图片负责静态关系，视频负责时间变化；专业判断不能覆盖已确认故事和对象事实。
 
-知识讲解的风格候选需先分清主要解释载体：角色行动与比喻CONSULT[火柴人知识动画](../../内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/专业方法.md)，资料证据与比较CONSULT[编辑型知识动画](../../内置方法/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/专业方法.md)。返回机制与资产需求后由本美术入口定视觉系统；已有风格方法保留，专项不接管内容或真实证据。
+知识讲解的风格候选需先分清主要解释载体：角色行动与比喻CONSULT[火柴人知识动画](../../../laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/SKILL.md)，资料证据与比较CONSULT[编辑型知识动画](../../../laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/SKILL.md)。返回机制与资产需求后由本美术入口定视觉系统；已有风格方法保留，专项不接管内容或真实证据。
+
+## 调用与返回
+
+可由明确点名直接使用，也可由[所属专业入口](../../SKILL.md)按缺口调用。直接命中本专业时先沿该链接补齐上级已确认的目的、事实、方向与保护项，只补依赖，不重新发起父级任务。CONSULT返回局部结果，当前作品负责人不转移；缺少上游事实时RETURN最早负责人，不自行改写剧本。需要跨专业判断时只传当前问题和保护项，不重新运行整条生产链。
 
 ## 当前文本的语言执行
 
@@ -272,4 +276,4 @@ description: Use when 老胡 AI 视觉项目需要在人物、服装、妆造、
 
 ## 按当前缺口读取的补充方法
 
-- [参考图职责资产](references/参考图职责资产.md)：本主题的完整特征资产；只在本次缺口命中该主题时读取，不整份加载其他主题模块。
+- [参考图职责资产](references/参考图职责资产.md)：本主题的完整特征资产；当前缺口落在多张参考图职责重叠、分不清各自控制什么时读取，取得参考图职责划分与使用边界；不整份加载其他主题模块。

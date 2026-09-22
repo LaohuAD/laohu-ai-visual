@@ -56,8 +56,8 @@ class ExternalCapabilityUpdateTests(unittest.TestCase):
 
     def test_current_registry_and_native_entry_links(self):
         d=json.loads((ROOT/'.agents/skills/laohu-ai-visual/references/能力注册表.json').read_text())
-        self.assertEqual(d['entry_count'],5)
-        self.assertEqual(d['specialist_count'],114)
+        self.assertEqual(d['entry_count'],6)
+        self.assertEqual(d['specialist_count'],117)
         by={n['name']:n for n in d['skills']}
         for name in self.data['new_modules']+['laohu-stickman-explainer','laohu-editorial-explainer']:
             node=by[name];parent=ROOT/by[node['parent']]['path']

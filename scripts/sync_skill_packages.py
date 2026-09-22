@@ -1,139 +1,173 @@
 #!/usr/bin/env python3
-"""Maintain real package-local methods. Never required by package consumers or uploaders."""
-from pathlib import Path
+"""Migration audit and dependency check for the top-level skill packages.
+
+This file used to generate package-local run copies of cross-package methods. That
+behaviour is retired: every shared method now has exactly one canonical source in the
+repository, and consumers read it by relative address. The tool is kept under its old
+name so existing maintenance habits still find it, but it no longer writes methods.
+
+What it does now
+----------------
+``--check`` (the only supported mode) audits the recorded migration ledger:
+
+* every historical ``copies[]`` entry is resolved through the source chain to the file
+  that really holds the method now (``shared_moves``, ``method_redirects``, ``layout``,
+  and the package extractions recorded in ``skill_package_layout``);
+* a copy that still exists on disk is reported as ``stale_methods`` - the runtime tree
+  must not grow run copies again;
+* a copy whose canonical source cannot be resolved is reported as ``missing_sources``;
+* a formal consumer that still points at a retired copy path is reported as
+  ``orphan_consumers``;
+* the project-scope file, anchor and parent-chain check is delegated to
+  ``validate_skill_packages`` so there is one dependency authority, not two.
+
+Running the tool without ``--check`` refuses to write: copy generation is disabled and
+the command exits non-zero with the correct maintenance entry point.
+"""
+from __future__ import annotations
+
 import argparse
-import ast
-import hashlib
 import json
-import os
 import re
+import sys
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.skill_package_layout import PACKAGES, current_location
+
 DEFAULT_MANIFEST = ROOT / "04_诊断与系统日志/五包迁移清单.json"
+RETIRED_MARKERS = ("内置方法/", "references/语言模式/")
+MARKER_OWNERS = {"validate_skill_packages.py", "sync_skill_packages.py"}
+PACKAGE_NAMES = set(PACKAGES)
+SKIP_DIRS = {"__pycache__", ".git", "node_modules", ".ipynb_checkpoints"}
+REFERENCE_MARKER = re.compile(r"^reference(-[a-z]+)?\.md$")
 
 
-def digest(data):
-    return hashlib.sha256(data).hexdigest()
+def load_manifest(path: Path) -> dict:
+    return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
-def synchronize(manifest, check=False):
-    data = json.loads(Path(manifest).read_text())
-    records = data["copies"]
-    by_target = {r["target"]: r["source"] for r in records}
+def canonical_source(source: str, manifest: dict) -> str | None:
+    """Resolve one recorded source path to the file that holds the method today."""
+    if (ROOT / source).is_file():
+        return source
+    shared = manifest.get("shared_moves", {})
+    if source in shared and (ROOT / shared[source]).is_file():
+        return shared[source]
+    redirects = manifest.get("method_redirects", {})
+    if source in redirects:
+        successor = redirects[source]
+        if (ROOT / successor).is_file():
+            return successor
+        # A redirected method can itself be renamed later in the same consolidation;
+        # follow that rename to the file that really holds the text.
+        renamed = current_location(successor, ROOT)
+        if renamed != successor and (ROOT / renamed).is_file():
+            return renamed
+    for old, new in sorted(manifest.get("layout", {}).items(), key=lambda item: -len(item[0])):
+        if source == old or source.startswith(old + "/"):
+            candidate = new + source[len(old):]
+            if (ROOT / candidate).is_file():
+                return candidate
+    path = Path(source)
+    if REFERENCE_MARKER.match(path.name):
+        candidate = path.parent / "references" / path.name
+        if (ROOT / candidate).is_file():
+            return str(candidate)
+    # A capability extracted into another top-level package keeps its ledger address and
+    # lives at the current package location.
+    moved = current_location(source, ROOT)
+    if moved != source and (ROOT / moved).is_file():
+        return moved
+    return None
 
-    def package(path):
-        return "/".join(Path(path).parts[:3])
 
-    by_pair = {(package(r["target"]), r["source"]): r["target"] for r in records}
+def resolve_chain(record: dict, by_target: dict) -> tuple[str | None, list[str]]:
+    """Follow target->source links until the real source, detecting cycles."""
+    target, chain, seen = record["target"], [], set()
+    while target in by_target and target not in seen:
+        seen.add(target)
+        chain.append(target)
+        target = by_target[target]
+    if target in seen:
+        return None, chain + ["<cycle>"]
+    return target, chain
 
-    def original(path):
-        seen = set()
-        while path in by_target and path not in seen:
-            seen.add(path)
-            path = by_target[path]
-        return path
 
-    def local_target(target, owner):
-        target = original(target)
-        if target.startswith(owner + "/"):
-            return target
-        if target in {"AGENTS.md", "README.md", "输入输出索引.md"}:
-            return owner + "/references/独立使用与交接.md"
-        if target.endswith(("能力注册表.json", "能力协作图谱.md", "外部能力依赖清单.md", "laohu_skills核心合约.md")):
-            return owner + "/references/独立使用与交接.md"
-        if target.endswith("/SKILL.md"):
-            # An embedded method must not recursively import another complete department.
-            return by_pair.get((owner, target))
-        if not target.startswith((".agents/skills/", "scripts/")):
-            return None
-        if (owner, target) not in by_pair:
-            destination = owner + "/内置方法/" + target.removeprefix(".agents/skills/")
-            by_pair[owner, target] = destination
-            by_target[destination] = target
-            records.append({"source": target, "target": destination})
-        return by_pair[owner, target]
+def formal_consumers() -> list[str]:
+    """Formal consumers of a retired copy path: package files and repository tooling.
 
-    def render(record):
-        source = ROOT / record["source"]
-        if not source.is_file():
-            raise ValueError("Missing authoritative method: " + str(source))
-        raw = source.read_bytes()
-        if source.suffix == ".py":
-            # A real script copy also needs its local imports; stdlib imports add nothing.
-            for node in ast.walk(ast.parse(raw.decode())):
-                modules = [n.name for n in node.names] if isinstance(node, ast.Import) else [node.module] if isinstance(node, ast.ImportFrom) and node.module else []
-                for module in modules:
-                    dependency = source.parent / (module + ".py")
-                    if dependency.is_file():
-                        local_target(str(dependency.relative_to(ROOT)), package(record["target"]))
-            if source.name == "story_material_db.py":
-                helper = source.parents[3] / "scripts/story_atoms.py"
-                local_target(str(helper.relative_to(ROOT)), package(record["target"]))
-        if source.suffix != ".md" or record.get("mode") == "file":
-            return raw, raw
-        text = raw.decode()
-        if source.name == "SKILL.md":
-            text = re.sub(r"\A---\n.*?\n---\n", "", text, count=1, flags=re.S)
-        dest = ROOT / record["target"]
-        owner = package(record["target"])
+    Navigation documents and the implementation record describe the retirement itself and
+    are not consumers; the tools that name the markers in order to detect them are not
+    consumers either.
+    """
+    hits = []
+    scope = list((ROOT / ".agents/skills").rglob("*")) + list((ROOT / "scripts").glob("*.py"))
+    for path in scope:
+        if not path.is_file() or path.suffix not in {".md", ".py", ".json", ".yaml", ".yml"}:
+            continue
+        if any(part in SKIP_DIRS for part in path.parts):
+            continue
+        relative = str(path.relative_to(ROOT))
+        if relative.startswith(".agents/skills/README.md"):
+            continue
+        if path.name in MARKER_OWNERS:
+            continue
+        body = path.read_text(encoding="utf-8", errors="ignore")
+        for marker in RETIRED_MARKERS:
+            if marker in body:
+                hits.append(f"{relative} -> {marker}")
+                break
+    return hits
 
-        def remap(raw_target):
-            value, sep, anchor = raw_target.strip("<>").partition("#")
-            if not value or re.match(r"^[a-z]+:", value):
-                return raw_target
-            resolved = (source.parent / value).resolve()
-            if not resolved.is_relative_to(ROOT) or not resolved.exists():
-                return None
-            target = local_target(str(resolved.relative_to(ROOT)), owner)
-            return (os.path.relpath(ROOT / target, dest.parent) + (sep + anchor if sep else "")) if target else None
 
-        protected = []
-        def hold(value):
-            protected.append(value)
-            return "\x00REF" + str(len(protected)-1) + "\x00"
+def audit(manifest_path: Path) -> dict:
+    manifest = load_manifest(manifest_path)
+    copies = manifest.get("copies", [])
+    by_target = {record["target"]: record["source"] for record in copies}
+    stale, missing, cycles = [], [], []
+    for record in copies:
+        source, chain = resolve_chain(record, by_target)
+        if source is None:
+            cycles.append(record["target"])
+            continue
+        if (ROOT / record["target"]).is_file():
+            stale.append(record["target"])
+        if canonical_source(source, manifest) is None:
+            missing.append({"target": record["target"], "source": source})
+    orphans = formal_consumers()
+    try:
+        from scripts.validate_skill_packages import check_repository
+        dependency_errors, _, _ = check_repository()
+    except Exception as error:  # pragma: no cover - the audit must still report
+        dependency_errors = [f"project dependency check failed to run: {error}"]
+    return {"ok": not (stale or missing or orphans or cycles or dependency_errors),
+            "copies": len(copies), "stale_methods": stale, "missing_sources": missing,
+            "source_cycles": cycles, "orphan_consumers": orphans,
+            "dependency_errors": dependency_errors}
 
-        def link(match):
-            label, raw_target = match[1], match[2]
-            target = remap(raw_target)
-            return hold("[" + label + "](" + target + ")" if target else label + "（按本包任务交接，非必需外部文件）")
 
-        text = re.sub(r"\[([^\]\n]*)\]\(([^)\n]+)\)", link, text)
-        def code(match):
-            value = match[1]
-            if re.match(r"^[a-z]+:", value):
-                return match[0]
-            file = (source.parent / value).resolve()
-            if not file.is_file():
-                return match[0]
-            target = remap(value)
-            return "`" + target + "`" if target else "由使用者提供的作品输入或交接材料"
-
-        text = re.sub(r"(?<!`)`([^`\n]+)`(?!`)", code, text)
-        text = re.sub(r"\x00REF(\d+)\x00", lambda m: protected[int(m[1])], text)
-        return raw, text.encode()
-
-    errors = []
-    for record in records:
-        source, expected = render(record)
-        target = ROOT / record["target"]
-        if check:
-            if not target.is_file() or target.read_bytes() != expected:
-                errors.append(record["target"])
-        else:
-            target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(expected)
-            record["source_sha256"] = digest(source)
-            record["target_sha256"] = digest(expected)
-    if not check:
-        Path(manifest).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
-    return errors
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__,
+                                     formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    parser.add_argument("--check", action="store_true",
+                        help="audit the migration ledger and the project dependencies")
+    args = parser.parse_args()
+    if not args.check:
+        print(json.dumps({"ok": False, "status": "WRITE_DISABLED",
+                          "message": "副本生成模式已停用：共用方法只保留一份正文，"
+                                     "改用 python3 scripts/sync_skill_packages.py --check "
+                                     "与 python3 scripts/validate_skill_packages.py 做依赖检查。",
+                          "stale_methods": []}, ensure_ascii=False))
+        return 2
+    report = audit(args.manifest)
+    print(json.dumps(report, ensure_ascii=False, indent=2))
+    return 0 if report["ok"] else 1
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
-    parser.add_argument("--check", action="store_true")
-    args = parser.parse_args()
-    errors = synchronize(args.manifest, args.check)
-    print(json.dumps({"ok": not errors, "stale_methods": errors}, ensure_ascii=False))
-    raise SystemExit(bool(errors))
+    raise SystemExit(main())

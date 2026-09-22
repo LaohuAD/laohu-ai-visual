@@ -38,13 +38,20 @@ class DialoguePilotTests(unittest.TestCase):
             self.assertIn('## ' + layer + '：', self.skill)
 
     def test_full_reference_and_local_material_preserved(self):
-        self.assertEqual(hashlib.sha256((PILOT / 'reference.md').read_bytes()).hexdigest(), self.manifest['reference_sha256'])
-        local_text = (PILOT / 'references/本地对白与表演补充.md').read_text()
-        local = local_text[local_text.index('## 台词口气与方言'):]
+        # R01 moved the upstream reference into the skill's own references/ directory.
+        self.assertEqual(hashlib.sha256((PILOT / 'references/reference.md').read_bytes()).hexdigest(), self.manifest['reference_sha256'])
         migration = json.loads((ROOT / '04_诊断与系统日志/编剧能力完整迁移清单.json').read_text())
         unit = next(u for u in migration['local_units'] if u['target'].endswith('本地对白与表演补充.md'))
-        local = local[:unit['character_count']]
+        # The recorded local span is audited in its migrated form; the living file is then
+        # checked for the section structure that span introduced, so later authorized
+        # additions cannot hide a lost or rewritten local method.
+        historical = read_before(PILOT / 'references/本地对白与表演补充.md')
+        local = historical[historical.index(unit['target_start']):][:unit['character_count']]
         self.assertEqual(hashlib.sha256(local.encode()).hexdigest(), self.manifest['local_sha256'])
+        living = (PILOT / 'references/本地对白与表演补充.md').read_text()
+        self.assertIn(unit['target_start'], living)
+        for heading in re.findall(r'(?m)^#{2,3} .+$', local):
+            self.assertIn(heading, living)
 
     def test_caller_and_local_links_resolve(self):
         caller = (ROOT / '.agents/skills/laohu-script-writer/SKILL.md').read_text()

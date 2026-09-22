@@ -59,7 +59,4 @@ __pycache__/
 
 # Full provenance and user-authorized portable story atoms stay private to local/selected upload.
 /02_共享资产库/故事素材库/
-/.agents/skills/laohu-script-writer/references/故事原子/
-
-# Nested copies of private story atoms inside packaged skills stay local too.
-**/内置方法/laohu-script-writer/references/故事原子/
+/.agents/skills/laohu-script-writer/assets/故事原子/

@@ -1,4 +1,4 @@
-"""Discover the five real packages and preserve registered nested specialists."""
+"""Discover the six real packages and preserve registered nested specialists."""
 import json
 import unittest
 from pathlib import Path
@@ -9,7 +9,7 @@ class SkillDiscoveryTests(unittest.TestCase):
         entries={n['name']:n for n in nodes if n['parent'] is None}
         actual={p.name:p for p in (ROOT/'.agents/skills').iterdir() if p.is_dir() and (p/'SKILL.md').is_file()}
         self.assertEqual(set(actual),set(entries))
-        self.assertEqual(len(entries),5)
+        self.assertEqual(len(entries),6)
         self.assertFalse((ROOT/'skills').exists())
         for name,path in actual.items():
             self.assertFalse(path.is_symlink())

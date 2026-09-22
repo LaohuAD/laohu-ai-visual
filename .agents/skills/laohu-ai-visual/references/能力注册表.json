@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "entry_count": 5,
-  "specialist_count": 114,
+  "entry_count": 6,
+  "specialist_count": 117,
   "skills": [
     {
       "name": "laohu-ai-visual",
@@ -820,16 +820,24 @@
       "former_path": ".agents/skills/laohu-language-mode/SKILL.md"
     },
     {
+      "name": "laohu-inspection",
+      "path": ".agents/skills/laohu-inspection/SKILL.md",
+      "parent": null,
+      "kind": "entry",
+      "label": "检视官",
+      "former_path": ".agents/skills/laohu-inspection/SKILL.md"
+    },
+    {
       "name": "laohu-generation-review",
-      "path": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md",
-      "parent": "laohu-ai-visual",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-generation-review/SKILL.md",
+      "parent": "laohu-inspection",
       "kind": "department",
       "label": "生成复盘",
       "former_path": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md"
     },
     {
       "name": "laohu-image-review",
-      "path": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-image-review/SKILL.md",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-image-review/SKILL.md",
       "parent": "laohu-generation-review",
       "kind": "specialist",
       "label": "图片评审",
@@ -837,7 +845,7 @@
     },
     {
       "name": "laohu-video-review",
-      "path": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-video-review/SKILL.md",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-video-review/SKILL.md",
       "parent": "laohu-generation-review",
       "kind": "specialist",
       "label": "视频评审",
@@ -845,7 +853,7 @@
     },
     {
       "name": "laohu-audio-review",
-      "path": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-audio-review/SKILL.md",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-audio-review/SKILL.md",
       "parent": "laohu-generation-review",
       "kind": "specialist",
       "label": "音频评审",
@@ -853,7 +861,7 @@
     },
     {
       "name": "laohu-edit-review",
-      "path": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-edit-review/SKILL.md",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-edit-review/SKILL.md",
       "parent": "laohu-generation-review",
       "kind": "specialist",
       "label": "成片评审",
@@ -861,7 +869,7 @@
     },
     {
       "name": "laohu-release-review",
-      "path": ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-release-review/SKILL.md",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-generation-review/skills/laohu-release-review/SKILL.md",
       "parent": "laohu-generation-review",
       "kind": "specialist",
       "label": "发布复盘",
@@ -954,7 +962,47 @@
       "kind": "specialist",
       "label": "编辑型知识动画",
       "former_path": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/SKILL.md"
+    },
+    {
+      "name": "laohu-script-inspection",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-script-inspection/SKILL.md",
+      "parent": "laohu-inspection",
+      "kind": "department",
+      "label": "剧本检视",
+      "former_path": ".agents/skills/laohu-inspection/skills/laohu-script-inspection/SKILL.md"
+    },
+    {
+      "name": "laohu-image-prompt-inspection",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-image-prompt-inspection/SKILL.md",
+      "parent": "laohu-inspection",
+      "kind": "department",
+      "label": "图片提示词检视",
+      "former_path": ".agents/skills/laohu-inspection/skills/laohu-image-prompt-inspection/SKILL.md"
+    },
+    {
+      "name": "laohu-video-prompt-inspection",
+      "path": ".agents/skills/laohu-inspection/skills/laohu-video-prompt-inspection/SKILL.md",
+      "parent": "laohu-inspection",
+      "kind": "department",
+      "label": "视频提示词检视",
+      "former_path": ".agents/skills/laohu-inspection/skills/laohu-video-prompt-inspection/SKILL.md"
     }
   ],
-  "loading_policy": "Video compilation reads five foundation entries every session (unchanged reads may be reused); long references and specialist branches are selected by semantic purpose. Preserve explicit parent routes and native discovery links."
+  "loading_policy": "Video compilation reads five foundation entries every session (unchanged reads may be reused); long references and specialist branches are selected by semantic purpose. Preserve explicit parent routes and native discovery links.",
+  "path_policy": "path 一律为仓库根相对路径，指向真实 SKILL.md 实体，不指向任何副本、快捷方式或导出目录。parent 指向所属上级 SKILL.md 的 name；正常结构为 <父目录>/skills/<name>/SKILL.md。name/path/parent/kind/label 为登记字段，逐条与真实文件核对；Reference 不作为伪 Skill 登记。",
+  "parent_route_policy": "本层入口列出直接子技能，子技能入口写明所属父级相对链接（正常为 ../../SKILL.md），双向可达才算登记正确。父链不得成环；同一输入与相同未变化问题重复重入时复用已得结论，不形成循环调用。",
+  "count_policy": "entry 6 个业务入口 + department 20 个专业部门入口 = 26 个协作节点；specialist 97 个内部专项；entry_count 记业务入口数，specialist_count 记全部非业务入口数（20+97=117）；skills 共 123 条。三者是不同口径，不能互相替换，也不能用其中一个数字删除另一类真实入口。",
+  "verified": {
+    "baseline_commit": "c7fed3012bf24cdf5600de20b365399ad3f83717",
+    "checked": "第6包检视官：逐条核对 123 条 path 真实存在、frontmatter name 与登记一致、parent 与目录父子关系一致、无副本路径；新增 laohu-inspection 业务入口、三个检视部门与移入的复盘部门",
+    "result": {
+      "entries": 6,
+      "departments": 20,
+      "specialists": 97,
+      "skills": 123,
+      "missing_paths": 0,
+      "name_mismatch": 0,
+      "copy_paths": 0
+    }
+  }
 }

@@ -457,33 +457,38 @@
   "source_copies": [
     {
       "source_project": "stickman",
-      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/原始方法.md",
-      "sha256": "80b1be93b54ab60ed714d449798739c61b4d368d4037c568f18d30d9f135b8e7",
-      "preservation": "byte-identical"
+      "target": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部原始方法.md",
+      "sha256": "cbb16fea35b0f51c921f277e012d3f9e52af8e9565c5fecc956b1de791ee6d4b",
+      "preservation": "byte-identical",
+      "relocated_in_consolidation_round": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/原始方法.md -> .agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部原始方法.md（R02 扁平归位，正文未改）"
     },
     {
       "source_project": "stickman",
-      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/LICENSE",
+      "target": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/assets/upstream/LICENSE",
       "sha256": "39db520f9483ddb84418c21d59547f39da00083bf2dae1039166299d64f715c3",
-      "preservation": "byte-identical"
+      "preservation": "byte-identical",
+      "relocated_in_consolidation_round": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/LICENSE -> .agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/assets/upstream/LICENSE（R02 扁平归位，正文未改）"
     },
     {
       "source_project": "stickman",
-      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/examples.md",
+      "target": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部案例.md",
       "sha256": "58b56ee7590fb5a148a3a616dcf80ef69921fefe4ea558f6f451d60e31f78228",
-      "preservation": "byte-identical"
+      "preservation": "byte-identical",
+      "relocated_in_consolidation_round": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/examples.md -> .agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部案例.md（R02 扁平归位，正文未改）"
     },
     {
       "source_project": "stickman",
-      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/omni-flash-prompt-contract.md",
+      "target": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部OmniFlash提示词合同.md",
       "sha256": "3017855492a952a35818b91bb8726e28784a137a9b56940438cb042dadd5c014",
-      "preservation": "byte-identical"
+      "preservation": "byte-identical",
+      "relocated_in_consolidation_round": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/omni-flash-prompt-contract.md -> .agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部OmniFlash提示词合同.md（R02 扁平归位，正文未改）"
     },
     {
       "source_project": "stickman",
-      "target": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/storyboard-template.md",
+      "target": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部分镜模板.md",
       "sha256": "24352a987823166df4a255f22d6767573a0f4e706c3c5a82c5773696f509aa4a",
-      "preservation": "byte-identical"
+      "preservation": "byte-identical",
+      "relocated_in_consolidation_round": "skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/storyboard-template.md -> .agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部分镜模板.md（R02 扁平归位，正文未改）"
     },
     {
       "source_project": "portrait",
@@ -2472,6 +2477,24 @@
         }
       ],
       "reason": "授权的分段顺序修正及外部方法更新；历史审计先逆变换，当前审计另验新源正文和本地前言"
+    },
+    {
+      "path": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部原始方法.md",
+      "after_sha256": "cbb16fea35b0f51c921f277e012d3f9e52af8e9565c5fecc956b1de791ee6d4b",
+      "before_sha256": "80b1be93b54ab60ed714d449798739c61b4d368d4037c568f18d30d9f135b8e7",
+      "edits": [
+        {
+          "after_start": 1013,
+          "after_end": 1122,
+          "before_text": "1. Read `references/storyboard-template.md` and produce Phase A in the user's language, with English VO and a reference translation.\n"
+        },
+        {
+          "after_start": 1319,
+          "after_end": 1496,
+          "before_text": "4. Only after approval of the current Phase A, read `references/omni-flash-prompt-contract.md` and produce Phase B.\n5. Use `references/examples.md` only when a concrete end-to-end example would resolve ambiguity.\n"
+        }
+      ],
+      "reason": "R02 扁平归位时只改写了原文内部的读取路径（storyboard-template / omni-flash-prompt-contract / examples），方法正文未改；逆编辑用于还原归位前原文。"
     }
   ]
 }
