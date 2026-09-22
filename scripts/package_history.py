@@ -13,6 +13,28 @@ from scripts.skill_package_layout import current_location
 MANIFEST = "04_诊断与系统日志/五包迁移清单.json"
 
 
+_LEDGER_CACHE: dict = {}
+
+
+def _ledger(root):
+    """Parse the migration ledger once per version.
+
+    ``physical_path`` runs once per migration unit, so re-parsing a multi-megabyte ledger
+    on every call would make a full historical audit take minutes. The cache is keyed by
+    file and modification time, so a ledger write is picked up on the next call.
+    """
+    manifest = Path(root) / MANIFEST
+    if not manifest.is_file():
+        return None
+    stamp = manifest.stat().st_mtime_ns
+    cached = _LEDGER_CACHE.get(str(manifest))
+    if cached and cached[0] == stamp:
+        return cached[1]
+    data = json.loads(manifest.read_text())
+    _LEDGER_CACHE[str(manifest)] = (stamp, data)
+    return data
+
+
 def physical_path(path, root=ROOT):
     """Return the file that holds a recorded path today.
 
@@ -24,9 +46,8 @@ def physical_path(path, root=ROOT):
     root = Path(root)
     relative = str(path.relative_to(root)) if path.is_absolute() else str(path)
     mapped = relative
-    manifest = root / MANIFEST
-    if manifest.is_file():
-        data = json.loads(manifest.read_text())
+    data = _ledger(root)
+    if data is not None:
         if relative in data.get("shared_moves", {}):
             return root / data["shared_moves"][relative]
         # Methods merged into another file this round: the successor holds the text.

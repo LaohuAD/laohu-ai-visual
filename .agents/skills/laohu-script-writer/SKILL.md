@@ -9,7 +9,7 @@ description: 用于保存与检索创作灵感、调用故事原子、开发人�
 
 先区分素材保存、故事开发、局部返工和定稿后分段。故事原子提供可用机制，不替代角色选择与故事因果；完整剧本验收后才能分段，视频不能倒改P。**默认原创**：普通故事开发按本次需求与专业方法创作，不以完成素材检索为前置条件。
 
-先读[独立使用与交接](references/独立使用与交接.md)，明确本次输入、结果和跨阶段边界。含自然语言沟通或创作正文时先读本包[语言表达](references/语言表达.md)取得领域写法；完整通用规则按 `.agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md` 等唯一正文读取，本包不再另存一套副本。
+先读[独立使用与交接](references/独立使用与交接.md)，明确本次输入、结果和跨阶段边界。含自然语言沟通或创作正文时先读本包[语言表达](references/语言表达.md)取得领域写法；完整通用规则按 `../laohu-language-mode/references/01_模式判定与块级切换.md` 等唯一正文读取，本包不再另存一套副本。
 
 ### 意图理解与父级继承
 
@@ -17,10 +17,79 @@ description: 用于保存与检索创作灵感、调用故事原子、开发人�
 
 本包继承项目顶层规则 `AGENTS.md` 的目的、路由、边界、路径与隐私要求，在本层形成自己的专业判断；不要求用户先给专业简报，也不重复整套上游工作。能由现有材料与专业方法合理完成的开放选择（人物方向、场面安排、结构候选）直接提出或完成；只有互斥的故事方向、无法同时成立的事实、用户明确要求共创，或会显著改变成本、权利与外部动作时，才提少量能区分方向的问题或具体候选，并说明差异与后果。讨论本身可以是本轮交付。
 
-按本层判断选择下一层：命中哪条分支就读哪条，不把十九项专业逐站盖章。用户直接点名某个专业时，先沿其父级链接补齐所属链（本入口的创作推进与专业判断、以及必要的故事事实），再继续当前子任务；补依赖只建立上下文继承，不重新发起同一个任务。子专业结果返回本入口整合：核对它们是否使用同一人物的关系、知情状态、物件控制权、世界空间与动作次序，冲突定位到最早作出该决定的专业；已读且仍有效的祖先与共同方法不重复通读，缺失、变更或新会话时补读。
+按本层判断选择下一层：命中哪条分支就读取哪条，读取范围以命中行为界，不把十九项专业逐站盖章；命中的行必须读完再产出本阶段结果。用户直接点名某个专业时，先沿其父级链接补齐所属链（本入口的强制读取路由、以及必要的故事事实），再继续当前子任务；补依赖只建立上下文继承，不重新发起同一个任务。子专业结果返回本入口整合：核对它们是否使用同一人物的关系、知情状态、物件控制权、世界空间与动作次序，冲突定位到最早作出该决定的专业；已读且仍有效的祖先与共同方法不重复通读，缺失、变更或新会话时补读。
 
-- [老胡故事素材库](skills/laohu-story-material/SKILL.md)：仅当用户明确要求记录灵感、查看以前资料或使用指定素材时进入；完整保留来源、同步应用原子，按缺口检索并交接机制与边界。默认原创不进入这一步，未查库不视为未完成。
-- [视频分段规划](skills/laohu-video-segmentation/SKILL.md)：完整剧本已定稿，需要划定执行段落时进入；保留原文，交付P编号、讲戏、估时、资产需求和接续，不预写段内C摄影。
+### 强制读取路由
+
+本层是路由层，专业方法在下层。下表每行是一条读取义务：情形出现，就在产出本阶段结果之前读取右列文件；命中多行就读完多行。读取为了取得「必须得到的决定」；决定没拿到时继续读该文件，直到拿到为止。右列指向第二层或更深处时先读它的 `SKILL.md`，需要更细判断时按它自己的强制读取路由继续下沉；每次`CONSULT`带入当前材料、要改变的结果、锁定事实与自由范围，返回具体候选或修稿、方法落点与最早根因，本编剧整合并负责最终内容。
+
+**第一层 Reference**
+
+| 出现的情形 | 必须读取 | 必须得到的决定 |
+|---|---|---|
+| 本次任务的输入、结果或跨阶段边界尚未写清 | [独立使用与交接](references/独立使用与交接.md) | 本次交付身份、输入来源与上下游边界 |
+| 正文含人物台词、旁白、讲戏、平台文案或面向老胡的沟通 | [语言表达](references/语言表达.md) | 动作、台词、讲戏、制作说明各自的领域写法 |
+| 口述故事不完整 | [01_口述故事补全](references/01_口述故事补全.md) | 原有事实、创意留白和必要追问 |
+| 多场共享的观众信息、知情、因果、命名或转场 | [04_叙事视角命名与故事因果](references/04_叙事视角命名与故事因果.md) | 同一故事的发现顺序和共享约束 |
+| 素材之后仍缺故事动力或场景组合 | [06_故事构件拆解与组合语法](references/06_故事构件拆解与组合语法.md) | 状态变化方式与采用依据 |
+| 初稿审阅、局部修复后复验或准备定稿 | [05_剧本语言诊断与反向审稿](references/05_剧本语言诊断与反向审稿.md) | 专业诊断回执、底线与巅峰比较、可交接结论 |
+| 世界观设定需要圈住模型能自由发挥的地方 | [世界观基础设定规范](references/世界观基础设定规范.md) | 世界设定的必要结构与边界 |
+| 需要在少数承重特征之间决定取舍 | [剧本质量取舍](references/剧本质量取舍.md) | 骨架强制与特征择优、描述粒度、承重选择 |
+| 需要专业校准或核对理论来源 | [00_资料来源与专业校准](references/00_资料来源与专业校准.md) | 当前采用方法的依据与适用边界 |
+| 剧集续接与阶段选择 | [外部编剧工作流](references/外部编剧工作流.md) | 电影/舞台与剧集分支的当前阶段 |
+| 需要 story-bible 模板整段套用 | [外部编剧工作流案例](references/外部编剧工作流案例.md) | story-bible 各节的填写约定 |
+| 需要 AI 电影级剧本开发工作流 | [模板_AI电影级剧本开发工作流](references/模板_AI电影级剧本开发工作流.md) | 该工作流的阶段与产出 |
+| 需要把剧本开发拆成可检查的阶段，或判断体量路由 | [模板_阶段门控剧本开发](references/模板_阶段门控剧本开发.md) | 阶段划分、门控条件与体量路由 |
+
+**第二层专业**
+
+| 出现的情形 | 必须读取 | 必须得到的决定 |
+|---|---|---|
+| 用户明确要求记录灵感、查看以前资料或使用指定素材 | [laohu-story-material](skills/laohu-story-material/SKILL.md) | 来源原话、应用原子、检索层级与使用回执 |
+| 点子能否成戏、主题只有口号、故事无法一句话说清 | [laohu-premise-theme](skills/laohu-premise-theme/SKILL.md) | 具体人物困境、可检验的选择与结果、不同因果候选、作品承诺 |
+| 已有开头结尾但中段空、转折突兀、副线与主线脱节 | [laohu-story-structure](skills/laohu-story-structure/SKILL.md) | 事件怎样改变下一条件，场景/段落/全片的推进、高潮与结尾依据 |
+| 人物单薄、对手只挡路、人物突然改变或彼此雷同 | [laohu-character-conflict](skills/laohu-character-conflict/SKILL.md) | 各人的独立目标、关系约束、有效手段、行动过渡与代价 |
+| 一场戏不好看、场面只说不做、细节道具不承重 | [laohu-scene-craft](skills/laohu-scene-craft/SKILL.md) | 现场目标、行动/回应、转折与观众变化、场景进出和段落连接 |
+| 对白、潜台词、角色语言、解说、喜剧、沉默或唱词 | [laohu-dialogue](skills/laohu-dialogue/SKILL.md) | 当前人物能说、能演、会改变对方的对白及话后行动 |
+| 改编媒介、剧本形态、动作表达或不同交付格式 | [laohu-format-adaptation](skills/laohu-format-adaptation/SKILL.md) | 原素材作用如何被当前媒介表达，保持已定内容的可执行稿 |
+| 类型承诺模糊，需要比较同类型结构、高潮、场面功能 | [laohu-american-case-studies](skills/laohu-american-case-studies/SKILL.md) | 类型惯例与本次变化、案例怎样支持或反驳候选，不抄情节组合 |
+| 有鲜活片段，主题与结构还未长出；需要生活观察和群像开发 | [laohu-japanese-screenwriting](skills/laohu-japanese-screenwriting/SKILL.md) | 从人物细节、限制和片段长出的结构，或明确选择结构先行路径 |
+| 类型、情绪、人物欲望和时代处境之间需要取舍 | [laohu-korean-french-screenwriting](skills/laohu-korean-french-screenwriting/SKILL.md) | 适合本作的类型兑现、情绪安排与人物关系路径 |
+| 群像、错失、未发生的承诺、画外事件与日常延续 | [laohu-chekhov-dramaturgy](skills/laohu-chekhov-dramaturgy/SKILL.md) | 各人愿望如何相遇/错开，未完成事件怎样改变关系和未来 |
+| 家庭变动、离开与留下、重复生活、空镜与余波 | [laohu-ozu-screenplay-style](skills/laohu-ozu-screenplay-style/SKILL.md) | 日常程序中的差异、事件与反应的观看位置、结尾生活变化 |
+| 项目定位、一句话提案、梗概、推销或实际行业问题 | [laohu-industry-business](skills/laohu-industry-business/SKILL.md) | 面向指定对象的可信提案、待核验事实与清楚的下一动作 |
+| 连续剧能否持续生长、试播集类型或开发文档不清 | [laohu-series-engine-bible](skills/laohu-series-engine-bible/SKILL.md) | 剧集引擎、人物网、试播集策略与所需开发文档 |
+| 单集/季弧、幕尾、A/B/C线或集间兑现不清 | [laohu-series-structure](skills/laohu-series-structure/SKILL.md) | 单集与季结构、编织次序、幕尾与连续性 |
+| 需要用剧集原始文本校准方法选择 | [laohu-series-case-studies](skills/laohu-series-case-studies/SKILL.md) | 案例机制、成立条件、本作落点与反例 |
+| 半小时/情景喜剧、困境机器、running gag或喜剧装置 | [laohu-sitcom-comedy](skills/laohu-sitcom-comedy/SKILL.md) | 人物困境、升级、铺垫兑现与单多机位适配 |
+| break story、意见处理、编剧室工作或制作修订 | [laohu-writers-room](skills/laohu-writers-room/SKILL.md) | 统一文档链、修改裁决与当前版本影响 |
+| 国产剧策划、分集、长剧改编、中文格式与生产衔接 | [laohu-chinese-series-practice](skills/laohu-chinese-series-practice/SKILL.md) | 按本土任务条件形成的文档与改编判断 |
+| 权力群像、仪式容器、羞辱传递或继承之战式结局 | [laohu-succession-series-writing](skills/laohu-succession-series-writing/SKILL.md) | 控制权与关系代价、容器结构及结局兑现 |
+| 完整剧本已定稿，需要划定执行段落 | [laohu-video-segmentation](skills/laohu-video-segmentation/SKILL.md) | P编号、讲戏、估时、资产需求和接续，不预写段内C摄影 |
+
+**第二层 Reference 直取**
+
+情形已经精确到某一处局部质量缺口时，直接读取对应文件，不必重读整篇综合总则；读完仍要沿其父级链接补齐尚未读取的上层决定。
+
+| 出现的情形 | 必须读取 |
+|---|---|
+| 选题角度、故事种子、传播包装与结尾回响 | [创意开发与主题检验](skills/laohu-premise-theme/references/创意开发与主题检验.md) |
+| 人物欲望、防御、可表演性与关系动力 | [人物行动与连续性](skills/laohu-character-conflict/references/人物行动与连续性.md) |
+| 冲突与结构特征、在不同尺度怎样承重 | [结构尺度与高潮设计](skills/laohu-story-structure/references/结构尺度与高潮设计.md) |
+| 场景功能、动作、道具、空间、声音与停点 | [场面推进与苦难叙事](skills/laohu-scene-craft/references/场面推进与苦难叙事.md) |
+| 台词槽位、句型、声音形状与潜台词 | [本地对白与表演补充](skills/laohu-dialogue/references/本地对白与表演补充.md) |
+| 体量与叙事容量、剧本形态、视听交接与逐段资产需求 | [镜头化剧本与连续性](skills/laohu-format-adaptation/references/镜头化剧本与连续性.md) |
+
+**机械检查**
+
+按下表运行对应脚本，把输出当作门禁而不是参考。
+
+| 出现的情形 | 必须运行 | 必须得到的结论 |
+|---|---|---|
+| 需要分页查找或同步应用故事原子 | [story_atoms.py](scripts/story_atoms.py) 的 `stats` / `search` / `get` / `sync` | 应用原子的候选、详情与同步回执 |
+| 需要故事构件组合与生产型剧本检索 | [story_component_library.py](scripts/story_component_library.py) | 构件候选与采用依据 |
+| 需要真实写入、索引检索、详情读取或 usage 回流 | [story_material_db.py](skills/laohu-story-material/scripts/story_material_db.py) | 分层权威写入回执与检索结果 |
+| 分段方案完成后需要核对原文范围、指纹、覆盖、顺序、时长与引用 | [validate_plan.py](skills/laohu-video-segmentation/scripts/validate_plan.py) | 分段方案的机器结论；机器通过不证明演法或节奏成立 |
 
 ## 编剧箴言
 
@@ -52,35 +121,14 @@ RETURN：导演命题不可写时回总导演；专业设计缺口交对应节�
 
 ## 创作推进与专业判断
 
-| 当前要解决的问题 | 专业能力 | 应形成的创作结果 |
-|---|---|---|
-| 点子能否成戏、主题只有口号、故事无法一句话说清 | [laohu-premise-theme](skills/laohu-premise-theme/SKILL.md) | 具体人物困境、可检验的选择与结果、不同因果候选、作品承诺 |
-| 已有开头结尾但中段空、转折突兀、副线与主线脱节 | [laohu-story-structure](skills/laohu-story-structure/SKILL.md) | 事件怎样改变下一条件，场景/段落/全片的推进、高潮与结尾依据 |
-| 人物单薄、对手只挡路、人物突然改变或彼此雷同 | [laohu-character-conflict](skills/laohu-character-conflict/SKILL.md) | 各人的独立目标、关系约束、有效手段、行动过渡与代价 |
-| 一场戏不好看、场面只说不做、细节道具不承重 | [laohu-scene-craft](skills/laohu-scene-craft/SKILL.md) | 现场目标、行动/回应、转折与观众变化、场景进出和段落连接 |
-| 对白、潜台词、角色语言、解说、喜剧、沉默或唱词 | [laohu-dialogue](skills/laohu-dialogue/SKILL.md) | 当前人物能说、能演、会改变对方的对白及话后行动 |
-| 改编媒介、剧本形态、动作表达或不同交付格式 | [laohu-format-adaptation](skills/laohu-format-adaptation/SKILL.md) | 原素材作用如何被当前媒介表达，保持已定内容的可执行稿 |
-| 类型承诺模糊，需要比较同类型结构、高潮、场面功能 | [laohu-american-case-studies](skills/laohu-american-case-studies/SKILL.md) | 类型惯例与本次变化、案例怎样支持或反驳候选，不抄情节组合 |
-| 有鲜活片段，主题与结构还未长出；需要生活观察和群像开发 | [laohu-japanese-screenwriting](skills/laohu-japanese-screenwriting/SKILL.md) | 从人物细节、限制和片段长出的结构，或明确选择结构先行路径 |
-| 类型、情绪、人物欲望和时代处境之间需要取舍 | [laohu-korean-french-screenwriting](skills/laohu-korean-french-screenwriting/SKILL.md) | 适合本作的类型兑现、情绪安排与人物关系路径 |
-| 群像、错失、未发生的承诺、画外事件与日常延续 | [laohu-chekhov-dramaturgy](skills/laohu-chekhov-dramaturgy/SKILL.md) | 各人愿望如何相遇/错开，未完成事件怎样改变关系和未来 |
-| 家庭变动、离开与留下、重复生活、空镜与余波 | [laohu-ozu-screenplay-style](skills/laohu-ozu-screenplay-style/SKILL.md) | 日常程序中的差异、事件与反应的观看位置、结尾生活变化 |
-| 项目定位、一句话提案、梗概、推销或实际行业问题 | [laohu-industry-business](skills/laohu-industry-business/SKILL.md) | 面向指定对象的可信提案、待核验事实与清楚的下一动作 |
+本节的触发条件、必须读取的文件与应形成的创作结果，全部写在本入口《强制读取路由》的第二层专业表里；命中哪条就读哪条。下列判断顺序说明为什么按这个顺序推进。
 
 每次`CONSULT`带入当前材料、要改变的结果、锁定事实与自由范围；读取该能力四层说明、与问题对应的完整方法和必要案例后作决定。返回具体候选或修稿、使用方法与案例的落点、保护核对或最早根因；本编剧整合并负责最终内容。子能力可指出需要另一个专业判断，由本编剧带同一状态调度，避免不同模块各写一份互不相容的故事。
 
 
 ## 剧集专项路由
 
-| 当前缺口 | 专业能力 | 返回结果 |
-|---|---|---|
-| 连续剧能否持续生长、试播集类型或开发文档不清 | [laohu-series-engine-bible](skills/laohu-series-engine-bible/SKILL.md) | 剧集引擎、人物网、试播集策略与所需开发文档 |
-| 单集/季弧、幕尾、A/B/C线或集间兑现不清 | [laohu-series-structure](skills/laohu-series-structure/SKILL.md) | 单集与季结构、编织次序、幕尾与连续性 |
-| 需要用剧集原始文本校准方法选择 | [laohu-series-case-studies](skills/laohu-series-case-studies/SKILL.md) | 案例机制、成立条件、本作落点与反例 |
-| 半小时/情景喜剧、困境机器、running gag或喜剧装置 | [laohu-sitcom-comedy](skills/laohu-sitcom-comedy/SKILL.md) | 人物困境、升级、铺垫兑现与单多机位适配 |
-| break story、意见处理、编剧室工作或制作修订 | [laohu-writers-room](skills/laohu-writers-room/SKILL.md) | 统一文档链、修改裁决与当前版本影响 |
-| 国产剧策划、分集、长剧改编、中文格式与生产衔接 | [laohu-chinese-series-practice](skills/laohu-chinese-series-practice/SKILL.md) | 按本土任务条件形成的文档与改编判断 |
-| 权力群像、仪式容器、羞辱传递或继承之战式结局 | [laohu-succession-series-writing](skills/laohu-succession-series-writing/SKILL.md) | 控制权与关系代价、容器结构及结局兑现 |
+剧集七项专业的触发条件、必须读取的文件与返回结果，全部写在本入口《强制读取路由》的第二层专业表里；命中哪条就读哪条。
 
 剧集续接与阶段选择读取[上游工作流的本地适配](references/外部编剧工作流.md)，按电影/舞台与剧集分支选择；仅定位需要的部分，不将全部专项依次执行。系列文档优先写入现有故事设计与阶段记录；确有独立交付用途才新增文档。
 
@@ -156,31 +204,15 @@ RETURN：导演命题不可写时回总导演；专业设计缺口交对应节�
 
 ## Reference 路由
 
-每条读取先写清当前未决问题、要读的精确相对文件与章节、应形成的决定；读完要能指出它确认或改变了哪一个具体判断，只记录“已读取”不算激活。
+本层十三份 Reference 的触发条件与应取得的结果，全部写在本入口《强制读取路由》的第一层 Reference 表里；命中哪条就读哪条。
 
-| 触发条件 | 读取 | 应取得的结果 |
-|---|---|---|
-| 需要专业校准或核对理论来源 | [专业校准](references/00_资料来源与专业校准.md) | 当前采用方法的依据与适用边界 |
-| 口述故事不完整 | [口述故事补全](references/01_口述故事补全.md) | 原有事实、创意留白和必要追问 |
-| 多场共享的观众信息、知情、因果、命名或转场 | [叙事视角与故事因果](references/04_叙事视角命名与故事因果.md) | 同一故事的发现顺序和共享约束 |
-| 素材之后仍缺故事动力或场景组合 | [故事构件方法](references/06_故事构件拆解与组合语法.md) | 状态变化方式与采用依据 |
-| 要形成正式剧本或交接资产、音频和视频 | [完整剧本与连续性](skills/laohu-format-adaptation/references/镜头化剧本与连续性.md) | E-S场次、动作因果、相邻状态及完整输出合同 |
-| 初稿审阅、局部修复后复验或准备定稿 | [整稿反审](references/05_剧本语言诊断与反向审稿.md) | 专业诊断回执、底线与巅峰比较、可交接结论 |
+上表之外的缺口按当前未决问题补读，读一条就写清要读的精确相对文件与章节、应形成的决定；读完要能指出它确认或改变了哪一个具体判断，只记录“已读取”不算激活。
 
 ## 质量方法导航与内部专业路由
 
 跨人物、结构、场景、对白的整体质量取舍读取[剧本质量取舍](references/剧本质量取舍.md)：骨架强制与特征择优、描述粒度、承重选择与题材组合语法都在这一份里裁决；综合验收与体裁边界归第 6 包检视官，按[综合验收与体裁边界](../laohu-inspection/skills/laohu-script-inspection/references/综合验收与体裁边界.md)裁决。它不替任何专业写方法，也不重开已确认故事。
 
-整篇综合质量调用指向该文件；人物、对白、场景等局部调用必须直达真正负责人，不重读整篇，也不默认落到综合总则：
-
-| 质量缺口 | 直接读取 |
-|---|---|
-| 选题角度、故事种子、传播包装与结尾回响 | [创意开发与主题检验](skills/laohu-premise-theme/references/创意开发与主题检验.md) |
-| 人物欲望、防御、可表演性与关系动力 | [人物行动与连续性](skills/laohu-character-conflict/references/人物行动与连续性.md) |
-| 冲突与结构特征、在不同尺度怎样承重 | [结构尺度与高潮设计](skills/laohu-story-structure/references/结构尺度与高潮设计.md) |
-| 场景功能、动作、道具、空间、声音与停点 | [场面推进与苦难叙事](skills/laohu-scene-craft/references/场面推进与苦难叙事.md) |
-| 台词槽位、句型、声音形状与潜台词 | [本地对白与表演补充](skills/laohu-dialogue/references/本地对白与表演补充.md) |
-| 体量与叙事容量、剧本形态、视听交接与逐段资产需求 | [镜头化剧本与连续性](skills/laohu-format-adaptation/references/镜头化剧本与连续性.md) |
+整篇综合质量调用指向该文件；人物、对白、场景等局部调用必须直达真正负责人，不重读整篇，也不默认落到综合总则。六处局部质量缺口的直接读取地址写在本入口《强制读取路由》的《第二层 Reference 直取》表里。
 
 ## 剧本交接与验收
 
@@ -203,6 +235,7 @@ RETURN：导演命题不可写时回总导演；专业设计缺口交对应节�
 
 ## 按当前缺口读取的补充方法
 
+第一层 Reference 命中后，按下表列出的章节定位具体读法；命中哪条就读哪条，形成可指认的专业选择，不把整份候选清单机械填入正文。
 - [世界观基础设定规范](references/世界观基础设定规范.md)：当前任务涉及推荐结构、示例时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。
 - [模板_AI电影级剧本开发工作流](references/模板_AI电影级剧本开发工作流.md)：当前任务涉及一、完整流程、二、故事种子模板、三、人物模板时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。
 - [模板_阶段门控剧本开发](references/模板_阶段门控剧本开发.md)：当前任务涉及一、体量路由、二、九步开发流程、三、输出纪律时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。

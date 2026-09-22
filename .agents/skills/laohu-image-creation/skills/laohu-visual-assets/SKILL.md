@@ -71,6 +71,12 @@ description: Use when 老胡 AI 视觉项目需要稳定资产、临时参考或
 
 资产图片可以很美，但它首先要换角度仍是同一个对象；成品图可以只为这一眼成立。两者的验收不能混用。
 
+角色探索图用于选择可见方向，生产资产用于稳定已选身份、服装和结构；二者可衔接，但不互相验收。沿用 F 与 B / W / M 的既有身份及权限，F 的惊艳不直接赋予视频参考资格，生产板也不自动替代海报、叙事首帧或当前场景构图。
+
+多视图、面部近看、全身轮廓、侧后结构和独立道具是否需要，由后续要辨认和复现的属性决定；只有关键结构在现有参考中不可见时才补视角。统一比例、地面接触、衣长、非对称特征和持物方向是检查项，不强制所有人物采用同一 16:9、无头正面或四格版式。
+
+独立反复使用、持有者变化或结构 / 状态变化的道具可单独建立资产；临时湿污、开合、损坏和持物差异继续写入已有状态链。材质词必须对应当前对象的纹理、接缝、反射和磨损，不向所有道具添加划痕、旧化、悬浮 45 度和暗背景。
+
 #### 请求类型路由
 
 图片提示词不是同一个“主体 + 风格 + 画质”模板。先问这张图下一步要控制什么，再选择外壳；同一作品可同时需要多种路由，但每张图只能有一个主要任务：
@@ -281,16 +287,17 @@ W / M资产编译不再兼任完整原创服装设计。出现主要人物首套
 
 | 触发信号 | 读取 | 停止条件 |
 |---|---|---|
-| 需要来源、专家方法或外部人像审美校准 | `references/00_资料来源与专业校准.md` | 证据和借用边界明确 |
+| 需要来源、专家方法或外部人像审美校准 | [资料来源与专业校准](references/00_资料来源与专业校准.md) | 证据和借用边界明确 |
 | 人物、群像、服装状态、识别锚点、第一印象或所属物承重 | [laohu-body-assets / SKILL](skills/laohu-body-assets/SKILL.md) / [laohu-group-assets / SKILL](skills/laohu-group-assets/SKILL.md) / [laohu-prop-assets / SKILL](skills/laohu-prop-assets/SKILL.md) | 身份、状态与所属物职责明确 |
 | 已取得服装设计交接包或锁定服装参考，需要编译W制作板、M穿着结果、季节时间戳和零设计改动验收 | [laohu-costume-assets / SKILL](skills/laohu-costume-assets/SKILL.md) / [laohu-makeup-assets / SKILL](skills/laohu-makeup-assets/SKILL.md) | 设计决定准确进入W/M，职责不越界、制作与调用成立 |
 | 已取得场景与布景设计交接包或锁定场景参考，需要编译S / A、宏大环境、空间拓扑、动态物理或镜头任务 | [laohu-environment-assets / SKILL](skills/laohu-environment-assets/SKILL.md) / [laohu-prop-assets / SKILL](skills/laohu-prop-assets/SKILL.md) / [laohu-visual-assets / SKILL](SKILL.md) / [laohu-storyboard / SKILL](../laohu-storyboard/SKILL.md) | 胜出设计准确进入资产，空间、尺度、路径和对象接口成立 |
 | 美术方向、风格系统或图片提示词 | [laohu-image-prompt / SKILL](../laohu-image-prompt/SKILL.md) / [laohu-image-creation / SKILL](../../SKILL.md) / [laohu-body-assets / SKILL](skills/laohu-body-assets/SKILL.md) / [laohu-costume-assets / SKILL](skills/laohu-costume-assets/SKILL.md) / [laohu-makeup-assets / SKILL](skills/laohu-makeup-assets/SKILL.md) / [laohu-visual-assets / SKILL](SKILL.md) / [laohu-environment-assets / SKILL](skills/laohu-environment-assets/SKILL.md) / [laohu-prop-assets / SKILL](skills/laohu-prop-assets/SKILL.md) / [laohu-image-editing / SKILL](../laohu-image-editing/SKILL.md) | 选定一套服务作品承诺的方案并形成提示词 |
 | 上游叙事灯光合同需要进入静态成品图，或电影 / 逐帧参考只承担灯光关系 | 先消费`laohu-art-direction`的叙事灯光合同，再读取[laohu-image-prompt / SKILL](../laohu-image-prompt/SKILL.md) / [laohu-image-creation / SKILL](../../SKILL.md) / [laohu-body-assets / SKILL](skills/laohu-body-assets/SKILL.md) / [laohu-costume-assets / SKILL](skills/laohu-costume-assets/SKILL.md) / [laohu-makeup-assets / SKILL](skills/laohu-makeup-assets/SKILL.md) / [laohu-visual-assets / SKILL](SKILL.md) / [laohu-environment-assets / SKILL](skills/laohu-environment-assets/SKILL.md) / [laohu-prop-assets / SKILL](skills/laohu-prop-assets/SKILL.md) / [laohu-image-editing / SKILL](../laohu-image-editing/SKILL.md) | 静态受光证据可见；参考职责、推论边界与中性制作资产保护成立 |
-| 任何正式图片、封面、单张成品图或制作资产提示词 | `../laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md` | 已完整执行唯一任务、主注意力、主证据、支撑证据、主动退让与不可丢锚点；区分先验召回、镜头控制与作者解释，并把模型母型、属性绑定和摄影证据编译进正确画框 |
-| 所有含人物的结果图需要把性格、关系与情绪变成可观察的人物状态 | `../../../laohu-video-prompt/skills/laohu-performance/references/人物表演提示词规范.md`；按需查`人物表情与肢体动作词典.md` | 已从人物目的、关系对象、保护或开放状态中选择足以辨认本次变化的承重通道（单一通道可以成立）；词典只提供观察候选，没有按情绪整行套用或把AU当作情绪公式 |
+| 任何正式图片、封面、单张成品图或制作资产提示词 | [视觉生成模型注意力与提示词编译参考](../laohu-image-prompt/references/视觉生成模型注意力与提示词编译参考.md) | 已完整执行唯一任务、主注意力、主证据、支撑证据、主动退让与不可丢锚点；区分先验召回、镜头控制与作者解释，并把模型母型、属性绑定和摄影证据编译进正确画框 |
+| 所有含人物的结果图需要把性格、关系与情绪变成可观察的人物状态 | [人物表演提示词规范](../../../laohu-video-prompt/skills/laohu-performance/references/人物表演提示词规范.md)；按需查`人物表情与肢体动作词典.md` | 已从人物目的、关系对象、保护或开放状态中选择足以辨认本次变化的承重通道（单一通道可以成立）；词典只提供观察候选，没有按情绪整行套用或把AU当作情绪公式 |
 | 真实图片候选、资产验收或封面资产交接 | [laohu-image-creation / SKILL](../../SKILL.md) / [laohu-visual-assets / SKILL](SKILL.md) | 有明确选择、降级或返修结论 |
 | 所有含人物的结果图：F人物主视觉、写真、人像、封面主体、叙事首帧、生活方式英雄帧或已有照片升级 | [references / 06_人物生命感与现场摄影关系](../laohu-portrait/references/06_人物生命感与现场摄影关系.md) | 单帧因果、人物生命感与人物—摄影机—环境关系闭合；B / W / M等纯制作规格板不强加现场叙事外壳 |
+| 已确认首尾参考、状态链变更或局部编辑要进入下游视频输入 | [laohu-video-references / 专业方法与案例](../../../laohu-video-prompt/skills/laohu-video-references/references/专业方法与案例.md) | 取得实际提交映射与逐P输入清单；两端锚点、允许改变的维度、状态继承和最小改动明确 |
 
 ## 资产验收与交接
 
@@ -396,6 +403,17 @@ W / M资产编译不再兼任完整原创服装设计。出现主要人物首套
 ## 当前文本的语言执行
 
 直接接受局部请求时，也按本包[语言表达](../../references/语言表达.md)先判当前文本块的发声者、接收者与任务。保护原话和专业事实；只补不足的请求不得改变已确认内容。遇到混写或冗余时按该文件选择具体方法，完成后回到本专业验收。
+
+## 机械检查
+
+正式资产文件中的 B 与 M 提示词结构由本专业脚本实测：
+
+| 出现的情形 | 必须运行 | 必须得到的结论 |
+|---|---|---|
+| 资产文件写好，需要核对 B 素体、阶段身体与 M 穿着结果的结构 | [validate_character_asset_structure.py](scripts/validate_character_asset_structure.py) 加资产文件路径 | 结构门通过或具体违约项 |
+| 修改过该结构校验脚本本身 | [test_validate_character_asset_structure.sh](scripts/test_validate_character_asset_structure.sh) | `validate_character_asset_structure tests passed` |
+
+机器通过只证明结构字段齐备，不证明设计、身份一致性或像素验收成立。
 
 ## 按当前缺口读取的补充方法
 

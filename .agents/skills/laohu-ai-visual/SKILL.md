@@ -9,7 +9,7 @@ description: 用于澄清AI视觉作品目的、观众与阶段，设计全片�
 
 目的或状态不明时先澄清；叙事路线由总导演设计；歌曲与最终音频进入MV导演；真实结果先归因，再判断是否值得长期更新。
 
-先读[独立使用与交接](references/独立使用与交接.md)，明确本次输入、结果和跨阶段边界。含自然语言沟通或创作正文时先读本包[语言表达](references/语言表达.md)取得领域写法；完整通用规则按 `.agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md` 等唯一正文读取，本包不再另存一套副本。
+先读[独立使用与交接](references/独立使用与交接.md)，明确本次输入、结果和跨阶段边界。含自然语言沟通或创作正文时先读本包[语言表达](references/语言表达.md)取得领域写法；完整通用规则按 `../laohu-language-mode/references/01_模式判定与块级切换.md` 等唯一正文读取，本包不再另存一套副本。
 
 ### 意图理解与父级继承
 
@@ -17,13 +17,58 @@ description: 用于澄清AI视觉作品目的、观众与阶段，设计全片�
 
 本包继承项目顶层规则 `AGENTS.md`（目的、路由、边界、状态、路径与隐私），在本层形成总控自己的专业判断，不要求用户先成为专业需求分析师。能由现有材料与专业方法合理补全的开放选择直接提出或完成；只有会改变核心方向的互斥解释、无法同时成立的事实、用户明确提出的共创取舍，或显著改变成本、权利、公开声称与外部动作时，才停下来讨论，并给出具体差异、代价和下一步。探索、比较和讨论本身可以是本轮交付，不强迫每次对话都产出最终提示词。
 
-按本层判断选择下一层：命中哪条分支就读哪条，不遍历全部专业。用户直接点名某个深层专业时，先沿其父级链接补齐所属链（本包入口与必要的上层决定），再继续当前子任务；补依赖只建立上下文继承，不重新发起同一个任务。各专业结果返回总控整合：核对它们是否保护同一批已确认事实与主胜负手，冲突定位到最早作出该决定的负责人；已读且仍有效的父级与共同方法不重复通读，新会话、缺失、变更或任务事实变化时补读。
+按本层判断选择下一层：命中哪条分支就读取哪条，读取范围以命中行为界，不遍历全部专业；命中的行必须读完再产出本阶段结果。用户直接点名某个深层专业时，先沿其父级链接补齐所属链（本包入口与必要的上层决定），再继续当前子任务；补依赖只建立上下文继承，不重新发起同一个任务。各专业结果返回总控整合：核对它们是否保护同一批已确认事实与主胜负手，冲突定位到最早作出该决定的负责人；已读且仍有效的父级与共同方法不重复通读，新会话、缺失、变更或任务事实变化时补读。
 
-- [老胡总导演](skills/laohu-director/SKILL.md)：作品目的尚未变成观众经历、各部门取舍冲突时进入；交付唯一导演阐述、主胜负手和部门保护项。
-- [老胡 MV 导演](skills/laohu-mv-director/SKILL.md)：歌曲、歌词和最终音频需要形成MV时进入；交付有时间证据的声画路线、表演策略和动态分镜任务。
-- [老胡创意开发](skills/laohu-creative-development/SKILL.md)：目标与事实已清楚但创意只有装饰差异时进入；比较机制不同的候选，返回当前负责人选择。
-- [老胡 AI 视觉能力进化](skills/laohu-capability-evolution/SKILL.md)：反馈或新资料可能改变以后类似任务时进入；定位规则负责人、修改假设并以行为验证决定保留或撤回。
-- [老胡检视官](../laohu-inspection/SKILL.md)：产物进入生成前，或已有真实图片、视频、音频、剪辑和发布数据需要定位第一个断点时进入；交付未满足的条款、问题归属与最早返修负责人，不把设计预期当生成证据。
+### 强制读取路由
+
+本层是路由层，专业方法在下层。下表每行是一条读取义务：情形出现，就在产出本阶段结果之前读取右列文件；命中多行就读完多行。读取为了取得「必须得到的决定」；决定没拿到时继续读该文件，直到拿到为止。右列指向其他包时先读它的 `SKILL.md`，需要更细判断时按它自己的强制读取路由继续下沉。
+
+**第一层 Reference**
+
+| 出现的情形 | 必须读取 | 必须得到的决定 |
+|---|---|---|
+| 需要共享原则与路由地图 | [00_核心规则手册](references/00_核心规则手册.md) | 一条主线、四层与能力地图的唯一负责人 |
+| 需要六包与内部专业的职责、交接和公共字段 | [laohu_skills核心合约](references/laohu_skills核心合约.md) | 二十六个协作节点的责任边界 |
+| 需要五类协作关系、父子继承、逐层读取或活动调用约定 | [能力协作图谱](references/能力协作图谱.md) | HANDOFF／CONSULT／REVIEW／RETURN／SHARED_SOURCE 的适用条件 |
+| 要登记或核对运行时外部 Skill | [外部能力依赖清单](references/外部能力依赖清单.md) | 外部原文、便携副本、本地适配层、调用者、返回负责人和失效处理 |
+| 本次任务的输入、结果或跨阶段边界尚未写清 | [独立使用与交接](references/独立使用与交接.md) | 本次交付身份、输入来源与上下游边界 |
+| 要写导演阐述、部门任务或面向老胡的沟通 | [语言表达](references/语言表达.md) | 观众经历写法与部门任务写法 |
+| 要正式建立作品目录 | [新作品创建与归位流程](references/新作品创建与归位流程.md) | 创建原则、标准目录与归位规则 |
+| 需要作品位置与最小入口目录结构 | [模板_作品项目目录结构](references/模板_作品项目目录结构.md) | 目录分类与“需要什么才建立什么” |
+| 新建作品需要启动包内容源 | [模板_作品项目启动包](references/模板_作品项目启动包.md) | overview、类型区块与 record 的填入内容 |
+| 需要按真实路径查已注册专业 | [能力注册表.json](references/能力注册表.json) | 注册专业的真实路径与安装状态 |
+
+**第二层与跨包专业**
+
+| 出现的情形 | 必须读取 | 必须得到的决定 |
+|---|---|---|
+| 作品目的尚未变成观众经历、各部门取舍冲突 | [laohu-director](skills/laohu-director/SKILL.md) | 唯一导演阐述、主胜负手和部门保护项 |
+| 歌曲、歌词和最终音频需要形成MV | [laohu-mv-director](skills/laohu-mv-director/SKILL.md) | 有时间证据的声画路线、表演策略和动态分镜任务 |
+| 目标与事实已清楚但创意只有装饰差异 | [laohu-creative-development](skills/laohu-creative-development/SKILL.md) | 机制不同的候选与返回对象 |
+| 反馈或新资料可能改变以后类似任务 | [laohu-capability-evolution](skills/laohu-capability-evolution/SKILL.md) | 规则负责人、改动假设与行为验证决定 |
+| 产物进入生成前，或已有真实图片、视频、音频、剪辑和发布数据需要定位第一个断点 | [laohu-inspection](../laohu-inspection/SKILL.md) | 未满足的条款、问题归属与最早返修负责人 |
+| 妆面、发型、毛发、特效妆或连续性需要定案 | [laohu-makeup-design](../laohu-image-creation/skills/laohu-makeup-design/SKILL.md) | 妆发定案正文 |
+| 道具本体、操作结构或图文界面需要设计 | [laohu-prop-design](../laohu-image-creation/skills/laohu-prop-design/SKILL.md) | 道具功能结构与材料状态正文 |
+| 题材视觉归属与美术风格需要定案 | [laohu-art-direction](../laohu-image-creation/skills/laohu-art-direction/SKILL.md) | 形态／色彩／材料／光影体系与相邻题材边界 |
+| 人物为什么长成、站成、动成这样需要定案 | [laohu-character-design](../laohu-image-creation/skills/laohu-character-design/SKILL.md) | 人物母版与妆造补充正文 |
+| 空间为什么这样存在、人物怎样进入和行动需要定案 | [laohu-set-design](../laohu-image-creation/skills/laohu-set-design/SKILL.md) | 空间拓扑、布景与改景／数字延展分工 |
+| 人物、服装或空间需要跨镜复用 | [laohu-visual-assets](../laohu-image-creation/skills/laohu-visual-assets/SKILL.md) | 资产依赖登记、固定项与验收 |
+| 写真、静物、F定调、图像编辑或故事板图像 | [laohu-image-creation](../laohu-image-creation/SKILL.md) | 阶段交接或如实报告缺失输入 |
+| 需要P内C摄影与三段式视频提示词 | [laohu-video-prompt](../laohu-video-prompt/SKILL.md) | P内C、参考绑定与VC复验结果 |
+| 完整剧本已定稿，需要划定执行段落 | [laohu-video-segmentation](../laohu-script-writer/skills/laohu-video-segmentation/SKILL.md) | P执行卡、估时、资产需求与接续 |
+| 电视剧、流媒体剧集、季弧、试播集与情景喜剧 | [laohu-script-writer](../laohu-script-writer/SKILL.md) 的《强制读取路由》第二层专业表 | 剧集引擎、单集／季结构与跨集连续性 |
+| 明确火柴人知识动画 | [laohu-stickman-explainer](../laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/SKILL.md) | 命题转角色行动与可接续的动画事件 |
+| Vox、档案、地图或数据解释 | [laohu-editorial-explainer](../laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/SKILL.md) | 证据编排与时间编排 |
+
+**机械检查**
+
+下表的脚本地址相对于本文件；在仓库根执行时按 `.agents/skills/laohu-ai-visual/` 前缀展开。
+
+| 出现的情形 | 必须运行 | 必须得到的结论 |
+|---|---|---|
+| 需要核对六个包的结构（每个 `SKILL.md` 都有 `name`／`description`、无符号链接） | [check_laohu_skills.sh](scripts/check_laohu_skills.sh) | `package structure: PASS` 或具体违约项 |
+| 要正式新建作品目录 | [create_work_project.sh](scripts/create_work_project.sh) | 按创作链路建立的作品目录与总览 |
+| 需要跨包结构、Reference 与副本同步审计 | [validate_skill_packages.py](../../../scripts/validate_skill_packages.py) 与 `../../../scripts/sync_skill_packages.py --check` | 六包结构与副本一致性结论 |
 
 ## 总控箴言
 
@@ -155,7 +200,7 @@ description: 用于澄清AI视觉作品目的、观众与阶段，设计全片�
 
 ### 总导演路由与网状会商
 
-公开作品、系列首作、重大改版，或同一问题跨多个专业节点且发生真实取舍时，路由到 `laohu-director`。它以`导演阐述`对观众经历、全片主胜负手和部门关系负责；旧有`skills/laohu-director/references/导演级影视创作总控流程.md`成为它按需读取的方法参考，不再以无负责人流程悬在各 Skill 之上。
+公开作品、系列首作、重大改版，或同一问题跨多个专业节点且发生真实取舍时，路由到 `laohu-director`。它以`导演阐述`对观众经历、全片主胜负手和部门关系负责；旧有`skills/laohu-director/references/导演级影视创作总控流程.md`成为它按强制读取路由读取的方法参考，不再以无负责人流程悬在各 Skill 之上。
 
 单一内部资产、确定性格式转换、编号校验、渲染归档，以及已锁定导演阐述下的局部机械返工不调用总导演。歌曲型作品已经由 `laohu-mv-director` 完整承担歌曲时间、声画结构和导演终审时，总导演只处理品牌、系列、最终观众或跨作品约束，不重复建立第二份导演终审。
 
@@ -317,7 +362,7 @@ bash scripts/create_work_project.sh "作品名"
 
 ## 按当前缺口读取的补充方法
 
-每条读取先写清当前未决问题、要读的精确相对文件与章节、应形成的决定；读完要能指出它确认或改变了哪一个具体判断，只记录“已读取”不算激活。全部内部调用使用相对于本文件的路径；跨包读取用仓库根相对地址指向唯一正文，不复制对方正文，也不留失效链接。
+上表之外的缺口按当前未决问题补读，读一条就写清要读的精确相对文件与章节、应形成的决定；读完要能指出它确认或改变了哪一个具体判断，只记录“已读取”不算激活。全部内部调用使用相对于本文件的路径；跨包读取用仓库根相对地址指向唯一正文，不复制对方正文，也不留失效链接。
 
 - [新作品创建与归位流程](references/新作品创建与归位流程.md)：当前任务涉及一、创建原则、二、标准目录、三、归位规则时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。
 - [模板_作品项目目录结构](references/模板_作品项目目录结构.md)：当前任务涉及作品位置与最小入口、需要什么才建立什么、归档与交付时读取相应章节，形成可指认的专业选择；不把整份候选清单机械填入正文。
