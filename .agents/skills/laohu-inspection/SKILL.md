@@ -14,7 +14,7 @@ description: 用于产物进入生成前或真实结果回到项目后，判断�
 生成后  图片 / 视频 / 音频 / 成片 / 发布数据 → 复盘归因 → 能力更新
 ```
 
-先读[独立使用与交接](references/独立使用与交接.md)，明确本次输入、结果和跨阶段边界。含自然语言沟通或检视结论正文时先读本包[语言表达](references/语言表达.md)取得领域写法；完整通用规则按 `.agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md` 等唯一正文读取，本包不再另存一套副本。
+先读[独立使用与交接](references/独立使用与交接.md)，明确本次输入、结果和跨阶段边界。含自然语言沟通或检视结论正文时先读本包[语言表达](references/语言表达.md)取得领域写法；完整通用规则按 `../laohu-language-mode/references/01_模式判定与块级切换.md` 等唯一正文读取，本包不再另存一套副本。
 
 ### 意图理解与父级继承
 
@@ -22,12 +22,54 @@ description: 用于产物进入生成前或真实结果回到项目后，判断�
 
 本包继承项目顶层规则 `AGENTS.md` 的目的、路由、边界、路径与隐私要求，在本层形成自己的专业判断；不要求用户先给专业简报，也不重复整套上游工作。检视范围能由既有条款与真实产物合理确定的直接执行；只有互斥解释、事实冲突、用户明确要求共创，或会显著改变成本、权利与外部动作时，才提少量能区分方向的问题。
 
-按本层判断选择下一层：命中哪条分支就读哪条，不遍历全部专业。用户直接点名某项深层能力时，先沿其父级链接补齐所属链，再继续当前子任务；补依赖只建立上下文继承，不重新发起同一任务。
+按本层判断选择下一层：命中哪条分支就读取哪条，读取范围以命中行为界，不遍历全部专业；命中的行必须读完再给出检视结论。用户直接点名某项深层能力时，先沿其父级链接补齐所属链，再继续当前子任务；补依赖只建立上下文继承，不重新发起同一任务。
 
-- [老胡剧本检视](skills/laohu-script-inspection/SKILL.md)：剧本或场次文本成立后、进入分段之前需要判断格式、镜头粒度与连续性是否达标时进入。
-- [老胡图片提示词检视](skills/laohu-image-prompt-inspection/SKILL.md)：图片提示词写完、尚未投喂生成时判断字段、结构与可执行性是否达标时进入。
-- [老胡视频提示词检视](skills/laohu-video-prompt-inspection/SKILL.md)：视频提示词写完、尚未投喂生成时判断三段式、镜头正文与声音特效是否达标时进入。
-- [老胡生成与发布复盘](skills/laohu-generation-review/SKILL.md)：已有真实图片、视频、音频、剪辑或发布数据，需要定位第一个断点时进入。
+### 强制读取路由
+
+本层是路由层，判据与章节在下层。下表每行是一条读取义务：情形出现，就在给出检视结论之前读取右列文件；命中多行就读完多行。读取为了取得「必须得到的决定」；决定没拿到时继续读该文件，直到拿到为止。右列指向第二层或更深处时先读它的 `SKILL.md`，需要更细判断时按它自己的强制读取路由继续下沉。
+
+**第一层 Reference**
+
+| 出现的情形 | 必须读取 | 必须得到的决定 |
+|---|---|---|
+| 本次检视的输入、结果或跨阶段边界尚未写清 | [独立使用与交接](references/独立使用与交接.md) | 本次检视身份、被检产物来源与交接内容 |
+| 要写面向老胡的检视结论正文 | [语言表达](references/语言表达.md) | 判断在前、依据在后、落到具体条款与位置的写法 |
+| 需要展开格式、内容、信息量与密度的具体判据、正反例或常见误判 | [检视判据](references/检视判据.md) | 逐条可核对的判据与误判边界 |
+| 需要判断问题属于输出问题还是规则问题、或需要确定归口负责人 | [责任划分与路由](references/责任划分与路由.md) | 唯一负责人与返修路由 |
+| 需要逐条核对生成前检查、生成后评分或常见失败对应修正 | [视频生成质量检查清单](references/视频生成质量检查清单.md) | 生成前自检结论或生成后诊断结论 |
+| MV导演的歌曲任务合同、歌曲—视觉结构图、生产时间线或分镜导演卡待检视 | [MV文本完成门](references/MV文本完成门.md) | 结构底线与作品巅峰的逐条未满足项、条款出处与归口 |
+
+**第二层专业**
+
+| 出现的情形 | 必须读取 | 必须得到的决定 |
+|---|---|---|
+| 剧本或场次文本成立后、进入分段之前需要判断格式、镜头粒度与连续性 | [laohu-script-inspection](skills/laohu-script-inspection/SKILL.md) | 未满足项、条款出处、输出／规则问题分类与返工归口 |
+| 图片提示词写完、尚未投喂生成 | [laohu-image-prompt-inspection](skills/laohu-image-prompt-inspection/SKILL.md) | 字段状态、结果身份、专项模块触发与可生成性结论 |
+| 视频提示词写完、尚未投喂生成 | [laohu-video-prompt-inspection](skills/laohu-video-prompt-inspection/SKILL.md) | 三段式、C方头、一镜一事、补充轨与字符边界结论 |
+| 已有真实图片、视频、音频、剪辑或发布数据，需要定位第一个断点 | [laohu-generation-review](skills/laohu-generation-review/SKILL.md) | 证据分级、首断点归因、保护项与最早返修负责人 |
+
+**第三层专项**
+
+情形已经精确到下表某一项时直接读取该文件；读完仍要沿它写明的父级链接补齐尚未读取的上层决定。
+
+| 出现的情形 | 必须读取 |
+|---|---|
+| 已有音频的漏词、发音、身份、表演、声场或技术异常待诊断 | [laohu-audio-review](skills/laohu-generation-review/skills/laohu-audio-review/SKILL.md) |
+| 已有剪辑或成片的事件理解、等待兑现、切点或导出质量待诊断 | [laohu-edit-review](skills/laohu-generation-review/skills/laohu-edit-review/SKILL.md) |
+| 已有真实图片的身份、结构、参考转译、注意力或像素质量待诊断 | [laohu-image-review](skills/laohu-generation-review/skills/laohu-image-review/SKILL.md) |
+| 已有发布数据或明确用户反馈，需要判断入口、观看兑现或行动转化 | [laohu-release-review](skills/laohu-generation-review/skills/laohu-release-review/SKILL.md) |
+| 已有生成视频的动作、身份、空间、声画或批次连续性待诊断 | [laohu-video-review](skills/laohu-generation-review/skills/laohu-video-review/SKILL.md) |
+
+**机械检查**
+
+下表的脚本地址相对于本文件；在仓库根执行时按 `.agents/skills/laohu-inspection/` 前缀展开。
+
+| 出现的情形 | 必须运行 | 必须得到的结论 |
+|---|---|---|
+| 视频提示词需要检查三段式结构、C方头、标签与字符 | [validate_video_prompt_structure.sh](scripts/validate_video_prompt_structure.sh) | 结构门通过或具体违约项 |
+| 需要确认正文与剥离标签后的长度 | [count_video_prompt_chars.sh](scripts/count_video_prompt_chars.sh) | 两个口径的实际字符数 |
+| 要按选定模型核对段内标签词法 | [video_prompt_lexing.py](scripts/video_prompt_lexing.py)，`--profile` 按选定模型填 `seedance`、`h3` 或 `kling` | `syntax_status` 及未核验项的如实标注 |
+| 修改过结构校验脚本或字符统计脚本本身 | [test_validate_video_prompt_structure.sh](scripts/test_validate_video_prompt_structure.sh) 与 [test_count_video_prompt_chars.sh](scripts/test_count_video_prompt_chars.sh) | 两个自测脚本的实际通过结论 |
 
 ## 检视箴言
 
@@ -74,19 +116,7 @@ description: 用于产物进入生成前或真实结果回到项目后，判断�
 
 ## 按真实缺口调用
 
-先确定本次承重结果，再按下表只调用必要专业；每次 CONSULT 记录输入、保护项、提取机制、被改变的决定和成品落点。CONSULT 结果返回实际调用者。直接点名的局部请求只需当前判断所必需的事实，不强制先建立完整父合同或整部作品。已确认选择不重开，没有缺口不全量读取。
-
-| 缺口 | 子能力 | 必须返回 |
-|---|---|---|
-| 剧本格式、△镜头粒度、连续性或出场状态待检视 | [剧本检视](skills/laohu-script-inspection/SKILL.md) | 逐条未满足项、条款出处、输出／规则分类与归口 |
-| 图片提示词的字段、结构、专项触发或可执行性待检视 | [图片提示词检视](skills/laohu-image-prompt-inspection/SKILL.md) | 逐条未满足项、条款出处、输出／规则分类与归口 |
-| 视频提示词的三段式、C方头、镜头正文或声音特效待检视 | [视频提示词检视](skills/laohu-video-prompt-inspection/SKILL.md) | 逐条未满足项、条款出处、输出／规则分类与归口 |
-| MV 导演的歌曲任务合同、歌曲—视觉结构图、生产时间线或分镜导演卡待检视 | [MV文本完成门](references/MV文本完成门.md) | 结构底线与作品巅峰逐条未满足项、条款出处与归口 |
-| 已有真实图片的身份、结构、参考转译、注意力或像素质量待诊断 | [图片评审](skills/laohu-generation-review/skills/laohu-image-review/SKILL.md) | 实际观察、证据尺度、首断点、保护项与返修负责人 |
-| 已有生成视频的动作、身份、空间、声画或批次连续性待诊断 | [视频评审](skills/laohu-generation-review/skills/laohu-video-review/SKILL.md) | 实际首失配时点、绑定／输入排查、状态等式与限定实验建议 |
-| 已有音频的漏词、发音、身份、表演、声场或技术异常待诊断 | [音频评审](skills/laohu-generation-review/skills/laohu-audio-review/SKILL.md) | 实际文件／时点、文本对照、声线演法／声场／技术分层诊断 |
-| 已有剪辑或成片的事件理解、等待兑现、切点或导出质量待诊断 | [成片评审](skills/laohu-generation-review/skills/laohu-edit-review/SKILL.md) | 首看记录、实际接口卡、剪点／声画证据、交付 QC 与优先返修 |
-| 已有发布数据或明确用户反馈，需要判断入口、观看兑现或行动转化 | [发布复盘](skills/laohu-generation-review/skills/laohu-release-review/SKILL.md) | 平台窗口／分母／来源、漏斗断点、混杂解释与最小验证假设 |
+先确定本次承重结果，再按本入口《强制读取路由》命中行调用必要专业；每次 CONSULT 记录输入、保护项、提取机制、被改变的决定和成品落点。CONSULT 结果返回实际调用者。直接点名的局部请求只需当前判断所必需的事实，不强制先建立完整父合同或整部作品。已确认选择不重开，未命中的专业不读取。
 
 ## 接力与返回
 
@@ -120,7 +150,7 @@ bash .agents/skills/laohu-inspection/scripts/test_count_video_prompt_chars.sh
 
 ## 按当前缺口读取的补充方法
 
-每条读取先写清当前未决问题、要读的精确相对文件与章节、应形成的决定；读完要能指出它确认或改变了哪一个具体判断，只记录「已读取」不算激活。
+上表之外的缺口按当前未决问题补读，读一条就写清要读的精确相对文件与章节、应形成的决定；读完要能指出它确认或改变了哪一个具体判断，只记录「已读取」不算激活。
 
 - [检视判据](references/检视判据.md)：当前任务需要展开格式、内容、信息量与密度的具体判据、正反例或常见误判时读取相应章节。
 - [责任划分与路由](references/责任划分与路由.md)：当前任务需要判断问题属于输出问题还是规则问题、或需要确定归口负责人时读取相应章节。

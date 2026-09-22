@@ -112,7 +112,7 @@ python3 scripts/update_skills_readme_tree.py
 
 ## 六包实际文件树
 
-下面按当前磁盘列出正式方法文件。目录后的说明标明用途，Skill名称后的中文名称来自实际入口。隐藏缓存和私有原子逐条数据不列入方法清单；应用原子请看上方专门目录。本树是当前实际文件集合，不是目标图；已撤除副本的去向见本文说明与 `04_诊断与系统日志/完整目录树.md`。
+下面按当前磁盘列出正式方法文件。目录后的说明标明用途，Skill名称后的中文名称来自实际入口。隐藏缓存和私有原子逐条数据不列入方法清单；应用原子请看上方专门目录。本树是当前实际文件集合，不是目标图；已撤除副本的去向见本文说明与 `../../04_诊断与系统日志/完整目录树.md`。
 
 <details>
 <summary>项目总控：laohu-ai-visual（含5个Skill入口）</summary>
@@ -947,7 +947,10 @@ laohu-video-prompt/
 │   │   │   ├── 视频不变骨架资产.md  不变骨架资产
 │   │   │   ├── 视频提示词机制与描述粒度.md  特征资产的描述粒度
 │   │   │   ├── 主观镜头与POV写法.md
-│   │   │   └── 镜头特征取舍.md
+│   │   │   ├── 镜头特征取舍.md
+│   │   │   ├── Kling段内标签.md  Kling 段内标签
+│   │   │   ├── MiniMax_H3段内标签.md  MiniMax H3 段内标签
+│   │   │   └── 三段式模型标签与引用映射.md
 │   │   └── SKILL.md  触发、主责、流程与方法路由
 │   └── laohu-video-references/  老胡视频参考与资产绑定
 │       ├── references/  按需读取的专业方法、案例与合同
@@ -998,7 +1001,8 @@ laohu-inspection/
 │   ├── count_video_prompt_chars.sh
 │   ├── test_count_video_prompt_chars.sh
 │   ├── test_validate_video_prompt_structure.sh
-│   └── validate_video_prompt_structure.sh
+│   ├── validate_video_prompt_structure.sh
+│   └── video_prompt_lexing.py
 ├── skills/  内部专业，每项有自己的入口与验收
 │   ├── laohu-generation-review/
 │   │   ├── agents/  宿主识别元数据
