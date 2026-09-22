@@ -72,7 +72,7 @@ class DirectorArchitectureTests(unittest.TestCase):
             ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
             "输入输出索引.md",
         )
-        self.assertIn("二十二个", text)
+        self.assertIn("二十六个", text)
         self.assertIn("laohu-director", text)
         for anchor in (
             "公开作品",
@@ -103,8 +103,8 @@ class DirectorArchitectureTests(unittest.TestCase):
             ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/SKILL.md",
             ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/SKILL.md",
             ".agents/skills/laohu-video-prompt/SKILL.md",
-            ".agents/skills/laohu-video-prompt/references/交接与验收.md",
-            ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md",
+            ".agents/skills/laohu-video-prompt/references/交接与路由.md",
+            ".agents/skills/laohu-inspection/skills/laohu-generation-review/SKILL.md",
             ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/SKILL.md",
         )
         for anchor in (

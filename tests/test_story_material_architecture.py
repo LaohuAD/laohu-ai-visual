@@ -103,7 +103,7 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
         self.assertIn("未经老胡确认不得进入剧本或长期素材库", material)
 
     def test_review_returns_material_evidence_to_the_material_owner(self) -> None:
-        review = self.read(".agents/skills/laohu-ai-visual/skills/laohu-generation-review/references/交接与验收.md")
+        review = self.read(".agents/skills/laohu-inspection/skills/laohu-generation-review/references/交接与验收.md")
         self.assertIn("素材选择", review)
         self.assertIn("laohu-story-material", review)
         self.assertIn("usage", review)
@@ -133,7 +133,7 @@ class StoryMaterialArchitectureTests(unittest.TestCase):
             self.assertIn("laohu-story-material", text, relative)
             self.assertIn("laohu-director", text, relative)
             self.assertIn("laohu-language-mode", text, relative)
-            self.assertTrue("五个" in text or "二十二" in text, relative)
+            self.assertTrue("六个" in text or "二十六" in text, relative)
 
 
 if __name__ == "__main__":

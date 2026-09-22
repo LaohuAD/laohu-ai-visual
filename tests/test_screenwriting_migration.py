@@ -33,7 +33,7 @@ class ScreenwritingMigrationTests(unittest.TestCase):
     def test_complete_methods_and_original_references(self):
         for m in self.data['modules']:
             with self.subTest(module=m['module']):
-                dst = ROOT / m['dst']; text = read_before(dst); heading = m['methods_start_heading']
+                dst = physical_path(m['dst'], ROOT); text = read_before(dst); heading = m['methods_start_heading']
                 body = text[text.index(heading):]
                 self.assertEqual(sha(body), m['body_sha256'])
                 source = ROOT / m['src']
@@ -45,7 +45,7 @@ class ScreenwritingMigrationTests(unittest.TestCase):
                         self.assertIn(edit['from'], original)
                         original = original.replace(edit['from'], edit['to'])
                     self.assertEqual(body, original)
-                ref = dst.parent / 'reference.md'
+                ref = dst.parent / 'references' / 'reference.md'
                 if m['reference_sha256']:
                     self.assertEqual(sha(read_before(ref)), m['reference_sha256'])
                 else:

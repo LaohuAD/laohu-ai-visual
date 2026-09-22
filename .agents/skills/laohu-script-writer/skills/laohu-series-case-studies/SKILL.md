@@ -1,6 +1,6 @@
 ---
 name: laohu-series-case-studies
-description: 需要从剧集原始剧本案例验证引擎、试播集留白、群像编织、半小时装置或终集工程时使用；形成引擎、结构、对白或编剧主责，不让案例另开一份故事。
+description: 需要从剧集原始剧本案例验证引擎、试播集留白、群像编织、半小时装置或终集工程时使用；形成案例位置、机制、适用条件、本作改动落点与最强反例，不让案例另开一份故事。原剧台词、人物与独特场面不直接复制进原创作品。
 ---
 
 # 老胡剧集案例研究
@@ -30,7 +30,7 @@ description: 需要从剧集原始剧本案例验证引擎、试播集留白、�
 
 **范例库**：每案例给"这是什么文本／结构数据／可迁移手法"。原理见 `laohu-series-structure`、`laohu-series-engine-bible`、`laohu-writers-room`、`laohu-sitcom-comedy`；《继承之战》单列为 `laohu-succession-series-writing`。
 
-只用一手文本。**凡剧本无幕标记、由分析者按篇幅与转折反推的幕界，一律标注"推断"。** 逐集表、幕页表、节拍表、线网格、长引文分三个文件：四部英语剧本集（West Wing／Sopranos／Downton／Fleabag）见 [reference.md](reference.md)；方法书里的 pilot 节拍表与 beat sheet 实物（Calvisi 八个 pilot、Landau 47 部剧结构总表、Miller 的两场 escalation 与四份学生 outline、Goldberg & Rabkin 的 beat sheet）见 [reference-pilots.md](reference-pilots.md)；日韩两部文本（坂元裕二、卢熙京）见 [reference-asia.md](reference-asia.md)。
+只用一手文本。**凡剧本无幕标记、由分析者按篇幅与转折反推的幕界，一律标注"推断"。** 逐集表、幕页表、节拍表、线网格、长引文分三个文件：四部英语剧本集（West Wing／Sopranos／Downton／Fleabag）见 [reference.md](references/reference.md)；方法书里的 pilot 节拍表与 beat sheet 实物（Calvisi 八个 pilot、Landau 47 部剧结构总表、Miller 的两场 escalation 与四份学生 outline、Goldberg & Rabkin 的 beat sheet）见 [reference-pilots.md](references/reference-pilots.md)；日韩两部文本（坂元裕二、卢熙京）见 [reference-asia.md](references/reference-asia.md)。
 ## 按任务读哪几节（不要通读）
 
 这是案例库，**不要从头读**。按你要找的东西直接跳：
@@ -41,7 +41,7 @@ description: 需要从剧集原始剧本案例验证引擎、试播集留白、�
 | pilot 建立什么、留白什么 | 二（Sopranos） |
 | 多线群像怎么编织（8–12 条） | 三（Downton） |
 | 半小时六集季的模板 | 四（Fleabag） |
-| 某部剧 pilot 的逐分钟节拍 | 五 → 表在 reference-pilots.md |
+| 某部剧 pilot 的逐分钟节拍 | 五 → 表在 references/reference-pilots.md |
 | 某部剧是几幕、premise 还是 non-premise | 六（47 部剧总表） |
 | 一场戏怎么逐拍升级 | 七（Miller） |
 | beat sheet 实物长什么样 | 八（Goldberg & Rabkin） |
@@ -102,7 +102,7 @@ Chase 等《The Sopranos: Selected Scripts from Three Seasons》（Warner Books,
 Fellowes《Downton Abbey: The Complete Scripts, Season Two》：**带 419 条作者脚注的完整拍摄剧本集**，Ep1–8＋圣诞特辑。**有 ITV 广告分幕的 ACT 标记**，幕数不等：**Ep1 六幕、Ep2–5 四幕、Ep6 五幕、Ep7 五幕、Ep8 六幕、特辑七幕**。脚注比剧本更稀缺——全批材料里唯一"作者边注自己"的文本。
 
 - **场数**：Ep1 Sc 1–71／Ep3 1–73／Ep4 1–60／Ep5 1–61／Ep6 1–64A／Ep7 1–56／Ep8 1–77／**特辑 1–110**。本季剧本"太长"，ITV 允许 70–75 分钟，结果多插一次广告、观众抱怨，**第三季回到严格一小时**（时效：2011–12 年 ITV 档期）。
-- **19 条线的网格**（全表见 reference.md）：同时在跑——Ep1 十条、Ep5 十二条、Ep6 十一条、Ep8 十一条、特辑九条。
+- **19 条线的网格**（全表见 references/reference.md）：同时在跑——Ep1 十条、Ep5 十二条、Ep6 十一条、Ep8 十一条、特辑九条。
 - **群戏规格（脚注 326）**：午餐、晚餐、客厅戏"always have to **advance about six or seven stories at the same time, often by no more than a line**"（同时推进六七条线，每条常常只给一句台词）。
 - **act out 只有四型**：越界的请求（收买女仆）／一句话说出隐藏事实（"He is standing."）／Dowager 式按钮（"I have a cold."）／一个身体事实（尸体、手铐、崩溃大哭、登台读经）。
 - **杀角色的规则**：不能一个常驻都不死；死者必须观众熟悉且喜爱——"**It's like a whodunit. The killer has to be someone who was there all the time.**"；并**故意误导观众猜错死者**。
@@ -139,7 +139,7 @@ Waller-Bridge《Fleabag: The Scriptures》（Sceptre, 2019）：两季 **12 集�
 
 ## 五、Calvisi 的八个 pilot 逐分钟节拍表
 
-> 八个 pilot 的逐拍表（节拍名 → 分钟刻度）见 [reference-pilots.md](reference-pilots.md) 第五节。
+> 八个 pilot 的逐拍表（节拍名 → 分钟刻度）见 [reference-pilots.md](references/reference-pilots.md) 第五节。
 
 Calvisi《Story Maps: TV Drama》的 CASE STUDIES：八个 pilot 的 beat sheet，**每拍前的数字是分钟数**。作者自划的方法边界必须同引：据**成片逐拍转写**（"transcribed as I watched them"）、**一分钟≈一页**、多数只留路标拍。所以它是**成片结构的测量值而非剧本事实**；无幕标的剧里幕界是他自插的**推断**——"I've inserted my own act breaks… in what feel like the natural positions."
 
@@ -164,9 +164,9 @@ Calvisi《Story Maps: TV Drama》的 CASE STUDIES：八个 pilot 的 beat sheet�
 
 ## 六、Landau 结构总表的读法
 
-> 47 部剧的七栏全表见 [reference-pilots.md](reference-pilots.md) 第六节。
+> 47 部剧的七栏全表见 [reference-pilots.md](references/reference-pilots.md) 第六节。
 
-Landau《The TV Showrunner's Roadmap》（第一版）附录 **"Top Television Series by Structure"**：**47 部剧**，七栏＝剧名｜年｜format｜network｜structure｜pilot 类型（premise／non-premise／hybrid）｜showrunner。**文本身份警告**：该页扫描件被旋转、OCR 乱码，笔记按可辨认部分还原，**表里的空格是"读不出来"而非"书上没有"**。全表见 reference-pilots.md。
+Landau《The TV Showrunner's Roadmap》（第一版）附录 **"Top Television Series by Structure"**：**47 部剧**，七栏＝剧名｜年｜format｜network｜structure｜pilot 类型（premise／non-premise／hybrid）｜showrunner。**文本身份警告**：该页扫描件被旋转、OCR 乱码，笔记按可辨认部分还原，**表里的空格是"读不出来"而非"书上没有"**。全表见 references/reference-pilots.md。
 
 - **幕数分布**：`teaser＋4 幕`是一小时剧众数（Breaking Bad、CSI、Law & Order、Mad Men、The West Wing、The X-Files、ER 等）；`teaser＋5 幕`（Friday Night Lights、Parenthood、Touch；Justified 再加 tag）；**6 幕无 teaser**（Grey's Anatomy、Once Upon a Time、Revenge、Rizzoli & Isles）；**Scandal 是"6 幕，短的第一幕充当 teaser，之后打片名卡"**；**Royal Pains 7 幕**（全表最多）；付费有线与流媒体大量"**无 act break**"（Deadwood、Dexter、Downton Abbey、Game of Thrones、Homeland、House of Cards、Weeds、The Sopranos 等）。Sitcom：`cold open＋2 幕＋tag`（Big Bang Theory、Two and a Half Men）、`cold open＋2 幕`（The Office）、`4 幕短第一幕`（Modern Family）。
 - **premise vs non-premise 更有用**：标 **premise** 的多是"世界要从零建立"的剧（24、American Horror Story、Breaking Bad、Deadwood、Lost、Revenge、The Sopranos、The X-Files＋三部 sitcom）；标 **non-premise**（典型集型）的多是 procedural 与群像（CSI、Dexter、**Downton Abbey**、Game of Thrones、Law & Order、Modern Family、The Office、Scandal、**The West Wing**）；**只有两部标 hybrid**：Damages 与 The Walking Dead。
@@ -186,7 +186,7 @@ Landau《The TV Showrunner's Roadmap》（第一版）附录 **"Top Television S
 
 ## 七、Miller：两场的逐拍拆解与四份学生 pilot outline
 
-> 两场 escalation 的逐条表与四份学生 outline 的幕场数见 [reference-pilots.md](reference-pilots.md) 第七节。
+> 两场 escalation 的逐条表与四份学生 outline 的幕场数见 [reference-pilots.md](references/reference-pilots.md) 第七节。
 
 Miller《The Hero Succeeds》第 9 章给出**场结构五件套**（hero's want／obstacle／escalations／decision／resolution，改编自 ER 编剧 Lance Gentile）并附两份逐条 escalation 拆解；附录收**四份学生 pilot outline 实物**（编号场、标准 scene heading、幕标记、人物首次出现全大写带 thumbnail、几乎不写对白）。两场的时长与拍数是**作者看片计数所得**；六个 landmark 在 outline 里的落点是**按模型反推的推断**。
 
@@ -206,7 +206,7 @@ Miller《The Hero Succeeds》第 9 章给出**场结构五件套**（hero's want
 
 ## 八、Goldberg & Rabkin 的附录 beat sheet（实物）
 
-> 三份 beat sheet 的逐幕场表见 [reference-pilots.md](reference-pilots.md) 第八节。
+> 三份 beat sheet 的逐幕场表见 [reference-pilots.md](references/reference-pilots.md) 第八节。
 
 《Successful Television Writing》附录 D–I：**四份实物 beat sheet ＋两份 leave-behind**，其中两份把**同一集的 leave-behind 与 beat sheet 并排印出**，可逐字看"一页纸的故事区域"怎么长成三十场的分场大纲。抬头用词就是稿次：`Story Area`→`Rough Beat Sheet`→`First Draft Beat Sheet`→`Revised Outline`。两条行业事实（时效 1990s 末–2000s 初）：**beat sheet 没有统一格式，跟着 showrunner 的习惯走**；"you get paid whether the script is shot or not!"
 
@@ -237,7 +237,7 @@ Miller《The Hero Succeeds》第 9 章给出**场结构五件套**（hero's want
 
 ## 九、坂元裕二《花束般的恋爱》：对话驱动关系剧
 
-> 场次统计表、五年时间线与范例见 [reference-asia.md](reference-asia.md) 第九节。
+> 场次统计表、五年时间线与范例见 [reference-asia.md](references/reference-asia.md) 第九节。
 
 > **注明媒介：这是一部电影剧本**（2021 年上映，导演土井裕泰；蕾克译，一頁 folio 2022.12）。**没有集、没有幕、没有 act out**，不能当剧集结构范本。放进本库的理由：作者是日本最重要的电视连续剧编剧之一（《东京爱情故事》《Mother》《最高の離婚》《カルテット》《大豆田とわ子と三人の元夫》），这是他"对话驱动关系剧"最浓缩可拆的样本。下文的"隐形三幕"是**按篇幅反推的推断**。
 
@@ -263,7 +263,7 @@ Miller《The Hero Succeeds》第 9 章给出**场结构五件套**（hero's want
 ## 十、卢熙京《世间最美丽的离别》：家庭临终剧
 
 > **注明文本身份**：手上的文本是韩国电视编剧卢熙京（노희경，《没关系，是爱情啊》《他们生活的世界》）同名剧的**小说化改编本**（改编李圣淑，刘悦译，中信出版社 2016.4，正文 244 页；版权页 "Copyright 2010 by NOH HEE KYONG"）。**不是剧本**：无场景标题、无 S# 编号、无动作提示行，是第三人称全知小说体。**全书未提播出台、年份、集数**，任何"对应几集"都是推断。
-> 七章逐章结构表、章首引语装置、四集映射（推断）、家庭冲突网与范例见 [reference-asia.md](reference-asia.md) 第十节。
+> 七章逐章结构表、章首引语装置、四集映射（推断）、家庭冲突网与范例见 [reference-asia.md](references/reference-asia.md) 第十节。
 
 - **篇幅曲线 33／32／30／26／32／44／19 页**：第四章（宣告将死）最短，第六章（一家人各自准备告别）最长 44 页，第七章（实际的死）最短 19 页。→ **越接近死亡，描写越省；最长的一章是"准备"，不是"死"。**
 - **章首引语装置**：每章正文前一整页只印对白、不印叙述，引的是该章稍后会完整出现的一段对话；永远是两人以上的一次拒绝或一次宣告，没有一条是抒情。它给的是本章的**价值句**而非情节钩子——观众已知结局，张力来自"这句话会怎么被说出来"。转成剧集就是每集片头 30 秒只放该集后段的一段对白，不放画面。
@@ -310,6 +310,10 @@ Miller《The Hero Succeeds》第 9 章给出**场结构五件套**（hero's want
 | 把高潮往下压一级；用罪感（我曾是谁的遗憾）驱动 | 卢熙京后记 | `laohu-premise-theme`／`laohu-character-conflict` |
 
 > 《继承之战》的隐形幕判据、容器集、季形对称与结局工程见 `laohu-succession-series-writing`；国产剧分集大纲体量与审查节点见 `laohu-chinese-series-practice`；日韩法编剧传统见 `laohu-japanese-screenwriting` 与 `laohu-korean-french-screenwriting`（本库第九、十节是它们的案例补充）；电影案例见 `laohu-american-case-studies`。
+
+## 调用与返回
+
+可由明确点名直接使用，也可由[编剧](../../SKILL.md)按当前缺口调用。直接命中本专业时先沿该链接补齐已确认故事事实、冻结文字与允许变化范围，只补依赖，不重新发起父级任务。CONSULT返回局部结果，作品主责不转移；缺少上游事实时RETURN最早负责人，不自行改写剧情。需要跨专业判断时只传当前问题和保护项，不重新运行整条创作链。
 
 ## 当前文本的语言执行
 

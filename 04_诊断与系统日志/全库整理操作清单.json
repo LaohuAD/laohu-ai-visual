@@ -1,0 +1,1113 @@
+{
+  "schema_version": 2,
+  "document_version": "LAOHU-INTENT-RECURSIVE-CANONICAL-20260921-v2.0",
+  "repository": "LaohuAD/laohu-ai-visual",
+  "branch": "refine/skills-architecture-consolidation",
+  "baseline_commit": "c7fed3012bf24cdf5600de20b365399ad3f83717",
+  "mode": "PLAN_ONLY",
+  "operation_count": 62,
+  "operation_ids": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "H01",
+    "R01",
+    "R02",
+    "D-L01",
+    "D-L02",
+    "D-L03",
+    "D-L04",
+    "D-L05",
+    "D-L06",
+    "D-L07",
+    "D-L08",
+    "D-L09",
+    "D-L10",
+    "D-L11",
+    "D-L12",
+    "D-L13",
+    "D-L14",
+    "D-L15",
+    "D-L16",
+    "D-L17",
+    "D-L18",
+    "D-L19",
+    "D-L20",
+    "D-R01",
+    "D-R02",
+    "D-R03",
+    "D-R04",
+    "D-R05",
+    "D01",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "I01",
+    "I02",
+    "S00",
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "V01",
+    "V02",
+    "V03",
+    "V04",
+    "V05",
+    "V06",
+    "GROW01",
+    "T01",
+    "T02",
+    "T03",
+    "T04"
+  ],
+  "expected_skill_count": 119,
+  "disclosed_target_count": 614,
+  "disclosed_targets_sha256": "ab832180c2005212f9f33086a64247b5200c74bd99eaf67c8f9367cb1776f9ba",
+  "manifest_copy_policy": {
+    "path": "04_诊断与系统日志/五包迁移清单.json",
+    "array": "copies",
+    "source_field": "source",
+    "target_field": "target"
+  },
+  "new_files": {
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/用途权重与质量取舍.md": "合并原则、用途取舍、最终验收；不合并机制、词汇、模板与出处",
+    ".agents/skills/laohu-script-writer/references/剧本质量取舍与综合验收.md": "综合质量与跨专业组合判断真源",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/镜头特征取舍与质量验收.md": "视频主任务与特征取舍的完整决策方法",
+    "tests/test_canonical_method_layout.py": "本轮唯一新增结构与语义回归集合",
+    "04_诊断与系统日志/全库整理操作清单.json": "本轮可验证地址与段落映射，不是运行知识库"
+  },
+  "retire_after_merge": {
+    ".agents/skills/laohu-ai-visual/references/语言模式/01_模式判定与块级切换.md": "D-L01",
+    ".agents/skills/laohu-ai-visual/references/语言模式/02_用户沟通与制作说明.md": "D-L02",
+    ".agents/skills/laohu-ai-visual/references/语言模式/03_剧本文本块语言.md": "D-L03",
+    ".agents/skills/laohu-ai-visual/references/语言模式/04_资产图片视频与声音提示词桥接.md": "D-L04",
+    ".agents/skills/laohu-ai-visual/references/语言模式/05_有效信息与冗余裁决.md": "D-L05",
+    ".agents/skills/laohu-script-writer/references/语言模式/01_模式判定与块级切换.md": "D-L06",
+    ".agents/skills/laohu-script-writer/references/语言模式/02_用户沟通与制作说明.md": "D-L07",
+    ".agents/skills/laohu-script-writer/references/语言模式/03_剧本文本块语言.md": "D-L08",
+    ".agents/skills/laohu-script-writer/references/语言模式/04_资产图片视频与声音提示词桥接.md": "D-L09",
+    ".agents/skills/laohu-script-writer/references/语言模式/05_有效信息与冗余裁决.md": "D-L10",
+    ".agents/skills/laohu-image-creation/references/语言模式/01_模式判定与块级切换.md": "D-L11",
+    ".agents/skills/laohu-image-creation/references/语言模式/02_用户沟通与制作说明.md": "D-L12",
+    ".agents/skills/laohu-image-creation/references/语言模式/03_剧本文本块语言.md": "D-L13",
+    ".agents/skills/laohu-image-creation/references/语言模式/04_资产图片视频与声音提示词桥接.md": "D-L14",
+    ".agents/skills/laohu-image-creation/references/语言模式/05_有效信息与冗余裁决.md": "D-L15",
+    ".agents/skills/laohu-video-prompt/references/语言模式/01_模式判定与块级切换.md": "D-L16",
+    ".agents/skills/laohu-video-prompt/references/语言模式/02_用户沟通与制作说明.md": "D-L17",
+    ".agents/skills/laohu-video-prompt/references/语言模式/03_剧本文本块语言.md": "D-L18",
+    ".agents/skills/laohu-video-prompt/references/语言模式/04_资产图片视频与声音提示词桥接.md": "D-L19",
+    ".agents/skills/laohu-video-prompt/references/语言模式/05_有效信息与冗余裁决.md": "D-L20",
+    ".agents/skills/laohu-ai-visual/scripts/render_delivery_html.py": "D-R01",
+    ".agents/skills/laohu-script-writer/scripts/render_delivery_html.py": "D-R02",
+    ".agents/skills/laohu-image-creation/scripts/render_delivery_html.py": "D-R03",
+    ".agents/skills/laohu-video-prompt/scripts/render_delivery_html.py": "D-R04",
+    ".agents/skills/laohu-language-mode/scripts/render_delivery_html.py": "D-R05",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/构图层次.md": "P01",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/正反打与轴线.md": "P02",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/镜头语言词典.md": "P04",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片审美特征资产总则.md": "I01",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片用途权重与取舍资产.md": "I01",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片质量最终定义.md": "I01",
+    ".agents/skills/laohu-script-writer/references/高质量AI剧本开发计划.md": "S10",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/剪辑接口与匹配剪辑.md": "V01",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/景别推进与切换.md": "V02",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/预示性承接与动作分层.md": "V03",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/连续拼接审美特征资产.md": "V04",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频审美特征资产总则.md": "V06",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频特征权重与取舍资产.md": "V06",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频质量最终定义.md": "V06"
+  },
+  "layout_moves": {
+    ".agents/skills/laohu-script-writer/skills/laohu-american-case-studies/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-american-case-studies/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-character-conflict/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-character-conflict/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-cases.md": ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/references/reference-cases.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-rules.md": ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/references/reference-rules.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-samples.md": ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/references/reference-samples.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-dialogue/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-industry-business/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-industry-business/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-japanese-screenwriting/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-japanese-screenwriting/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-premise-theme/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-premise-theme/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-scene-craft/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-scene-craft/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/reference-asia.md": ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/references/reference-asia.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/reference-pilots.md": ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/references/reference-pilots.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/reference-documents.md": ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/references/reference-documents.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/reference-samples.md": ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/references/reference-samples.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-structure/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-series-structure/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-sitcom-comedy/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-sitcom-comedy/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-story-structure/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-story-structure/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-succession-series-writing/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-succession-series-writing/references/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-writers-room/reference.md": ".agents/skills/laohu-script-writer/skills/laohu-writers-room/references/reference.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/原始方法.md": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部原始方法.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/examples.md": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部案例.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/omni-flash-prompt-contract.md": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部OmniFlash提示词合同.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/storyboard-template.md": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/外部分镜模板.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/LICENSE": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/assets/upstream/LICENSE"
+  },
+  "conditional_directory_moves": [
+    {
+      "source": ".agents/skills/laohu-script-writer/references/故事原子",
+      "target": ".agents/skills/laohu-script-writer/assets/故事原子",
+      "condition": "only-if-existing; protect private data and validate before removing old directory",
+      "operation": "T04"
+    }
+  ],
+  "required_source_paths": [
+    ".agents/README.md",
+    ".agents/skills/README.md",
+    ".agents/skills/laohu-ai-visual/SKILL.md",
+    ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
+    ".agents/skills/laohu-ai-visual/references/能力协作图谱.md",
+    ".agents/skills/laohu-ai-visual/references/能力注册表.json",
+    ".agents/skills/laohu-ai-visual/references/语言模式/01_模式判定与块级切换.md",
+    ".agents/skills/laohu-ai-visual/references/语言模式/02_用户沟通与制作说明.md",
+    ".agents/skills/laohu-ai-visual/references/语言模式/03_剧本文本块语言.md",
+    ".agents/skills/laohu-ai-visual/references/语言模式/04_资产图片视频与声音提示词桥接.md",
+    ".agents/skills/laohu-ai-visual/references/语言模式/05_有效信息与冗余裁决.md",
+    ".agents/skills/laohu-ai-visual/scripts/render_delivery_html.py",
+    ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/references/02_四层能力重编译.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-capability-evolution/references/04_进化记忆与能力生长.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-creative-development/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-director/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-audio-review/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-edit-review/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-image-review/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-release-review/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-generation-review/skills/laohu-video-review/SKILL.md",
+    ".agents/skills/laohu-ai-visual/skills/laohu-mv-director/SKILL.md",
+    ".agents/skills/laohu-image-creation/SKILL.md",
+    ".agents/skills/laohu-image-creation/references/语言模式/01_模式判定与块级切换.md",
+    ".agents/skills/laohu-image-creation/references/语言模式/02_用户沟通与制作说明.md",
+    ".agents/skills/laohu-image-creation/references/语言模式/03_剧本文本块语言.md",
+    ".agents/skills/laohu-image-creation/references/语言模式/04_资产图片视频与声音提示词桥接.md",
+    ".agents/skills/laohu-image-creation/references/语言模式/05_有效信息与冗余裁决.md",
+    ".agents/skills/laohu-image-creation/scripts/render_delivery_html.py",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-color-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-compositing/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-composition/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-composition/references/点线面与主体突出.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-illustration/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-information-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-layout-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-light-shadow/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-material-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/构图层次.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/正反打与轴线.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/镜头语言基础_第一判断与四件套.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/镜头语言词典.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-typography/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-character-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-body-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-casting/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-creature-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-ensemble-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-character-design/skills/laohu-face-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-costume-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-accessory-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-continuity/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-ornament/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-research/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-costume-silhouette/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-garment-structure/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-costume-design/skills/laohu-textile-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-cover-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-cover-design/skills/laohu-cover-concept/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-cover-design/skills/laohu-cover-copy/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-cover-design/skills/laohu-cover-layout/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-cover-design/skills/laohu-thumbnail/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-editing/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/专业判断与编译.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片不变骨架资产.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片审美特征资产总则.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片提示词机制与描述粒度.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片用途权重与取舍资产.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片质量最终定义.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片资料校准与出处.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/模型可读视觉词汇资产.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/模板_图片提示词字段与专项模块.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/正向兼容组合关系.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/风格继承与图片编译.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-makeup-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-makeup-design/skills/laohu-groom-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-makeup-design/skills/laohu-hair-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-makeup-design/skills/laohu-makeup/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-makeup-design/skills/laohu-prosthetic-makeup/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-portrait/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-prop-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-prop-design/skills/laohu-hand-props/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-prop-design/skills/laohu-mechanical-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-prop-design/skills/laohu-product-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-prop-design/skills/laohu-vehicle-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-set-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-architecture-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-environment-research/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-interior-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-landscape-design/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-set-decoration/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-set-design/skills/laohu-spatial-layout/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-still-life-photography/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-storyboard/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-body-assets/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-costume-assets/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-environment-assets/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-group-assets/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-makeup-assets/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-prop-assets/SKILL.md",
+    ".agents/skills/laohu-image-creation/skills/laohu-visual-assets/skills/laohu-style-reference/SKILL.md",
+    ".agents/skills/laohu-language-mode/SKILL.md",
+    ".agents/skills/laohu-language-mode/scripts/render_delivery_html.py",
+    ".agents/skills/laohu-script-writer/SKILL.md",
+    ".agents/skills/laohu-script-writer/references/语言模式/01_模式判定与块级切换.md",
+    ".agents/skills/laohu-script-writer/references/语言模式/02_用户沟通与制作说明.md",
+    ".agents/skills/laohu-script-writer/references/语言模式/03_剧本文本块语言.md",
+    ".agents/skills/laohu-script-writer/references/语言模式/04_资产图片视频与声音提示词桥接.md",
+    ".agents/skills/laohu-script-writer/references/语言模式/05_有效信息与冗余裁决.md",
+    ".agents/skills/laohu-script-writer/references/高质量AI剧本开发计划.md",
+    ".agents/skills/laohu-script-writer/scripts/render_delivery_html.py",
+    ".agents/skills/laohu-script-writer/scripts/story_atoms.py",
+    ".agents/skills/laohu-script-writer/skills/laohu-american-case-studies/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-american-case-studies/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-character-conflict/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-character-conflict/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chekhov-dramaturgy/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-cases.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-rules.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference-samples.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-chinese-series-practice/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-dialogue/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-dialogue/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-industry-business/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-industry-business/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-japanese-screenwriting/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-japanese-screenwriting/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-korean-french-screenwriting/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-ozu-screenplay-style/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-premise-theme/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-premise-theme/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-scene-craft/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-scene-craft/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/reference-asia.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/reference-pilots.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-case-studies/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/reference-documents.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/reference-samples.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-engine-bible/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-structure/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-series-structure/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-sitcom-comedy/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-sitcom-comedy/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-story-material/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-story-material/scripts/story_material_db.py",
+    ".agents/skills/laohu-script-writer/skills/laohu-story-structure/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-story-structure/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-story-structure/references/结构尺度与高潮设计.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-succession-series-writing/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-succession-series-writing/reference.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-video-segmentation/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-writers-room/SKILL.md",
+    ".agents/skills/laohu-script-writer/skills/laohu-writers-room/reference.md",
+    ".agents/skills/laohu-video-prompt/SKILL.md",
+    ".agents/skills/laohu-video-prompt/references/语言模式/01_模式判定与块级切换.md",
+    ".agents/skills/laohu-video-prompt/references/语言模式/02_用户沟通与制作说明.md",
+    ".agents/skills/laohu-video-prompt/references/语言模式/03_剧本文本块语言.md",
+    ".agents/skills/laohu-video-prompt/references/语言模式/04_资产图片视频与声音提示词桥接.md",
+    ".agents/skills/laohu-video-prompt/references/语言模式/05_有效信息与冗余裁决.md",
+    ".agents/skills/laohu-video-prompt/scripts/render_delivery_html.py",
+    ".agents/skills/laohu-video-prompt/skills/laohu-action-design/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-animation/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-ambience/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-audio-editing/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-audio-mixing/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-audio-prompt/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-music-design/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-sound-effects/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-voice-design/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audio-design/skills/laohu-voice-performance/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-audiovisual/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-camera-movement/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-choreography/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/剪辑接口与匹配剪辑.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/景别推进与切换.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/连续拼接审美特征资产.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/预示性承接与动作分层.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-editorial-explainer/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/LICENSE",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/examples.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/omni-flash-prompt-contract.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/references/storyboard-template.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/references/upstream/原始方法.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-performance/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-vfx/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-vibe-creating-prompt/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/SKILL.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频审美特征资产总则.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频特征权重与取舍资产.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频质量最终定义.md",
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-references/SKILL.md",
+    "02_共享资产库/README.md",
+    "04_诊断与系统日志/五包迁移清单.json",
+    "04_诊断与系统日志/整合需求说明书.md",
+    "AGENTS.md",
+    "README.md",
+    "scripts/package_history.py",
+    "scripts/record_method_evolution.py",
+    "scripts/sync_skill_packages.py",
+    "scripts/update_skills_readme_tree.py",
+    "scripts/validate_skill_packages.py",
+    "tests/test_skill_discovery.py",
+    "tests/test_skill_packages.py",
+    "输入输出索引.md"
+  ],
+  "retirement_routes": {
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/连续拼接审美特征资产.md": [
+      {
+        "operation": "V04",
+        "source_section": "8.1—8.3全文",
+        "path": ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        "section": "新增## 跨生成段的尾帧续接",
+        "insertion": "位于“## 可剪辑接口”之后；该节专门限定尾帧续接和一镜到底感方案"
+      }
+    ],
+    ".agents/skills/laohu-script-writer/references/语言模式/04_资产图片视频与声音提示词桥接.md": [
+      {
+        "operation": "D-L09",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/04_资产图片视频与声音提示词桥接.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/预示性承接与动作分层.md": [
+      {
+        "operation": "V03",
+        "source_section": "## 预示性承接与动作组分层",
+        "path": ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        "section": "## 剪辑承接合同 / 新增### 预示线索与动作组",
+        "insertion": "在省略成立门与状态链朗读之后、连续动作主线示例之前"
+      }
+    ],
+    ".agents/skills/laohu-script-writer/references/语言模式/05_有效信息与冗余裁决.md": [
+      {
+        "operation": "D-L10",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/references/语言模式/05_有效信息与冗余裁决.md": [
+      {
+        "operation": "D-L15",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/正反打与轴线.md": [
+      {
+        "operation": "P02",
+        "source_section": "## 正反打与轴线；## 正反打规则与可见构图要求",
+        "path": ".agents/skills/laohu-video-prompt/references/镜头空间与连续性.md",
+        "section": "## 画面关系与观看位置 / 新增### 正反打与轴线",
+        "insertion": "放在“空间验收顺序固定为”段后、“这套三层空间用于真人”段前"
+      }
+    ],
+    ".agents/skills/laohu-script-writer/references/语言模式/01_模式判定与块级切换.md": [
+      {
+        "operation": "D-L06",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/references/语言模式/01_模式判定与块级切换.md": [
+      {
+        "operation": "D-L16",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-ai-visual/references/语言模式/05_有效信息与冗余裁决.md": [
+      {
+        "operation": "D-L05",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/构图层次.md": [
+      {
+        "operation": "P01",
+        "source_section": "## 构图层次",
+        "path": ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-composition/references/点线面与主体突出.md",
+        "section": "点、线、面；构图层次与遮挡；主体检查",
+        "insertion": "在现有“面：留白、压制和空间切割”后、最终验收前新增“## 构图层次与遮挡”"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频特征权重与取舍资产.md": [
+      {
+        "operation": "V06",
+        "source_section": "10.1—10.3",
+        "path": ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/镜头特征取舍与质量验收.md",
+        "section": "基本取舍；承重维度；条件组合；组合语法；质量验收",
+        "insertion": "依此顺序新建；原则不重复写三遍"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频质量最终定义.md": [
+      {
+        "operation": "V06",
+        "source_section": "11全文",
+        "path": ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/镜头特征取舍与质量验收.md",
+        "section": "基本取舍；承重维度；条件组合；组合语法；质量验收",
+        "insertion": "依此顺序新建；原则不重复写三遍"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/references/语言模式/04_资产图片视频与声音提示词桥接.md": [
+      {
+        "operation": "D-L19",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/04_资产图片视频与声音提示词桥接.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-script-writer/references/高质量AI剧本开发计划.md": [
+      {
+        "operation": "S00",
+        "source_section": "H1后到## 0前；## 0及其子节；## 1.1；## 9及子节；## 10",
+        "path": ".agents/skills/laohu-script-writer/references/剧本质量取舍与综合验收.md",
+        "section": "基本取舍；描述粒度；专业维度；权重与组合；综合验收",
+        "insertion": "新文件按五个自然章节排列；##9.2组合例子紧跟##9.1权重，不拆散比较"
+      },
+      {
+        "operation": "S01",
+        "source_section": "### 1.2 故事种子固定槽位；## 2. 选题角度审美特征资产及2.1—2.5",
+        "path": ".agents/skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+        "section": "### 1. 破题",
+        "insertion": "在原“故事种子不是小说开头”及其字段后融合1.2；在“### 2. 主题探索”前新增“#### 选题机制、题材变体与反转教育”"
+      },
+      {
+        "operation": "S02",
+        "source_section": "### 1.3 人物固定槽位；## 3. 人物审美特征资产及3.1—3.5",
+        "path": ".agents/skills/laohu-script-writer/skills/laohu-character-conflict/references/人物行动与连续性.md",
+        "section": "### 4. 人物医生",
+        "insertion": "先把1.3缺失的身份/声口/习惯等字段融入现有人物医生列表；在“#### 4.1 人物连续性圣经”前新增“#### 欲望、防御与可表演的人物关系”"
+      },
+      {
+        "operation": "S03",
+        "source_section": "### 1.4 场景开放问题库；## 5. 场景审美特征资产及5.1—5.2",
+        "path": ".agents/skills/laohu-script-writer/skills/laohu-scene-craft/references/场面推进与苦难叙事.md",
+        "section": "### 6. 场景写作",
+        "insertion": "源1.4融入场景写作字段后、低烈度方法前；源5各颗粒放进“#### 场景选择与低烈度推进”中相应功能/动作/物件/空间/声音/停点位置"
+      },
+      {
+        "operation": "S04",
+        "source_section": "### 1.5 台词固定槽位；## 6. 台词与声音审美特征资产及6.1—6.5",
+        "path": ".agents/skills/laohu-script-writer/skills/laohu-dialogue/references/本地对白与表演补充.md",
+        "section": "## 台词口气与方言；## 人物先怎样看，再怎样说",
+        "insertion": "1.5融入人物声音合同，缺失字段补齐；6.2策略/潜台词/动作性融入“### 对白的策略变化与未说内容”；在其后新设“### 短视频句型与声音形状的条件用法”放6.3/6.4/6.5"
+      },
+      {
+        "operation": "S05",
+        "source_section": "### 1.6 下游视觉交接固定槽位；## 7. 视听化审美特征资产及7.1—7.3",
+        "path": ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        "section": "## 正式剧本：集与场",
+        "insertion": "在该节关于内容母版的说明后新增“### 视听证据与逐段资产需求的内容交接”；字段融为同一需求表，机制与完整例子紧随其后"
+      },
+      {
+        "operation": "S06",
+        "source_section": "### 1.7 短视频时间密度诊断尺",
+        "path": ".agents/skills/laohu-script-writer/skills/laohu-format-adaptation/references/镜头化剧本与连续性.md",
+        "section": "## 体量路由",
+        "insertion": "在现有“以下为强钩子、冲突与奇观内容的体量节奏候选”段落组后，融合成“### 体量与叙事容量候选”；相同时長条目合并不重复两套数字表"
+      },
+      {
+        "operation": "S07",
+        "source_section": "## 8. 传播与包装审美特征资产及8.1—8.4",
+        "path": ".agents/skills/laohu-script-writer/skills/laohu-premise-theme/references/创意开发与主题检验.md",
+        "section": "### 9. 故事杠杆",
+        "insertion": "在现有“最后给金”与痛点边界说明后新增“#### 从观看问题到结尾回响”；8.1/8.2与已有杠杆同义处合并，8.3/8.4完整候选紧接"
+      },
+      {
+        "operation": "S08",
+        "source_section": "## 4. 冲突与结构审美特征资产及4.1—4.3",
+        "path": ".agents/skills/laohu-script-writer/skills/laohu-story-structure/references/结构尺度与高潮设计.md",
+        "section": "## 冲突与结构特征",
+        "insertion": "直接修订现有该节，不能再追加第二份源第4章"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/视频审美特征资产总则.md": [
+      {
+        "operation": "V06",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-video-prompt/skills/laohu-video-compilation/references/镜头特征取舍与质量验收.md",
+        "section": "基本取舍；承重维度；条件组合；组合语法；质量验收",
+        "insertion": "依此顺序新建；原则不重复写三遍"
+      }
+    ],
+    ".agents/skills/laohu-ai-visual/references/语言模式/04_资产图片视频与声音提示词桥接.md": [
+      {
+        "operation": "D-L04",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/04_资产图片视频与声音提示词桥接.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/references/语言模式/04_资产图片视频与声音提示词桥接.md": [
+      {
+        "operation": "D-L14",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/04_资产图片视频与声音提示词桥接.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-script-writer/scripts/render_delivery_html.py": [
+      {
+        "operation": "D-R02",
+        "source_section": "完整脚本",
+        "path": "scripts/render_delivery_html.py",
+        "section": "完整脚本",
+        "insertion": "以根目录实现为真源；核对差异，不覆盖独有代码"
+      }
+    ],
+    ".agents/skills/laohu-ai-visual/references/语言模式/01_模式判定与块级切换.md": [
+      {
+        "operation": "D-L01",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-ai-visual/scripts/render_delivery_html.py": [
+      {
+        "operation": "D-R01",
+        "source_section": "完整脚本",
+        "path": "scripts/render_delivery_html.py",
+        "section": "完整脚本",
+        "insertion": "以根目录实现为真源；核对差异，不覆盖独有代码"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/景别推进与切换.md": [
+      {
+        "operation": "V02",
+        "source_section": "## None",
+        "path": ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        "section": "## 3. 切镜交接的是事件相位，不只是相似画面 / 新增### 景别与观看尺度的切换",
+        "insertion": "紧接动作/视线/声音匹配解释之后"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片审美特征资产总则.md": [
+      {
+        "operation": "I01",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/用途权重与质量取舍.md",
+        "section": "完整新文件",
+        "insertion": "依次：## 基本取舍 → ## 图片用途权重 → ## 同一特征在不同用途中的变化 → ## 六步特征交集法 → ## 单条成品图的交集描述顺序 → ## 领域特征扩展 → ## 成图验收与停止条件"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/剪辑接口与匹配剪辑.md": [
+      {
+        "operation": "V01",
+        "source_section": "## 剪辑接口与匹配剪辑",
+        "path": ".agents/skills/laohu-video-prompt/skills/laohu-editing/references/专业方法与案例.md",
+        "section": "## 可剪辑接口",
+        "insertion": "把原短段整合为：选择次序→八类接口表→主辅属性→生成前后证据边界"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/references/语言模式/03_剧本文本块语言.md": [
+      {
+        "operation": "D-L13",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/03_剧本文本块语言.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片用途权重与取舍资产.md": [
+      {
+        "operation": "I01",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/用途权重与质量取舍.md",
+        "section": "完整新文件",
+        "insertion": "依次：## 基本取舍 → ## 图片用途权重 → ## 同一特征在不同用途中的变化 → ## 六步特征交集法 → ## 单条成品图的交集描述顺序 → ## 领域特征扩展 → ## 成图验收与停止条件"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/references/语言模式/03_剧本文本块语言.md": [
+      {
+        "operation": "D-L18",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/03_剧本文本块语言.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/references/语言模式/02_用户沟通与制作说明.md": [
+      {
+        "operation": "D-L17",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-script-writer/references/语言模式/03_剧本文本块语言.md": [
+      {
+        "operation": "D-L08",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/03_剧本文本块语言.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/图片质量最终定义.md": [
+      {
+        "operation": "I01",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-image-creation/skills/laohu-image-prompt/references/用途权重与质量取舍.md",
+        "section": "完整新文件",
+        "insertion": "依次：## 基本取舍 → ## 图片用途权重 → ## 同一特征在不同用途中的变化 → ## 六步特征交集法 → ## 单条成品图的交集描述顺序 → ## 领域特征扩展 → ## 成图验收与停止条件"
+      }
+    ],
+    ".agents/skills/laohu-ai-visual/references/语言模式/03_剧本文本块语言.md": [
+      {
+        "operation": "D-L03",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/03_剧本文本块语言.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/镜头语言词典.md": [
+      {
+        "operation": "P04",
+        "source_section": "全文导航",
+        "path": ".agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/SKILL.md",
+        "section": "按当前缺口读取的补充方法",
+        "insertion": "把导航条目变成“未决问题→现存方法→返回决定”，去掉再次跳到导航页的一层"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/scripts/render_delivery_html.py": [
+      {
+        "operation": "D-R04",
+        "source_section": "完整脚本",
+        "path": "scripts/render_delivery_html.py",
+        "section": "完整脚本",
+        "insertion": "以根目录实现为真源；核对差异，不覆盖独有代码"
+      }
+    ],
+    ".agents/skills/laohu-video-prompt/references/语言模式/05_有效信息与冗余裁决.md": [
+      {
+        "operation": "D-L20",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/05_有效信息与冗余裁决.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/scripts/render_delivery_html.py": [
+      {
+        "operation": "D-R03",
+        "source_section": "完整脚本",
+        "path": "scripts/render_delivery_html.py",
+        "section": "完整脚本",
+        "insertion": "以根目录实现为真源；核对差异，不覆盖独有代码"
+      }
+    ],
+    ".agents/skills/laohu-ai-visual/references/语言模式/02_用户沟通与制作说明.md": [
+      {
+        "operation": "D-L02",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-script-writer/references/语言模式/02_用户沟通与制作说明.md": [
+      {
+        "operation": "D-L07",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/references/语言模式/01_模式判定与块级切换.md": [
+      {
+        "operation": "D-L11",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/01_模式判定与块级切换.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-image-creation/references/语言模式/02_用户沟通与制作说明.md": [
+      {
+        "operation": "D-L12",
+        "source_section": "全文",
+        "path": ".agents/skills/laohu-language-mode/references/02_用户沟通与制作说明.md",
+        "section": "同名主题原有章节",
+        "insertion": "逐段比对后仅纳入副本独有且与通用语言职责相符的内容；纯路径变化不增加正文"
+      }
+    ],
+    ".agents/skills/laohu-language-mode/scripts/render_delivery_html.py": [
+      {
+        "operation": "D-R05",
+        "source_section": "完整脚本",
+        "path": "scripts/render_delivery_html.py",
+        "section": "完整脚本",
+        "insertion": "以根目录实现为真源；核对差异，不覆盖独有代码"
+      }
+    ]
+  },
+  "unknown_files_policy": "PRESERVE_AND_REVIEW; absence from tree is never deletion authority",
+  "execution_record": "04_诊断与系统日志/现有架构细化_实施记录.md",
+  "plan_source": "老胡AI视觉_完整优化执行说明.md 附录C（BEGIN_LAOHU_PLAN 块，逐字提取，字段未改）",
+  "status_legend": {
+    "NOT_STARTED": "尚未开始",
+    "CONTENT_MERGED": "源内容已进入目标原结构",
+    "LINKS_UPDATED": "入向、出向、脚本与注册表引用已重算",
+    "VERIFIED": "结构与内容验收已通过（不含需 task-5 收口的全局校验）",
+    "SOURCE_RETIRED": "旧源已按允许撤源的依据移除",
+    "PASS_UNCHANGED": "完整审阅后确认无需修改",
+    "BLOCKED": "存在真实阻塞，写明缺什么证据与归属",
+    "PENDING_TASK5": "按计划归属 task-5，本轮不执行"
+  },
+  "operations": [
+    {
+      "id": "G01",
+      "status": "VERIFIED",
+      "sources": [
+        "AGENTS.md：一、项目目的；四、权威层级；五、五个可独立使用的技能包；十、目录与文件纪律",
+        "04_诊断与系统日志/整合需求说明书.md：4.1；6.1；7.1；7.6；8.2；9；10；11"
+      ],
+      "targets": [
+        "AGENTS.md 一：新增“由专业知识支撑的交互式创作系统”与意图理解链、推断依据/主动完成/必要讨论",
+        "AGENTS.md 四：唯一正文、独立成文件判据、数据源与派生应用数据、新增两行权威来源",
+        "AGENTS.md 五（改题“五个业务入口与递归能力结构”）：递归目录语法、逐层读取与父子继承、唯一正文与消费方式；撤销“消费包内受控适配正文/上传不依赖包外”的旧口径；故事原子路径写迁移前后两种落点",
+        "AGENTS.md 十：新增“相对路径与调用地址”（仓库根相对、链接相对文件、迁移后四类引用重算、禁止全局加 ../、回报用仓库根相对路径）",
+        "04_诊断与系统日志/整合需求说明书.md：4.1 改递归语法并写明废弃的引用次数判据；5.2/6.1/6.3 同一判据；7.1 定案唯一正文+D01/T01 顺序；7.2 指向本轮操作卡；7.3 目标名改剧本质量取舍与综合验收.md；7.6 R01 迁位并保留上游身份；8.2/九/十/十一 路径与验收口径统一；全文绝对路径改仓库根相对",
+        "04_诊断与系统日志/全库整理方案.md：改为执行说明全文（含版本头）",
+        "04_诊断与系统日志/全库整理操作清单.json：从附录C提取并补实际执行记录"
+      ],
+      "preserved_strength": [
+        "原文限定词与规则强度未被改写；五包职责、E-S→P→资产→C、固定模板、VC、真实媒体证据、外部动作权限与私有边界原样保留",
+        "老胡原话附录全部保留，只补一条路径口径说明"
+      ],
+      "consumers": [
+        "AGENTS.md",
+        "04_诊断与系统日志/整合需求说明书.md",
+        "五个业务入口 SKILL.md",
+        "README.md 与四份目录说明"
+      ],
+      "verification": "结构/行为测试子集 116 tests 仅 1 error（manifest 根因）；G01 文本锚点由 test_director_architecture、test_language_mode_architecture、test_story_material_architecture、test_video_batch_architecture 覆盖",
+      "unfinished": []
+    },
+    {
+      "id": "G02",
+      "status": "VERIFIED",
+      "sources": [
+        ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md：总合约；公共任务头；负责人表",
+        ".agents/skills/laohu-ai-visual/references/能力协作图谱.md：二、五类协作边；三、调用合同与回执",
+        ".agents/skills/laohu-ai-visual/references/能力注册表.json：skills[]"
+      ],
+      "targets": [
+        "能力协作图谱.md：新增「父子继承与活动调用」（关系定义之后、调用合同之前），写明逐层读取、父级交付项、直接命中、活动调用与防循环、CONSULT 不转移主责、读取父级≠重做父级",
+        "能力协作图谱.md：开头写明本文件是五类协作边与父子继承的唯一公共定义，并写清 22=5+17、97 专项、合计 119 的计数口径",
+        "能力协作图谱.md：专业树段落由“22入口及97专业”改为 119 全量口径",
+        "laohu_skills核心合约.md：开头写明与图谱/注册表的分工，协作边只链接不复述",
+        "laohu_skills核心合约.md：总合约新增「纵向继承与横向会商同时成立」，五类协作边定义改为链接图谱",
+        "laohu_skills核心合约.md：二、二十二个负责人 补计数口径；专业树段落修正“22入口+97专业=110”错误合计为 119，并写明非根技能父级链接与父级列子技能的双向可达要求",
+        "laohu_skills核心合约.md：公共任务头补“直接命中深层技能时写清所属父链与已补齐的父级决定”",
+        "能力注册表.json：新增 path_policy / parent_route_policy / count_policy / verified；name/path/parent/kind/label 与 entry_count=5、specialist_count=114 保持"
+      ],
+      "verification": "逐条脚本核对 119 条：path 全部存在、frontmatter name 一致、parent 与目录父子关系一致、副本路径 0 条、缺失 0 条；unittest test_skill_discovery / test_visual_restructure::test_each_specialist_has_a_real_parent_route / test_external_capability_update::test_current_registry_and_native_entry_links 的结构断言在结构子集中通过（仅 manifest 根因错误）",
+      "unfinished": [
+        "11 个非根 SKILL 缺父级入口说明：laohu-ai-visual/skills/laohu-creative-development、laohu-ai-visual/skills/laohu-generation-review、laohu-script-writer/skills/ 下 9 个（laohu-writers-room、laohu-ozu-screenplay-style、laohu-story-material、laohu-premise-theme、laohu-korean-french-screenwriting、laohu-sitcom-comedy、laohu-chekhov-dramaturgy、laohu-scene-craft、laohu-chinese-series-practice）。根因：task-1 硬约束不得改 skills/ 内专业内容，归 H01/对应包负责人"
+      ]
+    },
+    {
+      "id": "G03",
+      "status": "VERIFIED",
+      "sources": [
+        "五个业务入口 SKILL.md 的包级路由、独立使用、方法引用与语言执行段"
+      ],
+      "targets": [
+        "五个入口各新增「意图理解与父级继承」段：结果目标、明确约束/已确认事实、候选解释、创意留白、当前材料；继承 AGENTS.md；主动补全与必要讨论；按本层判断下钻、直接命中先补父链、子结果返回整合与冲突定位、已读有效不重复通读",
+        "五个入口的语言行改为“本包语言表达取领域写法 + 通用规则读语言包唯一正文”，撤销“不依赖另一个包/本包内嵌完整方法”旧口径",
+        "五个入口的“按当前缺口读取的补充方法/Reference 路由”段补读取激活标准（问题→精确文件与章节→应形成的决定）",
+        "laohu-ai-visual/SKILL.md 任务契约补材料成熟度、已确认事实、候选解释、创意留白、关键歧义五项",
+        "laohu-language-mode/SKILL.md description 改为“统一维护项目内语言方法的唯一正文，业务包按相对路径读取而不另存副本”"
+      ],
+      "verification": "validate_skill_packages 对五个入口所在包无本文件相关错误；结构/行为子集 116 tests 仅 1 error（manifest 根因）",
+      "unfinished": []
+    },
+    {
+      "id": "G04",
+      "status": "VERIFIED",
+      "sources": [
+        ".agents/skills/README.md：直接上传；五包实际文件树",
+        "README.md：顶层入口；项目结构；使用方式",
+        ".agents/README.md：发现和维护说明",
+        "输入输出索引.md：入口与文件去向"
+      ],
+      "targets": [
+        ".agents/skills/README.md：上传与独立口径改为唯一正文；语言模式归类改为唯一正文+领域写法；灵感双份保存与应用原子迁位；维护方式与 sync 脚本职责改为 T01 后语义；跨包交接段重写；树说明标注为当前实际集合与副本待撤",
+        ".agents/skills/README.md：用 scripts/update_skills_readme_tree.py 按真实磁盘刷新五包文件树（151 行差异），并把 内置方法/ 与 references/语言模式/ 的目录说明标注为“本轮计划撤除”",
+        "README.md：顶层入口、上传口径、语言模式行、故事原子路径、项目结构（补 .agents/README.md 与相对路径纪律）、检查项目命令（补 unittest 与 git diff --check）",
+        ".agents/README.md：递归目录语法、唯一正文消费、父链由显式相对链接保障需实测、sync 脚本新职责",
+        "输入输出索引.md：意图理解入口、语言模式唯一正文、应用原子迁位、方法维护地图与路径纪律链接"
+      ],
+      "verification": "update_skills_readme_tree.py 生成后与真实磁盘核对；我的 13 个改动文件 markdown 链接解析检查 0 断链（全库整理方案.md 内 4 处为第8章示例代码块，不是真实链接）",
+      "unfinished": [
+        "内置方法/ 与 references/语言模式/ 撤除后需再跑一次 update_skills_readme_tree.py 刷新实际树（task-5，T01/T03/D-L 批次）"
+      ]
+    }
+  ],
+  "task5_pending": [
+    {
+      "blocked_by": "T02（放开合法跨包 markdown 链接）→ D01（消费者改指真实源）",
+      "items": [
+        ".agents/skills/laohu-ai-visual/SKILL.md：5 处 内置方法/ 链接",
+        ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md：4 处 内置方法/ 链接",
+        ".agents/skills/laohu-ai-visual/references/能力协作图谱.md：1 处 内置方法/ 链接",
+        ".agents/skills/laohu-image-creation/SKILL.md：1 处 内置方法/ 链接",
+        "四个业务包 references/语言表达.md 中的 语言模式/0X 链接改指语言包唯一正文",
+        "T03：运行 python3 scripts/record_method_evolution.py 回写 manifest（本轮 stale=51）"
+      ],
+      "reason": "当前 validate_skill_packages.py 判定跨包 markdown 链接为 outside package；顺序 T02 → D01 → T01/T03 → D-L/D-R → GROW01"
+    },
+    {
+      "blocked_by": "T04（应用原子 references/故事原子/ → assets/故事原子/）",
+      "items": [
+        "AGENTS.md、README.md、.agents/skills/README.md、输入输出索引.md、故事包内链接与 注册表/测试引用随迁位重算"
+      ]
+    }
+  ],
+  "verification": {
+    "baseline_commit": "c7fed3012bf24cdf5600de20b365399ad3f83717",
+    "commands": [
+      "python3 scripts/validate_skill_packages.py",
+      "python3 scripts/sync_skill_packages.py --check",
+      "python3 -m unittest discover -s tests",
+      "git diff --check",
+      "python3 scripts/record_method_evolution.py --check"
+    ],
+    "baseline_results": {
+      "validate": "ok=true",
+      "sync_check": "ok=true, stale_methods=[]",
+      "unittest": "203 tests OK",
+      "git_diff_check": "clean"
+    },
+    "after_g01_g04_results": {
+      "validate_skill_packages.py": {
+        "ok": false,
+        "error_count": 16,
+        "root_cause": "全部在 .agents/skills/laohu-image-creation/**：task-2 在改（I01 目标文件 用途权重与质量取舍.md 尚未建立；P04 撤 镜头语言词典.md 后 内置方法 副本内链接待 D01 处理）",
+        "attribution": "task-2/task-5，非 task-1 范围",
+        "detail": "错误文件集合只在 .agents/skills/laohu-image-creation/内置方法/** 与 laohu-image-creation/skills/laohu-image-prompt/SKILL.md（引用尚未建立的 用途权重与质量取舍.md）；task-1 改动的文件 0 条错误"
+      },
+      "sync_skill_packages.py --check": {
+        "ok": false,
+        "error": "ValueError: Missing authoritative method: .agents/skills/laohu-image-creation/skills/laohu-art-direction/skills/laohu-photography/references/镜头语言词典.md",
+        "root_cause": "task-2 P04 撤源；脚本职责由 task-5 T01 重做",
+        "attribution": "task-2/task-5"
+      },
+      "unittest": {
+        "status": "BLOCKED",
+        "ran": 203,
+        "errors": 41,
+        "failures": 1,
+        "root_cause": "scripts/package_history.py::read_pre_package 报 'package target changed without recorded evolution'；04_诊断与系统日志/五包迁移清单.json 有 51 条记录过期（13 条 task-1、38 条 task-2/3 在改文件），需 task-5/T03 运行 record_method_evolution.py 回写",
+        "attribution": "task-5/T03",
+        "structure_subset": "tests.test_skill_discovery/test_director_architecture/test_language_mode_architecture/test_mv_architecture/test_video_batch_architecture/test_visual_restructure/test_story_material_architecture/test_script_writer_architecture/test_render_delivery_html = 116 tests, 1 error（同一 manifest 根因）",
+        "detail": "41 errors + 1 failure 全部为 package_history.read_pre_package 的 'package target changed without recorded evolution'；结构/行为子集 116 tests 仅 1 error（同一根因）"
+      },
+      "git_diff_check": {
+        "ok": true,
+        "note": "复制执行说明后清理了 4 处行尾空格"
+      },
+      "record_method_evolution_check": {
+        "stale": 51,
+        "recorded": [],
+        "unresolved": [],
+        "note": "只读 --check，无副作用"
+      }
+    }
+  },
+  "files_changed": [
+    "AGENTS.md",
+    "README.md",
+    ".agents/README.md",
+    ".agents/skills/README.md",
+    "输入输出索引.md",
+    ".agents/skills/laohu-ai-visual/SKILL.md",
+    ".agents/skills/laohu-ai-visual/references/laohu_skills核心合约.md",
+    ".agents/skills/laohu-ai-visual/references/能力协作图谱.md",
+    ".agents/skills/laohu-ai-visual/references/能力注册表.json",
+    ".agents/skills/laohu-script-writer/SKILL.md",
+    ".agents/skills/laohu-image-creation/SKILL.md",
+    ".agents/skills/laohu-video-prompt/SKILL.md",
+    ".agents/skills/laohu-language-mode/SKILL.md",
+    "04_诊断与系统日志/整合需求说明书.md",
+    "04_诊断与系统日志/全库整理方案.md",
+    "04_诊断与系统日志/全库整理操作清单.json"
+  ],
+  "h01_review": {
+    "operation": "H01",
+    "status": "VERIFIED",
+    "reviewed_total": 119,
+    "modified": 89,
+    "pass_unchanged": 30,
+    "pass_unchanged_ids": [
+      "H-001",
+      "H-006",
+      "H-007",
+      "H-008",
+      "H-009",
+      "H-010",
+      "H-012",
+      "H-013",
+      "H-017",
+      "H-018",
+      "H-034",
+      "H-038",
+      "H-044",
+      "H-095",
+      "H-097",
+      "H-098",
+      "H-100",
+      "H-101",
+      "H-102",
+      "H-104",
+      "H-106",
+      "H-109",
+      "H-110",
+      "H-111",
+      "H-112",
+      "H-113",
+      "H-114",
+      "H-115",
+      "H-116",
+      "H-119"
+    ],
+    "by_package": {
+      "laohu-ai-visual": {
+        "modified": 5,
+        "pass_unchanged": 6,
+        "total": 11
+      },
+      "laohu-script-writer": {
+        "modified": 18,
+        "pass_unchanged": 4,
+        "total": 22
+      },
+      "laohu-image-creation": {
+        "modified": 58,
+        "pass_unchanged": 3,
+        "total": 61
+      },
+      "laohu-video-prompt": {
+        "modified": 8,
+        "pass_unchanged": 16,
+        "total": 24
+      },
+      "laohu-language-mode": {
+        "modified": 0,
+        "pass_unchanged": 1,
+        "total": 1
+      }
+    },
+    "parent_chain_gaps": {
+      "before": 59,
+      "after": 0,
+      "measured_distribution": {
+        "laohu-ai-visual": 5,
+        "laohu-script-writer": 18,
+        "laohu-image-creation": 33,
+        "laohu-video-prompt": 3
+      },
+      "note": "前序回报的 ai-visual 2／script-writer 9 与实测不符；本条按能力注册表 parent 字段逐条计算真实父级后写入，59/59 落 ../../SKILL.md",
+      "extra_gap_found": ".agents/skills/laohu-video-prompt/skills/laohu-motion-design/skills/laohu-stickman-explainer/SKILL.md 原只链包入口，缺直接父级 laohu-motion-design；已补，全库 114 个非根节点实测 0 例外"
+    },
+    "defect_families_fixed": {
+      "description_mechanical_repeat": 22,
+      "description_truncated_or_wrong": 3,
+      "description_synonym_tautology": 26,
+      "description_weak": 4,
+      "resource_navigation_rewritten": {
+        "lines": 38,
+        "files": 27
+      }
+    },
+    "deliberately_unchanged": [
+      "description 风格未强行统一：48 个 Use when／63 个 当…／8 个 用于，保持原样",
+      "四层标题未动：101 个含完整四层、18 个用自有栏目；逐个核对 26 个图片包深层专业的四节正文，领域内容各异，判为真承载，标题一律保留",
+      "laohu-image-review 的「血肉」对照句措辞略冗余，可读且不影响判断，按「不为凑修改数重写」记录原样观察"
+    ],
+    "constraints_respected": [
+      "未放宽任何校验器",
+      "未删测试：中途 28 项 test error 全部是 manifest 哈希变旧，用 record_method_evolution.py 回写 89 条，测试期待值一字未改"
+    ],
+    "changed_files": {
+      "skill_md": 89,
+      "ledger": [
+        "04_诊断与系统日志/五包迁移清单.json"
+      ],
+      "trees": [
+        ".agents/skills/README.md",
+        "04_诊断与系统日志/完整目录树.md"
+      ]
+    },
+    "acceptance": {
+      "validate_skill_packages": "ok=true, errors=[], parent_chain_gaps=0, dup_candidates=0",
+      "sync_check": "ok=true, stale=0, missing=0, orphans=0",
+      "unittest": "Ran 204 tests, OK",
+      "readme_tree": "README 119 条 SKILL.md；完整目录树 965 entries",
+      "evolution_check": "stale=[], unresolved=[]",
+      "git_diff_check": "clean"
+    }
+  },
+  "status": "ALL_BATCHES_COMPLETED"
+}

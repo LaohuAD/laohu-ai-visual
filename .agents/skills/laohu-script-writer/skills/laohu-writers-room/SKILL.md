@@ -30,13 +30,13 @@ description: 用于编剧室拆解故事、组织beat sheet与outline、分配�
 
 电视剧不是一个人写完交出去的。它是**一个房间里的一群人，在固定日程和固定预算下每周生产一集**，而这个生产过程会反过来改写你的剧本。本 skill 讲：房间怎么运作、文档按什么体量什么顺序交、故事怎么在集体里被"破开"、note 怎么接、职级怎么爬、钱/演员/天气/场地否决你时怎么改而不毁掉这一集。
 
-日程表、文档实物与访谈原话见同目录 [reference.md](reference.md)。
+日程表、文档实物与访谈原话见同目录 [reference.md](references/reference.md)。
 
 三个前提（多书共识）：① **"电视的整个阶梯建筑在编剧的各种衔头上"**（Douglas 中译本第 5 章 p0199），与电影业"创作权力在导演、出资人可以买头衔"根本不同（Blum 第 19 章 p0246）——学剧集编剧就是学怎么当 writer-producer。② **"An episode is a product made every week in a specified number of days for a certain price and delivered at a guaranteed running time on an inflexible deadline."**（Goldberg & Rabkin 第 1 章 p0019）③ **房间里的表现比你的点子重要，甚至比你最终那本剧本重要**——"crafting stories is much harder than actually writing scripts"（Goldberg p0086）。
 
 **不含**：幕结构与页码锚点、季形（→`laohu-series-structure`）；剧集设计、引擎、bible、pitch document 字段（→`laohu-series-engine-bible`）；喜剧笑点力学与喜剧房 punch-up（→`laohu-sitcom-comedy`）。**美国合同、期权、署名仲裁、经纪制度的通论已在 `laohu-industry-business` 第五、六节，本 skill 只写剧集特有的 step deal 与 staff 薪酬。国产剧制片链、备案审查、一度二度三度创作、分集大纲体系见 `laohu-chinese-series-practice`。** 通用对白/场景/人物方法见 `laohu-dialogue`、`laohu-scene-craft`、`laohu-character-conflict`。
 
-**[reference.md](reference.md) 放实物、日程与长案例**：break story 七套方法总表（一）、Prebble 四条房间规则（二）、leave-behind 实物规格（三）、outline 格式与硬批注（四）、14 天法（五）、彩页与 cut-outs（六）、spec 选剧规则（七）、片头逐镜与 stasis 提问（八）、pitch 全套现场纪律（九）、note 实操四件（十）、职级表与 step deal（十一）、七宗错全文（十二）、场地与预算的账（十三）、瓶子集（十四）、演员（十五）、alts 与素材回收（十六）、救不回来的一集（十七）、五套流程对照表（十八）、Wells 的 ER 编剧室实录与 Souders／West 的房间（十九）、职级与钱的四书对照表（二十）、多机位一周制作表与 freelance 时间表（二十一）、六周专业日程与 14 天法（二十二）、beat sheet 与 leave-behind 的六份实物（二十三）、Fellowes 的 419 条脚注法则（二十四）、Succession 的被剪戏迁移链（二十五）。
+**[reference.md](references/reference.md) 放实物、日程与长案例**：break story 七套方法总表（一）、Prebble 四条房间规则（二）、leave-behind 实物规格（三）、outline 格式与硬批注（四）、14 天法（五）、彩页与 cut-outs（六）、spec 选剧规则（七）、片头逐镜与 stasis 提问（八）、pitch 全套现场纪律（九）、note 实操四件（十）、职级表与 step deal（十一）、七宗错全文（十二）、场地与预算的账（十三）、瓶子集（十四）、演员（十五）、alts 与素材回收（十六）、救不回来的一集（十七）、五套流程对照表（十八）、Wells 的 ER 编剧室实录与 Souders／West 的房间（十九）、职级与钱的四书对照表（二十）、多机位一周制作表与 freelance 时间表（二十一）、六周专业日程与 14 天法（二十二）、beat sheet 与 leave-behind 的六份实物（二十三）、Fellowes 的 419 条脚注法则（二十四）、Succession 的被剪戏迁移链（二十五）。
 ## 按任务读哪几节（不要通读）
 
 本节 38 KB，reference 75 KB，逐节读完通常是浪费。
@@ -50,7 +50,7 @@ description: 用于编剧室拆解故事、组织beat sheet与outline、分配�
 | 了解职级与钱 | 六（全部标了年份，只看相对关系） | 其余 |
 | 单人写作、没有编剧室 | 八（流程选型） | 二、六 |
 
-reference.md 是日程表、文档实物与访谈原话，只在正文指向时打开。
+references/reference.md 是日程表、文档实物与访谈原话，只在正文指向时打开。
 
 ---
 
@@ -88,9 +88,9 @@ reference.md 是日程表、文档实物与访谈原话，只在正文指向时�
 
 ## 二、break story：房间里怎么把一集故事破开
 
-Goldberg 称之为 **story meeting / "cracking the story"**：先泛谈故事可走的路，达成共识后转到**大白板**，逐 beat、逐场、逐幕——"this lively and arduous give-and-take that is **the soul of television writing**"（第 11 章 p0085）。七套真实方法，**先选一套，别混用**；完整流程与日程见 reference.md 第一、二节。
+Goldberg 称之为 **story meeting / "cracking the story"**：先泛谈故事可走的路，达成共识后转到**大白板**，逐 beat、逐场、逐幕——"this lively and arduous give-and-take that is **the soul of television writing**"（第 11 章 p0085）。七套真实方法，**先选一套，别混用**；完整流程与日程见 references/reference.md 第一、二节。
 
-七套方法的对照总表（出处、一句话做法、人数／周数／beat 数的量化锚点）见 reference.md 第一节；Prebble 的四条房间规则（pitch 起手式、两条排序规则、maybe 文化、"房间的产出是这部剧不是什么"）见第二节。**ER 编剧室的物理配置（十把椅子、12 集白板、Big/Serious/Humorous/Other 四标题）、六月六周铺季与一集八周的时间表、一场真实 notes 会的逐步实录，以及 Smallville 的匿名读稿与 Dexter 的二月 camp → reference.md 第十九节。**
+七套方法的对照总表（出处、一句话做法、人数／周数／beat 数的量化锚点）见 references/reference.md 第一节；Prebble 的四条房间规则（pitch 起手式、两条排序规则、maybe 文化、"房间的产出是这部剧不是什么"）见第二节。**ER 编剧室的物理配置（十把椅子、12 集白板、Big/Serious/Humorous/Other 四标题）、六月六周铺季与一集八周的时间表、一场真实 notes 会的逐步实录，以及 Smallville 的匿名读稿与 Dexter 的二月 camp → references/reference.md 第十九节。**
 
 **worst case 的严格定义**（Douglas 第 4 章，最常被做错的一条）：**最坏的事是"与主角目标对立的事／对手的胜利"，不是泛泛的坏事**——医生怕妻子不爱他、同时有病人要手术、外面下雨，worst case 是妻子拒绝他，**不是**病人死或洪水。配套四条裁判规则（学生 Sonny 的清单）：**每个 beat 是一个动作**（人物"意识到"什么不是一场戏）；**对手要和主角一样强一样有动机**；瞄准**一道近乎平衡的道德方程**；**worst case 锚在四分之三处**。另加：**读卡片时像在看屏幕——你无聊观众也无聊。**
 
@@ -110,22 +110,22 @@ Goldberg 称之为 **story meeting / "cracking the story"**：先泛谈故事可
 
 ## 三、文档链与体量：从一页纸到彩页
 
-**顺序固定，体量有数，每一步都有人要签字。** 实物样本见 reference.md 第三节。
+**顺序固定，体量有数，每一步都有人要签字。** 实物样本见 references/reference.md 第三节。
 
-- **3.1 leave-behind**：一页三段的原文规格、"对平台版"与"对剧方版"两份、阴谋线的 "What we will discover is that…" 写法 → reference.md 第三节；**两份真实 leave-behind 的抬头、体量与差别见第二十三节**。
-- **3.2 beat sheet／outline**：treatment／beat sheet／outline 术语辨析、6–20 页与 WGA 的 7 个工作日、每幕一页、四个用途、Douglas 四条硬批注、temp dialogue 两难 → reference.md 第四节；**四份真实 beat sheet 的格式对照、场数分布与"first draft 可以留白到什么程度"见第二十三节**。
-- **3.3 初稿**：任务稿不打招呼大改的教训、14 天法的逐日安排、开工前的半小时准备、稿名＝稿次的三条硬规则 → reference.md 第五节；**单集六周专业日程（梗概 1 周→改几天→一稿 2 周→notes 1–2 天→二稿 1 周→润色 1–2 周）与 14 天法的逐日七步见第二十二节；sitcom 的 freelance 各阶段天数见第二十一节**。
-- **3.4 二稿、polish、彩页**：revising≠rewriting、polish 与 cultural wash 的界定、pink→blue→green 的彩页顺序、cut-outs 文档、写长 vs 写短 → reference.md 第六节。
+- **3.1 leave-behind**：一页三段的原文规格、"对平台版"与"对剧方版"两份、阴谋线的 "What we will discover is that…" 写法 → references/reference.md 第三节；**两份真实 leave-behind 的抬头、体量与差别见第二十三节**。
+- **3.2 beat sheet／outline**：treatment／beat sheet／outline 术语辨析、6–20 页与 WGA 的 7 个工作日、每幕一页、四个用途、Douglas 四条硬批注、temp dialogue 两难 → references/reference.md 第四节；**四份真实 beat sheet 的格式对照、场数分布与"first draft 可以留白到什么程度"见第二十三节**。
+- **3.3 初稿**：任务稿不打招呼大改的教训、14 天法的逐日安排、开工前的半小时准备、稿名＝稿次的三条硬规则 → references/reference.md 第五节；**单集六周专业日程（梗概 1 周→改几天→一稿 2 周→notes 1–2 天→二稿 1 周→润色 1–2 周）与 14 天法的逐日七步见第二十二节；sitcom 的 freelance 各阶段天数见第二十一节**。
+- **3.4 二稿、polish、彩页**：revising≠rewriting、polish 与 cultural wash 的界定、pink→blue→green 的彩页顺序、cut-outs 文档、写长 vs 写短 → references/reference.md 第六节。
 
 ---
 
 ## 四、给一部既有的剧写：spec、研究、pitch 单集
 
-本节三部分的全部规则、实录与原话已移入 reference.md：
+本节三部分的全部规则、实录与原话已移入 references/reference.md：
 
-- **4.1 spec 的选剧规则**：选剧五条、两个"几乎"、Martial Law 招人实录、Douglas 的 "DON'T SPEC THE SERIES YOU PLAN TO PITCH." 与相反的"童话" → reference.md 第七节。
-- **4.2 研究一部剧**：片头逐镜拆解的三类与判据、stasis 提问法、catch the voices、带一个只有你能带的角度 → reference.md 第八节。
-- **4.3 pitch 单集**：带几个／每个多长（三书合并）、讲什么怎么讲、六位制片人的现场纪律、pitch 什么（选题层面）、三种结局、stenographer 规则、"你不知道的制作现实"清单 → reference.md 第九节。
+- **4.1 spec 的选剧规则**：选剧五条、两个"几乎"、Martial Law 招人实录、Douglas 的 "DON'T SPEC THE SERIES YOU PLAN TO PITCH." 与相反的"童话" → references/reference.md 第七节。
+- **4.2 研究一部剧**：片头逐镜拆解的三类与判据、stasis 提问法、catch the voices、带一个只有你能带的角度 → references/reference.md 第八节。
+- **4.3 pitch 单集**：带几个／每个多长（三书合并）、讲什么怎么讲、六位制片人的现场纪律、pitch 什么（选题层面）、三种结局、stenographer 规则、"你不知道的制作现实"清单 → references/reference.md 第九节。
 
 ---
 
@@ -141,55 +141,55 @@ Goldberg 称之为 **story meeting / "cracking the story"**：先泛谈故事可
 > - **判别只问一句**：不照办，代价是谁的趣味没被满足；照办，代价是什么结构性东西坏掉？**后者有答案就走 ②。**
 > - 无论走哪条，**现场的动作都一样**：不争辩、不解释、说"got it"、记下来。分歧发生在回去之后怎么做，不在会议桌上。
 
-电话暗号表（"Nice work"／"Really good first draft"／"Thanks for getting it done so fast" 三句的真实含义）→ reference.md 第十节。
+电话暗号表（"Nice work"／"Really good first draft"／"Thanks for getting it done so fast" 三句的真实含义）→ references/reference.md 第十节。
 
 **5.2 用录音机，不要用笔记本电脑**（Douglas 第 5 章，三条理由）：① 你不够快，记不全，也分不清互相矛盾的意见里哪条值得记；② 压力下你在笔记本电脑上打出来的东西"会有一条推文的全部细节与层次"；③ **你头埋在屏幕里就不在讨论里**，而且永远落后一步。（Smith p0263 同样建议带小录音机——"卖掉点子后制片人可能口述五页故事大纲"。）
 
-- **5.3 metabolize：不照执行，先消化** —— Le Bureau 的六页 note 与 Éric Rochant 的四步处理流程 → reference.md 第十节。
-- **5.4 自己先找读者：warm read → cold read** —— 两类读者的用法、必问的那个问题、三条筛 note 法则、朗读与抽线单修 → reference.md 第十节。
-- **5.5 给 note 的一方** —— 匿名读稿流程、note 来源可能比你知道得多、Embrace the rewrite → reference.md 第十节。
+- **5.3 metabolize：不照执行，先消化** —— Le Bureau 的六页 note 与 Éric Rochant 的四步处理流程 → references/reference.md 第十节。
+- **5.4 自己先找读者：warm read → cold read** —— 两类读者的用法、必问的那个问题、三条筛 note 法则、朗读与抽线单修 → references/reference.md 第十节。
+- **5.5 给 note 的一方** —— 匿名读稿流程、note 来源可能比你知道得多、Embrace the rewrite → references/reference.md 第十节。
 
 ---
 
 ## 六、职级阶梯、step deal 与被换掉的原因
 
-- **七级职衔表与时效 flag**：每级的要点，以及 2003（Goldberg）／2007 中译本与 2011 英文第 3 版（Douglas）／2009–2011（Smith）／1999–2001（Blum）各自的年份界定与"结构至今有效"的说明 → reference.md 第十一节；**四本书的钱与阶梯完整对照表（每栏标来源年份，含 Smith 的 Term Writer→Executive Producer 十级阶梯与 8–12 人编组、Blum 的 1998 MBA 制度条目）见第二十节**。
-- **step deal 与两道 cutoff**：梗概后与初稿后的触发条件、50% 署名规则、sitcom 只有一个切点 → reference.md 第十一节。
-- **freelance 是职业还是试镜**：三条并存的定性（生活方式／audition scripts／"给助理"）→ reference.md 第十一节。
+- **七级职衔表与时效 flag**：每级的要点，以及 2003（Goldberg）／2007 中译本与 2011 英文第 3 版（Douglas）／2009–2011（Smith）／1999–2001（Blum）各自的年份界定与"结构至今有效"的说明 → references/reference.md 第十一节；**四本书的钱与阶梯完整对照表（每栏标来源年份，含 Smith 的 Term Writer→Executive Producer 十级阶梯与 8–12 人编组、Blum 的 1998 MBA 制度条目）见第二十节**。
+- **step deal 与两道 cutoff**：梗概后与初稿后的触发条件、50% 署名规则、sitcom 只有一个切点 → references/reference.md 第十一节。
+- **freelance 是职业还是试镜**：三条并存的定性（生活方式／audition scripts／"给助理"）→ references/reference.md 第十一节。
 
 **关键警告**：**过了 freelancer 和 staff writer 之后，职衔在不同剧上的含义就不可靠了**——"有些职衔可能是荣誉性质的……随着编剧逐步升级，他的经纪人每个季就会跟新职衔的他谈判索取新的报酬。"推论：**不要向 story editor pitch**——"一位故事编辑通常不具有聘用人的权力。糟糕的是，他把你的推销计划转达给剧目管理人时，自己也不愿作较多的推介。"**不署名的传统**（中译本 p0205）："**剧组里级别越高的人按照传统都会让位于剧组里级别较低的人和自由编剧。**"
 
-- **被换掉、进不去的真实原因**：雇人/解雇的依据、Casting a writing room 与两个反例 → reference.md 第十二节。
-- **Douglas 的七宗错（"The Staff from Hell"）全文** → reference.md 第十二节。
-- **Smith 的房间政治补充**（第 18 章六条）→ reference.md 第十二节。
+- **被换掉、进不去的真实原因**：雇人/解雇的依据、Casting a writing room 与两个反例 → references/reference.md 第十二节。
+- **Douglas 的七宗错（"The Staff from Hell"）全文** → references/reference.md 第十二节。
+- **Smith 的房间政治补充**（第 18 章六条）→ references/reference.md 第十二节。
 
 ---
 
 ## 七、制作现实作为创作触发
 
-核心原则一句（Goldberg 第 16 章 p0129）：**"Know what your script is about and you'll know what you can lose, and what you have to keep."** 长案例见 reference.md 第十三至十七节。
+核心原则一句（Goldberg 第 16 章 p0129）：**"Know what your script is about and you'll know what you can lose, and what you have to keep."** 长案例见 references/reference.md 第十三至十七节。
 
-- **7.1 一切都要钱，场地是最先被改的**：猫变狗的逐项账、每天拍 7–12 页的页数经济学与转场损耗、West Wing "The Drop-In" 里"成立"的案例 → reference.md 第十三节。
+- **7.1 一切都要钱，场地是最先被改的**：猫变狗的逐项账、每天拍 7–12 页的页数经济学与转场损耗、West Wing "The Drop-In" 里"成立"的案例 → references/reference.md 第十三节。
 
 **7.2 把"解法"翻译回"问题"（最可迁移的一条）。** 听到"把 18、34 场移出 standing sets、删掉追车"时，**去问他们面对的问题**（p0132–133）。真相可能是：standing sets 多排了 8 页、特技超支 $5,000。于是你给出更好的解法：把 Fred's Bar 那场 4 页 walk-and-talk 搬进 standing sets（多出一整天棚拍、省一处场地费）；保住追车，删两个一句台词的 day player、删第一幕的酒吧斗殴（酒吧已经没了），抵掉 $5,000。**"they won't object, as long as you come up with a better one."** 配套姿态：**别进 bunker mentality**——"If you try to hold on to everything you wrote, you'll lose it all."
 
-**7.3 预算逼出的瓶子集**：West Wing "17 People" 的 deficit financing 经济模型、华纳的五条禁令与 Sorkin "I got to write a play" 的转化原话、六夜 teaser 的写法 → reference.md 第十四节。
+**7.3 预算逼出的瓶子集**：West Wing "17 People" 的 deficit financing 经济模型、华纳的五条禁令与 Sorkin "I got to write a play" 的转化原话、六夜 teaser 的写法 → references/reference.md 第十四节。
 
 → **收到"这一集不能花钱"时，不要想"删哪些场"，要想"哪两个角色之间有一场早就该发生的对质，以及季弧里那个秘密该向前走一步"。** 附带数据：该集在一夜之间、一栋建筑里完成；teaser 只有 6 页却跨越**六个夜晚**（用 `TITLE: The Same Night / Two Nights Later / …` ＋反复的弹球打墙声做转场，每段只留一两个问答）——**最省钱的 teaser 写法：一个房间、一个动作母题、六次重复递进。** 同类：Sopranos "Pine Barrens"。瓶子集在季形里的位置见 `laohu-series-structure`。
 
-- **7.4 演员：否决、档期、身体，以及为演员写**："Sammo Blammo" 的三次重做、Diagnosis Murder 的 writers' guidelines 参数、Fleabag 与 Succession 的演员案例 → reference.md 第十五节；**Fellowes 从 419 条脚注里提炼的 22 条法则及其决定类型（剪辑取舍／历史考据／演员导致的改写／制作成本）见第二十四节**。
-- **7.5 alts、freebie take 与"写长"的经济学**：Armstrong 列出的剧本与成片不同的七个原因全文，以及被剪素材的回收记录 → reference.md 第十六节；**Succession 脚注里 S2E10→S3E1／S3E2、S3E3 伏笔调光、S3E8 nanny 线、S3E9 Marcia–Shiv 的被剪戏迁移链见第二十五节**。
-- **7.6 当这一集救不回来的时候**：Cobra 的体育馆大结局与三条不可抗力案例 → reference.md 第十七节。
+- **7.4 演员：否决、档期、身体，以及为演员写**："Sammo Blammo" 的三次重做、Diagnosis Murder 的 writers' guidelines 参数、Fleabag 与 Succession 的演员案例 → references/reference.md 第十五节；**Fellowes 从 419 条脚注里提炼的 22 条法则及其决定类型（剪辑取舍／历史考据／演员导致的改写／制作成本）见第二十四节**。
+- **7.5 alts、freebie take 与"写长"的经济学**：Armstrong 列出的剧本与成片不同的七个原因全文，以及被剪素材的回收记录 → references/reference.md 第十六节；**Succession 脚注里 S2E10→S3E1／S3E2、S3E3 伏笔调光、S3E8 nanny 线、S3E9 Marcia–Shiv 的被剪戏迁移链见第二十五节**。
+- **7.6 当这一集救不回来的时候**：Cobra 的体育馆大结局与三条不可抗力案例 → references/reference.md 第十七节。
 
 ---
 
 ## 八、流程选型：没有唯一正确的房间
 
-五套流程的对照表（代表作、做法、前提条件，含 Fleabag 以五个角色替代编剧室的完整清单、Le Bureau 的四级层级与"整季写作约 100 万欧元"）→ reference.md 第十八节。**多机位情景喜剧的拍摄前五天逐日表（table read→notes→run-through→dress rehearsal→final shoot）见第二十一节。**
+五套流程的对照表（代表作、做法、前提条件，含 Fleabag 以五个角色替代编剧室的完整清单、Le Bureau 的四级层级与"整季写作约 100 万欧元"）→ references/reference.md 第十八节。**多机位情景喜剧的拍摄前五天逐日表（table read→notes→run-through→dress rehearsal→final shoot）见第二十一节。**
 
 两条跨流程判断：**流程选型要与"剧的声音"匹配**；**喜剧可以委员会写，戏剧不能**（Bays）——即使在标准编剧室里也要给"戏剧时刻"划一块不 punch 的保护区。
 
-**Reality/Unscripted 的反证**（Stone 访谈：六个 act break 的 rundown、约四英寸厚的 bible、"This is a producer's medium"）→ reference.md 第十八节。
+**Reality/Unscripted 的反证**（Stone 访谈：六个 act break 的 rundown、约四英寸厚的 bible、"This is a producer's medium"）→ references/reference.md 第十八节。
 
 ---
 
@@ -257,6 +257,10 @@ Goldberg 称之为 **story meeting / "cracking the story"**：先泛谈故事可
 8. **stasis 清单**（Douglas 规则 3）：选一部在播剧，列出"常规角色在行为正常的状态下会冒出的五个冲动或议题"，每条后面写一句"为什么他们这样做"。不许写今年的大弧。
 9. **抽线单修**（Miller）：拿自己的一个剧本，把 B 线所有场抽到单独文档修到成立，再塞回去。对比前后的页数与清晰度。
 10. **十把椅子**（Wells）：找 3–5 人组一个临时房间，六小时内为一部在播剧破出一集：四标题白板（Big / Serious / Humorous / Other）→ A/B/C 逐线列 beat → 剪开排序 → 指定一人去写 treatment → 全组给 note → 他改 → 全组再给 note。记录每一步花了多久。
+
+## 调用与返回
+
+可由明确点名直接使用，也可由[编剧](../../SKILL.md)按当前缺口调用。直接命中本专业时先沿该链接补齐已确认故事事实、冻结文字与允许变化范围，只补依赖，不重新发起父级任务。CONSULT返回局部结果，作品主责不转移；缺少上游事实时RETURN最早负责人，不自行改写剧情。需要跨专业判断时只传当前问题和保护项，不重新运行整条创作链。
 
 ## 当前文本的语言执行
 

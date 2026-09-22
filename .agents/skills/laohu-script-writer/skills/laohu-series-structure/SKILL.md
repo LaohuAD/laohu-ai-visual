@@ -30,9 +30,9 @@ description: 需要设计单集、试播集、季弧、A/B/C线、幕尾或追�
 
 分工：**Calvisi 给 pilot 的逐节拍页码区间，Douglas 给四幕格子与场数，Oberg 给"格式 vs 结构"的地基与信息管理四工具，Landau 给幕数抽样与 cliffhanger 类型学，Goldberg & Rabkin 给经典广播四幕的功能表，Miller 给 landmark 与场结构五件套，Rabkin 给流媒体时代的提速规则，Blum 给各节目类型的幕数页数表，五部剧本集（West Wing / Succession / Sopranos / Downton / Fleabag）给可验证的实测数字。**
 
-表格、完整节拍表与逐集数据见同目录 [reference.md](reference.md)。
+表格、完整节拍表与逐集数据见同目录 [reference.md](references/reference.md)。
 
-本 pack 用的英文术语、严敏中译本的官方译名与一句话定义的四列对照表见 [reference.md](reference.md) 第十二节（含 log line＝"计程绳"、staff writer＝"试用编剧"两处怪译，以及"晚进早出"与 enter late, leave early 同名反义的警告）。
+本 pack 用的英文术语、严敏中译本的官方译名与一句话定义的四列对照表见 [reference.md](references/reference.md) 第十二节（含 log line＝"计程绳"、staff writer＝"试用编剧"两处怪译，以及"晚进早出"与 enter late, leave early 同名反义的警告）。
 
 **不在本 skill 里**：series engine / franchise / bible / pilot 类型与卖法 → `laohu-series-engine-bible`；半小时喜剧的笑点与格式 → `laohu-sitcom-comedy`；编剧室流程与文档链 → `laohu-writers-room`；国产剧集数体量与分集体系 → `laohu-chinese-series-practice`；逐集结构表全文 → `laohu-series-case-studies` / `laohu-succession-series-writing`。媒介无关的工艺不重写：**场景价值转折见 `laohu-scene-craft`，对白见 `laohu-dialogue`，三幕范式与情节点见 `laohu-story-structure`。**
 ## 按任务读哪几节（不要通读）
@@ -48,7 +48,7 @@ description: 需要设计单集、试播集、季弧、A/B/C线、幕尾或追�
 | 写半小时喜剧 | 仅三、六的媒介无关部分 → 转 `laohu-sitcom-comedy` | 二、五的页码（一小时专用） |
 | 写国产 45 分钟剧 | 三、四、六 → 时段与场面数转 `laohu-chinese-series-practice` | 二、五的页码 |
 
-reference.md 是查表用的，只在 SKILL.md 明确指向某一节时打开。
+references/reference.md 是查表用的，只在 SKILL.md 明确指向某一节时打开。
 
 ---
 
@@ -64,7 +64,7 @@ reference.md 是查表用的，只在 SKILL.md 明确指向某一节时打开。
 - **成片长度与剧本长度是两个数字**（Calvisi）：广播台正片去掉广告只有 45–48 分钟，但 pilot 剧本必须至少 50 页——宁长勿短，"but try not to exceed 60 pages"。
 - **剧集的"幕"不是戏剧原理，是广告位。** Oberg 第 1 章把任何规定固定份数与页数的切分法叫 **story format（logistical，物流式）**，源头是戏剧换蜡烛、电影换胶片卷、电视插广告，"But all this is gone."；"香肠串"比喻：物流法只决定"几根香肠、多长"。**本 skill 最重要的判断力：幕数是交付格式，三幕（before / during / after 一个 main dramatic action 或 evolution）是设计工具。**
 - **但结构同时是制作排程。** Miller 第 9 章：制作部门拿到剧本第一件事是统计 days in and out；**只写 DAY 或 NIGHT**——写 dawn 制作就会精确安排那天日出时段开拍。
-- **结构是继承的。** 剧集沿用 pilot 的幕结构与页码区间（Breaking Bad pilot 与同剧 #308 的幕页对照见 [reference.md](reference.md) 第一节）——**写 pilot 等于给全剧定结构模子。**
+- **结构是继承的。** 剧集沿用 pilot 的幕结构与页码区间（Breaking Bad pilot 与同剧 #308 的幕页对照见 [reference.md](references/reference.md) 第一节）——**写 pilot 等于给全剧定结构模子。**
 
 ---
 
@@ -76,44 +76,44 @@ reference.md 是查表用的，只在 SKILL.md 明确指向某一节时打开。
 
 > **时效 flag（2003）**：该书称"一小时剧一律四幕"，**已过时**——2006 年起广播网普遍五幕、ABC 新剧一律六幕（Douglas 中译 p0091），流媒体取消幕标记。但**四幕功能链至今有效**：Miller 与 Landau（2021）都仍要求先按四幕 break 再切。
 
-页码锚点（Douglas 中译 p0090–0091，含 teaser 的四幕初稿）的四个页数与"每 13 至 15 分钟一次广告"的成因见 [reference.md](reference.md) 第二节。
+页码锚点（Douglas 中译 p0090–0091，含 teaser 的四幕初稿）的四个页数与"每 13 至 15 分钟一次广告"的成因见 [reference.md](references/reference.md) 第二节。
 
 > ⚠️ **这些页码只在 48–63 页的美式一小时集内有效，不能按比例换算到国产 45 分钟集。** 两套切法的依据不同：美式按**页数与广告位**切幕，国产按**时段与片断**切（正片约 41.5 分钟，开场 3 分钟＋每 15 分钟一个小扣子＋集尾大关子）。写国产剧时本节只取媒介无关的部分（出幕类型学、一幕尾是"主角被推进没有退路"、Act Two break 改变故事性质、场结构五件套、赌注检验、信息管理四工具），时段与场面数改用 `laohu-chinese-series-practice`。
 > **半小时剧同样不适用**（30 分钟本约 30 页，幕数与场数都是另一套）：幕长、页码与场数见 `laohu-sitcom-comedy` 第四节，**不要把本节的一小时数字缩放过去**。本节下面的诊断 4、5 两条只对美式一小时集有效。
 
 ### 2.2 场数：每幕 5–7 场，一集约 28 场
 
-Douglas 的算术、四幕 28 场／五六幕 20 场的总量、Oberg 的 A/B/C 场数配比与 Chase 的"每集约 35 拍"见 [reference.md](reference.md) 第二节。
+Douglas 的算术、四幕 28 场／五六幕 20 场的总量、Oberg 的 A/B/C 场数配比与 Chase 的"每集约 35 拍"见 [reference.md](references/reference.md) 第二节。
 
 ### 2.3 四幕 → 五幕 / 六幕的改法
 
-Douglas、Peter Blake（House）、Miller 三套改法，以及"Act Six 实际是下一集的 teaser"的六幕尾部设计见 [reference.md](reference.md) 第二节。
+Douglas、Peter Blake（House）、Miller 三套改法，以及"Act Six 实际是下一集的 teaser"的六幕尾部设计见 [reference.md](references/reference.md) 第二节。
 
 ### 2.4 Teaser / cold open
 
-- **长度**：Douglas、Landau、Oberg 三家的 teaser 长度数字见 [reference.md](reference.md) 第三节。
-- **十种类型**（Douglas 七范式＋Landau 三型）的名目与实例见 [reference.md](reference.md) 第三节。
+- **长度**：Douglas、Landau、Oberg 三家的 teaser 长度数字见 [reference.md](references/reference.md) 第三节。
+- **十种类型**（Douglas 七范式＋Landau 三型）的名目与实例见 [reference.md](references/reference.md) 第三节。
 - **给新手的硬规则**（Douglas 中译 p0098）："坚持以故事而非信息来开场……许多学生……误以为用重大的主题思想或抽象的哲理来开场会给人留下深刻印象。**他们实际上是看到戏剧弧线推进的挑战而畏缩。最佳的引子倾向于最佳的戏剧化。**"
 - **teaser flashback 的禁忌**（Oberg）：可以从 dramatic action 的中段甚至末段起叙（The Walking Dead、Breaking Bad），**但绝不能在 teaser 里回答 dramatic question**；取材自结尾就选 climax **之前或之中**（Run All Night），不要之后（John Wick）。
-- **teaser 不是必需品**：Landau 2e 与 Oberg 的论据、无 teaser 与"短第一幕充当 teaser"的剧目清单见 [reference.md](reference.md) 第三节。
+- **teaser 不是必需品**：Landau 2e 与 Oberg 的论据、无 teaser 与"短第一幕充当 teaser"的剧目清单见 [reference.md](references/reference.md) 第三节。
 - **cold open ≠ teaser**（Miller）：Brooklyn Nine-Nine pilot 的 cold open 不影响主线、只启动本集主题，所以该集 point of attack 落在第一幕。
 
 ### 2.5 隐形幕：三重判据
 
 付费有线／流媒体剧本常不标幕也不分页（Calvisi 点名 **True Detective、House of Cards、Mad Men 都不标幕，但 Mad Men 在常规幕断处放 FADE OUT**），然而"a pilot script is almost always going to be structured in the conventional 4-6 act template"。从 Succession 剧本逐幕实测出来的三重判据：
 
-三重判据：① **剧情日／时间块标记**——**换日就是换幕**；② **地点与交通工具的切换**；③ **核心问题转向的那一刻**。判定标准：**每幕末尾必须有一次信息或权力的转移**，不必有悬念钩。逐条的 Succession 实测（S3E9、S4E01、S4E05、S4E08、S4E10）见 [reference.md](reference.md) 第四节。
+三重判据：① **剧情日／时间块标记**——**换日就是换幕**；② **地点与交通工具的切换**；③ **核心问题转向的那一刻**。判定标准：**每幕末尾必须有一次信息或权力的转移**，不必有悬念钩。逐条的 Succession 实测（S3E9、S4E01、S4E05、S4E08、S4E10）见 [reference.md](references/reference.md) 第四节。
 
-配套规律（Succession S4 十集）：**8/10 集把全集压进一个带固定程序的容器**，**程序节点替代 act break**——**即流媒体编剧仍然在写幕，只是把幕伪装成日程**。逐集容器与场景数见 [reference.md](reference.md) 第四节。
+配套规律（Succession S4 十集）：**8/10 集把全集压进一个带固定程序的容器**，**程序节点替代 act break**——**即流媒体编剧仍然在写幕，只是把幕伪装成日程**。逐集容器与场景数见 [reference.md](references/reference.md) 第四节。
 
 ### 2.6 要不要在页面上写 ACT——必须并列保留的分歧
 
-- **五家立场**（Landau 2e 的"story over format"、要看到标注的 showrunner 的反面、Miller 的市场判断、Mazzara 的 TWD 改幕、Alex Pina 的 milestone moments）见 [reference.md](reference.md) 第二节。
+- **五家立场**（Landau 2e 的"story over format"、要看到标注的 showrunner 的反面、Miller 的市场判断、Mazzara 的 TWD 改幕、Alex Pina 的 milestone moments）见 [reference.md](references/reference.md) 第二节。
 - **判据**：为广播网／基础有线／AVOD 写 → 标幕（AVOD 与传统广播网一样不允许跳广告）；为 premium／SVOD 写 → 按四幕 break、交付前删标注或改用剧情日标记；拿不定就照 Miller 的判据走，看内容能上哪个台。
 
 ### 2.7 页数与集长
 
-Calvisi / Landau / Miller / Blum 的 pilot 与单集页数区间、Oberg 的各平台集长、Landau 2e 的趋势判断，以及各书年份的时效 flag 见 [reference.md](reference.md) 第二节。
+Calvisi / Landau / Miller / Blum 的 pilot 与单集页数区间、Oberg 的各平台集长、Landau 2e 的趋势判断，以及各书年份的时效 flag 见 [reference.md](references/reference.md) 第二节。
 
 ---
 
@@ -127,21 +127,21 @@ Calvisi / Landau / Miller / Blum 的 pilot 与单集页数区间、Oberg 的各�
 - **反面教材 schmuck bait**（Landau 2e）：心电图拉平、护士喊 "Code blue!"（插广告）→"I'm getting a pulse"。
 - **今天的规则（Landau 2e 最核心的一条）**："**forcing a cliffhanger at the end of each act break is deadly**… Instead, act breaks can land on a **turning point that emerges from characters, not merely from plot**."
 - **判准（1e Tip 19 与 2e 第 12 章两处重复）**：cliffhanger 必须 **"grow out of character jeopardy, risk, or fear"**；坏 cliffhanger 只是为震惊值而来的情节点；"even a 'surprise' cliffhanger needs to be (subtly) set up so that the audience feels they **should have seen it coming—but didn't**."
-- **位置与时限**：一小时剧把高潮型 cliffhanger 留到集末，多机 sitcom 通常在集中点（结尾要按 reset 键回到常态）；可以延后揭示全部真相，**但务必在本季结束前揭示**（原话见 [reference.md](reference.md) 第五节）。
+- **位置与时限**：一小时剧把高潮型 cliffhanger 留到集末，多机 sitcom 通常在集中点（结尾要按 reset 键回到常态）；可以延后揭示全部真相，**但务必在本季结束前揭示**（原话见 [reference.md](references/reference.md) 第五节）。
 
 ### 3.2 十种 cliffhanger（Landau）
 
-2e 七型（character in peril｜ticking bomb｜love is in the balance｜surprise twist / aha moment｜death of a character｜discovery of a secret｜life events）与 1e 另列三型（lack of closure｜mini-cliffhangers｜comedy cliffhangers）的逐条定义与实例，以及两个最可迁移的做法（"用一个单词完成反转"、"不在笑点上出幕"）见 [reference.md](reference.md) 第五节。
+2e 七型（character in peril｜ticking bomb｜love is in the balance｜surprise twist / aha moment｜death of a character｜discovery of a secret｜life events）与 1e 另列三型（lack of closure｜mini-cliffhangers｜comedy cliffhangers）的逐条定义与实例，以及两个最可迁移的做法（"用一个单词完成反转"、"不在笑点上出幕"）见 [reference.md](references/reference.md) 第五节。
 
 ### 3.3 act out 的八种形式与三条通用律
 
-West Wing 六集实测的八型：**悬念提问／反转台词／情感揭示／无对白动作／道具定格／重复台词语义反转／被剪断的 setup／伏笔兑现的手势**。配套规则：**每幕出幕交给不同的线**；**至少一幕用无对白动作或道具出幕，不要四幕全用台词**——无台词的出幕必须先教语法。八型实例、Two Cathedrals 的教法与 Downton 的四型见 [reference.md](reference.md) 第五节。
+West Wing 六集实测的八型：**悬念提问／反转台词／情感揭示／无对白动作／道具定格／重复台词语义反转／被剪断的 setup／伏笔兑现的手势**。配套规则：**每幕出幕交给不同的线**；**至少一幕用无对白动作或道具出幕，不要四幕全用台词**——无台词的出幕必须先教语法。八型实例、Two Cathedrals 的教法与 Downton 的四型见 [reference.md](references/reference.md) 第五节。
 
-**出幕可以完全是信息事件。** Goldberg & Rabkin 附录两集（Martial Law 与 seaQuest 2032 "Depths of Deceit"）共有三条通用律：**① 一幕结尾不是最大危机，而是"主角被推进没有退路的处境"；② Act Two break 一定改变故事的性质而不只是提高危险；③ Act Three 结尾必须让主角的胜利变成新的失败。**两集的逐幕对照见 [reference.md](reference.md) 第五节。
+**出幕可以完全是信息事件。** Goldberg & Rabkin 附录两集（Martial Law 与 seaQuest 2032 "Depths of Deceit"）共有三条通用律：**① 一幕结尾不是最大危机，而是"主角被推进没有退路的处境"；② Act Two break 一定改变故事的性质而不只是提高危险；③ Act Three 结尾必须让主角的胜利变成新的失败。**两集的逐幕对照见 [reference.md](references/reference.md) 第五节。
 
 ### 3.4 悬念的成分与赌注检验
 
-- **Douglas 的节奏公式**（中译 p0139，英文版 Anticipation — Expectation — Surprise）：**预感 → 期望 → 惊诉**，"然后开始一个新的悬念段落"；NYPD Blue "Hearts and Souls" 六拍冷开场的逐拍示范见 [reference.md](reference.md) 第六节。
+- **Douglas 的节奏公式**（中译 p0139，英文版 Anticipation — Expectation — Surprise）：**预感 → 期望 → 惊诉**，"然后开始一个新的悬念段落"；NYPD Blue "Hearts and Souls" 六拍冷开场的逐拍示范见 [reference.md](references/reference.md) 第六节。
 - **Landau 2e**：Suspense ＝ **Anticipation + Surprise**，最好是 unexpected, inevitable but not predictable。
 - **赌注检验法（最实用的一条）**：问自己"面对危机什么都不做"对这个人物是否是可行选项——"If your character is not compelled to solve a problem by the potential of losing something of value, then your stakes are insufficient."
 - **极化模型**：在每一集、每一场、每一幕找出正负（+/−）电荷；与旧做法的区别是**act break 的方向可正可负**——"some acts will end on a win"。
@@ -150,15 +150,15 @@ West Wing 六集实测的八型：**悬念提问／反转台词／情感揭示�
 
 三维模型：人物是点；加 main dramatic action（conscious want）→ 线；加 main dramatic evolution（unconscious need）→ 面；**加 managing information → 立体**。Managing conflict 回答"Who wants or needs what and why?"，managing information 回答"**Who knows what and when?**"
 
-四工具（**dramatic irony** / **surprise** / **mystery** / **suspense**）的定义与用法表见 [reference.md](reference.md) 第六节。
+四工具（**dramatic irony** / **surprise** / **mystery** / **suspense**）的定义与用法表见 [reference.md](references/reference.md) 第六节。
 
-四条红线（① 不要让主角长期比观众知道得更多；② 做 cliffhanger 优先用"信息炸弹"；③ closed mystery vs open mystery；④ "you can have some mystery over the nature of the antagonist, but not over the reality of the danger it represents."）的逐条展开见 [reference.md](reference.md) 第六节。
+四条红线（① 不要让主角长期比观众知道得更多；② 做 cliffhanger 优先用"信息炸弹"；③ closed mystery vs open mystery；④ "you can have some mystery over the nature of the antagonist, but not over the reality of the danger it represents."）的逐条展开见 [reference.md](references/reference.md) 第六节。
 
 Landau 2e 的缝合句："it's not only Who Does What When, but also **Who Knows What When**."
 
 ### 3.6 提速：act out 不等于每七八分钟一次假反转
 
-Rabkin 的 24 与 Scandal 对照、"把第四幕末最酷的事挪到 teaser 末尾"的原话、L+3 收视逻辑与"流媒体可以省掉三样"见 [reference.md](reference.md) 第五节。
+Rabkin 的 24 与 Scandal 对照、"把第四幕末最酷的事挪到 teaser 末尾"的原话、L+3 收视逻辑与"流媒体可以省掉三样"见 [reference.md](references/reference.md) 第五节。
 
 ---
 
@@ -166,7 +166,7 @@ Rabkin 的 24 与 Scandal 对照、"把第四幕末最酷的事挪到 teaser 末
 
 ### 4.1 定义与排序
 
-四家的定义与排序（Douglas 的"三个独立的故事"与 runner／Calvisi 的"字母按戏份多少排"与 story engine 三要素／Landau 的 A＝franchise、B＝私人故事、runners＝C/D／Oberg 的"每集至少 A+B，最多 4–5 条、只有 A、B 需要设计成三幕"）见 [reference.md](reference.md) 第七节。
+四家的定义与排序（Douglas 的"三个独立的故事"与 runner／Calvisi 的"字母按戏份多少排"与 story engine 三要素／Landau 的 A＝franchise、B＝私人故事、runners＝C/D／Oberg 的"每集至少 A+B，最多 4–5 条、只有 A、B 需要设计成三幕"）见 [reference.md](references/reference.md) 第七节。
 
 ### 4.2 编织的硬规则
 
@@ -177,28 +177,28 @@ Rabkin 的 24 与 Scandal 对照、"把第四幕末最酷的事挪到 teaser 末
 5. **插入另一条线可以制造"省略法"（ellipsis）**——时间已逝的印象，让同一批人物"实际上无法那么快经历之"地重新出现。
 6. **没有一场戏是专为呈示部（exposition）撰写的。"如果你需要传递事实的话，那么就把事实置于一个充满情感的语境中。"**（Douglas 中译 p0119）
 7. **规划时把各线分开，到写 teleplay 时才编织**（Douglas 给新手的顺序，与她自己分析"Hearts and Souls"四层同时性调度时的顺序相反）。
-8. **线的交叉在有主题链接时最有效**（Landau 1e），家庭是最强的链接；**runner 可以长大成主线**；**serial 不必每集写到每个人**；三条的逐例（Terriers 的三级升格、Game of Thrones 的轮换、Mad Men S6E11 Peggy 的老鼠与 elliptical storytelling）见 [reference.md](reference.md) 第七节。
+8. **线的交叉在有主题链接时最有效**（Landau 1e），家庭是最强的链接；**runner 可以长大成主线**；**serial 不必每集写到每个人**；三条的逐例（Terriers 的三级升格、Game of Thrones 的轮换、Mad Men S6E11 Peggy 的老鼠与 elliptical storytelling）见 [reference.md](references/reference.md) 第七节。
 
 ### 4.3 procedural 的 A/B 双轨（Ann Donahue，CSI: Miami，Douglas 第 3 章）
 
-Ann Donahue 的 A＝调查／B＝情感双轨、"warm body by the end of Act One, within the first 17 pages"，以及 The Good Wife / CSI / House 三种编剧室顺序见 [reference.md](reference.md) 第七节。
+Ann Donahue 的 A＝调查／B＝情感双轨、"warm body by the end of Act One, within the first 17 pages"，以及 The Good Wife / CSI / House 三种编剧室顺序见 [reference.md](references/reference.md) 第七节。
 
 ### 4.4 两种替代破故事法（必须与 A/B/C 并列）
 
 - **Wendy West（Dexter）**：播出无幕，剧集实际退回三幕；"**We break the beats by character and then do a weave.**"白板上每个角色有开头中间结尾，**不按幕 break，按角色 break**，先 break 主角线——"The reversals tend to come where you'd expect — page 40 to 45 out of a 55-page script."
 - **Glen Mazzara（The Walking Dead）**：**明确拒绝 A/B/C**——把 Rick 当 A、另一人当 B 再交织，"That doesn't always equal a theme. It just pushes the ball further on each one."；改问 **"What is this episode about?"**（女孩走出谷仓那集、畜栏被尸群冲破那集，每个人物在那个更大的故事里有自己的位置）。**代价他自己说明了：次要人物可能永远只是次要人物。**
 - **Oberg 的折中**：多线不等于 theme-led——若各线角色**共享同一外部问题与同一目标**，它是 plot-led 的 co-protagonist 结构（Stranger Things 的 A1 Joyce / A2 Hopper / A3 男孩们 / A4 Jonathan 其实是同一条 A 线）。
-- **Downton 的极端值（Fellowes）**：S2 同时跑 8–12 条线的群戏规格与"每集至少一条与本集主危机无关的线"见 [reference.md](reference.md) 第七节。
+- **Downton 的极端值（Fellowes）**：S2 同时跑 8–12 条线的群戏规格与"每集至少一条与本集主危机无关的线"见 [reference.md](references/reference.md) 第七节。
 
 ### 4.5 用格子分析与规划（Douglas 的 grid，中译作"框格"）
 
-基本四幕格子、拆片三步、倒序制造（reverse-engineer）、log line 的要求与 Oberg 的三步替代法（Mapping → Sequencing → Weaving the Strands）见 [reference.md](reference.md) 第七节。
+基本四幕格子、拆片三步、倒序制造（reverse-engineer）、log line 的要求与 Oberg 的三步替代法（Mapping → Sequencing → Weaving the Strands）见 [reference.md](references/reference.md) 第七节。
 
 ---
 
 ## 五、pilot 节拍表
 
-Calvisi 的 Benchmark 页数区间、完整节拍链、AOP 与 DOW 的校验数字、四个"电视化"专属节拍、"This is form, not formula." 的边界、Miller 的六 landmark 模型与 Landau 的 pilot 结尾三策略见 [reference.md](reference.md) 第一节。
+Calvisi 的 Benchmark 页数区间、完整节拍链、AOP 与 DOW 的校验数字、四个"电视化"专属节拍、"This is form, not formula." 的边界、Miller 的六 landmark 模型与 Landau 的 pilot 结尾三策略见 [reference.md](references/reference.md) 第一节。
 
 **pilot 最关键的取舍（Calvisi）**：决定"要介绍多少人物与多少条线"——塞太多 → too dense；聚焦太少 → 读者感觉不到一个能撑 100 集的大故事。**结尾要好，但不能把所有东西都兑付掉**，否则会"feel too complete or 'closed-ended'—like a feature"；必须"leave us hanging to some degree and wanting more"。
 
@@ -211,39 +211,39 @@ Calvisi 的 Benchmark 页数区间、完整节拍链、AOP 与 DOW 的校验数�
 **五件套**（Miller 第 9 章，改编自 Lance Gentile，ER / Third Watch 编剧兼急诊医生）：**hero's want / obstacle / escalations / decision / resolution**。
 
 - **want 与 obstacle 在开场前就已确定**；**第一个 escalation 开场**；**decision ＝ 场的高潮**；**resolution ＝ decision 的结果**，并把人物带进下一场。
-- **数量**：至少三个 escalation，"but it's better to have more. More escalations give the scene time to build and breathe."**优先用动作**——"If all of your escalations are oral… **Your TV show turns into a radio show.**"（Hannibal 与 HTGAWM 两场的 escalation 实测见 [reference.md](reference.md) 第八节。）
+- **数量**：至少三个 escalation，"but it's better to have more. More escalations give the scene time to build and breathe."**优先用动作**——"If all of your escalations are oral… **Your TV show turns into a radio show.**"（Hannibal 与 HTGAWM 两场的 escalation 实测见 [reference.md](references/reference.md) 第八节。）
 - **一场只有一个 hero，而且 hero 可以换人**（男厕场是 Will，下一场 Jack–Alana 场是 Jack）。**一人场**：对立的 want 来自世界或环境——OITNB "The Chickening" 里 Piper 的 want 是享受周日早晨仪式，**obstacle 是监狱**。
 - **moment / image ≠ scene**："If there isn't a strong character want, it's not a scene. **A moment without a character want is simply a moment, an image.**"而 moment 不能重复已知情绪，必须展示进化中的情绪。
 - **收场责任**："**You the writer need to decide how to end the scene.** And you the writer need to decide what emotions your characters are feeling."
 - **exposition through conflict**：HTGAWM 树林场里每个人的反对都合理，在争论中交代了难度与 stakes。
 
-**剧集场级的五条附加规格**（2 页的长度目标、不必描写外貌、"ANGLE" 是文学手段、同场多层调度 layering、不要 micromanage 演员）与**舞台指示承担结构任务**的两条（Succession 剧本集）见 [reference.md](reference.md) 第八节。
+**剧集场级的五条附加规格**（2 页的长度目标、不必描写外貌、"ANGLE" 是文学手段、同场多层调度 layering、不要 micromanage 演员）与**舞台指示承担结构任务**的两条（Succession 剧本集）见 [reference.md](references/reference.md) 第八节。
 
 ---
 
 ## 七、季形
 
-**7.1 物流层与戏剧层。** Stranger Things S1 的物流三幕 3-3-2 与戏剧三幕分钟数、serial 的季层节奏纪律、集数检查（"Are you starting the story too early?"、减 1 集常能提速）见 [reference.md](reference.md) 第九节。
+**7.1 物流层与戏剧层。** Stranger Things S1 的物流三幕 3-3-2 与戏剧三幕分钟数、serial 的季层节奏纪律、集数检查（"Are you starting the story too early?"、减 1 集常能提速）见 [reference.md](references/reference.md) 第九节。
 
-**7.2 Tentpole。** Landau 1e Tip 13 把 teaser / act break / tag 合称 **tentpoles（帐篷柱）**；其功能链与 tag 的作用见 [reference.md](reference.md) 第九节。
+**7.2 Tentpole。** Landau 1e Tip 13 把 teaser / act break / tag 合称 **tentpoles（帐篷柱）**；其功能链与 tag 的作用见 [reference.md](references/reference.md) 第九节。
 
-**7.3 Bottle episode：成因是预算。** West Wing "17 People" 的幕长实测、三条规则与"把四个限制逆用成三个选择"见 [reference.md](reference.md) 第九节。
+**7.3 Bottle episode：成因是预算。** West Wing "17 People" 的幕长实测、三条规则与"把四个限制逆用成三个选择"见 [reference.md](references/reference.md) 第九节。
 
-**瓶子集不等于单线。** Sopranos "Pine Barrens" 的 B/C/D 并行、平行剪辑对位与信息衰减链见 [reference.md](reference.md) 第九节。
+**瓶子集不等于单线。** Sopranos "Pine Barrens" 的 B/C/D 并行、平行剪辑对位与信息衰减链见 [reference.md](references/reference.md) 第九节。
 
-**7.4 容器集与仪式集（Succession 的两套模板）。** 压力舱集的"通讯受限"设定、仪式集的免费节拍表与"缺席的主角"见 [reference.md](reference.md) 第九节。
+**7.4 容器集与仪式集（Succession 的两套模板）。** 压力舱集的"通讯受限"设定、仪式集的免费节拍表与"缺席的主角"见 [reference.md](references/reference.md) 第九节。
 
-**7.5 two-parter。** West Wing "In the Shadow of Two Gunmen" I/II 的幕页实测与上下半分工规则见 [reference.md](reference.md) 第九节。
+**7.5 two-parter。** West Wing "In the Shadow of Two Gunmen" I/II 的幕页实测与上下半分工规则见 [reference.md](references/reference.md) 第九节。
 
 **7.6 季终与剧终。**
-- Downton 的 streamers 与"最后一幕只做 pay-off"、Succession S1 的 140 美元/股对称掉头与 S4 的反向做法、Sopranos 的反高潮式收尾、Sorkin 的意象清单与 Two Cathedrals 幕长实测见 [reference.md](reference.md) 第九节。
+- Downton 的 streamers 与"最后一幕只做 pay-off"、Succession S1 的 140 美元/股对称掉头与 S4 的反向做法、Sopranos 的反高潮式收尾、Sorkin 的意象清单与 Two Cathedrals 幕长实测见 [reference.md](references/reference.md) 第九节。
 - **Landau 2e**："Give yourself and your protagonist(s) a deadline."——它同时能帮你写完 pilot。
 
-**7.7 六集季形（Fleabag 模板）。** 逐集骨架（铺开／欲望／露底／瓶子集／伪胜利／封闭社交场合）、单集形状与两条可迁移装置见 [reference.md](reference.md) 第九节。
+**7.7 六集季形（Fleabag 模板）。** 逐集骨架（铺开／欲望／露底／瓶子集／伪胜利／封闭社交场合）、单集形状与两条可迁移装置见 [reference.md](references/reference.md) 第九节。
 
-**7.8 多线季形（Downton S2）。** 逐集幕数、线的长度分层、"留人机制"与"杀角色前先让观众猜另一个人"见 [reference.md](reference.md) 第九节。
+**7.8 多线季形（Downton S2）。** 逐集幕数、线的长度分层、"留人机制"与"杀角色前先让观众猜另一个人"见 [reference.md](references/reference.md) 第九节。
 
-**7.9 替代结构（Landau 2e）。** Linear / Flashback / bookend / zigzag / hopscotch / 三条时间线 / Rashomon / Time Loop / 倒着讲的完整清单、选型五问，以及多时间线作为调性调节阀（Alex Pina）与 Mazzara 的反方见 [reference.md](reference.md) 第十节。
+**7.9 替代结构（Landau 2e）。** Linear / Flashback / bookend / zigzag / hopscotch / 三条时间线 / Rashomon / Time Loop / 倒着讲的完整清单、选型五问，以及多时间线作为调性调节阀（Alex Pina）与 Mazzara 的反方见 [reference.md](references/reference.md) 第十节。
 
 ---
 
@@ -291,7 +291,7 @@ Calvisi 的 Benchmark 页数区间、完整节拍链、AOP 与 DOW 的校验数�
 ## 十、工作流程：从一集的点子到交付稿
 
 1. **定三件事再动笔**（Oberg）：**series type**（procedural / serial / hybrid / limited / anthology / sitcom）、**story-type**（plot-led / character-led / theme-led / hybrid / exception）、**format**（集长＋大类）。任一含糊就先别写大纲。（story-type 判定见 `laohu-series-engine-bible`。）
-2. **选结构 comp**（Calvisi／Landau 同条）：找一部在语调／类型／题材／受众上与你相近的**成功**剧当结构模板；拿不到剧本就看片写 scene list。问清四件事：**有没有 teaser？几个 act break？每幕几场？有没有 tag／epilogue？** 它同时是你 pitch 时的 comp。**47 部剧的现成抽样表**（剧名｜年份｜format｜network／platform｜幕结构｜premise／non-premise／hybrid pilot｜showrunner；Landau 1e 附录，2014 年口径）见 [reference.md](reference.md) 第十一节，不必自己重新数。
+2. **选结构 comp**（Calvisi／Landau 同条）：找一部在语调／类型／题材／受众上与你相近的**成功**剧当结构模板；拿不到剧本就看片写 scene list。问清四件事：**有没有 teaser？几个 act break？每幕几场？有没有 tag／epilogue？** 它同时是你 pitch 时的 comp。**47 部剧的现成抽样表**（剧名｜年份｜format｜network／platform｜幕结构｜premise／non-premise／hybrid pilot｜showrunner；Landau 1e 附录，2014 年口径）见 [reference.md](references/reference.md) 第十一节，不必自己重新数。
 3. **拆 comp 的两三集填格子**（Douglas）：命名 A/B/C，每条线写一句挂在主角上的 log line，逐格填字母。
 4. **定本集的核心问题**，以及每条线的**入口场与出口场**（Downton 的线表法：一集 8–12 条线是上限，其中 1–2 条必须与主危机无关）。
 5. **倒序制造**（Douglas）：先在格子里填**开场、四分之三处的"最坏情况"、结尾**三处；只做 A 线或 A+B，给 C 留余地；然后从 cliffhanger 倒推前面的 beat。
@@ -315,7 +315,7 @@ Calvisi 的 Benchmark 页数区间、完整节拍链、AOP 与 DOW 的校验数�
 4. **Calvisi 的 Story Map**：用 Basic 17 栏 + Full map 拆一个 pilot，标出 AOP 落在第几页、DOW 是否在 4/5 处；再照同一张表 beat out 自己的 pilot。
 5. **Miller 的 landmark 表单**：为自己的 pilot 写六行；再拆一部**结构**（不是题材）与你的 pilot 相似的 pilot，breakdown 须含 scene headings、story beats、character wants、scene ins and outs、act breaks、landmarks。
 6. **escalation 拆解**：挑两场 1.5–2 分钟的场，逐条数出 escalation（目标 10 条以上），标出 decision 与 resolution，统计多少是动作、多少是台词。
-7. **隐形幕反推**：取一集无 ACT 标记的剧（Succession、Homeland、Sopranos），用三重判据划出幕位，逐幕写出"出幕事件＋划分依据"，与 [reference.md](reference.md) 第四节的 Succession 实测对照。
+7. **隐形幕反推**：取一集无 ACT 标记的剧（Succession、Homeland、Sopranos），用三重判据划出幕位，逐幕写出"出幕事件＋划分依据"，与 [reference.md](references/reference.md) 第四节的 Succession 实测对照。
 8. **信息管理改写**：把一个"打到一半切走"的 act out 改成三个版本——一个 surprise、一个新设立的 dramatic irony、一个 mystery；判断哪个让人更想看下一集。
 9. **幕数换算**：把一集四幕剧的 outline 分别改成五幕（Act Four 对半）、六幕（三、四幕各拆两半）、无幕（改成剧情日标记），每次都要为新的 act break 找到一个站得住的事件。
 10. **提速练习**（Rabkin）：把 pilot 第四幕末那个最酷的事挪到 teaser 末尾，重写全集，看接下来六十页能不能保持同一速度。
@@ -323,6 +323,10 @@ Calvisi 的 Benchmark 页数区间、完整节拍链、AOP 与 DOW 的校验数�
 12. **六集季形**：按 Fleabag 骨架写六集一句话大纲，指定一件**每集换一次手**的物件；季终的最后一个画面只解决主题。
 13. **对称练习**（Succession S1）：给第一集找一个数字／物件／台词，让季终用同一个东西完成掉头。
 14. **容器集练习**：写一集"所有人被关进一栋楼＋通讯受限"，再写一集"有日程表的仪式日"（列出既定环节，每个环节塞一次冲突）。
+
+## 调用与返回
+
+可由明确点名直接使用，也可由[编剧](../../SKILL.md)按当前缺口调用。直接命中本专业时先沿该链接补齐已确认故事事实、冻结文字与允许变化范围，只补依赖，不重新发起父级任务。CONSULT返回局部结果，作品主责不转移；缺少上游事实时RETURN最早负责人，不自行改写剧情。需要跨专业判断时只传当前问题和保护项，不重新运行整条创作链。
 
 ## 当前文本的语言执行
 

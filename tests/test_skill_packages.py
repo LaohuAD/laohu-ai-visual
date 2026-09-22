@@ -30,7 +30,7 @@ class SkillPackageTests(unittest.TestCase):
                               env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1", "TMPDIR": str(self.scratch)},
                               capture_output=True, text=True)
 
-    def test_all_five_packages_remain_reachable_in_isolation(self):
+    def test_all_six_packages_remain_reachable_in_isolation(self):
         for name in sorted(NAMES):
             with self.subTest(package=name):
                 target = self.scratch / "uploaded"
@@ -52,7 +52,7 @@ class SkillPackageTests(unittest.TestCase):
         result = self.command(script, 'stats')
         self.assertEqual(result.returncode, 0, result.stderr)
         metadata = json.loads(result.stdout)
-        expected = json.loads((target/'references/故事原子/manifest.json').read_text())
+        expected = json.loads((target/'assets/故事原子/manifest.json').read_text())
         self.assertEqual(metadata['atom_count'], len(expected['atoms']))
         self.assertFalse(metadata['source_original_included'])
         result = self.command(script, 'search', '--limit', '1')
@@ -102,7 +102,7 @@ class SkillPackageTests(unittest.TestCase):
         self.assertIsInstance(created, list)  # Preserve the existing CLI output contract.
         atom_id = created[0]['id']
         self.assertEqual(store.get_sources([source['id']])[0]['original'], original)
-        application = target/'references/故事原子'
+        application = target/'assets/故事原子'
         self.assertEqual(atoms.get_atom(application, atom_id)['availability'], 'callable')
         self.assertNotIn(original, (application/f'{atom_id}.md').read_text())
         self.assertEqual(store.get_atoms([atom_id])[0]['atom'], created[0]['atom'])
@@ -113,7 +113,7 @@ class SkillPackageTests(unittest.TestCase):
             self.assertEqual(atoms.get_atom(application, atom_id)['availability'], expected)
 
     def test_tampered_application_atom_is_rejected(self):
-        source = BASE/'laohu-script-writer/references/故事原子'
+        source = BASE/'laohu-script-writer/assets/故事原子'
         target = self.scratch/'atoms'
         shutil.copytree(source, target)
         manifest = atoms.read_manifest(target)
@@ -124,18 +124,34 @@ class SkillPackageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             atoms.get_atom(target, record['id'])
 
-    def test_reference_escape_and_missing_methods_are_detected(self):
-        p = self.scratch/'package'
-        p.mkdir()
+    def test_repository_escape_and_missing_methods_are_detected(self):
+        repository = self.scratch/'repository'
+        package = repository/'package'
+        package.mkdir(parents=True)
         (self.scratch/'outside.md').write_text('outside')
-        (p/'SKILL.md').write_text('---\nname: example\ndescription: example\n---\n[external](../outside.md)\n[missing](references/missing.md)')
-        failures = check_package(p)
-        self.assertTrue(any('outside package' in x for x in failures))
+        (package/'SKILL.md').write_text(
+            '---\nname: example\ndescription: example\n---\n'
+            '[external](../../outside.md)\n[missing](references/missing.md)')
+        failures = check_package(package, root=repository)
+        self.assertTrue(any('outside repository' in x for x in failures))
         self.assertTrue(any('missing method' in x for x in failures))
+
+    def test_package_copied_out_of_the_repository_declares_dependencies(self):
+        package = self.scratch/'package'
+        package.mkdir(parents=True)
+        (self.scratch/'outside.md').write_text('outside')
+        (package/'SKILL.md').write_text(
+            '---\nname: example\ndescription: example\n---\n'
+            '[external](../outside.md)\n[missing](references/missing.md)')
+        notes = []
+        failures = check_package(package, notes=notes)
+        self.assertTrue(any('missing method' in x for x in failures))
+        self.assertFalse(any('outside repository' in x for x in failures))
+        self.assertTrue(any(item['target'] == '../outside.md' for item in notes))
 
     def test_application_keeps_original_atom_semantics_and_boundaries(self):
         library = ROOT/'02_共享资产库/故事素材库'
-        app = BASE/'laohu-script-writer/references/故事原子'
+        app = BASE/'laohu-script-writer/assets/故事原子'
         for p in (library/'atoms').rglob('*.json'):
             original = json.loads(p.read_text())
             portable = atoms.get_atom(app, original['id'])

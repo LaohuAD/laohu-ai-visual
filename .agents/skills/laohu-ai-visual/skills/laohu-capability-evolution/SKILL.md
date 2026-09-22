@@ -179,7 +179,7 @@ description: Use when 老胡 AI 视觉项目收到可复用反馈、真实结果
 确定性缺项使用：
 
 ```bash
-python3 ../../references/内置方法/scripts/validate_semantic_migration.py <ledger.json> <project-root>
+python3 ../../../../scripts/validate_semantic_migration.py <ledger.json> <project-root>
 ```
 
 脚本不评价审美，也不能证明迁移后的能力更强。
@@ -272,6 +272,10 @@ python3 ../../references/内置方法/scripts/validate_semantic_migration.py <le
 - 是否完成当前、相邻、保真和失败验证。
 - 是否留下旧行为、新行为、复验结果和重新唤醒条件。
 - 本地提交是否只包含本轮可归属改动，远程推送和发布是否没有越权。
+
+## 调用与返回
+
+可由[父入口](../../SKILL.md)或其他实际负责人按缺口CONSULT，也可接受明确点名的独立任务。直接命中本子技能时先沿该链接补齐上级已确认的目的、事实与保护项，只补依赖，不重新发起同一任务。CONSULT结果返回实际调用者，不一律返回所属父入口；只有缺口会改变当前因果或已锁事实时，才以证据RETURN最早负责人。不得改写已确认的内容权威。
 
 ## 当前文本的语言执行
 

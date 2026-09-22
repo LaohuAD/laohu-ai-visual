@@ -1,6 +1,6 @@
 ---
 name: laohu-series-engine-bible
-description: 检验一个点子能否持续产生故事、人物网与试播集策略，或编制剧集开发文档时使用；形成实际调用者，不转移主责，不默认生成媒体或发布。
+description: 检验一个点子能否持续产生故事、人物网与试播集策略，或编制剧集开发文档时使用；形成引擎句、人物冲突来源、试播集取舍，以及需要时落在同一份故事设计里的开发文档。bible 不自动变成第二份内容母版，不默认生成媒体或发布。
 ---
 
 # 老胡剧集引擎与开发文档
@@ -32,7 +32,7 @@ description: 检验一个点子能否持续产生故事、人物网与试播集�
 
 **不管**：单集与季的幕结构、页码、act out 与 cliffhanger 类型学（→ `laohu-series-structure`）；编剧室流程与 pitch 会议礼仪（→ `laohu-writers-room`）；半小时喜剧的笑点力学与人物配置（→ `laohu-sitcom-comedy`）；国产剧策划书、分集大纲、集数体量与审查（→ `laohu-chinese-series-practice`）。前提/主控思想/三维人物/对白等媒介无关内容不在此重写（→ `laohu-premise-theme`、`laohu-character-conflict`）。
 
-参考资料分三个文件：引擎拆解、剧集类型与人物网见 [reference.md](reference.md)；文档模板的完整字段表（Rabkin 十节 pitch document、Smith series format 十一节、Oberg bible 十二组件）见 [reference-documents.md](reference-documents.md)；填好的样例（两份 writers’ guidelines、Miller 六份 treatment 矩阵、Succession 七个 want 表）见 [reference-samples.md](reference-samples.md)。
+参考资料分三个文件：引擎拆解、剧集类型与人物网见 [reference.md](references/reference.md)；文档模板的完整字段表（Rabkin 十节 pitch document、Smith series format 十一节、Oberg bible 十二组件）见 [reference-documents.md](references/reference-documents.md)；填好的样例（两份 writers’ guidelines、Miller 六份 treatment 矩阵、Succession 七个 want 表）见 [reference-samples.md](references/reference-samples.md)。
 ## 按任务读哪几节（不要通读）
 
 本节 44 KB，规则编到 56 条，逐条读完通常是浪费。
@@ -42,11 +42,11 @@ description: 检验一个点子能否持续产生故事、人物网与试播集�
 | 判断一个点子能不能做成剧 | 一（引擎定义）、二（写成句子，尤其第 8 与第 10 条的二选一） | 三–七 |
 | 设计人物网 | 三 | 五、六 |
 | 选 pilot 类型 | 四 | 三、七 |
-| 写 bible / pitch / series format | 六，字段表转 reference-documents.md | 一–四 |
+| 写 bible / pitch / series format | 六，字段表转 references/reference-documents.md | 一–四 |
 | 诊断一份已有的方案或大纲 | **九（诊断清单）**；改单集时整组跳过 ㉑–㉚ | 六 |
 | 改编 IP | 七 | 四、五 |
 
-reference.md／reference-documents.md／reference-samples.md 都是查表用的，只在正文指向时打开。
+references/reference.md／references/reference-documents.md／references/reference-samples.md 都是查表用的，只在正文指向时打开。
 
 ---
 
@@ -59,7 +59,7 @@ reference.md／reference-documents.md／reference-samples.md 都是查表用的�
 - **Landau《The TV Showrunner's Roadmap》1e(2014)/2e(2022)**：tacit contract、central question vs mystery、micro mission、story tentacles、guideposts、11 项 pitch 配方、pilot 三分类。
 - **Oberg《Writing a Successful TV Series》(2023)**：series type 八种、story-type、Maslow 与 M-Factor、bible 规格、"别把自己 box in"。
 - **Douglas《Writing the TV Drama Series》3e(2011)**（中译《美剧编剧入门》据第 2 版，2009）：franchise＋springboard、bible 三档、pilot 四步、官方中译术语。
-- **Goldberg & Rabkin《Successful Television Writing》(2003)**：franchise＝规则集、原创剧四问与 100 集、两份真实 writers' guidelines（Diagnosis Murder 与 Martial Law 两份 mini-bible 的小节构成、绝不碰清单与介入授权机制见 reference-samples.md 十一）。
+- **Goldberg & Rabkin《Successful Television Writing》(2003)**：franchise＝规则集、原创剧四问与 100 集、两份真实 writers' guidelines（Diagnosis Murder 与 Martial Law 两份 mini-bible 的小节构成、绝不碰清单与介入授权机制见 references/reference-samples.md 十一）。
 - **Blum《电视与银幕写作》(英文 4th ed. 2001／中译 2003)**：concept→presentation→bible 三级、三项可卖性检验、三种网台 pilot 策略、五故事检验。
 - **Miller《The Hero Succeeds》(2016)**：treatment 10 要素＋六大问、arena 先天问题、story engine＝license to intervene。
 - **Calvisi《Story Maps: TV Drama》(2016)**：Compelling Crisis、Week-to-Week、17 栏 Basic Story Map。
@@ -87,19 +87,19 @@ reference.md／reference-documents.md／reference-samples.md 都是查表用的�
 - Oberg 3.1：**"A series isn't a story that brings answers. It's a story engine that generates questions."** 电影是特快列车，剧集是站站停的火车，但每集仍要交付一部电影的情节量。
 - Miller ch1／Calvisi §9：引擎依赖人物**有 license／agency 介入他人生活**（能逮捕、能辩护、能治疗）或一个把新人物拉进主角世界的统一处境；Calvisi 的两个必填栏是 **Compelling Crisis** 与 **Week-to-Week**（电视台永远问"what does he DO each week?"）。Blum ch17 给经济学理由：剧集要在屏幕上坚持三五年才有金融收益。
 
-**7. story pattern＝每集重复的那个形状**（Rabkin ch8）：Sons of Anarchy 不是"关于摩托帮"，是 Jax 要保护**三个家庭**——察觉威胁→出手保护→反噬危及另一个家庭。→ 一句话写出 pattern，用 **pilot 的后半段**完整跑一遍（前半只做设定与触发）。（Breaking Bad 的 pattern 原文、结构常量与人物模式两层、反例见 reference.md 五）
+**7. story pattern＝每集重复的那个形状**（Rabkin ch8）：Sons of Anarchy 不是"关于摩托帮"，是 Jax 要保护**三个家庭**——察觉威胁→出手保护→反噬危及另一个家庭。→ 一句话写出 pattern，用 **pilot 的后半段**完整跑一遍（前半只做设定与触发）。（Breaking Bad 的 pattern 原文、结构常量与人物模式两层、反例见 references/reference.md 五）
 
-**8. 五道"有没有腿"的判据**：99 个故事（Rabkin ch6）／**六集测试**（Landau 1e Tip 7）／pitch 备三、presentation 备五六（Landau 2e ch14／Blum ch17）／**100 集与四问**（Goldberg & Rabkin ch17）／**五故事检验**（Blum ch17）。（五项的阈值、原话与出处全表见 reference.md 七）
+**8. 五道"有没有腿"的判据**：99 个故事（Rabkin ch6）／**六集测试**（Landau 1e Tip 7）／pitch 备三、presentation 备五六（Landau 2e ch14／Blum ch17）／**100 集与四问**（Goldberg & Rabkin ch17）／**五故事检验**（Blum ch17）。（五项的阈值、原话与出处全表见 references/reference.md 七）
 
 > ⚠️ **限定剧、迷你剧、一次性播完的闭合长篇不跑这一条。** 100 集与"能撑五季"是美国广播网续订经济学的判据；一个封闭县域、一间办公室、一桩旧案这类题材按类型数本来就撑不到 100 集，照字面跑会把合格的项目否掉。闭合长篇改用**第 10 条的引擎失压测算**：算出物质性引擎在第几集失压，那一集就是这部剧该结束的地方，集数由此**论证**出来而不是被接受。两条判据二选一，按媒介与订购方式选。
 
-**9. 概念强弱不决定可持续性：Torchwood 反证**（Rabkin ch9）：按 concept 一定押 Torchwood，结果它只有四季而 Doctor Who 拍到第十季——外星威胁只是 **premises／pretexts，不是 stories**。→ **"pilot 之后想不出三集"的病灶在人物冲突，不在 concept。**（全案对照见 reference.md 五）
+**9. 概念强弱不决定可持续性：Torchwood 反证**（Rabkin ch9）：按 concept 一定押 Torchwood，结果它只有四季而 Doctor Who 拍到第十季——外星威胁只是 **premises／pretexts，不是 stories**。→ **"pilot 之后想不出三集"的病灶在人物冲突，不在 concept。**（全案对照见 references/reference.md 五）
 
 **10. 引擎失压论**（Succession S4 前言）：判断一部剧该不该结束，看**物质性情节引擎**（交易、帝国、职位），不看人物还有没有戏——Armstrong 结束该剧不是因为人物写完了（"the motor in the room was still running hot"），而是"**the big plot engine, the brutal materialist plumbing which ran under the show**, was looking to me like it would eventually start to lose pressure"。
 
 > 用法：这一条是第 8 条的**替代品**，不是补充。可无限续订的剧用第 8 条（能不能再跑 100 集）；闭合长篇与限定剧用这一条（引擎在第几集失压）。**先判断媒介与订购方式，再选判据。**
 
-**四个引擎样本各一句**（详解见 reference.md 五）：**Sopranos**＝治疗室＋两个家庭（Melfi 开场划下的"听到谋杀要报警"这条 ethical ground rule 本身是引擎）；**Fleabag**＝一张本身就在互相伤害的人物关系网＋一个装置（对镜说话）；**坂元《花束般的恋爱》**＝双主角的 want 在五年间错位、全片没有反派；**Succession**＝"继承"这个永不能解决的问题。
+**四个引擎样本各一句**（详解见 references/reference.md 五）：**Sopranos**＝治疗室＋两个家庭（Melfi 开场划下的"听到谋杀要报警"这条 ethical ground rule 本身是引擎）；**Fleabag**＝一张本身就在互相伤害的人物关系网＋一个装置（对镜说话）；**坂元《花束般的恋爱》**＝双主角的 want 在五年间错位、全片没有反派；**Succession**＝"继承"这个永不能解决的问题。
 
 ---
 
@@ -107,19 +107,19 @@ reference.md／reference-documents.md／reference-samples.md 都是查表用的�
 
 **11. 核心问题必须是过程句**（Rabkin ch3）：**"Pilots need to raise questions that lead to processes, not solutions."** 电影问"Who killed Marion Crane?"；剧集问：Grantham 伯爵如何在不适合它的经济体系里保住庄园（Downton）？温和的化学老师如何在暴力的毒品生意里活下去（Breaking Bad）？Richie Finestra 能否在酒和毒品杀死他之前复兴摇滚（Vinyl）？→ 写成 "How will X keep doing Y in a world that Z?"。
 
-**12. 不要在 pilot 里把核心谜团演出来**（同章，Extant 的三重错误是教科书案例）：判决是 **"execution is not the problem here. Conception is."**（三重错误逐条见 reference.md 七）
+**12. 不要在 pilot 里把核心谜团演出来**（同章，Extant 的三重错误是教科书案例）：判决是 **"execution is not the problem here. Conception is."**（三重错误逐条见 references/reference.md 七）
 
-**13. Story landmines**（Rabkin ch9）＝pilot **潜台词**里埋下、若干集后才引爆的人物冲突。→ 每个主要人物各埋一枚（未言明的恐惧/欲望/矛盾），写下预计第几集引爆；必须是人物层面——"她是警探的女儿"不算。（三条理由与 Doctor Who／Crazy Ex-Girlfriend 正例见 reference.md 七）
+**13. Story landmines**（Rabkin ch9）＝pilot **潜台词**里埋下、若干集后才引爆的人物冲突。→ 每个主要人物各埋一枚（未言明的恐惧/欲望/矛盾），写下预计第几集引爆；必须是人物层面——"她是警探的女儿"不算。（三条理由与 Doctor Who／Crazy Ex-Girlfriend 正例见 references/reference.md 七）
 
 > **地雷数量与"一个总悬念"的冲突，以及解法。** 八个主要人物＝八枚地雷，在国产长剧里就等于八条并发谜线，而国产体系把"多谜并发"当病（见 `laohu-chinese-series-practice` 的"一个问题"格局与《皇城根儿》反例）。解法不是减少地雷，是**改变它们的挂法**：把全部地雷挂在**同一个总悬念**之下，当它的分解层，每集只揭一层，揭一层立刻补一个带时限的新悬念。于是观众追的始终是一个问题，而你仍然有八颗可定时引爆的炸药。排表时给每枚地雷写两个集号：引爆集，以及它揭开了总悬念的第几层。
 
-**14. 痛苦不是冲突；一个人的两个属性必须互相妨碍**（同章，反例 Feed the Beast）：**"suffering isn't conflict, and so suffering alone can't drive story"**。（Tommy／Dion 的逐条拆解与该剧 soap opera 化见 reference.md 七）
+**14. 痛苦不是冲突；一个人的两个属性必须互相妨碍**（同章，反例 Feed the Beast）：**"suffering isn't conflict, and so suffering alone can't drive story"**。（Tommy／Dion 的逐条拆解与该剧 soap opera 化见 references/reference.md 七）
 
-**15. sweet spot**（Landau 1e Tip 16）＝类型、调性、主题、中心冲突、franchise、中心问题/谜团的交叉点；2e ch4 的公式是 **sweet spot = character development × franchise**，一小时剧的版本是 **"a series must deliver the promise of its premise every week"**——这就是 tacit contract。（原文、TWD／Homeland 范例与 currency 概念见 reference.md 七）
+**15. sweet spot**（Landau 1e Tip 16）＝类型、调性、主题、中心冲突、franchise、中心问题/谜团的交叉点；2e ch4 的公式是 **sweet spot = character development × franchise**，一小时剧的版本是 **"a series must deliver the promise of its premise every week"**——这就是 tacit contract。（原文、TWD／Homeland 范例与 currency 概念见 references/reference.md 七）
 
-**16. 营销实习生测试**（Rabkin ch10）｜**可选，零成本复核，不要当一道工序**——logline 写好之后再跑它，通常只是重读一遍并宣布通过；它的价值在"写 logline 的时候心里有这个读者"，不在事后核对。：一句话能不能让一个初级营销人员替你向 *Entertainment Weekly* 要到几英寸版面。**Bigger 不是预算大，是定义剧的冲突的规模**。（对照实例见 reference.md 七）
+**16. 营销实习生测试**（Rabkin ch10）｜**可选，零成本复核，不要当一道工序**——logline 写好之后再跑它，通常只是重读一遍并宣布通过；它的价值在"写 logline 的时候心里有这个读者"，不在事后核对。：一句话能不能让一个初级营销人员替你向 *Entertainment Weekly* 要到几英寸版面。**Bigger 不是预算大，是定义剧的冲突的规模**。（对照实例见 references/reference.md 七）
 
-**17. "Big does not have to mean shallow."** 三条加大法（同章）：**换职业**（Sopranos 的起源只改了一处：职业）、**换地点**、**换时代**。反向立场（Miller ch1–2）：**"having great characters trumps high concept every time"**。（三例全文与 Miller 的论据见 reference.md 七）
+**17. "Big does not have to mean shallow."** 三条加大法（同章）：**换职业**（Sopranos 的起源只改了一处：职业）、**换地点**、**换时代**。反向立场（Miller ch1–2）：**"having great characters trumps high concept every time"**。（三例全文与 Miller 的论据见 references/reference.md 七）
 
 **18. 记账式单元：每集"解决掉"的事，必须在后面某一集留下一笔要兑付的账。**（本 pack 的推广，把 Succession S1 的季层做法下放到集层——原规则是"季终十条线全部落子，但每条落子都生成下一季的债务：Greg 的复印件、Tom 的邮轮、Roman 的过失致死、Shiv 的双重效忠"，见 `laohu-succession-series-writing`。）
 
@@ -143,90 +143,90 @@ reference.md／reference-documents.md／reference-samples.md 都是查表用的�
 
 **20. 内在冲突必须外化成一圈拉扯他的人物**（Rabkin ch6）。Buffy 的"想过正常生活 vs 拯救世界"外化为母亲要她正常、watcher 要她杀吸血鬼、好友在日常世界、爱人是百年吸血鬼；SHIELD 的 Skye 反之，冲突留在一个人内部，无法产生故事。
 
-**21. 每部剧都是家庭剧**（Landau 2e ch6）：**"Every television series is about a family – whether they're related by blood or not."** 推论：**所有剧中家庭都必须 imperfect 且在某个层面 discontented**。（六种家庭类型与例子见 reference.md 六）
+**21. 每部剧都是家庭剧**（Landau 2e ch6）：**"Every television series is about a family – whether they're related by blood or not."** 推论：**所有剧中家庭都必须 imperfect 且在某个层面 discontented**。（六种家庭类型与例子见 references/reference.md 六）
 
-**22. familial role 分配库**（同章）：不必凑齐性别年龄，要确定"每个人物在正面和负面两个方向上会如何对待彼此"。（角色库全表与执法搭档／职场同事的推论见 reference.md 六）
+**22. familial role 分配库**（同章）：不必凑齐性别年龄，要确定"每个人物在正面和负面两个方向上会如何对待彼此"。（角色库全表与执法搭档／职场同事的推论见 references/reference.md 六）
 
 **23. transactional family（Logan Roy 范式）**（同章）："寻求老板认可会取代寻求父母认可——而且前者还附带薪水作为额外确认"；Logan "withholding his approval and validation"，"His relationships with his kids are all transactional."
 
-**24. 三条场景级规则**（同章）：**"the people who love you most know how to hurt you the most."**→写两人场前先确定"他知道对方哪个按钮"，再决定按不按。（新人物测试与潜文本公式原文见 reference.md 六）
+**24. 三条场景级规则**（同章）：**"the people who love you most know how to hurt you the most."**→写两人场前先确定"他知道对方哪个按钮"，再决定按不按。（新人物测试与潜文本公式原文见 references/reference.md 六）
 
-**25. 专长分工**（Landau 1e Tip 20）：不同技能组合用来**制造冲突、呈现多重 POV、帮观众区分人物**；Grey's Anatomy **用专科定义人物**。（Breaking Bad 分工表、House 的反同意原则、Out of Their Element 生成器见 reference.md 六）
+**25. 专长分工**（Landau 1e Tip 20）：不同技能组合用来**制造冲突、呈现多重 POV、帮观众区分人物**；Grey's Anatomy **用专科定义人物**。（Breaking Bad 分工表、House 的反同意原则、Out of Their Element 生成器见 references/reference.md 六）
 
-**26. 理性轴**（Rabkin 附录 Mooresville pitch）：**"start from the position that they are both rational, intelligent adults"** → 关系剧的双向吸引要给**结构性理由**，不只是化学反应。（全案见 reference.md 六）
+**26. 理性轴**（Rabkin 附录 Mooresville pitch）：**"start from the position that they are both rational, intelligent adults"** → 关系剧的双向吸引要给**结构性理由**，不只是化学反应。（全案见 references/reference.md 六）
 
-**27. 互补双主角**（Landau 1e Tip 9）：**"two incomplete people together you get one whole."**（Mulder/Scully＝信与疑。）（Hacks 的 mutual need／shame 模板与 Gomorrah 的 logline 生成器见 reference.md 六）
+**27. 互补双主角**（Landau 1e Tip 9）：**"two incomplete people together you get one whole."**（Mulder/Scully＝信与疑。）（Hacks 的 mutual need／shame 模板与 Gomorrah 的 logline 生成器见 references/reference.md 六）
 
-**28. 坂元式双主角错位**（《花束般的恋爱》）：不靠对抗而靠**体贴造成价值转折**（场 85 吹头发时说"我打算找工作了"）。（四对镜像人物与台词预算分配见 reference.md 五）
+**28. 坂元式双主角错位**（《花束般的恋爱》）：不靠对抗而靠**体贴造成价值转折**（场 85 吹头发时说"我打算找工作了"）。（四对镜像人物与台词预算分配见 references/reference.md 五）
 
-**29. 羞耻与空洞**（Landau 2e ch7，引 Brené Brown《Daring Greatly》）：**shame = our fear of disconnection**；创伤造成 **emotional voids**→voids 产生回避脆弱的 coping mechanisms。**"Anyone who challenges any of these constructs becomes an antagonist."**（三类防御的设计菜单见 reference.md 六）
+**29. 羞耻与空洞**（Landau 2e ch7，引 Brené Brown《Daring Greatly》）：**shame = our fear of disconnection**；创伤造成 **emotional voids**→voids 产生回避脆弱的 coping mechanisms。**"Anyone who challenges any of these constructs becomes an antagonist."**（三类防御的设计菜单见 references/reference.md 六）
 
-**30. grounded superpower 同时是 liability**（Landau 2e ch5，Gilligan 的造人法）：Walt 的超能力是"自欺的能力"。1e Tip 8：**"when a character's greatest strength also becomes his or her greatest liability… The trick to dramatic sustainability is keeping your main character in this form of limbo."**（三例与方框全文见 reference.md 六）
+**30. grounded superpower 同时是 liability**（Landau 2e ch5，Gilligan 的造人法）：Walt 的超能力是"自欺的能力"。1e Tip 8：**"when a character's greatest strength also becomes his or her greatest liability… The trick to dramatic sustainability is keeping your main character in this form of limbo."**（三例与方框全文见 references/reference.md 六）
 
-**31. 同一 backstory 的两次陈述**（Landau 2e ch7，Mare of Easttown）：**先给修饰版，几集后在更安全或更被迫的场合给真版本；落差就是人物的 shame。**（两段台词原文与群像配平见 reference.md 六）
+**31. 同一 backstory 的两次陈述**（Landau 2e ch7，Mare of Easttown）：**先给修饰版，几集后在更安全或更被迫的场合给真版本；落差就是人物的 shame。**（两段台词原文与群像配平见 references/reference.md 六）
 
-**32. flaw 的揭示节奏**（Landau 1e Tip 8）：flaw 要源于 backstory 才能长跑，但 backstory 在 pilot 只**斜向暗示**——"what we don't know about a character is often more compelling than what we do know."（Don Draper／Scandal 的延迟揭示与 Girls 的反例见 reference.md 六）
+**32. flaw 的揭示节奏**（Landau 1e Tip 8）：flaw 要源于 backstory 才能长跑，但 backstory 在 pilot 只**斜向暗示**——"what we don't know about a character is often more compelling than what we do know."（Don Draper／Scandal 的延迟揭示与 Girls 的反例见 references/reference.md 六）
 
-**33. 对抗力先定性质，再决定要不要一张脸**（Landau 2e ch9）：**Succession＝greed**；**Mare of Easttown 与 Fleabag＝grief**。总原则（脚注归 UCLA 荣休教授 Howard Suber）：**"All villains are antagonists, but not all antagonists are villains."**（九部剧的性质对照与 Oberg 的补充见 reference.md 六）
+**33. 对抗力先定性质，再决定要不要一张脸**（Landau 2e ch9）：**Succession＝greed**；**Mare of Easttown 与 Fleabag＝grief**。总原则（脚注归 UCLA 荣休教授 Howard Suber）：**"All villains are antagonists, but not all antagonists are villains."**（九部剧的性质对照与 Oberg 的补充见 references/reference.md 六）
 
-**34. 反派在自己的故事里是英雄**（同章）：**"Every villain is the hero of his/her/their own story."**——"they usually feel justified, entitled, and downright righteous"。结构判断：**"as soon as that primary goal is successfully attained, the series is usually over – unless it pivots to another overarching mission or goal."**（四条附则与 Rue 的错位案例见 reference.md 六）
+**34. 反派在自己的故事里是英雄**（同章）：**"Every villain is the hero of his/her/their own story."**——"they usually feel justified, entitled, and downright righteous"。结构判断：**"as soon as that primary goal is successfully attained, the series is usually over – unless it pivots to another overarching mission or goal."**（四条附则与 Rue 的错位案例见 references/reference.md 六）
 
-**35. 不要立草人**（Kings 夫妇，Landau 2e ch4）：**"Propaganda is confirming what you already believe."** 更值的是让**我们喜欢的常规角色彼此不同意、且每个人都有道理**。（全段与 The Good Wife 范例见 reference.md 六）
+**35. 不要立草人**（Kings 夫妇，Landau 2e ch4）：**"Propaganda is confirming what you already believe."** 更值的是让**我们喜欢的常规角色彼此不同意、且每个人都有道理**。（全段与 The Good Wife 范例见 references/reference.md 六）
 
-**36. 可持续冲突网的三件套**（Blum ch17 检验三）：**"如果所有连续剧主角都彼此相亲相爱，他们能做的就只能是微笑着彼此同意对方的意见了。"** 引擎＝**"团体/家庭纽带"的情节模式 ＋ 每个角色预装的、与其他角色必然摩擦的性格属性 ＋ 一个让他们无法离开彼此的巧合/处境**；三者缺一撑不到三五年。（Downton 与 Succession 的逐项拆解、Succession 的三装置与 Tom 的反证见 reference.md 五；**这张网填好的样本＝Succession 七个 want／可失之物／绑定对象／引擎功能表，见 reference-samples.md 十三**）
+**36. 可持续冲突网的三件套**（Blum ch17 检验三）：**"如果所有连续剧主角都彼此相亲相爱，他们能做的就只能是微笑着彼此同意对方的意见了。"** 引擎＝**"团体/家庭纽带"的情节模式 ＋ 每个角色预装的、与其他角色必然摩擦的性格属性 ＋ 一个让他们无法离开彼此的巧合/处境**；三者缺一撑不到三五年。（Downton 与 Succession 的逐项拆解、Succession 的三装置与 Tom 的反证见 references/reference.md 五；**这张网填好的样本＝Succession 七个 want／可失之物／绑定对象／引擎功能表，见 references/reference-samples.md 十三**）
 
 ---
 
 ## 四、pilot 类型与策略
 
-**37. 三种分类**（Landau 1e Tip 1／2e ch14；Douglas 3e ch2、Oberg 3.2、Calvisi §6 用不同名称说同一件事）：**premise pilot**（第 1 集发生的事对"从第一天开始这部剧"是必要的）／**non-premise／ongoing／midstream**（"It may be the audience's first episode, but it's not day one for the characters."）／**hybrid**（高潮时刻开场再 flash-forward 或 flashback）；Oberg 另立 **semi-cold start**（The Walking Dead）。（四类定义表、例子清单、Sopranos 的归类与 47 部剧分类见 reference.md 四）
+**37. 三种分类**（Landau 1e Tip 1／2e ch14；Douglas 3e ch2、Oberg 3.2、Calvisi §6 用不同名称说同一件事）：**premise pilot**（第 1 集发生的事对"从第一天开始这部剧"是必要的）／**non-premise／ongoing／midstream**（"It may be the audience's first episode, but it's not day one for the characters."）／**hybrid**（高潮时刻开场再 flash-forward 或 flashback）；Oberg 另立 **semi-cold start**（The Walking Dead）。（四类定义表、例子清单、Sopranos 的归类与 47 部剧分类见 references/reference.md 四）
 
 **38. 两条进场硬规则**：Oberg 3.2——premise pilot **不要把 inciting incident 留到集末**，"You can't afford to have a pilot that's just a long first dramatic act."；Calvisi §6——**"Enter the action of your story as late as possible in the world but as soon as possible in the script."**（Scandal 原剧本里委托人第 12 页才进门，成片提前到**第 6 分钟**）。
 
-**39. 三种网台策略与"premise pilot 陷阱"**（Blum ch17，1999–2001 语境，**台别已过时、机制仍有效**）：原话是 premise pilot"很可能成为预测剧集发展走势的**可怜晴雨表（a poor barometer）**"；**Smith ch20 同向（半小时喜剧）**——**"most network executives prefer to see a typical-episode pilot"**；**Landau 的不同立场**：不是陷阱，只要求在 pitch 里说明是哪一种。（三种策略原文与 Smith 的论据见 reference.md 四）
+**39. 三种网台策略与"premise pilot 陷阱"**（Blum ch17，1999–2001 语境，**台别已过时、机制仍有效**）：原话是 premise pilot"很可能成为预测剧集发展走势的**可怜晴雨表（a poor barometer）**"；**Smith ch20 同向（半小时喜剧）**——**"most network executives prefer to see a typical-episode pilot"**；**Landau 的不同立场**：不是陷阱，只要求在 pitch 里说明是哪一种。（三种策略原文与 Smith 的论据见 references/reference.md 四）
 → **四条判据**：①保守的大众频道或半小时喜剧→typical 或 half-premise；②世界设定复杂、必须解释规则→premise（Lost、Stranger Things、TWD）；③人物关系网即引擎→midstream（Fleabag、The Office、Succession）；④两头都要→Breaking Bad 式：前半设定、后半跑一遍 story pattern。
 
-**40. 三种收法**：①**"The end of your pilot is the beginning of your series."**（Landau）；②**Stick the landing**；③**不一定要 cliffhanger**（Miller ch6）。（三条原文与 Calvisi 的平衡句见 reference.md 四）
+**40. 三种收法**：①**"The end of your pilot is the beginning of your series."**（Landau）；②**Stick the landing**；③**不一定要 cliffhanger**（Miller ch6）。（三条原文与 Calvisi 的平衡句见 references/reference.md 四）
 
-**41. Douglas 的 pilot 四步**（3e ch4）：①**Create the World**（Lindelof：**"the franchise is the world."**）②**Find the Story Springboards** ③**Populate the World** ④**Make a Plan**。核心是**秘密**，深到要 88 或 100 小时才揭完；**人物成长弧通常不是第一天的议程**；**前十页决定生死**。（四步全文与引语见 reference.md 四）
+**41. Douglas 的 pilot 四步**（3e ch4）：①**Create the World**（Lindelof：**"the franchise is the world."**）②**Find the Story Springboards** ③**Populate the World** ④**Make a Plan**。核心是**秘密**，深到要 88 或 100 小时才揭完；**人物成长弧通常不是第一天的议程**；**前十页决定生死**。（四步全文与引语见 references/reference.md 四）
 
-**42. 十个焦虑问题**（Jeffries，USC 教 pilot 课）：**pilot 结束时列出至少十个让观众揪心的问题**，这十个问题也用来推出**十个未来集短梗概**；**先钩住高管，同时袖里留牌**。（素材档案与那条永恒的 note 见 reference.md 四）
+**42. 十个焦虑问题**（Jeffries，USC 教 pilot 课）：**pilot 结束时列出至少十个让观众揪心的问题**，这十个问题也用来推出**十个未来集短梗概**；**先钩住高管，同时袖里留牌**。（素材档案与那条永恒的 note 见 references/reference.md 四）
 
-**43. Sopranos 的"不解释机制"**（Chase 前言 p0012＋pilot）：pilot 刻意不解释 Tony 的正式身份与"waste management"的运作，依据是 **"rarely is anything black and white in life"**；**这也是 pilot 不用 cliffhanger 收尾的理由**。（全案与大台拒播的真实理由见 reference.md 五）
+**43. Sopranos 的"不解释机制"**（Chase 前言 p0012＋pilot）：pilot 刻意不解释 Tony 的正式身份与"waste management"的运作，依据是 **"rarely is anything black and white in life"**；**这也是 pilot 不用 cliffhanger 收尾的理由**。（全案与大台拒播的真实理由见 references/reference.md 五）
 
 ---
 
 ## 五、剧集类型学与 story-type（Oberg 为主）
 
-**44. 八种 series type**（Oberg 1.2）：procedural（closed-ended）／serial／serial-procedural hybrid（三式）／sitcom／mini-series 与 limited／anthology／mini-series series／web series。sitcom 的不成文规则是 **"characters don't change, and it's fine"**；limited（4–8 集）是**从电影转剧集最容易的第一步**。（八种定义、受众含义与 hybrid 三式全表见 reference.md 三）
+**44. 八种 series type**（Oberg 1.2）：procedural（closed-ended）／serial／serial-procedural hybrid（三式）／sitcom／mini-series 与 limited／anthology／mini-series series／web series。sitcom 的不成文规则是 **"characters don't change, and it's fine"**；limited（4–8 集）是**从电影转剧集最容易的第一步**。（八种定义、受众含义与 hybrid 三式全表见 references/reference.md 三）
 
-**45. mini-series series 的两条附加规则**（Rabkin ch12）：concept 不能 "defined by execution"（American Crime Story 的信息都在公共领域）；**anthology 与 mini-series series 的每季首集必须重新提供"连接观众与主角的即时叙事 hook"**。**Landau 2e ch1（2022）**：**limited series 更难卖**，**新剧以 10 集/季为 benchmark**。（全文与例外见 reference.md 三）
+**45. mini-series series 的两条附加规则**（Rabkin ch12）：concept 不能 "defined by execution"（American Crime Story 的信息都在公共领域）；**anthology 与 mini-series series 的每季首集必须重新提供"连接观众与主角的即时叙事 hook"**。**Landau 2e ch1（2022）**：**limited series 更难卖**，**新剧以 10 集/季为 benchmark**。（全文与例外见 references/reference.md 三）
 
-**46. story-type 判定**（Oberg 2.2）：问 **"Where does the main problem in the story come from, at season level?"**——外部→**plot-led**；内部→**character-led**（不需要 antagonist 而需要 **catalyst character**）；社会/story world→**theme-led**；另有 **hybrid** 与 **exception**。（三类的举例与例外机制见 reference.md 三）
+**46. story-type 判定**（Oberg 2.2）：问 **"Where does the main problem in the story come from, at season level?"**——外部→**plot-led**；内部→**character-led**（不需要 antagonist 而需要 **catalyst character**）；社会/story world→**theme-led**；另有 **hybrid** 与 **exception**。（三类的举例与例外机制见 references/reference.md 三）
 
-**47. 剧集专用的反向查法**（同节）：**剧集几乎都多线，所以要反过来查**——有没有一个主角和一个 main dramatic action/evolution 在季层成形？有则不是 theme-led。（第二个提示与 Chernobyl 的判定见 reference.md 三）
+**47. 剧集专用的反向查法**（同节）：**剧集几乎都多线，所以要反过来查**——有没有一个主角和一个 main dramatic action/evolution 在季层成形？有则不是 theme-led。（第二个提示与 Chernobyl 的判定见 references/reference.md 三）
 
-**48. 选错类型就被锁死**（Oberg 引言与 3.1 第 9 问）：**"The wrong combination of series type and story-type is the root cause of many series failures"**；最常见的 box-in 是**character-led 剧在第一季把主角的内部问题完全解决（电影思维）**→第二季必须换 story-type。（三例与平衡典范见 reference.md 三）
+**48. 选错类型就被锁死**（Oberg 引言与 3.1 第 9 问）：**"The wrong combination of series type and story-type is the root cause of many series failures"**；最常见的 box-in 是**character-led 剧在第一季把主角的内部问题完全解决（电影思维）**→第二季必须换 story-type。（三例与平衡典范见 references/reference.md 三）
 
-**49. Maslow 与 M-Factor**（Oberg 2.3、2.6）：**"the lower in the pyramid, the larger the potential audience"**，且**必须垂直探索**。**M-Factor**＝受众、类型、story-type 相对 Maslow 的位置＋预算是否自洽（1–5 分）。（Occupied／Money Heist／sitcom 的上下探索实例、whodunit 警告与 Breaking Bad 的动机植根见 reference.md 三）
+**49. Maslow 与 M-Factor**（Oberg 2.3、2.6）：**"the lower in the pyramid, the larger the potential audience"**，且**必须垂直探索**。**M-Factor**＝受众、类型、story-type 相对 Maslow 的位置＋预算是否自洽（1–5 分）。（Occupied／Money Heist／sitcom 的上下探索实例、whodunit 警告与 Breaking Bad 的动机植根见 references/reference.md 三）
 
-**50. What's at stake?**（Oberg glossary）＝"开发人员不在乎故事时最常问的问题"：主问题不解决会怎样，且必须让人**悲伤/焦虑/恐惧**；底线是不能有"说不出本集赌注"的集，且多线必须相连。（两条底线原文、Landau 的两条与半小时剧／关系剧的版本见 reference.md 七）
+**50. What's at stake?**（Oberg glossary）＝"开发人员不在乎故事时最常问的问题"：主问题不解决会怎样，且必须让人**悲伤/焦虑/恐惧**；底线是不能有"说不出本集赌注"的集，且多线必须相连。（两条底线原文、Landau 的两条与半小时剧／关系剧的版本见 references/reference.md 七）
 
-**51. arena 的先天问题**（Miller ch1，2015 年美国广播网视角）：High school／Family／Relationship／News／Anthology 各有先天病灶，核心是 **"A character's agency completes the story engine"**——记者能"meddle"但**无 license to intervene**。（五类 arena 逐条、解法与适用范围的注记见 reference.md 三）
+**51. arena 的先天问题**（Miller ch1，2015 年美国广播网视角）：High school／Family／Relationship／News／Anthology 各有先天病灶，核心是 **"A character's agency completes the story engine"**——记者能"meddle"但**无 license to intervene**。（五类 arena 逐条、解法与适用范围的注记见 references/reference.md 三）
 
 ---
 
 ## 六、文档：从 logline 到 bible
 
-**52. 三级文档**（Blum ch17）：**创意 concept**→**连续剧陈述 series presentation**→**连续剧文献 series bible**。（三级的原样定义与各自必含项见 reference.md 一）
+**52. 三级文档**（Blum ch17）：**创意 concept**→**连续剧陈述 series presentation**→**连续剧文献 series bible**。（三级的原样定义与各自必含项见 references/reference.md 一）
 
-**53. 页数规格速查**：bible **10–85 页**／mini-bible **约 5 页**；书面 pitch bible **10–30 页**（甜点约 15 页）；treatment **drama 10–15 页／comedy 8–10 页**；半小时喜剧 series format **10–15 页**；口头 pitch **20 分钟 sweet spot**，务必计时；mythology document ＋origin story 合计**一页上限**。（全表、出处与 Douglas 的 bible 三档见 reference.md 一；Oberg 的 bible 十二组件逐条规格与 bible／pitch deck／format 三者的区别见 reference-samples.md 十）
+**53. 页数规格速查**：bible **10–85 页**／mini-bible **约 5 页**；书面 pitch bible **10–30 页**（甜点约 15 页）；treatment **drama 10–15 页／comedy 8–10 页**；半小时喜剧 series format **10–15 页**；口头 pitch **20 分钟 sweet spot**，务必计时；mythology document ＋origin story 合计**一页上限**。（全表、出处与 Douglas 的 bible 三档见 references/reference.md 一；Oberg 的 bible 十二组件逐条规格与 bible／pitch deck／format 三者的区别见 references/reference-samples.md 十）
 
-**54. 四套字段清单**（挑一套）：**Landau 2e ch1 Essential Guideposts**（约 25 字段，也可当 bible 目录；**Logline "Must contain the word 'but'"**；**Central Question 关于未来／Central Mystery 关于过去**）／**Landau 2e ch14 的 11 项 pitch 配方**／**Miller 的 treatment 10 要素＋六大问**／**Calvisi 的 17 栏 Basic Story Map**（**同一套栏目在"集"和"剧"两个层级各填一次**）。（四套字段全文见 reference.md 一；Miller 的 10 要素在六份学生 treatment 里的字段对照矩阵见 reference-samples.md 十二）
+**54. 四套字段清单**（挑一套）：**Landau 2e ch1 Essential Guideposts**（约 25 字段，也可当 bible 目录；**Logline "Must contain the word 'but'"**；**Central Question 关于未来／Central Mystery 关于过去**）／**Landau 2e ch14 的 11 项 pitch 配方**／**Miller 的 treatment 10 要素＋六大问**／**Calvisi 的 17 栏 Basic Story Map**（**同一套栏目在"集"和"剧"两个层级各填一次**）。（四套字段全文见 references/reference.md 一；Miller 的 10 要素在六份学生 treatment 里的字段对照矩阵见 references/reference-samples.md 十二）
 
-**55. 最容易写错的五处**：①**Overview 不是 pilot 摘要**（Douglas 点名为"常见错误"：要写整部剧的世界与 quest，并**在 Overview 内就给出 springboards**）；②**人物不要列清单**；③**不要把知道的全说出来**（被追问才是成功）；④**不要过度规划**；⑤**文风必须与剧的类型一致**。（五条的原话、各书补充与 Oberg／Landau／Smith 的硬规则见 reference.md 一）
+**55. 最容易写错的五处**：①**Overview 不是 pilot 摘要**（Douglas 点名为"常见错误"：要写整部剧的世界与 quest，并**在 Overview 内就给出 springboards**）；②**人物不要列清单**；③**不要把知道的全说出来**（被追问才是成功）；④**不要过度规划**；⑤**文风必须与剧的类型一致**。（五条的原话、各书补充与 Oberg／Landau／Smith 的硬规则见 references/reference.md 一）
 
-**56. 故事线文档骨架（本 pack 自拟，不属任何一本书）**。各书都给了"整部剧"的文档，**没有一本给"一条故事线"的文档**；十字段表（线名／目的／推动者／赌注／本集入口／本集出口／跨集节拍／与主控思想的关系／与其他线的因果，含**抽线测试**）见 reference.md 二——用来在 break 季之前把每条线各写成一页再横向对齐。
+**56. 故事线文档骨架（本 pack 自拟，不属任何一本书）**。各书都给了"整部剧"的文档，**没有一本给"一条故事线"的文档**；十字段表（线名／目的／推动者／赌注／本集入口／本集出口／跨集节拍／与主控思想的关系／与其他线的因果，含**抽线测试**）见 references/reference.md 二——用来在 break 季之前把每条线各写成一页再横向对齐。
 
 **Landau 的 story tentacles（2e ch4）是正面版**：break story 时"**choose the plotline that leads to more story**"——找 fertile ground 而非 one-off dead ends。
 
@@ -242,7 +242,7 @@ reference.md／reference-documents.md／reference-samples.md 都是查表用的�
 4. **没有公式**："The best approach to any adaptation is bespoke."；跨多年的史诗可**每季对应一个时间段**；**每季一个 overarching theme**，pivot 时换主题（范例 The Wire）。
 5. **改人物、换时代换地点都允许但要有理由**：Euphoria 改了几乎一切只留精髓（鲁莽享乐、心理受损的青少年）——原版没有 Rue、没有 Jules；Unorthodox 的柏林线全部虚构，并**刻意把虚构人物与真人拉开距离**（"we made her a musician"，出于对原作者隐私的考虑）。
 6. **Honoring the spirit without being married to it**：可合并成 composite character、删副线；"the moving image supersedes the written word"。Elementary 的公式："Sherlock Holmes in repair"——本来领先十步的人现在只领先两步。
-7. **起点选择的范例**：改编要挑**更动态、能立刻建立落差、且落差本身能触发闪回**的起点。（Queen's Gambit 小说与 Netflix 版的起点对照见 reference.md 五）
+7. **起点选择的范例**：改编要挑**更动态、能立刻建立落差、且落差本身能触发闪回**的起点。（Queen's Gambit 小说与 Netflix 版的起点对照见 references/reference.md 五）
 8. **Finding the (emotional) core**：**"It's not solely who does what when, but who knows what when and the corresponding emotional fallout."**；"When in doubt, simplify."
 9. **Externalizing inner psychology**：全知/内心独白→多 POV 或一个神秘叙述者（Fleabag 的 aside 让我们成为她的闺蜜，但她是被 Boo 之死的内疚压垮的**不可靠叙述者**）。Walter Mosley：**"Plot Is Revelation."**
 10. **接命题或 IP 时先分清手上是什么**（Saracho 谈 Vida，2e ch6）：Vida 另有一份被称为"短篇"的 **world-building document**——里面有两家酒吧和一对姐妹，**但不是故事**。→ **先判断手上的是 world-building document 还是 story；前者只提供世界。** 议题剧的反做法：**"if I just embody gentrification in the two sisters… The characters just embody the issue."**
@@ -290,11 +290,11 @@ reference.md／reference-documents.md／reference-samples.md 都是查表用的�
 6. **定类型**（Oberg）：format→series type→季层 story-type→每集 story-type→genre→M-Factor 检查。格式自检：能否 10×60→8×45？前三分之一是不是 backstory？**第 3 集才好看就把前两集压缩或删掉**——"starting the story too early is a common flaw"。
 7. **建人物网**：familial role→每对关系的正负向量→专长分工→每人一枚地雷→对抗力的性质→检查属性是否互相干扰。
 8. **写 Calvisi 的 17 栏一页表**作为此后所有文档的地基。
-9. **写 treatment（Miller 10 要素）或 presentation（Blum 四节）**：serialized 剧 arc 三季，stand-alone 剧列 10 条集 logline。（六份填好的 treatment 样本、Egri 三维＋signature trait 表单、能力成长表与 Markets 写法见 reference-samples.md 十二）
+9. **写 treatment（Miller 10 要素）或 presentation（Blum 四节）**：serialized 剧 arc 三季，stand-alone 剧列 10 条集 logline。（六份填好的 treatment 样本、Egri 三维＋signature trait 表单、能力成长表与 Markets 写法见 references/reference-samples.md 十二）
 10. **生成并检验 5–6 个后续故事**（来源与结局形态都要不同）；雷同就回第 4 步。
 11. **为每条线写一页故事线文档**（第 56 条），对齐成"人物 × 集数"大表，逐条做**抽线测试**。
 12. **设计并写 pilot**：选类型（第 39 条四判据）→列"前十页计划"→用后半跑一遍 story pattern→埋地雷→写出结尾的十个问题→写剧本（节拍与幕见 `laohu-series-structure`）。
-13. **更新成 pitch 文档／mini-bible**（Landau 11 项或 Oberg 十二组件，逐条规格见 reference-samples.md 十；给外部编剧的 mini-bible 实物见 reference-samples.md 十一），附 mythology document＋origin story（≤1 页）。
+13. **更新成 pitch 文档／mini-bible**（Landau 11 项或 Oberg 十二组件，逐条规格见 references/reference-samples.md 十；给外部编剧的 mini-bible 实物见 references/reference-samples.md 十一），附 mythology document＋origin story（≤1 页）。
 14. **计时排练 pitch**（20 分钟），备至少三个未来集例子；现场礼仪见 `laohu-writers-room`。
 15. **卖出后再写投产用 bible**，让它成为持续更新的 living document（"facts to wax"）。
 
@@ -313,6 +313,10 @@ reference.md／reference-documents.md／reference-samples.md 都是查表用的�
 9. **六集测试＋十问**：写出 pilot 结束时的十个揪心问题，再把每个扩成一条未来集 logline（Jeffries 的课堂作业）。
 10. **改编练习**：挑一本长篇小说，写出每季对应的时间段、每季的 overarching theme、pilot 起点选择与三条理由（照 Queen's Gambit 的论证格式）。
 11. **引擎失压自检**（Succession S4 前言）：写下这部剧的"物质性情节引擎"（交易、帝国、职位、案件来源），问：第几季它会开始失压？之后换什么引擎，还是结束？
+
+## 调用与返回
+
+可由明确点名直接使用，也可由[编剧](../../SKILL.md)按当前缺口调用。直接命中本专业时先沿该链接补齐已确认故事事实、冻结文字与允许变化范围，只补依赖，不重新发起父级任务。CONSULT返回局部结果，作品主责不转移；缺少上游事实时RETURN最早负责人，不自行改写剧情。需要跨专业判断时只传当前问题和保护项，不重新运行整条创作链。
 
 ## 当前文本的语言执行
 

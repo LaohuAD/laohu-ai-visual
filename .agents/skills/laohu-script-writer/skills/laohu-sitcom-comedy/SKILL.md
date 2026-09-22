@@ -32,19 +32,19 @@ description: 需要情景喜剧、半小时喜剧、困境机器、running gag�
 
 写半小时剧不是把一小时剧的参数改小，而是**整体切换**：页数、排版、场数、笑点密度、结构单位、人物关系的运转逻辑一起换。本 skill 管这套切换。通用方法不重写——对白见 `laohu-dialogue`，场景价值转折见 `laohu-scene-craft`，一小时剧幕结构与 act out 类型学见 `laohu-series-structure`，引擎与 bible 见 `laohu-series-engine-bible`，编剧室全貌见 `laohu-writers-room`，Fleabag 逐集表见 `laohu-series-case-studies`。
 
-格式规范、笑点技法目录与结构模板见同目录 [reference.md](reference.md)。
+格式规范、笑点技法目录与结构模板见同目录 [reference.md](references/reference.md)。
 ## 按任务读哪几节（不要通读）
 
 | 任务 | 读 | 跳过 |
 |---|---|---|
 | 判断一个喜剧点子成不成立 | 二（三层法与困境） | 六、十 |
-| 写或改笑点 | **三（笑话力学）**，例库转 reference.md | 四、九、十 |
+| 写或改笑点 | **三（笑话力学）**，例库转 references/reference.md | 四、九、十 |
 | 排半小时结构 | 四（含幕长/页码的选择规则） | 三、七 |
 | 选格式、定页数 | 六；中文稿先看 `laohu-chinese-series-practice` 的页数折算 | 一–五 |
 | 直接对镜 / 装置喜剧 | 七 | 二、六 |
 | 诊断一份已有的喜剧稿 | **十二（诊断清单）** | 其余 |
 
-⚠️ reference.md 第一节是**美式排版规范**（字符位、边距、行距）：写中文稿时整节不适用，不要读。
+⚠️ references/reference.md 第一节是**美式排版规范**（字符位、边距、行距）：写中文稿时整节不适用，不要读。
 
 ---
 
@@ -89,7 +89,7 @@ description: 需要情景喜剧、半小时喜剧、困境机器、running gag�
 
 **困境是 joke-producing machine。** 场景里的困境只管几页；织进 premise 的持续困境一直生产笑点直到它被解决，而且**未解决的困境让观众带着期待看戏，连无关的笑话都显得更好笑**（p0046）。系列永久困境（《Gilligan's Island》的"no phone, no lights, no motorcar"）是找单集故事的第一处矿。前置条件：观众相信人物不会真受伤，且已被提示"这是喜剧"。
 
-**九种经典 predicament** 与 **六种 character mix** 的名目、原例与使用限定见 [reference.md](reference.md) §二。
+**九种经典 predicament** 与 **六种 character mix** 的名目、原例与使用限定见 [reference.md](references/reference.md) §二。
 
 ### 2.2 "每个剧就是它自己的一个 genre"
 子类别（domestic、odd couple）不是 genre：《Two and a Half Men》与《The Simpsons》都是家庭剧但属性完全不同，**每个剧的 premise 规定一套观众期待的属性**。写既有剧前先答风格问题清单：幽默主要来自困境、人物关系还是环境？belly laughs 还是 smiles-and-nods？视觉为主还是对白为主？结尾有爆发式 comedy run 还是全程均匀？
@@ -167,7 +167,7 @@ sequence＝一串连续场景承载一个持续动作；scene＝一个地点一�
 "act"两义：戏剧结构的幕 vs 广告之间的段。**广告位不一定与戏剧幕转合拍**——广播意义上第一幕之后的那个广告，可能落在戏剧意义的第二幕中间。你在 outline／剧本里打的 `ACT ONE, ACT TWO` 是 broadcast format。做法：先 beat sheet，再在 outline 里把关键 plot point 挪到该剧惯常的广告位之前；不能全对齐也没关系，但能放大 beat 就放——**新人在 spec 里写出强 act break 会大大加分**。
 
 ### 4.5 Landau 的七步公式
-七步全文（tremendous trifle 的定义、中点反转放在哪一幕末、恶狗追上树的比喻、tag 的功能）见 [reference.md](reference.md) §三。
+七步全文（tremendous trifle 的定义、中点反转放在哪一幕末、恶狗追上树的比喻、tag 的功能）见 [reference.md](references/reference.md) §三。
 
 ### 4.6 key dramatic moment 与 block comedy scene
 
@@ -175,7 +175,7 @@ Matt Williams：每集都要建向一个 **key dramatic moment**（决定／发�
 
 ### 4.8 六集季（单一作者、流媒体半小时）
 
-Fleabag 两季各 6 集的逐集骨架、单集 cold open → TITLES → 段落 → button 的模板、以及两条收尾规则（季终 button 解决主题；一件物件贯穿全季、每集换一次手）见 [reference.md](reference.md) §四。
+Fleabag 两季各 6 集的逐集骨架、单集 cold open → TITLES → 段落 → button 的模板、以及两条收尾规则（季终 button 解决主题；一件物件贯穿全季、每集换一次手）见 [reference.md](references/reference.md) §四。
 
 ---
 
@@ -192,7 +192,7 @@ Fleabag 两季各 6 集的逐集骨架、单集 cold open → TITLES → 段落 
 
 ## 六、三套格式与页数硬指标
 
-三套格式＝**live-action film（single-camera）／live-action tape（multi-camera）／animation**；真正的区别是单机还是多机。**写既有剧的 spec 就去拿那部剧的真剧本，精确复制版式**。三套格式的页数、边距（按字符位）、行距、场景编号、进出场下划线、`END OF COLD OPEN`／`END OF ACT ONE`／`TAG`／`END OF EPISODE` 的标记写法、spec 刻意不写的项目、布景经济学与动画两条，见 [reference.md](reference.md) §一。
+三套格式＝**live-action film（single-camera）／live-action tape（multi-camera）／animation**；真正的区别是单机还是多机。**写既有剧的 spec 就去拿那部剧的真剧本，精确复制版式**。三套格式的页数、边距（按字符位）、行距、场景编号、进出场下划线、`END OF COLD OPEN`／`END OF ACT ONE`／`TAG`／`END OF EPISODE` 的标记写法、spec 刻意不写的项目、布景经济学与动画两条，见 [reference.md](references/reference.md) §一。
 
 ---
 
@@ -301,7 +301,7 @@ Matt Williams 的警告当体检标准：**十次有九次，outline 是在 2/3 
 **6 初稿（30 页约 1–2 周）** 第一天不要雕第一页——"Blair through the script"，一天写两三场甚至整个第一幕。**大改前退回重做 beat sheet 和 outline**。写完第一件事是**用红笔数笑点**。
 
 **7 改稿（优先级不可颠倒）** **story → sequences → scenes → moments → dialogue，每一级都盯 comedy**；顺序反了就是"a bad patch job"。听反馈时**别说话**——要为一个创作决定辩解，它大概就需要再看一遍。处理 notes：**vague note 通常指错了地方**（"地下室那场不好笑"的真问题可能在三场前没建立困境）；交回来的东西必须反映房间里谈的；**二稿最大的罪是懒**。
-freelance 各阶段交付时间表（口头 pitch／outline／改 outline／一稿／二稿）见 [reference.md](reference.md) §五。
+freelance 各阶段交付时间表（口头 pitch／outline／改 outline／一稿／二稿）见 [reference.md](references/reference.md) §五。
 
 ---
 
@@ -311,6 +311,10 @@ freelance 各阶段交付时间表（口头 pitch／outline／改 outline／一�
 2. **改 setup**：挑三个最弱的 punchline，**不改 punchline，只改 setup**，看能不能各长出六个新 punchline。
 7. **装置测试**：任何非常规叙事装置，先用手机拍五分钟自演片段，确认"它成立"再开工。
 10. **punch-up 模拟**：对别人的一场戏写 10–20 条 alts，再自己筛到 5–10 条；被筛掉的进你的 candy bag。
+
+## 调用与返回
+
+可由明确点名直接使用，也可由[编剧](../../SKILL.md)按当前缺口调用。直接命中本专业时先沿该链接补齐已确认故事事实、冻结文字与允许变化范围，只补依赖，不重新发起父级任务。CONSULT返回局部结果，作品主责不转移；缺少上游事实时RETURN最早负责人，不自行改写剧情。需要跨专业判断时只传当前问题和保护项，不重新运行整条创作链。
 
 ## 当前文本的语言执行
 

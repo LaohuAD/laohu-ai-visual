@@ -110,19 +110,20 @@
 
 本地项目先按[AGENTS.md](AGENTS.md)判断当前任务，按主任务读取唯一负责 Skill；目的和阶段已经清楚的局部请求可以直接进入对应包，不必每次重跑整个项目。
 
-现在只有五个小顶层技能包，真实内容都在`.agents/skills/`。需要单独上传时，选择下表中的一个完整文件夹；包内包含方法、Reference、语言规则和必要工具，不依赖另一个包或共享目录才能执行。
+现在只有六个小顶层技能包，真实内容都在`.agents/skills/`。需要单独上传时，选择下表中的一个完整文件夹：包内包含本领域的方法、Reference、语言写法与必要工具。共用方法全项目只维护一份正式正文，其他位置按可解析的相对路径读取；读取真源需要同一份项目文件，不靠复制运行副本来冒充离线自足。
 
 | 技能包 | 负责什么 |
 |---|---|
-| [laohu-ai-visual](.agents/skills/laohu-ai-visual/SKILL.md) | 项目总控、总导演、MV导演、创意开发、真实结果复盘与能力更新 |
+| [laohu-ai-visual](.agents/skills/laohu-ai-visual/SKILL.md) | 项目总控、总导演、MV导演、创意开发与能力更新 |
 | [laohu-script-writer](.agents/skills/laohu-script-writer/SKILL.md) | 灵感记录、故事原子、故事开发、完整剧本、分段讲戏与逐段资产需求 |
 | [laohu-image-creation](.agents/skills/laohu-image-creation/SKILL.md) | 单张图片、人物服装妆造场景道具设计、稳定视觉资产和封面 |
 | [laohu-video-prompt](.agents/skills/laohu-video-prompt/SKILL.md) | P内C镜头、表演动作、声音、剪辑、视频提示词与VC提纯 |
-| [laohu-language-mode](.agents/skills/laohu-language-mode/SKILL.md) | 语言模式统筹；四个业务包已经携带本领域所需的完整表达方法 |
+| [laohu-language-mode](.agents/skills/laohu-language-mode/SKILL.md) | 语言方法的唯一正文；业务包保留各自的领域写法并按相对路径读取通用规则 |
+| [laohu-inspection](.agents/skills/laohu-inspection/SKILL.md) | 生成前的剧本、图片提示词与视频提示词检视；生成后的图片、视频、音频、成片与发布复盘归因 |
 
-`laohu-director`与`laohu-mv-director`归总控；`laohu-story-material`与`laohu-video-segmentation`归故事；音频归视频，封面归图片。内部专业的独占判断继续保留，不因为合并小顶层而被压成几句说明。完整文件树、用途与上传说明见[Skills目录说明](.agents/skills/README.md)。
+`laohu-director`、`laohu-mv-director`与`laohu-capability-evolution`归总控；`laohu-story-material`与`laohu-video-segmentation`归故事；音频归视频，封面归图片；`laohu-generation-review`与三个检视专业归检视官。内部专业的独占判断继续保留，不因为合并小顶层而被压成几句说明。入口、内部专业与更下一级专项使用同一条递归目录语法：每层有自己的 `SKILL.md`、按需的 `references/` 与确有下层能力时才建立的 `skills/`。完整文件树与用途见[Skills目录说明](.agents/skills/README.md)，宿主发现与加载边界见[.agents/README.md](.agents/README.md)。
 
-生活灵感收录后，完整source原话、atom与usage保存在`02_共享资产库/故事素材库/`，应用原子同步进入故事包`references/故事原子/`。两处使用同一原子编号，新增、修订、暂停和恢复均需同步；两处成功才报告收录完成。共享库便于本地溯源，故事包可独立使用已携带的应用原子，原话不重复放入应用文件。
+生活灵感收录后，完整source原话、atom与usage保存在`02_共享资产库/故事素材库/`，应用原子同步进入故事包内的应用原子目录（`assets/故事原子/`；T04 已由 `references/故事原子/` 迁入，编号、状态与来源关系不变）。两处使用同一原子编号，新增、修订、暂停和恢复均需同步；两处成功才报告收录完成。共享库便于本地溯源，应用目录保存可应用内容与source_id，原话不重复放入应用文件。
 
 外部`vibe-creating-prompt`的完整原文随视频包保存，经本地适配后执行，再回到视频主入口复验。它不冒充本项目原创，来源与失效处理见[外部能力依赖清单](.agents/skills/laohu-ai-visual/references/外部能力依赖清单.md)。现有外部知识已落在专业Reference，出处信息不替代本地方法。
 
@@ -139,11 +140,15 @@
 ├── 04_诊断与系统日志/ 诊断、检查和系统记录
 ├── assets/            公开项目素材
 ├── docs/              项目文档
-├── .agents/skills/    五个真实技能包与内部专业
+├── .agents/
+│   ├── README.md      技能发现与加载边界
+│   └── skills/        六个真实技能包与内部专业
 ├── AGENTS.md
 ├── README.md
 └── 输入输出索引.md
 ```
+
+项目文件内部一律使用相对路径：写进 Markdown 的链接相对该文件所在目录；方案与清单里的路径相对仓库根；脚本基于自身位置解析仓库根。迁移或改名后同时重算入向链接、出向链接、脚本引用、注册表引用与测试引用，不用全局替换补 `../`。
 
 具体作品默认只保存在本地，公开仓库保留目录骨架和可复用方法，不上传个人剧本、提示词、生成素材、封面、发布数据和复盘内容。
 
@@ -156,13 +161,15 @@ git clone https://github.com/LaohuAD/laohu-ai-visual.git
 cd laohu-ai-visual
 ```
 
-本地直接使用当前目录里的五个真实技能包。云平台只接收一个文件夹时，从`.agents/skills/`选择所需包完整上传；具体选择见[Skills目录说明](.agents/skills/README.md)。无需先导出、拼包或寻找共享目录的方法。尚未在云平台实际验证脚本支持或宿主展示行为，文件独立性不等于平台运行结果已经验收。
+本地直接使用当前目录里的六个真实技能包。云平台只接收一个文件夹时，从`.agents/skills/`选择所需包完整上传；具体选择见[Skills目录说明](.agents/skills/README.md)。不需要先导出或拼包，也不为“离线自足”另建一套方法副本：共用方法读取仓库内的唯一正文，无法访问真源时如实报告依赖缺口。尚未在云平台实际验证脚本支持或宿主展示行为，文件可达不等于平台运行结果已经验收。
 
 ### 检查项目
 
 ```bash
 python3 scripts/validate_skill_packages.py
 python3 scripts/sync_skill_packages.py --check
+python3 -m unittest discover -s tests
+git diff --check
 ```
 
 检查脚本验证的是静态契约和确定性工具，不会运行模型生产或证明成片质量。
@@ -267,6 +274,6 @@ bash .agents/skills/laohu-ai-visual/scripts/create_work_project.sh "我的视觉
 原仓库标注个人学习用途，原书、译文及剧本引文仍归各自作者，第三方材料不因本地整理而转为本项目原创或适用本项目通用许可。具体保留范围、逐项改动与验证见[编剧能力完整迁移与验证](04_诊断与系统日志/编剧能力完整迁移与验证.md)和[外部能力依赖清单](.agents/skills/laohu-ai-visual/references/外部能力依赖清单.md)。
 
 
-当前架构包含5个包入口、114个内部专业，完整名称、路径和归属见[能力注册表](.agents/skills/laohu-ai-visual/references/能力注册表.json)。图片创作、稳定资产、对象设计与视频时间编译各有主责；内部专业按缺口调用，不增加作品状态或改变阶段交付格式。
+当前架构包含6个包入口、117个内部专业，完整名称、路径和归属见[能力注册表](.agents/skills/laohu-ai-visual/references/能力注册表.json)。图片创作、稳定资产、对象设计与视频时间编译各有主责；内部专业按缺口调用，不增加作品状态或改变阶段交付格式。
 
 完整剧本 → [视频分段规划](.agents/skills/laohu-script-writer/skills/laohu-video-segmentation/SKILL.md) → 按段需求制作资产并回填引用 → 段内C与视频提示词。
